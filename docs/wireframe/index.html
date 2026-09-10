@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframe - Tượng Đức Mẹ Việt Nam & Chòm Sao Bắc Đẩu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,400;1,600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0a0f1e;
+      --bg-panel: rgba(17, 24, 39, 0.92);
+      --bg-card: #1e293b;
+      --gold-primary: #f59e0b;
+      --gold-glow: rgba(245, 158, 11, 0.4);
+      --blue-marian: #38bdf8;
+      --ruby-vnch: #e11d48;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: rgba(255, 255, 255, 0.1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-main);
+      overflow-x: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-panel);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-icon {
+      font-size: 24px;
+      color: var(--gold-primary);
+      text-shadow: 0 0 12px var(--gold-glow);
+    }
+    .brand-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--text-main);
+    }
+    .brand-sub {
+      font-size: 11px;
+      color: var(--blue-marian);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .version-selector {
+      display: flex;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 3px;
+      gap: 4px;
+    }
+    .version-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .version-btn.active {
+      background: var(--gold-primary);
+      color: #000;
+      font-weight: 600;
+      box-shadow: 0 0 12px var(--gold-glow);
+    }
+    .action-btn {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid var(--blue-marian);
+      color: var(--blue-marian);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .action-btn:hover {
+      background: var(--blue-marian);
+      color: #000;
+    }
+
+    /* Main Content Layout */
+    .main-container {
+      flex: 1;
+      position: relative;
+      display: flex;
+      overflow: hidden;
+    }
+    .map-mockup {
+      flex: 1;
+      background: radial-gradient(circle at 60% 40%, #151e36 0%, #0a0f1e 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .map-grid-overlay {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .vietnam-silhouette {
+      width: 320px;
+      height: 80%;
+      position: relative;
+      border: 1px dashed rgba(56, 189, 248, 0.3);
+      border-radius: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+    .marker-mockup {
+      width: 14px;
+      height: 14px;
+      background: var(--gold-primary);
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 0 15px var(--gold-primary);
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .marker-mockup:hover {
+      transform: scale(1.5);
+    }
+    .marker-label {
+      position: absolute;
+      left: 20px;
+      top: -4px;
+      white-space: nowrap;
+      background: rgba(0,0,0,0.7);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .constellation-line {
+      position: absolute;
+      stroke: var(--gold-primary);
+      stroke-width: 2;
+      stroke-dasharray: 4;
+      filter: drop-shadow(0 0 6px var(--gold-primary));
+      animation: pulseLine 2s infinite alternate;
+    }
+    @keyframes pulseLine {
+      from { opacity: 0.6; }
+      to { opacity: 1; }
+    }
+
+    /* Celestial Ursa Major Inset */
+    .celestial-inset {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 220px;
+      background: rgba(17, 24, 39, 0.85);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 11px;
+      backdrop-filter: blur(8px);
+    }
+    .celestial-title {
+      font-weight: 600;
+      color: var(--gold-primary);
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Timeline Dock */
+    .timeline-dock {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 800px;
+      background: rgba(17, 24, 39, 0.95);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 12px 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+    }
+    .timeline-year {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold-primary);
+    }
+    .timeline-slider {
+      width: 100%;
+      accent-color: var(--gold-primary);
+      cursor: pointer;
+    }
+    .timeline-markers {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Detail Modal Wireframe */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+    }
+    .modal-card {
+      width: 90%;
+      max-width: 600px;
+      background: #111827;
+      border: 1px solid var(--gold-primary);
+      border-radius: 16px;
+      padding: 24px;
+      position: relative;
+      box-shadow: 0 0 40px rgba(245, 158, 11, 0.2);
+    }
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <div class="brand-icon">★</div>
+      <div>
+        <div class="brand-title">ĐỨC MẸ VIỆT NAM & CHÒM SAO BẮC ĐẨU</div>
+        <div class="brand-sub">STELLA MARIS • NGÔ ĐÌNH DIỆM 1959 • KHẢO CỨU ĐỊA LÝ & TÂM LINH</div>
+      </div>
+    </div>
+    <div class="nav-controls">
+      <div class="version-selector">
+        <button class="version-btn active" onclick="setVersion(1)">V1: 7 Tượng Bắc Đẩu (1959)</button>
+        <button class="version-btn" onclick="setVersion(2)">V2: Biến Thể Măng Đen</button>
+        <button class="version-btn" onclick="setVersion(3)">V3: 5 Tượng TT Diệm</button>
+        <button class="version-btn" onclick="setVersion(4)">V4: Toàn Quốc</button>
+      </div>
+      <button class="action-btn" id="toggleConstellation" onclick="toggleLines()">
+        <span>✦</span> Bật Chòm Sao
+      </button>
+      <button class="action-btn" onclick="toggleListView()">
+        <span>☰</span> Danh Sách
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Viewport -->
+  <div class="main-container">
+    <div class="map-mockup" id="mapView">
+      <div class="map-grid-overlay"></div>
+      
+      <!-- Celestial Ursa Major Inset -->
+      <div class="celestial-inset">
+        <div class="celestial-title">
+          <span>CHÒM BẮC ĐẨU THIÊN VĂN</span>
+          <span>URSA MAJOR</span>
+        </div>
+        <p style="color:#94a3b8; line-height: 1.4;">
+          Gồm 7 ngôi sao: 3 sao cán gáo (Alkaid, Mizar, Alioth) & 4 sao bầu gáo (Megrez, Phecda, Merak, Dubhe) chỉ hướng về sao Bắc Cực (Polaris).
+        </p>
+      </div>
+
+      <!-- Vietnam Schematic Center -->
+      <div class="vietnam-silhouette">
+        <div class="marker-mockup" style="align-self: flex-start; margin-left: 60px;" onclick="showDetail('lavang')">
+          <div class="marker-label">1. ĐM La Vang (Quảng Trị - 1798)</div>
+        </div>
+        <div class="marker-mockup" style="align-self: center; margin-left: 20px;" onclick="showDetail('trakieu')">
+          <div class="marker-label">2. ĐM Trà Kiệu (Quảng Nam - 1885)</div>
+        </div>
+        <div class="marker-mockup" style="align-self: flex-start; margin-left: 20px;" onclick="showDetail('phuonghoang')">
+          <div class="marker-label">3. ĐM Phượng Hoàng (Gia Lai - 1959)</div>
+        </div>
+        <div class="marker-mockup" style="align-self: flex-end; margin-right: 40px;" onclick="showDetail('giangson')">
+          <div class="marker-label">4. ĐM Giang Sơn (Đắk Lắk - 1960)</div>
+        </div>
+        <div class="marker-mockup" style="align-self: flex-end; margin-right: 20px;" onclick="showDetail('trinhphong')">
+          <div class="marker-label">5. ĐM Trinh Phong (Ninh Thuận - 1961)</div>
+        </div>
+        <div class="marker-mockup" style="align-self: flex-start; margin-left: 10px;" onclick="showDetail('thacmo')">
+          <div class="marker-label">6. ĐM Thác Mơ (Bình Phước - 1959)</div>
+        </div>
+        <div class="marker-mockup" style="align-self: center; margin-left: 30px;" onclick="showDetail('tapao')">
+          <div class="marker-label">7. ĐM Tà Pao (Bình Thuận - 1959)</div>
+        </div>
+      </div>
+
+      <!-- Floating Timeline Player Dock -->
+      <div class="timeline-dock">
+        <div class="timeline-header">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <button class="action-btn" style="padding:4px 8px;" onclick="togglePlay()">▶ Play</button>
+            <span style="font-weight:600;">DÒNG THỜI GIAN KHÁNH THÀNH:</span>
+          </div>
+          <div class="timeline-year" id="yearLabel">NĂM: 1963</div>
+        </div>
+        <input type="range" class="timeline-slider" min="1798" max="2026" value="1963" id="timelineRange" oninput="updateYear(this.value)">
+        <div class="timeline-markers">
+          <span>1798 (La Vang)</span>
+          <span>1885 (Trà Kiệu)</span>
+          <span>1959 (ĐH Thánh Mẫu - TT Diệm)</span>
+          <span>1971 (Măng Đen)</span>
+          <span>2020 (Núi Cúi)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detail Modal -->
+  <div class="modal-overlay" id="detailModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeDetail()">&times;</button>
+      <div style="font-family:'Playfair Display', serif; font-size: 20px; color: var(--gold-primary); margin-bottom: 4px;" id="modalTitle">TƯỢNG ĐỨC MẸ TÀ PAO</div>
+      <div style="font-size: 12px; color: var(--blue-marian); margin-bottom: 12px;" id="modalMeta">Tánh Linh, Bình Thuận • Khánh thành: 08/12/1959 • Bối cảnh: 5 Tượng TT Diệm</div>
+      <div style="font-size: 13px; line-height: 1.6; color: #e2e8f0;" id="modalBody">
+        <p><strong>Nguồn gốc:</strong> Một trong 5 pho tượng do Tổng thống Ngô Đình Diệm và Phủ Tổng ủy Dinh điền chủ trương đúc nhân Đại hội Thánh Mẫu 1959.</p>
+        <p style="margin-top:8px;"><strong>Đặc điểm:</strong> Tượng cao 3m đúc bằng xi măng trắng cốt sắt, bệ cao 2m, do nghệ nhân Hải tạc tại xóm tượng Phát Diệm (Phú Nhuận, Sài Gòn), KTS Ngô Viết Thụ quy hoạch linh đài.</p>
+        <p style="margin-top:8px;"><strong>Vị trí chòm sao Bắc Đẩu:</strong> Đóng vai trò là một trong 4 điểm của thân gáo (muỗng gáo), bảo bọc cửa ngõ phía Nam và duyên hải.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function setVersion(v) {
+      document.querySelectorAll('.version-btn').forEach((b, idx) => {
+        b.classList.toggle('active', idx === v - 1);
+      });
+    }
+    function toggleLines() {
+      const btn = document.getElementById('toggleConstellation');
+      btn.classList.toggle('active');
+    }
+    function updateYear(val) {
+      document.getElementById('yearLabel').innerText = 'NĂM: ' + val;
+    }
+    function showDetail(id) {
+      document.getElementById('detailModal').style.display = 'flex';
+    }
+    function closeDetail() {
+      document.getElementById('detailModal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

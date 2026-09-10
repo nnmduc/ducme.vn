@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Tượng Đức Mẹ Việt Nam & Chòm Sao Bắc Đẩu | Khảo Cứu Lịch Sử & Bản Đồ Tương Tác</title>
+  
+  <!-- Meta tags for rich SEO & Sharing -->
+  <meta name="description" content="Khảo cứu lịch sử và bản đồ trực quan các tượng Đức Mẹ tại Việt Nam, sự tích 5 pho tượng thời Tổng thống Ngô Đình Diệm 1959 và các phiên bản giả thuyết nối chòm sao Bắc Đẩu (Stella Maris).">
+  <meta name="theme-color" content="#060b19">
+  
+  <!-- Google Fonts: Playfair Display & Lora (Hỗ trợ 100% Tiếng Việt có dấu), Be Vietnam Pro, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,400;1,600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  
+  <!-- Custom Master Stylesheet -->
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+  <!-- =======================================================================
+       HEADER: Brand & Main Navigation Controls
+       ======================================================================= -->
+  <header class="app-header">
+    <div class="brand-section">
+      <div class="brand-logo-frame">★</div>
+      <div>
+        <h1 class="brand-title">ĐỨC MẸ VIỆT NAM & CHÒM SAO BẮC ĐẨU</h1>
+        <div class="brand-subtitle">STELLA MARIS • 5 TƯỢNG NGÔ ĐÌNH DIỆM 1959 • KHẢO CỨU ĐỊA LÝ & TÂM LINH</div>
+      </div>
+    </div>
+
+    <!-- Center Tabs: 4 Constellation Versions -->
+    <nav class="header-center-nav" aria-label="Bộ chọn phiên bản Bắc Đẩu">
+      <button class="version-tab active" id="tab-v1" onclick="switchVersion('v1')">
+        <span>★</span> V1: Bắc Đẩu 1959
+      </button>
+      <button class="version-tab" id="tab-v2" onclick="switchVersion('v2')">
+        <span>✦</span> V2: Biến Thể Măng Đen
+      </button>
+      <button class="version-tab" id="tab-v3" onclick="switchVersion('v3')">
+        <span>⚜</span> V3: 5 Tượng TT Diệm
+      </button>
+      <button class="version-tab" id="tab-v4" onclick="switchVersion('v4')">
+        <span>🇻🇳</span> V4: Toàn Quốc
+      </button>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <select class="btn-pill" id="mapLayerSelector" onchange="switchMapLayer(this.value)" style="background: rgba(18, 28, 52, 0.9); color: var(--gold-light); cursor: pointer; outline: none;" title="Đổi kiểu bản đồ">
+        <option value="dark">🌙 Đêm Vũ Trụ</option>
+        <option value="satellite">🛰️ Vệ Tinh</option>
+        <option value="osm">🗺️ Đường Phố</option>
+      </select>
+      <button class="btn-pill active" id="toggleConstellationBtn" onclick="toggleConstellation()" title="Bật/Tắt đường nối chòm sao Bắc Đẩu">
+        <span id="constellationIcon">✦</span>
+        <span id="constellationText">Chòm Sao: Bật</span>
+      </button>
+      <button class="btn-pill" id="toggleListBtn" onclick="window.MarianListView.toggleDrawer()" title="Xem danh mục tất cả tượng đài">
+        <span>☰</span> Danh Sách
+      </button>
+    </div>
+  </header>
+
+  <!-- =======================================================================
+       MAIN WORKSPACE: Leaflet Map & Floating HUD Panels
+       ======================================================================= -->
+  <main class="workspace" role="main">
+    <!-- Interactive Map Container -->
+    <div id="mapContainer"></div>
+
+    <!-- Floating Info Panel (Top Left) -->
+    <aside class="floating-overlay-panel" id="versionInfoPanel" aria-label="Thông tin phiên bản">
+      <div class="panel-header-badge" id="panelBadge">Kinh Điển Lịch Sử 1959</div>
+      <h2 class="panel-version-title" id="panelTitle">Phiên Bản 1: 7 Tượng Bắc Đẩu Kinh Điển (1959–1961)</h2>
+      <p class="panel-version-desc" id="panelDesc">
+        Kết hợp 2 linh địa lịch sử (La Vang 1798, Trà Kiệu 1885) làm cán gáo và 5 pho tượng do TT Ngô Đình Diệm cho đúc năm 1959 tạo thành hình chòm sao Bắc Đẩu hướng về sao Bắc Cực.
+      </p>
+      
+      <div class="stats-grid">
+        <div>
+          <div class="stat-number" id="statCount">7</div>
+          <div class="stat-label">Linh Đài</div>
+        </div>
+        <div>
+          <div class="stat-number" id="statYearRange">1798 - 1963</div>
+          <div class="stat-label">Thời Gian</div>
+        </div>
+        <div>
+          <div class="stat-number" id="statConstellationStatus" style="font-size:13px; color:#38bdf8;">ĐANG BẬT</div>
+          <div class="stat-label">Chòm Sao</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Celestial Comparison Inset (Top Right) -->
+    <div class="celestial-compare-dock" aria-label="Đối sánh thiên văn">
+      <h4>
+        <span>CHÒM BẮC ĐẨU THIÊN VĂN</span>
+        <span style="font-size:10px; color:#38bdf8;">URSA MAJOR</span>
+      </h4>
+      <div class="celestial-diagram-box" id="celestialDiagramBox"></div>
+      <p class="celestial-note">
+        7 ngôi sao chính của chòm Đại Hùng. Cặp sao <strong>Merak (Tà Pao)</strong> và <strong>Dubhe (Thác Mơ)</strong> hướng thẳng về <strong>Sao Bắc Cực (Polaris)</strong>.
+      </p>
+    </div>
+
+    <!-- Floating Timeline Player Dock (Bottom Center) -->
+    <nav class="timeline-dock-container" aria-label="Thanh điều khiển dòng thời gian">
+      <div class="timeline-top-bar">
+        <div class="timeline-controls">
+          <button class="play-toggle-btn" id="timelinePlayBtn" title="Tự động chạy dòng thời gian">▶</button>
+          <button class="step-btn" onclick="window.MarianTimeline.stepYear(-5)" title="Lùi 5 năm">◀ -5 Năm</button>
+          <button class="step-btn" onclick="window.MarianTimeline.stepYear(5)" title="Tới 5 năm">+5 Năm ▶</button>
+        </div>
+
+        <div class="current-year-indicator">
+          <span class="year-title">NĂM:</span>
+          <span class="year-digit" id="yearDigit">2026</span>
+        </div>
+
+        <div class="statues-visible-count" id="visibleStatuesCount">
+          Đã thành lập: 18/18 linh địa
+        </div>
+      </div>
+
+      <div class="range-slider-wrapper">
+        <input type="range" class="timeline-slider-input" id="timelineSlider" aria-label="Năm thành lập">
+      </div>
+
+      <div class="timeline-milestones-row" id="milestonesContainer">
+        <!-- Được tạo tự động bởi timeline.js -->
+      </div>
+    </nav>
+  </main>
+
+  <!-- =======================================================================
+       SIDE DRAWER: List View & Multi-Criteria Filtering
+       ======================================================================= -->
+  <aside class="list-view-drawer" id="listViewDrawer" aria-label="Danh sách linh địa Thánh Mẫu">
+    <div class="drawer-header">
+      <h3>DANH MỤC CÁC LINH ĐỊA THÁNH MẪU</h3>
+      <button class="drawer-close-btn" onclick="window.MarianListView.toggleDrawer()" title="Đóng danh sách">&times;</button>
+    </div>
+
+    <div class="drawer-search-bar">
+      <input type="text" class="search-input-box" id="statueSearchInput" placeholder="Tìm theo tên tượng, tỉnh thành, giáo phận, KTS..." aria-label="Tìm kiếm tượng Đức Mẹ">
+      
+      <div class="filter-pills-row">
+        <span class="filter-chip active" onclick="window.MarianListView.setFilter('all', this)">Tất Cả</span>
+        <span class="filter-chip" onclick="window.MarianListView.setFilter('diem5', this)">5 Tượng TT Diệm (1959)</span>
+        <span class="filter-chip" onclick="window.MarianListView.setFilter('v1', this)">Chòm Bắc Đẩu V1</span>
+        <span class="filter-chip" onclick="window.MarianListView.setFilter('taynguyen', this)">Tây Nguyên</span>
+        <span class="filter-chip" onclick="window.MarianListView.setFilter('trungbo', this)">Miền Trung</span>
+        <span class="filter-chip" onclick="window.MarianListView.setFilter('nambo', this)">Nam Bộ</span>
+        <span class="filter-chip" onclick="window.MarianListView.setFilter('bacbo', this)">Bắc Bộ</span>
+      </div>
+    </div>
+
+    <div class="drawer-list-items" id="drawerListItems">
+      <!-- Được tạo tự động bởi list-view.js -->
+    </div>
+  </aside>
+
+  <!-- =======================================================================
+       DEEP READING MODAL: Detailed History, Oral Lore, Evidence & Photos
+       ======================================================================= -->
+  <div class="modal-backdrop" id="detailModalBackdrop" role="dialog" aria-modal="true">
+    <article class="detail-modal-card">
+      
+      <!-- Visual Media Column (Left Column: Zero Crop, Full Statue Display) -->
+      <section class="modal-visual-column" aria-label="Hình ảnh linh địa">
+        <!-- Photo Switcher Tabs -->
+        <div class="media-tabs-bar">
+          <button class="media-tab-btn active" id="btnTabReal" onclick="window.MarianModal.switchMediaTab('real')">
+            <span>📷</span> Ảnh Thực Tế
+          </button>
+          <button class="media-tab-btn" id="btnTabArtwork" onclick="window.MarianModal.switchMediaTab('artwork')">
+            <span>🎨</span> Tranh Nghệ Thuật
+          </button>
+        </div>
+
+        <!-- Sacred Art Frame (Ambient backdrop glow + contain aspect ratio) -->
+        <div class="modal-art-frame">
+          <div class="modal-art-ambient" id="modalArtAmbient"></div>
+          <img src="assets/images/stella_maris_hero.jpg" alt="Tượng Đức Mẹ" class="modal-art-img" id="modalHeroImg">
+        </div>
+
+        <!-- Image Caption & Status -->
+        <div class="modal-caption-dock">
+          <p class="modal-image-caption" id="modalImageCaption">Ảnh chụp thực tế linh địa</p>
+          <div class="modal-media-badge" id="modalMediaBadge">Ảnh thực địa tư liệu • Chân thực</div>
+        </div>
+      </section>
+
+      <!-- Scrollable Text Content Column (Right Column) -->
+      <section class="modal-content-column">
+        <!-- Header with Close Button -->
+        <div class="modal-content-header">
+          <div class="modal-tagline-row" id="modalBadges"></div>
+          <button class="modal-dismiss-btn" onclick="window.MarianModal.close()" title="Đóng cửa sổ (Esc)">&times;</button>
+        </div>
+
+        <!-- Main Titles -->
+        <div class="modal-titles-group">
+          <h2 class="modal-title-display" id="modalTitle">TƯỢNG ĐỨC MẸ TÀ PAO</h2>
+          <div class="modal-location-meta" id="modalLocation">📍 Xã Đồng Kho, huyện Tánh Linh, tỉnh Bình Thuận</div>
+        </div>
+
+        <!-- Meta Stats Band -->
+        <div class="meta-stats-band">
+          <div class="meta-col-item">
+            <span class="meta-col-label">Tọa Độ GPS</span>
+            <span class="meta-col-val" id="metaCoords">11.0827° N, 107.6978° E</span>
+          </div>
+          <div class="meta-col-item">
+            <span class="meta-col-label">Độ Cao Địa Hình</span>
+            <span class="meta-col-val" id="metaElevation">270m</span>
+          </div>
+          <div class="meta-col-item">
+            <span class="meta-col-label">Vùng Miền</span>
+            <span class="meta-col-val" id="metaRegion">Duyên hải Nam Trung Bộ</span>
+          </div>
+          <div class="meta-col-item">
+            <span class="meta-col-label">Thiết Kế / Tạc Tượng</span>
+            <span class="meta-col-val" id="metaArchitect">KTS Ngô Viết Thụ / Điêu khắc Phát Diệm</span>
+          </div>
+        </div>
+
+        <!-- Section: Sự Thật Lịch Sử -->
+        <div class="modal-section-block">
+          <h3 class="modal-section-heading">
+            <span>⚜</span> SỰ THẬT LỊCH SỬ & TƯ LIỆU XÁC THỰC
+          </h3>
+          <p class="modal-prose" id="modalHistoryText"></p>
+        </div>
+
+        <!-- Section: Vị Trí Chòm Sao Bắc Đẩu -->
+        <div class="modal-section-block">
+          <h3 class="modal-section-heading">
+            <span>★</span> VỊ TRÍ CHÒM SAO BẮC ĐẨU & Ý NGHĨA BIỂU TƯỢNG
+          </h3>
+          <p class="modal-prose" id="modalConstellationText"></p>
+        </div>
+
+        <!-- Section: Ý Nghĩa & Tôn Vinh -->
+        <div class="modal-section-block">
+          <h3 class="modal-section-heading">
+            <span>✦</span> GIÁ TRỊ TÂM LINH & DI SẢN CỘNG ĐỒNG
+          </h3>
+          <p class="modal-prose" id="modalSignificanceText"></p>
+        </div>
+
+        <!-- Section: Verified External Sources & Citations -->
+        <div class="modal-section-block">
+          <h3 class="modal-section-heading">
+            <span>📚</span> DẪN CHỨNG & NGUỒN TÀI LIỆU THAM KHẢO
+          </h3>
+          <div class="modal-sources-list" id="modalSourcesList"></div>
+        </div>
+
+        <!-- Action / Map Button -->
+        <div class="modal-footer-action">
+          <div class="citation-note">
+            Tài liệu tham chiếu từ Văn khố Giáo phận, Phủ Tổng ủy Dinh điền VNCH (1959–1961) và Báo CGvDT.
+          </div>
+          <button class="btn-pill active" onclick="window.MarianModal.openGoogleMaps()">
+            <span>📍</span> Xem Trên Google Maps
+          </button>
+        </div>
+      </section>
+
+    </article>
+  </div>
+
+  <!-- =======================================================================
+       JAVASCRIPT MODULES
+       ======================================================================= -->
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- Data & Functional Modules -->
+  <script src="src/data/statues.js"></script>
+  <script src="src/js/map.js"></script>
+  <script src="src/js/constellation.js"></script>
+  <script src="src/js/timeline.js"></script>
+  <script src="src/js/list-view.js"></script>
+  <script src="src/js/modal.js"></script>
+
+  <!-- Application Orchestration Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Khởi tạo bản đồ
+      window.MarianMap.initMap();
+
+      // 2. Khởi tạo lớp phủ chòm sao Bắc Đẩu
+      window.MarianConstellation.initConstellation();
+
+      // 3. Khởi tạo thanh trượt thời gian
+      window.MarianTimeline.initTimeline();
+
+      // 4. Khởi tạo danh sách & tìm kiếm
+      window.MarianListView.initListView();
+
+      // 5. Khởi tạo modal chi tiết
+      window.MarianModal.initModal();
+    });
+
+    /**
+     * Chuyển đổi giữa 4 phiên bản Bắc Đẩu
+     */
+    function switchVersion(vKey) {
+      document.querySelectorAll(".version-tab").forEach(tab => {
+        tab.classList.remove("active", "v2-active", "v3-active", "v4-active");
+      });
+
+      const activeTab = document.getElementById(`tab-${vKey}`);
+      if (activeTab) {
+        activeTab.classList.add("active");
+        if (vKey === "v2") activeTab.classList.add("v2-active");
+        if (vKey === "v3") activeTab.classList.add("v3-active");
+        if (vKey === "v4") activeTab.classList.add("v4-active");
+      }
+
+      window.MarianMap.setVersion(vKey);
+      window.MarianListView.renderStatueCards();
+    }
+
+    /**
+     * Bật / Tắt đường nối chòm sao Bắc Đẩu
+     */
+    function toggleConstellation() {
+      const isVisible = window.MarianConstellation.toggleVisibility();
+      const btn = document.getElementById("toggleConstellationBtn");
+      const icon = document.getElementById("constellationIcon");
+      const text = document.getElementById("constellationText");
+
+      if (btn) btn.classList.toggle("active", isVisible);
+      if (icon) icon.innerText = isVisible ? "✦" : "✧";
+      if (text) text.innerText = isVisible ? "Chòm Sao: Bật" : "Chòm Sao: Tắt";
+    }
+
+    /**
+     * Chuyển đổi lớp bản đồ nền (Dark / Satellite / OSM)
+     */
+    function switchMapLayer(layerKey) {
+      window.MarianMap.switchBaseLayer(layerKey);
+    }
+  </script>
+</body>
+</html>
