@@ -1,7 +1,8 @@
 /**
  * Dữ Liệu Các Tượng Đức Mẹ Lớn Tại Việt Nam & Giả Thuyết Chòm Sao Bắc Đẩu (Stella Maris)
  * Khảo cứu lịch sử: Thời Đệ nhất Cộng hòa (TT Ngô Đình Diệm 1959–1961), Đại hội Thánh Mẫu,
- * KTS Ngô Viết Thụ, Linh mục Antôn Nguyễn Văn Kiệm và các truyền thuyết dân gian.
+ * KTS Ngô Viết Thụ, Linh mục Antôn Nguyễn Văn Kiệm và các tư liệu lưu trữ.
+ * Hình ảnh: 100% Ảnh tư liệu thực tế (Wikimedia Commons) hoặc ẩn nếu chưa có ảnh thực địa.
  */
 
 window.MARIAN_STATUES_DATA = [
@@ -16,7 +17,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Xã Hải Phú, huyện Hải Lăng, tỉnh Quảng Trị",
     "region": "Bắc Trung Bộ",
     "diocese": "Tổng Giáo phận Huế",
-    "image": "assets/images/our_lady_lavang.jpg",
     "diemStatue5": false,
     "constellationRole": {
       "v1": {
@@ -40,8 +40,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Được mệnh danh là ngôi sao sáng nhất trong chòm Bắc Đẩu tâm linh Việt Nam. Tọa độ nằm ngay gần vĩ tuyến 17 Bến Hải lịch sử - như ngọn đèn chầu soi rọi sự bình an cho toàn thể quốc dân qua bao thăng trầm thời cuộc.",
     "architect": "Được xây dựng qua nhiều thời kỳ; kiến trúc hiện đại do KTS Ngô Viết Thụ và các cộng sự thiết kế thập niên 1960; hiện nay là quần thể đại thánh đường tôn nghiêm.",
     "significance": "Linh địa Thánh Mẫu linh thiêng bậc nhất Việt Nam, biểu tượng cho tình thương chở che của Mẹ nơi rừng sâu nước độc.",
-    "realImage": "assets/images/our_lady_lavang.jpg",
-    "realImageCaption": "Tượng Đức Mẹ La Vang trong trang phục hoàng gia Việt Nam tại linh đài Quảng Trị",
+    "realImage": "assets/real_photos/lavang.jpg",
+    "realImageCaption": "Ảnh chụp thực tế linh đài Đức Mẹ La Vang tại Quảng Trị (Nguồn: Wikimedia Commons)",
     "sources": [
       {
         "title": "Trung tâm Thánh Mẫu Toàn quốc La Vang - HĐGMVN",
@@ -68,7 +68,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Xã Duy Sơn, huyện Duy Xuyên, tỉnh Quảng Nam (kinh đô Chăm-pa xưa)",
     "region": "Duyên hải Nam Trung Bộ",
     "diocese": "Giáo phận Đà Nẵng",
-    "image": "assets/images/stella_maris_hero.jpg",
     "diemStatue5": false,
     "constellationRole": {
       "v1": {
@@ -92,8 +91,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Là ngôi sao thứ hai trên cán gáo, nối liền mạch tâm linh kiên cường từ dải đất Quảng Trị vượt đèo Hải Vân vào lòng xứ Quảng hào hùng.",
     "architect": "Đền Thánh Mẫu tọa lạc uy nghi trên đồi Bửu Châu với tượng Mẹ hướng về đồng bằng sông Thu Bồn.",
     "significance": "Biểu tượng của sự chở che kiên vững trước gươm đạn chiến tranh và lòng trung kiên giữ đạo.",
-    "realImage": "assets/images/real_statue_trakieu.jpg",
-    "realImageCaption": "Ảnh thực tế đền thánh Đức Mẹ Trà Kiệu trên đồi Bửu Châu (Quảng Nam)",
+    "realImage": "assets/real_photos/trakieu.jpg",
+    "realImageCaption": "Ảnh chụp thực tế Trung tâm Hành hương Đức Mẹ Trà Kiệu tại Quảng Nam (Nguồn: Wikimedia Commons)",
     "sources": [
       {
         "title": "Linh địa Đức Mẹ Trà Kiệu 1885 - Giáo phận Đà Nẵng",
@@ -116,7 +115,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Núi Phượng Hoàng, xã Ia Dom, huyện Đức Cơ, tỉnh Gia Lai (xưa thuộc Pleiku)",
     "region": "Tây Nguyên",
     "diocese": "Giáo phận Kon Tum",
-    "image": "assets/images/our_lady_mangden.jpg",
     "diemStatue5": true,
     "constellationRole": {
       "v1": {
@@ -140,8 +138,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Vị trí Alioth - ngôi sao sáng nhất của chòm Bắc Đẩu thiên văn, trấn giữ ngã ba biên cương hiểm trở bậc nhất của Cao nguyên Trung phần thời chiến tranh.",
     "architect": "Do thợ điêu khắc Hải (xóm tượng Phát Diệm Phú Nhuận) tạc dưới sự giám sát của LM Antôn Nguyễn Văn Kiệm; KTS Ngô Viết Thụ quy hoạch cảnh quan.",
     "significance": "Chứng tích lịch sử hào hùng và bi tráng của thời kỳ di dân khai khẩn dinh điền vùng đất đỏ bazan.",
-    "realImage": "assets/images/real_statue_phuonghoang.jpg",
-    "realImageCaption": "Ảnh thực tế tượng Đức Mẹ Phượng Hoàng trên đỉnh núi Ia Dom, Đức Cơ (Gia Lai)",
+    "realImage": null,
+    "realImageCaption": null,
     "sources": [
       {
         "title": "Ký sự tìm lại Linh đài Đức Mẹ Phượng Hoàng - GP Kon Tum",
@@ -168,7 +166,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Thị trấn Măng Đen, huyện Kon Plông, tỉnh Kon Tum",
     "region": "Tây Nguyên",
     "diocese": "Giáo phận Kon Tum",
-    "image": "assets/images/our_lady_mangden.jpg",
     "diemStatue5": false,
     "constellationRole": {
       "v1": null,
@@ -188,8 +185,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Trong phiên bản dân gian hiện đại của chòm sao Bắc Đẩu, vì Đức Mẹ Phượng Hoàng bị thất lạc sau chiến tranh, người hành hương đã lấy Đức Mẹ Măng Đen làm ngôi sao Alioth nối nhịp cán gáo Tây Nguyên kỳ vĩ.",
     "architect": "Tượng nguyên bản năm 1971 với khuôn mặt mang nét trầm mặc, đượm nét sầu bi bản địa giữa rừng thông đại ngàn.",
     "significance": "Biểu tượng của lòng từ bi, sự ủi an vô biên dành cho đồng bào thiểu số và những số phận bất hạnh.",
-    "realImage": "assets/images/our_lady_mangden.jpg",
-    "realImageCaption": "Ảnh thực tế tượng Đức Mẹ Măng Đen cụt tay giữa rừng thông đại ngàn Kon Tum",
+    "realImage": "assets/real_photos/mangden.jpg",
+    "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Măng Đen giữa đại ngàn Kon Tum (Nguồn: Wikimedia Commons)",
     "sources": [
       {
         "title": "Biến cố tìm lại tượng Đức Mẹ Măng Đen 2002 - GP Kon Tum",
@@ -212,7 +209,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Thôn Giang Sơn, xã Yang Reh, huyện Krông Bông, tỉnh Đắk Lắk",
     "region": "Tây Nguyên",
     "diocese": "Giáo phận Ban Mê Thuột",
-    "image": "assets/images/our_lady_tapao.jpg",
     "diemStatue5": true,
     "constellationRole": {
       "v1": {
@@ -240,8 +236,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Ngôi sao Megrez đóng vai trò bản lề nối thân gáo với cán gáo. Tượng đài đứng uy nghiêm trên đỉnh đồi lộng gió, phóng tầm mắt nhìn trọn dòng sông Krông Ana uốn lượn và thung lũng lúa xanh ngát.",
     "architect": "Bệ tượng đá kiên cố trên đỉnh núi cao, có hơn 400 bậc tam cấp dẫn từ chân đèo lên đỉnh đài.",
     "significance": "Bảo hộ cho vùng đất dinh điền định cư trù phú giữa đại ngàn Tây Nguyên.",
-    "realImage": "assets/images/real_statue_giangson.jpg",
-    "realImageCaption": "Ảnh thực tế tượng Đức Mẹ Giang Sơn trên đồi 822m nhìn ra sông Krông Ana",
+    "realImage": "assets/real_photos/giangson.jpg",
+    "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Giang Sơn trên đồi 822m, Đắk Lắk (Nguồn: Wikimedia Commons)",
     "sources": [
       {
         "title": "Lịch sử Đồi Đức Mẹ Giang Sơn 1963 - GP Ban Mê Thuột",
@@ -264,7 +260,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Eo Gió, Đèo Ngoạn Mục (QL27), xã Lâm Sơn, huyện Ninh Sơn, Ninh Thuận (giáp Lâm Đồng)",
     "region": "Duyên hải Nam Trung Bộ",
     "diocese": "Giáo phận Nha Trang",
-    "image": "assets/images/stella_maris_hero.jpg",
     "diemStatue5": true,
     "constellationRole": {
       "v1": {
@@ -292,8 +287,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Ngôi sao Phecda canh giữ cửa ngõ núi cao đổ xuống duyên hải Phan Rang nắng gió, tượng trưng cho Mẹ đứng giữa phong ba bão táp ('Trinh Phong').",
     "architect": "Quy chuẩn tượng 3m thời TT Diệm, đặt trên bệ đá hoa cương kiên cố vươn lên giữa ngàn mây.",
     "significance": "Nơi người lữ hành dừng chân cầu xin bình an trước khi vượt cung đèo dốc hiểm trở bậc nhất Đông Dương.",
-    "realImage": "assets/images/real_statue_trinhphong.jpg",
-    "realImageCaption": "Ảnh thực tế linh đài Đức Mẹ Trinh Phong tại Eo Gió đỉnh đèo Ngoạn Mục (Sông Pha)",
+    "realImage": null,
+    "realImageCaption": null,
     "sources": [
       {
         "title": "Thánh lễ phục hồi Đức Mẹ Trinh Phong 2007 - GP Nha Trang",
@@ -316,7 +311,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Phường Thác Mơ, thị xã Phước Long, tỉnh Bình Phước",
     "region": "Đông Nam Bộ",
     "diocese": "Giáo phận Ban Mê Thuột",
-    "image": "assets/images/our_lady_tapao.jpg",
     "diemStatue5": true,
     "constellationRole": {
       "v1": {
@@ -344,8 +338,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Dubhe là ngôi sao chỉ đường của chòm Bắc Đẩu. Cùng với Merak (Tà Pao), đường thẳng kéo dài qua hai ngôi sao này sẽ chỉ thẳng về Sao Bắc Cực (Polaris) - ánh sáng vĩnh cửu của Thiên Chúa.",
     "architect": "Được trùng tu khang trang thành trung tâm hành hương lớn của Giáo phận Ban Mê Thuột với lễ đài rộng lớn.",
     "significance": "Linh địa bảo trợ cho những người con khai hoang lập nghiệp nơi vùng biên cương rừng thiêng nước độc.",
-    "realImage": "assets/images/real_statue_thacmo.jpg",
-    "realImageCaption": "Ảnh thực tế tượng Đức Mẹ Thác Mơ dưới chân núi Bà Rá hùng vĩ (Bình Phước)",
+    "realImage": "assets/real_photos/thacmo.jpg",
+    "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Thác Mơ dưới chân núi Bà Rá, Bình Phước (Nguồn: Wikimedia Commons)",
     "sources": [
       {
         "title": "Trung tâm Hành hương Đức Mẹ Thác Mơ - GP Ban Mê Thuột",
@@ -368,7 +362,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Xã Đồng Kho, huyện Tánh Linh, tỉnh Bình Thuận",
     "region": "Duyên hải Nam Trung Bộ",
     "diocese": "Giáo phận Phan Thiết",
-    "image": "assets/images/our_lady_tapao.jpg",
     "diemStatue5": true,
     "constellationRole": {
       "v1": {
@@ -396,8 +389,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Ngôi sao Merak ở góc đáy miệng gáo Bắc Đẩu. Cặp sao Dubhe (Thác Mơ) - Merak (Tà Pao) tạo thành 'Hai ngôi sao dẫn đường' (The Pointers) kinh điển trong thiên văn học dẫn thẳng về Sao Bắc Cực.",
     "architect": "Quần thể linh đài hiện đại với hàng trăm bậc thang đá rợp bóng mát hoa rừng, quảng trường sức chứa hàng chục vạn người.",
     "significance": "Điểm tựa đức tin khổng lồ thu hút hàng triệu lượt người mỗi năm đến cầu xin ơn bình an và chữa lành.",
-    "realImage": "assets/images/our_lady_tapao.jpg",
-    "realImageCaption": "Ảnh thực tế tượng Đức Mẹ Tà Pao trên sườn núi Tánh Linh (Bình Thuận)",
+    "realImage": "assets/real_photos/tapao.jpg",
+    "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Tà Pao trên sườn núi Tánh Linh, Bình Thuận (Nguồn: Wikimedia Commons)",
     "sources": [
       {
         "title": "Kỷ yếu 50 năm Trung tâm Thánh Mẫu Tà Pao - GP Phan Thiết",
@@ -424,7 +417,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Xã Gia Tân 1, huyện Thống Nhất, tỉnh Đồng Nai",
     "region": "Đông Nam Bộ",
     "diocese": "Giáo phận Xuân Lộc",
-    "image": "assets/images/stella_maris_hero.jpg",
     "diemStatue5": false,
     "constellationRole": {
       "v1": null,
@@ -440,8 +432,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Tên gọi 'Núi Cúi' mang thông điệp người tín hữu cúi mình tôn phục trước nhan Thiên Chúa và tìm về sự khiêm nhường bình an.",
     "architect": "Kiến trúc điêu khắc bê tông cốt thép hiện đại quy mô kỷ lục, quảng trường rộng lớn bên mặt nước hồ thủy điện.",
     "significance": "Trung tâm hành hương lớn bậc nhất của Giáo hội Việt Nam thế kỷ 21.",
-    "realImage": "assets/images/stella_maris_hero.jpg",
-    "realImageCaption": "Đại linh đài Đức Mẹ Núi Cúi cao 33m nhìn ra lòng hồ Trị An (Đồng Nai)",
+    "realImage": null,
+    "realImageCaption": null,
     "sources": [
       {
         "title": "Trung tâm Hành hương Đức Mẹ Núi Cúi - GP Xuân Lộc",
@@ -464,7 +456,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Sườn Núi Lớn, Phường 5, TP. Vũng Tàu, tỉnh Bà Rịa - Vũng Tàu",
     "region": "Đông Nam Bộ",
     "diocese": "Giáo phận Bà Rịa",
-    "image": "assets/images/stella_maris_hero.jpg",
     "diemStatue5": false,
     "constellationRole": {
       "v1": null,
@@ -480,8 +471,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Ngọn hải đăng tâm linh của mọi thuyền bè ra khơi vào lộng vùng biển phía Nam Tổ quốc.",
     "architect": "Tượng điêu khắc bằng đá và bê tông trắng cao 32m, bệ tượng ôm trọn cung đường ven biển Vũng Tàu thơ mộng.",
     "significance": "Trung tâm hành hương biển nổi tiếng nhất Nam Bộ.",
-    "realImage": "assets/images/stella_maris_hero.jpg",
-    "realImageCaption": "Tượng Đức Mẹ Bãi Dâu cao 32m màu trắng trên sườn Núi Lớn hướng ra Biển Đông",
+    "realImage": "assets/real_photos/baidau.jpg",
+    "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Bãi Dâu cao 32m tại Vũng Tàu (Nguồn: Wikimedia Commons)",
     "sources": [
       {
         "title": "Đền Thánh Đức Mẹ Bãi Dâu Vũng Tàu - GP Bà Rịa",
@@ -504,7 +495,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Phường Hiệp Bình Chánh, TP. Thủ Đức, TP. Hồ Chí Minh",
     "region": "Đông Nam Bộ",
     "diocese": "Tổng Giáo phận Sài Gòn - TP.HCM",
-    "image": "assets/images/our_lady_tapao.jpg",
     "diemStatue5": false,
     "constellationRole": {
       "v1": null,
@@ -520,8 +510,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Linh địa bình an giữa lòng đô thị sầm uất, gắn liền với biết bao lời cầu nguyện cho hòa bình non sông qua các biến cố lịch sử.",
     "architect": "Khuôn viên xanh mát với hàng cây cổ thụ và bờ sông lộng gió.",
     "significance": "Trung tâm kính Đức Mẹ Fatima lớn nhất tại vùng đô thị TP. Hồ Chí Minh.",
-    "realImage": "assets/images/our_lady_tapao.jpg",
-    "realImageCaption": "Trung tâm Hành hương Fatima Bình Triệu bên bờ sông Sài Gòn (Thủ Đức)",
+    "realImage": null,
+    "realImageCaption": null,
     "sources": [
       {
         "title": "Lịch sử Fatima Bình Triệu từ 1966 - TGP Sài Gòn",
@@ -540,7 +530,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Công trường Công Xã Paris, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh",
     "region": "Đông Nam Bộ",
     "diocese": "Tổng Giáo phận Sài Gòn - TP.HCM",
-    "image": "assets/images/stella_maris_hero.jpg",
     "diemStatue5": false,
     "constellationRole": {
       "v1": null,
@@ -556,8 +545,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Bức tượng mang tính biểu tượng văn hóa - lịch sử - kiến trúc đặc sắc nhất đặt tại quảng trường trung tâm của thành phố.",
     "architect": "Đá cẩm thạch Carrara thượng hạng của Ý, chân đế đá hoa cương kiên cố đối diện mặt chính Vương cung Thánh đường.",
     "significance": "Di sản vô giá biểu trưng cho khát vọng hòa bình của dân tộc.",
-    "realImage": "assets/images/stella_maris_hero.jpg",
-    "realImageCaption": "Tượng Đức Mẹ Hòa Bình tạc từ đá cẩm thạch Carrara Ý năm 1959 tại Sài Gòn",
+    "realImage": "assets/real_photos/ducbasaigon.jpg",
+    "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Hòa Bình trước Nhà thờ chính tòa Đức Bà Sài Gòn (Nguồn: Wikimedia Commons)",
     "sources": [
       {
         "title": "Lịch sử tượng Đức Mẹ Hòa Bình 1959 - TGP Sài Gòn",
@@ -580,7 +569,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Xã Hưng Nhượng, huyện Giồng Trôm, tỉnh Bến Tre",
     "region": "Đồng bằng sông Cửu Long",
     "diocese": "Giáo phận Vĩnh Long",
-    "image": "assets/images/our_lady_lavang.jpg",
     "diemStatue5": false,
     "constellationRole": {
       "v1": null,
@@ -596,8 +584,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Điểm tựa thiêng liêng cho bà con miền Tây vượt qua sóng gió thời loạn và tai ương cuộc sống.",
     "architect": "Đền thánh Mẹ Hằng Cứu Giúp bên dòng sông nước yên ả rợp bóng dừa xanh.",
     "significance": "Linh địa Thánh Mẫu độc đáo nhất tại châu thổ sông Mê Kông.",
-    "realImage": "assets/images/our_lady_lavang.jpg",
-    "realImageCaption": "Linh đài Đức Mẹ La Mã Bến Tre - Nơi tôn kính bức ảnh Mẹ Hằng Cứu Giúp 1950",
+    "realImage": null,
+    "realImageCaption": null,
     "sources": [
       {
         "title": "Trung tâm Đức Mẹ La Mã Bến Tre - GP Vĩnh Long",
@@ -616,7 +604,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Bãi biển Mỹ Khê, phường Phước Mỹ, quận Sơn Trà, TP. Đà Nẵng",
     "region": "Duyên hải Nam Trung Bộ",
     "diocese": "Giáo phận Đà Nẵng",
-    "image": "assets/images/stella_maris_hero.jpg",
     "diemStatue5": false,
     "constellationRole": {
       "v1": null,
@@ -632,8 +619,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Là hiện thân trực tiếp cho tước hiệu 'Stella Maris' - Sao Biển, ngọn sao Bắc Đẩu soi lối dẫn tàu bè cập bến an toàn.",
     "architect": "Đền thờ mở hướng nhìn trực diện ra bờ cát trắng và làn sóng xanh biếc của biển Đà Nẵng.",
     "significance": "Bảo hộ ngư dân, mang lại sự bình an trước bão táp phong ba.",
-    "realImage": "assets/images/stella_maris_hero.jpg",
-    "realImageCaption": "Đền Thánh Đức Mẹ Sao Biển (Stella Maris) bên bờ biển Mỹ Khê Đà Nẵng",
+    "realImage": null,
+    "realImageCaption": null,
     "sources": [
       {
         "title": "Đền Đức Mẹ Sao Biển Mỹ Khê - GP Đà Nẵng",
@@ -652,7 +639,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Xã Bình An, huyện Kiên Lương, tỉnh Kiên Giang (vùng vịnh Rạch Giá - Hà Tiên)",
     "region": "Đồng bằng sông Cửu Long",
     "diocese": "Giáo phận Long Xuyên",
-    "image": "assets/images/stella_maris_hero.jpg",
     "diemStatue5": false,
     "constellationRole": {
       "v1": null,
@@ -668,8 +654,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Đức Mẹ canh giữ bình yên cho vùng biển Tây, che chở cho ghe thuyền đánh bắt xa bờ ở vùng biển Kiên Giang và đảo Phú Quốc.",
     "architect": "Tượng Mẹ đứng trên khối đá vôi cổ xưa hướng ra biển mênh mông.",
     "significance": "Cột mốc đức tin nơi địa đầu Tây Nam đất nước.",
-    "realImage": "assets/images/stella_maris_hero.jpg",
-    "realImageCaption": "Linh đài Đức Mẹ Hòn Chông ngự trên vách đá vịnh Thái Lan (Kiên Giang)",
+    "realImage": null,
+    "realImageCaption": null,
     "sources": [
       {
         "title": "Linh đài Đức Mẹ Hòn Chông - GP Long Xuyên",
@@ -688,7 +674,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Xã Cẩm Xuyên (Hà Vàng xưa), tỉnh Hà Tĩnh",
     "region": "Bắc Trung Bộ",
     "diocese": "Giáo phận Hà Tĩnh",
-    "image": "assets/images/our_lady_lavang.jpg",
     "diemStatue5": false,
     "constellationRole": {
       "v1": null,
@@ -704,8 +689,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Ngôi sao kết nối dải đất miền Trung từ Đèo Ngang trở ra, biểu trưng cho niềm hy vọng giữa mảnh đất gió lào cát trắng.",
     "architect": "Quần thể thánh đài trên đồi Núi Cơm rợp bóng cây xanh.",
     "significance": "Trung tâm hành hương Thánh Mẫu lâu đời nhất của Giáo phận Hà Tĩnh.",
-    "realImage": "assets/images/our_lady_lavang.jpg",
-    "realImageCaption": "Đền Thánh Mẹ Thiên Chúa Núi Cơm (Hà Vàng, Hà Tĩnh)",
+    "realImage": null,
+    "realImageCaption": null,
     "sources": [
       {
         "title": "Trung tâm Hành hương Núi Cơm - GP Hà Tĩnh",
@@ -724,7 +709,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Xã Xuân Phương, huyện Xuân Trường, tỉnh Nam Định",
     "region": "Đồng bằng sông Hồng",
     "diocese": "Giáo phận Bùi Chu",
-    "image": "assets/images/stella_maris_hero.jpg",
     "diemStatue5": false,
     "constellationRole": {
       "v1": null,
@@ -740,8 +724,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Ngôi sao sáng đại diện cho cái nôi đón nhận Tin Mừng lâu đời nhất ở đồng bằng Bắc Bộ.",
     "architect": "Kiến trúc Gothic kinh điển với các mái vòm vút cao, hệ thống kính màu tráng lệ và hai tháp chuông uy nghiêm.",
     "significance": "Kỳ quan kiến trúc tôn giáo hàng đầu miền Bắc.",
-    "realImage": "assets/images/stella_maris_hero.jpg",
-    "realImageCaption": "Tiểu Vương cung Thánh đường Phú Nhai - Tuyệt tác Gothic miền Bắc",
+    "realImage": null,
+    "realImageCaption": null,
     "sources": [
       {
         "title": "Đại Vương cung Thánh đường Phú Nhai - GP Bùi Chu",
@@ -760,7 +744,6 @@ window.MARIAN_STATUES_DATA = [
     "location": "Phường 3, TP. Vĩnh Long, tỉnh Vĩnh Long",
     "region": "Đồng bằng sông Cửu Long",
     "diocese": "Giáo phận Vĩnh Long",
-    "image": "assets/images/our_lady_tapao.jpg",
     "diemStatue5": false,
     "constellationRole": {
       "v1": null,
@@ -776,8 +759,8 @@ window.MARIAN_STATUES_DATA = [
     "oralTradition": "Điểm giao kết giữa hai nhánh sông Tiền và sông Hậu hiền hòa, che chở cho giáo dân châu thổ.",
     "architect": "Công viên hoa kiểng tĩnh lặng và lễ đài trang nghiêm giữa lòng thành phố.",
     "significance": "Trung tâm Thánh Mẫu hạt nhân của vùng đất Tây Nam Bộ.",
-    "realImage": "assets/images/our_lady_tapao.jpg",
-    "realImageCaption": "Tượng đài Đức Mẹ Fatima Vĩnh Long trong khuôn viên Tòa Giám Mục",
+    "realImage": null,
+    "realImageCaption": null,
     "sources": [
       {
         "title": "Linh đài Fatima Vĩnh Long 1965 - GP Vĩnh Long",

@@ -171,30 +171,20 @@
        DEEP READING MODAL: Detailed History, Oral Lore, Evidence & Photos
        ======================================================================= -->
   <div class="modal-backdrop" id="detailModalBackdrop" role="dialog" aria-modal="true">
-    <article class="detail-modal-card">
+    <article class="detail-modal-card" id="detailModalCard">
       
-      <!-- Visual Media Column (Left Column: Zero Crop, Full Statue Display) -->
-      <section class="modal-visual-column" aria-label="Hình ảnh linh địa">
-        <!-- Photo Switcher Tabs -->
-        <div class="media-tabs-bar">
-          <button class="media-tab-btn active" id="btnTabReal" onclick="window.MarianModal.switchMediaTab('real')">
-            <span>📷</span> Ảnh Thực Tế
-          </button>
-          <button class="media-tab-btn" id="btnTabArtwork" onclick="window.MarianModal.switchMediaTab('artwork')">
-            <span>🎨</span> Tranh Nghệ Thuật
-          </button>
-        </div>
-
-        <!-- Sacred Art Frame (Ambient backdrop glow + contain aspect ratio) -->
+      <!-- Visual Media Column (Shown only when verified real photograph is available) -->
+      <section class="modal-visual-column" id="modalVisualColumn" aria-label="Hình ảnh tư liệu thực tế">
+        <!-- Photo Frame (Uncropped full aspect ratio display) -->
         <div class="modal-art-frame">
           <div class="modal-art-ambient" id="modalArtAmbient"></div>
-          <img src="assets/images/stella_maris_hero.jpg" alt="Tượng Đức Mẹ" class="modal-art-img" id="modalHeroImg">
+          <img src="" alt="Tượng Đức Mẹ" class="modal-art-img" id="modalHeroImg">
         </div>
 
-        <!-- Image Caption & Status -->
+        <!-- Image Caption & Provenance -->
         <div class="modal-caption-dock">
           <p class="modal-image-caption" id="modalImageCaption">Ảnh chụp thực tế linh địa</p>
-          <div class="modal-media-badge" id="modalMediaBadge">Ảnh thực địa tư liệu • Chân thực</div>
+          <div class="modal-media-badge" id="modalMediaBadge">Ảnh tư liệu thực địa (Wikimedia Commons)</div>
         </div>
       </section>
 

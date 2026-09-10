@@ -875,6 +875,20 @@ body {
   display: block;
 }
 
+.card-thumb-wrap.card-thumb-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-shrine-icon {
+  font-size: 20px;
+  color: var(--text-faint);
+  opacity: 0.7;
+}
+
 .card-thumb-diem-dot {
   position: absolute;
   bottom: 2px;
@@ -997,7 +1011,13 @@ body {
   display: grid;
   grid-template-columns: 350px 1fr;
   transform: scale(0.96);
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), max-width 0.25s ease;
+}
+
+/* Khi không có ảnh thực tế: ẩn hoàn toàn cột ảnh, thu gọn modal thành 1 cột thanh lịch */
+.detail-modal-card.no-image {
+  grid-template-columns: 1fr;
+  max-width: 720px;
 }
 
 .modal-backdrop.open .detail-modal-card {
@@ -1012,45 +1032,6 @@ body {
   flex-direction: column;
   overflow: hidden;
   position: relative;
-}
-
-.media-tabs-bar {
-  display: flex;
-  padding: 12px 14px 8px 14px;
-  gap: 8px;
-  background: rgba(10, 16, 32, 0.8);
-  border-bottom: 1px solid var(--border-subtle);
-  z-index: 5;
-}
-
-.media-tab-btn {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  color: var(--text-muted);
-  font-size: 11.5px;
-  font-weight: 500;
-  padding: 6px 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  transition: all 0.2s ease;
-}
-
-.media-tab-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text-pure);
-}
-
-.media-tab-btn.active {
-  background: rgba(245, 158, 11, 0.15);
-  border-color: var(--gold-primary);
-  color: var(--gold-light);
-  font-weight: 600;
-  box-shadow: 0 0 10px rgba(245, 158, 11, 0.25);
 }
 
 .modal-art-frame {

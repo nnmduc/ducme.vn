@@ -40,10 +40,10 @@ statues.forEach(s => {
   assert(s.lat >= 8.5 && s.lat <= 23.5, `Tượng "${s.name}" có vĩ độ trong lãnh thổ VN: ${s.lat}`);
   assert(s.lng >= 102.0 && s.lng <= 110.0, `Tượng "${s.name}" có kinh độ trong lãnh thổ VN: ${s.lng}`);
 
-  // Kiểm tra file ảnh tồn tại
-  if (s.image) {
-    const imgPath = path.join(__dirname, '..', s.image);
-    assert(fs.existsSync(imgPath), `File ảnh ${s.image} của tượng "${s.name}" phải tồn tại`);
+  // Kiểm tra file ảnh thực tế tồn tại nếu có
+  if (s.realImage) {
+    const imgPath = path.join(__dirname, '..', s.realImage);
+    assert(fs.existsSync(imgPath), `File ảnh thực tế ${s.realImage} của tượng "${s.name}" phải tồn tại`);
   }
 });
 

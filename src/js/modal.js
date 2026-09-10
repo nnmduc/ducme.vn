@@ -1,12 +1,13 @@
 /**
  * Quản Lý Hộp Thoại Khảo Cứu Chi Tiết (Deep Reading Modal)
- * Hỗ trợ giao diện 2 cột, không crop ảnh Đức Mẹ, chuyển đổi Tranh nghệ thuật / Ảnh thực tế,
- * và hiển thị danh mục dẫn chứng nguồn xác thực.
+ * Nguyên tắc:
+ * 1. Tuyệt đối không dùng ảnh AI.
+ * 2. Chỉ hiển thị khi có ảnh thực tế được xác thực (Wikimedia Commons / Ảnh thực địa).
+ * 3. Nếu không có ảnh thực tế, ẩn hoàn toàn khu vực hình ảnh và hiển thị giao diện 1 cột thanh lịch.
  */
 
 window.MarianModal = (function () {
   let activeStatue = null;
-  let currentMediaMode = "real"; // Ưu tiên hiển thị ảnh thực tế tư liệu
 
   function initModal() {
     const backdrop = document.getElementById("detailModalBackdrop");
@@ -26,67 +27,45 @@ window.MarianModal = (function () {
     });
   }
 
-  function switchMediaTab(mode) {
-    currentMediaMode = mode;
-    updateMediaDisplay();
-  }
-
-  function updateMediaDisplay() {
-    if (!activeStatue) return;
-
-    const heroImg = document.getElementById("modalHeroImg");
-    const ambientBg = document.getElementById("modalArtAmbient");
-    const captionEl = document.getElementById("modalImageCaption");
-    const badgeEl = document.getElementById("modalMediaBadge");
-    const btnArtwork = document.getElementById("btnTabArtwork");
-    const btnReal = document.getElementById("btnTabReal");
-
-    const hasReal = Boolean(activeStatue.realImage);
-
-    let chosenSrc = "";
-    let chosenCaption = "";
-    let badgeText = "";
-
-    if (currentMediaMode === "real" && hasReal) {
-      chosenSrc = activeStatue.realImage;
-      chosenCaption = activeStatue.realImageCaption || `Ảnh chụp thực địa linh đài ${activeStatue.name}`;
-      badgeText = "Ảnh thực địa tư liệu • Chân thực";
-      if (btnReal) btnReal.classList.add("active");
-      if (btnArtwork) btnArtwork.classList.remove("active");
-    } else {
-      chosenSrc = activeStatue.image || "assets/images/stella_maris_hero.jpg";
-      chosenCaption = `Bản họa thánh tích ${activeStatue.name} phong cách Stella Maris`;
-      badgeText = "Bản họa nghệ thuật • Bố cục nguyên bản";
-      if (btnArtwork) btnArtwork.classList.add("active");
-      if (btnReal) btnReal.classList.remove("active");
-    }
-
-    if (heroImg) {
-      heroImg.src = chosenSrc;
-      heroImg.alt = activeStatue.name;
-    }
-    if (ambientBg) {
-      ambientBg.style.backgroundImage = `url('${chosenSrc}')`;
-    }
-    if (captionEl) {
-      captionEl.innerText = chosenCaption;
-    }
-    if (badgeEl) {
-      badgeEl.innerText = badgeText;
-    }
-  }
-
   function open(statueId) {
     const statue = window.MARIAN_STATUES_DATA.find(s => s.id === statueId);
     if (!statue) return;
     activeStatue = statue;
-    currentMediaMode = statue.realImage ? "real" : "artwork";
 
     const currentVersion = window.MarianMap ? window.MarianMap.getCurrentVersion() : "v1";
     const starRole = statue.constellationRole[currentVersion];
 
-    // Cập nhật khung hình ảnh & tabs
-    updateMediaDisplay();
+    // Xử lý hiển thị hình ảnh: Chỉ hiện khi có ảnh thực tế, không có thì ẩn hẳn
+    const visualCol = document.getElementById("modalVisualColumn");
+    const modalCard = document.getElementById("detailModalCard");
+    const heroImg = document.getElementById("modalHeroImg");
+    const ambientBg = document.getElementById("modalArtAmbient");
+    const captionEl = document.getElementById("modalImageCaption");
+
+    if (statue.realImage) {
+      if (visualCol) visualCol.style.display = "flex";
+      if (modalCard) modalCard.classList.remove("no-image");
+      if (heroImg) {
+        heroImg.src = statue.realImage;
+        heroImg.alt = statue.name;
+      }
+      if (ambientBg) {
+        ambientBg.style.backgroundImage = `url('${statue.realImage}')`;
+      }
+      if (captionEl) {
+        captionEl.innerText = statue.realImageCaption || `Ảnh chụp thực tế linh đài ${statue.name}`;
+      }
+    } else {
+      if (visualCol) visualCol.style.display = "none";
+      if (modalCard) modalCard.classList.add("no-image");
+      if (heroImg) {
+        heroImg.src = "";
+        heroImg.alt = "";
+      }
+      if (ambientBg) {
+        ambientBg.style.backgroundImage = "none";
+      }
+    }
 
     // Huy hiệu danh mục & thời kỳ
     const badgeContainer = document.getElementById("modalBadges");
@@ -182,7 +161,6 @@ window.MarianModal = (function () {
     initModal: initModal,
     open: open,
     close: close,
-    switchMediaTab: switchMediaTab,
     openGoogleMaps: openGoogleMaps
   };
 })();
