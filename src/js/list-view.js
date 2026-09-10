@@ -93,31 +93,11 @@ window.MarianListView = (function () {
 
     listContainer.innerHTML = statues.map(s => {
       const isIncluded = highlightedNodeIds.has(s.id);
-      const starRole = s.constellationRole[currentVersion];
-      const hasPhoto = Boolean(s.realImage);
-      const thumbHtml = hasPhoto
-        ? `<div class="card-thumb-wrap">
-            <img src="${s.realImage}" alt="${s.name}" class="card-thumb-img" loading="lazy">
-            ${s.diemStatue5 ? '<span class="card-thumb-diem-dot" title="Tượng thời TT Diệm 1959">★</span>' : ''}
-          </div>`
-        : `<div class="card-thumb-wrap card-thumb-icon" title="Chưa có ảnh tư liệu thực tế">
-            <span class="card-shrine-icon">⛪</span>
-            ${s.diemStatue5 ? '<span class="card-thumb-diem-dot" title="Tượng thời TT Diệm 1959">★</span>' : ''}
-          </div>`;
 
       return `
         <div class="statue-card ${s.diemStatue5 ? "diem-era" : ""} ${isIncluded ? "is-active-member" : "card-dimmed"}" onclick="window.MarianListView.onCardClick('${s.id}')">
-          ${thumbHtml}
-          <div class="card-text-content">
-            <div class="card-top-row">
-              <h4 class="card-title">${s.name} ${isIncluded ? '<span class="star-indicator">★</span>' : ""}</h4>
-              <span class="card-year-badge">${s.year}</span>
-            </div>
-            <div class="card-subtitle">
-              <span>${s.diocese}</span> • <strong class="card-role-text">${starText}</strong>
-            </div>
-            <div class="card-snippet" title="${s.significance || s.historicalFact}">${s.significance || s.historicalFact}</div>
-          </div>
+          <span class="card-title">${s.name} ${isIncluded ? '<span class="star-indicator">★</span>' : ""}</span>
+          <span class="card-year-badge">${s.year}</span>
         </div>
       `;
     }).join("");
