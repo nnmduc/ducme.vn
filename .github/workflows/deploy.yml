@@ -11,9 +11,38 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  changes:
+    name: Detect changed paths
+    runs-on: ubuntu-latest
+    outputs:
+      web: ${{ steps.filter.outputs.web }}
+      worker: ${{ steps.filter.outputs.worker }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Filter changed paths
+        uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            web:
+              - 'src/**'
+              - 'public/**'
+              - 'tests/**'
+              - 'astro.config.mjs'
+              - 'package.json'
+              - 'package-lock.json'
+              - '.node-version'
+              - '.github/workflows/deploy.yml'
+            worker:
+              - 'worker/**'
+              - '.github/workflows/deploy.yml'
+
   test-pr:
     name: Test & Build PR (Node ${{ matrix.node-version }})
-    if: github.event_name == 'pull_request'
+    needs: changes
+    if: github.event_name == 'pull_request' && needs.changes.outputs.web == 'true'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -40,7 +69,8 @@ jobs:
 
   deploy-frontend:
     name: Test, Build & Deploy Frontend (Cloudflare Pages)
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: changes
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push' && needs.changes.outputs.web == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -70,8 +100,8 @@ jobs:
 
   deploy-worker:
     name: Deploy Backend API (Cloudflare Worker)
-    needs: deploy-frontend
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: changes
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push' && needs.changes.outputs.worker == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
