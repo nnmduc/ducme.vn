@@ -17,6 +17,8 @@ pnpm-debug.log*
 .env
 .env.*
 !.env.example
+.dev.vars
+worker/.dev.vars
 
 # OS generated files
 .DS_Store
