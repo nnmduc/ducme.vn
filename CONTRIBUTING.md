@@ -30,6 +30,9 @@ Khi tham gia vào dự án này, bạn đồng ý tuân thủ bản **[Quy tắc
 Đây là mảng đóng góp được **ưu tiên cao nhất**. Nhiều linh địa hiện vẫn còn thiếu ảnh chụp thực tế hoặc phần văn bản lịch sử còn ngắn:
 - **Gửi trực tiếp qua web (Không cần tài khoản GitHub):** Bạn có thể gửi ảnh chụp thực địa, kỷ yếu, bài viết khảo cứu hoặc phản hồi đính chính thông qua biểu mẫu trực tuyến tại **[ducme.vn/lien-he/](https://ducme.vn/lien-he/)**. Hệ thống hỗ trợ đính kèm tối đa 3 tệp (JPG, PNG, WebP, PDF) và cung cấp mã biên nhận theo dõi.
 - **Bổ sung ảnh chụp thực địa qua Pull Request:** Hiện vẫn còn nhiều linh địa chưa có ảnh thực tế xác thực (xem các bản ghi có `realImage: null` trong `src/data/statues.js` để biết danh sách cụ thể). Nếu bạn có ảnh chụp tại thực địa (chính diện tượng, toàn cảnh linh đài) và sẵn lòng cấp phép dưới dạng Creative Commons (CC-BY-SA, CC-BY) hoặc Public Domain, xin hãy đóng góp!
+  - Xem danh sách chi tiết từng linh địa còn thiếu ảnh, nguồn tham khảo và nội dung tại
+    [`docs/marian-sites-missing-info.md`](docs/marian-sites-missing-info.md) — đã xếp theo thứ tự ưu
+    tiên để biết nên bắt đầu từ đâu.
 - **Hiệu đính & Mở rộng tư liệu:** Cung cấp thêm tư liệu lịch sử, giai thoại xây dựng, sự kiện làm phép tượng từ các kỷ yếu giáo phận hoặc văn khố có thật.
 
 ### B. Báo cáo lỗi (Bug Report)
