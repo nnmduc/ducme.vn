@@ -83,13 +83,10 @@ lúc đọc — không để đến cuối mới dựng lại danh mục nguồn
 
 ### Bước 4 — Hình ảnh
 
-Chỉ chấp nhận: Wikimedia Commons (CC-BY-SA / CC-BY / PD), ảnh Public Domain có nguồn rõ, hoặc ảnh do
-người chụp tự nguyện cấp phép công khai và nói rõ bằng văn bản.
+Với mỗi ảnh đề xuất, ghi lại các thông tin:
+URL trang mô tả file (không phải URL ảnh thô) · tên tác giả · giấy phép · năm chụp · nội dung ảnh.
 
-Với mỗi ảnh đề xuất, ghi lại đủ **năm** thông tin, thiếu một là không dùng được:
-URL trang mô tả file (không phải URL ảnh thô) · tên tác giả · giấy phép cụ thể · năm chụp · nội dung ảnh.
-
-Không hotlink, không tải ảnh từ báo chí hay Facebook, không cắt ảnh từ video.
+Không hotlink, không tải ảnh từ Facebook hay mạng xã hội tương đương, không cắt ảnh từ video.
 
 ### Bước 5 — Viết hồ sơ JSON
 
@@ -137,4 +134,3 @@ cần đọc báo cáo với con mắt độc lập.
 - Linh địa tìm được nhưng tư liệu công khai gần như bằng không (dưới 2 nguồn thật).
 - Hai nguồn uy tín ngang nhau mâu thuẫn về sự kiện cốt lõi.
 - Linh địa có tranh chấp về tính chính thức (chưa được giáo phận công nhận, còn tranh luận).
-- Đề xuất ảnh mà giấy phép không rõ ràng.
