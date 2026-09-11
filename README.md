@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Astro](https://img.shields.io/badge/Astro-7.3-ff5d01.svg)](https://astro.build)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D20.11-339933.svg)](https://nodejs.org)
-[![Tests](https://img.shields.io/badge/Tests-353%20passing-brightgreen.svg)](#kiểm-thử-toàn-vẹn-dữ-liệu)
+[![Tests](https://img.shields.io/badge/Tests-360%20passing-brightgreen.svg)](#kiểm-thử-toàn-vẹn-dữ-liệu)
 [![Website](https://img.shields.io/badge/Website-ducme.vn-blue.svg)](https://ducme.vn)
 
 Nền tảng web tư liệu số và bản đồ tương tác về **các trung tâm hành hương Thánh Mẫu tại Việt Nam** (hiện có 18, số liệu tính động từ `src/data/statues.js`), từ năm 1798 đến nay. Dự án khảo cứu lịch sử 5 pho tượng Đức Mẹ thời Đệ nhất Cộng hòa (1959–1961) và kiểm chứng giả thuyết dân gian về việc các linh đài được xếp theo hình thế chòm sao Bắc Đẩu.
@@ -125,7 +125,7 @@ tuong-duc-me/
 │   ├── wrangler.jsonc            # Cấu hình Cloudflare bindings (D1, R2, SendEmail, Turnstile)
 │   └── README.md                 # Hướng dẫn chạy và triển khai worker riêng biệt
 ├── tests/
-│   └── test_data_and_integrity.js # Bộ 353 bài kiểm thử tính toàn vẹn dữ liệu & backend
+│   └── test_data_and_integrity.js # Bộ 360 bài kiểm thử tính toàn vẹn dữ liệu & backend
 ├── astro.config.mjs              # Cấu hình Astro
 ├── package.json                  # Khai báo phụ thuộc và kịch bản lệnh
 ├── CONTRIBUTING.md               # Hướng dẫn tham gia đóng góp mã nguồn và tư liệu
@@ -180,7 +180,7 @@ npm test
 
 ## 7. Kiểm thử toàn vẹn dữ liệu
 
-Dự án sở hữu bộ kiểm thử nghiêm ngặt gồm **353 điều kiện kiểm thử** độc lập trong `tests/test_data_and_integrity.js`, đảm bảo dữ liệu và cấu hình hệ thống không bao giờ bị sai lệch:
+Dự án sở hữu bộ kiểm thử nghiêm ngặt gồm **360 điều kiện kiểm thử** độc lập trong `tests/test_data_and_integrity.js`, đảm bảo dữ liệu và cấu hình hệ thống không bao giờ bị sai lệch:
 
 ```bash
 npm test

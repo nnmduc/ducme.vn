@@ -1,0 +1,245 @@
+{
+  "schema": "ducme.khao-cuu/v1",
+  "id": "fatimavinhlong",
+  "name": "Đức Mẹ Fatima Vĩnh Long",
+  "kind": "capnhat",
+  "researcher": "Claude Code (phien lam viec 2026-09-11)",
+  "date": "2026-09-11",
+  "scope": "Thay 2 nguon tim kiem Google bang 4 nguon truc tiep, sua lai dia danh (Phuong 3 -> xa Tan Ngai), bo sung historicalFact/architect/oralTradition/significance co dan nguon, ghi nhan mau thuan ten giam muc giua cac nguon. Lan cap nhat sau: tim va bo sung 1 anh thuc dia hop le tren Wikimedia Commons (CC BY-SA 4.0), doi chieu toa do GPS goc trong EXIF anh voi toa do uoc luong cu.",
+
+  "baseline": {
+    "hasPhoto": false,
+    "directSources": 0,
+    "searchSources": 2,
+    "totalWords": 86,
+    "missing": ["ảnh thực địa", "nguồn trực tiếp (chỉ có link tìm kiếm)", "nội dung mỏng (86/300 từ)"]
+  },
+
+  "fields": [
+    {
+      "field": "historicalFact",
+      "action": "sua",
+      "value": "Được Đức Cha Antôn Nguyễn Văn Thiện, Giám mục Giáo phận Vĩnh Long (1960–1968), khởi xướng xây dựng. Trung tâm khởi công ngày 17/02/1965 và khánh thành tượng đài cùng khuôn viên vào ngày 13/05/1965, đúng dịp kỷ niệm ngày Đức Mẹ hiện ra tại Fatima (Bồ Đào Nha) năm 1917. Đây là một trong ba trung tâm hành hương chính thức của Giáo phận Vĩnh Long, cùng với Trung tâm Đình Khao và Trung tâm Đức Mẹ La Mã Bến Tre. Từ đó, giáo phận tổ chức đều đặn hai kỳ hành hương cấp giáo phận mỗi năm vào 12–13/5 và 12–13/10. Năm 2017, trung tâm tổ chức đại lễ kỷ niệm 100 năm Đức Mẹ hiện ra tại Fatima, do Đức Ông Barnabê Nguyễn Văn Phương, Tổng Đại diện Giáo phận, chủ sự.",
+      "note": "Thay hoàn toàn đoạn cũ (chỉ 39 từ, không dẫn nguồn cụ thể). Không dùng tên 'Phêrô Nguyễn Văn Thiện' như S4 ghi nhầm — xem conflicts.",
+      "claims": [
+        { "text": "Đức Cha Antôn Nguyễn Văn Thiện khởi xướng xây dựng trung tâm", "sources": ["S1", "S2", "S3", "S6"], "confidence": "cao" },
+        { "text": "Khởi công 17/02/1965, khánh thành tượng đài và trung tâm 13/05/1965", "sources": ["S1", "S2", "S3"], "confidence": "cao" },
+        { "text": "Một trong ba trung tâm hành hương chính thức của Giáo phận Vĩnh Long (Fatima, Đình Khao, La Mã Bến Tre)", "sources": ["S1"], "confidence": "trungbinh" },
+        { "text": "Tổ chức hai kỳ hành hương cấp giáo phận hằng năm vào 12–13/5 và 12–13/10", "sources": ["S1", "S2", "S3"], "confidence": "cao" },
+        { "text": "Năm 2017 tổ chức đại lễ kỷ niệm 100 năm Đức Mẹ hiện ra tại Fatima, do Đức Ông Barnabê Nguyễn Văn Phương chủ sự", "sources": ["S2", "S3"], "confidence": "cao" }
+      ]
+    },
+    {
+      "field": "architect",
+      "action": "sua",
+      "value": "Công trình mang phong cách kiến trúc hiện đại (modernist) đặc trưng miền Nam thập niên 1960: mặt tiền ghép từ các tấm chìa bê tông mỏng đan cài vào nhau, đỡ bởi hệ cột thép mảnh và cao tạo cảm giác nhẹ nhàng, lơ lửng; hành lang rộng làm không gian chuyển tiếp giữa trong và ngoài công trình. Tên kiến trúc sư thiết kế hiện chưa tìm được nguồn nào ghi lại. Tượng Đức Mẹ Fatima bằng đá trắng được xây dựng từ sự đóng góp của các linh mục trong giáo phận.",
+      "note": "Đoạn cũ chỉ là mô tả cảm tính ('công viên hoa kiểng tĩnh lặng...'), không phải thông tin kiến trúc thật. Câu cuối (đóng góp của linh mục) chỉ có 1 nguồn (S4) và nguồn đó có sai sót khác (xem conflicts) nên để confidence thấp.",
+      "claims": [
+        { "text": "Kiến trúc hiện đại, mặt tiền tấm chìa bê tông đan cài, hệ cột thép mảnh, hành lang rộng", "sources": ["S5"], "confidence": "cao" },
+        { "text": "Tên kiến trúc sư thiết kế chưa xác định được", "sources": ["S5"], "confidence": "cao" },
+        { "text": "Tượng đá trắng xây dựng từ đóng góp của các linh mục trong giáo phận", "sources": ["S4"], "confidence": "thap" }
+      ]
+    },
+    {
+      "field": "oralTradition",
+      "action": "sua",
+      "value": "Tương truyền, thuở ban đầu tượng Đức Mẹ được đặt dưới gốc một cây me cổ thụ hơn 200 năm tuổi trong khuôn viên; giáo dân xem cây me ấy như dấu chứng sống động cho sự hiện diện của Mẹ suốt hơn nửa thế kỷ qua. Trung tâm cũng nằm ở điểm giao kết giữa hai nhánh sông Tiền và sông Hậu hiền hòa, che chở cho giáo dân châu thổ.",
+      "note": "Câu đầu là chi tiết mới, dựa theo 1 nguồn duy nhất (S4) mang tính truyền tụng/cảm tính hơn là sự kiện đã kiểm chứng nên xếp vào oralTradition thay vì historicalFact. Câu sau giữ nguyên từ bản ghi cũ, không có nguồn cụ thể (chấp nhận được vì đây là trường truyền tụng, không bắt buộc dẫn nguồn theo lược đồ)."
+    },
+    {
+      "field": "significance",
+      "action": "sua",
+      "value": "Là một trong ba trung tâm hành hương chính thức của Giáo phận Vĩnh Long, giữ vai trò trung tâm Thánh Mẫu hạt nhân của vùng đất Tây Nam Bộ — nơi giáo dân khắp vùng sông nước Cửu Long quy tụ hai lần mỗi năm để cầu nguyện, học hỏi sứ điệp Fatima và tìm sự ủi an, chữa lành tâm hồn.",
+      "note": "Giữ câu 'trung tâm Thánh Mẫu hạt nhân...' của bản ghi cũ, bổ sung phần đầu và cuối có dẫn nguồn.",
+      "claims": [
+        { "text": "Một trong ba trung tâm hành hương chính thức, vai trò trung tâm Thánh Mẫu hạt nhân vùng Tây Nam Bộ", "sources": ["S1"], "confidence": "trungbinh" }
+      ]
+    },
+    {
+      "field": "location",
+      "action": "sua",
+      "value": "Xã Tân Ngãi, TP. Vĩnh Long, tỉnh Vĩnh Long",
+      "note": "Bản ghi cũ ghi 'Phường 3, TP. Vĩnh Long' — không khớp với bất kỳ nguồn nào tìm được. Cả 4 nguồn trực tiếp đều thống nhất vị trí là xã Tân Ngãi. Dùng địa danh hành chính trước đợt sáp nhập 01/07/2025 (giống quy ước đang dùng cho các linh địa khác trong file); sau sáp nhập khu vực này thuộc phường Tân Ngãi (hợp nhất từ Tân Ngãi, Tân Hòa, Tân Hội), không còn cấp 'TP.' — nhưng chưa đổi đồng loạt toàn bộ 18 bản ghi nên chưa áp dụng riêng cho mục này.",
+      "claims": [
+        { "text": "Trung tâm toạ lạc tại xã Tân Ngãi, TP. Vĩnh Long", "sources": ["S1", "S2", "S3", "S4"], "confidence": "cao" }
+      ]
+    },
+    {
+      "field": "lat",
+      "action": "sua",
+      "value": 10.2637,
+      "note": "Bản ghi cũ (10.245) chỉ là ước lượng vị trí xã Tân Ngãi trên bản đồ, không có nguồn xác nhận độc lập. Toạ độ mới lấy từ dữ liệu GPS gắn trong EXIF của ảnh chụp trực tiếp tại chân tượng đài (S7), đáng tin hơn vì đo tại đúng vị trí tượng chứ không phải tâm xã.",
+      "claims": [
+        { "text": "Toạ độ GPS 10°15'49.26\"N ghi trong EXIF ảnh chụp tại chính tượng đài", "sources": ["S7"], "confidence": "trungbinh" }
+      ]
+    },
+    {
+      "field": "lng",
+      "action": "sua",
+      "value": 105.936,
+      "note": "Xem ghi chú ở trường lat. Cùng nguồn ảnh S7.",
+      "claims": [
+        { "text": "Toạ độ GPS 105°56'9.62\"E ghi trong EXIF ảnh chụp tại chính tượng đài", "sources": ["S7"], "confidence": "trungbinh" }
+      ]
+    },
+    {
+      "field": "sources",
+      "action": "sua",
+      "value": [
+        { "title": "Trung Tâm Hành Hương Đức Mẹ Fatima Vĩnh Long - Giáo Phận Vĩnh Long", "url": "https://giaophanvinhlong.net/trung-tam-hanh-huong-duc-me-fatima-vinh-long/" },
+        { "title": "Trung tâm Hành Hương Fatima Vĩnh Long kỷ niệm 100 năm Đức Mẹ hiện ra", "url": "https://vntaiwan.catholic.org.tw/17news/17news0740.htm" },
+        { "title": "Trung tâm hành hương Fatima Vĩnh Long kỷ niệm 100 năm Đức Mẹ hiện ra", "url": "https://www.vietcatholic.net/News/Html/222536.htm" },
+        { "title": "Tản Mạn Kiến Trúc - Trung tâm Hành hương Fatima Vĩnh Long", "url": "https://www.tanmankientruc.org/kien-truc/modernist-series/trung-tam-fatima-vinh-long" }
+      ],
+      "note": "Thay cả 2 link Google-search cũ bằng 4 bài viết trực tiếp.",
+      "claims": [
+        { "text": "4 nguồn trực tiếp thay cho 2 link tìm kiếm Google", "sources": ["S1", "S2", "S3", "S5"], "confidence": "cao" }
+      ]
+    }
+  ],
+
+  "sources": [
+    {
+      "code": "S1",
+      "title": "Trung Tâm Hành Hương Đức Mẹ Fatima Vĩnh Long - Giáo Phận Vĩnh Long",
+      "url": "https://giaophanvinhlong.net/trung-tam-hanh-huong-duc-me-fatima-vinh-long/",
+      "tier": "B",
+      "accessed": "2026-09-11",
+      "supports": "Ngày khởi công/khánh thành, người khởi xướng, vị trí xã Tân Ngãi, lịch hành hương hằng năm, 1 trong 3 trung tâm hành hương của giáo phận",
+      "inRecord": true
+    },
+    {
+      "code": "S2",
+      "title": "Trung tâm Hành Hương Fatima Vĩnh Long kỷ niệm 100 năm Đức Mẹ hiện ra",
+      "url": "https://vntaiwan.catholic.org.tw/17news/17news0740.htm",
+      "tier": "B",
+      "accessed": "2026-09-11",
+      "supports": "Ngày tháng chi tiết, tên các linh mục, lễ kỷ niệm 100 năm 2017, vị trí xã Tân Ngãi",
+      "inRecord": true
+    },
+    {
+      "code": "S3",
+      "title": "Trung tâm hành hương Fatima Vĩnh Long kỷ niệm 100 năm Đức Mẹ hiện ra",
+      "url": "https://www.vietcatholic.net/News/Html/222536.htm",
+      "tier": "B",
+      "accessed": "2026-09-11",
+      "supports": "Xác nhận ngày khởi công/khánh thành, mục đích thành lập, lễ 2017",
+      "inRecord": true
+    },
+    {
+      "code": "S4",
+      "title": "Giới thiệu TTHH Đức Mẹ Fatima Vĩnh Long - GP Ban Mê Thuột (đăng lại)",
+      "url": "https://gpbanmethuot.com/Tin-tuc/gioi-thieu-tthh-duc-me-fatima-vinh-long-19890.html",
+      "tier": "B",
+      "accessed": "2026-09-11",
+      "supports": "Khu đất 11.500m2 (1964), cây me hơn 200 năm tuổi, tượng xây từ đóng góp của các linh mục",
+      "inRecord": false
+    },
+    {
+      "code": "S5",
+      "title": "Tản Mạn Kiến Trúc - Trung tâm Hành hương Fatima Vĩnh Long",
+      "url": "https://www.tanmankientruc.org/kien-truc/modernist-series/trung-tam-fatima-vinh-long",
+      "tier": "B",
+      "accessed": "2026-09-11",
+      "supports": "Mô tả kiến trúc hiện đại, vật liệu, kiến trúc sư chưa xác định",
+      "inRecord": true
+    },
+    {
+      "code": "S6",
+      "title": "Antôn Nguyễn Văn Thiện – Wikipedia tiếng Việt",
+      "url": "https://vi.wikipedia.org/wiki/Ant%C3%B4n_Nguy%E1%BB%85n_V%C4%83n_Thi%E1%BB%87n",
+      "tier": "B",
+      "accessed": "2026-09-11",
+      "supports": "Xác nhận đúng tên và nhiệm kỳ giám mục Giáo phận Vĩnh Long (1960/1961-1968) của Đức Cha Antôn Nguyễn Văn Thiện, dùng để giải quyết mâu thuẫn tên với S4",
+      "inRecord": false
+    },
+    {
+      "code": "S7",
+      "title": "File:DucMeFatimaVinhLong.jpg - Wikimedia Commons (ảnh của Philiplam990)",
+      "url": "https://commons.wikimedia.org/wiki/File:DucMeFatimaVinhLong.jpg",
+      "tier": "B",
+      "accessed": "2026-09-11",
+      "supports": "Ảnh thực địa chụp tượng Đức Mẹ Fatima ban đêm dưới khung kiến trúc chữ M; toạ độ GPS gắn trong EXIF ảnh (10°15'49.26\"N 105°56'9.62\"E), ảnh dùng minh hoạ bài Giáo phận Vĩnh Long trên vi.wikipedia.org",
+      "inRecord": false
+    }
+  ],
+
+  "images": [
+    {
+      "file": "File:DucMeFatimaVinhLong.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:DucMeFatimaVinhLong.jpg",
+      "author": "Philiplam990",
+      "license": "CC BY-SA 4.0",
+      "year": 2019,
+      "content": "Ảnh chụp ban đêm tượng Đức Mẹ Fatima (đá trắng, tay lần chuỗi Mân Côi) đặt dưới khung kiến trúc mái vòm hình chữ 'M' (Maria), hoa tươi xếp thành chữ MARIA phía trước bệ tượng — đúng khuôn viên Trung tâm Hành hương Fatima Vĩnh Long",
+      "caption": "Tượng Đức Mẹ Fatima tại Trung tâm Hành hương Fatima Vĩnh Long, xã Tân Ngãi, TP. Vĩnh Long (Nguồn: Wikimedia Commons, tác giả Philiplam990, giấy phép CC BY-SA 4.0, chụp 12/05/2019)",
+      "notAi": true
+    }
+  ],
+  "imageSearchNote": "Tìm lại rộng hơn lần trước: site:commons.wikimedia.org với nhiều biến thể ('Fatima' + 'Vĩnh Long', + 'Tân Ngãi', Category:Roman Catholic Diocese of Vĩnh Long, Category:Vinh Long City, Category:Statues of Virgin Mary in Vietnam), cùng Flickr Creative Commons và Panoramio — không ra thêm ảnh nào khác ngoài ảnh đã đề xuất. Tìm thấy 1 ảnh hợp lệ: File:DucMeFatimaVinhLong.jpg trên Wikimedia Commons (CC BY-SA 4.0, ảnh gốc do người dùng Philiplam990 tự chụp và đăng, đang được dùng minh hoạ trong bài 'Giáo phận Vĩnh Long' trên vi.wikipedia.org). Đã tải ảnh về xem trực tiếp để xác nhận là ảnh chụp thật (không phải AI, không chỉnh sửa quá mức), đúng khuôn viên tượng đài Fatima. Trang Facebook chính thức facebook.com/fatimavinhlong và trang tanmankientruc.org (S5) có ảnh nhưng không rõ giấy phép/không phải nền tảng CC nên không đề xuất.",
+
+  "conflicts": [
+    {
+      "issue": "Tên vị giám mục sáng lập",
+      "a": { "claim": "Đức Cha Antôn Nguyễn Văn Thiện", "source": "S1, S2, S3, S6" },
+      "b": { "claim": "Giám mục Phêrô Nguyễn Văn Thiện", "source": "S4" },
+      "resolution": "Dùng 'Antôn Nguyễn Văn Thiện' theo 3 nguồn trực tiếp độc lập cộng thêm Wikipedia (S6) xác nhận đây là vị Giám mục tiên khởi Giáo phận Vĩnh Long tại vị 1960/1961-1968. S4 có sai sót tên đệm, nên các chi tiết riêng của S4 (khu đất 11.500m2, cây me 200 năm) được giữ lại nhưng gắn confidence thấp/trung bình."
+    }
+  ],
+
+  "unknowns": [
+    "Tên kiến trúc sư thiết kế công trình — cả nguồn kiến trúc chuyên đề (S5) cũng xác nhận chưa tìm được",
+    "Diện tích khu đất chính xác (11.500m2 theo S4) — chưa đối chiếu được với nguồn thứ hai",
+    "Chi tiết cây me cổ thụ và vị trí đặt tượng ban đầu — chỉ 1 nguồn (S4), chưa kiểm chứng chéo",
+    "Chất liệu, kích thước chính xác của tượng Đức Mẹ (chỉ biết 'đá trắng', chưa rõ chiều cao)",
+    "Toạ độ chính xác của chính linh đài — đã cải thiện bằng GPS trong EXIF ảnh S7 (10.2637, 105.936), nhưng đây vẫn là 1 nguồn duy nhất (điện thoại người chụp), chưa đối chiếu chéo với đo đạc bản đồ độc lập thứ hai",
+    "Chiều cao và chất liệu chính xác của tượng — có nguồn phụ (không phải S1-S7 trong hồ sơ này) nói tượng cao 5m đá trắng, cầm chuỗi 50 hạt, nhưng chưa kiểm chứng chéo đủ để đưa vào historicalFact/architect lần này (nằm ngoài phạm vi yêu cầu bổ sung ảnh của phiên này)"
+  ],
+
+  "selfAssessment": {
+    "confidence": "trungbinh",
+    "biggestRisk": "Toàn bộ nguồn mới đều là báo chí/trang tin Công giáo (tier B), chưa tiếp cận được văn khố Toà Giám mục Vĩnh Long hay kỷ yếu gốc; toạ độ vẫn chưa được đối chiếu độc lập với nguồn bản đồ nào. Chi tiết cây me và diện tích đất chỉ dựa vào 1 nguồn có sai sót khác ở chỗ khác trong cùng bài.",
+    "reviewFocus": "Đối chiếu lại tên giám mục (Antôn vs Phêrô), kiểm tra độ tin cậy của S4 cho các chi tiết riêng (cây me, diện tích đất), xác nhận việc sửa địa danh Phường 3 -> xã Tân Ngãi có đúng không, và xác minh độc lập ảnh S7 (giấy phép CC BY-SA 4.0 trên Commons còn hiệu lực, đúng là tượng tại Fatima Vĩnh Long) cùng toạ độ GPS mới lấy từ EXIF ảnh đó trước khi triển khai"
+  },
+
+  "validation": {
+    "command": "node .claude/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/fatimavinhlong/khao-cuu.json --allow-existing-id",
+    "output": "=> DAT toan bo rang buoc bat buoc (chay lai sau khi bo sung anh + toa do GPS). Sau khi chen vao src/data/statues.js, chay \"npm test\" de xac nhan lai."
+  },
+
+  "record": {
+    "id": "fatimavinhlong",
+    "name": "Đức Mẹ Fatima Vĩnh Long",
+    "title": "Trung Tâm Hành Hương Fatima Vĩnh Long - Tòa Giám Mục",
+    "year": 1965,
+    "lat": 10.2637,
+    "lng": 105.936,
+    "elevation": "8m",
+    "location": "Xã Tân Ngãi, TP. Vĩnh Long, tỉnh Vĩnh Long",
+    "region": "Đồng bằng sông Cửu Long",
+    "diocese": "Giáo phận Vĩnh Long",
+    "diemStatue5": false,
+    "constellationRole": {
+      "v1": null,
+      "v2": null,
+      "v3": null,
+      "v4": {
+        "star": "Trung tâm Tiền Giang - Hậu Giang",
+        "role": "Trái Tim Tây Nam Bộ",
+        "code": "NAT-18"
+      }
+    },
+    "historicalFact": "Được Đức Cha Antôn Nguyễn Văn Thiện, Giám mục Giáo phận Vĩnh Long (1960–1968), khởi xướng xây dựng. Trung tâm khởi công ngày 17/02/1965 và khánh thành tượng đài cùng khuôn viên vào ngày 13/05/1965, đúng dịp kỷ niệm ngày Đức Mẹ hiện ra tại Fatima (Bồ Đào Nha) năm 1917. Đây là một trong ba trung tâm hành hương chính thức của Giáo phận Vĩnh Long, cùng với Trung tâm Đình Khao và Trung tâm Đức Mẹ La Mã Bến Tre. Từ đó, giáo phận tổ chức đều đặn hai kỳ hành hương cấp giáo phận mỗi năm vào 12–13/5 và 12–13/10. Năm 2017, trung tâm tổ chức đại lễ kỷ niệm 100 năm Đức Mẹ hiện ra tại Fatima, do Đức Ông Barnabê Nguyễn Văn Phương, Tổng Đại diện Giáo phận, chủ sự.",
+    "oralTradition": "Tương truyền, thuở ban đầu tượng Đức Mẹ được đặt dưới gốc một cây me cổ thụ hơn 200 năm tuổi trong khuôn viên; giáo dân xem cây me ấy như dấu chứng sống động cho sự hiện diện của Mẹ suốt hơn nửa thế kỷ qua. Trung tâm cũng nằm ở điểm giao kết giữa hai nhánh sông Tiền và sông Hậu hiền hòa, che chở cho giáo dân châu thổ.",
+    "architect": "Công trình mang phong cách kiến trúc hiện đại (modernist) đặc trưng miền Nam thập niên 1960: mặt tiền ghép từ các tấm chìa bê tông mỏng đan cài vào nhau, đỡ bởi hệ cột thép mảnh và cao tạo cảm giác nhẹ nhàng, lơ lửng; hành lang rộng làm không gian chuyển tiếp giữa trong và ngoài công trình. Tên kiến trúc sư thiết kế hiện chưa tìm được nguồn nào ghi lại. Tượng Đức Mẹ Fatima bằng đá trắng được xây dựng từ sự đóng góp của các linh mục trong giáo phận.",
+    "significance": "Là một trong ba trung tâm hành hương chính thức của Giáo phận Vĩnh Long, giữ vai trò trung tâm Thánh Mẫu hạt nhân của vùng đất Tây Nam Bộ — nơi giáo dân khắp vùng sông nước Cửu Long quy tụ hai lần mỗi năm để cầu nguyện, học hỏi sứ điệp Fatima và tìm sự ủi an, chữa lành tâm hồn.",
+    "realImage": null,
+    "realImageCaption": null,
+    "sources": [
+      { "title": "Trung Tâm Hành Hương Đức Mẹ Fatima Vĩnh Long - Giáo Phận Vĩnh Long", "url": "https://giaophanvinhlong.net/trung-tam-hanh-huong-duc-me-fatima-vinh-long/" },
+      { "title": "Trung tâm Hành Hương Fatima Vĩnh Long kỷ niệm 100 năm Đức Mẹ hiện ra", "url": "https://vntaiwan.catholic.org.tw/17news/17news0740.htm" },
+      { "title": "Trung tâm hành hương Fatima Vĩnh Long kỷ niệm 100 năm Đức Mẹ hiện ra", "url": "https://www.vietcatholic.net/News/Html/222536.htm" },
+      { "title": "Tản Mạn Kiến Trúc - Trung tâm Hành hương Fatima Vĩnh Long", "url": "https://www.tanmankientruc.org/kien-truc/modernist-series/trung-tam-fatima-vinh-long" }
+    ]
+  }
+}
