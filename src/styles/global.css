@@ -1,0 +1,113 @@
+/* ============================================================================
+   KIEU NEN TOAN TRANG
+   Chi dung bien ngu nghia tu tokens.css. Khong viet ma mau truc tiep o day.
+   ========================================================================== */
+
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Chan tran ngang: khong bao gio de trang cuon ngang tren dien thoai. */
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* Chu nghieng Playfair co right side bearing am: neu khong bu them khoang,
+   tu nghieng se dinh vao tu ke tiep (vi du "bản đồ" dinh "Việt Nam").
+   Ap dung cho MOI doan chu nghieng trong font hien thi. */
+.font-display em,
+em.accent {
+  font-style: italic;
+  padding-right: 0.14em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
+/* Ton trong nguoi dung tat hieu ung chuyen dong. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Tien ich dung chung ---------- */
+.wrap {
+  max-width: var(--wrap-max);
+  margin-inline: auto;
+  padding-inline: var(--wrap-pad);
+}
+
+@media (max-width: 640px) {
+  :root {
+    --wrap-pad: 16px;
+  }
+}
+
+/* Lien ket nhay thang toi noi dung, cho nguoi dung ban phim. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+.skip-link:focus {
+  left: var(--wrap-pad);
+  top: 12px;
+  z-index: 99;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  font-weight: 600;
+}
+
+/* Chi hien thi cho trinh doc man hinh. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}

@@ -1,0 +1,126 @@
+---
+import { SITE_NAME, NAV_ITEMS } from '../config/site.js';
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/">
+      <span class="mark" aria-hidden="true">✦</span>
+      <span class="lbl-full">{SITE_NAME}</span>
+      <span class="lbl-short">Linh Đài Đức Mẹ</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Điều hướng chính">
+      {
+        NAV_ITEMS.map((item) => (
+          <a
+            href={item.href}
+            aria-current={currentPath === item.href ? 'page' : undefined}
+          >
+            <span class="lbl-full">{item.label}</span>
+            <span class="lbl-short">{item.short}</span>
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-strong);
+    white-space: nowrap;
+  }
+  .brand .mark {
+    color: var(--accent);
+    font-size: 15px;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+  .nav-links a {
+    transition: color 0.18s;
+    white-space: nowrap;
+  }
+  .nav-links a:hover {
+    color: var(--accent-hover);
+  }
+  .nav-links a[aria-current='page'] {
+    color: var(--text-strong);
+    font-weight: 500;
+  }
+
+  /* Nhan rut gon giu thanh dieu huong tren MOT dong o moi be ngang.
+     Do o 320/360/390/430px: khong trang nao bi tran ngang. */
+  .lbl-short {
+    display: none;
+  }
+  @media (max-width: 800px) {
+    .nav-links {
+      gap: 18px;
+      font-size: 13px;
+    }
+    .brand {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 640px) {
+    .brand {
+      font-size: 14px;
+      gap: 8px;
+    }
+    .nav-links {
+      gap: 14px;
+      font-size: 13px;
+    }
+    .lbl-full {
+      display: none;
+    }
+    .lbl-short {
+      display: inline;
+    }
+  }
+  /* Duoi 400px khong con cho cho ca ba muc.
+     "Gioi thieu" van truy cap duoc tu chan trang. */
+  @media (max-width: 400px) {
+    .brand {
+      font-size: 13px;
+    }
+    .nav-links {
+      gap: 12px;
+    }
+    .nav-links a:last-child {
+      display: none;
+    }
+  }
+</style>

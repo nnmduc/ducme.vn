@@ -1,0 +1,101 @@
+/* ============================================================================
+   HE THONG TOKEN MAU - HAI LOP
+   ============================================================================
+   Lop 1 (nguyen thuy): ten mau tho, KHONG mang y nghia su dung.
+   Lop 2 (ngu nghia):   vai tro giao dien. COMPONENT CHI DUOC DUNG LOP NAY.
+
+   Quy tac bat buoc:
+   - Khong bao gio viet ma mau (#rrggbb) truc tiep trong component.
+   - Khong bao gio tham chieu lop 1 tu component.
+   Nho vay, them theme sang sau nay chi la dien lai lop 2 trong mot khoi
+   [data-theme="light"], khong phai sua lai component nao.
+
+   Hien tai: CHI CO THEME TOI. Xem khoi TODO cuoi file.
+   ========================================================================== */
+
+:root {
+  /* ---------- Lop 1: mau nguyen thuy ---------- */
+  --navy-950: #060b19;
+  --navy-900: #0c1427;
+  --navy-850: #121c34;
+  --navy-800: #1c2a4b;
+
+  --gold-500: #f59e0b;
+  --gold-300: #fcd34d;
+  --gold-ink: #1a1200;   /* chu dat tren nen vang, do tuong phan 9.1:1 */
+
+  --sky-400: #38bdf8;
+  --rose-500: #f43f5e;
+  --emerald-500: #10b981;
+
+  --white: #ffffff;
+  --slate-100: #f1f5f9;
+  --slate-400: #94a3b8;   /* 7.66:1 tren navy-950 */
+  --slate-450: #8494a8;   /* 6.34:1 tren navy-950 */
+
+  /* KHONG dung #64748b: chi dat 4.13:1 tren navy-950, truot chuan WCAG AA. */
+
+  /* ---------- Chu viet ---------- */
+  --font-display: 'Playfair Display Variable', 'Playfair Display', Georgia, serif;
+  --font-prose: 'Lora Variable', 'Lora', Georgia, serif;
+  --font-ui: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* ---------- Hinh khoi va khoang cach ---------- */
+  --radius: 4px;          /* MOT gia tri duy nhat cho toan trang */
+  --wrap-max: 1240px;
+  --wrap-pad: 24px;
+  --nav-height: 68px;
+}
+
+/* ============================================================================
+   Lop 2: vai tro ngu nghia - THEME TOI (mac dinh)
+   ========================================================================== */
+:root,
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg-page: var(--navy-950);
+  --bg-surface: var(--navy-900);
+  --bg-raised: var(--navy-850);
+
+  --text-strong: var(--white);
+  --text-primary: var(--slate-100);
+  --text-secondary: var(--slate-400);
+  --text-tertiary: var(--slate-450);
+
+  --accent: var(--gold-500);
+  --accent-hover: var(--gold-300);
+  --accent-ink: var(--gold-ink);
+
+  /* Mau danh rieng cho du lieu thien van. Khong dung lam mau nhan manh chung. */
+  --astro: var(--sky-400);
+
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.16);
+
+  --nav-bg: rgba(6, 11, 25, 0.92);
+  --focus-ring: var(--gold-500);
+}
+
+/* ============================================================================
+   TODO - THEME SANG (chua bat, chua kiem chung)
+   ============================================================================
+   Cau truc da san sang. Khi nao can theme sang, chi can:
+
+   1. Dien du 16 bien ngu nghia duoi day trong khoi [data-theme='light'].
+      Danh sach bat buoc, khong duoc thieu bien nao:
+        --bg-page, --bg-surface, --bg-raised,
+        --text-strong, --text-primary, --text-secondary, --text-tertiary,
+        --accent, --accent-hover, --accent-ink, --astro,
+        --border-subtle, --border-strong, --nav-bg, --focus-ring,
+        va color-scheme: light.
+
+   2. Do lai TOAN BO cac cap tuong phan. Vang --gold-500 dat 9.1:1 tren nen
+      toi nhung chi khoang 2.1:1 tren nen trang, nen theme sang PHAI dung mot
+      sac vang dam hon cho chu va vien, neu khong se truot WCAG AA.
+
+   3. Them nut chuyen theme, ghi lua chon vao localStorage, va dat thuoc tinh
+      data-theme len <html> TRUOC khi trang ve lan dau de tranh nhap nhay.
+
+   KHONG dien gia tri phong doan vao day. Mau chua do tuong phan thi chua dung.
+   ========================================================================== */

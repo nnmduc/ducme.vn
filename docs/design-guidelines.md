@@ -1,41 +1,106 @@
-# Hướng Dẫn Thiết Kế (Design Guidelines): Bản Đồ Tượng Đức Mẹ & Chòm Sao Bắc Đẩu
+# Hướng Dẫn Thiết Kế
 
-## 1. Triết Lý Thiết Kế: "Stella Maris - Ánh Sao Dẫn Lối"
-- **Tôn nghiêm & Thanh tao:** Gợi lên sự linh thiêng của các linh địa Thánh Mẫu nhưng mang hơi thở hiện đại, học thuật và chính xác về mặt lịch sử - địa lý.
-- **Không gian Bầu trời Đêm & Ánh sao (Celestial Starlight):** Kết hợp nền đêm lam thẳm (Deep Navy / Midnight Cosmos) với những chòm sao vàng óng (Starlight Gold) và ánh thiên thanh (Marian Cyan) tượng trưng cho Mẹ Sao Biển (Stella Maris).
-- **Trải nghiệm Tương tác Liền mạch:** Giao diện trực quan cho phép người xem tự do chiêm ngưỡng toàn cảnh đất nước, ngắm nhìn chòm sao Bắc Đẩu hình thành và lắng nghe từng câu chuyện lịch sử.
+Cập nhật 2026-09-11. Các giá trị dưới đây khớp với `src/styles/tokens.css`. Khi hai bên lệch nhau,
+**file token là nguồn đúng**.
 
-## 2. Bảng Màu Chuẩn (Color Palette)
-- **Nền chính (Celestial Dark):** `#0a0f1e` (Màn đêm vũ trụ), `#111827` (Mặt bản đồ), `#1e293b` (Bảng điều khiển / Card).
-- **Màu nhấn Ánh sao (Starlight Amber & Gold):**
-  - Vàng Bắc Đẩu chính: `#f59e0b` / `#fbbf24` (Ánh sao Dubhe, Merak...)
-  - Hiệu ứng phát sáng (Glow): `rgba(245, 158, 11, 0.4)` & `rgba(251, 191, 36, 0.8)`
-- **Màu Thánh Mẫu (Marian Sky Blue):** `#38bdf8` (Xanh áo Đức Mẹ, đường viền tương tác, thẻ thông tin).
-- **Màu thời kỳ Ngô Đình Diệm 1959 (Vintage Ruby/Bronze):** `#e11d48` / `#f43f5e` (Đánh dấu 5 tượng lịch sử).
-- **Chữ & Nội dung (Typography Colors):**
-  - Tiêu đề & Điểm nhấn: `#ffffff` & `#f8fafc`
-  - Nội dung chính: `#e2e8f0` (Độ tương phản cao, dễ đọc)
-  - Chú thích phụ: `#94a3b8`
+## 1. Triết Lý: "Stella Maris, Ánh Sao Dẫn Lối"
 
-## 3. Kiểu Chữ (Typography - Google Fonts)
-- **Tiêu đề & Thương hiệu:** `Cinzel` hoặc `Playfair Display` (Serif cổ điển, vương giả, uy nghiêm phù hợp kiến trúc thánh đường và thiên văn).
-- **Nội dung thân & Giao diện:** `Be Vietnam Pro` (Sans-serif hiện đại, tối ưu dấu tiếng Việt, sắc nét ở mọi kích cỡ).
-- **Số liệu & Tọa độ thiên văn:** `JetBrains Mono` (Monospace cho tọa độ vệ tinh, năm thành lập, thông số kỹ thuật).
+- **Tôn nghiêm và thanh tao.** Chủ đề là nơi thờ tự, biến cố bách hại và ký ức cộng đoàn. Hiệu ứng
+  hào nhoáng không phù hợp.
+- **Bầu trời đêm và ánh sao.** Nền lam thẳm, điểm nhấn vàng ánh sao, xanh thiên thanh cho dữ liệu
+  thiên văn.
+- **Nội dung là chính.** Chữ đứng trước hiệu ứng. Trang chi tiết là trang để đọc, không phải để ngắm.
 
-## 4. Bố Cục & Các Phân Khu Giao Diện (Layout & Spatial Hierarchy)
-- **Thanh đỉnh (Header & Quick Action):**
-  - Logo/Biểu tượng Đức Mẹ Sao Biển + Tiêu đề chính.
-  - Bộ nút chuyển đổi phiên bản Bắc Đẩu (Version 1 Kinh điển, Version 2 Măng Đen, Version 3 Bộ 5 tượng TT Diệm, Version 4 Toàn quốc).
-  - Nút chuyển chế độ Bản đồ / Danh sách (Map View vs List View) & Nút Bật/Tắt đường nối chòm sao.
-- **Khu vực trung tâm (Main Viewport):**
-  - Bản đồ Việt Nam toàn màn hình với style Dark Night / Voyager tương thích cao.
-  - Lớp phủ Constellation Overlay với đường nối nét đứt phát sáng (Glowing Animated Polyline) và biểu tượng 7 ngôi sao Bắc Đẩu đối chiếu.
-  - Marker tùy biến dạng huy hiệu sao phát sáng khi hover/active.
-- **Thanh trượt dòng thời gian (Floating Timeline Player):**
-  - Đặt nổi ở mép dưới trung tâm (Bottom-center Dock).
-  - Trục thời gian từ 1798 đến 2026.
-  - Nút Play/Pause, tua lùi, tua tới, kèm nhãn mốc sự kiện quan trọng (1798: La Vang, 1885: Trà Kiệu, 1959: Đại hội Thánh Mẫu & 5 Tượng TT Diệm, 1971: Măng Đen, 2020: Núi Cúi).
-- **Khung so sánh thiên văn (Celestial Comparison Widget):**
-  - Cửa sổ nhỏ góc bản đồ mô phỏng hình dạng chòm sao Đại Hùng (Ursa Major) thực tế trên bầu trời đêm để đối sánh góc nghiêng và khoảng cách với bản đồ Việt Nam.
-- **Hộp thoại chi tiết sâu (Deep Reading Modal):**
-  - Slide ảnh chất lượng cao, thông số năm - tọa độ - địa chỉ, bản trích lịch sử chính xác, câu chuyện truyền tụng dân gian, và trích dẫn nguồn uy tín.
+Ba mức điều chỉnh của bản thiết kế: độ lệch bố cục 6/10, độ chuyển động **3/10**, độ dày đặc 4/10.
+Chuyển động thấp là có chủ đích: đây là tư liệu về lòng đạo và mất mát, không phải trang giới thiệu
+sản phẩm.
+
+## 2. Token Màu
+
+Hai lớp. **Component chỉ được dùng lớp ngữ nghĩa.** Không viết mã màu trong component.
+
+### Nguyên thủy
+
+| Token | Giá trị |
+|---|---|
+| `--navy-950` | `#060b19` |
+| `--navy-900` | `#0c1427` |
+| `--navy-850` | `#121c34` |
+| `--gold-500` | `#f59e0b` |
+| `--gold-300` | `#fcd34d` |
+| `--gold-ink` | `#1a1200` |
+| `--sky-400` | `#38bdf8` |
+| `--slate-100` | `#f1f5f9` |
+| `--slate-400` | `#94a3b8` |
+| `--slate-450` | `#8494a8` |
+
+### Ngữ nghĩa
+
+`--bg-page`, `--bg-surface`, `--bg-raised`, `--text-strong`, `--text-primary`,
+`--text-secondary`, `--text-tertiary`, `--accent`, `--accent-hover`, `--accent-ink`,
+`--astro`, `--border-subtle`, `--border-strong`, `--nav-bg`, `--focus-ring`.
+
+### Độ tương phản đã đo
+
+| Cặp màu | Tỷ lệ | Kết luận |
+|---|---|---|
+| `#f59e0b` trên `#060b19` | 9.14:1 | Đạt AAA |
+| `#38bdf8` trên `#060b19` | 9.17:1 | Đạt AAA |
+| `#94a3b8` trên `#060b19` | 7.66:1 | Đạt AAA |
+| `#8494a8` trên `#060b19` | 6.34:1 | Đạt AA |
+| ~~`#64748b`~~ trên `#060b19` | **4.13:1** | **Trượt AA, đã loại bỏ** |
+
+`#64748b` từng là `--text-faint` của bản cũ. **Không dùng lại.**
+
+### Quy tắc màu nhấn
+
+Chỉ **một** màu nhấn cho toàn trang: vàng. Xanh `--astro` dành riêng cho dữ liệu thiên văn, tức tên
+sao, mã Bayer, đường chỉ hướng sao Bắc Cực. Không dùng xanh này làm màu nhấn chung.
+
+## 3. Kiểu Chữ
+
+| Vai trò | Font | Token |
+|---|---|---|
+| Tiêu đề | Playfair Display Variable | `--font-display` |
+| Văn xuôi | Lora Variable | `--font-prose` |
+| Giao diện, nhãn, số | Be Vietnam Pro | `--font-ui` |
+
+Cả ba đều đã kiểm chứng có bộ ký tự `vietnamese` và được tự lưu trữ qua `@fontsource`.
+
+> Bản trước đề xuất `Cinzel` và `JetBrains Mono`. **Không dùng nữa.** Số liệu và tọa độ dùng
+> `--font-ui` kèm `font-variant-numeric: tabular-nums`.
+
+**Bẫy cần biết.** Chữ nghiêng Playfair có right side bearing âm: từ nghiêng sẽ dính vào từ kế tiếp
+(`bản đồ` dính `Việt Nam`). Mọi đoạn nghiêng trong font hiển thị phải có `padding-right: 0.14em`.
+Cụm từ nghiêng nhiều chữ cũng cần `white-space: nowrap` để không bị tách dòng giữa cụm.
+
+## 4. Hình Khối
+
+Bán kính góc **duy nhất một giá trị**: `--radius: 4px`. Không dùng dạng viên thuốc, không trộn nhiều
+thang bán kính.
+
+## 5. Nguyên Tắc Về Ảnh
+
+- **Không dùng ảnh do máy tạo sinh.** Tuyệt đối. Với tư liệu về công trình thật ở địa điểm thật, ảnh
+  dựng bằng máy phá hỏng đúng thứ bộ tư liệu tồn tại để bảo vệ.
+- **Không dùng ảnh mẫu thay thế.** Linh địa chưa có ảnh xác thực thì để trống. Hiện 8 trong 18 có ảnh.
+- **Không cắt xén chủ thể.** Ảnh hiện nguyên khung, đặt giữa một nền phẳng, giới hạn chiều cao, giữ
+  nguyên tỷ lệ gốc. Khung 16:9 cắt mất đầu pho tượng ở các ảnh dọc, nên đã bị loại bỏ.
+- Chú thích ảnh luôn ghi nguồn.
+
+## 6. Bố Cục
+
+- Trang nội dung là tài liệu cuộn dọc, không phải khung ứng dụng cố định. Chỉ `/ban-do/` giữ kiểu
+  khung ứng dụng.
+- Độ dài dòng văn xuôi: 65 tới 68 ký tự.
+- Thanh điều hướng: một dòng ở **mọi** bề ngang, cao tối đa 68px. Dùng nhãn rút gọn dưới 640px, bỏ
+  mục phụ dưới 400px.
+- Không trang nào được cuộn ngang. Đã kiểm ở 320, 360, 390, 430px.
+- Mỗi phân khu dùng một họ bố cục khác nhau. Không lặp lại họ bố cục hai lần trên cùng một trang.
+- Không dùng nhãn chữ hoa nhỏ phía trên mỗi tiêu đề phân khu.
+
+## 7. Theme Sáng
+
+Chưa bật. Cấu trúc token đã sẵn sàng. Muốn thêm thì điền đủ 16 biến ngữ nghĩa trong khối
+`[data-theme="light"]` rồi đo lại toàn bộ cặp tương phản. Lưu ý `--gold-500` đạt 9.1:1 trên nền tối
+nhưng chỉ khoảng 2.1:1 trên nền trắng, nên theme sáng **phải** dùng sắc vàng đậm hơn cho chữ và viền.

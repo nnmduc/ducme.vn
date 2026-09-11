@@ -1,0 +1,121 @@
+---
+/**
+ * So do chom Bac Dau (Ursa Major) doi chieu voi bay linh dia cua phien ban 1.
+ *
+ * Day la BIEU DO THONG TIN, khong phai hoa tiet trang tri: no chinh la luan de
+ * cua ca du an. Toa do lay theo hinh the that cua chom Dai Hung.
+ *
+ * Ten linh dia doc tu du lieu, khong viet cung trong template, nen doi ten
+ * trong src/data/statues.js la so do tu cap nhat theo.
+ */
+import { MARIAN_STATUES_DATA, CONSTELLATION_VERSIONS } from '../data/statues.js';
+
+/** Vi tri bay ngoi sao chinh trong he toa do 300x190 cua so do. */
+const STAR_POSITIONS = {
+  lavang: { x: 24, y: 88, r: 4.0, label: [10, 106] },
+  trakieu: { x: 72, y: 64, r: 3.4, label: [56, 52] },
+  phuonghoang: { x: 114, y: 58, r: 4.4, label: [98, 46] },
+  giangson: { x: 156, y: 80, r: 3.0, label: [150, 70] },
+  trinhphong: { x: 168, y: 140, r: 3.6, label: [140, 156] },
+  tapao: { x: 234, y: 150, r: 4.2, label: [212, 168] },
+  thacmo: { x: 228, y: 80, r: 4.6, label: [236, 99] },
+};
+
+const POLARIS = { x: 276, y: 26 };
+
+const version = CONSTELLATION_VERSIONS.v1;
+const nameOf = (id) => MARIAN_STATUES_DATA.find((s) => s.id === id)?.name ?? id;
+
+/** Bo "Duc Me " o dau cho nhan so do gon gang. */
+const shortName = (id) => nameOf(id).replace(/^Đức Mẹ\s+/, '');
+
+const stars = version.nodes
+  .filter((id) => STAR_POSITIONS[id])
+  .map((id) => ({ id, ...STAR_POSITIONS[id], name: shortName(id) }));
+
+/** Duong noi lay tu du lieu phien ban, khong ve tay. */
+const segments = version.segments
+  .filter(([a, b]) => STAR_POSITIONS[a] && STAR_POSITIONS[b])
+  .map(([a, b]) => ({ a: STAR_POSITIONS[a], b: STAR_POSITIONS[b] }));
+
+/** Hai sao dan duong keo dai toi sao Bac Cuc. */
+const [pointerA, pointerB] = version.pointerStars.map((id) => STAR_POSITIONS[id]);
+---
+
+<figure class="sky">
+  <svg
+    viewBox="0 0 300 190"
+    role="img"
+    aria-label="Sơ đồ chòm sao Bắc Đẩu với bảy ngôi sao chính, cặp sao Merak và Dubhe chỉ về sao Bắc Cực"
+  >
+    {
+      segments.map((s) => (
+        <line x1={s.a.x} y1={s.a.y} x2={s.b.x} y2={s.b.y} class="link" />
+      ))
+    }
+
+    {/* Duong dan huong: Merak toi Dubhe, keo dai toi sao Bac Cuc. */}
+    <line x1={pointerA.x} y1={pointerA.y} x2={pointerB.x} y2={pointerB.y} class="pointer" />
+    <line x1={pointerB.x} y1={pointerB.y} x2={POLARIS.x} y2={POLARIS.y} class="pointer" />
+
+    {stars.map((s) => <circle cx={s.x} cy={s.y} r={s.r} class="star" />)}
+    <circle cx={POLARIS.x} cy={POLARIS.y} r="3" class="polaris" />
+
+    {stars.map((s) => <text x={s.label[0]} y={s.label[1]} class="tag">{s.name}</text>)}
+    <text x={POLARIS.x - 26} y={POLARIS.y - 8} class="tag polaris-tag">Bắc Cực</text>
+  </svg>
+
+  <figcaption class="note">
+    Bảy sao chính của chòm Đại Hùng. Cặp <b>Merak</b> và <b>Dubhe</b>, ứng với Tà Pao
+    và Thác Mơ, kéo dài thành đường chỉ thẳng tới sao Bắc Cực.
+  </figcaption>
+</figure>
+
+<style>
+  .sky {
+    background: var(--bg-page);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 26px;
+  }
+  svg {
+    width: 100%;
+    height: auto;
+  }
+  .link {
+    fill: none;
+    stroke: color-mix(in srgb, var(--accent) 55%, transparent);
+    stroke-width: 1.25;
+  }
+  .pointer {
+    stroke: color-mix(in srgb, var(--astro) 75%, transparent);
+    stroke-width: 1.25;
+    stroke-dasharray: 4 4;
+  }
+  .star {
+    fill: var(--accent-hover);
+  }
+  .polaris {
+    fill: var(--astro);
+  }
+  .tag {
+    font-family: var(--font-ui);
+    font-size: 9px;
+    fill: var(--text-tertiary);
+  }
+  .polaris-tag {
+    fill: var(--astro);
+  }
+  .note {
+    margin-top: 16px;
+    font-size: 12.5px;
+    line-height: 1.62;
+    color: var(--text-tertiary);
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 14px;
+  }
+  .note b {
+    color: var(--astro);
+    font-weight: 600;
+  }
+</style>

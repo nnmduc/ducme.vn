@@ -1,0 +1,35 @@
+name: Đề xuất tính năng (Feature Request)
+description: Đề xuất một ý tưởng hoặc tính năng mới cho website
+title: "[FEAT]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Bạn có ý tưởng cải tiến giao diện, tối ưu hiệu năng hoặc thêm tính năng hữu ích cho cộng đồng? Hãy chia sẻ với chúng tôi!
+  - type: textarea
+    id: problem
+    attributes:
+      label: Vấn đề hoặc nhu cầu thực tế
+      description: Tính năng này giải quyết vấn đề gì hoặc mang lại lợi ích gì cho người dùng?
+      placeholder: Tôi nhận thấy người dùng gặp khó khăn khi muốn chia sẻ vị trí của một tượng lên mạng xã hội...
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Giải pháp hoặc tính năng đề xuất
+      description: Mô tả chi tiết cách tính năng nên hoạt động.
+      placeholder: Thêm nút 'Sao chép liên kết' với icon chia sẻ nhanh trên mỗi trang chi tiết...
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Các phương án thay thế đã cân nhắc (nếu có)
+      description: Bạn đã từng thử cách nào khác để giải quyết vấn đề này chưa?
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Bối cảnh / Tài liệu tham khảo bổ sung
+      description: Hình ảnh phác thảo (mockup), ví dụ từ các trang web khác, v.v.

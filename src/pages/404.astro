@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StatueIndex from '../components/StatueIndex.astro';
+---
+
+<BaseLayout
+  title="Không tìm thấy trang | Linh Đài Đức Mẹ Việt Nam"
+  description="Trang bạn tìm không tồn tại. Xem danh mục các linh địa Thánh Mẫu tại Việt Nam."
+  noindex={true}
+>
+  <div class="wrap notfound">
+    <h1>Không tìm thấy trang</h1>
+    <p>
+      Địa chỉ bạn vừa mở không tồn tại hoặc đã đổi. Danh mục đầy đủ các linh địa nằm ngay
+      bên dưới.
+    </p>
+    <a class="btn" href="/">Về trang chủ</a>
+  </div>
+
+  <div class="wrap index">
+    <StatueIndex />
+  </div>
+</BaseLayout>
+
+<style>
+  .notfound {
+    padding-block: 80px 48px;
+    max-width: 60ch;
+  }
+  .notfound h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4.4vw, 3rem);
+    font-weight: 700;
+    color: var(--text-strong);
+    margin-bottom: 16px;
+  }
+  .notfound p {
+    font-family: var(--font-prose);
+    font-size: 1.12rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 28px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 13px 24px;
+    border-radius: var(--radius);
+    font-size: 14.5px;
+    font-weight: 600;
+    background: var(--accent);
+    color: var(--accent-ink);
+    transition: background 0.2s;
+  }
+  .btn:hover {
+    background: var(--accent-hover);
+  }
+  .index {
+    padding-bottom: 80px;
+  }
+</style>

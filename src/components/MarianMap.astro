@@ -1,0 +1,936 @@
+---
+/**
+ * Dao tuong tac: ban do Leaflet, lop phu chom sao, dong thoi gian, bo loc.
+ *
+ * Chuyen the tu ba module cu (src/js/map.js, constellation.js, timeline.js).
+ * Logic giu nguyen; nhung thay doi co chu dich:
+ *
+ *  1. Du lieu den tu thuoc tinh cua component roi qua the JSON, khong con doc
+ *     bien toan cuc window.MARIAN_STATUES_DATA.
+ *  2. Bam vao diem tren ban do mo bong bong co lien ket toi trang chi tiet.
+ *     Hop thoai cu bi bo: noi dung gio da co URL rieng.
+ *  3. Cac o loc va the phien ban la <button> that, dung duoc bang ban phim.
+ *     Ban cu dung <span onclick> nen khong the truy cap bang ban phim.
+ *  4. Lop nen ArcGIS bi go bo. Thay bang CARTO va OpenStreetMap.
+ *  5. window._tileLayers thanh bien trong module.
+ */
+import 'leaflet/dist/leaflet.css';
+
+import { getProvince, statuePath, getYearRange } from '../lib/statues.js';
+
+const { statues, versions } = Astro.props;
+const { min: minYear, max: maxYear } = getYearRange();
+
+/** Chi gui sang trinh duyet nhung truong ban do thuc su dung. */
+const mapData = {
+  statues: statues.map((s) => ({
+    id: s.id,
+    name: s.name,
+    year: s.year,
+    lat: s.lat,
+    lng: s.lng,
+    diem: Boolean(s.diemStatue5),
+    region: s.region,
+    province: getProvince(s.location),
+    diocese: s.diocese,
+    href: statuePath(s.id),
+    roles: s.constellationRole ?? {},
+  })),
+  versions: Object.fromEntries(
+    versions.map((v) => [
+      v.key,
+      {
+        name: v.name,
+        badge: v.badge,
+        description: v.description,
+        color: v.color,
+        nodes: v.nodes,
+        segments: v.segments,
+        pointerStars: v.pointerStars ?? [],
+      },
+    ])
+  ),
+  minYear,
+  maxYear,
+};
+
+const filters = [
+  { key: 'all', label: 'Tất cả' },
+  { key: 'diem5', label: '5 tượng năm 1959' },
+  { key: 'v1', label: 'Chòm Bắc Đẩu' },
+  { key: 'Tây Nguyên', label: 'Tây Nguyên' },
+  { key: 'Duyên hải Nam Trung Bộ', label: 'Nam Trung Bộ' },
+  { key: 'Đông Nam Bộ', label: 'Đông Nam Bộ' },
+  { key: 'Đồng bằng sông Cửu Long', label: 'Tây Nam Bộ' },
+];
+---
+
+<div class="map-app">
+  <!-- Thanh dieu khien -->
+  <div class="controls">
+    <div class="version-tabs" role="group" aria-label="Chọn phiên bản chòm sao">
+      {
+        versions.map((v, i) => (
+          <button
+            type="button"
+            class:list={['vtab', { active: i === 0 }]}
+            data-version={v.key}
+            aria-pressed={i === 0 ? 'true' : 'false'}
+          >
+            {v.shortName ?? v.name}
+          </button>
+        ))
+      }
+    </div>
+
+    <div class="control-actions">
+      <label class="sr-only" for="baseLayer">Kiểu bản đồ nền</label>
+      <select id="baseLayer" class="pill">
+        <option value="dark">Nền tối</option>
+        <option value="osm">Nền sáng</option>
+      </select>
+
+      <button type="button" id="toggleConstellation" class="pill active" aria-pressed="true">
+        Chòm sao: bật
+      </button>
+    </div>
+  </div>
+
+  <div class="map-body">
+    <!-- Bang thong tin phien ban. Dung san o may chu cho phien ban 1. -->
+    <aside class="info-panel">
+      <span class="info-badge" id="panelBadge">{versions[0].badge}</span>
+      <h2 class="info-title" id="panelTitle">{versions[0].name}</h2>
+      <p class="info-desc" id="panelDesc">{versions[0].description}</p>
+      <dl class="info-stats">
+        <div><dt>Linh đài</dt><dd id="statCount">{versions[0].nodes.length}</dd></div>
+        <div><dt>Tổng cộng</dt><dd>{statues.length}</dd></div>
+      </dl>
+    </aside>
+
+    <div id="mapContainer" role="application" aria-label="Bản đồ các linh đài Đức Mẹ">
+      <noscript>
+        <div class="noscript-note">
+          Bản đồ tương tác cần JavaScript. Danh mục đầy đủ 18 linh địa nằm ngay bên dưới,
+          kèm liên kết tới tư liệu từng nơi.
+        </div>
+      </noscript>
+    </div>
+
+    <!-- Danh sach ben canh. Moi muc la lien ket that, dung san o may chu. -->
+    <aside class="side-list">
+      <div class="side-search">
+        <label class="sr-only" for="statueSearch">Tìm linh địa</label>
+        <input
+          type="search"
+          id="statueSearch"
+          placeholder="Tìm theo tên, tỉnh thành, giáo phận"
+        />
+        <div class="chips" role="group" aria-label="Lọc theo nhóm">
+          {
+            filters.map((f, i) => (
+              <button
+                type="button"
+                class:list={['chip', { active: i === 0 }]}
+                data-filter={f.key}
+                aria-pressed={i === 0 ? 'true' : 'false'}
+              >
+                {f.label}
+              </button>
+            ))
+          }
+        </div>
+      </div>
+
+      <ul class="side-items" id="sideItems">
+        {
+          statues.map((s) => (
+            <li
+              data-id={s.id}
+              data-region={s.region}
+              data-diem={s.diemStatue5 ? '1' : '0'}
+              data-search={`${s.name} ${s.title ?? ''} ${s.location} ${s.diocese}`.toLowerCase()}
+            >
+              <a href={statuePath(s.id)}>
+                <span class="s-name">{s.name}</span>
+                <span class="s-year">{s.year}</span>
+              </a>
+              <button type="button" class="s-locate" data-locate={s.id}>
+                <span class="sr-only">Xem {s.name} trên bản đồ</span>
+                <span aria-hidden="true">◎</span>
+              </button>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="side-empty" id="sideEmpty" hidden>Không có linh địa nào khớp từ khóa.</p>
+    </aside>
+  </div>
+
+  <!-- Dong thoi gian -->
+  <div class="timeline-dock">
+    <div class="tl-row">
+      <div class="tl-controls">
+        <button type="button" id="tlPlay" class="pill" aria-pressed="false">▶ Chạy</button>
+        <button type="button" id="tlBack" class="pill">−5 năm</button>
+        <button type="button" id="tlFwd" class="pill">+5 năm</button>
+      </div>
+      <div class="tl-year">
+        <span class="tl-year-label">Năm</span>
+        <output id="tlYear" for="tlSlider">{maxYear}</output>
+      </div>
+      <div class="tl-count" id="tlCount">{statues.length}/{statues.length} linh địa</div>
+    </div>
+    <label class="sr-only" for="tlSlider">Năm thành lập</label>
+    <input type="range" id="tlSlider" min={minYear} max={maxYear} value={maxYear} step="1" />
+  </div>
+</div>
+
+<script type="application/json" id="map-data" set:html={JSON.stringify(mapData)} />
+
+<script>
+  import L from 'leaflet';
+
+  const dataEl = document.getElementById('map-data');
+  const mapEl = document.getElementById('mapContainer');
+  if (dataEl && mapEl) {
+    const { statues, versions, minYear, maxYear } = JSON.parse(dataEl.textContent);
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    let currentVersion = Object.keys(versions)[0];
+    let constellationVisible = true;
+    let filterYear = maxYear;
+    let activeFilter = 'all';
+    let searchQuery = '';
+
+    const statueById = new Map(statues.map((s) => [s.id, s]));
+    const markerById = new Map();
+    /** Danh sach 7 linh dia thuoc chom Bac Dau phien ban 1, co dinh khong doi
+        theo tab phien ban dang chon tren ban do. */
+    const v1Nodes = new Set(versions.v1.nodes);
+
+    // ---------- Ban do ----------
+    const map = L.map(mapEl, {
+      center: [14.5, 107.5],
+      zoom: 6,
+      minZoom: 5,
+      maxZoom: 14,
+      zoomControl: false,
+    });
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+    /**
+     * Lop nen: CHI dung OpenStreetMap, khong can khoa API.
+     *
+     * ArcGIS da bi go bo theo yeu cau. CARTO tung la lua chon thay the nhung
+     * nay da khoa: moi o ban do trả ve deu dong dau "API KEY REQUIRED".
+     * Khong con nha cung cap anh nen TOI nao vua mien phi vua khong can khoa,
+     * nen nen toi o day duoc tao bang cach loc mau CSS tren chinh o OSM sang.
+     * Doi lai, trang khong phu thuoc khoa API nao ca.
+     */
+    const OSM_ATTR =
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+    const osmUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+    const tileLayers = {
+      dark: L.tileLayer(osmUrl, { attribution: OSM_ATTR, maxZoom: 19 }),
+      osm: L.tileLayer(osmUrl, { attribution: OSM_ATTR, maxZoom: 19 }),
+    };
+    let baseLayer = tileLayers.dark.addTo(map);
+    mapEl.classList.add('tiles-dark');
+
+    // Chu quyen bien dao.
+    for (const [lat, lng, label] of [
+      [16.5, 112.0, 'Quần đảo Hoàng Sa (Việt Nam)'],
+      [9.5, 114.0, 'Quần đảo Trường Sa (Việt Nam)'],
+    ]) {
+      L.marker([lat, lng], {
+        interactive: false,
+        icon: L.divIcon({
+          className: 'sovereignty-label',
+          html: `<span>${label}</span>`,
+          iconSize: [170, 20],
+          iconAnchor: [85, 10],
+        }),
+      }).addTo(map);
+    }
+
+    const markersLayer = L.layerGroup().addTo(map);
+    const linesLayer = L.layerGroup().addTo(map);
+
+    // ---------- Diem danh dau ----------
+    function markerIcon(statue, inVersion) {
+      const role = statue.roles[currentVersion];
+      const sub = role ? role.star : `Năm ${statue.year}`;
+      return L.divIcon({
+        className: 'marian-div-icon',
+        html: `<div class="marian-marker ${inVersion ? 'in-version' : 'dimmed'} ${
+          statue.diem ? 'diem' : ''
+        }" id="mk-${statue.id}">
+            <span class="mk-core">${statue.diem ? '★' : '✦'}</span>
+            <span class="mk-tag"><b>${statue.name}</b><i>${sub}</i></span>
+          </div>`,
+        iconSize: [34, 34],
+        iconAnchor: [17, 17],
+      });
+    }
+
+    function opacityFor(inVersion, visibleByYear) {
+      if (inVersion) return visibleByYear ? 1 : 0.35;
+      return visibleByYear ? 0.28 : 0.08;
+    }
+
+    function renderMarkers() {
+      markersLayer.clearLayers();
+      markerById.clear();
+      const nodes = new Set(versions[currentVersion].nodes);
+
+      for (const statue of statues) {
+        const inVersion = nodes.has(statue.id);
+        const marker = L.marker([statue.lat, statue.lng], {
+          icon: markerIcon(statue, inVersion),
+          opacity: opacityFor(inVersion, statue.year <= filterYear),
+          zIndexOffset: inVersion ? 500 : 5,
+          title: statue.name,
+        });
+
+        // Bong bong dan toi trang chi tiet, thay cho hop thoai cu.
+        marker.bindPopup(
+          `<div class="mk-popup">
+             <strong>${statue.name}</strong>
+             <span>${statue.province} · ${statue.year}</span>
+             <span>${statue.diocese}</span>
+             <a href="${statue.href}">Đọc tư liệu đầy đủ</a>
+           </div>`
+        );
+
+        markerById.set(statue.id, marker);
+        markersLayer.addLayer(marker);
+      }
+    }
+
+    // ---------- Lop phu chom sao ----------
+    function renderConstellation() {
+      linesLayer.clearLayers();
+      if (!constellationVisible) return;
+
+      const version = versions[currentVersion];
+
+      for (const [fromId, toId] of version.segments) {
+        const a = statueById.get(fromId);
+        const b = statueById.get(toId);
+        if (!a || !b) continue;
+        const path = [
+          [a.lat, a.lng],
+          [b.lat, b.lng],
+        ];
+        L.polyline(path, {
+          color: version.color,
+          weight: 6,
+          opacity: 0.25,
+        }).addTo(linesLayer);
+        L.polyline(path, {
+          color: version.color,
+          weight: 2.5,
+          opacity: 0.9,
+          dashArray: '6, 6',
+        }).addTo(linesLayer);
+      }
+
+      // Hai sao dan duong keo dai toi huong sao Bac Cuc.
+      if (version.pointerStars.length === 2) {
+        const p1 = statueById.get(version.pointerStars[0]);
+        const p2 = statueById.get(version.pointerStars[1]);
+        if (p1 && p2) {
+          const lat = p2.lat + (p2.lat - p1.lat) * 2.5;
+          const lng = p2.lng + (p2.lng - p1.lng) * 2.5;
+          L.polyline(
+            [
+              [p2.lat, p2.lng],
+              [lat, lng],
+            ],
+            { color: '#38bdf8', weight: 2, opacity: 0.7, dashArray: '4, 6' }
+          ).addTo(linesLayer);
+          L.marker([lat, lng], {
+            interactive: false,
+            icon: L.divIcon({
+              className: 'polaris-icon',
+              html: '<span class="polaris-dot"></span><span class="polaris-text">Hướng sao Bắc Cực</span>',
+              iconSize: [170, 20],
+              iconAnchor: [6, 10],
+            }),
+          }).addTo(linesLayer);
+        }
+      }
+    }
+
+    function updatePanel() {
+      const version = versions[currentVersion];
+      document.getElementById('panelBadge').textContent = version.badge;
+      document.getElementById('panelTitle').textContent = version.name;
+      document.getElementById('panelDesc').textContent = version.description;
+      document.getElementById('statCount').textContent = String(version.nodes.length);
+    }
+
+    // ---------- Bo loc danh sach ben canh ----------
+    const items = Array.from(document.querySelectorAll('#sideItems li'));
+    const emptyNote = document.getElementById('sideEmpty');
+
+    function applyFilters() {
+      let shown = 0;
+
+      for (const li of items) {
+        const id = li.dataset.id;
+        let matches = true;
+
+        if (activeFilter === 'diem5') matches = li.dataset.diem === '1';
+        else if (activeFilter === 'v1') matches = v1Nodes.has(id);
+        else if (activeFilter !== 'all') matches = li.dataset.region === activeFilter;
+
+        if (matches && searchQuery) {
+          matches = li.dataset.search.includes(searchQuery);
+        }
+
+        li.hidden = !matches;
+        if (matches) shown += 1;
+      }
+
+      emptyNote.hidden = shown > 0;
+    }
+
+    // ---------- Dong thoi gian ----------
+    const slider = document.getElementById('tlSlider');
+    const yearOut = document.getElementById('tlYear');
+    const countOut = document.getElementById('tlCount');
+    const playBtn = document.getElementById('tlPlay');
+    let playTimer = null;
+
+    function applyYear(year) {
+      filterYear = Math.min(maxYear, Math.max(minYear, year));
+      slider.value = String(filterYear);
+      yearOut.textContent = String(filterYear);
+
+      const nodes = new Set(versions[currentVersion].nodes);
+      let visible = 0;
+      for (const statue of statues) {
+        const visibleByYear = statue.year <= filterYear;
+        if (visibleByYear) visible += 1;
+        markerById
+          .get(statue.id)
+          ?.setOpacity(opacityFor(nodes.has(statue.id), visibleByYear));
+      }
+      countOut.textContent = `${visible}/${statues.length} linh địa`;
+    }
+
+    function stopPlay() {
+      if (playTimer) clearInterval(playTimer);
+      playTimer = null;
+      playBtn.textContent = '▶ Chạy';
+      playBtn.setAttribute('aria-pressed', 'false');
+    }
+
+    playBtn.addEventListener('click', () => {
+      if (playTimer) return stopPlay();
+      if (filterYear >= maxYear) applyYear(minYear);
+      playBtn.textContent = '❚❚ Dừng';
+      playBtn.setAttribute('aria-pressed', 'true');
+      playTimer = setInterval(() => {
+        if (filterYear >= maxYear) return stopPlay();
+        applyYear(filterYear + 1);
+      }, 60);
+    });
+
+    document.getElementById('tlBack').addEventListener('click', () => {
+      stopPlay();
+      applyYear(filterYear - 5);
+    });
+    document.getElementById('tlFwd').addEventListener('click', () => {
+      stopPlay();
+      applyYear(filterYear + 5);
+    });
+    slider.addEventListener('input', (e) => {
+      stopPlay();
+      applyYear(Number(e.target.value));
+    });
+
+    // ---------- Dieu khien ----------
+    document.querySelectorAll('.vtab').forEach((tab) => {
+      tab.addEventListener('click', () => {
+        currentVersion = tab.dataset.version;
+        document.querySelectorAll('.vtab').forEach((t) => {
+          const on = t === tab;
+          t.classList.toggle('active', on);
+          t.setAttribute('aria-pressed', String(on));
+        });
+        renderMarkers();
+        renderConstellation();
+        updatePanel();
+        applyFilters();
+        applyYear(filterYear);
+      });
+    });
+
+    document.getElementById('baseLayer').addEventListener('change', (e) => {
+      const key = e.target.value;
+      const next = tileLayers[key];
+      if (!next) return;
+      map.removeLayer(baseLayer);
+      baseLayer = next.addTo(map);
+      baseLayer.bringToBack();
+      // Nen toi va nen sang dung cung nguon o ban do, chi khac bo loc mau.
+      mapEl.classList.toggle('tiles-dark', key === 'dark');
+    });
+
+    const constellationBtn = document.getElementById('toggleConstellation');
+    constellationBtn.addEventListener('click', () => {
+      constellationVisible = !constellationVisible;
+      constellationBtn.classList.toggle('active', constellationVisible);
+      constellationBtn.setAttribute('aria-pressed', String(constellationVisible));
+      constellationBtn.textContent = constellationVisible
+        ? 'Chòm sao: bật'
+        : 'Chòm sao: tắt';
+      renderConstellation();
+    });
+
+    document.querySelectorAll('.chip').forEach((chip) => {
+      chip.addEventListener('click', () => {
+        activeFilter = chip.dataset.filter;
+        document.querySelectorAll('.chip').forEach((c) => {
+          const on = c === chip;
+          c.classList.toggle('active', on);
+          c.setAttribute('aria-pressed', String(on));
+        });
+        applyFilters();
+      });
+    });
+
+    document.getElementById('statueSearch').addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim().toLowerCase();
+      applyFilters();
+    });
+
+    function focusStatue(id) {
+      const statue = statueById.get(id);
+      const marker = markerById.get(id);
+      if (!statue || !marker) return;
+      map.flyTo([statue.lat, statue.lng], 9, {
+        animate: !reduceMotion,
+        duration: reduceMotion ? 0 : 1.2,
+      });
+      marker.openPopup();
+    }
+
+    document.querySelectorAll('[data-locate]').forEach((btn) => {
+      btn.addEventListener('click', () => focusStatue(btn.dataset.locate));
+    });
+
+    // ---------- Khoi dong ----------
+    renderMarkers();
+    renderConstellation();
+    applyYear(maxYear);
+    applyFilters();
+
+    // Cho phep dan sau tu trang chi tiet: /ban-do/?linh-dai=tapao
+    const requested = new URLSearchParams(location.search).get('linh-dai');
+    if (requested && statueById.has(requested)) {
+      focusStatue(requested);
+    }
+  }
+</script>
+
+<style is:global>
+  /* Kieu cho phan tu do Leaflet tao ra, nen phai la global. */
+  .marian-div-icon {
+    background: none;
+    border: 0;
+  }
+  .marian-marker {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+  }
+  .mk-core {
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--bg-surface);
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+    font-size: 13px;
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.35);
+  }
+  .marian-marker.diem .mk-core {
+    border-color: var(--accent-hover);
+    color: var(--accent-hover);
+  }
+  .marian-marker.dimmed .mk-core {
+    border-color: var(--border-strong);
+    color: var(--text-tertiary);
+    box-shadow: none;
+  }
+  .mk-tag {
+    position: absolute;
+    top: 34px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    gap: 1px;
+    padding: 4px 8px;
+    border-radius: var(--radius);
+    background: rgba(6, 11, 25, 0.88);
+    border: 1px solid var(--border-subtle);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.18s;
+    pointer-events: none;
+  }
+  .marian-marker.in-version .mk-tag,
+  .marian-marker:hover .mk-tag {
+    opacity: 1;
+  }
+  .mk-tag b {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .mk-tag i {
+    font-style: normal;
+    font-size: 10px;
+    color: var(--accent);
+  }
+
+  .mk-popup {
+    display: grid;
+    gap: 4px;
+    font-family: var(--font-ui);
+  }
+  .mk-popup strong {
+    font-size: 14px;
+    color: #0c1427;
+  }
+  .mk-popup span {
+    font-size: 12px;
+    color: #475569;
+  }
+  .mk-popup a {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #b45309;
+    text-decoration: underline;
+  }
+
+  /* Nen toi tao bang bo loc mau tren o OSM sang. Khong can khoa API.
+     Chi loc lop o ban do, khong dung toi diem danh dau hay duong noi. */
+  #mapContainer.tiles-dark .leaflet-tile-pane {
+    /* Gan nhu don sac: de mau vang cua diem danh dau va duong noi chom sao
+       la thu duy nhat co mau tren ban do. */
+    filter: invert(1) grayscale(0.88) brightness(0.84) contrast(1.06)
+      sepia(0.18) hue-rotate(178deg);
+  }
+
+  .sovereignty-label span {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(148, 163, 184, 0.75);
+    white-space: nowrap;
+  }
+  .polaris-icon {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .polaris-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 14px #38bdf8;
+    flex: none;
+  }
+  .polaris-text {
+    font-family: var(--font-ui);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #38bdf8;
+    white-space: nowrap;
+  }
+</style>
+
+<style>
+  .map-app {
+    display: grid;
+    gap: 0;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 16px var(--wrap-pad);
+    border-bottom: 1px solid var(--border-subtle);
+    background: var(--bg-surface);
+  }
+  .version-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .vtab,
+  .pill,
+  .chip {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 9px 15px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-strong);
+    background: var(--bg-page);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+  }
+  .vtab:hover,
+  .pill:hover,
+  .chip:hover {
+    border-color: var(--accent);
+    color: var(--accent-hover);
+  }
+  .vtab.active,
+  .pill.active,
+  .chip.active {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 14%, transparent);
+    color: var(--accent-hover);
+  }
+  .control-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .map-body {
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1fr) 320px;
+    height: clamp(520px, 68vh, 760px);
+  }
+  @media (max-width: 1100px) {
+    .map-body {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+  }
+
+  .info-panel {
+    padding: 24px;
+    border-right: 1px solid var(--border-subtle);
+    background: var(--bg-surface);
+    overflow-y: auto;
+  }
+  .info-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+    border-radius: var(--radius);
+    padding: 5px 10px;
+    margin-bottom: 14px;
+  }
+  .info-title {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.34;
+    color: var(--text-strong);
+    margin-bottom: 12px;
+  }
+  .info-desc {
+    font-family: var(--font-prose);
+    font-size: 13.5px;
+    line-height: 1.72;
+    color: var(--text-secondary);
+  }
+  .info-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .info-stats dt {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 5px;
+  }
+  .info-stats dd {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  #mapContainer {
+    min-height: 420px;
+    background: var(--bg-page);
+  }
+  .noscript-note {
+    padding: 32px;
+    font-family: var(--font-prose);
+    color: var(--text-secondary);
+    line-height: 1.72;
+  }
+
+  .side-list {
+    border-left: 1px solid var(--border-subtle);
+    background: var(--bg-surface);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .side-search {
+    padding: 18px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  #statueSearch {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-strong);
+    background: var(--bg-page);
+    color: var(--text-primary);
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+  }
+  #statueSearch::placeholder {
+    color: var(--text-tertiary);
+  }
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .chip {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  .side-items {
+    list-style: none;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+  }
+  .side-items li:not([hidden]) {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .side-items a {
+    flex: 1;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 6px 12px 18px;
+  }
+  .s-name {
+    font-family: var(--font-prose);
+    font-size: 14.5px;
+    color: var(--text-primary);
+  }
+  .side-items a:hover .s-name {
+    color: var(--accent-hover);
+  }
+  .s-year {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+  }
+  .s-locate {
+    background: none;
+    border: 0;
+    color: var(--text-tertiary);
+    font-size: 15px;
+    padding: 12px 16px 12px 8px;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .s-locate:hover {
+    color: var(--accent);
+  }
+  .side-empty {
+    padding: 24px 18px;
+    font-size: 13.5px;
+    color: var(--text-tertiary);
+  }
+  @media (max-width: 1100px) {
+    .info-panel,
+    .side-list {
+      border: 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .side-items {
+      max-height: 380px;
+    }
+  }
+
+  .timeline-dock {
+    padding: 16px var(--wrap-pad) 22px;
+    border-top: 1px solid var(--border-subtle);
+    background: var(--bg-surface);
+  }
+  .tl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .tl-controls {
+    display: flex;
+    gap: 8px;
+  }
+  .tl-year {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .tl-year-label {
+    font-size: 11px;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+  }
+  #tlYear {
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+  .tl-count {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+  }
+  #tlSlider {
+    width: 100%;
+    accent-color: var(--accent);
+  }
+</style>

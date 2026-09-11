@@ -1,0 +1,41 @@
+---
+/**
+ * Duong dan phan cap. Du lieu co cau truc BreadcrumbList duoc sinh rieng
+ * o trang goi, de moi trang chi phat mot khoi JSON-LD duy nhat.
+ */
+const { items } = Astro.props;
+const last = items.length - 1;
+---
+
+<nav class="crumb" aria-label="Đường dẫn">
+  {
+    items.map((item, index) =>
+      index === last ? (
+        <span aria-current="page">{item.name}</span>
+      ) : (
+        <>
+          <a href={item.href}>{item.name}</a>
+          <span class="sep" aria-hidden="true">/</span>
+        </>
+      )
+    )
+  }
+</nav>
+
+<style>
+  .crumb {
+    padding-top: 28px;
+    font-size: 13px;
+    color: var(--text-tertiary);
+  }
+  .crumb a {
+    transition: color 0.18s;
+  }
+  .crumb a:hover {
+    color: var(--accent-hover);
+  }
+  .sep {
+    margin-inline: 9px;
+    color: var(--border-strong);
+  }
+</style>

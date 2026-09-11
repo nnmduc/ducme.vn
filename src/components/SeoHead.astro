@@ -1,0 +1,77 @@
+---
+/**
+ * Toan bo sieu du lieu trong <head>. Moi trang PHAI dung component nay,
+ * nho vay khong trang nao thieu canonical hay og:image.
+ */
+import {
+  SITE_NAME,
+  SITE_LOCALE,
+  OG_FALLBACK_IMAGE,
+  OG_IMAGE_WIDTH,
+  OG_IMAGE_HEIGHT,
+} from '../config/site.js';
+import { absoluteUrl } from '../lib/seo.js';
+
+const {
+  title,
+  description,
+  /** Duong dan toi anh chia se. Bo trong se dung anh mac dinh. */
+  image,
+  /** Kich thuoc that cua `image`. Bo trong thi KHONG khai bao kich thuoc. */
+  imageWidth,
+  imageHeight,
+  /** "website" cho trang muc luc, "article" cho trang chi tiet. */
+  type = 'website',
+  /** Mang doi tuong JSON-LD. Moi doi tuong thanh mot the script rieng. */
+  schemas = [],
+  noindex = false,
+} = Astro.props;
+
+// Astro.url.pathname da co dau "/" o cuoi nho trailingSlash: 'always'.
+const canonical = absoluteUrl(Astro.url.pathname);
+
+const usingFallback = !image;
+const ogImage = absoluteUrl(image ?? OG_FALLBACK_IMAGE);
+
+/**
+ * Chi khai bao og:image:width/height khi thuc su biet kich thuoc.
+ * Khai bao sai con te hon la khong khai bao: trinh thu thap se dung kich thuoc
+ * da cong bo de dung khung xem truoc, va anh se bi meo.
+ */
+const ogWidth = usingFallback ? OG_IMAGE_WIDTH : imageWidth;
+const ogHeight = usingFallback ? OG_IMAGE_HEIGHT : imageHeight;
+---
+
+<meta charset="utf-8" />
+{/* Khong dat maximum-scale hay user-scalable: chan phong to la loi tro nang. */}
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+{noindex && <meta name="robots" content="noindex, follow" />}
+
+<meta property="og:type" content={type} />
+<meta property="og:site_name" content={SITE_NAME} />
+<meta property="og:locale" content={SITE_LOCALE} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogImage} />
+{ogWidth && <meta property="og:image:width" content={String(ogWidth)} />}
+{ogHeight && <meta property="og:image:height" content={String(ogHeight)} />}
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+
+<meta name="theme-color" content="#060b19" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+{
+  schemas.map((schema) => (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  ))
+}

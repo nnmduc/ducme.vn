@@ -1,0 +1,270 @@
+---
+/**
+ * Trang khao cuu gia thuyet chom Bac Dau.
+ *
+ * Bon truong `description` cua CONSTELLATION_VERSIONS la van ban day du nhat
+ * ve luan de nay, nhung truoc day KHONG CO URL nao dan toi. Chung chi hien
+ * thoang qua trong mot bang thong tin noi tren ban do. Trang nay dua chung
+ * thanh noi dung doc duoc va lien ket duoc.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import ConstellationDiagram from '../components/ConstellationDiagram.astro';
+
+import { MARIAN_STATUES_DATA, CONSTELLATION_VERSIONS } from '../data/statues.js';
+import { statuePath, getProvince } from '../lib/statues.js';
+import { buildBreadcrumbSchema, truncateDescription } from '../lib/seo.js';
+
+const versions = ['v1', 'v2', 'v3', 'v4'].map((key) => {
+  const version = CONSTELLATION_VERSIONS[key];
+  return {
+    key,
+    ...version,
+    members: version.nodes
+      .map((id) => MARIAN_STATUES_DATA.find((s) => s.id === id))
+      .filter(Boolean),
+  };
+});
+
+const title = 'Giả thuyết chòm sao Bắc Đẩu | Linh Đài Đức Mẹ Việt Nam';
+const description = truncateDescription(
+  'Bốn cách đọc giả thuyết các linh đài Đức Mẹ tại Việt Nam xếp theo hình thế ' +
+    'chòm Bắc Đẩu, đối chiếu với tọa độ thực địa và nguồn dẫn lịch sử.'
+);
+
+const breadcrumbItems = [
+  { name: 'Trang chủ', href: '/' },
+  { name: 'Chòm sao Bắc Đẩu', href: '/chom-sao-bac-dau/' },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  schemas={[buildBreadcrumbSchema(breadcrumbItems)]}
+>
+  <div class="wrap">
+    <Breadcrumb items={breadcrumbItems} />
+
+    <header class="head">
+      <h1>Giả thuyết chòm sao Bắc Đẩu</h1>
+      <p class="lead">
+        Nhiều tài liệu Công giáo miền Nam từ thập niên 1960 ghi lại cùng một nhận xét:
+        các pho tượng Đức Mẹ dựng giai đoạn 1959 tới 1961, đặt cạnh hai linh địa cổ,
+        phác nên hình thế chòm Bắc Đẩu trên bản đồ đất nước. Dưới đây là bốn cách đọc
+        khác nhau của giả thuyết đó.
+      </p>
+    </header>
+
+    <div class="intro-grid">
+      <div class="caveat">
+        <h2>Đọc trang này thế nào</h2>
+        <p>
+          Đây là ghi chép về một giả thuyết, không phải một kết luận. Sự trùng khớp hình
+          học giữa các tọa độ địa lý và hình chòm Đại Hùng là điều quan sát được, nhưng
+          bản thân sự trùng khớp không chứng minh được chủ ý của người dựng tượng.
+        </p>
+        <p>
+          Mỗi phiên bản đều dẫn ra đúng những linh địa mà nó dựa vào, kèm liên kết tới
+          tư liệu và nguồn của từng nơi, để người đọc tự đối chiếu.
+        </p>
+      </div>
+      <ConstellationDiagram />
+    </div>
+  </div>
+
+  <div class="versions">
+    {
+      versions.map((version) => (
+        <section class="version">
+          <div class="wrap version-grid">
+            <div class="version-meta">
+              <span class="badge" style={`--badge:${version.color}`}>{version.badge}</span>
+              <h2>{version.name}</h2>
+              <p class="tagline">{version.tagline}</p>
+              <p class="desc">{version.description}</p>
+            </div>
+
+            <div class="members">
+              <h3>{version.members.length} linh địa trong phiên bản này</h3>
+              <ol>
+                {version.members.map((statue) => {
+                  const role = statue.constellationRole?.[version.key];
+                  return (
+                    <li>
+                      <a href={statuePath(statue.id)}>
+                        <span class="m-name">{statue.name}</span>
+                        <span class="m-place">{getProvince(statue.location)}</span>
+                        {role && <span class="m-star">{role.star}</span>}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ol>
+            </div>
+          </div>
+        </section>
+      ))
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  .head {
+    padding-block: 22px 36px;
+    max-width: 68ch;
+  }
+  .head h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.1rem, 4.6vw, 3.35rem);
+    line-height: 1.14;
+    letter-spacing: -0.015em;
+    color: var(--text-strong);
+    margin-bottom: 18px;
+  }
+  .lead {
+    font-family: var(--font-prose);
+    font-size: 1.16rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 64px;
+    align-items: start;
+    padding-bottom: 64px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .caveat h2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-strong);
+    margin-bottom: 14px;
+  }
+  .caveat p {
+    font-family: var(--font-prose);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 62ch;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 900px) {
+    .intro-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding-bottom: 48px;
+    }
+  }
+
+  .version {
+    padding-block: 64px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .version:nth-child(even) {
+    background: var(--bg-surface);
+  }
+  .version-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 64px;
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .version {
+      padding-block: 48px;
+    }
+    .version-grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+  }
+  .badge {
+    display: inline-block;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--badge, var(--accent));
+    border: 1px solid color-mix(in srgb, var(--badge, var(--accent)) 45%, transparent);
+    border-radius: var(--radius);
+    padding: 5px 11px;
+    margin-bottom: 18px;
+  }
+  .version-meta h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--text-strong);
+    margin-bottom: 12px;
+  }
+  .tagline {
+    font-family: var(--font-prose);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--accent-hover);
+    margin-bottom: 18px;
+    line-height: 1.6;
+  }
+  .desc {
+    font-family: var(--font-prose);
+    font-size: 1.06rem;
+    line-height: 1.82;
+    color: var(--text-primary);
+    max-width: 64ch;
+  }
+
+  .members h3 {
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-strong);
+  }
+  .members ol {
+    list-style: none;
+    counter-reset: member;
+  }
+  .members li {
+    counter-increment: member;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .members a {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px 14px;
+    padding: 12px 0;
+    transition: padding-left 0.18s;
+  }
+  .members a:hover {
+    padding-left: 8px;
+  }
+  .m-name {
+    font-family: var(--font-prose);
+    font-size: 1.02rem;
+    color: var(--text-primary);
+  }
+  .members a:hover .m-name {
+    color: var(--accent-hover);
+  }
+  .m-place {
+    font-size: 12.5px;
+    color: var(--text-tertiary);
+    text-align: right;
+    white-space: nowrap;
+  }
+  .m-star {
+    grid-column: 1 / -1;
+    font-size: 12px;
+    color: var(--astro);
+  }
+</style>

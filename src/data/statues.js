@@ -5,7 +5,7 @@
  * Hình ảnh: 100% Ảnh tư liệu thực tế (Wikimedia Commons) hoặc ẩn nếu chưa có ảnh thực địa.
  */
 
-window.MARIAN_STATUES_DATA = [
+export const MARIAN_STATUES_DATA = [
   {
     "id": "lavang",
     "name": "Đức Mẹ La Vang",
@@ -43,18 +43,18 @@ window.MARIAN_STATUES_DATA = [
     "realImage": "assets/real_photos/lavang.jpg",
     "realImageCaption": "Ảnh chụp thực tế linh đài Đức Mẹ La Vang tại Quảng Trị (Nguồn: Wikimedia Commons)",
     "sources": [
-      {
-        "title": "Trung tâm Thánh Mẫu Toàn quốc La Vang - HĐGMVN",
-        "url": "https://hdgmvietnam.com"
-      },
-      {
-        "title": "Lịch sử Linh địa La Vang - Tổng Giáo phận Huế",
-        "url": "https://tonggiaophanhue.org"
-      },
-      {
-        "title": "Vương cung Thánh đường Đức Mẹ La Vang - Wikipedia",
-        "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_La_Vang"
-      }
+          {
+                "title": "Vương cung Thánh đường Đức Mẹ La Vang - Wikipedia",
+                "url": "https://vi.wikipedia.org/wiki/La_Vang"
+          },
+          {
+                "title": "Lịch sử Linh địa La Vang - TGP Huế",
+                "url": "https://tonggiaophanhue.org/la-vang/luoc-su/tap-sach-trung-tam-thanh-mau-toan-quoc-la-vang-chuong-3-phan-1/"
+          },
+          {
+                "title": "Tư liệu Linh địa La Vang - HĐGMVN",
+                "url": "https://www.google.com/search?q=site:hdgmvietnam.com+\"La+Vang\""
+          }
     ]
   },
   {
@@ -94,14 +94,14 @@ window.MARIAN_STATUES_DATA = [
     "realImage": "assets/real_photos/trakieu.jpg",
     "realImageCaption": "Ảnh chụp thực tế Trung tâm Hành hương Đức Mẹ Trà Kiệu tại Quảng Nam (Nguồn: Wikimedia Commons)",
     "sources": [
-      {
-        "title": "Linh địa Đức Mẹ Trà Kiệu 1885 - Giáo phận Đà Nẵng",
-        "url": "https://giaophandanang.org"
-      },
-      {
-        "title": "Trung tâm Hành hương Đức Mẹ Trà Kiệu - Wikipedia",
-        "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_Trà_Kiệu"
-      }
+          {
+                "title": "Linh địa Đức Mẹ Trà Kiệu 1885 - Wikipedia",
+                "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_Trà_Kiệu"
+          },
+          {
+                "title": "Tư liệu Hành hương Đức Mẹ Trà Kiệu - GP Đà Nẵng",
+                "url": "https://www.google.com/search?q=site:giaophandanang.org+\"Trà+Kiệu\""
+          }
     ]
   },
   {
@@ -141,18 +141,18 @@ window.MARIAN_STATUES_DATA = [
     "realImage": null,
     "realImageCaption": null,
     "sources": [
-      {
-        "title": "Ký sự tìm lại Linh đài Đức Mẹ Phượng Hoàng - GP Kon Tum",
-        "url": "https://giaophankontum.com"
-      },
-      {
-        "title": "Tài liệu 5 tượng Đức Mẹ thời TT Ngô Đình Diệm 1959",
-        "url": "https://vi.wikipedia.org"
-      },
-      {
-        "title": "Định vị núi Phượng Hoàng Đức Cơ - Wikimapia",
-        "url": "https://wikimapia.org"
-      }
+          {
+                "title": "Đức Mẹ Phượng Hoàng - Wikipedia",
+                "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_Phượng_Hoàng"
+          },
+          {
+                "title": "Ký sự tìm lại Linh đài Đức Mẹ Phượng Hoàng - GP Kon Tum",
+                "url": "https://www.google.com/search?q=site:giaophankontum.com+\"Phượng+Hoàng\""
+          },
+          {
+                "title": "Tư liệu 5 tượng Đức Mẹ thời TT Ngô Đình Diệm 1959 - Báo CGvDT",
+                "url": "https://www.google.com/search?q=site:cgvdt.vn+\"Phượng+Hoàng\"+\"Ngô+Đình+Diệm\""
+          }
     ]
   },
   {
@@ -188,14 +188,14 @@ window.MARIAN_STATUES_DATA = [
     "realImage": "assets/real_photos/mangden.jpg",
     "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Măng Đen giữa đại ngàn Kon Tum (Nguồn: Wikimedia Commons)",
     "sources": [
-      {
-        "title": "Biến cố tìm lại tượng Đức Mẹ Măng Đen 2002 - GP Kon Tum",
-        "url": "https://giaophankontum.com"
-      },
-      {
-        "title": "Tượng Đức Mẹ Măng Đen - Wikipedia",
-        "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_Măng_Đen"
-      }
+          {
+                "title": "Tượng Đức Mẹ Măng Đen - Wikipedia",
+                "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_Măng_Đen"
+          },
+          {
+                "title": "Biến cố tìm lại tượng Đức Mẹ Măng Đen 2002 - GP Kon Tum",
+                "url": "https://www.google.com/search?q=site:giaophankontum.com+\"Măng+Đen\""
+          }
     ]
   },
   {
@@ -239,14 +239,18 @@ window.MARIAN_STATUES_DATA = [
     "realImage": "assets/real_photos/giangson.jpg",
     "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Giang Sơn trên đồi 822m, Đắk Lắk (Nguồn: Wikimedia Commons)",
     "sources": [
-      {
-        "title": "Lịch sử Đồi Đức Mẹ Giang Sơn 1963 - GP Ban Mê Thuột",
-        "url": "https://gpbanmethuot.net"
-      },
-      {
-        "title": "Kỷ yếu Dinh điền và 5 linh đài Thánh Mẫu thời VNCH",
-        "url": "https://lebaotinhbmt.net"
-      }
+          {
+                "title": "Đức Mẹ Giang Sơn - Wikipedia",
+                "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_Giang_Sơn"
+          },
+          {
+                "title": "Lịch sử Đồi Đức Mẹ Giang Sơn 1963 - GP Ban Mê Thuột",
+                "url": "https://www.google.com/search?q=site:gpbanmethuot.net+\"Giang+Sơn\""
+          },
+          {
+                "title": "Kỷ yếu Dinh điền và 5 linh đài Thánh Mẫu thời VNCH",
+                "url": "https://www.google.com/search?q=site:lebaotinhbmt.net+\"Giang+Sơn\""
+          }
     ]
   },
   {
@@ -290,14 +294,18 @@ window.MARIAN_STATUES_DATA = [
     "realImage": null,
     "realImageCaption": null,
     "sources": [
-      {
-        "title": "Thánh lễ phục hồi Đức Mẹ Trinh Phong 2007 - GP Nha Trang",
-        "url": "https://giaophannhatrang.org"
-      },
-      {
-        "title": "Di tích 5 pho tượng Đức Mẹ thời Ngô Đình Diệm - Báo CGvDT",
-        "url": "https://cgvdt.vn"
-      }
+          {
+                "title": "Đức Mẹ Trinh Phong - Wikipedia",
+                "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_Trinh_Phong"
+          },
+          {
+                "title": "Thánh lễ phục hồi Đức Mẹ Trinh Phong 2007 - GP Nha Trang",
+                "url": "https://www.google.com/search?q=site:giaophannhatrang.org+\"Trinh+Phong\""
+          },
+          {
+                "title": "Di tích 5 pho tượng Đức Mẹ thời Ngô Đình Diệm - Báo CGvDT",
+                "url": "https://www.google.com/search?q=site:cgvdt.vn+\"Trinh+Phong\""
+          }
     ]
   },
   {
@@ -341,14 +349,18 @@ window.MARIAN_STATUES_DATA = [
     "realImage": "assets/real_photos/thacmo.jpg",
     "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Thác Mơ dưới chân núi Bà Rá, Bình Phước (Nguồn: Wikimedia Commons)",
     "sources": [
-      {
-        "title": "Trung tâm Hành hương Đức Mẹ Thác Mơ - GP Ban Mê Thuột",
-        "url": "https://gpbanmethuot.net"
-      },
-      {
-        "title": "Di tích lịch sử núi Bà Rá và đền Đức Mẹ Thác Mơ",
-        "url": "https://vi.wikipedia.org/wiki/Núi_Bà_Rá"
-      }
+          {
+                "title": "Đức Mẹ Thác Mơ - Wikipedia",
+                "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_Thác_Mơ"
+          },
+          {
+                "title": "Di tích lịch sử núi Bà Rá và đền Đức Mẹ Thác Mơ - Wikipedia",
+                "url": "https://vi.wikipedia.org/wiki/Núi_Bà_Rá"
+          },
+          {
+                "title": "Trung tâm Hành hương Đức Mẹ Thác Mơ - GP Ban Mê Thuột",
+                "url": "https://www.google.com/search?q=site:gpbanmethuot.net+\"Thác+Mơ\""
+          }
     ]
   },
   {
@@ -392,18 +404,18 @@ window.MARIAN_STATUES_DATA = [
     "realImage": "assets/real_photos/tapao.jpg",
     "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Tà Pao trên sườn núi Tánh Linh, Bình Thuận (Nguồn: Wikimedia Commons)",
     "sources": [
-      {
-        "title": "Kỷ yếu 50 năm Trung tâm Thánh Mẫu Tà Pao - GP Phan Thiết",
-        "url": "https://gpphanthiet.com"
-      },
-      {
-        "title": "KTS Ngô Viết Thụ và công trình Tượng Đức Mẹ Tà Pao 1959",
-        "url": "https://vi.wikipedia.org/wiki/Tượng_Đức_Mẹ_Tà_Pao"
-      },
-      {
-        "title": "Tư liệu 5 pho tượng Đức Mẹ Dinh điền thời VNCH - Báo CGvDT",
-        "url": "https://cgvdt.vn"
-      }
+          {
+                "title": "KTS Ngô Viết Thụ và công trình Tượng Đức Mẹ Tà Pao - Wikipedia",
+                "url": "https://vi.wikipedia.org/wiki/Tượng_Đức_Mẹ_Tà_Pao"
+          },
+          {
+                "title": "Kỷ yếu 50 năm Trung tâm Thánh Mẫu Tà Pao - GP Phan Thiết",
+                "url": "https://www.google.com/search?q=site:gpphanthiet.com+\"Tà+Pao\""
+          },
+          {
+                "title": "Tư liệu 5 pho tượng Đức Mẹ Dinh điền thời VNCH - Báo CGvDT",
+                "url": "https://www.google.com/search?q=site:cgvdt.vn+\"Tà+Pao\""
+          }
     ]
   },
   {
@@ -435,14 +447,18 @@ window.MARIAN_STATUES_DATA = [
     "realImage": null,
     "realImageCaption": null,
     "sources": [
-      {
-        "title": "Trung tâm Hành hương Đức Mẹ Núi Cúi - GP Xuân Lộc",
-        "url": "https://giaophanxuanloc.net"
-      },
-      {
-        "title": "Tượng Đức Mẹ cao nhất Việt Nam - Báo Lao Động",
-        "url": "https://laodong.vn"
-      }
+          {
+                "title": "Trung tâm Hành hương Đức Mẹ Núi Cúi - GP Xuân Lộc",
+                "url": "https://www.google.com/search?q=site:giaophanxuanloc.net+\"Núi+Cúi\""
+          },
+          {
+                "title": "Tượng Đức Mẹ cao nhất Việt Nam - Báo Lao Động",
+                "url": "https://www.google.com/search?q=site:laodong.vn+\"Đức+Mẹ+Núi+Cúi\""
+          },
+          {
+                "title": "Khảo cứu công trình Trung tâm Đức Mẹ Núi Cúi",
+                "url": "https://www.google.com/search?q=\"Đức+Mẹ+Núi+Cúi\"+Giáo+phận+Xuân+Lộc"
+          }
     ]
   },
   {
@@ -474,14 +490,18 @@ window.MARIAN_STATUES_DATA = [
     "realImage": "assets/real_photos/baidau.jpg",
     "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Bãi Dâu cao 32m tại Vũng Tàu (Nguồn: Wikimedia Commons)",
     "sources": [
-      {
-        "title": "Đền Thánh Đức Mẹ Bãi Dâu Vũng Tàu - GP Bà Rịa",
-        "url": "https://giaophanbaria.org"
-      },
-      {
-        "title": "Tư liệu hình ảnh Đức Mẹ Bãi Dâu - Wikimedia Commons",
-        "url": "https://commons.wikimedia.org"
-      }
+          {
+                "title": "Đền Thánh Đức Mẹ Bãi Dâu - Wikipedia",
+                "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_Bãi_Dâu"
+          },
+          {
+                "title": "Hình ảnh tư liệu thực tế Đức Mẹ Bãi Dâu - Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Đức_Mẹ_Bãi_Dâu_1.JPG"
+          },
+          {
+                "title": "Đền Thánh Đức Mẹ Bãi Dâu Vũng Tàu - GP Bà Rịa",
+                "url": "https://www.google.com/search?q=site:giaophanbaria.org+\"Bãi+Dâu\""
+          }
     ]
   },
   {
@@ -513,10 +533,14 @@ window.MARIAN_STATUES_DATA = [
     "realImage": null,
     "realImageCaption": null,
     "sources": [
-      {
-        "title": "Lịch sử Fatima Bình Triệu từ 1966 - TGP Sài Gòn",
-        "url": "https://tgpsaigon.net"
-      }
+          {
+                "title": "Lịch sử Fatima Bình Triệu từ 1966 - TGP Sài Gòn",
+                "url": "https://www.google.com/search?q=site:tgpsaigon.net+\"Bình+Triệu\""
+          },
+          {
+                "title": "Tư liệu Trung tâm Hành hương Fatima Bình Triệu",
+                "url": "https://www.google.com/search?q=\"Fatima+Bình+Triệu\"+Tổng+Giáo+phận+Sài+Gòn"
+          }
     ]
   },
   {
@@ -548,14 +572,18 @@ window.MARIAN_STATUES_DATA = [
     "realImage": "assets/real_photos/ducbasaigon.jpg",
     "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Hòa Bình trước Nhà thờ chính tòa Đức Bà Sài Gòn (Nguồn: Wikimedia Commons)",
     "sources": [
-      {
-        "title": "Lịch sử tượng Đức Mẹ Hòa Bình 1959 - TGP Sài Gòn",
-        "url": "https://tgpsaigon.net"
-      },
-      {
-        "title": "Đại hội Thánh Mẫu Toàn quốc 1959 - Wikipedia",
-        "url": "https://vi.wikipedia.org/wiki/Nhà_thờ_Đức_Bà_Sài_Gòn"
-      }
+          {
+                "title": "Nhà thờ chính tòa Đức Bà Sài Gòn - Wikipedia",
+                "url": "https://vi.wikipedia.org/wiki/Nhà_thờ_chính_tòa_Đức_Bà_Sài_Gòn"
+          },
+          {
+                "title": "Lịch sử tượng Đức Mẹ Hòa Bình 1959 - TGP Sài Gòn",
+                "url": "https://www.google.com/search?q=site:tgpsaigon.net+\"Đức+Mẹ+Hòa+Bình\""
+          },
+          {
+                "title": "Đại hội Thánh Mẫu Toàn quốc 1959 tại Sài Gòn",
+                "url": "https://www.google.com/search?q=\"Đại+hội+Thánh+Mẫu\"+1959+Sài+Gòn"
+          }
     ]
   },
   {
@@ -587,10 +615,14 @@ window.MARIAN_STATUES_DATA = [
     "realImage": null,
     "realImageCaption": null,
     "sources": [
-      {
-        "title": "Trung tâm Đức Mẹ La Mã Bến Tre - GP Vĩnh Long",
-        "url": "https://giaophanvinhlong.net"
-      }
+          {
+                "title": "Đức Mẹ La Mã Bến Tre - Wikipedia",
+                "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_La_Mã_Bến_Tre"
+          },
+          {
+                "title": "Trung tâm Đức Mẹ La Mã Bến Tre - GP Vĩnh Long",
+                "url": "https://www.google.com/search?q=site:giaophanvinhlong.net+\"La+Mã\""
+          }
     ]
   },
   {
@@ -622,10 +654,14 @@ window.MARIAN_STATUES_DATA = [
     "realImage": null,
     "realImageCaption": null,
     "sources": [
-      {
-        "title": "Đền Đức Mẹ Sao Biển Mỹ Khê - GP Đà Nẵng",
-        "url": "https://giaophandanang.org"
-      }
+          {
+                "title": "Đức Mẹ Sao Biển (Stella Maris) - Wikipedia",
+                "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_Sao_Biển"
+          },
+          {
+                "title": "Đền Đức Mẹ Sao Biển Mỹ Khê - GP Đà Nẵng",
+                "url": "https://www.google.com/search?q=site:giaophandanang.org+\"Sao+Biển\""
+          }
     ]
   },
   {
@@ -657,10 +693,14 @@ window.MARIAN_STATUES_DATA = [
     "realImage": null,
     "realImageCaption": null,
     "sources": [
-      {
-        "title": "Linh đài Đức Mẹ Hòn Chông - GP Long Xuyên",
-        "url": "https://giaophanlongxuyen.org"
-      }
+          {
+                "title": "Linh đài Đức Mẹ Hòn Chông - GP Long Xuyên",
+                "url": "https://www.google.com/search?q=site:giaophanlongxuyen.org+\"Hòn+Chông\""
+          },
+          {
+                "title": "Tư liệu Lịch sử Đền Đức Mẹ Hòn Chông Kiên Lương",
+                "url": "https://www.google.com/search?q=\"Đức+Mẹ+Hòn+Chông\"+Kiên+Lương+Kiên+Giang"
+          }
     ]
   },
   {
@@ -692,10 +732,14 @@ window.MARIAN_STATUES_DATA = [
     "realImage": null,
     "realImageCaption": null,
     "sources": [
-      {
-        "title": "Trung tâm Hành hương Núi Cơm - GP Hà Tĩnh",
-        "url": "https://giaophanhatinh.com"
-      }
+          {
+                "title": "Trung tâm Hành hương Núi Cơm - GP Hà Tĩnh",
+                "url": "https://www.google.com/search?q=site:giaophanhatinh.com+\"Núi+Cơm\""
+          },
+          {
+                "title": "Linh đài Mẹ Núi Cơm - Tư liệu Giáo phận Hà Tĩnh",
+                "url": "https://www.google.com/search?q=\"Đức+Mẹ+Núi+Cơm\"+Thuận+Lộc+Hà+Tĩnh"
+          }
     ]
   },
   {
@@ -727,10 +771,14 @@ window.MARIAN_STATUES_DATA = [
     "realImage": null,
     "realImageCaption": null,
     "sources": [
-      {
-        "title": "Đại Vương cung Thánh đường Phú Nhai - GP Bùi Chu",
-        "url": "https://gpbuichu.org"
-      }
+          {
+                "title": "Vương cung thánh đường Phú Nhai - Wikipedia",
+                "url": "https://vi.wikipedia.org/wiki/Vương_cung_thánh_đường_Phú_Nhai"
+          },
+          {
+                "title": "Đại Vương cung Thánh đường Phú Nhai - GP Bùi Chu",
+                "url": "https://www.google.com/search?q=site:gpbuichu.org+\"Phú+Nhai\""
+          }
     ]
   },
   {
@@ -762,15 +810,19 @@ window.MARIAN_STATUES_DATA = [
     "realImage": null,
     "realImageCaption": null,
     "sources": [
-      {
-        "title": "Linh đài Fatima Vĩnh Long 1965 - GP Vĩnh Long",
-        "url": "https://giaophanvinhlong.net"
-      }
+          {
+                "title": "Linh đài Fatima Vĩnh Long 1965 - GP Vĩnh Long",
+                "url": "https://www.google.com/search?q=site:giaophanvinhlong.net+\"Fatima+Vĩnh+Long\""
+          },
+          {
+                "title": "Kỷ yếu Trung tâm Hành hương Đức Mẹ Fatima Vĩnh Long",
+                "url": "https://www.google.com/search?q=\"Đức+Mẹ+Fatima+Vĩnh+Long\"+1965"
+          }
     ]
   }
 ];
 
-window.CONSTELLATION_VERSIONS = {
+export const CONSTELLATION_VERSIONS = {
   "v1": {
     "id": "v1",
     "name": "Phiên Bản 1: 7 Tượng Bắc Đẩu Kinh Điển (1959–1961)",
@@ -883,9 +935,9 @@ window.CONSTELLATION_VERSIONS = {
     "id": "v3",
     "name": "Phiên Bản 3: Ngũ Giác Đài 5 Tượng Thời TT Ngô Đình Diệm (1959–1961)",
     "shortName": "V3: Bộ 5 Tượng TT Diệm",
-    "tagline": "Chính xác 5 pho tượng đúc tại Xóm tượng Phát Diệm Phú Nhuận theo chủ trương của TT Diệm",
+    "tagline": "Năm pho tượng đúc tại Xóm tượng Phát Diệm Phú Nhuận theo chủ trương của TT Diệm",
     "description": "Năm 1959 nhân Đại hội Thánh Mẫu Sài Gòn, TT Ngô Đình Diệm cùng cố vấn tôn giáo LM Antôn Nguyễn Văn Kiệm và KTS Ngô Viết Thụ đã chủ trương đúc 5 pho tượng cẩm thạch trắng cốt sắt cao 3m (bệ 2m) đặt tại 5 địa đầu chiến lược: Phượng Hoàng (Pleiku), Giang Sơn (Đắk Lắk), Trinh Phong (Ninh Thuận), Thác Mơ (Bình Phước), Tà Pao (Bình Thuận) tạo thành Ngũ Giác Đài bảo trợ miền Nam.",
-    "badge": "Sự Thật Lịch Sử 100%",
+    "badge": "Tư Liệu Lịch Sử",
     "color": "#f43f5e",
     "strokeColor": "rgba(244, 63, 94, 0.9)",
     "glowColor": "rgba(244, 63, 94, 0.45)",

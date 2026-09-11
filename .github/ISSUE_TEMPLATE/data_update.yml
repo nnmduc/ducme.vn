@@ -1,0 +1,55 @@
+name: Đóng góp tư liệu / Cập nhật linh địa (Data Contribution)
+description: Bổ sung tư liệu lịch sử, hiệu đính niên đại, cập nhật tọa độ hoặc cung cấp ảnh chụp thực địa
+title: "[DATA]: "
+labels: ["data", "documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Cảm ơn bạn đã đóng góp tư liệu cho dự án Linh Đài Đức Mẹ Việt Nam! 
+        Mọi dữ liệu bổ sung đều cần có nguồn trích dẫn kiểm chứng rõ ràng và tuân thủ [Quy chuẩn dữ liệu](CONTRIBUTING.md#3-quy-chuẩn-dữ-liệu--trích-dẫn-rất-quan-trọng).
+  - type: input
+    id: statue-name
+    attributes:
+      label: Tên Linh Đài / Trung Tâm Thánh Mẫu
+      placeholder: Ví dụ: Đức Mẹ La Vang, Đức Mẹ Trà Kiệu, Đức Mẹ Măng Đen...
+    validations:
+      required: true
+  - type: checkboxes
+    id: update-types
+    attributes:
+      label: Loại thông tin đóng góp / cập nhật
+      options:
+        - label: Bổ sung / Hiệu đính tư liệu lịch sử
+        - label: Hiệu đính niên đại, sự kiện làm phép tượng
+        - label: Cập nhật tọa độ GPS chính xác
+        - label: Đóng góp ảnh chụp thực địa (xác minh bản quyền)
+        - label: Khác
+  - type: textarea
+    id: content-details
+    attributes:
+      label: Chi tiết nội dung tư liệu
+      description: Cung cấp nội dung văn bản bạn muốn bổ sung hoặc chỉnh sửa.
+      placeholder: Cung cấp đoạn văn mô tả lịch sử, kiến trúc hoặc truyền tụng dân gian...
+    validations:
+      required: true
+  - type: textarea
+    id: citations
+    attributes:
+      label: Nguồn dẫn kiểm chứng (Bắt buộc tối thiểu 2 nguồn uy tín)
+      description: Sách, kỷ yếu giáo phận, tài liệu lưu trữ, liên kết báo chí hoặc bài viết bách khoa toàn thư.
+      placeholder: |
+        1. Kỷ yếu Đại hội Thánh Mẫu Toàn quốc 1959, trang...
+        2. Bài viết chính thức từ trang web Giáo phận: https://...
+    validations:
+      required: true
+  - type: textarea
+    id: photo-attribution
+    attributes:
+      label: Thông tin bản quyền ảnh (nếu đóng góp ảnh)
+      description: Tên tác giả ảnh, thời điểm chụp, xác nhận ảnh thật không qua AI, và giấy phép công khai (CC-BY-SA, Public Domain, v.v.).
+      placeholder: |
+        - Tác giả: Tên bạn hoặc tác giả
+        - Năm chụp: 2024
+        - Cam kết: Ảnh chụp thực địa, không dùng AI
+        - Giấy phép: CC-BY-SA 4.0

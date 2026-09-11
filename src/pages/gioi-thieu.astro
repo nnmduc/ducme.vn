@@ -1,0 +1,212 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+import { MARIAN_STATUES_DATA } from '../data/statues.js';
+import { getYearRange } from '../lib/statues.js';
+import { buildBreadcrumbSchema, absoluteUrl, truncateDescription } from '../lib/seo.js';
+import { SITE_NAME, SITE_LANG } from '../config/site.js';
+
+const total = MARIAN_STATUES_DATA.length;
+const dioceseCount = new Set(MARIAN_STATUES_DATA.map((s) => s.diocese)).size;
+const sourceCount = MARIAN_STATUES_DATA.reduce((n, s) => n + (s.sources?.length ?? 0), 0);
+const { min: earliest, max: latest } = getYearRange();
+
+const title = 'Giới thiệu và phương pháp khảo cứu | Linh Đài Đức Mẹ Việt Nam';
+const description = truncateDescription(
+  `Mục đích dự án và phương pháp hệ thống hóa ${total} linh địa Thánh Mẫu: ` +
+    'nguồn tư liệu tham khảo và ranh giới giữa tư liệu lịch sử với truyền tụng dân gian.'
+);
+
+const breadcrumbItems = [
+  { name: 'Trang chủ', href: '/' },
+  { name: 'Giới thiệu', href: '/gioi-thieu/' },
+];
+
+const aboutSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: title,
+  description,
+  url: absoluteUrl('/gioi-thieu/'),
+  inLanguage: SITE_LANG,
+  isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: absoluteUrl('/') },
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  schemas={[aboutSchema, buildBreadcrumbSchema(breadcrumbItems)]}
+>
+  <div class="wrap">
+    <Breadcrumb items={breadcrumbItems} />
+
+    <header class="head">
+      <h1>Giới thiệu dự án</h1>
+      <p class="lead">
+        Bộ tư liệu này hệ thống hóa thông tin về {total} trung tâm hành hương Thánh Mẫu
+        tại Việt Nam, trải từ năm {earliest} tới năm {latest}. Trang này trình bày mục đích
+        dự án cùng phương pháp thu thập và lưu trữ tư liệu.
+      </p>
+    </header>
+
+    <dl class="figures">
+      <div><dt>Linh địa</dt><dd>{total}</dd></div>
+      <div><dt>Giáo phận</dt><dd>{dioceseCount}</dd></div>
+      <div><dt>Nguồn dẫn</dt><dd>{sourceCount}</dd></div>
+      <div><dt>Khoảng thời gian</dt><dd>{latest - earliest} năm</dd></div>
+    </dl>
+
+    <div class="prose">
+      <section>
+        <h2>Mục đích dự án</h2>
+        <p>
+          Linh Đài Đức Mẹ Việt Nam là một dự án sưu tầm phi lợi nhuận, được xây dựng với
+          mục tiêu hệ thống hóa và lưu trữ tư liệu về các linh đài, trung tâm hành hương
+          Thánh Mẫu trên khắp mọi miền đất nước. Toàn bộ nội dung nhằm phục vụ nhu cầu
+          học tập, tìm hiểu và nghiên cứu của cộng đoàn cũng như độc giả quan tâm.
+        </p>
+        <p>
+          Bên cạnh giá trị tư liệu, dự án mong muốn góp phần tôn vinh và lan tỏa lòng kính
+          mến Đức Mẹ Maria trong đời sống đức tin, đồng thời gìn giữ những dấu ấn lịch sử
+          và di sản tinh thần của người Công giáo Việt Nam qua từng thời kỳ.
+        </p>
+      </section>
+
+      <section>
+        <h2>Tư liệu lịch sử và truyền tụng dân gian</h2>
+        <p>
+          Mỗi trang linh địa tách bạch hai loại nội dung. Mục tư liệu lịch sử ghi những
+          điều có nguồn dẫn và tài liệu đối chứng, như năm thành lập, người chủ sự, vật liệu,
+          nghệ nhân tạc tượng. Mục truyền tụng dân gian ghi lại những câu chuyện được cộng
+          đoàn lưu truyền, trong đó có các trình thuật về hiện tượng lạ hay trải nghiệm đức tin.
+        </p>
+        <p>
+          Chúng tôi không đưa ra phán đoán khẳng định hay phủ nhận. Việc một câu chuyện được
+          đông đảo tín hữu tin và lưu truyền tự nó đã là một phần của dòng chảy đức tin và
+          văn hóa, đáng được ghi nhận song hành cùng các tư liệu lưu trữ.
+        </p>
+      </section>
+
+      <section>
+        <h2>Giả thuyết chòm Bắc Đẩu</h2>
+        <p>
+          Giả thuyết cho rằng các linh đài xếp theo hình chòm Bắc Đẩu được trình bày như
+          một giả thuyết, không phải kết luận. Sự trùng khớp hình học là điều quan sát
+          được từ tọa độ vị trí, nhưng trùng khớp không đồng nghĩa với chủ ý ban đầu.
+        </p>
+        <p>
+          Bốn phiên bản của giả thuyết được trình bày song song vì các nguồn khác nhau
+          không thống nhất với nhau. Người đọc thấy được toàn bộ các góc nhìn đối chiếu thay
+          vì chỉ một cách lý giải được chọn sẵn.
+        </p>
+      </section>
+
+      <section>
+        <h2>Nguồn dẫn tư liệu</h2>
+        <p>
+          Mỗi linh địa kèm ít nhất hai nguồn tham khảo, tổng cộng {sourceCount} nguồn trên
+          toàn bộ dữ liệu. Nguồn gồm văn khố các giáo phận, tư liệu Phủ Tổng ủy Dinh điền
+          giai đoạn 1959 tới 1961, báo Công giáo và Dân tộc, và Wikipedia tiếng Việt.
+        </p>
+        <p>
+          Một số nguồn trỏ tới trang tìm kiếm trong phạm vi một tên miền thay vì một bài
+          cụ thể. Đó là chỗ chưa hoàn chỉnh: tư liệu có tồn tại nhưng chưa có URL ổn định.
+          Chúng tôi ghi nhận thay vì che giấu.
+        </p>
+      </section>
+
+      <section>
+        <h2>Đóng góp và đính chính</h2>
+        <p>
+          Nếu bạn phát hiện sai sót hoặc có thêm tài liệu, tư liệu lịch sử muốn chia sẻ
+          bổ sung, mọi ý kiến đóng góp đều được trân trọng đón nhận. Ưu tiên hàng đầu của
+          bộ tư liệu là sự chuẩn xác, cẩn trọng và khách quan.
+        </p>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .head {
+    padding-block: 22px 36px;
+    max-width: 66ch;
+  }
+  .head h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.1rem, 4.6vw, 3.35rem);
+    line-height: 1.14;
+    letter-spacing: -0.015em;
+    color: var(--text-strong);
+    margin-bottom: 18px;
+  }
+  .lead {
+    font-family: var(--font-prose);
+    font-size: 1.16rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+  }
+
+  .figures {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    margin-bottom: 64px;
+    background: var(--border-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .figures > div {
+    background: var(--bg-surface);
+    padding: 22px;
+  }
+  .figures dt {
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 10px;
+  }
+  .figures dd {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+  @media (max-width: 860px) {
+    .figures {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .prose {
+    max-width: 68ch;
+    padding-bottom: 80px;
+  }
+  .prose section {
+    margin-bottom: 44px;
+  }
+  .prose h2 {
+    font-family: var(--font-display);
+    font-size: 1.62rem;
+    font-weight: 600;
+    color: var(--text-strong);
+    line-height: 1.3;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .prose p {
+    font-family: var(--font-prose);
+    font-size: 1.12rem;
+    line-height: 1.82;
+    color: var(--text-primary);
+    margin-bottom: 17px;
+  }
+</style>

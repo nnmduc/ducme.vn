@@ -1,23 +1,67 @@
-# Tóm Tắt Mã Nguồn (Codebase Summary)
+# Tổng Quan Mã Nguồn
 
-## 1. Tổng Quan Kiến Trúc
-Ứng dụng được thiết kế theo cấu trúc module độc lập bằng Vanilla JavaScript (IIFE Module Pattern), tách biệt dữ liệu, lớp hiển thị bản đồ, lớp phủ thiên văn, bộ điều khiển thời gian và giao diện chi tiết.
+Cập nhật 2026-09-11.
 
-## 2. Các Module Chính
-| Tệp / Thư mục | Trách nhiệm chính |
-|---|---|
-| `index.html` | Trang đích SPA duy nhất chứa layout chuẩn, header, bản đồ Leaflet, HUD panels và modal |
-| `src/data/statues.js` | Cơ sở dữ liệu tĩnh gồm 18+ tượng Thánh Mẫu với tọa độ WGS84, năm, giáo phận, lịch sử xác thực, giả thuyết Bắc Đẩu và 4 cấu hình chòm sao |
-| `src/css/style.css` | Hệ thống thiết kế chuẩn anti-slop: palette màu đêm sao, typography Playfair Display/Lora/Be Vietnam Pro/JetBrains Mono, WCAG AA, hiệu ứng phát sáng |
-| `src/js/map.js` | Khởi tạo bản đồ CartoDB Dark Matter, quản lý marker tùy biến, tính năng pan/zoom mượt mà, chủ quyền Hoàng Sa - Trường Sa |
-| `src/js/constellation.js` | Vẽ đường nối SVG/Polyline chòm sao Bắc Đẩu, hiệu ứng sao chổi phát sáng, đường tia chỉ hướng Sao Bắc Cực (Polaris) |
-| `src/js/timeline.js` | Thanh trượt dòng thời gian 1798–2026, nút Play/Pause tự động chạy theo năm, lọc hiển thị các tượng theo niên đại |
-| `src/js/list-view.js` | Drawer tìm kiếm tức thời và lọc đa tiêu chí (5 tượng Diệm, vùng miền, chòm sao) |
-| `src/js/modal.js` | Hộp thoại chi tiết sâu với tranh nghệ thuật AI, dữ liệu GPS, phân tích lịch sử vs truyền thuyết, nút liên kết Google Maps |
-| `tests/test_data_and_integrity.js` | 204 bài test tự động kiểm tra tính hợp lệ của tọa độ, liên kết đồ thị các phiên bản sao và ảnh |
+```
+astro.config.mjs             Cấu hình Astro. Đọc SITE_URL từ src/config/site.js
+netlify.toml                 Cấu hình triển khai THẬT (xem docs/deployment-guide.md)
+package.json                 Astro 7, Leaflet, sharp, fontsource
 
-## 3. Thống Kê Dữ Liệu
-- **Số lượng linh địa Thánh Mẫu:** 18 địa điểm trên 3 miền Bắc - Trung - Nam.
-- **Bộ 5 tượng TT Ngô Đình Diệm (1959–1961):** Phượng Hoàng (Gia Lai), Giang Sơn (Đắk Lắk), Trinh Phong (Ninh Thuận), Thác Mơ (Bình Phước), Tà Pao (Bình Thuận).
-- **Số phiên bản chòm sao:** 4 phiên bản với đồ thị kết nối khép kín và đường hướng Polaris.
-- **Tác phẩm mỹ thuật AI:** 4 bức tranh sơn dầu nghệ thuật biểu tượng lưu tại `assets/images/`.
+public/
+  favicon.svg                Dấu sao bốn cánh, vàng trên nền navy
+  og-default.png             Ảnh chia sẻ dự phòng 1200x630 cho 10 linh địa chưa có ảnh
+
+src/
+  config/site.js             SITE_URL, tên thương hiệu, điều hướng, thứ tự vùng miền.
+                             Đổi tên miền thì sửa DUY NHẤT ở đây.
+
+  data/statues.js            NGUỒN DỮ LIỆU DUY NHẤT. 1077 dòng, hai export ESM:
+                             MARIAN_STATUES_DATA (18 linh địa)
+                             CONSTELLATION_VERSIONS (4 phiên bản chòm sao)
+
+  lib/statues.js             Hàm dẫn xuất: tách tỉnh từ địa chỉ, gom vùng miền,
+                             thứ tự hiển thị chuẩn, linh địa liền kề, định dạng tọa độ
+  lib/photos.js              Khớp trường realImage với ảnh trong src/assets
+  lib/seo.js                 Cắt mô tả theo ranh giới từ, dựng JSON-LD
+
+  layouts/BaseLayout.astro   Khung chung. Nạp chữ viết, CSS nền, header, footer
+
+  components/
+    SeoHead.astro            Toàn bộ thẻ head. Mọi trang PHẢI dùng, nhờ đó không
+                             trang nào thiếu canonical hay thẻ chia sẻ
+    SiteHeader.astro         Điều hướng. Nhãn rút gọn giữ một dòng ở mọi bề ngang
+    SiteFooter.astro
+    Breadcrumb.astro
+    SourceList.astro         Lưới thẻ nguồn dẫn, rel="nofollow noopener"
+    StatueIndex.astro        18 linh địa gom theo vùng miền. Khối nội dung SEO
+                             quan trọng nhất của trang chủ
+    ConstellationDiagram.astro  Sơ đồ SVG chòm Bắc Đẩu, nhãn đọc từ dữ liệu
+    MarianMap.astro          Đảo tương tác. Leaflet, chòm sao, dòng thời gian, bộ lọc
+
+  pages/
+    index.astro              Trang chủ
+    linh-dai/[id].astro      18 trang chi tiết qua getStaticPaths
+    chom-sao-bac-dau.astro
+    ban-do.astro
+    gioi-thieu.astro
+    404.astro
+    robots.txt.js            Endpoint, trỏ sitemap bằng URL tuyệt đối
+
+  styles/
+    tokens.css               Token hai lớp. Sẵn sàng cho theme sáng
+    global.css               Reset, tiện ích, ưu tiên giảm chuyển động
+
+  assets/real_photos/        8 ảnh thực địa đã xác minh. Nằm trong src/ để
+                             astro:assets xử lý được
+
+tests/test_data_and_integrity.js   347 điều kiện. Chạy bằng `npm test`
+```
+
+## Điều Cần Biết Trước Khi Sửa
+
+- **Không viết mã màu trong component.** Chỉ dùng biến ngữ nghĩa của `tokens.css`.
+- **Không nhân bản dữ liệu linh địa.** Mọi thứ dẫn xuất từ `src/data/statues.js`.
+- Chữ nghiêng Playfair có right side bearing âm. Mọi đoạn chữ nghiêng trong font hiển thị
+  cần `padding-right: 0.14em`, nếu không từ nghiêng sẽ dính vào từ kế tiếp.
+- Giữ `trailingSlash: 'always'`. Liên kết nội bộ và canonical đều dựa vào quy ước này.
+- Trang nội dung phải giữ mức **0 byte JavaScript**. Leaflet chỉ được xuất hiện ở `/ban-do/`.

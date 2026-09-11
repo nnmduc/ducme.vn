@@ -34,6 +34,6 @@
 4. **Phiên bản 4 (Tuyến Thánh Mẫu Xuyên Việt - Đại Hành Hương):**
    - Mở rộng tới: Đức Mẹ Núi Cơm (Hà Tĩnh), Phú Nhai (Nam Định), Sao Biển (Đà Nẵng), Núi Cúi (Đồng Nai - tượng cao nhất VN), Bãi Dâu (Vũng Tàu), Fatima Bình Triệu (Sài Gòn), La Mã Bến Tre, Hòn Chông (Kiên Giang).
 
-## 4. Đánh Giá Khách Quan: Sự Thật Lịch Sử vs Truyền Thuyết Dân Gian
-* **Sự thật lịch sử:** Việc đúc 5 pho tượng thời TT Ngô Đình Diệm năm 1959–1961 là có thật 100%, có tài liệu lưu trữ của Phủ Tổng ủy Dinh điền, Giáo phận Ban Mê Thuột, Nha Trang, Phan Thiết và KTS Ngô Viết Thụ.
+## 4. Đánh Giá Khách Quan: Tư Liệu Lịch Sử vs Truyền Thuyết Dân Gian
+* **Tư liệu lịch sử:** Việc đúc 5 pho tượng thời TT Ngô Đình Diệm năm 1959–1961 có hồ sơ lưu trữ xác nhận tại Phủ Tổng ủy Dinh điền, Giáo phận Ban Mê Thuột, Nha Trang, Phan Thiết và KTS Ngô Viết Thụ.
 * **Giả thuyết Bắc Đẩu:** Mang tính chiêm niệm tâm linh và biểu tượng đức tin sâu sắc của cộng đoàn giáo dân hơn là một bản đồ quy hoạch trắc địa quân sự cố ý ban đầu. Tuy nhiên, sự trùng hợp kỳ lạ về vị trí địa lý của 7 linh địa đã tạo nên một hình tượng thiêng liêng giàu xúc cảm.

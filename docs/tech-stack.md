@@ -1,28 +1,63 @@
-# Lựa Chọn Công Nghệ: Ứng Dụng Bản Đồ Tượng Đức Mẹ & Chòm Sao Bắc Đẩu
+# Lựa Chọn Công Nghệ
+
+Cập nhật 2026-09-11, sau đợt tái cấu trúc sang Astro. Tài liệu này thay thế hoàn toàn
+phiên bản trước, vốn mô tả một trang tĩnh thuần HTML/CSS/JS không có bước build.
 
 ## 1. Mục Tiêu Kỹ Thuật
-- **Khả chuyển & Độc lập:** Ứng dụng chạy trực tiếp trên nền web tĩnh (Single Page Application HTML/CSS/JS), không phụ thuộc backend, mở trực tiếp bằng trình duyệt hoặc deploy lên GitHub Pages / Vercel chỉ với 1 lệnh.
-- **Trải nghiệm mượt mà & Trực quan:** Bản đồ tương tác sắc nét, zoom mượt, hiệu ứng animation nối các vì sao theo quỹ đạo ánh sáng lung linh (starlight constellation glow), timeline playback trực quan.
-- **Đầy đủ dữ liệu & Đa phiên bản:** Dữ liệu chuẩn xác 100% về tọa độ, lịch sử, bối cảnh 1959, ảnh minh họa chất lượng cao, các giả thuyết và đối sánh thiên văn.
 
-## 2. Công Nghệ Đề Xuất
-* **Bản đồ tương tác (Mapping Engine):**
-  - **Leaflet.js (v1.9.4):** Thư viện bản đồ mã nguồn mở nhẹ nhất (42KB), hoạt động mượt mà trên cả máy tính lẫn điện thoại, hỗ trợ layer đa dạng (CartoDB Dark Matter / Voyager cho phong cách bầu trời sao đêm hoặc bản đồ địa hình ấm áp).
-  - **SVG & Canvas Constellation Overlay:** Vẽ các đường nối chòm sao Bắc Đẩu bằng SVG/Canvas với hiệu ứng phát sáng (drop-shadow filter, dash-array animation và star pulse).
-* **Kiến trúc Dữ liệu & Quản lý Trạng thái:**
-  - `Dataset`: Module JSON/JS nhúng sẵn chi tiết hơn 18 tượng đài lớn trên cả nước, bao gồm tên, năm thành lập, tọa độ chuẩn WGS84, địa chỉ, lịch sử, bối cảnh Đệ nhất Cộng hòa 1959, ảnh tư liệu, và phân loại các phiên bản Bắc Đẩu.
-  - State Manager: Quản lý bộ lọc phiên bản (Version 1 Kinh điển, Version 2 Hiện đại/Măng Đen, Version 3 Bộ 5 tượng Ngô Đình Diệm, Version 4 Toàn quốc), trạng thái timeline (năm hiện tại, play/pause, tốc độ), và điểm đang được chọn (modal inspection).
-* **Giao diện & Trải nghiệm Người dùng (UI/UX):**
-  - Modern CSS (Flexbox, Grid, CSS Variables, Glassmorphism, CSS Transitions).
-  - Font: Playfair Display / Cormorant Garamond (tiêu đề tôn nghiêm, học thuật) + Inter / Be Vietnam Pro (nội dung rõ ràng).
-  - Bảng màu: Đêm sao huyền bí (`#0a0f1d`, `#131b2e`), Ánh sao vàng kim (`#f5c518`, `#ffd166`), Xanh thiên thanh Maria (`#38bdf8`, `#60a5fa`), Trắng ngọc (`#f8fafc`).
-* **Các tính năng tương tác chính:**
-  1. **Constellation Switcher:** Nút chuyển đổi nhanh các phiên bản chòm sao Bắc Đẩu & ngũ giác đài.
-  2. **Timeline Player:** Thanh trượt thời gian từ năm 1798 đến 2026, nút Play/Pause tự động trình chiếu sự xuất hiện của các tượng đài theo dòng lịch sử.
-  3. **Dual-View:** Chuyển đổi linh hoạt giữa Bản đồ toàn cảnh và Danh sách thẻ bài (Card Grid/List View) có công cụ tìm kiếm và lọc theo vùng miền/thời kỳ.
-  4. **Deep-Reading Modal:** Hộp thoại chi tiết cung cấp hình ảnh, tư liệu lịch sử xác thực, đối chiếu giả thuyết tâm linh và tọa độ vệ tinh.
-  5. **Sky Comparison Overlay:** Khung so sánh hình học trực tiếp giữa chòm sao Bắc Đẩu thiên văn (Ursa Major) và đường nối trên thực địa Việt Nam.
+- **Nội dung phải đọc được bởi máy tìm kiếm.** Đây là ràng buộc số một và là lý do
+  toàn bộ ngăn xếp được làm lại.
+- **Trải nghiệm bản đồ giữ nguyên** chất lượng của bản cũ: chòm sao, dòng thời gian,
+  bộ lọc đa tiêu chí.
+- **Dữ liệu chuẩn xác, có nguồn dẫn**, ảnh 100% thực địa đã xác minh.
 
-## 3. Lý Do Không Dùng Framework Nặng
-- Tránh việc cài đặt npm nặng nề, phức tạp hóa việc triển khai cho một dự án cần tính chia sẻ, lưu trữ vĩnh viễn và dễ dàng mở xem offline hoặc gửi tặng cộng đoàn.
-- Tối ưu 100% hiệu năng và khả năng tương thích trên mọi thiết bị.
+## 2. Ngăn Xếp
+
+| Lớp | Lựa chọn | Ghi chú |
+|---|---|---|
+| Khung dựng trang | **Astro 7** (tĩnh hoàn toàn) | 22 trang HTML dựng sẵn lúc build |
+| Bản đồ | **Leaflet 1.9** | Chỉ nạp trên `/ban-do/`, không có ở trang nội dung |
+| Ảnh nền bản đồ | **OpenStreetMap** | Không cần khóa API. Xem mục 4 |
+| Ảnh | `astro:assets` + **sharp** | Xuất AVIF, có `srcset`, giảm khoảng 90% dung lượng |
+| Chữ viết | `@fontsource-variable` | Tự lưu trữ, có sẵn bộ ký tự `vietnamese` |
+| Sitemap | `@astrojs/sitemap` | Sinh tự động từ `site` trong cấu hình |
+| Triển khai | **Netlify** | `netlify.toml` ở thư mục gốc |
+
+Chữ viết: Playfair Display (tiêu đề), Lora (văn xuôi), Be Vietnam Pro (giao diện).
+Cả ba đều đã kiểm chứng là có bộ ký tự `vietnamese`.
+
+## 3. Vì Sao Bỏ Kiến Trúc Không Dùng npm
+
+Phiên bản trước của tài liệu này chủ trương không dùng npm, để trang mở được trực tiếp
+bằng `file://` và tặng lại cộng đoàn dưới dạng thư mục offline. Chủ trương đó **đã được
+thay thế có chủ đích** vào ngày 2026-09-11.
+
+Lý do: kiến trúc cũ chỉ có **một URL duy nhất**, và toàn bộ văn xuôi lịch sử chỉ được
+chèn vào trang sau khi người dùng bấm mở hộp thoại. Máy tìm kiếm vì thế không nhìn thấy
+nội dung nào, và cũng không có địa chỉ nào để xếp hạng. Không có cách nào sửa điều đó mà
+vẫn giữ mô hình một trang tĩnh mở bằng `file://`.
+
+Đánh đổi đã chấp nhận: trang **không còn mở được bằng `file://`**, cần `npm run build`.
+Bù lại có 22 URL riêng biệt, mỗi URL mang nội dung đầy đủ trong HTML trả về từ máy chủ.
+
+## 4. Vì Sao Ảnh Nền Bản Đồ Là OpenStreetMap
+
+Bản cũ dùng ArcGIS của Esri. Lớp nền này đã được gỡ bỏ theo yêu cầu.
+
+Lựa chọn thay thế đầu tiên là CARTO Dark Matter, nhưng khi dựng thử thì **mọi ô bản đồ
+CARTO đều bị đóng dấu "API KEY REQUIRED"**. CARTO nay bắt buộc có khóa.
+
+Hiện không còn nhà cung cấp ảnh nền **tối** nào vừa miễn phí vừa không cần khóa API. Giải
+pháp đang dùng: lấy ô bản đồ OpenStreetMap (sáng, miễn phí, không cần khóa) rồi đảo màu
+bằng bộ lọc CSS ngay trên lớp ô bản đồ. Nhờ vậy trang không phụ thuộc khóa API nào.
+
+Nếu sau này cần nền tối chất lượng cao hơn, Stadia Maps hoặc CARTO đều có gói miễn phí
+kèm khóa giới hạn theo tên miền. Khi đó chỉ cần sửa phần `tileLayers` trong
+`src/components/MarianMap.astro`.
+
+## 5. Giao Diện
+
+- Chỉ có **theme tối**. Hệ token đã dựng sẵn hai lớp để thêm theme sáng sau này mà không
+  phải sửa component nào. Chi tiết trong `src/styles/tokens.css`.
+- Không dùng framework CSS. CSS thuần, phạm vi theo từng component của Astro.
+- Trang nội dung không nạp một byte JavaScript nào.

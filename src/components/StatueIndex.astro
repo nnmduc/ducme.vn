@@ -1,0 +1,124 @@
+---
+/**
+ * Muc luc 18 linh dia, gom theo vung mien.
+ *
+ * Day la khoi noi dung quan trong nhat cho SEO tren trang chu: no dung HTML
+ * that o phia may chu, va lien ket toi TAT CA cac trang chi tiet, nen bo thu
+ * thap tim duoc moi trang chi sau mot buoc tu trang goc.
+ */
+import { getStatuesByRegion, getProvince, statuePath } from '../lib/statues.js';
+import { CONSTELLATION_VERSIONS } from '../data/statues.js';
+
+const groups = getStatuesByRegion();
+
+/** Bay linh dia thuoc chom Bac Dau phien ban 1, danh dau bang hinh sao. */
+const v1Nodes = new Set(CONSTELLATION_VERSIONS.v1.nodes);
+---
+
+<div class="regions">
+  {
+    groups.map((group) => (
+      <section class="region">
+        <h3>
+          <span>{group.region}</span>
+          <span class="count">{group.statues.length} linh địa</span>
+        </h3>
+
+        {group.statues.map((statue) => (
+          <a class="site" href={statuePath(statue.id)}>
+            <span class="site-name">
+              {statue.name}
+              {v1Nodes.has(statue.id) && (
+                <span class="star" title="Thuộc chòm Bắc Đẩu phiên bản 1" aria-label="Thuộc chòm Bắc Đẩu">★</span>
+              )}
+            </span>
+            <span class="site-year">{statue.year}</span>
+            <span class="site-place">{getProvince(statue.location)}</span>
+          </a>
+        ))}
+      </section>
+    ))
+  }
+</div>
+
+<style>
+  .regions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 44px 56px;
+  }
+  .region h3 {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-bottom: 12px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid var(--border-strong);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .region h3 .count {
+    color: var(--text-tertiary);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  .site {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 13px 10px 13px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    transition: padding-left 0.18s, border-color 0.2s;
+  }
+  .site:hover {
+    padding-left: 10px;
+    border-bottom-color: var(--border-strong);
+  }
+  .site-name {
+    font-family: var(--font-prose);
+    font-size: 1.06rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    flex: 1;
+    transition: color 0.18s;
+  }
+  .site:hover .site-name {
+    color: var(--accent-hover);
+  }
+  .star {
+    color: var(--accent);
+    font-size: 11px;
+    margin-left: 6px;
+    vertical-align: 1px;
+  }
+  .site-year {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-variant-numeric: tabular-nums;
+    min-width: 42px;
+  }
+  .site-place {
+    font-size: 12.5px;
+    color: var(--text-tertiary);
+    white-space: nowrap;
+    text-align: right;
+    min-width: 84px;
+  }
+  @media (max-width: 820px) {
+    .regions {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+  }
+  @media (max-width: 420px) {
+    .site-place {
+      display: none;
+    }
+  }
+</style>

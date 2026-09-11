@@ -1,0 +1,144 @@
+---
+/**
+ * Ban do tuong tac.
+ *
+ * Khac voi trang cu: khung trang, bang dieu khien va TOAN BO danh sach 18 linh
+ * dia deu duoc dung san o phia may chu. Ngay ca trang nay, von la trang ung
+ * dung, cung co noi dung doc duoc khi tat JavaScript.
+ *
+ * Leaflet chi duoc nap tren DUY NHAT trang nay. Cac trang noi dung khong tai
+ * mot byte nao cua thu vien ban do.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MarianMap from '../components/MarianMap.astro';
+
+import { MARIAN_STATUES_DATA, CONSTELLATION_VERSIONS } from '../data/statues.js';
+import { getOrderedStatues, getProvince, statuePath } from '../lib/statues.js';
+import { buildBreadcrumbSchema, truncateDescription } from '../lib/seo.js';
+
+const statues = getOrderedStatues();
+const versions = ['v1', 'v2', 'v3', 'v4'].map((key) => ({
+  key,
+  ...CONSTELLATION_VERSIONS[key],
+}));
+
+const title = 'Bản đồ các linh đài Đức Mẹ tại Việt Nam';
+const description = truncateDescription(
+  `Bản đồ tương tác ${MARIAN_STATUES_DATA.length} linh địa Thánh Mẫu tại Việt Nam, ` +
+    'kèm lớp phủ chòm sao Bắc Đẩu và dòng thời gian từ năm 1798 tới nay.'
+);
+
+const breadcrumbItems = [
+  { name: 'Trang chủ', href: '/' },
+  { name: 'Bản đồ', href: '/ban-do/' },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  schemas={[buildBreadcrumbSchema(breadcrumbItems)]}
+>
+  <div class="map-page">
+    <MarianMap statues={statues} versions={versions} />
+
+    <!-- Danh muc duoi ban do. Day la noi dung that, khong phai ban sao cua
+         danh sach do JavaScript dung nen: bo thu thap va nguoi tat JavaScript
+         deu doc duoc day du. -->
+    <section class="listing">
+      <div class="wrap">
+        <h2>Toàn bộ {statues.length} linh địa trên bản đồ</h2>
+        <p class="listing-lead">
+          Bấm một linh địa để mở trang tư liệu đầy đủ gồm lịch sử, tọa độ và nguồn dẫn.
+        </p>
+
+        <ul class="listing-grid">
+          {
+            statues.map((statue) => (
+              <li>
+                <a href={statuePath(statue.id)}>
+                  <span class="l-name">{statue.name}</span>
+                  <span class="l-meta">
+                    {getProvince(statue.location)}
+                    <span class="l-year">{statue.year}</span>
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .listing {
+    padding-block: 64px;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .listing h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 600;
+    color: var(--text-strong);
+    margin-bottom: 12px;
+  }
+  .listing-lead {
+    font-family: var(--font-prose);
+    color: var(--text-secondary);
+    line-height: 1.76;
+    max-width: 60ch;
+    margin-bottom: 36px;
+  }
+  .listing-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px 32px;
+  }
+  .listing-grid a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    transition: padding-left 0.18s, border-color 0.2s;
+  }
+  .listing-grid a:hover {
+    padding-left: 8px;
+    border-bottom-color: var(--border-strong);
+  }
+  .l-name {
+    font-family: var(--font-prose);
+    font-size: 1.02rem;
+    color: var(--text-primary);
+  }
+  .listing-grid a:hover .l-name {
+    color: var(--accent-hover);
+  }
+  .l-meta {
+    font-size: 12.5px;
+    color: var(--text-tertiary);
+    white-space: nowrap;
+  }
+  .l-year {
+    margin-left: 10px;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-secondary);
+  }
+  @media (max-width: 1000px) {
+    .listing-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 640px) {
+    .listing {
+      padding-block: 48px;
+    }
+    .listing-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

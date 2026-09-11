@@ -1,0 +1,53 @@
+---
+/**
+ * Khung chung cua moi trang. Nhan sieu du lieu roi chuyen thang cho SeoHead,
+ * nen khong trang nao co the quen canonical hoac the chia se.
+ */
+import SeoHead from '../components/SeoHead.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { SITE_LANG } from '../config/site.js';
+
+import '@fontsource-variable/playfair-display';
+import '@fontsource-variable/lora';
+import '@fontsource/be-vietnam-pro/400.css';
+import '@fontsource/be-vietnam-pro/500.css';
+import '@fontsource/be-vietnam-pro/600.css';
+import '../styles/global.css';
+
+const { title, description, image, imageWidth, imageHeight, type, schemas, noindex } =
+  Astro.props;
+---
+
+<!doctype html>
+<html lang={SITE_LANG}>
+  <head>
+    <SeoHead
+      title={title}
+      description={description}
+      image={image}
+      imageWidth={imageWidth}
+      imageHeight={imageHeight}
+      type={type}
+      schemas={schemas}
+      noindex={noindex}
+    />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9C63FNG0HD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9C63FNG0HD');
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Bỏ qua điều hướng, tới nội dung chính</a>
+    <SiteHeader />
+    <main id="main">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

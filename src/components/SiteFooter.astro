@@ -1,0 +1,96 @@
+---
+import { SITE_NAME, NAV_ITEMS } from '../config/site.js';
+---
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>Về bộ tư liệu</h2>
+        <p>
+          Dự án sưu tầm phi lợi nhuận nhằm phục vụ nhu cầu học tập và nghiên cứu,
+          đồng thời mong muốn lan tỏa lòng kính mến Đức Mẹ.
+        </p>
+      </div>
+
+      <div>
+        <h2>Chuyên mục</h2>
+        <ul>
+          {NAV_ITEMS.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+        </ul>
+      </div>
+
+      <div>
+        <h2>Nguồn dẫn</h2>
+        <ul class="plain">
+          <li>Văn khố các giáo phận</li>
+          <li>Phủ Tổng ủy Dinh điền, 1959 tới 1961</li>
+          <li>Báo Công giáo và Dân tộc</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-base">
+      <span>{SITE_NAME}</span>
+      <span>ducme.vn</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .foot {
+    padding-block: 64px 44px;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .foot h2 {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 18px;
+  }
+  .foot p {
+    font-family: var(--font-prose);
+    font-size: 14.5px;
+    line-height: 1.78;
+    color: var(--text-secondary);
+    max-width: 52ch;
+  }
+  .foot ul {
+    list-style: none;
+    display: grid;
+    gap: 11px;
+    font-size: 14.5px;
+    color: var(--text-secondary);
+  }
+  .foot ul a {
+    transition: color 0.18s;
+  }
+  .foot ul a:hover {
+    color: var(--accent-hover);
+  }
+  .foot-base {
+    padding-top: 26px;
+    font-size: 13px;
+    color: var(--text-tertiary);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  @media (max-width: 760px) {
+    .foot-grid {
+      grid-template-columns: 1fr;
+      gap: 34px;
+    }
+  }
+</style>

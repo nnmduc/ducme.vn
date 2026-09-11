@@ -1,0 +1,569 @@
+---
+/**
+ * Trang chi tiet mot linh dia. 18 trang tinh, sinh tu du lieu.
+ *
+ * Day la be mat xep hang chinh cua toan trang. Toan bo van xuoi
+ * (historicalFact, architect, oralTradition, significance) va danh muc nguon
+ * deu nam trong HTML tra ve tu may chu, doc duoc khi TAT JavaScript.
+ * Truoc day nhung noi dung nay chi xuat hien sau khi nguoi dung bam mo hop thoai,
+ * nen bo thu thap khong bao gio nhin thay.
+ */
+import { Image } from 'astro:assets';
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import SourceList from '../../components/SourceList.astro';
+
+import { MARIAN_STATUES_DATA, CONSTELLATION_VERSIONS } from '../../data/statues.js';
+import { getPhoto } from '../../lib/photos.js';
+import {
+  getProvince,
+  getNeighbours,
+  statuePath,
+  formatCoords,
+} from '../../lib/statues.js';
+import {
+  buildStatueTitle,
+  buildStatueDescription,
+  buildPlaceSchema,
+  buildBreadcrumbSchema,
+  absoluteUrl,
+} from '../../lib/seo.js';
+
+export function getStaticPaths() {
+  return MARIAN_STATUES_DATA.map((statue) => ({
+    params: { id: statue.id },
+    props: { statue },
+  }));
+}
+
+const { statue } = Astro.props;
+
+const photo = getPhoto(statue.realImage);
+const province = getProvince(statue.location);
+const { prev, next } = getNeighbours(statue.id);
+
+const title = buildStatueTitle(statue);
+const description = buildStatueDescription(statue);
+
+/**
+ * Hai cap, khong phai ba. Khong co trang muc luc rieng tai /linh-dai/, nen mot
+ * cap trung gian tro toi /#danh-muc chi la manh neo cua chinh trang chu, khong
+ * phai mot cap dieu huong that.
+ */
+const breadcrumbItems = [
+  { name: 'Trang chủ', href: '/' },
+  { name: statue.name, href: statuePath(statue.id) },
+];
+
+/**
+ * og:image phai la URL tuyet doi. 10 trong 18 ban ghi chua co anh thuc dia,
+ * nhung trang nao cung phai co the chia se hop le, nen SeoHead se tu lui ve
+ * anh mac dinh khi khong truyen gi.
+ */
+const ogImage = photo ? absoluteUrl(photo.src) : undefined;
+
+const schemas = [
+  buildPlaceSchema(statue, ogImage),
+  buildBreadcrumbSchema(breadcrumbItems),
+];
+
+/** Vai tro cua linh dia trong tung phien ban chom sao, bo cac phien ban khong co mat. */
+const roles = ['v1', 'v2', 'v3', 'v4']
+  .map((key) => ({ key, version: CONSTELLATION_VERSIONS[key], role: statue.constellationRole?.[key] }))
+  .filter((entry) => entry.role);
+
+/** Gop v1 va v2 khi vai tro trung nhau, tranh lap lai y het nhau. */
+const mergedRoles = roles.reduce((acc, entry) => {
+  const previous = acc[acc.length - 1];
+  if (previous && previous.role.star === entry.role.star && previous.role.code === entry.role.code) {
+    previous.keys.push(entry.key);
+    return acc;
+  }
+  acc.push({ keys: [entry.key], role: entry.role });
+  return acc;
+}, []);
+
+const versionLabel = (keys) =>
+  keys.length > 1
+    ? `Phiên bản ${keys.map((k) => k.replace('v', '')).join(' và ')}`
+    : `Phiên bản ${keys[0].replace('v', '')}`;
+
+/** Cac muc van xuoi. Bo muc rong de khong sinh tieu de trong. */
+const proseSections = [
+  { heading: 'Tư liệu lịch sử', body: statue.historicalFact, lead: true },
+  { heading: 'Quần thể và kiến trúc', body: statue.architect },
+  { heading: 'Truyền tụng dân gian', body: statue.oralTradition },
+  { heading: 'Giá trị tâm linh', body: statue.significance },
+].filter((section) => section.body);
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  image={photo?.src}
+  imageWidth={photo?.width}
+  imageHeight={photo?.height}
+  type="article"
+  schemas={schemas}
+>
+  <div class="wrap">
+    <Breadcrumb items={breadcrumbItems} />
+
+    <article>
+      <header class="head">
+        <h1>{statue.name}</h1>
+        {statue.title && <p class="subtitle">{statue.title}</p>}
+        <p class="place">
+          {statue.location}
+          <span class="dot" aria-hidden="true">·</span>
+          {statue.diocese}
+        </p>
+
+        <div class="tags">
+          <span class="tag">Thành lập {statue.year}</span>
+          {statue.diemStatue5 && (
+            <span class="tag diem">★ Một trong năm pho tượng dựng năm 1959</span>
+          )}
+          {statue.constellationRole?.v1 && (
+            <span class="tag astro">
+              {statue.constellationRole.v1.star}, {statue.constellationRole.v1.code}
+            </span>
+          )}
+        </div>
+      </header>
+
+      {
+        photo && (
+          <figure class="hero-fig">
+            <Image
+              src={photo}
+              alt={`${statue.name} tại ${province}`}
+              widths={[640, 1024, 1600]}
+              sizes="(max-width: 1240px) 100vw, 1192px"
+              loading="eager"
+              fetchpriority="high"
+              format="avif"
+            />
+            <figcaption>{statue.realImageCaption}</figcaption>
+          </figure>
+        )
+      }
+
+      <dl class="specs">
+        <div class="spec">
+          <dt>Tọa độ GPS</dt>
+          <dd class="num">{formatCoords(statue.lat, statue.lng)}</dd>
+        </div>
+        <div class="spec">
+          <dt>Độ cao</dt>
+          <dd>{statue.elevation || 'Chưa có số liệu'}</dd>
+        </div>
+        <div class="spec">
+          <dt>Vùng miền</dt>
+          <dd>{statue.region}</dd>
+        </div>
+        <div class="spec">
+          <dt>Giáo phận</dt>
+          <dd>{statue.diocese}</dd>
+        </div>
+      </dl>
+
+      <div class="body-grid">
+        <div class="prose">
+          {
+            proseSections.map((section) => (
+              <section>
+                <h2>{section.heading}</h2>
+                <p class={section.lead ? 'lead' : undefined}>{section.body}</p>
+              </section>
+            ))
+          }
+        </div>
+
+        <aside class="rail">
+          {
+            mergedRoles.length > 0 && (
+              <div class="rail-card">
+                <h2>Vị trí trong chòm Bắc Đẩu</h2>
+                {mergedRoles.map((entry) => (
+                  <div class="role">
+                    <div class="role-v">{versionLabel(entry.keys)}</div>
+                    <div class="role-star">
+                      {entry.role.star}
+                      <code>{entry.role.code}</code>
+                    </div>
+                    <div class="role-desc">{entry.role.role}</div>
+                  </div>
+                ))}
+              </div>
+            )
+          }
+
+          <div class="rail-actions">
+            <a class="btn btn-primary" href={`/ban-do/?linh-dai=${statue.id}`}>Xem trên bản đồ</a>
+            <a class="btn btn-ghost" href="/chom-sao-bac-dau/">Khảo cứu Bắc Đẩu</a>
+          </div>
+        </aside>
+      </div>
+    </article>
+  </div>
+
+  <section class="sources">
+    <div class="wrap">
+      <h2>Nguồn dẫn</h2>
+      <p class="sources-lead">
+        Mọi luận điểm trên trang này đều dẫn về nguồn có thể kiểm chứng độc lập.
+        Liên kết mở ra trang ngoài.
+      </p>
+      <SourceList sources={statue.sources} />
+    </div>
+  </section>
+
+  <div class="wrap">
+    <nav class="pager" aria-label="Linh địa liền kề">
+      <a class="pg" href={statuePath(prev.id)}>
+        <span>Linh địa trước</span>
+        <b>{prev.name}</b>
+      </a>
+      <a class="pg next" href={statuePath(next.id)}>
+        <span>Linh địa kế tiếp</span>
+        <b>{next.name}</b>
+      </a>
+    </nav>
+  </div>
+</BaseLayout>
+
+<style>
+  .head {
+    padding-block: 22px 40px;
+  }
+  .head h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.1rem, 4.6vw, 3.35rem);
+    line-height: 1.14;
+    letter-spacing: -0.015em;
+    color: var(--text-strong);
+    margin-bottom: 16px;
+    max-width: 18ch;
+  }
+  .subtitle {
+    font-family: var(--font-prose);
+    font-style: italic;
+    font-size: 1.18rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 52ch;
+    margin-bottom: 20px;
+  }
+  .place {
+    font-size: 14.5px;
+    color: var(--text-primary);
+  }
+  .place .dot {
+    color: var(--accent);
+    margin-inline: 8px;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 20px;
+  }
+  .tag {
+    font-size: 12.5px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-strong);
+    color: var(--text-secondary);
+  }
+  .tag.diem {
+    border-color: color-mix(in srgb, var(--accent) 50%, transparent);
+    color: var(--accent-hover);
+  }
+  .tag.astro {
+    border-color: color-mix(in srgb, var(--astro) 50%, transparent);
+    color: var(--astro);
+  }
+
+  /* Anh hien nguyen khung, KHONG cat xen.
+     Cat theo khung 16:9 se cat mat dau tuong o cac ban anh doc, ma pho tuong
+     moi la chu the cua trang. Dung kieu trung bay bao tang: anh dat giua mot
+     nen phang, gioi han chieu cao, giu nguyen ty le goc. */
+  .hero-fig {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 20px;
+  }
+  .hero-fig :global(img) {
+    width: auto;
+    max-width: 100%;
+    max-height: 560px;
+    margin-inline: auto;
+    border-radius: 2px;
+  }
+  .hero-fig figcaption {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-subtle);
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-tertiary);
+    max-width: 78ch;
+  }
+  @media (max-width: 640px) {
+    .hero-fig {
+      padding: 12px;
+    }
+    .hero-fig :global(img) {
+      max-height: 380px;
+    }
+  }
+
+  .specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    margin-block: 48px;
+  }
+  /* 10 trong 18 linh dia chua co anh xac thuc. Khi khong co khoi anh chen giua,
+     padding duoi cua .head va margin tren cua .specs cong don thanh khoang
+     trong gan 90px. Chon lop lien ke de khep lai. */
+  .head + .specs {
+    margin-top: 4px;
+    background: var(--border-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .spec {
+    background: var(--bg-surface);
+    padding: 20px 22px;
+  }
+  .spec dt {
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 8px;
+  }
+  .spec dd {
+    font-family: var(--font-prose);
+    font-size: 15.5px;
+    color: var(--text-primary);
+    line-height: 1.45;
+  }
+  .spec dd.num {
+    font-variant-numeric: tabular-nums;
+  }
+  @media (max-width: 880px) {
+    .specs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 460px) {
+    .specs {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .body-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 72px;
+    padding-bottom: 72px;
+    align-items: start;
+  }
+  @media (max-width: 940px) {
+    .body-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+  }
+  .prose {
+    max-width: 68ch;
+  }
+  .prose section {
+    margin-bottom: 44px;
+  }
+  .prose h2 {
+    font-family: var(--font-display);
+    font-size: 1.62rem;
+    font-weight: 600;
+    color: var(--text-strong);
+    line-height: 1.3;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .prose p {
+    font-family: var(--font-prose);
+    font-size: 1.12rem;
+    line-height: 1.82;
+    color: var(--text-primary);
+  }
+  .prose p.lead {
+    font-size: 1.2rem;
+    color: var(--text-strong);
+  }
+
+  .rail {
+    position: sticky;
+    top: calc(var(--nav-height) + 24px);
+    display: grid;
+    gap: 24px;
+  }
+  @media (max-width: 940px) {
+    .rail {
+      position: static;
+    }
+  }
+  .rail-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 22px;
+  }
+  .rail-card h2 {
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 16px;
+  }
+  .role {
+    padding-block: 12px;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .role:first-of-type {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .role-v {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .role-star {
+    font-family: var(--font-prose);
+    font-size: 15px;
+    color: var(--text-primary);
+    margin-bottom: 3px;
+  }
+  .role-star code {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    color: var(--astro);
+    margin-left: 5px;
+  }
+  .role-desc {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--text-tertiary);
+  }
+
+  .rail-actions {
+    display: grid;
+    gap: 10px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 22px;
+    border-radius: var(--radius);
+    font-size: 14.5px;
+    font-weight: 600;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    transition: transform 0.16s, background 0.2s, border-color 0.2s, color 0.2s;
+  }
+  .btn:active {
+    transform: translateY(1px);
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--accent-ink);
+  }
+  .btn-primary:hover {
+    background: var(--accent-hover);
+  }
+  .btn-ghost {
+    border-color: var(--border-strong);
+    color: var(--text-primary);
+    background: var(--bg-surface);
+  }
+  .btn-ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent-hover);
+  }
+
+  .sources {
+    padding-block: 56px;
+    border-top: 1px solid var(--border-strong);
+    background: var(--bg-surface);
+  }
+  .sources h2 {
+    font-family: var(--font-display);
+    font-size: 1.62rem;
+    font-weight: 600;
+    color: var(--text-strong);
+    margin-bottom: 10px;
+  }
+  .sources-lead {
+    font-family: var(--font-prose);
+    font-size: 15px;
+    color: var(--text-secondary);
+    max-width: 60ch;
+    margin-bottom: 32px;
+    line-height: 1.72;
+  }
+
+  .pager {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding-block: 48px 72px;
+  }
+  @media (max-width: 640px) {
+    .pager {
+      grid-template-columns: 1fr;
+    }
+  }
+  .pg {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    transition: border-color 0.2s;
+  }
+  .pg:hover {
+    border-color: var(--accent);
+  }
+  .pg span {
+    display: block;
+    font-size: 11.5px;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 7px;
+  }
+  .pg b {
+    font-family: var(--font-prose);
+    font-size: 16.5px;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+  .pg:hover b {
+    color: var(--accent-hover);
+  }
+  .pg.next {
+    text-align: right;
+  }
+</style>

@@ -2,15 +2,13 @@
  * Test Suite: Xác thực tính toàn vẹn của Dữ liệu Tượng Đức Mẹ & Cấu trúc Chòm Sao Bắc Đẩu
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'node:fs';
+import path from 'node:path';
 
-// Mock window object for node environment
-global.window = {};
-require('../src/data/statues.js');
+import { MARIAN_STATUES_DATA, CONSTELLATION_VERSIONS } from '../src/data/statues.js';
 
-const statues = window.MARIAN_STATUES_DATA;
-const versions = window.CONSTELLATION_VERSIONS;
+const statues = MARIAN_STATUES_DATA;
+const versions = CONSTELLATION_VERSIONS;
 
 let passed = 0;
 let failed = 0;
@@ -42,7 +40,7 @@ statues.forEach(s => {
 
   // Kiểm tra file ảnh thực tế tồn tại nếu có
   if (s.realImage) {
-    const imgPath = path.join(__dirname, '..', s.realImage);
+    const imgPath = path.join(import.meta.dirname, '..', 'src', s.realImage);
     assert(fs.existsSync(imgPath), `File ảnh thực tế ${s.realImage} của tượng "${s.name}" phải tồn tại`);
   }
 });
@@ -82,6 +80,24 @@ assert(versions.v1.nodes.length === 7, `V1 phải gồm đúng 7 ngôi sao Bắc
 assert(versions.v2.nodes.length === 7, `V2 phải gồm đúng 7 ngôi sao Bắc Đẩu (hiện có: ${versions.v2.nodes.length})`);
 assert(versions.v1.pointerStars.length === 2, `V1 phải có 2 sao dẫn đường (The Pointers)`);
 assert(versions.v1.pointerStars[0] === 'tapao' && versions.v1.pointerStars[1] === 'thacmo', `The Pointers phải là Tà Pao (Merak) và Thác Mơ (Dubhe)`);
+
+console.log('\n--- 5. KIỂM TRA NGUỒN TÀI LIỆU THAM KHẢO (SOURCES & DEEP LINKS) ---');
+statues.forEach(s => {
+  assert(Array.isArray(s.sources) && s.sources.length >= 2, `Tượng "${s.name}" (${s.id}) phải có ít nhất 2 nguồn tham khảo (hiện có: ${s.sources ? s.sources.length : 0})`);
+  (s.sources || []).forEach(src => {
+    assert(typeof src.title === 'string' && src.title.length > 5, `Tiêu đề nguồn "${src.title}" của tượng "${s.id}" phải hợp lệ`);
+    assert(typeof src.url === 'string' && src.url.startsWith('https://'), `URL nguồn "${src.url}" của tượng "${s.id}" phải là https hợp lệ`);
+    
+    // Đảm bảo link không phải là root domain trần
+    try {
+      const parsed = new URL(src.url);
+      const isBareRoot = (parsed.pathname === '/' || parsed.pathname === '') && !parsed.search;
+      assert(!isBareRoot, `URL nguồn "${src.url}" không được là root domain trần mà phải là bài viết hoặc query cụ thể`);
+    } catch (e) {
+      assert(false, `URL "${src.url}" bị lỗi cú pháp: ${e.message}`);
+    }
+  });
+});
 
 console.log(`\n========================================`);
 console.log(`TỔNG KẾT: ${passed} PASS, ${failed} FAIL`);

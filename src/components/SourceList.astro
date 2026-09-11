@@ -1,0 +1,77 @@
+---
+/**
+ * Danh muc nguon dan.
+ *
+ * Trinh bay dang luoi the, khong phai bang co gach ngang tung dong: moi ban
+ * ghi co it nhat hai nguon, va bang gach ngang lam noi dung kho doc.
+ *
+ * Lien ket ra ngoai deu mang rel="nofollow noopener": day la nguon tham khao,
+ * khong phai bao chung ve chat luong, va trang dich khong duoc truy nguoc window.
+ */
+const { sources } = Astro.props;
+
+/** Hien ten mien de nguoi doc biet truoc minh sap roi khoi trang. */
+function hostOf(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
+}
+---
+
+<div class="src-grid">
+  {
+    sources.map((source) => (
+      <a class="src" href={source.url} rel="nofollow noopener" target="_blank">
+        <span class="src-title">{source.title}</span>
+        <span class="src-host">
+          {hostOf(source.url)}
+          <span class="sr-only"> (mở trong tab mới)</span>
+        </span>
+      </a>
+    ))
+  }
+</div>
+
+<style>
+  .src-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .src {
+    display: block;
+    background: var(--bg-page);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 20px;
+    transition: border-color 0.2s, transform 0.16s;
+  }
+  .src:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .src-title {
+    display: block;
+    font-family: var(--font-prose);
+    font-size: 15.5px;
+    line-height: 1.5;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    transition: color 0.18s;
+  }
+  .src:hover .src-title {
+    color: var(--accent-hover);
+  }
+  .src-host {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    word-break: break-all;
+  }
+  @media (max-width: 880px) {
+    .src-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,60 @@
+name: Báo cáo lỗi (Bug Report)
+description: Báo cáo một lỗi kỹ thuật hoặc sự cố hiển thị trên website
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Cảm ơn bạn đã dành thời gian báo cáo lỗi để cải thiện dự án! Xin vui lòng điền thông tin chi tiết dưới đây.
+  - type: textarea
+    id: description
+    attributes:
+      label: Mô tả lỗi
+      description: Mô tả rõ ràng và súc tích về sự cố bạn gặp phải.
+      placeholder: Ví dụ: Bản đồ không tải được lớp CARTO Voyager trên trình duyệt Safari...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Các bước tái hiện lỗi
+      description: Cung cấp các bước từng bước để tái hiện lại sự cố.
+      placeholder: |
+        1. Truy cập vào '/ban-do/'
+        2. Nhấn vào bộ lọc 'Tây Nguyên'
+        3. Thu phóng bản đồ tới tượng Măng Đen...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Kết quả mong muốn
+      description: Hành vi đúng mà bạn kỳ vọng sẽ xảy ra là gì?
+      placeholder: Bản đồ phải hiển thị điểm đánh dấu Măng Đen và mở bảng thông tin.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Ảnh chụp màn hình hoặc Video (nếu có)
+      description: Kéo thả hình ảnh hoặc video minh họa vào đây.
+    validations:
+      required: false
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Môi trường gặp lỗi
+      options:
+        - Chrome / Edge (Desktop)
+        - Firefox (Desktop)
+        - Safari (macOS / iOS)
+        - Chrome / Android
+        - Khác (ghi rõ bên dưới)
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Thông tin bổ sung khác
+      placeholder: Bất kỳ ngữ cảnh hoặc thông tin nhật ký (console log) liên quan nào khác.
