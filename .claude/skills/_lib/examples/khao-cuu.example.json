@@ -1,0 +1,132 @@
+{
+  "schema": "ducme.khao-cuu/v1",
+  "id": "vidu",
+  "name": "Đức Mẹ Ví Dụ",
+  "kind": "capnhat",
+  "researcher": "Tên người khảo cứu hoặc phiên làm việc",
+  "date": "2026-09-11",
+  "scope": "Bổ sung historicalFact và architect, thay 2 nguồn tìm kiếm bằng bài viết trực tiếp, tìm ảnh thực địa",
+
+  "baseline": {
+    "hasPhoto": false,
+    "directSources": 0,
+    "searchSources": 2,
+    "totalWords": 100,
+    "missing": ["ảnh thực địa", "nguồn trực tiếp", "nội dung mỏng (100/300 từ)"]
+  },
+
+  "fields": [
+    {
+      "field": "historicalFact",
+      "action": "sua",
+      "value": "ĐÂY LÀ FILE VÍ DỤ, KHÔNG PHẢI TƯ LIỆU THẬT. Đoạn văn lịch sử đề xuất viết ở đây, mỗi ý đều truy được về một nguồn trong danh mục bên dưới.",
+      "note": "Giữ nguyên câu mở đầu đang có, chỉ bổ sung phần sau năm 1960",
+      "claims": [
+        { "text": "Linh đài được khởi lập năm 1960", "sources": ["S1"], "confidence": "cao" },
+        { "text": "Tượng cao khoảng 3m, đúc bằng xi măng trắng", "sources": ["S1", "S2"], "confidence": "trungbinh" }
+      ]
+    },
+    {
+      "field": "architect",
+      "action": "them",
+      "value": "Mô tả kiến trúc, vật liệu, kích thước và người thiết kế.",
+      "claims": [
+        { "text": "Phần đế linh đài xây lại năm 1998", "sources": ["S2"], "confidence": "cao" }
+      ]
+    },
+    {
+      "field": "sources",
+      "action": "sua",
+      "value": [
+        { "title": "Tiêu đề bài viết nguồn thứ nhất", "url": "https://example.com/bai-viet-mot" },
+        { "title": "Tiêu đề bài viết nguồn thứ hai", "url": "https://example.com/bai-viet-hai" }
+      ],
+      "claims": [
+        { "text": "Thay 2 link tìm kiếm Google bằng 2 bài viết trực tiếp", "sources": ["S1", "S2"], "confidence": "cao" }
+      ]
+    }
+  ],
+
+  "sources": [
+    {
+      "code": "S1",
+      "title": "Tiêu đề bài viết nguồn thứ nhất",
+      "url": "https://example.com/bai-viet-mot",
+      "tier": "B",
+      "accessed": "2026-09-11",
+      "supports": "Năm khởi lập, kích thước tượng",
+      "inRecord": true
+    },
+    {
+      "code": "S2",
+      "title": "Tiêu đề bài viết nguồn thứ hai",
+      "url": "https://example.com/bai-viet-hai",
+      "tier": "B",
+      "accessed": "2026-09-11",
+      "supports": "Đợt trùng tu 1998, vật liệu",
+      "inRecord": true
+    },
+    {
+      "code": "S3",
+      "title": "Bài blog hành hương dùng làm manh mối tìm nguồn",
+      "url": "https://example.com/blog-hanh-huong",
+      "tier": "C",
+      "accessed": "2026-09-11",
+      "supports": "Chỉ dùng để lần ra S1; không đưa vào dữ liệu",
+      "inRecord": false
+    }
+  ],
+
+  "images": [],
+  "imageSearchNote": "Đã tìm trên Wikimedia Commons, kho ảnh giáo phận và báo chí Công giáo, chưa có ảnh nào giấy phép rõ ràng",
+
+  "conflicts": [
+    {
+      "issue": "Năm khánh thành",
+      "a": { "claim": "1960", "source": "S1" },
+      "b": { "claim": "1961", "source": "S2" },
+      "resolution": "Ghi 1960 theo nguồn sớm hơn, nêu cả hai mốc trong historicalFact"
+    }
+  ],
+
+  "unknowns": [
+    "Tên người tạc tượng — không nguồn nào ghi",
+    "Độ cao chính xác của bệ tượng"
+  ],
+
+  "selfAssessment": {
+    "confidence": "trungbinh",
+    "biggestRisk": "Cả hai nguồn đều là báo điện tử, chưa tiếp cận được kỷ yếu giáo phận",
+    "reviewFocus": "Mốc niên đại 1960 và con số chiều cao tượng"
+  },
+
+  "validation": {
+    "command": "node .claude/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/vidu/khao-cuu.json",
+    "output": "=> DAT toan bo rang buoc bat buoc."
+  },
+
+  "record": {
+    "id": "vidu",
+    "name": "Đức Mẹ Ví Dụ",
+    "title": "Linh Đài Đức Mẹ Ví Dụ",
+    "year": 1960,
+    "lat": 10.1234,
+    "lng": 106.5678,
+    "elevation": "120m",
+    "location": "Xã A, huyện B, tỉnh C",
+    "region": "Đông Nam Bộ",
+    "diocese": "Giáo phận Ví Dụ",
+    "diemStatue5": false,
+    "constellationRole": { "v1": null, "v2": null, "v3": null, "v4": null },
+    "historicalFact": "ĐÂY LÀ FILE VÍ DỤ, KHÔNG PHẢI TƯ LIỆU THẬT. Đoạn văn lịch sử đề xuất viết ở đây, mỗi ý đều truy được về một nguồn trong danh mục bên dưới.",
+    "oralTradition": "Phần truyền tụng dân gian viết ở đây, tách hẳn khỏi sự kiện đã kiểm chứng.",
+    "architect": "Mô tả kiến trúc, vật liệu, kích thước và người thiết kế.",
+    "significance": "Giá trị tâm linh và vai trò với cộng đồng địa phương.",
+    "realImage": null,
+    "realImageCaption": null,
+    "sources": [
+      { "title": "Tiêu đề bài viết nguồn thứ nhất", "url": "https://example.com/bai-viet-mot" },
+      { "title": "Tiêu đề bài viết nguồn thứ hai", "url": "https://example.com/bai-viet-hai" }
+    ]
+  }
+}

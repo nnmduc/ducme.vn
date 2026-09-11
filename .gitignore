@@ -41,5 +41,8 @@ Thumbs.db
 *.sw?
 
 # Local Agent & Planning artifacts
-.claude/
+# Bo skill noi dung (.claude/skills/) la tai san chung cua du an nen van duoc theo doi;
+# phan con lai cua .claude/ la cau hinh va ghi chu cuc bo cua tung nguoi.
+.claude/*
+!.claude/skills/
 plans/
