@@ -19,8 +19,8 @@ feat(data): them linh dia Duc Me <ten> vao bo du lieu
 
 Triển khai kết quả khảo cứu linh địa **<tên>** (`<id>`) sau khi kiểm chứng độc lập.
 
-- Hồ sơ khảo cứu: `docs/khao-cuu/<id>/bao-cao-khao-cuu.md`
-- Hồ sơ kiểm chứng: `docs/khao-cuu/<id>/bao-cao-kiem-chung.md` — kết luận **<ÁP DỤNG / ÁP DỤNG CÓ ĐIỀU KIỆN>** (nn/35)
+- Hồ sơ khảo cứu: `docs/khao-cuu/<id>/khao-cuu.json` ([báo cáo](../docs/khao-cuu/<id>/bao-cao-khao-cuu.md))
+- Hồ sơ kiểm chứng: `docs/khao-cuu/<id>/kiem-chung.json` ([báo cáo](../docs/khao-cuu/<id>/bao-cao-kiem-chung.md)) — kết luận **<ÁP DỤNG / ÁP DỤNG CÓ ĐIỀU KIỆN>** (nn/35)
 
 Thay đổi cụ thể:
 

@@ -51,7 +51,7 @@ Một linh địa mới **mặc định không tham gia chòm sao nào** (`v1`�
 lịch sử riêng. Muốn đưa vào `v4` thì phải sửa cả `CONSTELLATION_VERSIONS.v4.nodes` và `segments` — chỉ
 làm khi báo cáo kiểm chứng duyệt rõ ràng.
 
-## Mẫu bản ghi đề xuất (`de-xuat-du-lieu.json`)
+## Mẫu bản ghi đề xuất (khoá `record` trong `khao-cuu.json`)
 
 ```json
 {

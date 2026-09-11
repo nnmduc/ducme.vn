@@ -13,6 +13,16 @@ thể sai. Nhiệm vụ là tìm ra chỗ sai trước khi nội dung lên websi
 **Không sửa nội dung báo cáo, không sửa `src/data/statues.js`, không tạo PR.** Nếu báo cáo sai, kết
 luận là trả lại cho khảo cứu, không phải tự tay vá.
 
+Đầu vào là hồ sơ JSON của khảo cứu, đầu ra cũng là hồ sơ JSON — `marian-publish` đọc bằng máy để biết
+chính xác được phép đưa lên những gì:
+
+```
+docs/khao-cuu/<id>/khao-cuu.json            <- đọc (marian-research viết)
+docs/khao-cuu/<id>/kiem-chung.json          <- viết file này (bản gốc)
+docs/khao-cuu/<id>/bao-cao-kiem-chung.md    <- sinh ra bằng format-audit.mjs
+docs/khao-cuu/<id>/bao-cao-kiem-chung.html  <- sinh ra khi chạy với --html
+```
+
 ## Quy tắc độc lập
 
 1. **Không tin phần tóm tắt của báo cáo.** Mở từng URL nguồn và đọc. Một nguồn còn sống nhưng không
@@ -28,15 +38,21 @@ luận là trả lại cho khảo cứu, không phải tự tay vá.
 
 ### Bước 1 — Đọc đầu vào
 
-Đọc `docs/khao-cuu/<id>/bao-cao-khao-cuu.md` và `de-xuat-du-lieu.json`. Nếu không có báo cáo khảo cứu,
-dừng lại: không audit một thay đổi nội dung không có hồ sơ. Yêu cầu chạy `marian-research` trước.
+Đọc `docs/khao-cuu/<id>/khao-cuu.json` — đây là bản gốc, đọc thẳng JSON chứ không đọc bản markdown đã
+render. Không có hồ sơ khảo cứu thì dừng lại: không audit một thay đổi nội dung không có hồ sơ.
+
+```bash
+node .claude/skills/marian-research/scripts/format-report.mjs docs/khao-cuu/<id>/khao-cuu.json --check
+```
+
+Hồ sơ không hợp lệ thì trả lại ngay, chưa cần đọc nội dung.
 
 Đọc `references/tieu-chi-kiem-chung.md` — 7 trục chấm điểm và các tiêu chí chặn.
 
 ### Bước 2 — Kiểm cấu trúc dữ liệu
 
 ```bash
-node .claude/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/<id>/de-xuat-du-lieu.json
+node .claude/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/<id>/khao-cuu.json
 ```
 
 Còn lỗi chặn nghĩa là `npm test` sẽ đỏ. Đây là điều kiện cần, chưa phải điều kiện đủ.
@@ -44,7 +60,7 @@ Còn lỗi chặn nghĩa là `npm test` sẽ đỏ. Đây là điều kiện c�
 ### Bước 3 — Kiểm nguồn dẫn
 
 ```bash
-node .claude/skills/marian-audit/scripts/check-sources.mjs --file docs/khao-cuu/<id>/de-xuat-du-lieu.json
+node .claude/skills/marian-audit/scripts/check-sources.mjs --file docs/khao-cuu/<id>/khao-cuu.json
 ```
 
 Script kiểm: URL còn sống, chuyển hướng đi đâu, trang có thật sự nhắc tới linh địa không, có phải chỉ
@@ -82,6 +98,9 @@ Script bắt dấu hiệu metadata AI, C2PA, kích thước, định dạng. Ph�
 
 ### Bước 6 — Chấm điểm và kết luận
 
+Ghi kết quả vào `docs/khao-cuu/<id>/kiem-chung.json` theo lược đồ `ducme.kiem-chung/v1` — đọc
+`references/ho-so-kiem-chung.md`, sao chép khung từ `.claude/skills/_lib/examples/kiem-chung.example.json`.
+
 Chấm 7 trục theo `references/tieu-chi-kiem-chung.md`, rồi chọn đúng một trong bốn kết luận:
 
 | Kết luận | Nghĩa là |
@@ -91,14 +110,24 @@ Chấm 7 trục theo `references/tieu-chi-kiem-chung.md`, rồi chọn đúng m�
 | **TRẢ LẠI KHẢO CỨU** | Thiếu bằng chứng, sai sót còn sửa được. Ghi rõ cần bổ sung gì. |
 | **TỪ CHỐI** | Sai về bản chất, nguồn bịa, ảnh AI, hoặc đối tượng không thuộc phạm vi dự án. |
 
-Kết luận **ÁP DỤNG có điều kiện phải liệt kê chính xác từng điểm phải sửa** — `marian-publish` sẽ
-thực hiện đúng danh sách đó, không diễn giải thêm.
+Kết luận **ÁP DỤNG CÓ ĐIỀU KIỆN phải liệt kê chính xác từng điểm phải sửa** trong `conditions[]` —
+`marian-publish` thực hiện đúng danh sách đó, không diễn giải thêm.
 
-Viết kết quả theo `references/mau-bao-cao-kiem-chung.md`, lưu tại:
+Phần `approved` là hợp đồng máy đọc: trường nào không có tên trong `approved.fields` thì
+`marian-publish` không được đụng tới, kể cả khi hồ sơ khảo cứu có đề xuất. Duyệt một trường mà khảo
+cứu không đề xuất, hoặc dẫn mã nguồn không tồn tại, đều bị lệnh format bắt lỗi ngay.
 
+Sinh báo cáo:
+
+```bash
+# kiểm hồ sơ, có đối chiếu chéo với khao-cuu.json cùng thư mục
+node .claude/skills/marian-audit/scripts/format-audit.mjs docs/khao-cuu/<id>/kiem-chung.json --check
+
+# sinh bao-cao-kiem-chung.md và bản HTML
+node .claude/skills/marian-audit/scripts/format-audit.mjs docs/khao-cuu/<id>/kiem-chung.json --html
 ```
-docs/khao-cuu/<id>/bao-cao-kiem-chung.md
-```
+
+**Không sửa tay vào `bao-cao-kiem-chung.md`.** Sửa JSON rồi chạy lại lệnh.
 
 ### Bước 7 — Bàn giao
 

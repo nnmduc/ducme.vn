@@ -10,16 +10,31 @@ Giai đoạn 3 trong quy trình ba bước: **khảo cứu → kiểm chứng �
 Vai trò ở đây là **thi công đúng bản vẽ đã duyệt**. Không thêm nội dung ngoài báo cáo, không "tiện tay
 sửa cho hay hơn", không tự quyết những gì audit chưa duyệt.
 
-## Điều kiện tiên quyết — kiểm trước khi làm bất cứ thứ gì
+## Bước 0 — Phiếu thi công (bắt buộc, làm trước mọi thứ)
 
-1. Tồn tại `docs/khao-cuu/<id>/bao-cao-khao-cuu.md`.
-2. Tồn tại `docs/khao-cuu/<id>/bao-cao-kiem-chung.md` với kết luận **ÁP DỤNG** hoặc **ÁP DỤNG CÓ ĐIỀU KIỆN**.
+```bash
+node .claude/skills/marian-publish/scripts/read-handoff.mjs <id> --html
+```
 
-Thiếu một trong hai, hoặc kết luận là TRẢ LẠI / TỪ CHỐI: **dừng lại và báo người dùng**. Không tự khảo
-cứu bù, không tự audit rồi tự duyệt chính mình. Ngoại lệ duy nhất là người dùng nói rõ họ chấp nhận bỏ
-qua quy trình — khi đó nói rõ rủi ro trong một câu rồi làm theo yêu cầu của họ.
+Lệnh đọc `docs/khao-cuu/<id>/khao-cuu.json` + `kiem-chung.json`, kiểm cả hai đúng lược đồ, đối chiếu
+chéo, rồi sinh **phiếu thi công**: đúng những trường được duyệt, nguồn được duyệt, ảnh được duyệt,
+điều kiện bắt buộc, và danh sách những gì **không** được đưa lên.
 
-Nếu kết luận là ÁP DỤNG CÓ ĐIỀU KIỆN: chép danh sách điều kiện ra, làm đúng từng mục, không thêm không bớt.
+Mã thoát của lệnh là cổng chặn:
+
+| Kết quả | Nghĩa là |
+|---|---|
+| Thoát 0 | Được phép triển khai, theo đúng phạm vi trong phiếu |
+| Thoát 1 — thiếu hồ sơ | Chưa có khảo cứu hoặc chưa có kiểm chứng → **dừng**, báo người dùng |
+| Thoát 1 — hồ sơ sai lược đồ | Trả lại cho skill tương ứng sửa → **dừng** |
+| Thoát 1 — kết luận TRẢ LẠI / TỪ CHỐI | **Dừng**, báo người dùng |
+
+Không tự khảo cứu bù, không tự audit rồi tự duyệt chính mình. Ngoại lệ duy nhất là người dùng nói rõ
+họ chấp nhận bỏ qua quy trình — khi đó nói rõ rủi ro trong một câu rồi làm theo yêu cầu của họ.
+
+Thêm `--json` nếu cần phiếu thi công dạng dữ liệu; `--html` ghi kèm bản HTML đọc được cho người review.
+
+Từ đây trở đi, **phiếu thi công là phạm vi công việc**. Trường không có trong phiếu thì không đụng tới.
 
 ## Quy trình
 
@@ -96,8 +111,8 @@ Trien khai theo docs/khao-cuu/<id>/bao-cao-khao-cuu.md,
 ket luan kiem chung: AP DUNG (docs/khao-cuu/<id>/bao-cao-kiem-chung.md).
 ```
 
-Commit cả báo cáo khảo cứu và báo cáo kiểm chứng — hồ sơ nguồn gốc của thay đổi là một phần của giá
-trị dự án, không phải file nháp.
+Commit cả hai hồ sơ JSON và các báo cáo sinh ra từ chúng (`docs/khao-cuu/<id>/`) — hồ sơ nguồn gốc
+của thay đổi là một phần giá trị của dự án, không phải file nháp.
 
 ### Bước 7 — Push và Pull Request
 

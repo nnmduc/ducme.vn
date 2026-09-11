@@ -9,11 +9,18 @@ Quy trình và công cụ nằm ở `.claude/skills/` (xem `.claude/skills/READM
 
 ```
 docs/khao-cuu/<id>/
-├── bao-cao-khao-cuu.md     # Thu thập tư liệu, ảnh, nguồn; nêu rõ điểm chưa chắc chắn
-├── de-xuat-du-lieu.json    # Bản ghi đề xuất cho src/data/statues.js
-├── bao-cao-kiem-chung.md   # Kiểm chứng độc lập, chấm điểm, kết luận
-└── anh/                    # Ảnh ứng viên kèm ghi chú tác giả và giấy phép (nếu có)
+├── khao-cuu.json             # HỒ SƠ GỐC: tư liệu, nguồn, ảnh, bản ghi đề xuất, điểm chưa chắc chắn
+├── bao-cao-khao-cuu.md       # Báo cáo khảo cứu, sinh tự động từ khao-cuu.json
+├── bao-cao-khao-cuu.html     # Bản HTML để đọc/in (tuỳ chọn)
+├── kiem-chung.json           # HỒ SƠ GỐC: kết quả kiểm chứng, chấm điểm, kết luận, phạm vi được duyệt
+├── bao-cao-kiem-chung.md     # Báo cáo kiểm chứng, sinh tự động từ kiem-chung.json
+├── bao-cao-kiem-chung.html   # Bản HTML để đọc/in (tuỳ chọn)
+├── phieu-thi-cong.md         # Gộp hai hồ sơ trên thành phạm vi thi công (tuỳ chọn)
+└── anh/                      # Ảnh ứng viên kèm ghi chú tác giả và giấy phép (nếu có)
 ```
+
+Hai file `.json` là bản gốc; mọi file báo cáo đều sinh ra từ chúng. **Đừng sửa tay vào file
+markdown** — sửa JSON rồi chạy lại lệnh format, nếu không hai bản sẽ lệch nhau.
 
 `<id>` trùng với trường `id` trong `src/data/statues.js` (viết thường, không dấu, ví dụ `nuicui`).
 

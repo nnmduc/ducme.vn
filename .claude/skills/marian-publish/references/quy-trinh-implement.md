@@ -6,11 +6,20 @@
 |---|---|
 | `src/data/statues.js` | Mọi thay đổi dữ liệu linh địa. Nguồn sự thật duy nhất |
 | `src/assets/real_photos/<id>.jpg` | Khi audit duyệt ảnh |
-| `docs/khao-cuu/<id>/*` | Luôn commit kèm — hồ sơ nguồn gốc của thay đổi |
+| `docs/khao-cuu/<id>/*` | Luôn commit kèm cả hai hồ sơ JSON và báo cáo sinh ra từ chúng |
 | `docs/marian-sites-missing-info.md` | Khi linh địa vừa được bổ sung ảnh/nguồn/nội dung |
 | `README.md`, `docs/*.md`, `.github/pull_request_template.md` | Khi tổng số assertion của `npm test` đổi |
 
 **Không cần sửa**: trang chi tiết, trang chủ, sitemap, JSON-LD, bản đồ — tất cả sinh động từ dữ liệu.
+
+## 1b. Phiếu thi công là phạm vi công việc
+
+`read-handoff.mjs` đã gộp `khao-cuu.json` + `kiem-chung.json` thành danh sách chính xác những trường,
+nguồn và ảnh được duyệt. Khi sửa `src/data/statues.js`, đối chiếu từng mục với phiếu:
+
+- Trường không có trong mục "Trường được phép sửa" → không đụng tới, kể cả khi khảo cứu có đề xuất.
+- Nguồn không có trong mục "Nguồn đưa vào dữ liệu" → không thêm vào `sources`.
+- Mục "KHÔNG được đưa lên" là danh sách đã bị audit loại — đừng đưa lại vào vì thấy hợp lý.
 
 ## 2. Quy ước định dạng của `src/data/statues.js`
 

@@ -7,11 +7,20 @@ description: Khảo cứu, tìm kiếm và thu thập tư liệu, hình ảnh v�
 
 Giai đoạn 1 trong quy trình ba bước của dự án: **khảo cứu → kiểm chứng → triển khai**.
 
-Nhiệm vụ ở đây là **thu thập và trình bày bằng chứng**, không phải quyết định. Kết quả là một báo
-cáo khảo cứu đủ chi tiết để người khác kiểm chứng lại được, cộng một bản ghi dữ liệu đề xuất.
+Nhiệm vụ ở đây là **thu thập và trình bày bằng chứng**, không phải quyết định.
+
+Đầu ra là **một hồ sơ JSON** (`khao-cuu.json`) — bản gốc duy nhất, máy đọc được, để `marian-audit` và
+`marian-publish` dùng tiếp mà không phải đoán ý từ văn xuôi. Báo cáo markdown và HTML cho người đọc
+đều sinh ra từ hồ sơ đó bằng một lệnh format, không viết tay song song.
 
 **Tuyệt đối không sửa `src/data/statues.js`, không thêm ảnh vào `src/assets/`, không tạo PR.** Đó là
 việc của `marian-publish` sau khi `marian-audit` kết luận cho phép.
+
+```
+docs/khao-cuu/<id>/khao-cuu.json          <- viết file này (bản gốc)
+docs/khao-cuu/<id>/bao-cao-khao-cuu.md    <- sinh ra bằng format-report.mjs
+docs/khao-cuu/<id>/bao-cao-khao-cuu.html  <- sinh ra khi chạy với --html
+```
 
 ## Nguyên tắc không được vi phạm
 
@@ -82,36 +91,43 @@ URL trang mô tả file (không phải URL ảnh thô) · tên tác giả · gi�
 
 Không hotlink, không tải ảnh từ báo chí hay Facebook, không cắt ảnh từ video.
 
-### Bước 5 — Viết báo cáo
+### Bước 5 — Viết hồ sơ JSON
 
-Dùng `references/mau-bao-cao.md` làm khung. Lưu tại:
+Viết `docs/khao-cuu/<id>/khao-cuu.json` theo lược đồ `ducme.khao-cuu/v1`. Đọc
+`references/ho-so-khao-cuu.md` để biết từng khoá, và sao chép khung từ
+`.claude/skills/_lib/examples/khao-cuu.example.json`.
 
-```
-docs/khao-cuu/<id>/bao-cao-khao-cuu.md
-docs/khao-cuu/<id>/de-xuat-du-lieu.json
-```
+Bốn phần bắt buộc làm cho tử tế, vì người kiểm chứng làm việc trực tiếp trên chúng:
 
-Báo cáo phải có: hiện trạng, phát hiện mới theo từng trường dữ liệu, danh mục nguồn đánh số, phần
-ảnh, phần mâu thuẫn/điểm chưa chắc chắn, và đánh giá độ tin cậy của chính người khảo cứu.
+- `fields[].claims[]` — mỗi khẳng định gắn với mã nguồn cụ thể. Đây là thứ audit đối chiếu từng dòng.
+- `sources[]` — có `code`, `tier`, `accessed`, `supports`, `inRecord`. Nguồn cấp C không được `inRecord`.
+- `unknowns[]` — những gì không tìm được nguồn. Để rỗng sẽ bị cảnh báo: một hồ sơ không còn điểm nào
+  chưa chắc chắn thường là chưa đào đủ sâu, chứ không phải hoàn hảo.
+- `record` — bản ghi đầy đủ đúng lược đồ `src/data/statues.js` (xem `references/luoc-do-du-lieu.md`).
 
-Phần "điểm chưa chắc chắn" là phần quan trọng nhất với người audit. Một báo cáo không có điểm nào
-chưa chắc chắn thường là báo cáo chưa đào đủ sâu, chứ không phải báo cáo hoàn hảo.
-
-### Bước 6 — Tự kiểm trước khi bàn giao
+### Bước 6 — Tự kiểm và sinh báo cáo
 
 ```bash
-node .claude/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/<id>/de-xuat-du-lieu.json
-# thêm --allow-existing-id nếu là bản cập nhật cho linh địa đã có
+# 1. bản ghi có vượt được ràng buộc mà npm test sẽ kiểm không
+node .claude/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/<id>/khao-cuu.json
+#    thêm --allow-existing-id nếu là bản cập nhật cho linh địa đã có
+
+# 2. hồ sơ có đúng lược đồ bàn giao không
+node .claude/skills/marian-research/scripts/format-report.mjs docs/khao-cuu/<id>/khao-cuu.json --check
+
+# 3. sinh báo cáo markdown (mặc định) và HTML
+node .claude/skills/marian-research/scripts/format-report.mjs docs/khao-cuu/<id>/khao-cuu.json --html
 ```
 
-Sửa hết lỗi chặn. Cảnh báo nào không xử lý được thì giải thích lý do trong báo cáo.
+Dán kết quả bước 1 vào khoá `validation` của hồ sơ. Sửa hết lỗi chặn; cảnh báo nào không xử lý được
+thì giải thích trong `selfAssessment.biggestRisk`.
 
-Xem `references/luoc-do-du-lieu.md` để biết ý nghĩa và ràng buộc của từng trường.
+**Không sửa tay vào `bao-cao-khao-cuu.md`.** File đó sinh ra từ JSON; sửa JSON rồi chạy lại lệnh.
 
 ### Bước 7 — Bàn giao
 
-Báo cho người dùng: đã khảo cứu xong linh địa nào, tìm được gì, còn vướng gì, file báo cáo nằm ở đâu,
-và bước tiếp theo là chạy `marian-audit` để kiểm chứng độc lập.
+Báo cho người dùng: đã khảo cứu xong linh địa nào, tìm được gì, còn vướng gì, hồ sơ và báo cáo nằm ở
+đâu, và bước tiếp theo là chạy `marian-audit` để kiểm chứng độc lập.
 
 Không tự chạy tiếp sang audit trong cùng một lượt trừ khi người dùng yêu cầu rõ — người kiểm chứng
 cần đọc báo cáo với con mắt độc lập.

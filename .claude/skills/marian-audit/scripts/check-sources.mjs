@@ -8,7 +8,7 @@
  *
  * Cach dung:
  *   node .claude/skills/marian-audit/scripts/check-sources.mjs --id lavang
- *   node .claude/skills/marian-audit/scripts/check-sources.mjs --file docs/khao-cuu/nuicui/de-xuat-du-lieu.json
+ *   node .claude/skills/marian-audit/scripts/check-sources.mjs --file docs/khao-cuu/nuicui/khao-cuu.json
  *   node .claude/skills/marian-audit/scripts/check-sources.mjs https://... https://... --expect "Núi Cúi"
  *
  * Ma thoat: 0 = moi URL deu truy cap duoc, 1 = co URL chet hoac loi.
@@ -45,9 +45,15 @@ if (idArg) {
   expectText = expectText || s.name;
 } else if (fileArg) {
   const payload = JSON.parse(fs.readFileSync(path.resolve(fileArg), 'utf8'));
-  const records = Array.isArray(payload) ? payload : [payload];
-  sources = records.flatMap((r) => r.sources || []);
-  expectText = expectText || records[0]?.name;
+  if (payload?.schema === 'ducme.khao-cuu/v1') {
+    // Ho so khao cuu: kiem toan bo danh muc nguon, ke ca nguon khong dua vao du lieu.
+    sources = payload.sources || [];
+    expectText = expectText || payload.name;
+  } else {
+    const records = Array.isArray(payload) ? payload : [payload];
+    sources = records.flatMap((r) => r.sources || []);
+    expectText = expectText || records[0]?.name;
+  }
 } else {
   sources = args.filter((a) => a.startsWith('https://') || a.startsWith('http://')).map((url) => ({ title: '', url }));
 }
@@ -145,7 +151,7 @@ for (const src of sources) {
 
   if (blockedByPolicy) blocked++;
 
-  console.log(`${status.padEnd(14)} ${src.url}`);
+  console.log(`${status.padEnd(14)} ${src.code ? `[${src.code}] ` : ''}${src.url}`);
   if (src.title) console.log(`               nhan trong du lieu: ${src.title}`);
   if (title) console.log(`               tieu de that:       ${title}`);
   flags.forEach((f) => console.log(`               ! ${f}`));

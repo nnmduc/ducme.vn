@@ -6,8 +6,12 @@
  * cac quy chuan trong CONTRIBUTING.md muc 3. Muc dich la phat hien loi tu ban nhap
  * bao cao khao cuu, khong phai cho sua du lieu da nam trong repo.
  *
+ * Nhan duoc ca hai dang dau vao:
+ *   - ho so khao cuu day du (khao-cuu.json, schema ducme.khao-cuu/v1) -> tu lay phan "record"
+ *   - mot ban ghi tran, hoac mang ban ghi
+ *
  * Cach dung:
- *   node .claude/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/<id>/de-xuat-du-lieu.json
+ *   node .claude/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/<id>/khao-cuu.json
  *   node .claude/skills/marian-publish/scripts/validate-record.mjs <file> --allow-existing-id
  *
  * Ma thoat: 0 = dat (co the con canh bao), 1 = co loi chan.
@@ -29,7 +33,7 @@ const file = args.find((a) => !a.startsWith('--'));
 const allowExistingId = args.includes('--allow-existing-id');
 
 if (!file) {
-  console.error('Thieu duong dan file JSON. Vi du: ... validate-record.mjs docs/khao-cuu/nuicui/de-xuat-du-lieu.json');
+  console.error('Thieu duong dan file JSON. Vi du: ... validate-record.mjs docs/khao-cuu/nuicui/khao-cuu.json');
   process.exit(1);
 }
 
@@ -41,7 +45,9 @@ try {
   process.exit(1);
 }
 
-const records = Array.isArray(payload) ? payload : [payload];
+// Ho so khao cuu boc ban ghi trong truong "record"; ban ghi tran thi dung nguyen.
+const unwrap = (x) => (x && typeof x === 'object' && x.record && x.schema ? x.record : x);
+const records = (Array.isArray(payload) ? payload : [payload]).map(unwrap);
 const existingIds = new Set(MARIAN_STATUES_DATA.map((s) => s.id));
 
 const errors = [];
