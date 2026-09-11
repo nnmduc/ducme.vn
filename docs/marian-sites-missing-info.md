@@ -19,14 +19,13 @@ Dung) và quy chuẩn đóng góp tại [`CONTRIBUTING.md`](../CONTRIBUTING.md) 
   CONTRIBUTING.md) nhưng chỉ là kết quả tìm kiếm, không phải một bài viết/trang cụ thể. Nên thay bằng
   liên kết trực tiếp khi tìm được nguồn thật.
 
-## 1. Chưa có ảnh thực địa (10/18 linh địa)
+## 1. Chưa có ảnh thực địa (9/18 linh địa)
 
 Ưu tiên cao nhất theo `CONTRIBUTING.md` mục 2.A. Cần ảnh chụp thật (chính diện tượng + toàn cảnh linh
 đài), giấy phép CC-BY-SA/CC-BY/Public Domain hoặc do người chụp tự nguyện phát hành.
 
 | id | Tên linh địa | Giáo phận | Ghi chú thực địa |
 |---|---|---|---|
-| `fatimavinhlong` | Đức Mẹ Fatima Vĩnh Long | GP Vĩnh Long | Ít tư liệu công khai nhất trong toàn bộ danh sách |
 | `honchong` | Đức Mẹ Hòn Chông (Kiên Giang) | GP Long Xuyên | Thắng cảnh du lịch, khả năng có ảnh du khách chụp |
 | `nuicom` | Đức Mẹ Núi Cơm (Hà Tĩnh) | GP Hà Tĩnh | |
 | `phunhai` | Vương Cung Thánh Đường Phú Nhai | GP Bùi Chu | Công trình nổi tiếng, nhiều khả năng đã có ảnh trên Wikimedia Commons — ưu tiên kiểm tra trước khi đi khảo sát thực địa |
@@ -44,7 +43,6 @@ thể. Cần thay bằng nguồn trực tiếp (trang giáo phận, báo, kỷ y
 
 | id | Tên linh địa | Số nguồn (trực tiếp/tìm kiếm) |
 |---|---|---|
-| `fatimavinhlong` | Đức Mẹ Fatima Vĩnh Long | 0/2 |
 | `honchong` | Đức Mẹ Hòn Chông (Kiên Giang) | 0/2 |
 | `nuicom` | Đức Mẹ Núi Cơm (Hà Tĩnh) | 0/2 |
 | `binhtrieu` | Đức Mẹ Fatima Bình Triệu | 0/2 |
@@ -61,16 +59,15 @@ trong `project-overview-pdr.md` mục 3.
 
 | Thứ tự | id | Tên linh địa | Số từ ước tính |
 |---|---|---|---|
-| 1 | `fatimavinhlong` | Đức Mẹ Fatima Vĩnh Long | 86 |
-| 2 | `honchong` | Đức Mẹ Hòn Chông (Kiên Giang) | 100 |
-| 3 | `baidau` | Đức Mẹ Bãi Dâu | 105 |
-| 4 | `nuicom` | Đức Mẹ Núi Cơm (Hà Tĩnh) | 117 |
-| 5 | `phunhai` | Vương Cung Thánh Đường Phú Nhai | 120 |
-| 6 | `binhtrieu` | Đức Mẹ Fatima Bình Triệu | 122 |
-| 7 | `lama` | Đức Mẹ La Mã Bến Tre | 124 |
-| 8 | `nuicui` | Đức Mẹ Núi Cúi | 135 |
-| 9 | `saobiendanang` | Đức Mẹ Sao Biển (Đà Nẵng) | 140 |
-| 10 | `trakieu` | Đức Mẹ Trà Kiệu | 143 |
+| 1 | `honchong` | Đức Mẹ Hòn Chông (Kiên Giang) | 100 |
+| 2 | `baidau` | Đức Mẹ Bãi Dâu | 105 |
+| 3 | `nuicom` | Đức Mẹ Núi Cơm (Hà Tĩnh) | 117 |
+| 4 | `phunhai` | Vương Cung Thánh Đường Phú Nhai | 120 |
+| 5 | `binhtrieu` | Đức Mẹ Fatima Bình Triệu | 122 |
+| 6 | `lama` | Đức Mẹ La Mã Bến Tre | 124 |
+| 7 | `nuicui` | Đức Mẹ Núi Cúi | 135 |
+| 8 | `saobiendanang` | Đức Mẹ Sao Biển (Đà Nẵng) | 140 |
+| 9 | `trakieu` | Đức Mẹ Trà Kiệu | 143 |
 
 Các linh địa còn lại (166–206 từ): `trinhphong`, `giangson`, `ducbasaigon`, `phuonghoang`, `thacmo`,
 `lavang`, `mangden`, `tapao` — vẫn dưới mốc cạnh tranh ~300 từ nhưng độ ưu tiên thấp hơn.
@@ -80,20 +77,20 @@ Các linh địa còn lại (166–206 từ): `trinhphong`, `giangson`, `ducbasa
 Các linh địa dưới đây thiếu đồng thời cả ba mặt (ảnh, nguồn trực tiếp, nội dung), nên là mục tiêu đóng
 góp có tác động cao nhất:
 
-1. **`fatimavinhlong`** — Đức Mẹ Fatima Vĩnh Long: không ảnh, 0 nguồn trực tiếp, 86 từ.
-2. **`honchong`** — Đức Mẹ Hòn Chông: không ảnh, 0 nguồn trực tiếp, 100 từ.
-3. **`nuicom`** — Đức Mẹ Núi Cơm: không ảnh, 0 nguồn trực tiếp, 117 từ.
-4. **`binhtrieu`** — Đức Mẹ Fatima Bình Triệu: không ảnh, 0 nguồn trực tiếp, 122 từ.
-5. **`lama`** — Đức Mẹ La Mã Bến Tre: không ảnh, 1 nguồn trực tiếp, 124 từ.
-6. **`nuicui`** — Đức Mẹ Núi Cúi: không ảnh, 0 nguồn trực tiếp, 135 từ (tượng đài lớn, nổi tiếng — dễ
+1. **`honchong`** — Đức Mẹ Hòn Chông: không ảnh, 0 nguồn trực tiếp, 100 từ.
+2. **`nuicom`** — Đức Mẹ Núi Cơm: không ảnh, 0 nguồn trực tiếp, 117 từ.
+3. **`binhtrieu`** — Đức Mẹ Fatima Bình Triệu: không ảnh, 0 nguồn trực tiếp, 122 từ.
+4. **`lama`** — Đức Mẹ La Mã Bến Tre: không ảnh, 1 nguồn trực tiếp, 124 từ.
+5. **`nuicui`** — Đức Mẹ Núi Cúi: không ảnh, 0 nguồn trực tiếp, 135 từ (tượng đài lớn, nổi tiếng — dễ
    tìm tư liệu bổ sung nhất trong nhóm này).
-7. **`saobiendanang`** — Đức Mẹ Sao Biển: không ảnh, 1 nguồn trực tiếp, 140 từ.
-8. **`phunhai`** — Vương Cung Thánh Đường Phú Nhai: không ảnh, 1 nguồn trực tiếp, 120 từ.
+6. **`saobiendanang`** — Đức Mẹ Sao Biển: không ảnh, 1 nguồn trực tiếp, 140 từ.
+7. **`phunhai`** — Vương Cung Thánh Đường Phú Nhai: không ảnh, 1 nguồn trực tiếp, 120 từ.
 
 ## 5. Đã tương đối đầy đủ (không cần ưu tiên)
 
 Có ảnh thực địa và ≥2 nguồn, kể cả khi vẫn còn mỏng: `lavang`, `mangden`, `giangson`, `thacmo`,
-`tapao`, `ducbasaigon`. Vẫn hoan nghênh bổ sung nếu có tư liệu mới, nhưng không phải việc cấp thiết.
+`tapao`, `ducbasaigon`, `fatimavinhlong`. Vẫn hoan nghênh bổ sung nếu có tư liệu mới, nhưng không phải
+việc cấp thiết.
 
 ---
 

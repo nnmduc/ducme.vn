@@ -786,10 +786,10 @@ export const MARIAN_STATUES_DATA = [
     "name": "Đức Mẹ Fatima Vĩnh Long",
     "title": "Trung Tâm Hành Hương Fatima Vĩnh Long - Tòa Giám Mục",
     "year": 1965,
-    "lat": 10.245,
-    "lng": 105.972,
+    "lat": 10.2637,
+    "lng": 105.936,
     "elevation": "8m",
-    "location": "Phường 3, TP. Vĩnh Long, tỉnh Vĩnh Long",
+    "location": "Xã Tân Ngãi, TP. Vĩnh Long, tỉnh Vĩnh Long",
     "region": "Đồng bằng sông Cửu Long",
     "diocese": "Giáo phận Vĩnh Long",
     "diemStatue5": false,
@@ -803,20 +803,28 @@ export const MARIAN_STATUES_DATA = [
         "code": "NAT-18"
       }
     },
-    "historicalFact": "Được Đức Cha Antôn Nguyễn Văn Thiện thiết lập năm 1965 nhân dịp kỷ niệm sứ điệp Fatima. Tượng đài Đức Mẹ Fatima bằng đá trắng ngự giữa trung tâm công viên phụng vụ của Giáo phận Vĩnh Long.",
-    "oralTradition": "Điểm giao kết giữa hai nhánh sông Tiền và sông Hậu hiền hòa, che chở cho giáo dân châu thổ.",
-    "architect": "Công viên hoa kiểng tĩnh lặng và lễ đài trang nghiêm giữa lòng thành phố.",
-    "significance": "Trung tâm Thánh Mẫu hạt nhân của vùng đất Tây Nam Bộ.",
-    "realImage": null,
-    "realImageCaption": null,
+    "historicalFact": "Được Đức Cha Antôn Nguyễn Văn Thiện, Giám mục Giáo phận Vĩnh Long (1960–1968), khởi xướng xây dựng. Trung tâm khởi công ngày 17/02/1965 và khánh thành tượng đài cùng khuôn viên vào ngày 13/05/1965, đúng dịp kỷ niệm ngày Đức Mẹ hiện ra tại Fatima (Bồ Đào Nha) năm 1917. Đây là một trong ba trung tâm hành hương chính thức của Giáo phận Vĩnh Long, cùng với Trung tâm Đình Khao và Trung tâm Đức Mẹ La Mã Bến Tre. Từ đó, giáo phận tổ chức đều đặn hai kỳ hành hương cấp giáo phận mỗi năm vào 12–13/5 và 12–13/10. Năm 2017, trung tâm tổ chức đại lễ kỷ niệm 100 năm Đức Mẹ hiện ra tại Fatima, do Đức Ông Barnabê Nguyễn Văn Phương, Tổng Đại diện Giáo phận, chủ sự.",
+    "oralTradition": "Tương truyền, thuở ban đầu tượng Đức Mẹ được đặt dưới gốc một cây me cổ thụ hơn 200 năm tuổi trong khuôn viên; giáo dân xem cây me ấy như dấu chứng sống động cho sự hiện diện của Mẹ suốt hơn nửa thế kỷ qua. Trung tâm cũng nằm ở điểm giao kết giữa hai nhánh sông Tiền và sông Hậu hiền hòa, che chở cho giáo dân châu thổ.",
+    "architect": "Công trình mang phong cách kiến trúc hiện đại (modernist) đặc trưng miền Nam thập niên 1960: mặt tiền ghép từ các tấm chìa bê tông mỏng đan cài vào nhau, đỡ bởi hệ cột thép mảnh và cao tạo cảm giác nhẹ nhàng, lơ lửng; hành lang rộng làm không gian chuyển tiếp giữa trong và ngoài công trình. Tên kiến trúc sư thiết kế hiện chưa tìm được nguồn nào ghi lại. Tượng Đức Mẹ Fatima bằng đá trắng được xây dựng từ sự đóng góp của các linh mục trong giáo phận.",
+    "significance": "Là một trong ba trung tâm hành hương chính thức của Giáo phận Vĩnh Long, giữ vai trò trung tâm Thánh Mẫu hạt nhân của vùng đất Tây Nam Bộ — nơi giáo dân khắp vùng sông nước Cửu Long quy tụ hai lần mỗi năm để cầu nguyện, học hỏi sứ điệp Fatima và tìm sự ủi an, chữa lành tâm hồn.",
+    "realImage": "assets/real_photos/fatimavinhlong.jpg",
+    "realImageCaption": "Tượng Đức Mẹ Fatima tại Trung tâm Hành hương Fatima Vĩnh Long, xã Tân Ngãi, TP. Vĩnh Long (Nguồn: Wikimedia Commons, tác giả Philiplam990, giấy phép CC BY-SA 4.0, chụp 12/05/2019)",
     "sources": [
           {
-                "title": "Linh đài Fatima Vĩnh Long 1965 - GP Vĩnh Long",
-                "url": "https://www.google.com/search?q=site:giaophanvinhlong.net+\"Fatima+Vĩnh+Long\""
+                "title": "Trung Tâm Hành Hương Đức Mẹ Fatima Vĩnh Long - Giáo Phận Vĩnh Long",
+                "url": "https://giaophanvinhlong.net/trung-tam-hanh-huong-duc-me-fatima-vinh-long/"
           },
           {
-                "title": "Kỷ yếu Trung tâm Hành hương Đức Mẹ Fatima Vĩnh Long",
-                "url": "https://www.google.com/search?q=\"Đức+Mẹ+Fatima+Vĩnh+Long\"+1965"
+                "title": "Trung tâm Hành Hương Fatima Vĩnh Long kỷ niệm 100 năm Đức Mẹ hiện ra",
+                "url": "https://vntaiwan.catholic.org.tw/17news/17news0740.htm"
+          },
+          {
+                "title": "Trung tâm hành hương Fatima Vĩnh Long kỷ niệm 100 năm Đức Mẹ hiện ra",
+                "url": "https://www.vietcatholic.net/News/Html/222536.htm"
+          },
+          {
+                "title": "Tản Mạn Kiến Trúc - Trung tâm Hành hương Fatima Vĩnh Long",
+                "url": "https://www.tanmankientruc.org/kien-truc/modernist-series/trung-tam-fatima-vinh-long"
           }
     ]
   }
