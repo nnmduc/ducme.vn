@@ -656,6 +656,9 @@ const contactSchema = {
     margin-bottom: 24px;
     animation: fadeIn 0.25s ease-out;
   }
+  .form-alert[hidden] {
+    display: none !important;
+  }
   .alert-success {
     background: rgba(16, 185, 129, 0.12);
     border: 1px solid var(--status-success);
@@ -757,6 +760,9 @@ const contactSchema = {
     font-size: 13px;
     color: var(--status-error);
     margin-top: 4px;
+  }
+  .field-error[hidden] {
+    display: none !important;
   }
 
   /* Purpose Radio Cards */
@@ -1006,12 +1012,16 @@ const contactSchema = {
     cursor: not-allowed;
   }
   .btn-spinner {
+    display: inline-block;
     width: 16px;
     height: 16px;
     border: 2px solid var(--accent-ink);
     border-top-color: transparent;
     border-radius: 50%;
     animation: spin 0.7s linear infinite;
+  }
+  .btn-spinner[hidden] {
+    display: none !important;
   }
   .submit-terms {
     font-size: 12.5px;
