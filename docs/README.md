@@ -54,8 +54,7 @@ npm test          # 353 điều kiện kiểm tính toàn vẹn dữ liệu & ba
 ```
 tuong-duc-me/
 ├── astro.config.mjs
-├── netlify.toml              # cấu hình triển khai frontend Netlify
-├── public/                   # favicon, ảnh chia sẻ mặc định
+├── public/                   # favicon, ảnh chia sẻ mặc định, _headers (Cloudflare Pages)
 ├── src/
 │   ├── config/site.js        # SITE_URL, API_BASE_URL, Turnstile key, thương hiệu
 │   ├── data/statues.js       # NGUỒN DỮ LIỆU DUY NHẤT
@@ -83,7 +82,7 @@ tuong-duc-me/
 | `system-architecture.md` | Bản đồ đường dẫn, luồng dữ liệu, ranh giới JavaScript |
 | `design-guidelines.md` | Token màu, kiểu chữ, nguyên tắc ảnh, số đo tương phản |
 | `codebase-summary.md` | Cây mã nguồn và điều cần biết trước khi sửa |
-| `deployment-guide.md` | Lệnh, Netlify, việc cần làm sau khi triển khai |
+| `deployment-guide.md` | Lệnh, Cloudflare Pages & Worker, việc cần làm sau khi triển khai |
 | `research-report.md` | Khảo cứu lịch sử gốc |
 
 ## 6. Hạn Chế Đã Biết

@@ -4,7 +4,7 @@ Cập nhật 2026-09-11.
 
 ## 1. Yêu Cầu
 
-- Node.js từ 20.11 trở lên. Netlify dùng 22, khai trong `netlify.toml`.
+- Node.js từ 20.11 trở lên (khai báo Node 22 trong `.node-version`).
 - `npm install` một lần sau khi tải mã về.
 
 ## 2. Lệnh
@@ -12,30 +12,28 @@ Cập nhật 2026-09-11.
 | Lệnh | Việc |
 |---|---|
 | `npm run dev` | Máy chủ phát triển, có nạp lại nóng |
-| `npm run build` | Dựng trang tĩnh vào thư mục build |
+| `npm run build` | Dựng trang tĩnh vào thư mục build (`dist/`) |
 | `npm run preview` | Xem thử bản đã dựng |
 | `npm test` | 353 điều kiện kiểm tính toàn vẹn dữ liệu & backend |
 
 Chạy `npm test` trước mỗi lần đẩy mã. Bộ kiểm này bắt được id trùng, tọa độ ngoài lãnh
 thổ, ảnh khai trong dữ liệu nhưng không có file, nguồn dẫn không hợp lệ, và các file cấu hình backend.
 
-## 3. Triển Khai Frontend (Netlify)
+## 3. Triển Khai Frontend (Cloudflare Pages)
 
-Cấu hình thật nằm ở **`netlify.toml` tại thư mục gốc** và được theo dõi trong git.
+Frontend tĩnh được triển khai tự động lên **Cloudflare Pages** thông qua GitHub Actions (`.github/workflows/deploy.yml`) mỗi khi đẩy mã lên nhánh `main`.
 
-> **Cảnh báo.** File `.netlify/netlify.toml` **không phải** cấu hình. Đó là trạng thái do
-> Netlify CLI sinh ra, có `publish` trỏ tới đường dẫn tuyệt đối trên máy cục bộ, và cả thư
-> mục `.netlify` đã bị `.gitignore` loại trừ. Sửa file đó **không có tác dụng gì** khi
-> triển khai. Chỉ sửa `netlify.toml` ở gốc.
+Cấu hình cache và bảo mật HTTP headers nằm ở **`public/_headers`**:
+- Tài nguyên trong `/_astro/*` và `/fonts/*` được gán header `Cache-Control: public, max-age=31536000, immutable` do tên file đã có mã băm nội dung.
+- Các header bảo mật: `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`, `X-Frame-Options: SAMEORIGIN`.
 
-Thiết lập hiện tại:
+Tên dự án Cloudflare Pages: `ducme-vn`. Tên miền chính thức `https://ducme.vn` được gắn trực tiếp trong phần Custom domains của Cloudflare Pages.
 
-- `command = "npm run build"`
-- `publish` trỏ tới thư mục build của Astro
-- Tài nguyên trong `/_astro/*` được cache vĩnh viễn, vì tên file có vân tay băm
-- Có các header `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`
-
-Mã site: `141e85a8-31f1-4c2f-bc40-2340e9bea6b0`. Tên miền `https://ducme.vn` đã trỏ sẵn.
+Triển khai thủ công từ máy cục bộ (nếu cần):
+```bash
+npm run build
+npx wrangler pages deploy dist --project-name=ducme-vn --branch=main
+```
 
 ## 4. Triển Khai Backend Serverless (Cloudflare Worker)
 

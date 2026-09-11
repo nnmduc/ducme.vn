@@ -4,10 +4,10 @@ Cập nhật 2026-09-11.
 
 ```
 astro.config.mjs             Cấu hình Astro. Đọc SITE_URL từ src/config/site.js
-netlify.toml                 Cấu hình triển khai THẬT (xem docs/deployment-guide.md)
 package.json                 Astro 7, Leaflet, sharp, fontsource
 
 public/
+  _headers                   Cấu hình HTTP headers cho Cloudflare Pages (xem docs/deployment-guide.md)
   favicon.svg                Dấu sao bốn cánh, vàng trên nền navy
   og-default.png             Ảnh chia sẻ dự phòng 1200x630 cho 10 linh địa chưa có ảnh
 

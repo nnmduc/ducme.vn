@@ -126,7 +126,7 @@ Chúng tôi khuyến khích tuân thủ định dạng **Conventional Commits**:
 Ví dụ:
 - `data(lavang): bo sung trich dan ky yeu Dai hoi Thanh Mau 1959`
 - `fix(map): sua loi giat khung hinh khi chuyen che do ve tinh tren mobile`
-- `docs: cap nhat huong dan trien khai Netlify`
+- `docs: cap nhat huong dan trien khai Cloudflare Pages`
 
 ---
 

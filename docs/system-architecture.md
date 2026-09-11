@@ -1,6 +1,6 @@
 # Kiến Trúc Hệ Thống
 
-Cập nhật 2026-09-11. Trang tĩnh hoàn toàn, dựng bằng Astro, triển khai trên Netlify.
+Cập nhật 2026-09-11. Trang tĩnh hoàn toàn, dựng bằng Astro, triển khai trên Cloudflare Pages.
 
 ## 1. Nguyên Tắc Nền Tảng
 

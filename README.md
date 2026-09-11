@@ -84,7 +84,7 @@ Nền tảng web tư liệu số và bản đồ tương tác về **18 trung t�
 | **Xử lý ảnh** | [Sharp](https://sharp.pixelplumbing.com) (v0.35) | Tối ưu hóa ảnh tự động thành định dạng AVIF/WebP thế hệ mới |
 | **Phông chữ** | `@fontsource` (Lora, Playfair Display, Be Vietnam Pro) | Tải phông chữ cục bộ, tối ưu hiệu năng, bảo đảm 100% tiếng Việt |
 | **Sitemap** | `@astrojs/sitemap` | Tự động tạo chỉ mục sitemap chuẩn XML |
-| **Frontend Hosting & CDN** | [Netlify](https://www.netlify.com) | Phân phối tĩnh toàn cầu qua Edge CDN, bảo mật HTTP headers |
+| **Frontend Hosting & CDN** | [Cloudflare Pages](https://pages.cloudflare.com) | Phân phối tĩnh toàn cầu qua Edge CDN, bảo mật HTTP headers, băng thông không giới hạn |
 | **Backend Serverless** | [Cloudflare Workers](https://workers.cloudflare.com) | API xử lý đóng góp tại biên mạng, không tốn tài nguyên chờ (zero cold start) |
 | **Cơ sở dữ liệu** | [Cloudflare D1](https://developers.cloudflare.com/d1/) | SQLite phân tán serverless lưu trữ bản ghi phản hồi |
 | **Lưu trữ tệp** | [Cloudflare R2](https://developers.cloudflare.com/r2/) | Lưu ảnh/tài liệu đính kèm S3-compatible, không phí egress |
@@ -97,17 +97,18 @@ Nền tảng web tư liệu số và bản đồ tương tác về **18 trung t�
 
 ```text
 tuong-duc-me/
-├── .github/                      # Quy trình CI và biểu mẫu Issue/PR trên GitHub
-│   ├── workflows/ci.yml          # GitHub Actions tự động kiểm thử và build
+├── .github/                      # Quy trình CI/CD và biểu mẫu Issue/PR trên GitHub
+│   ├── workflows/deploy.yml      # GitHub Actions tự động kiểm thử, build và deploy Cloudflare Pages & Worker
 │   └── ISSUE_TEMPLATE/           # Mẫu báo lỗi, đề xuất tính năng, cập nhật tư liệu
 ├── docs/                         # Tài liệu kỹ thuật chuyên sâu
 │   ├── system-architecture.md    # Kiến trúc hệ thống, ranh giới JavaScript, luồng dữ liệu
 │   ├── tech-stack.md             # Phân tích lựa chọn công nghệ frontend & serverless
 │   ├── codebase-summary.md       # Tổng quan cây mã nguồn và cẩm nang phát triển
-│   ├── deployment-guide.md       # Hướng dẫn triển khai Netlify và Cloudflare Worker
+│   ├── deployment-guide.md       # Hướng dẫn triển khai Cloudflare Pages và Cloudflare Worker
 │   ├── design-guidelines.md      # Quy chuẩn thiết kế giao diện, màu sắc, typography
 │   └── research-report.md        # Khảo cứu lịch sử gốc 5 tượng Đức Mẹ 1959–1961
-├── public/                       # Tài nguyên tĩnh công khai (favicon, og-default.png, robots.txt)
+├── public/                       # Tài nguyên tĩnh công khai (favicon, og-default.png, _headers)
+│   └── _headers                  # Cấu hình HTTP security & cache headers cho Cloudflare Pages
 ├── src/
 │   ├── assets/real_photos/       # Kho ảnh chụp thực địa đã kiểm chứng
 │   ├── components/               # Các Astro component (SeoHead, MarianMap, SiteHeader...)
@@ -126,7 +127,6 @@ tuong-duc-me/
 ├── tests/
 │   └── test_data_and_integrity.js # Bộ 353 bài kiểm thử tính toàn vẹn dữ liệu & backend
 ├── astro.config.mjs              # Cấu hình Astro
-├── netlify.toml                  # Cấu hình triển khai chính thức cho Netlify
 ├── package.json                  # Khai báo phụ thuộc và kịch bản lệnh
 ├── CONTRIBUTING.md               # Hướng dẫn tham gia đóng góp mã nguồn và tư liệu
 ├── CODE_OF_CONDUCT.md            # Quy tắc ứng xử cộng đồng
@@ -216,7 +216,7 @@ Thư mục [`docs/`](docs/) chứa toàn bộ các tài liệu kiến trúc và 
 | [tech-stack.md](docs/tech-stack.md) | Phân tích chi tiết ngăn xếp công nghệ (Astro, Leaflet, Cloudflare Workers/D1/R2) |
 | [design-guidelines.md](docs/design-guidelines.md) | Hệ thống Design Tokens, tỷ lệ tương phản màu sắc, Typography, trạng thái biểu mẫu |
 | [codebase-summary.md](docs/codebase-summary.md) | Cẩm nang định hướng mã nguồn frontend và worker dành cho lập trình viên |
-| [deployment-guide.md](docs/deployment-guide.md) | Quy trình triển khai sản phẩm lên Netlify và Cloudflare Worker Edge |
+| [deployment-guide.md](docs/deployment-guide.md) | Quy trình triển khai sản phẩm lên Cloudflare Pages và Cloudflare Worker Edge |
 | [research-report.md](docs/research-report.md) | Báo cáo nghiên cứu lịch sử nguồn gốc 5 tượng Đức Mẹ 1959–1961 |
 
 ---

@@ -21,7 +21,7 @@ phiên bản trước, vốn mô tả một trang tĩnh thuần HTML/CSS/JS khô
 | Ảnh | `astro:assets` + **sharp** | Xuất AVIF, có `srcset`, giảm khoảng 90% dung lượng |
 | Chữ viết | `@fontsource-variable` | Tự lưu trữ, có sẵn bộ ký tự `vietnamese` |
 | Sitemap | `@astrojs/sitemap` | Sinh tự động từ `site` trong cấu hình |
-| Triển khai tĩnh | **Netlify** | `netlify.toml` ở thư mục gốc |
+| Triển khai tĩnh | **Cloudflare Pages** | Tích hợp CI/CD tự động qua GitHub Actions, `public/_headers` |
 | API Serverless | **Cloudflare Workers** | Chạy tại biên (Edge), xử lý `/api/submissions`, zero cold start |
 | Cơ sở dữ liệu | **Cloudflare D1** | SQLite serverless phân tán, lưu trữ bản ghi phản hồi |
 | Lưu trữ tệp | **Cloudflare R2** | Tương thích S3, lưu tệp đính kèm an toàn, miễn phí egress |
