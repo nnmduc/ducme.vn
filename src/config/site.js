@@ -32,7 +32,16 @@ export const NAV_ITEMS = [
   { href: '/ban-do/', label: 'Bản đồ', short: 'Bản đồ' },
   { href: '/chom-sao-bac-dau/', label: 'Chòm sao Bắc Đẩu', short: 'Bắc Đẩu' },
   { href: '/gioi-thieu/', label: 'Giới thiệu', short: 'Giới thiệu' },
+  { href: '/lien-he/', label: 'Liên hệ & Góp ý', short: 'Liên hệ' },
 ];
+
+export const TURNSTILE_SITE_KEY =
+  (typeof import.meta !== 'undefined' && import.meta.env?.PUBLIC_TURNSTILE_SITE_KEY) ||
+  '0x4AAAAAAEwCxlvA-gYNWZ-B';
+
+export const API_BASE_URL =
+  (typeof import.meta !== 'undefined' && import.meta.env?.PUBLIC_API_BASE_URL) ||
+  'https://api.ducme.vn';
 
 /**
  * Thu tu hien thi cac vung mien tren trang chu.

@@ -99,6 +99,21 @@ statues.forEach(s => {
   });
 });
 
+console.log('\n--- 6. KIỂM TRA TRANG LIÊN HỆ & CẤU HÌNH BACKEND ---');
+import { NAV_ITEMS, TURNSTILE_SITE_KEY, API_BASE_URL } from '../src/config/site.js';
+assert(NAV_ITEMS.some(item => item.href === '/lien-he/'), 'NAV_ITEMS phải chứa đường dẫn /lien-he/');
+assert(typeof TURNSTILE_SITE_KEY === 'string' && TURNSTILE_SITE_KEY.length > 0, 'TURNSTILE_SITE_KEY phải được định nghĩa');
+assert(typeof API_BASE_URL === 'string' && API_BASE_URL.startsWith('http'), 'API_BASE_URL phải được định nghĩa hợp lệ');
+
+const contactPagePath = path.join(import.meta.dirname, '..', 'src', 'pages', 'lien-he.astro');
+assert(fs.existsSync(contactPagePath), 'File trang src/pages/lien-he.astro phải tồn tại');
+
+const workerSchemaPath = path.join(import.meta.dirname, '..', 'worker', 'schema.sql');
+assert(fs.existsSync(workerSchemaPath), 'File worker/schema.sql phải tồn tại');
+
+const workerWranglerPath = path.join(import.meta.dirname, '..', 'worker', 'wrangler.jsonc');
+assert(fs.existsSync(workerWranglerPath), 'File worker/wrangler.jsonc phải tồn tại');
+
 console.log(`\n========================================`);
 console.log(`TỔNG KẾT: ${passed} PASS, ${failed} FAIL`);
 console.log(`========================================`);

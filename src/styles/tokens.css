@@ -75,6 +75,10 @@
 
   --nav-bg: rgba(6, 11, 25, 0.92);
   --focus-ring: var(--gold-500);
+
+  /* Mau trang thai ngu nghia */
+  --status-success: var(--emerald-500);
+  --status-error: var(--rose-500);
 }
 
 /* ============================================================================

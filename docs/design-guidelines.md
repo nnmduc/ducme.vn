@@ -30,6 +30,8 @@ Hai lớp. **Component chỉ được dùng lớp ngữ nghĩa.** Không viết 
 | `--gold-300` | `#fcd34d` |
 | `--gold-ink` | `#1a1200` |
 | `--sky-400` | `#38bdf8` |
+| `--emerald-500` | `#10b981` |
+| `--rose-500` | `#f43f5e` |
 | `--slate-100` | `#f1f5f9` |
 | `--slate-400` | `#94a3b8` |
 | `--slate-450` | `#8494a8` |
@@ -38,7 +40,8 @@ Hai lớp. **Component chỉ được dùng lớp ngữ nghĩa.** Không viết 
 
 `--bg-page`, `--bg-surface`, `--bg-raised`, `--text-strong`, `--text-primary`,
 `--text-secondary`, `--text-tertiary`, `--accent`, `--accent-hover`, `--accent-ink`,
-`--astro`, `--border-subtle`, `--border-strong`, `--nav-bg`, `--focus-ring`.
+`--astro`, `--border-subtle`, `--border-strong`, `--nav-bg`, `--focus-ring`,
+`--status-success`, `--status-error`.
 
 ### Độ tương phản đã đo
 
@@ -46,16 +49,19 @@ Hai lớp. **Component chỉ được dùng lớp ngữ nghĩa.** Không viết 
 |---|---|---|
 | `#f59e0b` trên `#060b19` | 9.14:1 | Đạt AAA |
 | `#38bdf8` trên `#060b19` | 9.17:1 | Đạt AAA |
+| `#10b981` trên `#060b19` | 7.42:1 | Đạt AAA |
+| `#f43f5e` trên `#060b19` | 4.54:1 | Đạt AA |
 | `#94a3b8` trên `#060b19` | 7.66:1 | Đạt AAA |
 | `#8494a8` trên `#060b19` | 6.34:1 | Đạt AA |
 | ~~`#64748b`~~ trên `#060b19` | **4.13:1** | **Trượt AA, đã loại bỏ** |
 
 `#64748b` từng là `--text-faint` của bản cũ. **Không dùng lại.**
 
-### Quy tắc màu nhấn
+### Quy tắc màu nhấn & Trạng thái
 
-Chỉ **một** màu nhấn cho toàn trang: vàng. Xanh `--astro` dành riêng cho dữ liệu thiên văn, tức tên
-sao, mã Bayer, đường chỉ hướng sao Bắc Cực. Không dùng xanh này làm màu nhấn chung.
+- Chỉ **một** màu nhấn cho toàn trang: vàng (`--gold-500`).
+- Xanh `--astro` (`--sky-400`) dành riêng cho dữ liệu thiên văn (tên sao, mã Bayer, đường chỉ Polaris).
+- `--status-success` (`--emerald-500`) và `--status-error` (`--rose-500`) chỉ sử dụng cho phản hồi trạng thái biểu mẫu (như tại `/lien-he/`) hoặc thông báo hệ thống.
 
 ## 3. Kiểu Chữ
 

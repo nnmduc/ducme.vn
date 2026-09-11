@@ -32,8 +32,10 @@ Tạo một công cụ trực quan hóa địa lý và lịch sử, tôn nghiêm
       trong hộp thoại không có URL nên không thể tìm thấy hay chia sẻ được._
 - [x] Độ tương phản đạt WCAG AA, đã đo từng cặp màu. Không dùng gradient lòe loẹt.
 - [x] Trang nội dung không nạp JavaScript. Leaflet chỉ có ở `/ban-do/`.
-- [x] Sitemap, robots.txt, canonical, thẻ chia sẻ và JSON-LD đầy đủ trên cả 22 trang.
-- [x] 347 điều kiện kiểm tính toàn vẹn dữ liệu, đều đạt.
+- [x] Sitemap, robots.txt, canonical, thẻ chia sẻ và JSON-LD đầy đủ trên cả 23 trang.
+- [x] Trang Liên hệ & Đóng góp tư liệu (`/lien-he/`) tiếp nhận phản hồi, tư liệu lịch sử và ảnh thực địa.
+- [x] Hạ tầng Serverless Backend (Cloudflare Worker API, D1 Database, R2 Storage, Email Routing, Turnstile).
+- [x] 353 điều kiện kiểm tính toàn vẹn dữ liệu và cấu hình backend, đều đạt.
 
 ### Còn lại
 

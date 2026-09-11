@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Astro](https://img.shields.io/badge/Astro-7.3-ff5d01.svg)](https://astro.build)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D20.11-339933.svg)](https://nodejs.org)
-[![Tests](https://img.shields.io/badge/Tests-347%20passing-brightgreen.svg)](#kiểm-thử-toàn-vẹn-dữ-liệu)
+[![Tests](https://img.shields.io/badge/Tests-353%20passing-brightgreen.svg)](#kiểm-thử-toàn-vẹn-dữ-liệu)
 [![Website](https://img.shields.io/badge/Website-ducme.vn-blue.svg)](https://ducme.vn)
 
 Nền tảng web tư liệu số và bản đồ tương tác về **18 trung tâm hành hương Thánh Mẫu tại Việt Nam**, từ năm 1798 đến nay. Dự án khảo cứu lịch sử 5 pho tượng Đức Mẹ thời Đệ nhất Cộng hòa (1959–1961) và kiểm chứng giả thuyết dân gian về việc các linh đài được xếp theo hình thế chòm sao Bắc Đẩu.
@@ -51,19 +51,26 @@ Nền tảng web tư liệu số và bản đồ tương tác về **18 trung t�
 
 ## 2. Tính năng chính
 
-- **22 trang tĩnh chuyên sâu:**
+- **23 trang tĩnh chuyên sâu:**
   - **Trang chủ (`/`):** Tổng quan dự án, mục lục toàn bộ 18 linh đài theo 6 vùng miền địa lý, bản đồ thu nhỏ dẫn đến ứng dụng bản đồ lớn.
   - **18 trang chi tiết linh địa (`/linh-dai/[id]/`):** Tư liệu lịch sử, kiến trúc, tọa độ địa lý, chỉ đường Google Maps, vai trò trong các phiên bản chòm sao, danh mục nguồn dẫn học thuật.
   - **Khảo cứu chòm sao Bắc Đẩu (`/chom-sao-bac-dau/`):** Phân tích 4 phiên bản chòm sao (V1 kinh điển 1959–1961, V2 biến thể Măng Đen, V3 bộ 5 tượng Đệ nhất Cộng hòa, V4 tuyến Thánh Mẫu toàn quốc).
-  - **Bản đồ tương tác toàn màn hình (`/ban-do/`):** Bản đồ Leaflet với 3 lớp nền (CARTO Dark Matter, CARTO Voyager, OpenStreetMap), thanh dòng thời gian 1798–2026 có chế độ tự phát (Auto Play), tìm kiếm và lọc theo thời kỳ / khu vực / chòm sao.
+  - **Bản đồ tương tác toàn màn hình (`/ban-do/`):** Bản đồ Leaflet với lớp nền OpenStreetMap đảo màu bảo vệ thị lực, thanh dòng thời gian 1798–2026 có chế độ tự phát (Auto Play), tìm kiếm và lọc theo thời kỳ / khu vực / chòm sao.
   - **Trang giới thiệu & Phương pháp luận (`/gioi-thieu/`):** Minh bạch phương pháp nghiên cứu, chính sách trích dẫn và tiêu chuẩn bản quyền.
+  - **Trang Liên hệ & Đóng góp tư liệu (`/lien-he/`):** Kênh tiếp nhận ý kiến đóng góp, đính chính niên đại, chia sẻ tài liệu xưa và ảnh thực địa từ cộng đồng; hỗ trợ tải lên tệp an toàn (kèm xem trước, kiểm tra định dạng/dung lượng) và mã tiếp nhận (receipt code).
+- **Hạ tầng Serverless Backend (Cloudflare Ecosystem):**
+  - **Cloudflare Worker API (`worker/`):** Xử lý endpoint `/api/submissions`, kiểm soát CORS, giới hạn kích thước payload (16 MB), kiểm tra magic bytes tệp đính kèm.
+  - **Cloudflare D1 Database:** Cơ sở dữ liệu SQLite serverless lưu trữ thông tin tiếp nhận an toàn và phi tập trung.
+  - **Cloudflare R2 Object Storage:** Lưu trữ tệp tin/hình ảnh tải lên; hỗ trợ sinh token HMAC xem trước có thời hạn (14 ngày) cho quản trị viên.
+  - **Cloudflare Turnstile:** Cơ chế xác thực chống spam thông minh, bảo vệ quyền riêng tư người dùng mà không cần giải mã CAPTCHA phức tạp.
+  - **Cloudflare Email Routing:** Tự động chuyển tiếp thông báo gửi đóng góp tới hòm thư quản trị qua binding `send_email`.
 - **Tối ưu hóa tìm kiếm (SEO) & Dữ liệu có cấu trúc:**
-  - Tích hợp đầy đủ schema JSON-LD chuẩn Schema.org (`TouristAttraction`, `BreadcrumbList`, `ItemList`, `WebSite`).
+  - Tích hợp đầy đủ schema JSON-LD chuẩn Schema.org (`TouristAttraction`, `BreadcrumbList`, `ItemList`, `WebSite`, `ContactPage`).
   - Canonical URL, thẻ Open Graph, Twitter Card tối ưu cho chia sẻ mạng xã hội.
   - Tự động sinh `sitemap-index.xml`, `robots.txt` và `llms.txt`.
 - **Tối ưu hóa tài nguyên & Hiển thị:**
   - Hình ảnh chuyển đổi sang định dạng AVIF/WebP hiện đại, responsive srcset, kích thước nội tại tránh giật khung hình (zero CLS).
-  - Bộ token màu 2 lớp (Primitive Tokens & Semantic Tokens), sẵn sàng mở rộng chế độ sáng/tối.
+  - Bộ token màu 2 lớp (Primitive Tokens & Semantic Tokens), tích hợp các token trạng thái `--status-success` và `--status-error`.
   - Bộ phông chữ Tiếng Việt hoàn chỉnh với đầy đủ dấu thanh (`vietnamese` unicode-range).
 
 ---
@@ -77,7 +84,12 @@ Nền tảng web tư liệu số và bản đồ tương tác về **18 trung t�
 | **Xử lý ảnh** | [Sharp](https://sharp.pixelplumbing.com) (v0.35) | Tối ưu hóa ảnh tự động thành định dạng AVIF/WebP thế hệ mới |
 | **Phông chữ** | `@fontsource` (Lora, Playfair Display, Be Vietnam Pro) | Tải phông chữ cục bộ, tối ưu hiệu năng, bảo đảm 100% tiếng Việt |
 | **Sitemap** | `@astrojs/sitemap` | Tự động tạo chỉ mục sitemap chuẩn XML |
-| **Hosting & CI** | [Netlify](https://www.netlify.com) | Phân phối tĩnh toàn cầu qua Edge CDN, bảo mật HTTP headers |
+| **Frontend Hosting & CDN** | [Netlify](https://www.netlify.com) | Phân phối tĩnh toàn cầu qua Edge CDN, bảo mật HTTP headers |
+| **Backend Serverless** | [Cloudflare Workers](https://workers.cloudflare.com) | API xử lý đóng góp tại biên mạng, không tốn tài nguyên chờ (zero cold start) |
+| **Cơ sở dữ liệu** | [Cloudflare D1](https://developers.cloudflare.com/d1/) | SQLite phân tán serverless lưu trữ bản ghi phản hồi |
+| **Lưu trữ tệp** | [Cloudflare R2](https://developers.cloudflare.com/r2/) | Lưu ảnh/tài liệu đính kèm S3-compatible, không phí egress |
+| **Bảo vệ chống Bot** | [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/) | Chặn spam tự động không xâm lấn, thay thế CAPTCHA truyền thống |
+| **Thông báo email** | [Cloudflare Email Routing](https://developers.cloudflare.com/email-routing/) | Chuyển phát thông báo biên tập tức thì qua worker binding |
 
 ---
 
@@ -89,24 +101,30 @@ tuong-duc-me/
 │   ├── workflows/ci.yml          # GitHub Actions tự động kiểm thử và build
 │   └── ISSUE_TEMPLATE/           # Mẫu báo lỗi, đề xuất tính năng, cập nhật tư liệu
 ├── docs/                         # Tài liệu kỹ thuật chuyên sâu
-│   ├── architecture.md           # Kiến trúc hệ thống và luồng dữ liệu
-│   ├── codebase-summary.md       # Tổng quan cây mã nguồn
-│   ├── deployment-guide.md       # Hướng dẫn cấu hình triển khai Netlify
+│   ├── system-architecture.md    # Kiến trúc hệ thống, ranh giới JavaScript, luồng dữ liệu
+│   ├── tech-stack.md             # Phân tích lựa chọn công nghệ frontend & serverless
+│   ├── codebase-summary.md       # Tổng quan cây mã nguồn và cẩm nang phát triển
+│   ├── deployment-guide.md       # Hướng dẫn triển khai Netlify và Cloudflare Worker
 │   ├── design-guidelines.md      # Quy chuẩn thiết kế giao diện, màu sắc, typography
-│   ├── research-report.md        # Khảo cứu lịch sử gốc
-│   └── tech-stack.md             # Phân tích lựa chọn công nghệ
+│   └── research-report.md        # Khảo cứu lịch sử gốc 5 tượng Đức Mẹ 1959–1961
 ├── public/                       # Tài nguyên tĩnh công khai (favicon, og-default.png, robots.txt)
 ├── src/
 │   ├── assets/real_photos/       # Kho ảnh chụp thực địa đã kiểm chứng
-│   ├── components/               # Các Astro component (SeoHead, MarianMap, StatueCard...)
-│   ├── config/site.js            # Cấu hình hằng số toàn trang (SITE_URL, thương hiệu, điều hướng)
+│   ├── components/               # Các Astro component (SeoHead, MarianMap, SiteHeader...)
+│   ├── config/site.js            # Cấu hình hằng số toàn trang (SITE_URL, API_BASE_URL, Turnstile)
 │   ├── data/statues.js           # Single Source of Truth (dữ liệu 18 linh đài và các chòm sao)
 │   ├── layouts/BaseLayout.astro  # Layout dùng chung cho toàn bộ trang
 │   ├── lib/                      # Các hàm trợ giúp xử lý dữ liệu, ảnh, SEO
-│   ├── pages/                    # Định tuyến tĩnh (index, linh-dai/[id], ban-do, chom-sao-bac-dau...)
+│   ├── pages/                    # Định tuyến tĩnh (index, linh-dai/[id], ban-do, lien-he...)
 │   └── styles/                   # CSS Design Tokens và kiểu dáng toàn cục
+├── worker/                       # Cloudflare Worker Backend cho tính năng Liên hệ & Góp ý
+│   ├── scripts/                  # Script kiểm thử API tự động
+│   ├── src/                      # Source code worker (router, cors, db, r2, turnstile, email)
+│   ├── schema.sql                # D1 Database Schema (bảng submissions)
+│   ├── wrangler.jsonc            # Cấu hình Cloudflare bindings (D1, R2, SendEmail, Turnstile)
+│   └── README.md                 # Hướng dẫn chạy và triển khai worker riêng biệt
 ├── tests/
-│   └── test_data_and_integrity.js # Bộ 347 bài kiểm thử tính toàn vẹn dữ liệu
+│   └── test_data_and_integrity.js # Bộ 353 bài kiểm thử tính toàn vẹn dữ liệu & backend
 ├── astro.config.mjs              # Cấu hình Astro
 ├── netlify.toml                  # Cấu hình triển khai chính thức cho Netlify
 ├── package.json                  # Khai báo phụ thuộc và kịch bản lệnh
@@ -131,8 +149,11 @@ tuong-duc-me/
 git clone https://github.com/nnmduc/ducme.vn.git
 cd ducme.vn
 
-# 2. Cài đặt các gói phụ thuộc
+# 2. Cài đặt các gói phụ thuộc frontend
 npm install
+
+# 3. (Tùy chọn) Cài đặt dependencies cho Cloudflare Worker backend
+cd worker && npm install && cd ..
 ```
 
 ---
@@ -153,13 +174,13 @@ npm run preview
 npm test
 ```
 
-> **Lưu ý về tên miền:** Khi cấu hình tên miền mới, chỉ cần cập nhật duy nhất giá trị hằng số `SITE_URL` trong file `src/config/site.js`. Giá trị này sẽ tự động phân phối tới `astro.config.mjs`, thẻ canonical, OpenGraph, sitemap và JSON-LD.
+> **Lưu ý về tên miền & API:** Khi cấu hình tên miền mới, chỉ cần cập nhật duy nhất giá trị hằng số `SITE_URL` và `API_BASE_URL` trong file `src/config/site.js`. Giá trị này sẽ tự động phân phối tới `astro.config.mjs`, thẻ canonical, OpenGraph, sitemap và JSON-LD.
 
 ---
 
 ## 7. Kiểm thử toàn vẹn dữ liệu
 
-Dự án sở hữu bộ kiểm thử nghiêm ngặt gồm **347 điều kiện kiểm thử** độc lập trong `tests/test_data_and_integrity.js`, đảm bảo dữ liệu không bao giờ bị sai lệch:
+Dự án sở hữu bộ kiểm thử nghiêm ngặt gồm **353 điều kiện kiểm thử** độc lập trong `tests/test_data_and_integrity.js`, đảm bảo dữ liệu và cấu hình hệ thống không bao giờ bị sai lệch:
 
 ```bash
 npm test
@@ -171,14 +192,15 @@ Bộ kiểm thử tự động thẩm định:
 3. **Hình ảnh:** Tệp hình ảnh khai báo trong cơ sở dữ liệu phải thực sự tồn tại trên ổ đĩa; tuyệt đối không chứa chuỗi ảnh AI.
 4. **Nguồn dẫn xác thực:** Mỗi linh địa bắt buộc phải có ít nhất 2 nguồn tài liệu trích dẫn HTTPS hợp lệ, không trỏ về domain gốc không có ngữ cảnh.
 5. **Hình thế chòm sao:** Các đỉnh chòm sao Bắc Đẩu phải trỏ tới đúng ID tượng hợp lệ.
+6. **Biểu mẫu & Hạ tầng Backend:** Kiểm tra đường dẫn `/lien-he/` trong thanh điều hướng, cấu hình Cloudflare Turnstile, API endpoint, tính sẵn sàng của file schema SQLite D1 và cấu hình Worker `wrangler.jsonc`.
 
 ---
 
 ## 8. Đóng góp phát triển (Contributing)
 
 Chúng tôi trân trọng và hoan nghênh mọi đóng góp từ cộng đồng:
-- **Đóng góp tư liệu:** Bổ sung tư liệu lịch sử, hiệu đính niên đại, chia sẻ ảnh chụp thực địa (yêu cầu bản quyền tự do/CC-BY-SA).
-- **Cải thiện tính năng:** Tối ưu hóa giao diện bản đồ, nâng cao khả năng tiếp cận (a11y), báo cáo và sửa lỗi.
+- **Đóng góp tư liệu & hình ảnh:** Gửi trực tiếp qua biểu mẫu trực tuyến tại **[ducme.vn/lien-he/](https://ducme.vn/lien-he/)** hoặc mở Issue/Pull Request. Yêu cầu ảnh chụp thực địa có bản quyền tự do/CC-BY-SA hoặc Public Domain.
+- **Cải thiện tính năng & mã nguồn:** Tối ưu hóa giao diện bản đồ, nâng cao khả năng tiếp cận (a11y), báo cáo và sửa lỗi.
 
 Xin vui lòng tham khảo chi tiết tại **[CONTRIBUTING.md](CONTRIBUTING.md)** để nắm rõ quy trình tạo Issue, Pull Request và tiêu chuẩn thẩm định dữ liệu.
 
@@ -190,11 +212,11 @@ Thư mục [`docs/`](docs/) chứa toàn bộ các tài liệu kiến trúc và 
 
 | Tài liệu | Mô tả nội dung |
 |---|---|
-| [architecture.md](docs/system-architecture.md) | Kiến trúc hệ thống, ranh giới JavaScript, luồng dữ liệu SSG |
-| [tech-stack.md](docs/tech-stack.md) | Phân tích chi tiết ngăn xếp công nghệ và lý do lựa chọn |
-| [design-guidelines.md](docs/design-guidelines.md) | Hệ thống Design Tokens, tỷ lệ tương phản màu sắc, Typography |
-| [codebase-summary.md](docs/codebase-summary.md) | Cẩm nang định hướng mã nguồn dành cho lập trình viên |
-| [deployment-guide.md](docs/deployment-guide.md) | Quy trình triển khai sản phẩm lên Netlify và Search Console |
+| [system-architecture.md](docs/system-architecture.md) | Kiến trúc hệ thống, ranh giới JavaScript, luồng dữ liệu SSG & Serverless |
+| [tech-stack.md](docs/tech-stack.md) | Phân tích chi tiết ngăn xếp công nghệ (Astro, Leaflet, Cloudflare Workers/D1/R2) |
+| [design-guidelines.md](docs/design-guidelines.md) | Hệ thống Design Tokens, tỷ lệ tương phản màu sắc, Typography, trạng thái biểu mẫu |
+| [codebase-summary.md](docs/codebase-summary.md) | Cẩm nang định hướng mã nguồn frontend và worker dành cho lập trình viên |
+| [deployment-guide.md](docs/deployment-guide.md) | Quy trình triển khai sản phẩm lên Netlify và Cloudflare Worker Edge |
 | [research-report.md](docs/research-report.md) | Báo cáo nghiên cứu lịch sử nguồn gốc 5 tượng Đức Mẹ 1959–1961 |
 
 ---
@@ -211,6 +233,7 @@ Thư mục [`docs/`](docs/) chứa toàn bộ các tài liệu kiến trúc và 
 
 - **Tác giả:** Duc Nguyen ([@nnmduc](https://github.com/nnmduc))
 - **Email:** `minh-duc.nguyen-nam@ekino.com`
+- **Trang liên hệ & gửi góp ý:** [https://ducme.vn/lien-he/](https://ducme.vn/lien-he/)
 - **Kho mã nguồn:** [https://github.com/nnmduc/ducme.vn](https://github.com/nnmduc/ducme.vn)
-- **Báo lỗi & Đóng góp ý kiến:** [GitHub Issues](https://github.com/nnmduc/ducme.vn/issues)
+- **Báo lỗi kỹ thuật:** [GitHub Issues](https://github.com/nnmduc/ducme.vn/issues)
 

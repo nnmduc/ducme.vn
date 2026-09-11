@@ -28,7 +28,8 @@ Khi tham gia vào dự án này, bạn đồng ý tuân thủ bản **[Quy tắc
 
 ### A. Đóng góp tư liệu & Hình ảnh thực địa
 Đây là mảng đóng góp được **ưu tiên cao nhất**. Nhiều linh địa hiện vẫn còn thiếu ảnh chụp thực tế hoặc phần văn bản lịch sử còn ngắn:
-- **Bổ sung ảnh chụp thực địa:** Chúng tôi hiện chỉ có 8/18 linh địa có ảnh thực tế xác thực. Nếu bạn có ảnh chụp tại thực địa (chính diện tượng, toàn cảnh linh đài) và sẵn lòng cấp phép dưới dạng Creative Commons (CC-BY-SA, CC-BY) hoặc Public Domain, xin hãy đóng góp!
+- **Gửi trực tiếp qua web (Không cần tài khoản GitHub):** Bạn có thể gửi ảnh chụp thực địa, kỷ yếu, bài viết khảo cứu hoặc phản hồi đính chính thông qua biểu mẫu trực tuyến tại **[ducme.vn/lien-he/](https://ducme.vn/lien-he/)**. Hệ thống hỗ trợ đính kèm tối đa 3 tệp (JPG, PNG, WebP, PDF) và cung cấp mã biên nhận theo dõi.
+- **Bổ sung ảnh chụp thực địa qua Pull Request:** Chúng tôi hiện chỉ có 8/18 linh địa có ảnh thực tế xác thực. Nếu bạn có ảnh chụp tại thực địa (chính diện tượng, toàn cảnh linh đài) và sẵn lòng cấp phép dưới dạng Creative Commons (CC-BY-SA, CC-BY) hoặc Public Domain, xin hãy đóng góp!
 - **Hiệu đính & Mở rộng tư liệu:** Cung cấp thêm tư liệu lịch sử, giai thoại xây dựng, sự kiện làm phép tượng từ các kỷ yếu giáo phận hoặc văn khố có thật.
 
 ### B. Báo cáo lỗi (Bug Report)
@@ -88,7 +89,7 @@ Tất cả dữ liệu linh địa được quản lý tập trung tại một n
    ```bash
    npm test
    ```
-   *Tất cả 347 điều kiện kiểm thử phải báo PASS.*
+   *Tất cả 353 điều kiện kiểm thử phải báo PASS.*
 7. Kiểm tra quá trình dựng trang tĩnh (build):
    ```bash
    npm run build

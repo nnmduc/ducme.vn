@@ -12,8 +12,8 @@ public/
   og-default.png             Ảnh chia sẻ dự phòng 1200x630 cho 10 linh địa chưa có ảnh
 
 src/
-  config/site.js             SITE_URL, tên thương hiệu, điều hướng, thứ tự vùng miền.
-                             Đổi tên miền thì sửa DUY NHẤT ở đây.
+  config/site.js             SITE_URL, API_BASE_URL, TURNSTILE_SITE_KEY, tên thương hiệu,
+                             điều hướng, thứ tự vùng miền. Đổi domain sửa ở đây.
 
   data/statues.js            NGUỒN DỮ LIỆU DUY NHẤT. 1077 dòng, hai export ESM:
                              MARIAN_STATUES_DATA (18 linh địa)
@@ -29,7 +29,7 @@ src/
   components/
     SeoHead.astro            Toàn bộ thẻ head. Mọi trang PHẢI dùng, nhờ đó không
                              trang nào thiếu canonical hay thẻ chia sẻ
-    SiteHeader.astro         Điều hướng. Nhãn rút gọn giữ một dòng ở mọi bề ngang
+    SiteHeader.astro         Điều hướng có Drawer menu cho mobile
     SiteFooter.astro
     Breadcrumb.astro
     SourceList.astro         Lưới thẻ nguồn dẫn, rel="nofollow noopener"
@@ -44,6 +44,7 @@ src/
     chom-sao-bac-dau.astro
     ban-do.astro
     gioi-thieu.astro
+    lien-he.astro            Tiếp nhận đóng góp, tệp đính kèm, Turnstile
     404.astro
     robots.txt.js            Endpoint, trỏ sitemap bằng URL tuyệt đối
 
@@ -54,7 +55,20 @@ src/
   assets/real_photos/        8 ảnh thực địa đã xác minh. Nằm trong src/ để
                              astro:assets xử lý được
 
-tests/test_data_and_integrity.js   347 điều kiện. Chạy bằng `npm test`
+worker/                      Cloudflare Worker backend cho /lien-he/
+  src/
+    index.js                 Router, CORS, file proxy HMAC token, rate/size check
+    cors.js                  Middleware CORS whitelist (ducme.vn, localhost:4321)
+    db.js                    Thao tác Cloudflare D1 (chèn submission, kiểm tra health)
+    r2.js                    Upload tệp R2, HMAC SHA-256 preview token, cleanup
+    turnstile.js             Xác thực token Turnstile qua Cloudflare siteverify
+    validator.js             Kiểm tra độ dài text fields, MIME type & magic bytes
+    email.js                 Soạn thảo HTML/Text email, gửi qua binding send_email
+  schema.sql                 DDL SQLite tạo bảng `submissions`
+  wrangler.jsonc             Cấu hình bindings Cloudflare (D1, R2, send_email)
+  scripts/test-submission.js Script kiểm thử API tự động
+
+tests/test_data_and_integrity.js   353 điều kiện. Chạy bằng `npm test`
 ```
 
 ## Điều Cần Biết Trước Khi Sửa
@@ -64,4 +78,7 @@ tests/test_data_and_integrity.js   347 điều kiện. Chạy bằng `npm test`
 - Chữ nghiêng Playfair có right side bearing âm. Mọi đoạn chữ nghiêng trong font hiển thị
   cần `padding-right: 0.14em`, nếu không từ nghiêng sẽ dính vào từ kế tiếp.
 - Giữ `trailingSlash: 'always'`. Liên kết nội bộ và canonical đều dựa vào quy ước này.
-- Trang nội dung phải giữ mức **0 byte JavaScript**. Leaflet chỉ được xuất hiện ở `/ban-do/`.
+- Trang nội dung phải giữ mức **0 byte JavaScript** (ngoại trừ script form và Turnstile ở `/lien-he/`).
+  Leaflet chỉ được xuất hiện ở `/ban-do/`.
+- **An toàn Worker:** Tuyệt đối không commit file `.dev.vars` hoặc secret key; tệp tải lên
+  phải luôn được kiểm định magic bytes ở backend trước khi stream vào Cloudflare R2.

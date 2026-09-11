@@ -1,0 +1,31 @@
+{
+  "name": "ducmevn-feedback-worker",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-11",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "routes": [
+    {
+      "pattern": "api.ducme.vn",
+      "custom_domain": true
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ducmevn_feedback",
+      "database_id": "1eec1d9a-602f-43e8-93db-0ab7522d9c67"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "BUCKET",
+      "bucket_name": "ducmevn-feeback"
+    }
+  ],
+  "send_email": [
+    {
+      "name": "EMAIL"
+    }
+  ]
+}

@@ -12,7 +12,7 @@ const currentPath = Astro.url.pathname;
       <span class="lbl-short">Linh Đài Đức Mẹ</span>
     </a>
 
-    <nav class="nav-links" aria-label="Điều hướng chính">
+    <nav class="nav-links nav-desktop" aria-label="Điều hướng chính">
       {
         NAV_ITEMS.map((item) => (
           <a
@@ -25,8 +25,118 @@ const currentPath = Astro.url.pathname;
         ))
       }
     </nav>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-label="Mở menu điều hướng"
+      aria-expanded="false"
+      aria-controls="mobile-nav-drawer"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+
+  <div id="mobile-nav-drawer" class="nav-drawer" aria-hidden="true">
+    <div class="drawer-backdrop" data-close-drawer></div>
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <span class="drawer-title">{SITE_NAME}</span>
+        <button
+          class="drawer-close"
+          type="button"
+          aria-label="Đóng menu"
+          data-close-drawer
+        >
+          &times;
+        </button>
+      </div>
+
+      <nav class="drawer-nav" aria-label="Điều hướng di động">
+        {
+          NAV_ITEMS.map((item) => (
+            <a
+              href={item.href}
+              class="drawer-link"
+              aria-current={currentPath === item.href ? 'page' : undefined}
+            >
+              <span>{item.label}</span>
+              <span class="drawer-arrow" aria-hidden="true">›</span>
+            </a>
+          ))
+        }
+      </nav>
+
+      <div class="drawer-footer">
+        <p>Bản đồ và tư liệu các trung tâm Thánh Mẫu tại Việt Nam</p>
+      </div>
+    </div>
   </div>
 </header>
+
+<script>
+  function initMobileNav() {
+    const toggleBtn = document.querySelector('.nav-toggle');
+    const drawer = document.getElementById('mobile-nav-drawer');
+    if (!toggleBtn || !drawer) return;
+
+    function openDrawer() {
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      drawer.setAttribute('aria-hidden', 'false');
+      drawer.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      const closeBtn = drawer.querySelector('.drawer-close');
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function closeDrawer() {
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      drawer.setAttribute('aria-hidden', 'true');
+      drawer.classList.remove('is-open');
+      document.body.style.overflow = '';
+      toggleBtn.focus();
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = drawer.classList.contains('is-open');
+      if (isOpen) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+    });
+
+    // Close buttons and backdrop
+    drawer.querySelectorAll('[data-close-drawer]').forEach((el) => {
+      el.addEventListener('click', closeDrawer);
+    });
+
+    // Close when clicking links
+    drawer.querySelectorAll('.drawer-link').forEach((link) => {
+      link.addEventListener('click', closeDrawer);
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+        closeDrawer();
+      }
+    });
+
+    // Close on resize to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 480 && drawer.classList.contains('is-open')) {
+        closeDrawer();
+      }
+    });
+  }
+
+  // Run on page load and Astro view transitions if any
+  initMobileNav();
+  document.addEventListener('astro:page-load', initMobileNav);
+</script>
 
 <style>
   .nav {
@@ -80,14 +190,154 @@ const currentPath = Astro.url.pathname;
     font-weight: 500;
   }
 
-  /* Nhan rut gon giu thanh dieu huong tren MOT dong o moi be ngang.
-     Do o 320/360/390/430px: khong trang nao bi tran ngang. */
   .lbl-short {
     display: none;
   }
+
+  /* Hamburger button */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    cursor: pointer;
+  }
+  .nav-toggle:focus-visible {
+    outline: 2px solid var(--focus-ring);
+  }
+  .nav-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 1px;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  /* Drawer Overlay */
+  .nav-drawer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+  }
+  .nav-drawer.is-open {
+    display: block;
+  }
+  .drawer-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    animation: fadeIn 0.2s ease-out;
+  }
+  .drawer-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 82%;
+    max-width: 320px;
+    background: var(--bg-surface);
+    border-left: 1px solid var(--border-strong);
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.5);
+    animation: slideIn 0.25s ease-out;
+  }
+  .drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 20px;
+  }
+  .drawer-title {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-strong);
+  }
+  .drawer-close {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 6px 10px;
+    min-width: 40px;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+  }
+  .drawer-close:hover {
+    color: var(--text-strong);
+  }
+  .drawer-close:focus-visible {
+    outline: 2px solid var(--focus-ring);
+  }
+  .drawer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+  .drawer-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border-radius: var(--radius);
+    color: var(--text-secondary);
+    font-size: 15px;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  .drawer-link:hover {
+    background: var(--bg-raised);
+    color: var(--text-strong);
+  }
+  .drawer-link[aria-current='page'] {
+    background: var(--bg-raised);
+    color: var(--accent);
+    font-weight: 600;
+    border-left: 3px solid var(--accent);
+  }
+  .drawer-arrow {
+    color: var(--text-tertiary);
+    font-size: 18px;
+  }
+  .drawer-footer {
+    padding-top: 20px;
+    border-top: 1px solid var(--border-subtle);
+    font-size: 12px;
+    color: var(--text-tertiary);
+    line-height: 1.5;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+
   @media (max-width: 800px) {
     .nav-links {
-      gap: 18px;
+      gap: 16px;
       font-size: 13px;
     }
     .brand {
@@ -100,8 +350,8 @@ const currentPath = Astro.url.pathname;
       gap: 8px;
     }
     .nav-links {
-      gap: 14px;
-      font-size: 13px;
+      gap: 12px;
+      font-size: 12.5px;
     }
     .lbl-full {
       display: none;
@@ -110,17 +360,12 @@ const currentPath = Astro.url.pathname;
       display: inline;
     }
   }
-  /* Duoi 400px khong con cho cho ca ba muc.
-     "Gioi thieu" van truy cap duoc tu chan trang. */
-  @media (max-width: 400px) {
-    .brand {
-      font-size: 13px;
-    }
-    .nav-links {
-      gap: 12px;
-    }
-    .nav-links a:last-child {
+  @media (max-width: 480px) {
+    .nav-desktop {
       display: none;
+    }
+    .nav-toggle {
+      display: flex;
     }
   }
 </style>

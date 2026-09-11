@@ -1,0 +1,1063 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+import { MARIAN_STATUES_DATA } from '../data/statues.js';
+import { buildBreadcrumbSchema, absoluteUrl, truncateDescription } from '../lib/seo.js';
+import { SITE_NAME, SITE_LANG, TURNSTILE_SITE_KEY, API_BASE_URL } from '../config/site.js';
+
+const title = 'Liên hệ & Đóng góp tư liệu | Linh Đài Đức Mẹ Việt Nam';
+const description = truncateDescription(
+  'Liên hệ, gửi góp ý đính chính hoặc đóng góp hình ảnh, tư liệu lịch sử về 18 trung tâm hành hương Thánh Mẫu tại Việt Nam.'
+);
+
+const breadcrumbItems = [
+  { name: 'Trang chủ', href: '/' },
+  { name: 'Liên hệ & Góp ý', href: '/lien-he/' },
+];
+
+const contactSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: title,
+  description,
+  url: absoluteUrl('/lien-he/'),
+  inLanguage: SITE_LANG,
+  isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: absoluteUrl('/') },
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  schemas={[contactSchema, buildBreadcrumbSchema(breadcrumbItems)]}
+>
+  <div class="wrap">
+    <Breadcrumb items={breadcrumbItems} />
+
+    <header class="head">
+      <span class="badge" aria-hidden="true">✦ Chung tay lưu trữ</span>
+      <h1>Liên hệ & Đóng góp tư liệu</h1>
+      <p class="lead">
+        Bộ tư liệu <em>Linh Đài Đức Mẹ Việt Nam</em> là dự án phi lợi nhuận hướng đến việc lưu trữ
+        và hệ thống hóa lịch sử các trung tâm Thánh Mẫu. Mọi đóng góp về hình ảnh thực địa, tư liệu xưa,
+        hoặc ý kiến đính chính từ quý độc giả đều vô cùng quý giá.
+      </p>
+    </header>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <section class="info-card">
+          <h2>Các hình thức đóng góp</h2>
+          <ul class="purpose-list">
+            <li>
+              <strong>Đóng góp tư liệu & hình ảnh:</strong>
+              <span>Ảnh thực địa hiện nay, ảnh tư liệu thập niên 1959–1961, tài liệu kỷ yếu, bài viết khảo cứu.</span>
+            </li>
+            <li>
+              <strong>Góp ý & phản hồi:</strong>
+              <span>Đính chính niên đại, tọa độ GPS, sự tích hoặc thông tin chưa chuẩn xác.</span>
+            </li>
+            <li>
+              <strong>Liên hệ chung:</strong>
+              <span>Trao đổi học thuật, chia sẻ tư liệu hoặc đề xuất hợp tác phi lợi nhuận.</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="info-card guidance">
+          <h2>Quy cách tệp đính kèm</h2>
+          <p>
+            Hệ thống hỗ trợ tải lên tối đa <strong>3 tệp tin</strong>, dung lượng tối đa <strong>5 MB mỗi tệp</strong>.
+            Định dạng chấp nhận: <code>JPG</code>, <code>PNG</code>, <code>WebP</code>, <code>PDF</code>.
+          </p>
+          <div class="note-privacy">
+            <span class="icon" aria-hidden="true">🔒</span>
+            <span>Tư liệu tải lên được lưu trữ an toàn và chỉ sử dụng cho mục đích khảo cứu, biên tập nội dung trên trang web.</span>
+          </div>
+        </section>
+      </div>
+
+      <div class="contact-form-container">
+        <!-- Success Alert -->
+        <div id="alert-success" class="form-alert alert-success" role="status" hidden>
+          <div class="alert-icon">✓</div>
+          <div>
+            <h3>Gửi thông tin thành công!</h3>
+            <p>Chân thành cảm ơn sự đóng góp quý báu của quý bạn. Thông tin đã được chuyển đến ban biên tập.</p>
+            <p class="receipt-code">Mã tiếp nhận: <code id="receipt-id"></code></p>
+          </div>
+        </div>
+
+        <!-- Error Alert -->
+        <div id="alert-error" class="form-alert alert-error" role="alert" hidden>
+          <div class="alert-icon">!</div>
+          <div>
+            <h3>Không thể gửi thông tin</h3>
+            <p id="alert-error-msg">Đã có lỗi xảy ra. Vui lòng kiểm tra lại thông tin và thử lại.</p>
+          </div>
+        </div>
+
+        <form id="feedback-form" class="feedback-form" novalidate>
+          <!-- 1. Purpose Selector -->
+          <fieldset class="form-group fieldset-reset">
+            <legend class="form-label">Mục đích gửi <span class="req">*</span></legend>
+            <div class="purpose-radios">
+              <label class="radio-card">
+                <input type="radio" name="type" value="contribution" checked />
+                <span class="radio-label">
+                  <span class="title">Đóng góp tư liệu</span>
+                  <span class="desc">Hình ảnh, bài viết, tài liệu xưa</span>
+                </span>
+              </label>
+
+              <label class="radio-card">
+                <input type="radio" name="type" value="feedback" />
+                <span class="radio-label">
+                  <span class="title">Góp ý & phản hồi</span>
+                  <span class="desc">Đính chính dữ liệu, ý kiến xây dựng</span>
+                </span>
+              </label>
+
+              <label class="radio-card">
+                <input type="radio" name="type" value="contact" />
+                <span class="radio-label">
+                  <span class="title">Liên hệ chung</span>
+                  <span class="desc">Thắc mắc, cộng tác</span>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- 2. Related Statue (Dynamic: for contribution and feedback) -->
+          <div id="statue-group" class="form-group">
+            <label for="statue_id" class="form-label">Linh đài liên quan <span class="opt">(tùy chọn)</span></label>
+            <select id="statue_id" name="statue_id" class="form-control">
+              <option value="">-- Chọn một trong 18 linh đài (nếu có) --</option>
+              {
+                MARIAN_STATUES_DATA.map((s) => (
+                  <option value={s.id}>
+                    {s.name} ({s.diocese})
+                  </option>
+                ))
+              }
+            </select>
+          </div>
+
+          <!-- 3. Sender Info -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" class="form-label">Họ và tên <span class="req">*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                placeholder="VD: Giuse Nguyễn Văn A"
+                required
+                maxlength="100"
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email liên hệ <span class="req">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="VD: example@email.com"
+                required
+                maxlength="100"
+                autocomplete="email"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone" class="form-label">Số điện thoại <span class="opt">(tùy chọn)</span></label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="form-control"
+              placeholder="VD: 0901234567"
+              maxlength="20"
+              autocomplete="tel"
+            />
+          </div>
+
+          <!-- 4. Message -->
+          <div class="form-group">
+            <label for="message" class="form-label">Nội dung tin nhắn / Mô tả tư liệu <span class="req">*</span></label>
+            <textarea
+              id="message"
+              name="message"
+              class="form-control"
+              rows="5"
+              placeholder="Vui lòng chia sẻ chi tiết nguồn gốc ảnh, tài liệu (năm chụp, người chụp) hoặc nội dung góp ý của bạn..."
+              required
+              minlength="10"
+              maxlength="5000"
+            ></textarea>
+            <span class="field-hint">Tối thiểu 10 ký tự, tối đa 5.000 ký tự.</span>
+          </div>
+
+          <!-- 5. File Upload Dropzone -->
+          <div class="form-group">
+            <label for="file-input" class="form-label">Tệp tin đính kèm <span class="opt">(tối đa 3 tệp, 5 MB/tệp)</span></label>
+            <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Tải lên tệp tin">
+              <input
+                type="file"
+                id="file-input"
+                name="file-input"
+                multiple
+                accept=".jpg,.jpeg,.png,.webp,.pdf"
+                class="sr-only"
+              />
+              <div class="dropzone-content">
+                <span class="dropzone-icon" aria-hidden="true">📤</span>
+                <p class="dropzone-title">Kéo & thả tệp tin vào đây, hoặc <span class="dropzone-browse">chọn từ thiết bị</span></p>
+                <p class="dropzone-hint">Định dạng hỗ trợ: JPG, PNG, WebP, PDF (tối đa 5 MB mỗi tệp)</p>
+              </div>
+            </div>
+
+            <!-- File Previews List -->
+            <div id="file-list" class="file-chips" aria-live="polite"></div>
+          </div>
+
+          <!-- 6. Cloudflare Turnstile CAPTCHA -->
+          <div class="form-group turnstile-container">
+            <div class="turnstile-outer">
+              <div
+                class="cf-turnstile"
+                data-sitekey={TURNSTILE_SITE_KEY}
+                data-theme="dark"
+                data-size="flexible"
+              ></div>
+            </div>
+            <div id="turnstile-error" class="field-error" role="alert" hidden>Vui lòng hoàn tất xác thực bảo vệ bên trên.</div>
+          </div>
+
+          <!-- 7. Submit Button -->
+          <div class="form-actions">
+            <button id="submit-btn" type="submit" class="submit-button">
+              <span class="btn-text">Gửi thông tin</span>
+              <span class="btn-spinner" aria-hidden="true" hidden></span>
+            </button>
+            <p class="submit-terms">
+              Bằng việc gửi thông tin, bạn đồng ý cung cấp nội dung trên tinh thần đóng góp xây dựng và chia sẻ cộng đồng.
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<!-- Load Cloudflare Turnstile API asynchronously -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<script define:vars={{ API_BASE_URL, TURNSTILE_SITE_KEY }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('feedback-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnSpinner = submitBtn.querySelector('.btn-spinner');
+    const alertSuccess = document.getElementById('alert-success');
+    const alertError = document.getElementById('alert-error');
+    const alertErrorMsg = document.getElementById('alert-error-msg');
+    const receiptIdEl = document.getElementById('receipt-id');
+    const turnstileErrorEl = document.getElementById('turnstile-error');
+
+    const fileInput = document.getElementById('file-input');
+    const dropzone = document.getElementById('dropzone');
+    const fileListEl = document.getElementById('file-list');
+    const statueGroup = document.getElementById('statue-group');
+    const typeRadios = form.querySelectorAll('input[name="type"]');
+
+    // In-memory state for selected files
+    let selectedFiles = [];
+    const MAX_FILES = 3;
+    const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
+
+    // Toggle statue dropdown based on purpose
+    function updateStatueVisibility() {
+      const selectedType = form.querySelector('input[name="type"]:checked')?.value;
+      if (selectedType === 'contact') {
+        statueGroup.style.display = 'none';
+      } else {
+        statueGroup.style.display = 'block';
+      }
+    }
+    typeRadios.forEach((r) => r.addEventListener('change', updateStatueVisibility));
+    updateStatueVisibility();
+
+    // Helper: format bytes to human readable
+    function formatBytes(bytes) {
+      if (bytes < 1024) return bytes + ' B';
+      const kb = bytes / 1024;
+      if (kb < 1024) return kb.toFixed(1) + ' KB';
+      return (kb / 1024).toFixed(2) + ' MB';
+    }
+
+    // Render file preview chips
+    function renderFileList() {
+      fileListEl.innerHTML = '';
+      if (selectedFiles.length === 0) return;
+
+      selectedFiles.forEach((file, index) => {
+        const chip = document.createElement('div');
+        chip.className = 'file-chip';
+
+        const isPdf = file.name.toLowerCase().endsWith('.pdf');
+        const icon = isPdf ? '📄' : '🖼️';
+
+        chip.innerHTML = `
+          <span class="file-chip-icon" aria-hidden="true">${icon}</span>
+          <span class="file-chip-info">
+            <span class="file-chip-name" title="${file.name}">${file.name}</span>
+            <span class="file-chip-size">${formatBytes(file.size)}</span>
+          </span>
+          <button type="button" class="file-chip-remove" aria-label="Xóa tệp ${file.name}" data-index="${index}">
+            &times;
+          </button>
+        `;
+
+        chip.querySelector('.file-chip-remove').addEventListener('click', (e) => {
+          e.stopPropagation();
+          removeFile(index);
+        });
+
+        fileListEl.appendChild(chip);
+      });
+    }
+
+    function removeFile(index) {
+      selectedFiles.splice(index, 1);
+      renderFileList();
+    }
+
+    function handleNewFiles(files) {
+      alertError.hidden = true;
+      const fileArr = Array.from(files);
+
+      if (selectedFiles.length + fileArr.length > MAX_FILES) {
+        showError(`Chỉ được tải lên tối đa ${MAX_FILES} tệp tin. Vui lòng bỏ bớt.`);
+        return;
+      }
+
+      for (const file of fileArr) {
+        if (file.size > MAX_FILE_SIZE) {
+          showError(`Tệp "${file.name}" vượt quá dung lượng tối đa 5 MB (${formatBytes(file.size)}).`);
+          return;
+        }
+
+        const ext = file.name.split('.').pop()?.toLowerCase();
+        const allowedExts = ['jpg', 'jpeg', 'png', 'webp', 'pdf'];
+        if (!ext || !allowedExts.includes(ext)) {
+          showError(`Tệp "${file.name}" không đúng định dạng hỗ trợ (JPG, PNG, WebP, PDF).`);
+          return;
+        }
+
+        // Avoid exact duplicates
+        const isDuplicate = selectedFiles.some((f) => f.name === file.name && f.size === file.size);
+        if (!isDuplicate) {
+          selectedFiles.push(file);
+        }
+      }
+
+      renderFileList();
+    }
+
+    // Dropzone click & drag-and-drop
+    dropzone.addEventListener('click', (e) => {
+      if (e.target === fileInput) return;
+      fileInput.click();
+    });
+    dropzone.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        fileInput.click();
+      }
+    });
+
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files) {
+        handleNewFiles(fileInput.files);
+        fileInput.value = ''; // Reset input so same file can be re-selected if removed
+      }
+    });
+
+    ['dragenter', 'dragover'].forEach((eventName) => {
+      dropzone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        dropzone.classList.add('is-dragover');
+      });
+    });
+
+    ['dragleave', 'drop'].forEach((eventName) => {
+      dropzone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        dropzone.classList.remove('is-dragover');
+      });
+    });
+
+    dropzone.addEventListener('drop', (e) => {
+      const dt = e.dataTransfer;
+      if (dt && dt.files && dt.files.length > 0) {
+        handleNewFiles(dt.files);
+      }
+    });
+
+    function showError(msg) {
+      alertSuccess.hidden = true;
+      alertErrorMsg.textContent = msg;
+      alertError.hidden = false;
+      alertError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function resetTurnstile() {
+      if (window.turnstile && typeof window.turnstile.reset === 'function') {
+        try {
+          window.turnstile.reset();
+        } catch (e) {
+          console.warn('Turnstile reset error:', e);
+        }
+      }
+    }
+
+    // Form submission handler
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      alertSuccess.hidden = true;
+      alertError.hidden = true;
+      turnstileErrorEl.hidden = true;
+
+      // Basic client HTML5 validation check
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // Check Turnstile token
+      const isLocalhost =
+        window.location.hostname === 'localhost' ||
+        window.location.hostname === '127.0.0.1';
+
+      let turnstileToken = '';
+      if (window.turnstile && typeof window.turnstile.getResponse === 'function') {
+        turnstileToken = window.turnstile.getResponse();
+      }
+      if (!turnstileToken) {
+        const tokenInput = form.querySelector('[name="cf-turnstile-response"]');
+        if (tokenInput) turnstileToken = tokenInput.value;
+      }
+
+      // Dev bypass support for local development
+      if (!turnstileToken && isLocalhost) {
+        turnstileToken = 'dev-bypass';
+      }
+
+      if (!turnstileToken) {
+        turnstileErrorEl.hidden = false;
+        turnstileErrorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      // Prepare FormData
+      const formData = new FormData(form);
+      formData.delete('file-input');
+      formData.delete('files');
+      selectedFiles.forEach((file) => {
+        formData.append('files', file);
+      });
+
+      // Submit state
+      submitBtn.disabled = true;
+      submitBtn.setAttribute('aria-busy', 'true');
+      btnText.textContent = 'Đang gửi thông tin...';
+      btnSpinner.hidden = false;
+
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/submissions`, {
+          method: 'POST',
+          headers: {
+            'X-Turnstile-Token': turnstileToken,
+          },
+          body: formData,
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+          // Success
+          receiptIdEl.textContent = data.id || 'N/A';
+          alertSuccess.hidden = false;
+          alertSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+          form.reset();
+          selectedFiles = [];
+          renderFileList();
+          updateStatueVisibility();
+          resetTurnstile();
+        } else {
+          // Failure with API error
+          const errorMsg = data.error || (data.errors && data.errors.join('. ')) || 'Gửi thất bại, vui lòng thử lại';
+          showError(errorMsg);
+          // Red Team #8: Always reset Turnstile token to avoid deadlocks
+          resetTurnstile();
+        }
+      } catch (err) {
+        console.error('Submission fetch error:', err);
+        showError('Không thể kết nối đến máy chủ tiếp nhận. Vui lòng kiểm tra kết nối internet và thử lại sau.');
+        // Reset turnstile on network failure
+        resetTurnstile();
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.removeAttribute('aria-busy');
+        btnText.textContent = 'Gửi thông tin';
+        btnSpinner.hidden = true;
+      }
+    });
+  });
+</script>
+
+<style>
+  .head {
+    padding-top: 16px;
+    padding-bottom: 36px;
+    max-width: 780px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: var(--font-ui);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .head h1 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    color: var(--text-strong);
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+  .head .lead {
+    font-family: var(--font-prose);
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text-secondary);
+  }
+  .head .lead em {
+    color: var(--accent);
+    font-style: normal;
+  }
+
+  /* Two Column Layout */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 40px;
+    align-items: start;
+    padding-bottom: 80px;
+  }
+
+  /* Left Column: Info Cards */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .info-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 24px;
+  }
+  .info-card h2 {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 16px;
+  }
+  .purpose-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .purpose-list li strong {
+    display: block;
+    font-family: var(--font-ui);
+    font-size: 14.5px;
+    color: var(--text-strong);
+    margin-bottom: 4px;
+  }
+  .purpose-list li span {
+    font-family: var(--font-prose);
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+  .guidance p {
+    font-family: var(--font-prose);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+  }
+  .guidance code {
+    background: var(--bg-raised);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    color: var(--accent);
+  }
+  .note-privacy {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 12px 14px;
+    background: var(--bg-raised);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+
+  /* Right Column: Form */
+  .contact-form-container {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 32px;
+  }
+
+  /* Form Alerts */
+  .form-alert {
+    display: flex;
+    gap: 16px;
+    padding: 18px 20px;
+    border-radius: var(--radius);
+    margin-bottom: 24px;
+    animation: fadeIn 0.25s ease-out;
+  }
+  .alert-success {
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid var(--status-success);
+    color: var(--slate-100);
+  }
+  .alert-success .alert-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--status-success);
+    color: #061910;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  .alert-error {
+    background: rgba(244, 63, 94, 0.12);
+    border: 1px solid var(--status-error);
+    color: var(--slate-100);
+  }
+  .alert-error .alert-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--status-error);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  .form-alert h3 {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .form-alert p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+  .receipt-code {
+    margin-top: 8px !important;
+    font-size: 13px !important;
+  }
+  .receipt-code code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 3px 8px;
+    border-radius: 3px;
+    color: var(--accent);
+    font-family: monospace;
+    font-size: 13px;
+  }
+
+  /* Form Elements */
+  .feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .fieldset-reset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .form-label {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .form-label .req {
+    color: var(--status-error);
+  }
+  .form-label .opt {
+    font-weight: normal;
+    font-size: 12.5px;
+    color: var(--text-tertiary);
+  }
+  .field-hint {
+    font-size: 12px;
+    color: var(--text-tertiary);
+  }
+  .field-error {
+    font-size: 13px;
+    color: var(--status-error);
+    margin-top: 4px;
+  }
+
+  /* Purpose Radio Cards */
+  .purpose-radios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+  .radio-card {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  .radio-card input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .radio-label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 12px;
+    background: var(--bg-raised);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    transition: border-color 0.15s, background-color 0.15s;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .radio-label .title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .radio-label .desc {
+    font-size: 11.5px;
+    color: var(--text-tertiary);
+    line-height: 1.4;
+  }
+  .radio-card input:checked + .radio-label {
+    border-color: var(--accent);
+    background: rgba(245, 158, 11, 0.08);
+  }
+  .radio-card input:checked + .radio-label .title {
+    color: var(--accent);
+  }
+  .radio-card input:focus-visible + .radio-label {
+    outline: 2px solid var(--focus-ring);
+  }
+
+  /* Text Controls */
+  .form-control {
+    width: 100%;
+    padding: 11px 14px;
+    background: var(--bg-page);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    color: var(--text-primary);
+    font-family: var(--font-ui);
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .form-control:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+  }
+  .form-control::placeholder {
+    color: var(--text-tertiary);
+  }
+  textarea.form-control {
+    font-family: var(--font-prose);
+    line-height: 1.6;
+    resize: vertical;
+  }
+  select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M8 11.5l-5-5h10l-5 5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+  }
+
+  /* File Dropzone */
+  .dropzone {
+    border: 2px dashed var(--border-strong);
+    border-radius: var(--radius);
+    padding: 24px 16px;
+    text-align: center;
+    background: var(--bg-page);
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+  }
+  .dropzone:hover,
+  .dropzone.is-dragover {
+    border-color: var(--accent);
+    background: rgba(245, 158, 11, 0.04);
+  }
+  .dropzone:focus-visible {
+    outline: 2px solid var(--focus-ring);
+  }
+  .dropzone-icon {
+    font-size: 26px;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .dropzone-title {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    color: var(--text-primary);
+    margin: 0 0 4px 0;
+  }
+  .dropzone-browse {
+    color: var(--accent);
+    text-decoration: underline;
+    font-weight: 500;
+  }
+  .dropzone-hint {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    margin: 0;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  /* File Chips */
+  .file-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .file-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-raised);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    padding: 6px 12px;
+    font-size: 13px;
+    max-width: 100%;
+    box-sizing: border-box;
+    animation: fadeIn 0.2s ease-out;
+  }
+  .file-chip-icon {
+    font-size: 14px;
+  }
+  .file-chip-info {
+    display: flex;
+    gap: 6px;
+    align-items: baseline;
+    overflow: hidden;
+    min-width: 0;
+    flex: 1;
+  }
+  .file-chip-name {
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+    min-width: 0;
+  }
+  .file-chip-size {
+    color: var(--text-tertiary);
+    font-size: 11.5px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .file-chip-remove {
+    background: transparent;
+    border: none;
+    color: var(--text-tertiary);
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 4px;
+    margin-left: 4px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .file-chip-remove:hover {
+    color: var(--status-error);
+  }
+  .file-chip-remove:focus-visible {
+    outline: 2px solid var(--focus-ring);
+  }
+
+  /* Turnstile Container (Red Team #10) */
+  .turnstile-container {
+    margin-top: 6px;
+  }
+  .turnstile-outer {
+    max-width: 100%;
+    overflow: hidden;
+    min-height: 65px;
+  }
+
+  /* Submit Button & Actions */
+  .form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border: none;
+    border-radius: var(--radius);
+    padding: 14px 28px;
+    font-family: var(--font-ui);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s, transform 0.1s;
+  }
+  .submit-button:hover:not(:disabled) {
+    background: var(--accent-hover);
+  }
+  .submit-button:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+  .submit-button:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+  .submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  .btn-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--accent-ink);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  .submit-terms {
+    font-size: 12.5px;
+    color: var(--text-tertiary);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 960px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .contact-info {
+      order: 2;
+    }
+    .contact-form-container {
+      order: 1;
+      padding: 24px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+    .purpose-radios {
+      grid-template-columns: 1fr;
+    }
+    .contact-form-container {
+      padding: 20px 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .file-chip-name {
+      max-width: 120px;
+    }
+  }
+</style>
