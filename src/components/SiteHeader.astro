@@ -38,43 +38,43 @@ const currentPath = Astro.url.pathname;
       <span class="bar"></span>
     </button>
   </div>
+</header>
 
-  <div id="mobile-nav-drawer" class="nav-drawer" aria-hidden="true">
-    <div class="drawer-backdrop" data-close-drawer></div>
-    <div class="drawer-panel">
-      <div class="drawer-header">
-        <span class="drawer-title">{SITE_NAME}</span>
-        <button
-          class="drawer-close"
-          type="button"
-          aria-label="Đóng menu"
-          data-close-drawer
-        >
-          &times;
-        </button>
-      </div>
+<div id="mobile-nav-drawer" class="nav-drawer" aria-hidden="true">
+  <div class="drawer-backdrop" data-close-drawer></div>
+  <div class="drawer-panel">
+    <div class="drawer-header">
+      <span class="drawer-title">{SITE_NAME}</span>
+      <button
+        class="drawer-close"
+        type="button"
+        aria-label="Đóng menu"
+        data-close-drawer
+      >
+        &times;
+      </button>
+    </div>
 
-      <nav class="drawer-nav" aria-label="Điều hướng di động">
-        {
-          NAV_ITEMS.map((item) => (
-            <a
-              href={item.href}
-              class="drawer-link"
-              aria-current={currentPath === item.href ? 'page' : undefined}
-            >
-              <span>{item.label}</span>
-              <span class="drawer-arrow" aria-hidden="true">›</span>
-            </a>
-          ))
-        }
-      </nav>
+    <nav class="drawer-nav" aria-label="Điều hướng di động">
+      {
+        NAV_ITEMS.map((item) => (
+          <a
+            href={item.href}
+            class="drawer-link"
+            aria-current={currentPath === item.href ? 'page' : undefined}
+          >
+            <span>{item.label}</span>
+            <span class="drawer-arrow" aria-hidden="true">›</span>
+          </a>
+        ))
+      }
+    </nav>
 
-      <div class="drawer-footer">
-        <p>Bản đồ và tư liệu các trung tâm Thánh Mẫu tại Việt Nam</p>
-      </div>
+    <div class="drawer-footer">
+      <p>Bản đồ và tư liệu các trung tâm Thánh Mẫu tại Việt Nam</p>
     </div>
   </div>
-</header>
+</div>
 
 <script>
   function initMobileNav() {
