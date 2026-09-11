@@ -15,8 +15,8 @@ src/
   config/site.js             SITE_URL, API_BASE_URL, TURNSTILE_SITE_KEY, tên thương hiệu,
                              điều hướng, thứ tự vùng miền. Đổi domain sửa ở đây.
 
-  data/statues.js            NGUỒN DỮ LIỆU DUY NHẤT. 1077 dòng, hai export ESM:
-                             MARIAN_STATUES_DATA (18 linh địa)
+  data/statues.js            NGUỒN DỮ LIỆU DUY NHẤT. Hai export ESM:
+                             MARIAN_STATUES_DATA (mảng linh địa, số lượng = .length)
                              CONSTELLATION_VERSIONS (4 phiên bản chòm sao)
 
   lib/statues.js             Hàm dẫn xuất: tách tỉnh từ địa chỉ, gom vùng miền,
@@ -33,14 +33,14 @@ src/
     SiteFooter.astro
     Breadcrumb.astro
     SourceList.astro         Lưới thẻ nguồn dẫn, rel="nofollow noopener"
-    StatueIndex.astro        18 linh địa gom theo vùng miền. Khối nội dung SEO
+    StatueIndex.astro        Toàn bộ linh địa gom theo vùng miền. Khối nội dung SEO
                              quan trọng nhất của trang chủ
     ConstellationDiagram.astro  Sơ đồ SVG chòm Bắc Đẩu, nhãn đọc từ dữ liệu
     MarianMap.astro          Đảo tương tác. Leaflet, chòm sao, dòng thời gian, bộ lọc
 
   pages/
     index.astro              Trang chủ
-    linh-dai/[id].astro      18 trang chi tiết qua getStaticPaths
+    linh-dai/[id].astro      Một trang chi tiết cho mỗi linh địa, qua getStaticPaths
     chom-sao-bac-dau.astro
     ban-do.astro
     gioi-thieu.astro

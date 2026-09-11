@@ -2,6 +2,7 @@
  * Hang so toan trang. Doi domain hay ten thuong hieu thi sua DUY NHAT o day.
  * astro.config.mjs, canonical, sitemap, og:url va JSON-LD deu doc tu file nay.
  */
+import { MARIAN_STATUES_DATA } from '../data/statues.js';
 
 /** Khong co dau "/" o cuoi. Astro tu noi duong dan. */
 export const SITE_URL = 'https://ducme.vn';
@@ -12,7 +13,7 @@ export const SITE_TAGLINE =
   'Bản đồ và tư liệu các trung tâm Thánh Mẫu tại Việt Nam';
 
 export const SITE_DESCRIPTION =
-  'Tư liệu lịch sử, tọa độ và ảnh xác thực của 18 trung tâm hành hương Đức Mẹ ' +
+  `Tư liệu lịch sử, tọa độ và ảnh xác thực của ${MARIAN_STATUES_DATA.length} trung tâm hành hương Đức Mẹ ` +
   'trên khắp các giáo phận Việt Nam, từ năm 1798 đến nay.';
 
 export const SITE_LOCALE = 'vi_VN';
@@ -20,8 +21,8 @@ export const SITE_LANG = 'vi';
 
 /**
  * Anh chia se mang xa hoi dung chung.
- * Can thiet vi 10 trong 18 linh dia chua co anh thuc dia da xac minh,
- * nhung moi trang van phai co og:image hop le.
+ * Can thiet vi mot so linh dia chua co anh thuc dia da xac minh (xem truong
+ * `realImage` trong src/data/statues.js), nhung moi trang van phai co og:image hop le.
  */
 export const OG_FALLBACK_IMAGE = '/og-default.png';
 export const OG_IMAGE_WIDTH = 1200;

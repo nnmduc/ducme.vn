@@ -14,8 +14,8 @@ cũ đã bị loại bỏ hoàn toàn.
 
 | Đường dẫn | Số trang | Nội dung |
 |---|---|---|
-| `/` | 1 | Trang chủ. Toàn bộ 18 linh địa dưới dạng HTML thật, gom theo vùng miền |
-| `/linh-dai/[id]/` | 18 | Trang tư liệu đầy đủ. Bề mặt xếp hạng chính |
+| `/` | 1 | Trang chủ. Toàn bộ linh địa dưới dạng HTML thật, gom theo vùng miền |
+| `/linh-dai/[id]/` | 1/linh địa | Trang tư liệu đầy đủ. Bề mặt xếp hạng chính |
 | `/chom-sao-bac-dau/` | 1 | Bốn phiên bản của giả thuyết Bắc Đẩu |
 | `/ban-do/` | 1 | Bản đồ tương tác. Nơi duy nhất nạp Leaflet |
 | `/gioi-thieu/` | 1 | Phương pháp khảo cứu, nguyên tắc về ảnh, cách dẫn nguồn |
@@ -93,7 +93,7 @@ Component **chỉ được** tham chiếu lớp ngữ nghĩa. Thêm theme sáng 
 ## 6. Dữ Liệu Có Cấu Trúc
 
 - Trang chi tiết: `TouristAttraction` kèm `geo`, `address`, `image`, cộng `BreadcrumbList`.
-- Trang chủ: `WebSite` và `ItemList` liệt kê cả 18 linh địa.
+- Trang chủ: `WebSite` và `ItemList` liệt kê toàn bộ linh địa (`numberOfItems` tính động).
 - `/gioi-thieu/`: `AboutPage`.
 - `/lien-he/`: `ContactPage` kèm `BreadcrumbList`.
 

@@ -976,7 +976,7 @@ export const CONSTELLATION_VERSIONS = {
     "id": "v4",
     "name": "Phiên Bản 4: Toàn Cảnh Các Linh Địa Thánh Mẫu Việt Nam (Bắc - Trung - Nam)",
     "shortName": "V4: Toàn Quốc Xuyên Việt",
-    "tagline": "Mạng lưới 18+ Đại Trung tâm Thánh Mẫu trải dài dọc chiều dài dải đất hình chữ S",
+    "tagline": "Mạng lưới các Đại Trung tâm Thánh Mẫu trải dài dọc chiều dài dải đất hình chữ S",
     "description": "Từ Đền Thánh Phú Nhai (Nam Định), Núi Cơm (Hà Tĩnh), La Vang (Quảng Trị), Trà Kiệu, Sao Biển (Đà Nẵng), qua Măng Đen, Giang Sơn Tây Nguyên, xuống Tà Pao, Núi Cúi, Bãi Dâu, Nhà Thờ Đức Bà Sài Gòn, La Mã Bến Tre và Hòn Chông Kiên Giang.",
     "badge": "Hành Hương Xuyên Việt",
     "color": "#10b981",

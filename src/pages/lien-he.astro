@@ -8,7 +8,7 @@ import { SITE_NAME, SITE_LANG, TURNSTILE_SITE_KEY, API_BASE_URL } from '../confi
 
 const title = 'Liên hệ & Đóng góp tư liệu | Linh Đài Đức Mẹ Việt Nam';
 const description = truncateDescription(
-  'Liên hệ, gửi góp ý đính chính hoặc đóng góp hình ảnh, tư liệu lịch sử về 18 trung tâm hành hương Thánh Mẫu tại Việt Nam.'
+  `Liên hệ, gửi góp ý đính chính hoặc đóng góp hình ảnh, tư liệu lịch sử về ${MARIAN_STATUES_DATA.length} trung tâm hành hương Thánh Mẫu tại Việt Nam.`
 );
 
 const breadcrumbItems = [
@@ -133,7 +133,7 @@ const contactSchema = {
           <div id="statue-group" class="form-group">
             <label for="statue_id" class="form-label">Linh đài liên quan <span class="opt">(tùy chọn)</span></label>
             <select id="statue_id" name="statue_id" class="form-control">
-              <option value="">-- Chọn một trong 18 linh đài (nếu có) --</option>
+              <option value="">-- Chọn một trong {MARIAN_STATUES_DATA.length} linh đài (nếu có) --</option>
               {
                 MARIAN_STATUES_DATA.map((s) => (
                   <option value={s.id}>
