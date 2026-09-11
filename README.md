@@ -6,7 +6,7 @@
 [![Tests](https://img.shields.io/badge/Tests-353%20passing-brightgreen.svg)](#kiểm-thử-toàn-vẹn-dữ-liệu)
 [![Website](https://img.shields.io/badge/Website-ducme.vn-blue.svg)](https://ducme.vn)
 
-Nền tảng web tư liệu số và bản đồ tương tác về **18 trung tâm hành hương Thánh Mẫu tại Việt Nam**, từ năm 1798 đến nay. Dự án khảo cứu lịch sử 5 pho tượng Đức Mẹ thời Đệ nhất Cộng hòa (1959–1961) và kiểm chứng giả thuyết dân gian về việc các linh đài được xếp theo hình thế chòm sao Bắc Đẩu.
+Nền tảng web tư liệu số và bản đồ tương tác về **các trung tâm hành hương Thánh Mẫu tại Việt Nam** (hiện có 18, số liệu tính động từ `src/data/statues.js`), từ năm 1798 đến nay. Dự án khảo cứu lịch sử 5 pho tượng Đức Mẹ thời Đệ nhất Cộng hòa (1959–1961) và kiểm chứng giả thuyết dân gian về việc các linh đài được xếp theo hình thế chòm sao Bắc Đẩu.
 
 🌐 **Trang web chính thức:** [https://ducme.vn](https://ducme.vn)
 
@@ -52,8 +52,8 @@ Nền tảng web tư liệu số và bản đồ tương tác về **18 trung t�
 ## 2. Tính năng chính
 
 - **23 trang tĩnh chuyên sâu:**
-  - **Trang chủ (`/`):** Tổng quan dự án, mục lục toàn bộ 18 linh đài theo 6 vùng miền địa lý, bản đồ thu nhỏ dẫn đến ứng dụng bản đồ lớn.
-  - **18 trang chi tiết linh địa (`/linh-dai/[id]/`):** Tư liệu lịch sử, kiến trúc, tọa độ địa lý, chỉ đường Google Maps, vai trò trong các phiên bản chòm sao, danh mục nguồn dẫn học thuật.
+  - **Trang chủ (`/`):** Tổng quan dự án, mục lục toàn bộ linh đài theo 6 vùng miền địa lý, bản đồ thu nhỏ dẫn đến ứng dụng bản đồ lớn.
+  - **Trang chi tiết linh địa (`/linh-dai/[id]/`), một trang cho mỗi bản ghi trong dữ liệu:** Tư liệu lịch sử, kiến trúc, tọa độ địa lý, chỉ đường Google Maps, vai trò trong các phiên bản chòm sao, danh mục nguồn dẫn học thuật.
   - **Khảo cứu chòm sao Bắc Đẩu (`/chom-sao-bac-dau/`):** Phân tích 4 phiên bản chòm sao (V1 kinh điển 1959–1961, V2 biến thể Măng Đen, V3 bộ 5 tượng Đệ nhất Cộng hòa, V4 tuyến Thánh Mẫu toàn quốc).
   - **Bản đồ tương tác toàn màn hình (`/ban-do/`):** Bản đồ Leaflet với lớp nền OpenStreetMap đảo màu bảo vệ thị lực, thanh dòng thời gian 1798–2026 có chế độ tự phát (Auto Play), tìm kiếm và lọc theo thời kỳ / khu vực / chòm sao.
   - **Trang giới thiệu & Phương pháp luận (`/gioi-thieu/`):** Minh bạch phương pháp nghiên cứu, chính sách trích dẫn và tiêu chuẩn bản quyền.
@@ -113,7 +113,7 @@ tuong-duc-me/
 │   ├── assets/real_photos/       # Kho ảnh chụp thực địa đã kiểm chứng
 │   ├── components/               # Các Astro component (SeoHead, MarianMap, SiteHeader...)
 │   ├── config/site.js            # Cấu hình hằng số toàn trang (SITE_URL, API_BASE_URL, Turnstile)
-│   ├── data/statues.js           # Single Source of Truth (dữ liệu 18 linh đài và các chòm sao)
+│   ├── data/statues.js           # Single Source of Truth (dữ liệu toàn bộ linh đài và các chòm sao)
 │   ├── layouts/BaseLayout.astro  # Layout dùng chung cho toàn bộ trang
 │   ├── lib/                      # Các hàm trợ giúp xử lý dữ liệu, ảnh, SEO
 │   ├── pages/                    # Định tuyến tĩnh (index, linh-dai/[id], ban-do, lien-he...)

@@ -101,7 +101,7 @@ export function buildBreadcrumbSchema(items) {
   };
 }
 
-/** Danh sach 18 linh dia cho trang chu. */
+/** Danh sach toan bo linh dia cho trang chu (so luong lay dong tu du lieu). */
 export function buildItemListSchema() {
   return {
     '@context': 'https://schema.org',

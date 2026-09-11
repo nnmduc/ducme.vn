@@ -89,7 +89,7 @@ thang bán kính.
 
 - **Không dùng ảnh do máy tạo sinh.** Tuyệt đối. Với tư liệu về công trình thật ở địa điểm thật, ảnh
   dựng bằng máy phá hỏng đúng thứ bộ tư liệu tồn tại để bảo vệ.
-- **Không dùng ảnh mẫu thay thế.** Linh địa chưa có ảnh xác thực thì để trống. Hiện 8 trong 18 có ảnh.
+- **Không dùng ảnh mẫu thay thế.** Linh địa chưa có ảnh xác thực thì để trống (`realImage: null`). Số lượng linh địa đã có ảnh tính động từ `src/data/statues.js`.
 - **Không cắt xén chủ thể.** Ảnh hiện nguyên khung, đặt giữa một nền phẳng, giới hạn chiều cao, giữ
   nguyên tỷ lệ gốc. Khung 16:9 cắt mất đầu pho tượng ở các ảnh dọc, nên đã bị loại bỏ.
 - Chú thích ảnh luôn ghi nguồn.

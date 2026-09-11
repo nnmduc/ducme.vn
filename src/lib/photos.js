@@ -3,7 +3,8 @@
  *
  * Nguyen tac cua du an: KHONG dung anh tao boi AI. Chi dung anh thuc dia da
  * xac minh nguon. Linh dia nao chua co anh thi de trong, khong chen anh thay the.
- * Hien co 8 trong 18 ban ghi mang truong `realImage`.
+ * Mot phan ban ghi trong src/data/statues.js mang truong `realImage`, phan con
+ * lai de `null` cho den khi co anh xac thuc.
  *
  * Anh nam trong src/assets de duong ong astro:assets xu ly duoc (nen lai,
  * xuat AVIF/WebP, sinh srcset). Neu de trong thu muc public/ thi anh se duoc

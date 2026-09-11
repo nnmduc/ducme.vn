@@ -29,7 +29,7 @@ Khi tham gia vào dự án này, bạn đồng ý tuân thủ bản **[Quy tắc
 ### A. Đóng góp tư liệu & Hình ảnh thực địa
 Đây là mảng đóng góp được **ưu tiên cao nhất**. Nhiều linh địa hiện vẫn còn thiếu ảnh chụp thực tế hoặc phần văn bản lịch sử còn ngắn:
 - **Gửi trực tiếp qua web (Không cần tài khoản GitHub):** Bạn có thể gửi ảnh chụp thực địa, kỷ yếu, bài viết khảo cứu hoặc phản hồi đính chính thông qua biểu mẫu trực tuyến tại **[ducme.vn/lien-he/](https://ducme.vn/lien-he/)**. Hệ thống hỗ trợ đính kèm tối đa 3 tệp (JPG, PNG, WebP, PDF) và cung cấp mã biên nhận theo dõi.
-- **Bổ sung ảnh chụp thực địa qua Pull Request:** Chúng tôi hiện chỉ có 8/18 linh địa có ảnh thực tế xác thực. Nếu bạn có ảnh chụp tại thực địa (chính diện tượng, toàn cảnh linh đài) và sẵn lòng cấp phép dưới dạng Creative Commons (CC-BY-SA, CC-BY) hoặc Public Domain, xin hãy đóng góp!
+- **Bổ sung ảnh chụp thực địa qua Pull Request:** Hiện vẫn còn nhiều linh địa chưa có ảnh thực tế xác thực (xem các bản ghi có `realImage: null` trong `src/data/statues.js` để biết danh sách cụ thể). Nếu bạn có ảnh chụp tại thực địa (chính diện tượng, toàn cảnh linh đài) và sẵn lòng cấp phép dưới dạng Creative Commons (CC-BY-SA, CC-BY) hoặc Public Domain, xin hãy đóng góp!
 - **Hiệu đính & Mở rộng tư liệu:** Cung cấp thêm tư liệu lịch sử, giai thoại xây dựng, sự kiện làm phép tượng từ các kỷ yếu giáo phận hoặc văn khố có thật.
 
 ### B. Báo cáo lỗi (Bug Report)
@@ -56,9 +56,9 @@ Tất cả dữ liệu linh địa được quản lý tập trung tại một n
    - URL nguồn phải dùng giao thức `https://` và phải trỏ trực tiếp đến bài viết hoặc kết quả truy vấn liên quan cụ thể (không được dùng domain gốc không có ngữ cảnh, ví dụ `https://wikipedia.org` là không hợp lệ).
    - Phân định rạch ròi giữa sự kiện lịch sử kiểm chứng được (`historicalFact`) và truyền tụng dân gian (`oralTradition`).
 
-3. **Tọa độ địa lý GPS (`coords`):**
-   - Phải có dạng mảng `[vĩ độ, kinh độ]`, ví dụ `[16.7214, 107.1947]`.
-   - Bắt buộc nằm trong phạm vi địa lý hợp lệ của lãnh thổ Việt Nam.
+3. **Tọa độ địa lý GPS (`lat`, `lng`):**
+   - Hai trường số riêng biệt, ví dụ `"lat": 16.7214, "lng": 107.1947`.
+   - Bắt buộc nằm trong phạm vi lãnh thổ Việt Nam: vĩ độ (`lat`) từ 8.5 đến 23.5, kinh độ (`lng`) từ 102.0 đến 110.0.
 
 4. **Định danh (`id`):**
    - Viết thường, không dấu, không khoảng trắng, chỉ dùng chữ cái và số (ví dụ: `lavang`, `trakieu`, `mangden`).

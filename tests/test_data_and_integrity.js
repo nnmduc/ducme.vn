@@ -23,8 +23,12 @@ function assert(condition, message) {
   }
 }
 
-console.log('--- 1. KIỂM TRA BỘ DỮ LIỆU TƯỢNG ĐỨC MẸ (18+ TƯỢNG) ---');
-assert(Array.isArray(statues) && statues.length >= 18, `Số lượng tượng phải >= 18 (hiện có: ${statues.length})`);
+console.log(`--- 1. KIỂM TRA BỘ DỮ LIỆU TƯỢNG ĐỨC MẸ (${statues.length} TƯỢNG) ---`);
+const MIN_STATUE_COUNT = 18;
+assert(
+  Array.isArray(statues) && statues.length >= MIN_STATUE_COUNT,
+  `Số lượng tượng phải >= ${MIN_STATUE_COUNT} (hiện có: ${statues.length})`
+);
 
 const idSet = new Set();
 statues.forEach(s => {

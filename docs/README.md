@@ -11,11 +11,12 @@ JavaScript. Đây là điều kiện để tư liệu tìm thấy được, và 
 cũ (một trang tĩnh duy nhất, nội dung chỉ hiện sau khi bấm mở hộp thoại).
 
 **Không dùng ảnh do máy tạo sinh.** Chỉ ảnh chụp thực địa đã xác minh nguồn, phần lớn từ Wikimedia
-Commons. Linh địa chưa có ảnh thì để trống. Hiện 8 trong 18 có ảnh.
+Commons. Linh địa chưa có ảnh thì để trống (`realImage: null` trong `src/data/statues.js`). Số
+lượng linh địa đã có ảnh luôn có thể tính động bằng cách đếm các bản ghi có `realImage` khác `null`.
 
 ## 2. Tính Năng
 
-- **23 trang tĩnh**: trang chủ, 18 trang linh địa, khảo cứu Bắc Đẩu, bản đồ, giới thiệu, liên hệ & góp ý (`/lien-he/`).
+- **Trang tĩnh**: trang chủ, một trang chi tiết cho mỗi linh địa, khảo cứu Bắc Đẩu, bản đồ, giới thiệu, liên hệ & góp ý (`/lien-he/`).
 - **Bản đồ tương tác** tại `/ban-do/`: Leaflet, lớp phủ chòm sao bật tắt được, dòng thời gian
   1798 tới 2026 có chạy tự động, tìm kiếm và lọc đa tiêu chí, nhãn chủ quyền biển đảo.
 - **Trang Liên hệ & Góp ý** tại `/lien-he/`: Biểu mẫu tiếp nhận phản hồi, đính chính tư liệu, tải lên

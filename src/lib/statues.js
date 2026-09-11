@@ -10,7 +10,7 @@ import { REGION_ORDER } from '../config/site.js';
  * Tach ten tinh hoac thanh pho tu chuoi dia chi day du.
  *
  * Quy tac: bo phan trong ngoac don, lay doan cuoi sau dau phay, bo tien to
- * hanh chinh. Da doi chieu dung voi ca 18 ban ghi hien co.
+ * hanh chinh. Da doi chieu dung voi toan bo ban ghi hien co.
  *
  *   "Xa Dong Kho, huyen Tanh Linh, tinh Binh Thuan"        -> "Bình Thuận"
  *   "... quan Son Tra, TP. Da Nang"                        -> "Đà Nẵng"

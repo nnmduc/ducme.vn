@@ -1,6 +1,7 @@
 ---
 /**
- * Trang chi tiet mot linh dia. 18 trang tinh, sinh tu du lieu.
+ * Trang chi tiet mot linh dia. Cac trang tinh duoc sinh tu du lieu,
+ * so luong bang MARIAN_STATUES_DATA.length.
  *
  * Day la be mat xep hang chinh cua toan trang. Toan bo van xuoi
  * (historicalFact, architect, oralTradition, significance) va danh muc nguon
@@ -57,9 +58,10 @@ const breadcrumbItems = [
 ];
 
 /**
- * og:image phai la URL tuyet doi. 10 trong 18 ban ghi chua co anh thuc dia,
- * nhung trang nao cung phai co the chia se hop le, nen SeoHead se tu lui ve
- * anh mac dinh khi khong truyen gi.
+ * og:image phai la URL tuyet doi. Mot so ban ghi chua co anh thuc dia (xem
+ * truong `realImage` trong src/data/statues.js), nhung trang nao cung phai
+ * co the chia se hop le, nen SeoHead se tu lui ve anh mac dinh khi khong
+ * truyen gi.
  */
 const ogImage = photo ? absoluteUrl(photo.src) : undefined;
 
@@ -329,7 +331,7 @@ const proseSections = [
     gap: 1px;
     margin-block: 48px;
   }
-  /* 10 trong 18 linh dia chua co anh xac thuc. Khi khong co khoi anh chen giua,
+  /* Mot so linh dia chua co anh xac thuc. Khi khong co khoi anh chen giua,
      padding duoi cua .head va margin tren cua .specs cong don thanh khoang
      trong gan 90px. Chon lop lien ke de khep lai. */
   .head + .specs {
