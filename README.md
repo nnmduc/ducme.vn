@@ -128,8 +128,8 @@ tuong-duc-me/
 
 ```bash
 # 1. Sao chép kho mã nguồn
-git clone https://github.com/peter/tuong-duc-me.git
-cd tuong-duc-me
+git clone https://github.com/nnmduc/ducme.vn.git
+cd ducme.vn
 
 # 2. Cài đặt các gói phụ thuộc
 npm install
@@ -209,7 +209,8 @@ Thư mục [`docs/`](docs/) chứa toàn bộ các tài liệu kiến trúc và 
 
 ## 11. Tác giả & Liên hệ
 
-- **Tác giả:** Duc Nguyen ([@peter](https://github.com/peter))
+- **Tác giả:** Duc Nguyen ([@nnmduc](https://github.com/nnmduc))
 - **Email:** `minh-duc.nguyen-nam@ekino.com`
-- **Kho mã nguồn:** [https://github.com/peter/tuong-duc-me](https://github.com/peter/tuong-duc-me)
-- **Báo lỗi & Đóng góp ý kiến:** [GitHub Issues](https://github.com/peter/tuong-duc-me/issues)
+- **Kho mã nguồn:** [https://github.com/nnmduc/ducme.vn](https://github.com/nnmduc/ducme.vn)
+- **Báo lỗi & Đóng góp ý kiến:** [GitHub Issues](https://github.com/nnmduc/ducme.vn/issues)
+

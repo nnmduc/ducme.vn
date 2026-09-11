@@ -7,6 +7,13 @@
   "license": "MIT",
   "author": "Duc Nguyen <minh-duc.nguyen-nam@ekino.com>",
   "homepage": "https://ducme.vn",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nnmduc/ducme.vn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nnmduc/ducme.vn/issues"
+  },
   "keywords": [
     "astro",
     "vietnam",

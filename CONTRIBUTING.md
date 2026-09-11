@@ -33,7 +33,7 @@ Khi tham gia vào dự án này, bạn đồng ý tuân thủ bản **[Quy tắc
 
 ### B. Báo cáo lỗi (Bug Report)
 Nếu bạn phát hiện lỗi hiển thị, lỗi bản đồ, hoặc sai lệch thông tin:
-- Kiểm tra danh sách [Existing Issues](https://github.com/peter/tuong-duc-me/issues) xem vấn đề đã được ghi nhận chưa.
+- Kiểm tra danh sách [Existing Issues](https://github.com/nnmduc/ducme.vn/issues) xem vấn đề đã được ghi nhận chưa.
 - Nếu chưa, hãy tạo Issue mới bằng cách sử dụng mẫu **Bug Report**. Mô tả chi tiết các bước tái hiện, ảnh chụp màn hình và thiết bị/trình duyệt đang sử dụng.
 
 ### C. Đề xuất tính năng (Feature Request)
@@ -69,8 +69,8 @@ Tất cả dữ liệu linh địa được quản lý tập trung tại một n
 1. **Fork** kho lưu trữ về tài khoản GitHub của bạn.
 2. **Clone** bản fork về máy cục bộ:
    ```bash
-   git clone https://github.com/<your-username>/tuong-duc-me.git
-   cd tuong-duc-me
+   git clone https://github.com/<your-username>/ducme.vn.git
+   cd ducme.vn
    ```
 3. Cài đặt các gói phụ thuộc (cần Node.js `>= 20.11`):
    ```bash

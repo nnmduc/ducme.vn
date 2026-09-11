@@ -21,7 +21,7 @@ Nếu bạn phát hiện một vấn đề hoặc lỗ hổng bảo mật tiềm
 
 Xin vui lòng gửi thông tin chi tiết qua email riêng cho người duy trì dự án:
 📧 **Email:** `minh-duc.nguyen-nam@ekino.com`
-📌 **Tiêu đề email:** `[SECURITY] Báo cáo lỗ hổng bảo mật - tuong-duc-me`
+📌 **Tiêu đề email:** `[SECURITY] Báo cáo lỗ hổng bảo mật - ducme.vn`
 
 ### Vui lòng cung cấp các thông tin sau:
 1. Mô tả chi tiết về bản chất của lỗ hổng.
