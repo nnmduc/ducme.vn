@@ -85,6 +85,7 @@ tuong-duc-me/
 | `codebase-summary.md` | Cây mã nguồn và điều cần biết trước khi sửa |
 | `deployment-guide.md` | Lệnh, Cloudflare Pages & Worker, việc cần làm sau khi triển khai |
 | `research-report.md` | Khảo cứu lịch sử gốc |
+| `marian-sites-missing-info.md` | Danh sách chi tiết từng linh địa còn thiếu ảnh, nguồn tham khảo, nội dung, xếp theo ưu tiên |
 
 ## 6. Hạn Chế Đã Biết
 
