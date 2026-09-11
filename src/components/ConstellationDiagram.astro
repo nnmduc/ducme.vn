@@ -17,11 +17,11 @@ const STAR_POSITIONS = {
   phuonghoang: { x: 114, y: 58, r: 4.4, label: [98, 46] },
   giangson: { x: 156, y: 80, r: 3.0, label: [150, 70] },
   trinhphong: { x: 168, y: 140, r: 3.6, label: [140, 156] },
-  tapao: { x: 234, y: 150, r: 4.2, label: [212, 168] },
-  thacmo: { x: 228, y: 80, r: 4.6, label: [236, 99] },
+  tapao: { x: 226, y: 150, r: 4.2, label: [204, 168] },
+  thacmo: { x: 242, y: 80, r: 4.6, label: [250, 96] },
 };
 
-const POLARIS = { x: 276, y: 26 };
+const POLARIS = { x: 254.8, y: 24 };
 
 const version = CONSTELLATION_VERSIONS.v1;
 const nameOf = (id) => MARIAN_STATUES_DATA.find((s) => s.id === id)?.name ?? id;
@@ -54,9 +54,8 @@ const [pointerA, pointerB] = version.pointerStars.map((id) => STAR_POSITIONS[id]
       ))
     }
 
-    {/* Duong dan huong: Merak toi Dubhe, keo dai toi sao Bac Cuc. */}
-    <line x1={pointerA.x} y1={pointerA.y} x2={pointerB.x} y2={pointerB.y} class="pointer" />
-    <line x1={pointerB.x} y1={pointerB.y} x2={POLARIS.x} y2={POLARIS.y} class="pointer" />
+    {/* Duong dan huong: Merak toi Dubhe, keo dai thang toi sao Bac Cuc. */}
+    <line x1={pointerA.x} y1={pointerA.y} x2={POLARIS.x} y2={POLARIS.y} class="pointer" />
 
     {stars.map((s) => <circle cx={s.x} cy={s.y} r={s.r} class="star" />)}
     <circle cx={POLARIS.x} cy={POLARIS.y} r="3" class="polaris" />
