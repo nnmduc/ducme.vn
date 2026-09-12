@@ -19,7 +19,7 @@
 
 - [ ] Mã nguồn tuân thủ [Quy chuẩn viết mã (Coding Standards)](CONTRIBUTING.md#5-quy-chuẩn-viết-mã-coding-standards).
 - [ ] Nếu có thay đổi dữ liệu: Đã tuân thủ [Quy chuẩn dữ liệu & trích dẫn](CONTRIBUTING.md#3-quy-chuẩn-dữ-liệu--trích-dẫn-rất-quan-trọng) (tối thiểu 2 nguồn kiểm chứng, không dùng ảnh AI).
-- [ ] Đã chạy kiểm thử tự động trên máy cục bộ và tất cả đều vượt qua: `npm test` (384/384 PASS).
+- [ ] Đã chạy kiểm thử tự động trên máy cục bộ và tất cả đều vượt qua: `npm test` (397/397 PASS).
 - [ ] Đã kiểm tra quá trình dựng trang tĩnh sản phẩm thành công: `npm run build`.
 - [ ] Các trang nội dung vẫn giữ nguyên nguyên tắc không phụ thuộc client-side JS (0-byte JS).
 - [ ] Đã kiểm tra hiển thị responsive trên màn hình di động và máy tính để bàn.

@@ -519,10 +519,10 @@ export const MARIAN_STATUES_DATA = [
     "name": "Đức Mẹ Fatima Bình Triệu",
     "title": "Trung Tâm Hành Hương Fatima Bình Triệu - Trái Tim Vô Nhiễm Sài Gòn",
     "year": 1966,
-    "lat": 10.8251,
-    "lng": 106.7176,
-    "elevation": "15m",
-    "location": "Phường Hiệp Bình Chánh, TP. Thủ Đức, TP. Hồ Chí Minh",
+    "lat": 10.8291,
+    "lng": 106.7104,
+    "elevation": "4m",
+    "location": "58 Đường số 5, Phường Hiệp Bình Chánh, TP. Thủ Đức, TP. Hồ Chí Minh",
     "region": "Đông Nam Bộ",
     "diocese": "Tổng Giáo phận Sài Gòn - TP.HCM",
     "diemStatue5": false,
@@ -536,21 +536,38 @@ export const MARIAN_STATUES_DATA = [
         "code": "NAT-11"
       }
     },
-    "historicalFact": "Năm 1966, Linh mục Phaolô Võ Văn Bộ đã kiến thiết trung tâm hành hương bên bờ sông Sài Gòn để tôn kính Đức Mẹ Fatima theo tinh thần hòa bình thế giới. Tượng Mẹ Fatima làm bằng cẩm thạch trắng được đưa về và làm phép, trở thành điểm đến cầu nguyện của hàng vạn tín hữu mỗi ngày 13 hàng tháng.",
-    "oralTradition": "Linh địa bình an giữa lòng đô thị sầm uất, gắn liền với biết bao lời cầu nguyện cho hòa bình non sông qua các biến cố lịch sử.",
-    "architect": "Khuôn viên xanh mát với hàng cây cổ thụ và bờ sông lộng gió.",
-    "significance": "Trung tâm kính Đức Mẹ Fatima lớn nhất tại vùng đô thị TP. Hồ Chí Minh.",
-    "realImage": null,
-    "realImageCaption": null,
-    "galleryImages": [],
+    "historicalFact": "Năm 1962, nhân dịp cung nghinh tượng Đức Mẹ Fatima quốc tế đến Việt Nam, Linh mục Phaolô Võ Văn Bộ – trưởng ban tổ chức cuộc rước – đã vận động mua khu đất rộng 12,5 mẫu ven sông Sài Gòn gần ga Bình Triệu để kiến thiết một trung tâm hành hương Thánh Mẫu. Ngày 15 tháng 8 năm 1966, Đức Tổng Giám mục Phaolô Nguyễn Văn Bình đã đến làm phép tượng đài Đức Mẹ Fatima cao 3m và cử hành thánh lễ đầu tiên tại đây, đánh dấu sự hình thành chính thức của linh địa. Ngày 8 tháng 12 năm 1966, nhà thờ đầu tiên mang tước hiệu Nhà thờ Chúa Kitô được khởi công cùng tháp chuông cao 30 mét. Ngày 13 tháng 10 năm 1970, đền Đức Mẹ Fatima được khánh thành. Đến năm 1977, Tòa Tổng Giám mục chính thức thiết lập Giáo xứ Fatima Bình Triệu và bổ nhiệm linh mục chánh xứ tiên khởi. Sau năm 2000, giáo xứ tiến hành xây dựng bờ kè kiên cố chống sạt lở bờ sông, nâng cấp khuôn viên và ngày 13 tháng 11 năm 2010 khởi công tái thiết ngôi thánh đường mới quy mô lớn.",
+    "oralTradition": "Được mệnh danh là linh địa bình an bên dòng sông Sài Gòn, nơi đây gắn liền với biết bao lời kinh nguyện tha thiết cầu cho hòa bình non sông qua các biến cố lịch sử từ thập niên 1960. Các xóm giáo quanh giáo xứ và cộng đoàn hành hương luôn duy trì truyền thống sốt sắng đọc kinh liên gia và lần chuỗi Mân Côi dâng kính Trái Tim Vô Nhiễm Mẹ. Không chỉ người Công giáo, rất đông người dân lao động và khách thập phương thuộc nhiều tín ngưỡng khác nhau cũng thường xuyên đến ngồi dưới chân Mẹ để tìm kiếm sự an ủi, thanh thản và phó thác những âu lo thường nhật.",
+    "architect": "Tượng Đức Mẹ Fatima cao 3 mét được tạc theo nguyên mẫu tượng Đức Mẹ hiện ra tại Fatima (Bồ Đào Nha), bằng chất liệu đá cẩm thạch trắng, hai tay chắp ngực lần chuỗi Mân Côi và ngự trên quả địa cầu. Tượng ban đầu đặt lộ thiên, sau được đưa vào đền Đức Mẹ có mái che kiên cố với hệ khung vòm bê tông cách điệu hình chữ M (viết tắt tước hiệu Maria). Khuôn viên trung tâm nổi bật với ngôi thánh đường mới khánh thành có kích thước 50m x 35m với sức chứa khoảng 1.500 người, mang phong cách kiến trúc Gothic cách tân, sơn màu hồng phấn đặc trưng cùng hai tháp chuông đối xứng gắn đồng hồ và chóp nhọn. Một dấu tích lịch sử đặc biệt là ngọn tháp chuông 30 mét xây dựng từ năm 1966 của nhà thờ cũ hiện vẫn còn đứng sừng sững bên trong khuôn viên Trường Đại học Luật TP.HCM liền kề.",
+    "significance": "Là Trung tâm Thánh Mẫu Fatima lớn nhất và quan trọng nhất tại Tổng Giáo phận Sài Gòn – TP.HCM cũng như toàn vùng đô thị Phương Nam. Nơi đây được Tổng Giáo phận chọn làm Trung tâm Đức Cậy trong các hành trình Năm Thánh. Hằng năm, đặc biệt vào hai ngày đại lễ 13 tháng 5 và 13 tháng 10, linh địa quy tụ từ 15.000 đến hơn 20.000 lượt khách hành hương từ khắp các tỉnh thành về hiệp dâng thánh lễ và tham gia các sinh hoạt bác ái, tông đồ.",
+    "realImage": "assets/real_photos/binhtrieu.jpg",
+    "realImageCaption": "Toàn cảnh thánh đường và khuôn viên Trung tâm Hành hương Fatima Bình Triệu, TP. Thủ Đức (Nguồn: Wikimedia Commons, tác giả Daovantuan.thuduc, giấy phép CC BY-SA 4.0, chụp 2023)",
+    "galleryImages": [
+      {
+        "image": "assets/real_photos/binhtrieu-2.jpg",
+        "caption": "Tượng Đức Mẹ Fatima và giáo dân kính viếng tại đền Đức Mẹ Bình Triệu (Nguồn: Báo Công giáo và Dân tộc, bài 'Dấu ấn của Trung tâm hành hương Fatima Bình Triệu', tác giả Võ Quới, đăng 2017)"
+      },
+      {
+        "image": "assets/real_photos/binhtrieu-3.jpg",
+        "caption": "Tháp chuông cao 30m xây năm 1966 của Trung tâm Fatima Bình Triệu cũ trong khuôn viên ĐH Luật TP.HCM (Nguồn: Wikimedia Commons, tác giả Buiminhthac, giấy phép CC BY-SA 4.0, chụp 2024)"
+      }
+    ],
     "sources": [
           {
-                "title": "Lịch sử Fatima Bình Triệu từ 1966 - TGP Sài Gòn",
-                "url": "https://www.google.com/search?q=site:tgpsaigon.net+\"Bình+Triệu\""
+                "title": "Dấu ấn của Trung tâm hành hương Fatima Bình Triệu - Báo Công giáo và Dân tộc",
+                "url": "https://www.cgvdt.vn/cong-giao-viet-nam/dau-an-cua-trung-tam-hanh-huong-fatima-binh-trieu_a4688"
           },
           {
-                "title": "Tư liệu Trung tâm Hành hương Fatima Bình Triệu",
-                "url": "https://www.google.com/search?q=\"Fatima+Bình+Triệu\"+Tổng+Giáo+phận+Sài+Gòn"
+                "title": "Tổng Giáo phận Sài Gòn - TP.HCM: Trung tâm hành hương Đức Mẹ Fatima Bình Triệu - HĐGMVN",
+                "url": "https://hdgmvietnam.com/chi-tiet/tgp-sai-gon-tp-hcm-31504"
+          },
+          {
+                "title": "Hành hương Đức Mẹ Fatima Bình Triệu - Tổng Giáo phận Sài Gòn",
+                "url": "https://tgpsaigon.net/bai-viet/hanh-huong-duc-me-fatima-binh-trieu-67351"
+          },
+          {
+                "title": "Hành hương cùng Mẹ Maria tại Nhà thờ Fatima Bình Triệu: Nơi hy vọng được khơi nguồn - TGP Sài Gòn",
+                "url": "https://tgpsaigon.net/bai-viet/hanh-huong-cung-me-maria-tai-nha-tho-fatima-binh-trieu-noi-hy-vong-duoc-khoi-nguon-tu-long-thuong-xot-82294"
           }
     ]
   },
