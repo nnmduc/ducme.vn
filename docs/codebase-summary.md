@@ -68,7 +68,7 @@ worker/                      Cloudflare Worker backend cho /lien-he/
   wrangler.jsonc             Cấu hình bindings Cloudflare (D1, R2, send_email)
   scripts/test-submission.js Script kiểm thử API tự động
 
-tests/test_data_and_integrity.js   360 điều kiện. Chạy bằng `npm test`
+tests/test_data_and_integrity.js   384 điều kiện. Chạy bằng `npm test`
 ```
 
 ## Điều Cần Biết Trước Khi Sửa

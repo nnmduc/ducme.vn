@@ -14,7 +14,7 @@ Cập nhật 2026-09-11.
 | `npm run dev` | Máy chủ phát triển, có nạp lại nóng |
 | `npm run build` | Dựng trang tĩnh vào thư mục build (`dist/`) |
 | `npm run preview` | Xem thử bản đã dựng |
-| `npm test` | 360 điều kiện kiểm tính toàn vẹn dữ liệu & backend |
+| `npm test` | 384 điều kiện kiểm tính toàn vẹn dữ liệu & backend |
 
 Chạy `npm test` trước mỗi lần đẩy mã. Bộ kiểm này bắt được id trùng, tọa độ ngoài lãnh
 thổ, ảnh khai trong dữ liệu nhưng không có file, nguồn dẫn không hợp lệ, và các file cấu hình backend.

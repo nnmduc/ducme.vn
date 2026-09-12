@@ -35,7 +35,7 @@ Tạo một công cụ trực quan hóa địa lý và lịch sử, tôn nghiêm
 - [x] Sitemap, robots.txt, canonical, thẻ chia sẻ và JSON-LD đầy đủ trên cả 23 trang.
 - [x] Trang Liên hệ & Đóng góp tư liệu (`/lien-he/`) tiếp nhận phản hồi, tư liệu lịch sử và ảnh thực địa.
 - [x] Hạ tầng Serverless Backend (Cloudflare Worker API, D1 Database, R2 Storage, Email Routing, Turnstile).
-- [x] 360 điều kiện kiểm tính toàn vẹn dữ liệu và cấu hình backend, đều đạt.
+- [x] 384 điều kiện kiểm tính toàn vẹn dữ liệu và cấu hình backend, đều đạt.
 
 ### Còn lại
 

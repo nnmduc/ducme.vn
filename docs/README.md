@@ -43,7 +43,7 @@ npm install
 npm run dev       # máy chủ phát triển
 npm run build     # dựng trang tĩnh
 npm run preview   # xem thử bản đã dựng
-npm test          # 360 điều kiện kiểm tính toàn vẹn dữ liệu & backend
+npm test          # 384 điều kiện kiểm tính toàn vẹn dữ liệu & backend
 ```
 
 > Trang **không** mở được bằng cách nhấp đúp một file HTML nữa. Ngăn xếp cũ làm được vậy nhưng phải
