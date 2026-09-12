@@ -1,0 +1,24 @@
+{
+  "schema": "ducme.quy-trinh/v1",
+  "id": "lama",
+  "started": "2026-09-12T08:00:20.158Z",
+  "updated": "2026-09-12T08:00:22.924Z",
+  "status": "dangchay",
+  "rounds": 0,
+  "maxRounds": 2,
+  "fixes": 0,
+  "maxFixes": 2,
+  "options": {
+    "pr": true
+  },
+  "steps": [],
+  "decisions": [],
+  "final": {},
+  "pending": {
+    "at": "2026-09-12T08:00:22.924Z",
+    "step": "khaocuu",
+    "mode": "moi",
+    "why": "Chưa có docs/khao-cuu/<id>/khao-cuu.json — khảo cứu từ đầu",
+    "verdict": null
+  }
+}
