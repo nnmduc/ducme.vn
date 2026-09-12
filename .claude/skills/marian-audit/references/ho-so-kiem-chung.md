@@ -82,9 +82,15 @@ phân biệt một lượt audit thật với một lượt đọc lại báo c�
 
 ### `imageChecks[]`
 
-`{ file, licenseVerified, license, subjectMatches, aiSignals[], result, note }`, `result` là `duyet`
-hoặc `loai`. Hai ràng buộc cứng: không được `duyet` khi `licenseVerified` khác `true`, và không được
+`{ file, sourceVerified, license, subjectMatches, aiSignals[], result, note }`, `result` là `duyet`
+hoặc `loai`. Hai ràng buộc cứng: không được `duyet` khi `sourceVerified` khác `true`, và không được
 `duyet` khi `aiSignals` còn phần tử nào.
+
+`sourceVerified` nghĩa là **trang gốc còn sống, công khai, đúng nội dung ảnh** (kiểm bằng
+`check-sources`/mở tay `filePage`) — không phải xác nhận một loại giấy phép Creative Commons cụ thể.
+`license` vẫn là trường ghi lại nếu biết (hữu ích cho người đọc sau), nhưng **không bắt buộc** và
+không phải điều kiện để `duyet`: ảnh từ nguồn công khai, giữ nguyên URL gốc và có caption ghi rõ nguồn
+là đủ.
 
 ### `issues[]`
 
@@ -106,7 +112,7 @@ diễn giải thêm.
 |---|---|---|
 | `fields[]` | array | Tên trường được duyệt; phải nằm trong `fields[]` của hồ sơ khảo cứu |
 | `sources[]` | array | Mã nguồn đưa vào dữ liệu; tối thiểu 2 khi cho phép triển khai |
-| `images[]` | array | Tên file ảnh được duyệt; `[]` nghĩa là giữ `realImage: null` |
+| `images[]` | array | Tên file ảnh được duyệt (khớp `file` trong `images[]` của hồ sơ khảo cứu, cả ảnh `role: "chinh"` lẫn `"phu"`); `[]` nghĩa là giữ `realImage: null` và `galleryImages: []` |
 | `constellation` | boolean | Có cho phép sửa `CONSTELLATION_VERSIONS` không |
 
 Đây là phần `marian-publish` đọc bằng máy. Trường nào không có tên trong `approved.fields` thì không

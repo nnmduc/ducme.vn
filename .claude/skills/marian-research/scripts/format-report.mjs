@@ -18,7 +18,7 @@
 
 import path from 'node:path';
 
-import { readJson, validateResearch, RESEARCH_SCHEMA } from '../../_lib/bundle.mjs';
+import { readJson, validateResearch, RESEARCH_SCHEMA, splitImagesByRole } from '../../_lib/bundle.mjs';
 import { parseArgs, emitReport, reportIssues, table, rel } from '../../_lib/cli.mjs';
 
 const CONF = { cao: 'cao', trungbinh: 'trung bình', thap: 'thấp' };
@@ -159,24 +159,31 @@ P();
 P('## 4. Hình ảnh');
 P();
 if (!bundle.images?.length) {
-  P('**Không đề xuất ảnh** — giữ `realImage: null`. Đây là trạng thái hợp lệ theo quy chuẩn dự án.');
+  P('**Không đề xuất ảnh** — giữ `realImage: null` và `galleryImages: []`. Đây là trạng thái hợp lệ theo quy chuẩn dự án.');
   if (bundle.imageSearchNote) {
     P();
     P(`_Đã tìm qua:_ ${bundle.imageSearchNote}`);
   }
 } else {
+  const { main, gallery } = splitImagesByRole(bundle.images);
+  P(`Đề xuất ${bundle.images.length} ảnh: ${main ? '1 ảnh chính' : 'chưa có ảnh chính'}, ${gallery.length} ảnh phụ.`);
+  P();
   for (const im of bundle.images) {
-    P(`### ${im.file || '(chưa đặt tên file)'}`);
+    const roleLabel = im.role === 'chinh' ? 'Ảnh chính (→ `realImage`)' : 'Ảnh phụ (→ `galleryImages[]`)';
+    P(`### ${im.file || '(chưa đặt tên file)'} — ${roleLabel}`);
     P();
     P(
       table(
         [
           { k: 'Trang mô tả file gốc', v: `[${im.filePage}](${im.filePage})` },
           { k: 'Tác giả', v: im.author },
-          { k: 'Giấy phép', v: im.license },
+          { k: 'Giấy phép (nếu biết, không bắt buộc)', v: im.license || '—' },
           { k: 'Năm chụp', v: im.year ?? '—' },
           { k: 'Nội dung ảnh', v: im.content || '—' },
-          { k: '`realImageCaption` đề xuất', v: im.caption || '—' },
+          {
+            k: im.role === 'chinh' ? '`realImageCaption` đề xuất' : '`galleryImages[].caption` đề xuất',
+            v: im.caption || '—',
+          },
           { k: 'Cam kết', v: im.notAi ? 'Ảnh chụp thực địa, không do AI tạo sinh' : '**CHƯA CAM KẾT**' },
         ],
         [

@@ -130,9 +130,9 @@ for (const r of records) {
     const abs = path.join(ROOT, 'src', r.realImage || '');
     if (!fs.existsSync(abs)) err(id, `file anh khong ton tai: src/${r.realImage}`);
     if (!r.realImageCaption || r.realImageCaption.length < 10) {
-      err(id, 'co realImage thi bat buoc co realImageCaption ghi ro noi chup va nguon/giay phep');
+      err(id, 'co realImage thi bat buoc co realImageCaption ghi ro noi chup va nguon (giay phep neu biet, khong bat buoc)');
     } else if (!/nguồn|Nguồn|CC|Public Domain|Wikimedia/i.test(r.realImageCaption)) {
-      warn(id, 'realImageCaption nen ghi ro nguon anh va giay phep');
+      warn(id, 'realImageCaption nen ghi ro nguon anh (vi du "Nguon: ten trang/bai viet") — giay phep khong bat buoc');
     }
   } else if (!('realImage' in r)) {
     err(id, 'thieu truong realImage (dat null neu chua co anh xac thuc — khong duoc bo trong)');
@@ -151,9 +151,9 @@ for (const r of records) {
         if (!fs.existsSync(abs)) err(id, `file anh khong ton tai: src/${item.image}`);
       }
       if (!item?.caption || item.caption.length < 10) {
-        err(id, `${tag}.caption bat buoc, ghi ro noi chup va nguon/giay phep`);
+        err(id, `${tag}.caption bat buoc, ghi ro noi chup va nguon (giay phep neu biet, khong bat buoc)`);
       } else if (!/nguồn|Nguồn|CC|Public Domain|Wikimedia/i.test(item.caption)) {
-        warn(id, `${tag}.caption nen ghi ro nguon anh va giay phep`);
+        warn(id, `${tag}.caption nen ghi ro nguon anh (vi du "Nguon: ten trang/bai viet") — giay phep khong bat buoc`);
       }
     });
   }

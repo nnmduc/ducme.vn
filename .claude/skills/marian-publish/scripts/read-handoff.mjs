@@ -23,7 +23,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import {
-  readJson, validateResearch, validateAudit, buildWorkOrder,
+  readJson, validateResearch, validateAudit, buildWorkOrder, splitImagesByRole,
   VERDICT_LABEL, VERDICT_ALLOWS_PUBLISH,
 } from '../../_lib/bundle.mjs';
 import { parseArgs, emitReport, reportIssues, table, rel, verdictTone } from '../../_lib/cli.mjs';
@@ -162,21 +162,51 @@ if (order.sources.length < 2) {
 
 P('## 4. Hình ảnh');
 P();
-if (!order.images.length) {
-  P('**Không có ảnh nào được duyệt — giữ `realImage: null`.**');
+const { main: mainImage, gallery: galleryImages } = splitImagesByRole(order.images);
+if (!mainImage && !galleryImages.length) {
+  P('**Không có ảnh nào được duyệt — giữ `realImage: null` và `galleryImages: []`.**');
   if (order.rejectedImages.length) {
     P();
     P(`Ảnh bị loại: ${order.rejectedImages.map((im) => `\`${im.file}\``).join(', ')}.`);
   }
 } else {
-  P(
-    table(order.images, [
-      { key: 'file', label: 'File', map: (im) => `\`src/assets/real_photos/${path.basename(im.file)}\`` },
-      { key: 'license', label: 'Giấy phép' },
-      { key: 'author', label: 'Tác giả' },
-      { key: 'caption', label: '`realImageCaption`' },
-    ])
-  );
+  P('### 4a. Ảnh chính (`realImage`)');
+  P();
+  if (!mainImage) {
+    P('Không có ảnh chính được duyệt — giữ `realImage: null`.');
+  } else {
+    P(
+      table([mainImage], [
+        { key: 'file', label: 'File', map: (im) => `\`src/assets/real_photos/${order.id}.jpg\`` },
+        { key: 'license', label: 'Giấy phép (nếu biết)', map: (im) => im.license || '—' },
+        { key: 'author', label: 'Tác giả' },
+        { key: 'caption', label: '`realImageCaption`' },
+      ])
+    );
+  }
+  P();
+  P('### 4b. Ảnh phụ (`galleryImages`)');
+  P();
+  if (!galleryImages.length) {
+    P('Không có ảnh phụ được duyệt — giữ `galleryImages: []`.');
+  } else {
+    const galleryRows = galleryImages.map((im, i) => ({
+      ...im,
+      destFile: `src/assets/real_photos/${order.id}-${i + 2}.jpg`,
+    }));
+    P(
+      table(galleryRows, [
+        { key: 'destFile', label: 'File', map: (im) => `\`${im.destFile}\`` },
+        { key: 'license', label: 'Giấy phép (nếu biết)', map: (im) => im.license || '—' },
+        { key: 'author', label: 'Tác giả' },
+        { key: 'caption', label: '`galleryImages[].caption`' },
+      ])
+    );
+  }
+  if (order.rejectedImages.length) {
+    P();
+    P(`Ảnh bị loại: ${order.rejectedImages.map((im) => `\`${im.file}\``).join(', ')}.`);
+  }
 }
 P();
 

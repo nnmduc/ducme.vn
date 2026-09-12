@@ -70,7 +70,7 @@ Nguồn do người kiểm chứng tự tìm, không lấy từ báo cáo khảo
 
 ## 3. Kiểm hình ảnh
 
-| File | Giấy phép xác minh | Giấy phép | Đúng linh địa | Dấu hiệu AI | Kết luận |
+| File | Nguồn công khai xác minh | Giấy phép (nếu biết) | Đúng linh địa | Dấu hiệu AI | Kết luận |
 |---|---|---|---|---|---|
 | File:DucMeFatimaVinhLong.jpg | có | CC BY-SA 4.0 | có | không thấy | DUYỆT |
 

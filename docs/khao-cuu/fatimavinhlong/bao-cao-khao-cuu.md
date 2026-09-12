@@ -161,7 +161,9 @@ _Ghi chú:_ Thay cả 2 link Google-search cũ bằng 4 bài viết trực tiế
 
 ## 4. Hình ảnh
 
-### File:DucMeFatimaVinhLong.jpg
+Đề xuất 1 ảnh: 1 ảnh chính, 0 ảnh phụ.
+
+### File:DucMeFatimaVinhLong.jpg — Ảnh chính (→ `realImage`)
 
 | Mục | Nội dung |
 |---|---|

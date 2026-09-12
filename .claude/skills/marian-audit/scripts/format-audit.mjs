@@ -173,13 +173,13 @@ if (bundle.crossChecks?.length) {
 P('## 3. Kiểm hình ảnh');
 P();
 if (!bundle.imageChecks?.length) {
-  P('Không có ảnh để kiểm — giữ `realImage: null`.');
+  P('Không có ảnh để kiểm — giữ `realImage: null` và `galleryImages: []`.');
 } else {
   P(
     table(bundle.imageChecks, [
       { key: 'file', label: 'File' },
-      { key: 'licenseVerified', label: 'Giấy phép xác minh', map: (c) => (c.licenseVerified ? 'có' : '**không**') },
-      { key: 'license', label: 'Giấy phép' },
+      { key: 'sourceVerified', label: 'Nguồn công khai xác minh', map: (c) => (c.sourceVerified ? 'có' : '**không**') },
+      { key: 'license', label: 'Giấy phép (nếu biết)', map: (c) => c.license || '—' },
       { key: 'subjectMatches', label: 'Đúng linh địa', map: (c) => (c.subjectMatches ? 'có' : '**không**') },
       { key: 'aiSignals', label: 'Dấu hiệu AI', map: (c) => (c.aiSignals?.length ? c.aiSignals.join(', ') : 'không thấy') },
       { key: 'result', label: 'Kết luận', map: (c) => (c.result === 'duyet' ? 'DUYỆT' : 'LOẠI') },

@@ -22,13 +22,17 @@ kiểm tự động; vi phạm là CI đỏ.
 | `architect` | string | — | Kiến trúc, vật liệu, kích thước, người tạc/thiết kế |
 | `significance` | string | — | Giá trị tâm linh, văn hoá, vai trò với cộng đồng |
 | `realImage` | string \| null | file phải tồn tại trong `src/` | `"assets/real_photos/<id>.jpg"` hoặc `null` — ảnh chính, hiển thị ở đầu trang chi tiết |
-| `realImageCaption` | string | bắt buộc khi có ảnh | Ghi rõ nội dung ảnh + nguồn + giấy phép |
+| `realImageCaption` | string | bắt buộc khi có ảnh | Ghi rõ nội dung ảnh + nguồn (giấy phép nếu biết, không bắt buộc) |
 | `galleryImages` | array | mảng, có thể rỗng `[]` | Ảnh phụ minh hoạ thêm, ngoài ảnh chính. Mỗi phần tử `{image, caption}`. Trường luôn phải có mặt (dùng `[]` khi chưa khảo cứu ảnh phụ nào) — **hiện tại chỉ điền qua kỹ năng khảo cứu, chưa có kênh cho người dùng tự đóng góp** |
 | `galleryImages[].image` | string | file phải tồn tại trong `src/` | `"assets/real_photos/<id>-<số thứ tự>.jpg"`, ví dụ `"assets/real_photos/lavang-2.jpg"` |
-| `galleryImages[].caption` | string | bắt buộc | Ghi rõ nội dung ảnh + nguồn + giấy phép, cùng chuẩn với `realImageCaption` |
+| `galleryImages[].caption` | string | bắt buộc | Ghi rõ nội dung ảnh + nguồn, cùng chuẩn với `realImageCaption` |
 | `sources` | array | ≥ 2 phần tử | Mỗi phần tử `{title, url}` |
 | `sources[].title` | string | dài hơn 5 ký tự | Mô tả được nguồn, không chỉ ghi "Wikipedia" |
 | `sources[].url` | string | `https://`, không phải root domain trần | Trỏ thẳng bài viết |
+
+Quy trình đề xuất nhiều ảnh (ảnh chính + ảnh phụ, mỗi ảnh gắn `role: "chinh" | "phu"`) nằm ở
+`images[]` của hồ sơ khảo cứu — xem [`ho-so-khao-cuu.md`](ho-so-khao-cuu.md#images--ảnh-đề-xuất) và
+danh sách nguồn tìm ảnh mở rộng ở [`nguon-tu-lieu.md`](nguon-tu-lieu.md).
 
 ## Sáu vùng miền (khớp tuyệt đối)
 
