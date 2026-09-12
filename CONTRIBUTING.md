@@ -93,7 +93,7 @@ Tất cả dữ liệu linh địa được quản lý tập trung tại một n
    ```bash
    npm test
    ```
-   *Tất cả 353 điều kiện kiểm thử phải báo PASS.*
+   *Tất cả 384 điều kiện kiểm thử phải báo PASS.*
 7. Kiểm tra quá trình dựng trang tĩnh (build):
    ```bash
    npm run build
