@@ -1,0 +1,89 @@
+{
+  "schema": "ducme.kiem-chung/v1",
+  "id": "vidu",
+  "name": "Đức Mẹ Ví Dụ",
+  "researchReport": ".agents/skills/_lib/examples/khao-cuu.example.json",
+  "auditor": "Tên người kiểm chứng hoặc phiên làm việc",
+  "date": "2026-09-11",
+
+  "verdict": "AP_DUNG_CO_DIEU_KIEN",
+  "summary": "ĐÂY LÀ FILE VÍ DỤ. Phần văn bản có nguồn đối chiếu được nên duyệt; con số chiều cao tượng không khớp nguồn nên phải sửa câu chữ. Cả 2 ảnh đề xuất đều duyệt: ảnh chính (Wikimedia Commons, có ghi CC BY-SA 4.0) và ảnh phụ (trang tin Giáo phận Ví Dụ, không ghi giấy phép cụ thể nhưng trang còn sống, đúng nội dung, và caption đã ghi rõ nguồn — theo quy chuẩn hiện tại thế là đủ).",
+
+  "scores": [
+    { "axis": "nguon", "score": 4, "evidence": "Hai nguồn cấp B độc lập, đều mở được và đúng nội dung" },
+    { "axis": "truyvet", "score": 4, "evidence": "3/4 khẳng định truy được nguyên văn; 1 khẳng định lệch con số" },
+    { "axis": "chinhxac", "score": 4, "evidence": "Toạ độ, vùng miền, giáo phận khớp nguồn" },
+    { "axis": "hinhanh", "score": 5, "evidence": "Cả ảnh chính lẫn ảnh phụ đều có trang gốc còn sống, đúng chủ thể, không dấu hiệu AI; ảnh phụ không có nhãn giấy phép cụ thể nhưng nguồn công khai + caption ghi rõ nguồn là đủ theo quy chuẩn" },
+    { "axis": "phandinh", "score": 5, "evidence": "historicalFact và oralTradition tách bạch rõ" },
+    { "axis": "giongvan", "score": 5, "evidence": "Trung lập, không có câu mang tính tuyên truyền" },
+    { "axis": "kythuat", "score": 4, "evidence": "validate-record.mjs không còn lỗi chặn, còn 2 cảnh báo đã giải trình" }
+  ],
+  "totalScore": 31,
+
+  "sourceChecks": [
+    { "code": "S1", "url": "https://example.com/bai-viet-mot", "status": "OK", "containsClaim": true, "note": "Xác nhận mốc 1960" },
+    { "code": "S2", "url": "https://example.com/bai-viet-hai", "status": "PROXY_CHAN", "containsClaim": true, "recheckedWith": "WebFetch", "note": "Kiểm lại bằng WebFetch: trang còn sống, ghi 'khoảng 3m' chứ không phải 'cao 3m'" }
+  ],
+
+  "claimChecks": [
+    { "claim": "Linh đài được khởi lập năm 1960", "sources": ["S1"], "result": "dat", "note": "Đúng nguyên văn" },
+    { "claim": "Tượng cao khoảng 3m, đúc bằng xi măng trắng", "sources": ["S1", "S2"], "result": "sua", "note": "Nguồn ghi 'khoảng 3m' — bỏ cách viết khẳng định con số tuyệt đối" },
+    { "claim": "Phần đế linh đài xây lại năm 1998", "sources": ["S2"], "result": "dat" }
+  ],
+
+  "crossChecks": [
+    { "title": "Nguồn do người kiểm chứng tự tìm", "url": "https://example.com/nguon-doc-lap", "finding": "Xác nhận mốc 1960, không nhắc tới chiều cao tượng" }
+  ],
+
+  "imageChecks": [
+    {
+      "file": "File:ViDuLinhDai.jpg",
+      "sourceVerified": true,
+      "license": "CC BY-SA 4.0",
+      "subjectMatches": true,
+      "aiSignals": [],
+      "result": "duyet",
+      "note": "Mở trực tiếp trang File: trên Wikimedia Commons, còn sống, đúng chủ thể linh địa đang xét. Giấy phép có ghi rõ (CC BY-SA 4.0) nên chép lại, nhưng đây không phải điều kiện quyết định — trang gốc còn sống mới là điều kiện chính. Dùng làm realImage."
+    },
+    {
+      "file": "anh-phu-trang-giao-phan.jpg",
+      "sourceVerified": true,
+      "license": null,
+      "subjectMatches": true,
+      "aiSignals": [],
+      "result": "duyet",
+      "note": "Mở trực tiếp URL bài tin trên trang giáo phận, còn sống, đúng nội dung ảnh và đúng chủ thể. Trang không ghi nhãn giấy phép Creative Commons cụ thể — theo quy chuẩn hiện tại, không phải lý do loại: nguồn công khai + URL giữ nguyên + caption ghi rõ nguồn là đủ. Dùng làm galleryImages[0]."
+    }
+  ],
+
+  "issues": [
+    { "level": "nang", "issue": "Con số chiều cao tượng viết chắc chắn hơn nguồn", "where": "historicalFact, câu 2", "fix": "Đổi thành 'cao khoảng 3m'" },
+    { "level": "nhe", "issue": "Chưa tiếp cận được kỷ yếu giáo phận", "where": "Danh mục nguồn", "fix": "Ghi nhận là hạn chế, không chặn triển khai" }
+  ],
+
+  "conditions": [
+    "Sửa 'Tượng cao 3m' thành 'Tượng cao khoảng 3m' trong historicalFact theo nguyên văn nguồn [S2]",
+    "Dùng File:ViDuLinhDai.jpg làm realImage đúng caption đề xuất trong hồ sơ khảo cứu",
+    "Dùng anh-phu-trang-giao-phan.jpg làm galleryImages[0] đúng caption đề xuất — không cần bổ sung giấy phép, nguồn công khai + caption ghi rõ nguồn là đủ"
+  ],
+
+  "approved": {
+    "fields": ["historicalFact", "architect", "sources"],
+    "sources": ["S1", "S2"],
+    "images": ["File:ViDuLinhDai.jpg", "anh-phu-trang-giao-phan.jpg"],
+    "constellation": false
+  },
+
+  "impact": {
+    "Số lượng linh địa": "không đổi",
+    "CONSTELLATION_VERSIONS": "không đổi",
+    "Số assertion npm test": "353 → 353 (số nguồn không đổi)",
+    "Ảnh thực địa": "Lần đầu có realImage hợp lệ cho bản ghi này, cùng 1 ảnh phụ đầu tiên trong galleryImages",
+    "Tài liệu phải cập nhật": ["docs/marian-sites-missing-info.md"]
+  },
+
+  "validation": {
+    "command": "node .agents/skills/marian-publish/scripts/validate-record.mjs .agents/skills/_lib/examples/khao-cuu.example.json --allow-existing-id",
+    "output": "=> DAT toan bo rang buoc bat buoc."
+  }
+}
