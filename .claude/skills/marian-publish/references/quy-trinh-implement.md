@@ -20,6 +20,9 @@ nguồn và ảnh được duyệt. Khi sửa `src/data/statues.js`, đối chi�
 
 - Trường không có trong mục "Trường được phép sửa" → không đụng tới, kể cả khi khảo cứu có đề xuất.
 - Nguồn không có trong mục "Nguồn đưa vào dữ liệu" → không thêm vào `sources`.
+- Chuyện kể không có trong mục "Chuyện kể được duyệt" → không viết vào `oralTradition`. Chuyện được
+  duyệt thì mỗi ý phải mở đầu bằng nhãn truyền tụng; trang chi tiết còn tự gắn thêm huy hiệu "Chưa
+  kiểm chứng" cho cả mục, nhưng huy hiệu đó không thay được nhãn trong câu chữ.
 - Mục "KHÔNG được đưa lên" là danh sách đã bị audit loại — đừng đưa lại vào vì thấy hợp lý.
 
 ## 2. Quy ước định dạng của `src/data/statues.js`
@@ -33,6 +36,11 @@ File là module JS chứa một mảng JSON viết tay. Bám đúng phong cách 
   `elevation`, `location`, `region`, `diocese`, `diemStatue5`, `constellationRole`, `historicalFact`,
   `oralTradition`, `architect`, `significance`, `realImage`, `realImageCaption`, `galleryImages`,
   `sources`.
+- Mỗi phần tử `sources` gồm `title`, `url`, và **`tier`** (`"A"` | `"B"` | `"C"`) chép thẳng từ hồ sơ
+  khảo cứu. Trang chi tiết dùng `tier` để hiện nhãn cấp nguồn ("Nguồn gốc" / "Thứ cấp" / "Tham khảo
+  mở") — thiếu khoá này thì nguồn không có nhãn, blog trông ngang hàng văn khố giáo phận. Bản ghi cũ
+  chưa có `tier` là chuyện bình thường; đừng đi đoán tier cho chúng, chỉ điền khi có hồ sơ khảo cứu
+  chống lưng. Cấp `D` không bao giờ vào đây.
 - Không chạy formatter lên cả file. Diff phải nhỏ và đọc được.
 
 Chèn bản ghi mới ở đâu: mảng hiện xếp đại thể theo mạch niên đại/vùng miền. Chèn vào vị trí hợp mạch

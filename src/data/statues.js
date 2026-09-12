@@ -830,19 +830,23 @@ export const MARIAN_STATUES_DATA = [
     "sources": [
           {
                 "title": "Trung Tâm Hành Hương Đức Mẹ Fatima Vĩnh Long - Giáo Phận Vĩnh Long",
-                "url": "https://giaophanvinhlong.net/trung-tam-hanh-huong-duc-me-fatima-vinh-long/"
+                "url": "https://giaophanvinhlong.net/trung-tam-hanh-huong-duc-me-fatima-vinh-long/",
+                "tier": "B"
           },
           {
                 "title": "Trung tâm Hành Hương Fatima Vĩnh Long kỷ niệm 100 năm Đức Mẹ hiện ra",
-                "url": "https://vntaiwan.catholic.org.tw/17news/17news0740.htm"
+                "url": "https://vntaiwan.catholic.org.tw/17news/17news0740.htm",
+                "tier": "B"
           },
           {
                 "title": "Trung tâm hành hương Fatima Vĩnh Long kỷ niệm 100 năm Đức Mẹ hiện ra",
-                "url": "https://www.vietcatholic.net/News/Html/222536.htm"
+                "url": "https://www.vietcatholic.net/News/Html/222536.htm",
+                "tier": "B"
           },
           {
                 "title": "Tản Mạn Kiến Trúc - Trung tâm Hành hương Fatima Vĩnh Long",
-                "url": "https://www.tanmankientruc.org/kien-truc/modernist-series/trung-tam-fatima-vinh-long"
+                "url": "https://www.tanmankientruc.org/kien-truc/modernist-series/trung-tam-fatima-vinh-long",
+                "tier": "B"
           }
     ]
   }

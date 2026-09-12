@@ -159,6 +159,13 @@ _Ghi chú:_ Thay cả 2 link Google-search cũ bằng 4 bài viết trực tiế
 
 Đưa vào trường `sources` của dữ liệu: [S1], [S2], [S3], [S5] (4 nguồn).
 
+Cấp nguồn:
+
+- **A** — nguồn gốc (văn khố, kỷ yếu, bia ký)
+- **B** — thứ cấp đáng tin (trang giáo phận, báo có toà soạn, sách có NXB)
+- **C** — tư liệu mở (blog hành hương, trang du lịch, báo mạng tổng hợp, diễn đàn) — trích dẫn được, phải gắn nhãn
+- **D** — manh mối thô (mạng xã hội, video, bình luận, lời kể chép lại) — chỉ để lần ra nguồn khác
+
 ## 4. Hình ảnh
 
 Đề xuất 1 ảnh: 1 ảnh chính, 0 ảnh phụ.
@@ -169,7 +176,7 @@ _Ghi chú:_ Thay cả 2 link Google-search cũ bằng 4 bài viết trực tiế
 |---|---|
 | Trang mô tả file gốc | [https://commons.wikimedia.org/wiki/File:DucMeFatimaVinhLong.jpg](https://commons.wikimedia.org/wiki/File:DucMeFatimaVinhLong.jpg) |
 | Tác giả | Philiplam990 |
-| Giấy phép | CC BY-SA 4.0 |
+| Giấy phép (nếu biết, không bắt buộc) | CC BY-SA 4.0 |
 | Năm chụp | 2019 |
 | Nội dung ảnh | Ảnh chụp ban đêm tượng Đức Mẹ Fatima (đá trắng, tay lần chuỗi Mân Côi) đặt dưới khung kiến trúc mái vòm hình chữ 'M' (Maria), hoa tươi xếp thành chữ MARIA phía trước bệ tượng — đúng khuôn viên Trung tâm Hành hương Fatima Vĩnh Long |
 | `realImageCaption` đề xuất | Tượng Đức Mẹ Fatima tại Trung tâm Hành hương Fatima Vĩnh Long, xã Tân Ngãi, TP. Vĩnh Long (Nguồn: Wikimedia Commons, tác giả Philiplam990, giấy phép CC BY-SA 4.0, chụp 12/05/2019) |
@@ -177,7 +184,11 @@ _Ghi chú:_ Thay cả 2 link Google-search cũ bằng 4 bài viết trực tiế
 
 
 
-## 5. Mâu thuẫn nguồn & điểm chưa chắc chắn
+## 5. Chuyện kể & giai thoại
+
+_Không thu được chuyện kể nào._
+
+## 6. Mâu thuẫn nguồn & điểm chưa chắc chắn
 
 | Vấn đề | Nguồn nói A | Nguồn nói B | Xử lý đề xuất |
 |---|---|---|---|
@@ -193,7 +204,7 @@ _Ghi chú:_ Thay cả 2 link Google-search cũ bằng 4 bài viết trực tiế
 - Toạ độ chính xác của chính linh đài — đã cải thiện bằng GPS trong EXIF ảnh S7 (10.2637, 105.936), nhưng đây vẫn là 1 nguồn duy nhất (điện thoại người chụp), chưa đối chiếu chéo với đo đạc bản đồ độc lập thứ hai
 - Chiều cao và chất liệu chính xác của tượng — có nguồn phụ (không phải S1-S7 trong hồ sơ này) nói tượng cao 5m đá trắng, cầm chuỗi 50 hạt, nhưng chưa kiểm chứng chéo đủ để đưa vào historicalFact/architect lần này (nằm ngoài phạm vi yêu cầu bổ sung ảnh của phiên này)
 
-## 6. Tự đánh giá
+## 7. Tự đánh giá
 
 | Trục | Đánh giá |
 |---|---|
@@ -203,7 +214,7 @@ _Ghi chú:_ Thay cả 2 link Google-search cũ bằng 4 bài viết trực tiế
 | Tổng văn xuôi sau đề xuất | 365 từ |
 
 
-## 7. Bản ghi dữ liệu đề xuất
+## 8. Bản ghi dữ liệu đề xuất
 
 ```json
 {

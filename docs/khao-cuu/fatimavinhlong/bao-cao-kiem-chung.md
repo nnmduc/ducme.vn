@@ -2,7 +2,7 @@
 
 ## Kết luận
 
-> **ÁP DỤNG** — 34/35
+> **ÁP DỤNG** — 37/40
 >
 > 7 nguon deu song va doc truc tiep duoc (ke ca S1 sau khi thu lai bang curl UA trinh duyet, khong con 403). Moi khang dinh chinh trong historicalFact/architect/oralTradition/location deu truy duoc nguyen van trong nguon, co doi chieu cheo doc lap (melavang.info, tim kiem rieng). Anh de xuat la anh that: EXIF iPhone SE 12/05/2019, GPS trung khop toa do de xuat, giay phep CC BY-SA 4.0 ro tac gia, khong co dau hieu AI (ky thuat + quan sat truc tiep). Mau thuan ten giam muc (Anton vs Phero) duoc giai quyet dung, co can cu doc lap.
 
@@ -23,9 +23,10 @@
 | Phân định sự thật / truyền tụng | 5/5 | Cay me/song Tien-Hau dat dung trong oralTradition (dan 'Tuong truyen'), khong lan sang historicalFact; su kien Fatima hien ra chi dung nhu moc thoi gian ky niem, khong khang dinh la su that lich su da kiem chung |
 | Giọng văn & trung lập | 5/5 | Van phong trung lap, mo ta khong tan duong; khong dung noi dung nhay cam chinh tri |
 | Tính kỹ thuật | 5/5 | validate-record.mjs: DAT toan bo rang buoc bat buoc; format-report.mjs chi co 1 canh bao nhe (oralTradition thieu claims) — chap nhan duoc vi truong nay khong bat buoc dan nguon theo luoc do |
+| Sức hấp dẫn & chiều sâu tư liệu | 3/5 | Chấm bổ sung khi lược đồ thêm trục thứ 8. 7 nguồn cấp B, 1 ảnh thực địa, 6 điểm chưa rõ được ghi nhận — nền tư liệu chắc. Trừ điểm vì hồ sơ làm trước khi có mục folklore/imageCandidates: giai thoại cây me 200 năm chỉ nằm gọn trong oralTradition mà chưa tách thành chuyện kể có nguồn riêng, và không có kho ảnh ứng viên để lượt sau nối tiếp. |
 
 
-**Tổng: 34/35.**
+**Tổng: 37/40.**
 
 ## 2. Kiểm nguồn dẫn
 
@@ -114,6 +115,7 @@ $ node .claude/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/f
 - [x] `sources`
 - [x] Nguồn đưa vào dữ liệu: [S1], [S2], [S3], [S4], [S5], [S6], [S7]
 - [x] Ảnh: File:DucMeFatimaVinhLong.jpg
+- [ ] Chuyện kể được phép viết vào `oralTradition`: không duyệt chuyện nào
 - [ ] Thay đổi chòm sao (`CONSTELLATION_VERSIONS`)
 
 ---

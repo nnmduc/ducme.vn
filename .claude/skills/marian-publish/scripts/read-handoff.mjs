@@ -24,7 +24,7 @@ import path from 'node:path';
 
 import {
   readJson, validateResearch, validateAudit, buildWorkOrder, splitImagesByRole,
-  VERDICT_LABEL, VERDICT_ALLOWS_PUBLISH,
+  VERDICT_LABEL, VERDICT_ALLOWS_PUBLISH, MAX_SCORE, FOLKLORE_VERACITY_LABEL,
 } from '../../_lib/bundle.mjs';
 import { parseArgs, emitReport, reportIssues, table, rel, verdictTone } from '../../_lib/cli.mjs';
 
@@ -88,7 +88,7 @@ const P = (s = '') => md.push(s);
 
 P(`# Phiếu thi công: ${order.name || order.id}`);
 P();
-P(`> **${verdictLabel}** — ${auditResult.totalScore}/35`);
+P(`> **${verdictLabel}** — ${auditResult.totalScore}/${MAX_SCORE}`);
 P('>');
 P(`> ${order.canPublish ? 'Được phép triển khai theo đúng phạm vi dưới đây.' : '**KHÔNG được triển khai.** Dừng lại và báo người dùng.'}`);
 P();
@@ -148,10 +148,13 @@ if (order.excluded.length) {
 
 P('## 3. Nguồn đưa vào dữ liệu');
 P();
+P('Chép cả `tier` vào từng phần tử `sources` của bản ghi — trang chi tiết dùng nó để hiện nhãn cấp nguồn.');
+P();
 P(
   table(order.sources, [
     { key: 'title', label: 'Tiêu đề' },
     { key: 'url', label: 'URL', map: (s) => `[liên kết](${s.url})` },
+    { key: 'tier', label: 'Cấp', map: (s) => s.tier || '—' },
   ])
 );
 P();
@@ -210,7 +213,28 @@ if (!mainImage && !galleryImages.length) {
 }
 P();
 
-P('## 5. Chòm sao');
+P('## 5. Chuyện kể được duyệt cho `oralTradition`');
+P();
+if (!order.folklore.length) {
+  P('Không có chuyện kể nào được duyệt — viết `oralTradition` theo đúng đề xuất ở mục 1, không thêm giai thoại nào khác.');
+} else {
+  P('Được phép viết các chuyện dưới đây vào `oralTradition`, **bắt buộc kèm nhãn** "tương truyền" / "theo lời kể" / "người địa phương kể rằng". Không chuyển bất kỳ ý nào sang `historicalFact`.');
+  P();
+  P(
+    table(order.folklore, [
+      { key: 'title', label: 'Chuyện kể' },
+      { key: 'veracity', label: 'Độ xác thực', map: (f) => FOLKLORE_VERACITY_LABEL[f.veracity] || f.veracity },
+      { key: 'story', label: 'Nội dung' },
+    ])
+  );
+}
+if (order.rejectedFolklore.length) {
+  P();
+  P(`Chuyện kể **không** được duyệt: ${order.rejectedFolklore.map((f) => `"${f.title}"`).join(', ')}. Không đưa lên website.`);
+}
+P();
+
+P('## 6. Chòm sao');
 P();
 P(
   order.constellationAllowed
@@ -219,7 +243,7 @@ P(
 );
 P();
 
-P('## 6. Việc bắt buộc sau khi sửa dữ liệu');
+P('## 7. Việc bắt buộc sau khi sửa dữ liệu');
 P();
 P('- [ ] `node .claude/skills/marian-publish/scripts/validate-record.mjs <file record> --allow-existing-id` — hết lỗi chặn');
 P('- [ ] `npm test` — toàn bộ PASS, 0 FAIL');
@@ -244,7 +268,7 @@ if (order.impact) {
   P();
 }
 
-P('## 7. Bản ghi đầy đủ sau khi áp dụng');
+P('## 8. Bản ghi đầy đủ sau khi áp dụng');
 P();
 P('Chỉ dùng các trường đã duyệt ở mục 1. Bản ghi dưới đây là bản đề xuất nguyên vẹn của khảo cứu — đối chiếu, đừng chép nguyên khối.');
 P();

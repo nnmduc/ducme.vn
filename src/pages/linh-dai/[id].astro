@@ -92,11 +92,29 @@ const versionLabel = (keys) =>
     ? `Phiên bản ${keys.map((k) => k.replace('v', '')).join(' và ')}`
     : `Phiên bản ${keys[0].replace('v', '')}`;
 
-/** Cac muc van xuoi. Bo muc rong de khong sinh tieu de trong. */
+/**
+ * Tach van xuoi thanh cac doan theo dong trong. Phan truyen tung co the gom
+ * nhieu chuyen ke noi tiep nhau; don het vao mot the <p> thi thanh mot khoi
+ * chu dai doc met.
+ */
+const paragraphs = (text) =>
+  String(text || '')
+    .split(/\n\s*\n/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+/**
+ * Cac muc van xuoi. Bo muc rong de khong sinh tieu de trong.
+ *
+ * "Truyen tung dan gian" mang co `lore`: noi dung o day la chuyen ke luu truyen,
+ * KHONG phai su kien da kiem chung. Nhan trong cau chu ("Tuong truyen...") chi an
+ * voi nguoi doc tu dau cau, nen muc nay con duoc danh dau bang mot huy hieu va mot
+ * khoi trinh bay rieng — de nguoi luot trang khong doc nham thanh su lieu.
+ */
 const proseSections = [
   { heading: 'Tư liệu lịch sử', body: statue.historicalFact, lead: true },
   { heading: 'Quần thể và kiến trúc', body: statue.architect },
-  { heading: 'Truyền tụng dân gian', body: statue.oralTradition },
+  { heading: 'Truyền tụng dân gian', body: statue.oralTradition, lore: true },
   { heading: 'Giá trị tâm linh', body: statue.significance },
 ].filter((section) => section.body);
 ---
@@ -227,9 +245,24 @@ const proseSections = [
         <div class="prose">
           {
             proseSections.map((section) => (
-              <section>
-                <h2>{section.heading}</h2>
-                <p class={section.lead ? 'lead' : undefined}>{section.body}</p>
+              <section class={section.lore ? 'lore' : undefined}>
+                <h2>
+                  {section.heading}
+                  {section.lore && (
+                    <span class="lore-badge" title="Nội dung lưu truyền trong dân gian, chưa có nguồn sử liệu kiểm chứng">
+                      Chưa kiểm chứng
+                    </span>
+                  )}
+                </h2>
+                {section.lore && (
+                  <p class="lore-note">
+                    Phần dưới đây ghi lại chuyện kể, sự tích và giai thoại đang lưu truyền quanh linh
+                    địa. Đây là tư liệu văn hoá dân gian, không phải sự kiện lịch sử đã kiểm chứng.
+                  </p>
+                )}
+                {paragraphs(section.body).map((para) => (
+                  <p class={section.lead ? 'lead' : undefined}>{para}</p>
+                ))}
               </section>
             ))
           }
@@ -602,6 +635,44 @@ const proseSections = [
   .prose p.lead {
     font-size: 1.2rem;
     color: var(--text-strong);
+  }
+  .prose p + p {
+    margin-top: 18px;
+  }
+
+  /* Muc truyen tung dan gian.
+     Khac biet thi giac la co chu dich, khong phai trang tri: noi dung o day duoc
+     phep ly ky va chua co nguon su lieu, nen phai nhin ra ngay la khac loai voi
+     muc "Tu lieu lich su" ngay ben tren. Vien trai + nen mo + huy hieu. */
+  .prose section.lore {
+    border-left: 2px solid color-mix(in srgb, var(--accent) 45%, transparent);
+    background: color-mix(in srgb, var(--bg-surface) 60%, transparent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 24px 24px 4px 22px;
+  }
+  .prose section.lore h2 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .lore-badge {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 5px 10px;
+    border-radius: var(--radius);
+    border: 1px solid color-mix(in srgb, var(--accent) 50%, transparent);
+    color: var(--accent-hover);
+    white-space: nowrap;
+  }
+  .prose p.lore-note {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    margin-bottom: 18px;
   }
 
   .rail {
