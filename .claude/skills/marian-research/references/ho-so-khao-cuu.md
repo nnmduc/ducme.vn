@@ -85,9 +85,12 @@ Ràng buộc: tối thiểu 2 nguồn `inRecord: true`. Nguồn cấp `C` **khô
 
 ### `images[]` — ảnh đề xuất
 
-Mảng rỗng `[]` là hợp lệ và thường là kết quả đúng. Mỗi phần tử cần: `file`, `filePage` (trang mô tả
-file gốc, không phải URL ảnh thô), `author`, `license`, `year`, `content`, `caption`, `notAi: true`,
-và `role` — thiếu một trong số đó thì hồ sơ không hợp lệ.
+Mảng rỗng `[]` là hợp lệ và thường là kết quả đúng. Mỗi phần tử **bắt buộc** có: `file`, `filePage`
+(trang gốc còn truy cập được, không phải URL ảnh thô), `author` (tên tác giả, hoặc tên trang/toà soạn
+nếu không rõ tác giả cá nhân), `caption` (ghi rõ nguồn), `notAi: true`, và `role` — thiếu một trong số
+đó thì hồ sơ không hợp lệ. `license` và `year` là thông tin **tuỳ chọn**: ghi vào nếu biết, nhưng
+không có cũng không sao — quy chuẩn của dự án là giữ nguyên URL nguồn + ghi rõ nguồn trong caption,
+không đòi hỏi xác định một loại giấy phép cụ thể.
 
 `role` quyết định ảnh đó đổ vào trường nào của `record`:
 
@@ -96,18 +99,17 @@ và `role` — thiếu một trong số đó thì hồ sơ không hợp lệ.
 | `"chinh"` | `record.realImage` + `record.realImageCaption` | Tối đa 1 ảnh mỗi hồ sơ |
 | `"phu"` | một phần tử của `record.galleryImages[]` | 0 hoặc nhiều |
 
-Không dừng lại ở một ảnh: nếu tìm được thêm ảnh phụ hợp lệ (giấy phép rõ, đúng linh địa), cứ đề xuất
-thêm — mỗi ảnh phụ vẫn cần đủ các trường trên như ảnh chính, không có tiêu chuẩn thấp hơn. Ví dụ:
+Không dừng lại ở một ảnh: nếu tìm được thêm ảnh phụ hợp lệ (nguồn công khai, đúng linh địa), cứ đề
+xuất thêm — mỗi ảnh phụ vẫn cần đủ các trường bắt buộc như ảnh chính, không có tiêu chuẩn thấp hơn.
+Ví dụ, một ảnh lấy từ trang tin giáo phận không ghi giấy phép Creative Commons cụ thể vẫn hợp lệ:
 
 ```json
 {
-  "file": "File:LinhDaiToanCanh.jpg",
-  "filePage": "https://commons.wikimedia.org/wiki/File:LinhDaiToanCanh.jpg",
-  "author": "Tên tác giả",
-  "license": "CC BY-SA 4.0",
-  "year": 2022,
+  "file": "anh-phu-trang-giao-phan.jpg",
+  "filePage": "https://giaophanvidu.org/tin-tuc/le-khanh-thanh-linh-dai.html",
+  "author": "Ban Truyền thông Giáo phận Ví Dụ",
   "content": "Toàn cảnh khuôn viên linh đài nhìn từ cổng vào",
-  "caption": "Toàn cảnh khuôn viên linh đài ... (Nguồn: Wikimedia Commons, tác giả ..., CC BY-SA 4.0)",
+  "caption": "Toàn cảnh khuôn viên linh đài ... (Nguồn: Trang tin Giáo phận Ví Dụ, đăng 2022)",
   "notAi": true,
   "role": "phu"
 }

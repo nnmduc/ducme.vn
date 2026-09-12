@@ -82,9 +82,15 @@ phân biệt một lượt audit thật với một lượt đọc lại báo c�
 
 ### `imageChecks[]`
 
-`{ file, licenseVerified, license, subjectMatches, aiSignals[], result, note }`, `result` là `duyet`
-hoặc `loai`. Hai ràng buộc cứng: không được `duyet` khi `licenseVerified` khác `true`, và không được
+`{ file, sourceVerified, license, subjectMatches, aiSignals[], result, note }`, `result` là `duyet`
+hoặc `loai`. Hai ràng buộc cứng: không được `duyet` khi `sourceVerified` khác `true`, và không được
 `duyet` khi `aiSignals` còn phần tử nào.
+
+`sourceVerified` nghĩa là **trang gốc còn sống, công khai, đúng nội dung ảnh** (kiểm bằng
+`check-sources`/mở tay `filePage`) — không phải xác nhận một loại giấy phép Creative Commons cụ thể.
+`license` vẫn là trường ghi lại nếu biết (hữu ích cho người đọc sau), nhưng **không bắt buộc** và
+không phải điều kiện để `duyet`: ảnh từ nguồn công khai, giữ nguyên URL gốc và có caption ghi rõ nguồn
+là đủ.
 
 ### `issues[]`
 

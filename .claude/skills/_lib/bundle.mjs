@@ -175,9 +175,14 @@ export function validateResearch(b) {
     let mainCount = 0;
     b.images.forEach((im, i) => {
       const tag = `images[${i}]`;
-      if (!isStr(im?.filePage)) E(`${tag}.filePage phai la URL trang mo ta file goc`);
-      if (!isStr(im?.author)) E(`${tag}.author bat buoc`);
-      if (!isStr(im?.license)) E(`${tag}.license bat buoc, ghi ro giay phep`);
+      // Anh tu nguon cong khai: giu nguyen URL goc (filePage) + ghi ro nguon trong caption la du.
+      // "license" la thong tin tot-neu-co, khong bat buoc — nhieu trang tin giao phan/bao chi
+      // khong ghi giay phep Creative Commons cu the, nhung van la nguon cong khai hop le.
+      if (!isStr(im?.filePage)) E(`${tag}.filePage phai la URL trang goc con truy cap duoc`);
+      if (!isStr(im?.author)) E(`${tag}.author bat buoc (ten tac gia, hoac ten toa soan/trang neu khong ro tac gia ca nhan)`);
+      if (im?.license !== undefined && im.license !== null && !isStr(im.license)) {
+        W(`${tag}.license neu co phai la chuoi mo ta — nhung day khong phai truong bat buoc`);
+      }
       if (im?.notAi !== true) E(`${tag}.notAi phai la true kem cam ket anh khong do AI tao sinh`);
       if (!IMAGE_ROLES.includes(im?.role)) {
         E(`${tag}.role phai la "chinh" (-> realImage) hoac "phu" (-> galleryImages[])`);
@@ -185,7 +190,7 @@ export function validateResearch(b) {
         mainCount++;
       }
       if (!isStr(im?.caption)) {
-        W(`${tag}.caption nen la noi dung se dat vao realImageCaption (role "chinh") hoac galleryImages[].caption (role "phu")`);
+        E(`${tag}.caption bat buoc — phai ghi ro nguon (vi du "Nguon: ten trang/bai viet"), se dat vao realImageCaption (role "chinh") hoac galleryImages[].caption (role "phu")`);
       }
     });
     if (mainCount > 1) {
@@ -268,8 +273,10 @@ export function validateAudit(b, research = null) {
     b.imageChecks.forEach((c, i) => {
       const tag = `imageChecks[${i}]`;
       if (!['duyet', 'loai'].includes(c?.result)) E(`${tag}.result phai la "duyet" hoac "loai"`);
-      if (c?.result === 'duyet' && c?.licenseVerified !== true) {
-        E(`${tag}: khong duoc duyet anh khi licenseVerified khac true`);
+      // "sourceVerified": trang goc con song, dung noi dung, cong khai xem lai duoc — KHONG doi hoi
+      // phai co giay phep Creative Commons cu the. "license" van la truong tuy chon, chi de tham khao.
+      if (c?.result === 'duyet' && c?.sourceVerified !== true) {
+        E(`${tag}: khong duoc duyet anh khi sourceVerified khac true (nguon phai cong khai, con song, dung noi dung)`);
       }
       if (c?.result === 'duyet' && isArr(c?.aiSignals) && c.aiSignals.length > 0) {
         E(`${tag}: co dau hieu anh tao sinh (${c.aiSignals.join(', ')}) thi khong duoc duyet`);

@@ -56,10 +56,11 @@ tên file phải đúng và duy nhất — kể cả với các số thứ tự 
 trong `src/assets/` để đường ống `astro:assets` nén và sinh AVIF/WebP — để trong `public/` thì ảnh bị
 chép nguyên trạng, không tối ưu.
 
-Kèm theo mỗi ảnh một caption ghi rõ chụp gì, ở đâu, nguồn và giấy phép: `realImageCaption` cho ảnh
-chính, `galleryImages[].caption` cho từng ảnh phụ. Ví dụ mẫu trong dữ liệu hiện có:
-`"Ảnh chụp thực tế linh đài Đức Mẹ La Vang tại Quảng Trị (Nguồn: Wikimedia Commons)"`. `galleryImages`
-là trường bắt buộc phải có mặt trong mọi bản ghi (dùng `[]` khi chưa có ảnh phụ nào được duyệt).
+Kèm theo mỗi ảnh một caption ghi rõ chụp gì, ở đâu, và nguồn (giấy phép nếu biết, không bắt buộc):
+`realImageCaption` cho ảnh chính, `galleryImages[].caption` cho từng ảnh phụ. Ví dụ mẫu trong dữ liệu
+hiện có: `"Ảnh chụp thực tế linh đài Đức Mẹ La Vang tại Quảng Trị (Nguồn: Wikimedia Commons)"`. Nguồn
+công khai giữ nguyên URL gốc + ghi tên nguồn trong caption là đủ; `galleryImages` là trường bắt buộc
+phải có mặt trong mọi bản ghi (dùng `[]` khi chưa có ảnh phụ nào được duyệt).
 
 ## 4. Sửa chòm sao (hiếm, cần audit duyệt rõ)
 

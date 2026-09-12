@@ -177,7 +177,7 @@ if (!bundle.images?.length) {
         [
           { k: 'Trang mô tả file gốc', v: `[${im.filePage}](${im.filePage})` },
           { k: 'Tác giả', v: im.author },
-          { k: 'Giấy phép', v: im.license },
+          { k: 'Giấy phép (nếu biết, không bắt buộc)', v: im.license || '—' },
           { k: 'Năm chụp', v: im.year ?? '—' },
           { k: 'Nội dung ảnh', v: im.content || '—' },
           {

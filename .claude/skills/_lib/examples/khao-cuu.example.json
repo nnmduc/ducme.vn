@@ -93,15 +93,14 @@
       "file": "anh-phu-trang-giao-phan.jpg",
       "filePage": "https://giaophanvidu.org/tin-tuc/le-khanh-thanh-linh-dai-duc-me-vi-du.html",
       "author": "Ban Truyền thông Giáo phận Ví Dụ",
-      "license": "Giáo phận cho phép dùng lại kèm ghi nguồn (xác nhận qua email/điện thoại ngày 2026-09-10)",
       "year": 2022,
       "content": "Góc chụp khác — toàn cảnh khuôn viên linh đài kèm bảng ghi công, đăng trong bài tin của giáo phận",
-      "caption": "Toàn cảnh khuôn viên linh đài Đức Mẹ Ví Dụ (Nguồn: trang tin Giáo phận Ví Dụ, đăng 2022)",
+      "caption": "Toàn cảnh khuôn viên linh đài Đức Mẹ Ví Dụ (Nguồn: Trang tin Giáo phận Ví Dụ, đăng 2022, xem bài gốc)",
       "notAi": true,
       "role": "phu"
     }
   ],
-  "imageSearchNote": "Tìm trên Wikimedia Commons, trang tin chính thức của giáo phận/giáo xứ sở tại, và dùng Google Images/blog hành hương chỉ để lần ra nguồn gốc — xem references/nguon-tu-lieu.md mục 'Với ảnh'. Ảnh phụ từ trang giáo phận không có giấy phép CC hình thức, đã liên hệ xin phép trước khi đề xuất; nếu không xin được phép rõ ràng thì không đề xuất, dù đã tìm thấy ảnh.",
+  "imageSearchNote": "Tìm trên Wikimedia Commons, trang tin chính thức của giáo phận/giáo xứ sở tại, và dùng Google Images/blog hành hương chỉ để lần ra nguồn gốc — xem references/nguon-tu-lieu.md mục 'Với ảnh'. Ảnh phụ lấy từ bài tin công khai trên trang giáo phận: không có nhãn giấy phép Creative Commons cụ thể, nhưng trang còn sống, đúng nội dung, và caption đã ghi rõ nguồn — theo quy chuẩn hiện tại thế là đủ để đề xuất, không cần thêm giấy phép.",
 
   "conflicts": [
     {

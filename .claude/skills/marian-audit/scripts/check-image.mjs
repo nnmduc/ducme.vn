@@ -109,11 +109,12 @@ for (const f of files) {
 }
 
 console.log('NHAC LAI phan khong tu dong hoa duoc — phai kiem bang tay:');
-console.log('  1. Trang mo ta goc cua anh (vi du trang File: tren Wikimedia Commons) co that va con song.');
-console.log('  2. Giay phep ghi ro: CC-BY-SA, CC-BY, hoac Public Domain. Khong chap nhan "free to use" chung chung.');
-console.log('  3. Ten tac gia va nam chup duoc ghi lai trong realImageCaption va trong bao cao.');
+console.log('  1. Trang goc cua anh (vi du trang File: tren Wikimedia Commons, bai tin giao phan, bai bao) co that va con song.');
+console.log('  2. Giu nguyen URL trang goc va ghi ro nguon trong realImageCaption/caption. Giay phep cu the');
+console.log('     (CC-BY-SA, CC-BY, Public Domain...) khong bat buoc — biet thi ghi them, khong biet cung khong sao.');
+console.log('  3. Ten tac gia (hoac ten trang/toa soan neu khong ro tac gia ca nhan) va nam chup neu biet.');
 console.log('  4. Anh dung la linh dia dang xet, khong phai linh dia khac cung ten Duc Me.');
-console.log('  5. Tim anh nguoc (reverse image search) neu nghi ngo nguon goc.\n');
+console.log('  5. Tim anh nguoc (reverse image search) neu nghi ngo nguon goc hoac nghi anh AI.\n');
 
 if (hardFail > 0) {
   console.log(`=> ${hardFail} loi chan. Khong dua anh nay len website.`);

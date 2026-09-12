@@ -51,7 +51,7 @@
   ],
 
   "imageChecks": [
-    { "file": "File:DucMeFatimaVinhLong.jpg", "licenseVerified": true, "license": "CC BY-SA 4.0", "subjectMatches": true, "aiSignals": [], "result": "duyet", "note": "check-image.mjs: khong loi chan ky thuat. EXIF that (thiet bi, ngay gio, GPS). Quan sat truc tiep dung linh dai dang xet. Toa do GPS trong EXIF (10.26368,105.93600) khop voi toa do de xuat trong record (10.2637,105.936) — vua xac nhan anh dung noi, vua xac nhan toa do." }
+    { "file": "File:DucMeFatimaVinhLong.jpg", "sourceVerified": true, "license": "CC BY-SA 4.0", "subjectMatches": true, "aiSignals": [], "result": "duyet", "note": "check-image.mjs: khong loi chan ky thuat. EXIF that (thiet bi, ngay gio, GPS). Quan sat truc tiep dung linh dai dang xet. Toa do GPS trong EXIF (10.26368,105.93600) khop voi toa do de xuat trong record (10.2637,105.936) — vua xac nhan anh dung noi, vua xac nhan toa do." }
   ],
 
   "issues": [

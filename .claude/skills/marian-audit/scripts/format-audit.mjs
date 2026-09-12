@@ -178,8 +178,8 @@ if (!bundle.imageChecks?.length) {
   P(
     table(bundle.imageChecks, [
       { key: 'file', label: 'File' },
-      { key: 'licenseVerified', label: 'Giấy phép xác minh', map: (c) => (c.licenseVerified ? 'có' : '**không**') },
-      { key: 'license', label: 'Giấy phép' },
+      { key: 'sourceVerified', label: 'Nguồn công khai xác minh', map: (c) => (c.sourceVerified ? 'có' : '**không**') },
+      { key: 'license', label: 'Giấy phép (nếu biết)', map: (c) => c.license || '—' },
       { key: 'subjectMatches', label: 'Đúng linh địa', map: (c) => (c.subjectMatches ? 'có' : '**không**') },
       { key: 'aiSignals', label: 'Dấu hiệu AI', map: (c) => (c.aiSignals?.length ? c.aiSignals.join(', ') : 'không thấy') },
       { key: 'result', label: 'Kết luận', map: (c) => (c.result === 'duyet' ? 'DUYỆT' : 'LOẠI') },

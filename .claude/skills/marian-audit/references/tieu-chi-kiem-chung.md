@@ -9,7 +9,7 @@ Mỗi trục cho điểm 0–5. Kèm bằng chứng cho mỗi điểm số — �
 | 1 | **Chất lượng nguồn** | Không nguồn, hoặc toàn blog/mạng xã hội | Đủ 2 nguồn nhưng đều cấp B yếu | Có nguồn cấp A hoặc nhiều nguồn cấp B độc lập |
 | 2 | **Truy vết luận điểm** | Nội dung không truy được về nguồn nào | Phần lớn truy được, vài câu trôi nổi | Mọi khẳng định đều gắn nguồn cụ thể và nguồn thật sự chứa nội dung đó |
 | 3 | **Độ chính xác dữ liệu** | Sai vùng miền/toạ độ/niên đại | Có sai lệch nhỏ đã nêu | Mọi trường khớp nguồn, toạ độ đối chiếu được |
-| 4 | **Hình ảnh** | Ảnh AI, hoặc không rõ bản quyền | Không đề xuất ảnh (chấp nhận được) | Ảnh thật, giấy phép rõ, tác giả rõ, đúng linh địa — có thêm ảnh phụ (`galleryImages`) hợp lệ là điểm cộng, không bắt buộc |
+| 4 | **Hình ảnh** | Ảnh AI, hoặc nguồn không công khai/không kiểm tra lại được | Không đề xuất ảnh (chấp nhận được) | Ảnh thật, nguồn công khai còn sống, tác giả rõ, đúng linh địa — giấy phép cụ thể không bắt buộc; có thêm ảnh phụ (`galleryImages`) hợp lệ là điểm cộng, không bắt buộc |
 | 5 | **Phân định sự thật / truyền tụng** | Trộn lẫn, khẳng định siêu nhiên như lịch sử | Có phân định nhưng còn vài chỗ lẫn | Ranh giới rõ ràng, dùng đúng trường |
 | 6 | **Giọng văn & tính trung lập** | Tuyên truyền, thiên kiến chính trị/tôn giáo | Tạm ổn, vài câu cảm tính | Trung lập, kính trọng, mô tả thay vì tán dương |
 | 7 | **Tính kỹ thuật** | `validate-record.mjs` lỗi chặn | Đạt nhưng nhiều cảnh báo | Đạt, cảnh báo đã giải trình |
@@ -25,7 +25,10 @@ Quy đổi tham khảo (chỉ tham khảo — tiêu chí chặn ở mục B luô
 
 1. Dưới 2 nguồn truy cập được, hoặc toàn bộ nguồn chỉ là link tìm kiếm.
 2. Có nguồn được dẫn nhưng mở ra không hề chứa luận điểm được gán cho nó.
-3. Ảnh không xác minh được giấy phép, hoặc có dấu hiệu do máy tạo sinh.
+3. Ảnh không có nguồn công khai còn truy cập/kiểm tra lại được (trang gốc chết, riêng tư, hoặc chỉ
+   là lời xin phép cá nhân không ai khác xác minh lại được), hoặc có dấu hiệu do máy tạo sinh. Giấy
+   phép Creative Commons cụ thể **không** phải điều kiện chặn — giữ nguyên URL nguồn và ghi rõ nguồn
+   trong caption là đủ.
 4. Toạ độ ngoài lãnh thổ Việt Nam, hoặc lệch hơn 500m so với vị trí đối chiếu được.
 5. `validate-record.mjs` còn lỗi chặn (nghĩa là `npm test` sẽ đỏ).
 6. Nội dung khẳng định sự kiện siêu nhiên như sự thật lịch sử đã kiểm chứng.

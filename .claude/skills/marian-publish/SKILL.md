@@ -83,9 +83,9 @@ Trong dữ liệu:
 
 ```json
 "realImage": "assets/real_photos/<id>.jpg",
-"realImageCaption": "... nơi chụp, nguồn, giấy phép ...",
+"realImageCaption": "... nơi chụp, nguồn (giấy phép nếu biết) ...",
 "galleryImages": [
-  { "image": "assets/real_photos/<id>-2.jpg", "caption": "... nơi chụp, nguồn, giấy phép ..." }
+  { "image": "assets/real_photos/<id>-2.jpg", "caption": "... nơi chụp, nguồn (giấy phép nếu biết) ..." }
 ]
 ```
 

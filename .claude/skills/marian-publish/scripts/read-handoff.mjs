@@ -178,7 +178,7 @@ if (!mainImage && !galleryImages.length) {
     P(
       table([mainImage], [
         { key: 'file', label: 'File', map: (im) => `\`src/assets/real_photos/${order.id}.jpg\`` },
-        { key: 'license', label: 'Giấy phép' },
+        { key: 'license', label: 'Giấy phép (nếu biết)', map: (im) => im.license || '—' },
         { key: 'author', label: 'Tác giả' },
         { key: 'caption', label: '`realImageCaption`' },
       ])
@@ -197,7 +197,7 @@ if (!mainImage && !galleryImages.length) {
     P(
       table(galleryRows, [
         { key: 'destFile', label: 'File', map: (im) => `\`${im.destFile}\`` },
-        { key: 'license', label: 'Giấy phép' },
+        { key: 'license', label: 'Giấy phép (nếu biết)', map: (im) => im.license || '—' },
         { key: 'author', label: 'Tác giả' },
         { key: 'caption', label: '`galleryImages[].caption`' },
       ])
