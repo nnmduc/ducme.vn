@@ -97,6 +97,8 @@ Nền tảng web tư liệu số và bản đồ tương tác về **các trung 
 
 ```text
 tuong-duc-me/
+├── .claude/skills/               # Bộ skill quy trình nội dung (khảo cứu → kiểm chứng → triển khai) — BẢN GỐC
+├── .agents/skills/               # Bản sao cho Antigravity, sinh bằng `npm run sync:agents`, không sửa tay
 ├── .github/                      # Quy trình CI/CD và biểu mẫu Issue/PR trên GitHub
 │   ├── workflows/deploy.yml      # GitHub Actions tự động kiểm thử, build và deploy Cloudflare Pages & Worker
 │   └── ISSUE_TEMPLATE/           # Mẫu báo lỗi, đề xuất tính năng, cập nhật tư liệu
@@ -124,6 +126,8 @@ tuong-duc-me/
 │   ├── schema.sql                # D1 Database Schema (bảng submissions)
 │   ├── wrangler.jsonc            # Cấu hình Cloudflare bindings (D1, R2, SendEmail, Turnstile)
 │   └── README.md                 # Hướng dẫn chạy và triển khai worker riêng biệt
+├── scripts/
+│   └── sync-agent-skills.mjs     # Sinh bản sao skill cho Antigravity từ bản gốc .claude/skills
 ├── tests/
 │   └── test_data_and_integrity.js # Bộ 397 bài kiểm thử tính toàn vẹn dữ liệu & backend
 ├── astro.config.mjs              # Cấu hình Astro

@@ -28,7 +28,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "node tests/test_data_and_integrity.js"
+    "test": "node tests/test_data_and_integrity.js",
+    "sync:agents": "node scripts/sync-agent-skills.mjs",
+    "sync:agents:check": "node scripts/sync-agent-skills.mjs --check"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",

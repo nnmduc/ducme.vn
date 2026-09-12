@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// SINH TU DONG tu .claude/skills — dung sua tay file nay, sua ban goc roi chay: npm run sync:agents
 /**
  * Kiem tra tung URL nguon dan: con song khong, chuyen huong toi dau, tra ve HTML that
  * hay trang loi, va tieu de trang co lien quan toi linh dia khong.

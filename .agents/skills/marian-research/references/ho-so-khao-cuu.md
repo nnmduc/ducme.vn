@@ -1,3 +1,5 @@
+<!-- SINH TU DONG tu .claude/skills — dung sua tay file nay, sua ban goc roi chay: npm run sync:agents -->
+
 # Hồ sơ khảo cứu `khao-cuu.json`
 
 Đây là **đầu ra chính** của `marian-research` — bản gốc duy nhất. Báo cáo markdown và HTML đều sinh
@@ -61,7 +63,7 @@ Lấy thẳng từ `site-gaps.mjs --id <id> --json`: `hasPhoto`, `directSources`
 | `action` | enum | `them` \| `sua` \| `giunguyen` |
 | `value` | any | Nội dung đề xuất. Bắt buộc khi action khác `giunguyen` |
 | `note` | string | Lưu ý khi triển khai |
-| `claims[]` | array | **Bắt buộc** với `historicalFact`, `architect`, `significance`, `year`, `lat`, `lng` |
+| `claims[]` | array | **Bắt buộc** với `historicalFact`, `year`, `lat`, `lng`. Các trường khác nên có (thiếu chỉ bị cảnh báo) |
 | `claims[].text` | string | Một khẳng định cụ thể |
 | `claims[].sources[]` | array | Mã nguồn, phải tồn tại trong `sources[]` |
 | `claims[].confidence` | enum | `cao` \| `trungbinh` \| `thap` |
@@ -76,21 +78,51 @@ kiểm chứng sẽ mở đúng những nguồn này và đối chiếu từng d
 | `code` | string | `S1`, `S2`, ... duy nhất trong hồ sơ |
 | `title` | string | Dài hơn 5 ký tự, mô tả được nguồn |
 | `url` | string | `https://`, trỏ thẳng bài viết |
-| `tier` | enum | `A` (gốc) \| `B` (thứ cấp đáng tin) \| `C` (chỉ là manh mối) |
+| `tier` | enum | `A` (gốc) \| `B` (thứ cấp đáng tin) \| `C` (tư liệu mở) \| `D` (manh mối thô) |
 | `accessed` | string | `YYYY-MM-DD` |
 | `supports` | string | Nguồn này chứng minh điều gì |
 | `inRecord` | boolean | Có đưa vào trường `sources` của dữ liệu không |
 
-Ràng buộc: tối thiểu 2 nguồn `inRecord: true`. Nguồn cấp `C` **không được** `inRecord: true`.
+Ràng buộc:
+
+- Tối thiểu 2 nguồn `inRecord: true`.
+- Nguồn cấp **C được** `inRecord: true` — thay đổi so với quy ước cũ. Blog hành hương, trang du lịch,
+  diễn đàn đều dẫn được, miễn trang còn mở.
+- Nguồn cấp **D không được** `inRecord: true` (mạng xã hội, video, bình luận — không có trang gốc ổn
+  định). Vẫn ghi vào `sources[]` của hồ sơ với `inRecord: false` để chống lưng cho `folklore[]`.
+- Toàn bộ nguồn đưa vào dữ liệu đều là cấp C thì hồ sơ vẫn hợp lệ, chỉ bị **cảnh báo** nhắc tìm thêm
+  một nguồn A/B làm trụ cột.
+- Khẳng định trong `historicalFact` mà chỉ dựa nguồn cấp C/D sẽ bị cảnh báo: hoặc tìm thêm nguồn A/B,
+  hoặc chuyển ý đó xuống `oralTradition` / `folklore` kèm nhãn "tương truyền".
+
+Xem [`nguon-tu-lieu.md`](nguon-tu-lieu.md) mục 1 để biết bảng bốn cấp đầy đủ.
+
+### `imageCandidates[]` — kho ảnh gom rộng
+
+Ghi trong lúc đọc tư liệu, **trước** khi lọc. Cố ý để rất nhẹ để gom cho nhanh.
+
+| Khoá | Bắt buộc | Ghi chú |
+|---|---|---|
+| `pageUrl` | có | URL trang chứa ảnh (không phải URL ảnh thô) |
+| `note` | nên có | Ảnh chụp gì, vì sao đáng để ý |
+| `source` | không | Tên trang / toà soạn |
+| `status` | không | `ungvien` (mặc định) \| `chon` \| `loai` |
+| `why` | không | Lý do chọn hoặc loại, điền ở vòng lọc |
+
+Kho này giữ lại cả ảnh đã loại — để lượt khảo cứu sau không đi tìm lại đúng con đường cũ.
 
 ### `images[]` — ảnh đề xuất
 
-Mảng rỗng `[]` là hợp lệ và thường là kết quả đúng. Mỗi phần tử **bắt buộc** có: `file`, `filePage`
-(trang gốc còn truy cập được, không phải URL ảnh thô), `author` (tên tác giả, hoặc tên trang/toà soạn
-nếu không rõ tác giả cá nhân), `caption` (ghi rõ nguồn), `notAi: true`, và `role` — thiếu một trong số
-đó thì hồ sơ không hợp lệ. `license` và `year` là thông tin **tuỳ chọn**: ghi vào nếu biết, nhưng
-không có cũng không sao — quy chuẩn của dự án là giữ nguyên URL nguồn + ghi rõ nguồn trong caption,
-không đòi hỏi xác định một loại giấy phép cụ thể.
+Mảng rỗng `[]` là hợp lệ. Mỗi phần tử **bắt buộc** có: `file`, `filePage` (trang gốc còn mở được,
+không phải URL ảnh thô), `caption` (ghi rõ nguồn), `notAi: true`, và `role`.
+
+`author` **nên** có nhưng không chặn — không rõ thì ghi `"Không rõ tác giả"` và nói rõ nguồn ở
+caption. `license`, `year`, `content` đều tuỳ chọn.
+
+Quy chuẩn ảnh của dự án gồm đúng ba điều: **nguồn công khai còn mở được · giữ nguyên URL gốc · caption
+ghi rõ nguồn**. Không đòi giấy phép Creative Commons cụ thể, không đòi tên tác giả cá nhân, không đòi
+dấu xác nhận của giáo phận. Hai thứ duy nhất khiến một ảnh bị bỏ hẳn: nghi do AI tạo sinh, hoặc không
+đúng linh địa đang xét.
 
 `role` quyết định ảnh đó đổ vào trường nào của `record`:
 
@@ -118,6 +150,33 @@ Ví dụ, một ảnh lấy từ trang tin giáo phận không ghi giấy phép 
 Khi không đề xuất được ảnh nào (kể cả ảnh phụ), ghi `imageSearchNote` cho biết đã tìm qua những đâu —
 xem `references/nguon-tu-lieu.md` mục "Với ảnh" để biết đầy đủ các nguồn nên thử trước khi kết luận
 không có ảnh.
+
+### `folklore[]` — chuyện kể, giai thoại, sự tích
+
+Phần tư liệu "ly kỳ" mà người đọc tìm đến nhiều nhất. Hướng dẫn đầy đủ ở
+[`tim-chuyen-ke.md`](tim-chuyen-ke.md).
+
+| Khoá | Bắt buộc | Ghi chú |
+|---|---|---|
+| `title` | có | Đặt tên cho chuyện kể |
+| `story` | có | Kể lại nội dung, giữ chi tiết cụ thể |
+| `veracity` | có | `chuakiemchung` \| `codoichieu` \| `dabacbo` |
+| `sources[]` | có | Mã nguồn, **cấp C và D đều được** — chỉ cần có chỗ để người khác đọc lại |
+| `motif` | nên có | Mô-típ dân gian, xem bảng mô-típ trong `tim-chuyen-ke.md` |
+| `spread` | nên có | Chuyện lưu hành ở đâu (truyền miệng, blog, báo mạng, video) |
+| `note` | không | Lưu ý khi viết vào `oralTradition` |
+
+`chuakiemchung` là kết quả bình thường và phổ biến nhất, **không** phải thất bại: chuyện vẫn được
+đăng, chỉ cần `oralTradition` mở đầu bằng nhãn truyền tụng. `dabacbo` là chuyện có nguồn A/B nói
+ngược lại — giữ trong hồ sơ làm ghi chú, không đưa lên website.
+
+Mảng rỗng `[]` hợp lệ, nhưng khi đó phải ghi `folkloreSearchNote` cho biết đã tìm qua những đâu.
+
+### `leads[]` — manh mối chưa lần hết
+
+Mảng chuỗi, hoặc `{ lead, where, why }`. Nơi ghi những sợi dây còn bỏ ngỏ: một kỷ yếu được nhắc tới
+mà chưa tìm ra bản số hoá, một chi tiết nghe được ở phút 12:30 của video, một ảnh cũ trên nhóm
+Facebook cần hỏi người đăng. Tuỳ chọn, nhưng là thứ làm lượt khảo cứu sau nhanh hơn hẳn.
 
 ### `conflicts[]`, `unknowns[]`, `selfAssessment`
 

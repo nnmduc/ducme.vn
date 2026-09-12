@@ -1,3 +1,4 @@
+// SINH TU DONG tu .claude/skills — dung sua tay file nay, sua ban goc roi chay: npm run sync:agents
 /**
  * Chuyen bao cao markdown thanh mot trang HTML doc lap.
  *

@@ -1,3 +1,4 @@
+// SINH TU DONG tu .claude/skills — dung sua tay file nay, sua ban goc roi chay: npm run sync:agents
 /**
  * Tien ich dung chung cho cac lenh format bao cao.
  * Moi lenh deu nhan cung mot bo tuy chon de nguoi dung khong phai nho ba cach khac nhau.

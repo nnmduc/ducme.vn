@@ -1,3 +1,5 @@
+<!-- SINH TU DONG tu .claude/skills — dung sua tay file nay, sua ban goc roi chay: npm run sync:agents -->
+
 # Cách điền Pull Request
 
 PR bám theo `.github/pull_request_template.md`. Giữ nguyên các tiêu đề mục của mẫu, điền nội dung thật.
@@ -20,7 +22,7 @@ feat(data): them linh dia Duc Me <ten> vao bo du lieu
 Triển khai kết quả khảo cứu linh địa **<tên>** (`<id>`) sau khi kiểm chứng độc lập.
 
 - Hồ sơ khảo cứu: `docs/khao-cuu/<id>/khao-cuu.json` ([báo cáo](../docs/khao-cuu/<id>/bao-cao-khao-cuu.md))
-- Hồ sơ kiểm chứng: `docs/khao-cuu/<id>/kiem-chung.json` ([báo cáo](../docs/khao-cuu/<id>/bao-cao-kiem-chung.md)) — kết luận **<ÁP DỤNG / ÁP DỤNG CÓ ĐIỀU KIỆN>** (nn/35)
+- Hồ sơ kiểm chứng: `docs/khao-cuu/<id>/kiem-chung.json` ([báo cáo](../docs/khao-cuu/<id>/bao-cao-kiem-chung.md)) — kết luận **<ÁP DỤNG / ÁP DỤNG CÓ ĐIỀU KIỆN>** (nn/40)
 
 Thay đổi cụ thể:
 

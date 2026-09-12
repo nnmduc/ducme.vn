@@ -6,15 +6,17 @@
   "researcher": "Tên người khảo cứu hoặc phiên làm việc",
   "date": "2026-09-11",
   "scope": "Bổ sung historicalFact và architect, thay 2 nguồn tìm kiếm bằng bài viết trực tiếp, tìm ảnh thực địa",
-
   "baseline": {
     "hasPhoto": false,
     "directSources": 0,
     "searchSources": 2,
     "totalWords": 100,
-    "missing": ["ảnh thực địa", "nguồn trực tiếp", "nội dung mỏng (100/300 từ)"]
+    "missing": [
+      "ảnh thực địa",
+      "nguồn trực tiếp",
+      "nội dung mỏng (100/300 từ)"
+    ]
   },
-
   "fields": [
     {
       "field": "historicalFact",
@@ -22,8 +24,21 @@
       "value": "ĐÂY LÀ FILE VÍ DỤ, KHÔNG PHẢI TƯ LIỆU THẬT. Đoạn văn lịch sử đề xuất viết ở đây, mỗi ý đều truy được về một nguồn trong danh mục bên dưới.",
       "note": "Giữ nguyên câu mở đầu đang có, chỉ bổ sung phần sau năm 1960",
       "claims": [
-        { "text": "Linh đài được khởi lập năm 1960", "sources": ["S1"], "confidence": "cao" },
-        { "text": "Tượng cao khoảng 3m, đúc bằng xi măng trắng", "sources": ["S1", "S2"], "confidence": "trungbinh" }
+        {
+          "text": "Linh đài được khởi lập năm 1960",
+          "sources": [
+            "S1"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Tượng cao khoảng 3m, đúc bằng xi măng trắng",
+          "sources": [
+            "S1",
+            "S2"
+          ],
+          "confidence": "trungbinh"
+        }
       ]
     },
     {
@@ -31,22 +46,64 @@
       "action": "them",
       "value": "Mô tả kiến trúc, vật liệu, kích thước và người thiết kế.",
       "claims": [
-        { "text": "Phần đế linh đài xây lại năm 1998", "sources": ["S2"], "confidence": "cao" }
+        {
+          "text": "Phần đế linh đài xây lại năm 1998",
+          "sources": [
+            "S2"
+          ],
+          "confidence": "cao"
+        }
       ]
     },
     {
       "field": "sources",
       "action": "sua",
       "value": [
-        { "title": "Tiêu đề bài viết nguồn thứ nhất", "url": "https://example.com/bai-viet-mot" },
-        { "title": "Tiêu đề bài viết nguồn thứ hai", "url": "https://example.com/bai-viet-hai" }
+        {
+          "title": "Tiêu đề bài viết nguồn thứ nhất",
+          "url": "https://example.com/bai-viet-mot"
+        },
+        {
+          "title": "Tiêu đề bài viết nguồn thứ hai",
+          "url": "https://example.com/bai-viet-hai"
+        }
       ],
       "claims": [
-        { "text": "Thay 2 link tìm kiếm Google bằng 2 bài viết trực tiếp", "sources": ["S1", "S2"], "confidence": "cao" }
+        {
+          "text": "Thay 2 link tìm kiếm Google bằng 2 bài viết trực tiếp",
+          "sources": [
+            "S1",
+            "S2"
+          ],
+          "confidence": "cao"
+        }
+      ]
+    },
+    {
+      "field": "oralTradition",
+      "action": "sua",
+      "value": "Tương truyền pho tượng trôi dạt vào bờ sau một trận bão và được dân chài vớt lên. Người địa phương còn kể rằng trận bão năm 1972 cuốn phăng mái đền nhưng pho tượng vẫn đứng nguyên — từ đó ngư dân trong vùng có lệ ghé khấn trước mỗi chuyến ra khơi.",
+      "note": "Giữ nguyên nhãn 'tương truyền' và 'người địa phương kể rằng' ở đầu mỗi ý — đây là truyền tụng, không phải sử liệu",
+      "claims": [
+        {
+          "text": "Chuyện tượng trôi dạt vào bờ được chép lại trên ít nhất một trang công khai",
+          "sources": [
+            "S3",
+            "S4"
+          ],
+          "confidence": "trungbinh"
+        },
+        {
+          "text": "Lệ ghé khấn trước khi ra khơi của ngư dân trong vùng",
+          "sources": [
+            "S4",
+            "S5"
+          ],
+          "confidence": "thap"
+        }
       ]
     }
   ],
-
   "sources": [
     {
       "code": "S1",
@@ -72,11 +129,28 @@
       "url": "https://example.com/blog-hanh-huong",
       "tier": "C",
       "accessed": "2026-09-11",
-      "supports": "Chỉ dùng để lần ra S1; không đưa vào dữ liệu",
+      "supports": "Blog hành hương: dùng để lần ra S1, đồng thời là nơi chép lại giai thoại",
+      "inRecord": false
+    },
+    {
+      "code": "S4",
+      "title": "Bài blog hành hương kể lại sự tích và chuyện xin ơn tại linh đài",
+      "url": "https://example.com/blog-su-tich-duc-me-vi-du",
+      "tier": "C",
+      "accessed": "2026-09-11",
+      "supports": "Chuyện kể dân gian về nguồn gốc pho tượng và trận bão năm 1972",
+      "inRecord": true
+    },
+    {
+      "code": "S5",
+      "title": "Video hành hương đăng trên kênh cá nhân, phần phỏng vấn ông từ giữ đền",
+      "url": "https://example.com/video-hanh-huong-vi-du",
+      "tier": "D",
+      "accessed": "2026-09-11",
+      "supports": "Lời kể của người trông coi linh đài — manh mối, không dẫn thẳng vào dữ liệu",
       "inRecord": false
     }
   ],
-
   "images": [
     {
       "file": "File:ViDuLinhDai.jpg",
@@ -100,33 +174,109 @@
       "role": "phu"
     }
   ],
-  "imageSearchNote": "Tìm trên Wikimedia Commons, trang tin chính thức của giáo phận/giáo xứ sở tại, và dùng Google Images/blog hành hương chỉ để lần ra nguồn gốc — xem references/nguon-tu-lieu.md mục 'Với ảnh'. Ảnh phụ lấy từ bài tin công khai trên trang giáo phận: không có nhãn giấy phép Creative Commons cụ thể, nhưng trang còn sống, đúng nội dung, và caption đã ghi rõ nguồn — theo quy chuẩn hiện tại thế là đủ để đề xuất, không cần thêm giấy phép.",
-
+  "imageCandidates": [
+    {
+      "pageUrl": "https://giaophanvidu.org/tin-tuc/le-khanh-thanh-linh-dai-duc-me-vi-du.html",
+      "source": "Trang tin Giáo phận Ví Dụ",
+      "note": "Bộ 8 ảnh lễ khánh thành 2022 — toàn cảnh, chính diện tượng, bảng ghi công",
+      "status": "chon",
+      "why": "Trang còn sống, đúng chủ thể; đã chuyển 1 ảnh lên images[] làm ảnh phụ"
+    },
+    {
+      "pageUrl": "https://example.com/blog-su-tich-duc-me-vi-du",
+      "source": "Blog hành hương",
+      "note": "Ảnh chụp bia đá ghi năm trùng tu, chữ đọc được",
+      "status": "ungvien",
+      "why": "Đáng giá vì đọc được năm trên bia; cần đối chiếu lại chủ thể trước khi đề xuất"
+    },
+    {
+      "pageUrl": "https://example.com/trang-du-lich-vi-du",
+      "source": "Trang du lịch tổng hợp",
+      "note": "Ảnh toàn cảnh chụp từ trên cao",
+      "status": "loai",
+      "why": "Ảnh đã qua chỉnh màu nặng và trang không ghi nguồn gốc — giữ lại làm manh mối, chưa dùng"
+    }
+  ],
+  "imageSearchNote": "Đã quét lần lượt: Wikimedia Commons, trang tin giáo phận/giáo xứ, Google Images (tìm xuôi và tìm ngược), báo mạng, blog hành hương, ảnh review trên Google Maps, và bản lưu web.archive.org của trang giáo xứ cũ. Ảnh nào chưa đủ chắc thì để ở imageCandidates chứ không bỏ — lượt sau khỏi tìm lại từ đầu. Quy chuẩn ảnh của dự án là nguồn công khai + giữ nguyên URL + caption ghi rõ nguồn; giấy phép Creative Commons cụ thể không bắt buộc.",
+  "folklore": [
+    {
+      "title": "Sự tích pho tượng trôi dạt vào bờ",
+      "story": "Tương truyền vào khoảng thập niên 1950, sau một trận bão lớn, dân chài trong vùng thấy một pho tượng trắng dạt vào bãi cát. Họ khiêng tượng lên gò đất cao rồi dựng một mái lá che tạm. Về sau, nơi ấy thành linh đài.",
+      "motif": "Tượng trôi dạt — mô-típ rất phổ biến ở các linh địa ven biển Việt Nam",
+      "spread": "Truyền miệng tại chỗ, được blog hành hương và một bài báo mạng chép lại",
+      "veracity": "chuakiemchung",
+      "sources": [
+        "S3",
+        "S4"
+      ],
+      "note": "Không nguồn cấp A/B nào xác nhận. Viết vào oralTradition kèm 'tương truyền', tuyệt đối không đưa sang historicalFact."
+    },
+    {
+      "title": "Trận bão 1972 và pho tượng còn nguyên",
+      "story": "Người địa phương kể rằng cơn bão năm 1972 cuốn bay mái đền và cả hàng cây quanh khuôn viên, nhưng pho tượng vẫn đứng nguyên không suy suyển. Từ đó ngư dân trong vùng có lệ ghé khấn trước mỗi chuyến ra khơi.",
+      "motif": "Tượng đứng vững qua thiên tai",
+      "spread": "Lời kể của ông từ giữ đền trong một video hành hương, được blog chép lại",
+      "veracity": "codoichieu",
+      "sources": [
+        "S2",
+        "S4",
+        "S5"
+      ],
+      "note": "Phần nền — cơn bão 1972 có thật và có thiệt hại trong vùng — đối chiếu được ở [S2]. Phần 'tượng còn nguyên' thì không; giữ ở mức truyền tụng."
+    },
+    {
+      "title": "Giai thoại tượng do một nhà buôn người Pháp cung tiến",
+      "story": "Một số trang du lịch viết rằng pho tượng do một nhà buôn người Pháp cung tiến năm 1900.",
+      "motif": "Gán nguồn gốc ngoại quốc cho tượng",
+      "spread": "Trang du lịch tổng hợp, chép chuyền nhau",
+      "veracity": "dabacbo",
+      "sources": [
+        "S1"
+      ],
+      "note": "Kỷ yếu giáo phận [S1] ghi rõ tượng đúc trong nước năm 1960. Giữ lại trong hồ sơ để lượt khảo cứu sau khỏi đi tìm lại, KHÔNG đưa lên website."
+    }
+  ],
+  "folkloreSearchNote": "Tìm bằng các cụm 'sự tích', 'truyền thuyết', 'tương truyền', 'ơn lạ', 'linh thiêng', 'chuyện lạ' ghép với tên linh địa; đọc thêm phần bình luận dưới bài blog và mô tả video hành hương để nhặt lời kể.",
+  "leads": [
+    "Kỷ yếu giáo phận in năm 1995 được nhắc tới trong [S1] nhưng chưa tìm được bản số hoá — thử thư viện dòng tu hoặc hỏi ban truyền thông giáo phận",
+    {
+      "lead": "Một cụ bà trong video [S5] nhắc tới 'trận lụt năm Thìn' liên quan tới linh đài",
+      "where": "phút 12:30 của video",
+      "why": "Nếu xác định được năm Thìn nào thì có thêm một mốc lịch sử"
+    },
+    {
+      "lead": "Ảnh đen trắng chụp linh đài thập niên 1960 xuất hiện trên một nhóm Facebook",
+      "where": "nhóm 'Ký ức Ví Dụ xưa'",
+      "why": "Cần lần ra người đăng để hỏi nguồn gốc và xin bản gốc"
+    }
+  ],
   "conflicts": [
     {
       "issue": "Năm khánh thành",
-      "a": { "claim": "1960", "source": "S1" },
-      "b": { "claim": "1961", "source": "S2" },
+      "a": {
+        "claim": "1960",
+        "source": "S1"
+      },
+      "b": {
+        "claim": "1961",
+        "source": "S2"
+      },
       "resolution": "Ghi 1960 theo nguồn sớm hơn, nêu cả hai mốc trong historicalFact"
     }
   ],
-
   "unknowns": [
     "Tên người tạc tượng — không nguồn nào ghi",
     "Độ cao chính xác của bệ tượng"
   ],
-
   "selfAssessment": {
     "confidence": "trungbinh",
-    "biggestRisk": "Cả hai nguồn đều là báo điện tử, chưa tiếp cận được kỷ yếu giáo phận",
+    "biggestRisk": "Cả hai nguồn lịch sử đều là báo điện tử, chưa tiếp cận được kỷ yếu giáo phận. Phần chuyện kể chủ yếu dựa nguồn cấp C/D — đã gắn nhãn truyền tụng đầy đủ.",
     "reviewFocus": "Mốc niên đại 1960 và con số chiều cao tượng"
   },
-
   "validation": {
     "command": "node .agents/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/vidu/khao-cuu.json",
     "output": "=> DAT toan bo rang buoc bat buoc."
   },
-
   "record": {
     "id": "vidu",
     "name": "Đức Mẹ Ví Dụ",
@@ -139,17 +289,32 @@
     "region": "Đông Nam Bộ",
     "diocese": "Giáo phận Ví Dụ",
     "diemStatue5": false,
-    "constellationRole": { "v1": null, "v2": null, "v3": null, "v4": null },
+    "constellationRole": {
+      "v1": null,
+      "v2": null,
+      "v3": null,
+      "v4": null
+    },
     "historicalFact": "ĐÂY LÀ FILE VÍ DỤ, KHÔNG PHẢI TƯ LIỆU THẬT. Đoạn văn lịch sử đề xuất viết ở đây, mỗi ý đều truy được về một nguồn trong danh mục bên dưới.",
-    "oralTradition": "Phần truyền tụng dân gian viết ở đây, tách hẳn khỏi sự kiện đã kiểm chứng.",
+    "oralTradition": "Tương truyền pho tượng trôi dạt vào bờ sau một trận bão và được dân chài vớt lên. Người địa phương còn kể rằng trận bão năm 1972 cuốn phăng mái đền nhưng pho tượng vẫn đứng nguyên — từ đó ngư dân trong vùng có lệ ghé khấn trước mỗi chuyến ra khơi.",
     "architect": "Mô tả kiến trúc, vật liệu, kích thước và người thiết kế.",
     "significance": "Giá trị tâm linh và vai trò với cộng đồng địa phương.",
     "realImage": null,
     "realImageCaption": null,
     "galleryImages": [],
     "sources": [
-      { "title": "Tiêu đề bài viết nguồn thứ nhất", "url": "https://example.com/bai-viet-mot" },
-      { "title": "Tiêu đề bài viết nguồn thứ hai", "url": "https://example.com/bai-viet-hai" }
+      {
+        "title": "Tiêu đề bài viết nguồn thứ nhất",
+        "url": "https://example.com/bai-viet-mot"
+      },
+      {
+        "title": "Tiêu đề bài viết nguồn thứ hai",
+        "url": "https://example.com/bai-viet-hai"
+      },
+      {
+        "title": "Bài blog hành hương kể lại sự tích và chuyện xin ơn tại linh đài",
+        "url": "https://example.com/blog-su-tich-duc-me-vi-du"
+      }
     ]
   }
 }
