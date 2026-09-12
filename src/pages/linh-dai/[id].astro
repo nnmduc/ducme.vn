@@ -156,22 +156,27 @@ const proseSections = [
       {
         galleryPhotos.length > 0 && (
           <>
-            <div class="gallery" id="gallery">
-              {galleryPhotos.map((entry, i) => (
-                <figure class="gallery-fig">
-                  <button type="button" class="gallery-open" data-gallery-open={i} aria-label={`Xem ảnh lớn ${i + 1}/${galleryPhotos.length}: ${entry.caption}`}>
+            <div class="gallery-wrap">
+              <p class="gallery-label">Ảnh khác ({galleryPhotos.length})</p>
+              <div class="gallery" id="gallery">
+                {galleryPhotos.map((entry, i) => (
+                  <button
+                    type="button"
+                    class="gallery-open"
+                    data-gallery-open={i}
+                    aria-label={`Xem ảnh lớn ${i + 1}/${galleryPhotos.length}: ${entry.caption}`}
+                  >
                     <Image
                       src={entry.photo}
                       alt={`${statue.name} tại ${province}`}
-                      widths={[320, 640]}
-                      sizes="(max-width: 640px) 50vw, 280px"
+                      widths={[160, 320]}
+                      sizes="88px"
                       loading="lazy"
                       format="avif"
                     />
                   </button>
-                  <figcaption>{entry.caption}</figcaption>
-                </figure>
-              ))}
+                ))}
+              </div>
             </div>
 
             <div class="lightbox" id="lightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Xem ảnh lớn">
@@ -372,59 +377,48 @@ const proseSections = [
     }
   }
 
-  /* Anh phu (galleryImages), cung nguyen tac voi .hero-fig: khong cat xen,
-     dat giua nen phang. Nho hon anh chinh vi chi mang tinh minh hoa them. */
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 16px;
+  /* Anh phu (galleryImages): dai thu nho ngang duoi anh chinh, kieu "product
+     showcase". Khong phinh to chieu cao trang du co bao nhieu anh — thanh
+     cuon ngang giu chieu cao co dinh, bam vao mo hop thoai xem anh lon (da
+     co dieu huong prev/next) thay vi bay het ra thanh luoi day trang. */
+  .gallery-wrap {
     margin-top: 16px;
   }
-  @media (max-width: 640px) {
-    .gallery {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-    .gallery-open {
-      height: 130px;
-    }
-  }
-  .gallery-fig {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius);
-    padding: 12px;
-  }
-  .gallery-fig :global(img) {
-    width: auto;
-    max-width: 100%;
-    max-height: 240px;
-    margin-inline: auto;
-    display: block;
-    border-radius: 2px;
-  }
-  .gallery-fig figcaption {
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid var(--border-subtle);
-    font-size: 12px;
-    line-height: 1.55;
+  .gallery-label {
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
     color: var(--text-tertiary);
+    margin-bottom: 10px;
   }
-  /* Cung nguyen tac voi .hero-fig: khong cat xen chu the. O day gioi han
-     chieu cao khung, anh tu can giua va giu nguyen ty le goc (contain),
-     khong ep object-fit: cover lam mat dau tuong o anh doc. */
+  .gallery {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-bottom: 4px;
+  }
+  /* Cung nguyen tac voi .hero-fig: khong cat xen chu the. Anh tu can giua
+     va giu nguyen ty le goc (contain), khong ep object-fit: cover. */
   .gallery-open {
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 180px;
+    width: 88px;
+    height: 88px;
     padding: 0;
-    border: 0;
+    border: 1px solid var(--border-subtle);
     background: var(--bg-raised);
     border-radius: 2px;
     cursor: zoom-in;
+    scroll-snap-align: start;
+    transition: border-color 0.15s;
+  }
+  .gallery-open:hover,
+  .gallery-open:focus-visible {
+    border-color: var(--accent);
   }
   .gallery-open :global(img) {
     width: auto;
