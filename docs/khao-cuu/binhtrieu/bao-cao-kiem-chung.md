@@ -2,9 +2,9 @@
 
 ## Kết luận
 
-> **ÁP DỤNG** — 35/35
+> **ÁP DỤNG** — 39/40
 >
-> Hồ sơ khảo cứu đạt chuẩn mực xuất sắc trên toàn bộ 7 trục kiểm chứng với số điểm tuyệt đối 35/35. Bốn nguồn trực tiếp cấp B từ Báo Công giáo và Dân tộc, Hội đồng Giám mục Việt Nam và Tổng Giáo phận Sài Gòn xác thực chặt chẽ toàn bộ các mốc lịch sử hình thành (1962, 1966, 1970, 1977, 2000, 2010); toạ độ đề xuất (10.8291, 106.7104) khắc phục chính xác sai lệch 903m theo OpenStreetMap và cao trình 4m khớp dữ liệu Open-Meteo; cả ba ảnh thực địa (1 ảnh chính, 2 ảnh phụ) đều có nguồn công khai còn sống, độ phân giải cao >1000px, không dấu hiệu AI và đúng chủ thể. Không chạm bất kỳ tiêu chí chặn nào, đủ điều kiện phê duyệt áp dụng nguyên trạng.
+> Hồ sơ khảo cứu đạt chuẩn mực xuất sắc với 39/40 điểm trên 8 trục kiểm chứng. Bốn nguồn trực tiếp cấp B từ Báo Công giáo và Dân tộc, Hội đồng Giám mục Việt Nam và Tổng Giáo phận Sài Gòn xác thực chặt chẽ toàn bộ các mốc lịch sử hình thành (1962, 1966, 1970, 1977, 2000, 2010); toạ độ đề xuất (10.8291, 106.7104) khắc phục chính xác sai lệch 903m theo OpenStreetMap và cao trình 4m khớp dữ liệu Open-Meteo; cả ba ảnh thực địa (1 ảnh chính, 2 ảnh phụ) đều có nguồn công khai còn sống, độ phân giải cao >1000px, không dấu hiệu AI và đúng chủ thể. Không chạm bất kỳ tiêu chí chặn nào, đủ điều kiện phê duyệt áp dụng nguyên trạng.
 
 - **Hồ sơ khảo cứu đã kiểm**: `docs/khao-cuu/binhtrieu/khao-cuu.json`
 - **Người kiểm chứng**: Antigravity (phiên audit 2026-09-12)
@@ -23,9 +23,10 @@
 | Phân định sự thật / truyền tụng | 5/5 | Tách bạch rõ ranh giới lịch sử và tâm tình: historicalFact chỉ trình bày các sự kiện có thật về việc tạo lập và xây dựng; oralTradition thể hiện truyền thống kinh Mân Côi và chốn bình an tâm linh của người dân lao động ven đô; tuyệt đối không khẳng định phép lạ siêu nhiên như sự kiện lịch sử. |
 | Giọng văn & trung lập | 5/5 | Văn phong trung lập, trang trọng, giàu tính tư liệu; bối cảnh lịch sử thập niên 1960 được trình bày khách quan theo tài liệu Giáo hội, không mang định kiến hay tuyên truyền chính trị. |
 | Tính kỹ thuật | 5/5 | validate-record.mjs vượt qua toàn bộ ràng buộc bắt buộc; các trường dữ liệu được định danh chuẩn xác; không ảnh hưởng tới các phiên bản chòm sao V1-V3 (CONSTELLATION_VERSIONS giữ nguyên). |
+| Sức hấp dẫn & chiều sâu tư liệu | 4/5 | Khảo cứu công phu qua nhiều nhóm nguồn đa dạng (báo chí Giáo hội CGvDT, trang tin TGP Sài Gòn, tư liệu HĐGMVN, bách khoa Wikipedia, bản đồ OSM, kho tư liệu Commons); văn xuôi đạt 586 từ (>300 từ) giàu sức sống với chi tiết đọc kinh liên gia 15 xóm giáo và nét sinh hoạt tâm linh của người lao động ven sông Sài Gòn; ghi nhận 3 ẩn số (unknowns) và 2 mâu thuẫn tư liệu cụ thể mở đường cho lượt khảo cứu kế tiếp. Trừ 1 điểm vì chưa lập kho ảnh ứng viên imageCandidates[] và mảng folklore[] riêng biệt. |
 
 
-**Tổng: 35/35.**
+**Tổng: 39/40.**
 
 ## 2. Kiểm nguồn dẫn
 
@@ -123,6 +124,7 @@ $ node .agents/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/b
 - [x] `sources`
 - [x] Nguồn đưa vào dữ liệu: [S1], [S2], [S3], [S4]
 - [x] Ảnh: File:Nhà thờ Fatima - Bình Triệu.jpg, tuong-duc-me-fatima-binh-trieu-den-hanh-huong.jpg, File:Tháp chuông của Nhà thờ Fatima Bình Triệu cũ..jpg
+- [ ] Chuyện kể được phép viết vào `oralTradition`: không duyệt chuyện nào
 - [ ] Thay đổi chòm sao (`CONSTELLATION_VERSIONS`)
 
 ---
