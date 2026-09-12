@@ -533,9 +533,12 @@ export function buildWorkOrder(research, audit) {
   }
 
   const approvedSourceCodes = new Set(audit?.approved?.sources || []);
+  // "tier" di theo nguon vao tan du lieu: trang chi tiet hien mot nhan nho canh
+  // moi nguon (Nguon goc / Thu cap / Tham khao mo) de nguoi doc tu danh gia.
+  // Cap D khong bao gio vao day vi khong duoc phep inRecord.
   const sources = (research?.sources || [])
     .filter((s) => approvedSourceCodes.has(s.code))
-    .map((s) => ({ title: s.title, url: s.url }));
+    .map((s) => ({ title: s.title, url: s.url, tier: s.tier }));
 
   const approvedImages = new Set(audit?.approved?.images || []);
   const images = (research?.images || []).filter((im) => approvedImages.has(im.file));

@@ -57,7 +57,8 @@ Tất cả dữ liệu linh địa được quản lý tập trung tại một n
 2. **Yêu cầu về trích dẫn nguồn (`sources`):**
    - Mỗi linh địa bắt buộc phải có **ít nhất 2 nguồn tham khảo** có thể tra cứu được.
    - URL nguồn phải dùng giao thức `https://` và phải trỏ trực tiếp đến bài viết hoặc kết quả truy vấn liên quan cụ thể (không được dùng domain gốc không có ngữ cảnh, ví dụ `https://wikipedia.org` là không hợp lệ).
-   - Phân định rạch ròi giữa sự kiện lịch sử kiểm chứng được (`historicalFact`) và truyền tụng dân gian (`oralTradition`).
+   - Phân định rạch ròi giữa sự kiện lịch sử kiểm chứng được (`historicalFact`) và truyền tụng dân gian (`oralTradition`). Nội dung truyền tụng phải mở đầu bằng nhãn ("Tương truyền", "Theo lời kể", "Người địa phương kể rằng"); trang chi tiết tự gắn thêm huy hiệu **Chưa kiểm chứng** cho toàn mục.
+   - Nguồn tham khảo mở (blog hành hương, trang du lịch, diễn đàn) **được chấp nhận** — dự án phi lợi nhuận phục vụ khảo cứu và học tập, nên tiêu chí là truy được về đâu, không phải có đóng dấu hay chưa. Kèm khoá `tier` (`"A"` nguồn gốc, `"B"` thứ cấp, `"C"` tham khảo mở) để trang hiện nhãn cấp nguồn; khoá này tuỳ chọn, thiếu thì không hiện nhãn. Riêng nội dung trong `historicalFact` vẫn cần nguồn cấp A hoặc B.
 
 3. **Tọa độ địa lý GPS (`lat`, `lng`):**
    - Hai trường số riêng biệt, ví dụ `"lat": 16.7214, "lng": 107.1947`.

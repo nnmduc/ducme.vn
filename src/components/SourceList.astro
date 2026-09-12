@@ -18,6 +18,21 @@ function hostOf(url) {
     return url;
   }
 }
+
+/**
+ * Nhan cap nguon. Khoa "tier" la TUY CHON tren moi ban ghi nguon: ban ghi cu
+ * chua co thi khong hien gi, khong can di sua lai toan bo du lieu.
+ *
+ * Ly do co nhan: du an chap nhan ca nguon mo (blog hanh huong, trang du lich,
+ * dien dan) lam nguon tham khao. Neu the nguon nao cung giong nhau thi mot bai
+ * blog se trong ngang hang mot ban van kho giao phan — nguoi doc mat can cu de
+ * tu danh gia. Nhan nay tra lai can cu do.
+ */
+const TIER_LABEL = {
+  A: { text: 'Nguồn gốc', hint: 'Văn khố, kỷ yếu, thư chung, bia ký — tư liệu gốc' },
+  B: { text: 'Thứ cấp', hint: 'Trang giáo phận, báo có toà soạn, sách có nhà xuất bản' },
+  C: { text: 'Tham khảo mở', hint: 'Blog, trang du lịch, diễn đàn — đọc tham khảo, chưa phải sử liệu' },
+};
 ---
 
 <div class="src-grid">
@@ -25,9 +40,16 @@ function hostOf(url) {
     sources.map((source) => (
       <a class="src" href={source.url} rel="nofollow noopener" target="_blank">
         <span class="src-title">{source.title}</span>
-        <span class="src-host">
-          {hostOf(source.url)}
-          <span class="sr-only"> (mở trong tab mới)</span>
+        <span class="src-meta">
+          <span class="src-host">
+            {hostOf(source.url)}
+            <span class="sr-only"> (mở trong tab mới)</span>
+          </span>
+          {TIER_LABEL[source.tier] && (
+            <span class={`src-tier tier-${source.tier}`} title={TIER_LABEL[source.tier].hint}>
+              {TIER_LABEL[source.tier].text}
+            </span>
+          )}
         </span>
       </a>
     ))
@@ -64,10 +86,35 @@ function hostOf(url) {
   .src:hover .src-title {
     color: var(--accent-hover);
   }
+  .src-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
   .src-host {
     font-size: 12px;
     color: var(--text-tertiary);
     word-break: break-all;
+  }
+  .src-tier {
+    flex: none;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 3px 8px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-strong);
+    color: var(--text-secondary);
+    white-space: nowrap;
+  }
+  .src-tier.tier-A {
+    border-color: color-mix(in srgb, var(--accent) 50%, transparent);
+    color: var(--accent-hover);
+  }
+  .src-tier.tier-C {
+    border-style: dashed;
   }
   @media (max-width: 880px) {
     .src-grid {

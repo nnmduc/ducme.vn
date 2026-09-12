@@ -148,10 +148,13 @@ if (order.excluded.length) {
 
 P('## 3. Nguồn đưa vào dữ liệu');
 P();
+P('Chép cả `tier` vào từng phần tử `sources` của bản ghi — trang chi tiết dùng nó để hiện nhãn cấp nguồn.');
+P();
 P(
   table(order.sources, [
     { key: 'title', label: 'Tiêu đề' },
     { key: 'url', label: 'URL', map: (s) => `[liên kết](${s.url})` },
+    { key: 'tier', label: 'Cấp', map: (s) => s.tier || '—' },
   ])
 );
 P();
