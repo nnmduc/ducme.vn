@@ -3,12 +3,13 @@
 **Kết quả cuối cùng:** Hoàn thành — nội dung đã lên nhánh / Pull Request
 
 - Mã linh địa: `mangden`
-- Bắt đầu: 2026-09-12 07:32 · Kết thúc: 2026-09-12 07:46 · Tổng: 13 phút
+- Bắt đầu: 2026-09-12 07:32 · Kết thúc: 2026-09-12 07:49 · Tổng: 17 phút
 - Số vòng khảo cứu đã chạy: 1 / tối đa 2
 - Số lần sửa lược đồ: 0 / tối đa 2
 - Tạo Pull Request: có
 - Nhánh: `data/bo-sung-tu-lieu-mangden`
-- Ghi chú: Trien khai ket qua khao cuu da duoc kiem chung len website
+- Pull Request: https://github.com/nnmduc/ducme.vn/pull/14
+- Ghi chú: Trien khai thanh cong len website qua PR #14
 
 ## 1. Các bước đã chạy
 
@@ -17,6 +18,7 @@
 | 2026-09-12 07:37 | Khảo cứu | làm mới từ đầu | 1 | xong | Hoan tat khao cuu mangden: 7 nguon, 4 truyen tung, 5 anh ung vien |
 | 2026-09-12 07:43 | Kiểm chứng | làm mới từ đầu | 1 | xong | Ket luan AP_DUNG_CO_DIEU_KIEN (39/40 diem), cho phep trien khai |
 | 2026-09-12 07:46 | Triển khai | — | 1 | xong | Trien khai mangden vao src/data/statues.js, bo sung 4 nguon truc tiep va mo rong noi dung |
+| 2026-09-12 07:49 | Triển khai | — | 1 | xong | Trien khai thanh cong: 403 test assertions pass, da commit va tao PR #14 |
 
 
 ## 2. Các điểm rẽ nhánh
@@ -29,6 +31,7 @@ kế tiếp, và bước đó đã chạy xong. Quyết định chưa thi hành 
 | 2026-09-12 07:32 | Khảo cứu | làm mới từ đầu | — | Chưa có docs/khao-cuu/<id>/khao-cuu.json — khảo cứu từ đầu |
 | 2026-09-12 07:37 | Kiểm chứng | làm mới từ đầu | — | Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng |
 | 2026-09-12 07:43 | Triển khai | — | ÁP DỤNG CÓ ĐIỀU KIỆN | Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN |
+| 2026-09-12 07:49 | Kết thúc | — | — | Lượt chạy đã kết thúc: Hoàn thành — nội dung đã lên nhánh / Pull Request |
 
 
 ## 3. Hồ sơ sinh ra

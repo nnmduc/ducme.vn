@@ -2,7 +2,7 @@
   "schema": "ducme.quy-trinh/v1",
   "id": "mangden",
   "started": "2026-09-12T07:32:49.484Z",
-  "updated": "2026-09-12T07:46:06.810Z",
+  "updated": "2026-09-12T07:49:27.176Z",
   "status": "hoanthanh",
   "rounds": 1,
   "maxRounds": 2,
@@ -38,6 +38,15 @@
       "result": "xong",
       "agent": null,
       "note": "Trien khai mangden vao src/data/statues.js, bo sung 4 nguon truc tiep va mo rong noi dung"
+    },
+    {
+      "at": "2026-09-12T07:49:23.920Z",
+      "step": "trienkhai",
+      "mode": null,
+      "round": 1,
+      "result": "xong",
+      "agent": null,
+      "note": "Trien khai thanh cong: 403 test assertions pass, da commit va tao PR #14"
     }
   ],
   "decisions": [
@@ -61,14 +70,21 @@
       "mode": null,
       "why": "Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN",
       "verdict": "AP_DUNG_CO_DIEU_KIEN"
+    },
+    {
+      "at": "2026-09-12T07:49:25.454Z",
+      "step": "ketthuc",
+      "mode": null,
+      "why": "Lượt chạy đã kết thúc: Hoàn thành — nội dung đã lên nhánh / Pull Request",
+      "verdict": null
     }
   ],
   "final": {
     "status": "hoanthanh",
-    "note": "Trien khai ket qua khao cuu da duoc kiem chung len website",
+    "note": "Trien khai thanh cong len website qua PR #14",
     "branch": "data/bo-sung-tu-lieu-mangden",
-    "pr": null
+    "pr": "https://github.com/nnmduc/ducme.vn/pull/14"
   },
   "pending": null,
-  "ended": "2026-09-12T07:46:06.809Z"
+  "ended": "2026-09-12T07:49:27.175Z"
 }
