@@ -27,7 +27,8 @@ Thay đổi cụ thể:
 - `historicalFact`: nn → nn từ, bổ sung <nội dung>, nguồn [S1][S2]
 - `architect`: bổ sung <nội dung>, nguồn [S3]
 - `sources`: thay 2 link tìm kiếm bằng 2 bài viết trực tiếp
-- Ảnh: <thêm `src/assets/real_photos/<id>.jpg`, CC-BY-SA 4.0, tác giả ...> HOẶC <giữ `realImage: null` theo điều kiện của báo cáo kiểm chứng>
+- Ảnh chính: <thêm `src/assets/real_photos/<id>.jpg`, CC-BY-SA 4.0, tác giả ...> HOẶC <giữ `realImage: null` theo điều kiện của báo cáo kiểm chứng>
+- Ảnh phụ (`galleryImages`): <thêm `src/assets/real_photos/<id>-2.jpg`, ... — n ảnh, nguồn/giấy phép> HOẶC <giữ `galleryImages: []`>
 - Cập nhật `docs/marian-sites-missing-info.md` và số lượng bài kiểm thử (353 → nnn)
 
 Điều kiện do báo cáo kiểm chứng đặt ra và cách đã thực hiện:

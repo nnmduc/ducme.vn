@@ -31,8 +31,10 @@ docs/khao-cuu/<id>/bao-cao-kiem-chung.html  <- sinh ra khi chạy với --html
    khẳng định cốt lõi (năm thành lập, tên tượng, giáo phận, toạ độ).
 3. **Nghi ngờ thứ tự hợp lý.** Số liệu tròn trịa đáng ngờ (tượng "cao đúng 30m"), tên riêng lạ, ngày
    tháng chi tiết bất thường — đối chiếu lại.
-4. **Ảnh là điểm rủi ro cao nhất.** Dự án cấm tuyệt đối ảnh AI. Không xác minh được nguồn gốc ảnh thì
-   loại ảnh, giữ `realImage: null`, và vẫn có thể duyệt phần văn bản.
+4. **Ảnh là điểm rủi ro cao nhất.** Dự án cấm tuyệt đối ảnh AI. Không xác minh được nguồn gốc của một
+   ảnh thì loại đúng ảnh đó (chính hoặc phụ), giữ `realImage: null` và/hoặc `galleryImages: []` tương
+   ứng, và vẫn có thể duyệt phần văn bản. Ảnh lấy từ trang giáo phận/giáo xứ càng cần soi kỹ — các
+   trang này hay không ghi giấy phép mở, khác với Wikimedia Commons.
 
 ## Quy trình
 
@@ -75,16 +77,26 @@ từng luận điểm**. Lập bảng luận điểm → nguồn → xác nhận
 ### Bước 4 — Kiểm hình ảnh
 
 ```bash
-node .claude/skills/marian-audit/scripts/check-image.mjs <đường/dẫn/ảnh>
+node .claude/skills/marian-audit/scripts/check-image.mjs <đường/dẫn/ảnh...>
 ```
 
-Script bắt dấu hiệu metadata AI, C2PA, kích thước, định dạng. Phần con người phải làm:
+Kiểm **từng ảnh trong `images[]`** của hồ sơ khảo cứu, không chỉ ảnh đầu tiên — hồ sơ có thể đề xuất
+nhiều ảnh (`role: "chinh"` lẫn `"phu"`). Ảnh phụ (`galleryImages`) không được kiểm lỏng tay hơn ảnh
+chính: cùng một bộ tiêu chí, cùng khả năng bị loại.
+
+Script bắt dấu hiệu metadata AI, C2PA, kích thước, định dạng. Phần con người phải làm cho mỗi ảnh:
 
 - Mở trang mô tả file gốc (trang `File:` trên Wikimedia Commons chẳng hạn), xác nhận nó có thật.
 - Đọc đúng tên giấy phép. "Free to use", "sưu tầm", "nguồn: internet" đều **không** phải giấy phép.
+  Ảnh lấy từ trang tin giáo phận/giáo xứ đặc biệt hay thiếu giấy phép công khai — chỉ vì trang đăng
+  công khai không có nghĩa được phép dùng lại; một lời "xin phép qua email/điện thoại" cũng không
+  phải giấy phép công khai kiểm tra lại được, nên **loại** trừ khi trang tự ghi rõ điều khoản cho
+  phép dùng lại.
 - Xác nhận ảnh đúng là linh địa đang xét — nhiều tượng Đức Mẹ khác nhau trông rất giống nhau.
 - Nghi ngờ thì tìm ảnh ngược. Ảnh sắc nét bất thường, ánh sáng quá hoàn hảo, chi tiết kiến trúc méo,
   chữ trên bảng hiệu nhoè thành ký tự vô nghĩa — đều là dấu hiệu ảnh tạo sinh.
+- Kiểm `role`: tối đa một ảnh `"chinh"` trong hồ sơ; ảnh nào đã loại thì không được lọt vào
+  `approved.images[]`, kể cả khi đó là ảnh phụ duy nhất tìm được.
 
 ### Bước 5 — Kiểm nội dung
 

@@ -77,8 +77,31 @@
     }
   ],
 
-  "images": [],
-  "imageSearchNote": "Đã tìm trên Wikimedia Commons, kho ảnh giáo phận và báo chí Công giáo, chưa có ảnh nào giấy phép rõ ràng",
+  "images": [
+    {
+      "file": "File:ViDuLinhDai.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:ViDuLinhDai.jpg",
+      "author": "Tên tác giả trên trang mô tả file",
+      "license": "CC BY-SA 4.0",
+      "year": 2021,
+      "content": "Toàn cảnh chính diện tượng, mô tả ngắn gọn điều xuất hiện trong ảnh",
+      "caption": "Ảnh chụp thực tế linh đài Đức Mẹ Ví Dụ (Nguồn: Wikimedia Commons, tác giả ..., giấy phép CC BY-SA 4.0)",
+      "notAi": true,
+      "role": "chinh"
+    },
+    {
+      "file": "anh-phu-trang-giao-phan.jpg",
+      "filePage": "https://giaophanvidu.org/tin-tuc/le-khanh-thanh-linh-dai-duc-me-vi-du.html",
+      "author": "Ban Truyền thông Giáo phận Ví Dụ",
+      "license": "Giáo phận cho phép dùng lại kèm ghi nguồn (xác nhận qua email/điện thoại ngày 2026-09-10)",
+      "year": 2022,
+      "content": "Góc chụp khác — toàn cảnh khuôn viên linh đài kèm bảng ghi công, đăng trong bài tin của giáo phận",
+      "caption": "Toàn cảnh khuôn viên linh đài Đức Mẹ Ví Dụ (Nguồn: trang tin Giáo phận Ví Dụ, đăng 2022)",
+      "notAi": true,
+      "role": "phu"
+    }
+  ],
+  "imageSearchNote": "Tìm trên Wikimedia Commons, trang tin chính thức của giáo phận/giáo xứ sở tại, và dùng Google Images/blog hành hương chỉ để lần ra nguồn gốc — xem references/nguon-tu-lieu.md mục 'Với ảnh'. Ảnh phụ từ trang giáo phận không có giấy phép CC hình thức, đã liên hệ xin phép trước khi đề xuất; nếu không xin được phép rõ ràng thì không đề xuất, dù đã tìm thấy ảnh.",
 
   "conflicts": [
     {

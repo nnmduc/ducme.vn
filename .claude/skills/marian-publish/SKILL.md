@@ -66,14 +66,32 @@ Quy tắc khi sửa:
 
 ### Bước 3 — Ảnh (nếu audit duyệt ảnh)
 
+Phiếu thi công tách rõ **4a. Ảnh chính** và **4b. Ảnh phụ** — thi công đúng từng mục, không gộp chung.
+
 ```bash
-# đặt tên theo id, đưa vào src/assets/ để astro:assets tối ưu (KHÔNG để trong public/)
-cp <ảnh gốc> src/assets/real_photos/<id>.jpg
-node .claude/skills/marian-audit/scripts/check-image.mjs src/assets/real_photos/<id>.jpg
+# anh chinh: dat ten theo id, dua vao src/assets/ de astro:assets toi uu (KHONG de trong public/)
+cp <ảnh chính đã duyệt> src/assets/real_photos/<id>.jpg
+
+# anh phu (neu co, danh so tu 2 tro di theo dung thu tu trong phieu thi cong)
+cp <ảnh phụ 1 đã duyệt> src/assets/real_photos/<id>-2.jpg
+cp <ảnh phụ 2 đã duyệt> src/assets/real_photos/<id>-3.jpg
+
+node .claude/skills/marian-audit/scripts/check-image.mjs src/assets/real_photos/<id>*.jpg
 ```
 
-Trong dữ liệu: `"realImage": "assets/real_photos/<id>.jpg"` (đường dẫn tương đối tính từ `src/`, không
-có dấu `/` đầu), kèm `realImageCaption` ghi rõ nơi chụp và nguồn/giấy phép.
+Trong dữ liệu:
+
+```json
+"realImage": "assets/real_photos/<id>.jpg",
+"realImageCaption": "... nơi chụp, nguồn, giấy phép ...",
+"galleryImages": [
+  { "image": "assets/real_photos/<id>-2.jpg", "caption": "... nơi chụp, nguồn, giấy phép ..." }
+]
+```
+
+Đường dẫn tương đối tính từ `src/`, không có dấu `/` đầu. Không có ảnh chính thì `realImage: null` +
+`realImageCaption: null`. Không có ảnh phụ nào được duyệt thì `galleryImages: []` — mảng này luôn phải
+có mặt, không được bỏ trống trường.
 
 ### Bước 4 — Cập nhật tài liệu liên quan
 

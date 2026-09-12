@@ -30,6 +30,10 @@ kiểm tự động; vi phạm là CI đỏ.
 | `sources[].title` | string | dài hơn 5 ký tự | Mô tả được nguồn, không chỉ ghi "Wikipedia" |
 | `sources[].url` | string | `https://`, không phải root domain trần | Trỏ thẳng bài viết |
 
+Quy trình đề xuất nhiều ảnh (ảnh chính + ảnh phụ, mỗi ảnh gắn `role: "chinh" | "phu"`) nằm ở
+`images[]` của hồ sơ khảo cứu — xem [`ho-so-khao-cuu.md`](ho-so-khao-cuu.md#images--ảnh-đề-xuất) và
+danh sách nguồn tìm ảnh mở rộng ở [`nguon-tu-lieu.md`](nguon-tu-lieu.md).
+
 ## Sáu vùng miền (khớp tuyệt đối)
 
 ```

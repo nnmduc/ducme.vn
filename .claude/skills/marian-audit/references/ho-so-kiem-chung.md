@@ -106,7 +106,7 @@ diễn giải thêm.
 |---|---|---|
 | `fields[]` | array | Tên trường được duyệt; phải nằm trong `fields[]` của hồ sơ khảo cứu |
 | `sources[]` | array | Mã nguồn đưa vào dữ liệu; tối thiểu 2 khi cho phép triển khai |
-| `images[]` | array | Tên file ảnh được duyệt; `[]` nghĩa là giữ `realImage: null` |
+| `images[]` | array | Tên file ảnh được duyệt (khớp `file` trong `images[]` của hồ sơ khảo cứu, cả ảnh `role: "chinh"` lẫn `"phu"`); `[]` nghĩa là giữ `realImage: null` và `galleryImages: []` |
 | `constellation` | boolean | Có cho phép sửa `CONSTELLATION_VERSIONS` không |
 
 Đây là phần `marian-publish` đọc bằng máy. Trường nào không có tên trong `approved.fields` thì không

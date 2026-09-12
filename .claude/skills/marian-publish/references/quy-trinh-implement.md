@@ -5,7 +5,8 @@
 | File | Khi nào sửa |
 |---|---|
 | `src/data/statues.js` | Mọi thay đổi dữ liệu linh địa. Nguồn sự thật duy nhất |
-| `src/assets/real_photos/<id>.jpg` | Khi audit duyệt ảnh |
+| `src/assets/real_photos/<id>.jpg` | Khi audit duyệt ảnh chính |
+| `src/assets/real_photos/<id>-2.jpg`, `<id>-3.jpg`, ... | Khi audit duyệt thêm ảnh phụ (`galleryImages`) |
 | `docs/khao-cuu/<id>/*` | Luôn commit kèm cả hai hồ sơ JSON và báo cáo sinh ra từ chúng |
 | `docs/marian-sites-missing-info.md` | Khi linh địa vừa được bổ sung ảnh/nguồn/nội dung |
 | `README.md`, `docs/*.md`, `.github/pull_request_template.md` | Khi tổng số assertion của `npm test` đổi |
@@ -30,7 +31,8 @@ File là module JS chứa một mảng JSON viết tay. Bám đúng phong cách 
   file, giữ nguyên thay vì "sửa cho đều".
 - Giữ nguyên thứ tự trường như các bản ghi hiện có: `id`, `name`, `title`, `year`, `lat`, `lng`,
   `elevation`, `location`, `region`, `diocese`, `diemStatue5`, `constellationRole`, `historicalFact`,
-  `oralTradition`, `architect`, `significance`, `realImage`, `realImageCaption`, `sources`.
+  `oralTradition`, `architect`, `significance`, `realImage`, `realImageCaption`, `galleryImages`,
+  `sources`.
 - Không chạy formatter lên cả file. Diff phải nhỏ và đọc được.
 
 Chèn bản ghi mới ở đâu: mảng hiện xếp đại thể theo mạch niên đại/vùng miền. Chèn vào vị trí hợp mạch
@@ -40,16 +42,24 @@ miền rồi tới năm), nên vị trí trong file không ảnh hưởng giao d
 ## 3. Đường dẫn ảnh
 
 ```
-file thật:  src/assets/real_photos/<id>.jpg
-trong data: "realImage": "assets/real_photos/<id>.jpg"
+anh chinh:
+  file thật:  src/assets/real_photos/<id>.jpg
+  trong data: "realImage": "assets/real_photos/<id>.jpg"
+
+anh phu (galleryImages, 0..nhieu):
+  file thật:  src/assets/real_photos/<id>-2.jpg, <id>-3.jpg, ...
+  trong data: "galleryImages": [{ "image": "assets/real_photos/<id>-2.jpg", "caption": "..." }, ...]
 ```
 
 Đường dẫn tính từ `src/`, không có dấu `/` đầu. `src/lib/photos.js` chỉ so khớp theo **tên file**, nên
-tên file phải đúng và duy nhất. Ảnh bắt buộc nằm trong `src/assets/` để đường ống `astro:assets` nén
-và sinh AVIF/WebP — để trong `public/` thì ảnh bị chép nguyên trạng, không tối ưu.
+tên file phải đúng và duy nhất — kể cả với các số thứ tự `-2`, `-3` của ảnh phụ. Ảnh bắt buộc nằm
+trong `src/assets/` để đường ống `astro:assets` nén và sinh AVIF/WebP — để trong `public/` thì ảnh bị
+chép nguyên trạng, không tối ưu.
 
-Kèm theo: `realImageCaption` ghi rõ chụp gì, ở đâu, nguồn và giấy phép. Ví dụ mẫu trong dữ liệu hiện
-có: `"Ảnh chụp thực tế linh đài Đức Mẹ La Vang tại Quảng Trị (Nguồn: Wikimedia Commons)"`.
+Kèm theo mỗi ảnh một caption ghi rõ chụp gì, ở đâu, nguồn và giấy phép: `realImageCaption` cho ảnh
+chính, `galleryImages[].caption` cho từng ảnh phụ. Ví dụ mẫu trong dữ liệu hiện có:
+`"Ảnh chụp thực tế linh đài Đức Mẹ La Vang tại Quảng Trị (Nguồn: Wikimedia Commons)"`. `galleryImages`
+là trường bắt buộc phải có mặt trong mọi bản ghi (dùng `[]` khi chưa có ảnh phụ nào được duyệt).
 
 ## 4. Sửa chòm sao (hiếm, cần audit duyệt rõ)
 
@@ -102,6 +112,7 @@ phải lý do để bỏ chạy test tại máy.
 | Lỗi | Nguyên nhân | Cách sửa |
 |---|---|---|
 | Test báo file ảnh không tồn tại | dữ liệu trỏ tới ảnh chưa `git add` | thêm file ảnh vào commit |
+| Test báo sai định dạng tên file `galleryImages[].image` | thiếu số thứ tự hoặc không khớp `<id>-<số>.jpg` | đặt lại tên đúng `assets/real_photos/<id>-2.jpg`, `-3.jpg`, ... |
 | Test báo URL root domain trần | nguồn chỉ có tên miền | thay bằng link bài viết cụ thể |
 | Test báo sai số lượng tượng Diệm | đặt `diemStatue5: true` cho id mới | trả về `false` |
 | Test báo node chòm sao không khớp | sửa `nodes` mà quên `constellationRole` hoặc ngược lại | sửa cả hai nơi |

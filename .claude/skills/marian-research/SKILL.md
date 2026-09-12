@@ -83,10 +83,22 @@ lúc đọc — không để đến cuối mới dựng lại danh mục nguồn
 
 ### Bước 4 — Hình ảnh
 
-Với mỗi ảnh đề xuất, ghi lại các thông tin:
-URL trang mô tả file (không phải URL ảnh thô) · tên tác giả · giấy phép · năm chụp · nội dung ảnh.
+Trang có một ảnh chính (`realImage`) và có thể có thêm nhiều **ảnh phụ** (`galleryImages[]`) — toàn
+cảnh khuôn viên, góc chụp khác, bảng ghi công, chi tiết kiến trúc. Đừng dừng lại ngay khi tìm được một
+ảnh: nếu nguồn cho phép, tiếp tục tìm thêm ảnh phụ hợp lệ cho cùng linh địa, mỗi ảnh vẫn phải qua đúng
+quy trình xác minh nguồn gốc và giấy phép như ảnh chính — không hạ thấp tiêu chuẩn cho ảnh phụ.
 
-Không hotlink, không tải ảnh từ Facebook hay mạng xã hội tương đương, không cắt ảnh từ video.
+Với mỗi ảnh đề xuất (chính lẫn phụ), ghi vào `images[]` các thông tin:
+URL trang mô tả file (không phải URL ảnh thô) · tên tác giả · giấy phép · năm chụp · nội dung ảnh ·
+`role` (`"chinh"` cho ảnh chính, tối đa 1 ảnh mỗi hồ sơ; `"phu"` cho ảnh phụ, có thể nhiều).
+
+Đọc `references/nguon-tu-lieu.md` mục "Với ảnh" để biết các nguồn có thể tìm — không chỉ Wikimedia
+Commons, mà cả trang tin chính thức của giáo phận/giáo xứ và Google Images (dùng để lần ra nguồn gốc,
+không phải để trích dẫn trực tiếp).
+
+Không hotlink, không tải ảnh từ Facebook hay mạng xã hội tương đương, không cắt ảnh từ video. Ảnh phụ
+không có giấy phép công khai rõ ràng thì vẫn ghi lại làm manh mối trong `imageSearchNote`, không đưa
+vào `images[]` như một đề xuất chính thức — audit sẽ loại ngay và không có ảnh nào thay thế được.
 
 ### Bước 5 — Viết hồ sơ JSON
 

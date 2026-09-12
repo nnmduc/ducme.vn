@@ -86,10 +86,36 @@ Ràng buộc: tối thiểu 2 nguồn `inRecord: true`. Nguồn cấp `C` **khô
 ### `images[]` — ảnh đề xuất
 
 Mảng rỗng `[]` là hợp lệ và thường là kết quả đúng. Mỗi phần tử cần: `file`, `filePage` (trang mô tả
-file gốc, không phải URL ảnh thô), `author`, `license`, `year`, `content`, `caption`, và
-`notAi: true` — thiếu một trong số đó thì hồ sơ không hợp lệ.
+file gốc, không phải URL ảnh thô), `author`, `license`, `year`, `content`, `caption`, `notAi: true`,
+và `role` — thiếu một trong số đó thì hồ sơ không hợp lệ.
 
-Khi không đề xuất ảnh, ghi `imageSearchNote` cho biết đã tìm qua những đâu.
+`role` quyết định ảnh đó đổ vào trường nào của `record`:
+
+| `role` | Đổ vào | Số lượng |
+|---|---|---|
+| `"chinh"` | `record.realImage` + `record.realImageCaption` | Tối đa 1 ảnh mỗi hồ sơ |
+| `"phu"` | một phần tử của `record.galleryImages[]` | 0 hoặc nhiều |
+
+Không dừng lại ở một ảnh: nếu tìm được thêm ảnh phụ hợp lệ (giấy phép rõ, đúng linh địa), cứ đề xuất
+thêm — mỗi ảnh phụ vẫn cần đủ các trường trên như ảnh chính, không có tiêu chuẩn thấp hơn. Ví dụ:
+
+```json
+{
+  "file": "File:LinhDaiToanCanh.jpg",
+  "filePage": "https://commons.wikimedia.org/wiki/File:LinhDaiToanCanh.jpg",
+  "author": "Tên tác giả",
+  "license": "CC BY-SA 4.0",
+  "year": 2022,
+  "content": "Toàn cảnh khuôn viên linh đài nhìn từ cổng vào",
+  "caption": "Toàn cảnh khuôn viên linh đài ... (Nguồn: Wikimedia Commons, tác giả ..., CC BY-SA 4.0)",
+  "notAi": true,
+  "role": "phu"
+}
+```
+
+Khi không đề xuất được ảnh nào (kể cả ảnh phụ), ghi `imageSearchNote` cho biết đã tìm qua những đâu —
+xem `references/nguon-tu-lieu.md` mục "Với ảnh" để biết đầy đủ các nguồn nên thử trước khi kết luận
+không có ảnh.
 
 ### `conflicts[]`, `unknowns[]`, `selfAssessment`
 

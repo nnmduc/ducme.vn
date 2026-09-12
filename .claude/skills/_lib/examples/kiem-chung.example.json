@@ -7,18 +7,18 @@
   "date": "2026-09-11",
 
   "verdict": "AP_DUNG_CO_DIEU_KIEN",
-  "summary": "ĐÂY LÀ FILE VÍ DỤ. Phần văn bản có nguồn đối chiếu được nên duyệt; con số chiều cao tượng không khớp nguồn nên phải sửa câu chữ trước khi đưa lên.",
+  "summary": "ĐÂY LÀ FILE VÍ DỤ. Phần văn bản có nguồn đối chiếu được nên duyệt; con số chiều cao tượng không khớp nguồn nên phải sửa câu chữ. Ảnh chính (Wikimedia Commons, CC BY-SA 4.0) được duyệt; ảnh phụ từ trang giáo phận bị loại vì chỉ có xin phép riêng qua email, không phải giấy phép công khai kiểm tra lại được.",
 
   "scores": [
     { "axis": "nguon", "score": 4, "evidence": "Hai nguồn cấp B độc lập, đều mở được và đúng nội dung" },
     { "axis": "truyvet", "score": 4, "evidence": "3/4 khẳng định truy được nguyên văn; 1 khẳng định lệch con số" },
     { "axis": "chinhxac", "score": 4, "evidence": "Toạ độ, vùng miền, giáo phận khớp nguồn" },
-    { "axis": "hinhanh", "score": 3, "evidence": "Không đề xuất ảnh — chấp nhận được theo quy chuẩn" },
+    { "axis": "hinhanh", "score": 4, "evidence": "Ảnh chính có giấy phép CC BY-SA 4.0 xác minh được trên Wikimedia Commons, đúng linh địa; ảnh phụ đề xuất phải loại vì giấy phép không công khai — đúng quy trình, không phải điểm trừ về chất lượng khảo cứu" },
     { "axis": "phandinh", "score": 5, "evidence": "historicalFact và oralTradition tách bạch rõ" },
     { "axis": "giongvan", "score": 5, "evidence": "Trung lập, không có câu mang tính tuyên truyền" },
     { "axis": "kythuat", "score": 4, "evidence": "validate-record.mjs không còn lỗi chặn, còn 2 cảnh báo đã giải trình" }
   ],
-  "totalScore": 29,
+  "totalScore": 30,
 
   "sourceChecks": [
     { "code": "S1", "url": "https://example.com/bai-viet-mot", "status": "OK", "containsClaim": true, "note": "Xác nhận mốc 1960" },
@@ -35,22 +35,43 @@
     { "title": "Nguồn do người kiểm chứng tự tìm", "url": "https://example.com/nguon-doc-lap", "finding": "Xác nhận mốc 1960, không nhắc tới chiều cao tượng" }
   ],
 
-  "imageChecks": [],
+  "imageChecks": [
+    {
+      "file": "File:ViDuLinhDai.jpg",
+      "licenseVerified": true,
+      "license": "CC BY-SA 4.0",
+      "subjectMatches": true,
+      "aiSignals": [],
+      "result": "duyet",
+      "note": "Mở trực tiếp trang File: trên Wikimedia Commons, còn sống, đúng giấy phép, đúng chủ thể linh địa đang xét. Dùng làm realImage."
+    },
+    {
+      "file": "anh-phu-trang-giao-phan.jpg",
+      "licenseVerified": false,
+      "license": "Chỉ có xác nhận cho phép qua email cá nhân, không phải giấy phép công khai",
+      "subjectMatches": true,
+      "aiSignals": [],
+      "result": "loai",
+      "note": "Đúng chủ thể, không có dấu hiệu AI, nhưng 'xin phép qua email' không phải CC-BY-SA/CC-BY/Public Domain và không ai khác kiểm tra lại được — vi phạm nguyên tắc 'nguồn phải truy cập được'. LOẠI, không đưa vào galleryImages dù đã tìm được ảnh."
+    }
+  ],
 
   "issues": [
     { "level": "nang", "issue": "Con số chiều cao tượng viết chắc chắn hơn nguồn", "where": "historicalFact, câu 2", "fix": "Đổi thành 'cao khoảng 3m'" },
-    { "level": "nhe", "issue": "Chưa tiếp cận được kỷ yếu giáo phận", "where": "Danh mục nguồn", "fix": "Ghi nhận là hạn chế, không chặn triển khai" }
+    { "level": "nhe", "issue": "Chưa tiếp cận được kỷ yếu giáo phận", "where": "Danh mục nguồn", "fix": "Ghi nhận là hạn chế, không chặn triển khai" },
+    { "level": "nhe", "issue": "Ảnh phụ đề xuất (anh-phu-trang-giao-phan.jpg) không có giấy phép công khai", "where": "images[1] trong hồ sơ khảo cứu", "fix": "Loại khỏi approved.images; giữ galleryImages: [] cho tới khi có giấy phép rõ ràng hoặc tìm được ảnh khác" }
   ],
 
   "conditions": [
     "Sửa 'Tượng cao 3m' thành 'Tượng cao khoảng 3m' trong historicalFact theo nguyên văn nguồn [S2]",
-    "Giữ realImage: null — không có ảnh nào được duyệt"
+    "Dùng File:ViDuLinhDai.jpg làm realImage đúng caption đề xuất trong hồ sơ khảo cứu",
+    "Giữ galleryImages: [] — ảnh phụ đề xuất bị loại vì giấy phép không công khai kiểm tra lại được"
   ],
 
   "approved": {
     "fields": ["historicalFact", "architect", "sources"],
     "sources": ["S1", "S2"],
-    "images": [],
+    "images": ["File:ViDuLinhDai.jpg"],
     "constellation": false
   },
 
@@ -58,6 +79,7 @@
     "Số lượng linh địa": "không đổi",
     "CONSTELLATION_VERSIONS": "không đổi",
     "Số assertion npm test": "353 → 353 (số nguồn không đổi)",
+    "Ảnh thực địa": "Lần đầu có realImage hợp lệ cho bản ghi này; ảnh phụ đề xuất bị loại nên galleryImages vẫn để []",
     "Tài liệu phải cập nhật": ["docs/marian-sites-missing-info.md"]
   },
 

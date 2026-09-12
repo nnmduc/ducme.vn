@@ -9,7 +9,7 @@ Mỗi trục cho điểm 0–5. Kèm bằng chứng cho mỗi điểm số — �
 | 1 | **Chất lượng nguồn** | Không nguồn, hoặc toàn blog/mạng xã hội | Đủ 2 nguồn nhưng đều cấp B yếu | Có nguồn cấp A hoặc nhiều nguồn cấp B độc lập |
 | 2 | **Truy vết luận điểm** | Nội dung không truy được về nguồn nào | Phần lớn truy được, vài câu trôi nổi | Mọi khẳng định đều gắn nguồn cụ thể và nguồn thật sự chứa nội dung đó |
 | 3 | **Độ chính xác dữ liệu** | Sai vùng miền/toạ độ/niên đại | Có sai lệch nhỏ đã nêu | Mọi trường khớp nguồn, toạ độ đối chiếu được |
-| 4 | **Hình ảnh** | Ảnh AI, hoặc không rõ bản quyền | Không đề xuất ảnh (chấp nhận được) | Ảnh thật, giấy phép rõ, tác giả rõ, đúng linh địa |
+| 4 | **Hình ảnh** | Ảnh AI, hoặc không rõ bản quyền | Không đề xuất ảnh (chấp nhận được) | Ảnh thật, giấy phép rõ, tác giả rõ, đúng linh địa — có thêm ảnh phụ (`galleryImages`) hợp lệ là điểm cộng, không bắt buộc |
 | 5 | **Phân định sự thật / truyền tụng** | Trộn lẫn, khẳng định siêu nhiên như lịch sử | Có phân định nhưng còn vài chỗ lẫn | Ranh giới rõ ràng, dùng đúng trường |
 | 6 | **Giọng văn & tính trung lập** | Tuyên truyền, thiên kiến chính trị/tôn giáo | Tạm ổn, vài câu cảm tính | Trung lập, kính trọng, mô tả thay vì tán dương |
 | 7 | **Tính kỹ thuật** | `validate-record.mjs` lỗi chặn | Đạt nhưng nhiều cảnh báo | Đạt, cảnh báo đã giải trình |
@@ -32,8 +32,9 @@ Quy đổi tham khảo (chỉ tham khảo — tiêu chí chặn ở mục B luô
 7. Đề xuất sửa `CONSTELLATION_VERSIONS` mà không có lập luận lịch sử riêng.
 8. Trùng lặp với một bản ghi đã có mà báo cáo không nhận ra.
 
-Chạm tiêu chí 1–3 ở **riêng phần ảnh** thì vẫn có thể ÁP DỤNG CÓ ĐIỀU KIỆN cho phần văn bản: duyệt
-văn bản, loại ảnh, giữ `realImage: null`.
+Chạm tiêu chí 1–3 ở **riêng một ảnh** (chính hoặc phụ) không chặn cả hồ sơ: loại đúng ảnh đó, giữ các
+ảnh khác đã đạt. Chạm ở **toàn bộ ảnh đề xuất** thì vẫn có thể ÁP DỤNG CÓ ĐIỀU KIỆN cho phần văn bản:
+duyệt văn bản, loại hết ảnh, giữ `realImage: null` và `galleryImages: []`.
 
 ## C. Bảng đối chiếu luận điểm (phải làm bằng tay)
 

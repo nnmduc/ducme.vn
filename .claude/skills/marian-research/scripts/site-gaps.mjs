@@ -55,6 +55,8 @@ function analyse(s) {
     if (!s[f]) missing.push(`thieu truong ${f}`);
   });
   if (s.realImage && !s.realImageCaption) missing.push('thieu realImageCaption');
+  const galleryCount = Array.isArray(s.galleryImages) ? s.galleryImages.length : 0;
+  if (s.realImage && galleryCount === 0) missing.push('chua co anh phu (galleryImages)');
 
   // Diem uu tien: cang cao cang nen khao cuu truoc.
   const priority =
@@ -69,6 +71,7 @@ function analyse(s) {
     diocese: s.diocese,
     year: s.year,
     hasPhoto: Boolean(s.realImage),
+    galleryCount,
     words,
     totalWords,
     sourceCount: sources.length,
@@ -103,7 +106,7 @@ for (const r of rows) {
   console.log(`[${String(r.priority).padStart(3)}] ${r.id} — ${r.name}`);
   console.log(`      ${r.region} · ${r.diocese} · ${r.year}`);
   console.log(
-    `      anh: ${r.hasPhoto ? 'co' : 'CHUA CO'} | nguon: ${r.directSourceCount} truc tiep / ${r.searchSourceCount} tim kiem | van xuoi: ${r.totalWords} tu ` +
+    `      anh: ${r.hasPhoto ? 'co' : 'CHUA CO'} (anh phu: ${r.galleryCount}) | nguon: ${r.directSourceCount} truc tiep / ${r.searchSourceCount} tim kiem | van xuoi: ${r.totalWords} tu ` +
       `(ls ${r.words.historicalFact}, kt ${r.words.architect}, tt ${r.words.oralTradition}, gt ${r.words.significance})`
   );
   if (r.constellations.length) console.log(`      chom sao: ${r.constellations.join(', ')}`);

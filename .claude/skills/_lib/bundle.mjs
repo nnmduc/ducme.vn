@@ -46,13 +46,31 @@ export const AXES = [
 export const APPROVABLE_FIELDS = [
   'name', 'title', 'year', 'lat', 'lng', 'elevation', 'location', 'region', 'diocese',
   'historicalFact', 'oralTradition', 'architect', 'significance',
-  'realImage', 'realImageCaption', 'sources', 'constellationRole',
+  'realImage', 'realImageCaption', 'galleryImages', 'sources', 'constellationRole',
 ];
 
 export const FIELD_ACTIONS = ['them', 'sua', 'giunguyen'];
 export const CLAIM_RESULTS = ['dat', 'sua', 'bo'];
 export const SOURCE_TIERS = ['A', 'B', 'C'];
 export const ISSUE_LEVELS = ['chan', 'nang', 'nhe'];
+
+/**
+ * Vai tro cua mot anh de xuat trong "images[]" cua khao-cuu.json:
+ *   - "chinh": anh chinh, do vao record.realImage (toi da 1 anh moi ho so).
+ *   - "phu":   anh phu minh hoa them, do vao record.galleryImages[] (0..nhieu anh).
+ */
+export const IMAGE_ROLES = ['chinh', 'phu'];
+
+/**
+ * Tach mang "images[]" (co truong role) thanh anh chinh va danh sach anh phu, dung chung
+ * boi cac lenh format/read-handoff de hien thi dung noi anh se do vao (realImage vs galleryImages).
+ */
+export function splitImagesByRole(images) {
+  const list = Array.isArray(images) ? images : [];
+  const main = list.find((im) => im?.role === 'chinh') || null;
+  const gallery = list.filter((im) => im?.role !== 'chinh');
+  return { main, gallery };
+}
 
 export function readJson(file) {
   const abs = path.resolve(file);
@@ -154,14 +172,25 @@ export function validateResearch(b) {
   if (!isArr(b?.images)) {
     W('"images" nen la mang rong [] khi khong de xuat anh');
   } else {
+    let mainCount = 0;
     b.images.forEach((im, i) => {
       const tag = `images[${i}]`;
       if (!isStr(im?.filePage)) E(`${tag}.filePage phai la URL trang mo ta file goc`);
       if (!isStr(im?.author)) E(`${tag}.author bat buoc`);
       if (!isStr(im?.license)) E(`${tag}.license bat buoc, ghi ro giay phep`);
       if (im?.notAi !== true) E(`${tag}.notAi phai la true kem cam ket anh khong do AI tao sinh`);
-      if (!isStr(im?.caption)) W(`${tag}.caption nen la noi dung se dat vao realImageCaption`);
+      if (!IMAGE_ROLES.includes(im?.role)) {
+        E(`${tag}.role phai la "chinh" (-> realImage) hoac "phu" (-> galleryImages[])`);
+      } else if (im.role === 'chinh') {
+        mainCount++;
+      }
+      if (!isStr(im?.caption)) {
+        W(`${tag}.caption nen la noi dung se dat vao realImageCaption (role "chinh") hoac galleryImages[].caption (role "phu")`);
+      }
     });
+    if (mainCount > 1) {
+      E(`"images" co ${mainCount} anh role "chinh" — chi duoc toi da 1 anh chinh moi ho so, con lai phai la "phu"`);
+    }
   }
 
   if (!isArr(b?.conflicts)) W('"conflicts" nen la mang rong [] khi khong co mau thuan nguon');
@@ -285,6 +314,11 @@ export function validateAudit(b, research = null) {
       (approved.sources || []).forEach((code) => {
         if (!research.sources?.some((s) => s.code === code)) {
           E(`approved.sources tro toi ma nguon "${code}" khong co trong ho so khao cuu`);
+        }
+      });
+      (approved.images || []).forEach((file) => {
+        if (!research.images?.some((im) => im.file === file)) {
+          E(`approved.images tro toi anh "${file}" khong co trong "images[]" cua ho so khao cuu`);
         }
       });
     }
