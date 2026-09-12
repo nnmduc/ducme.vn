@@ -124,6 +124,7 @@
     "significance": "Giá trị tâm linh và vai trò với cộng đồng địa phương.",
     "realImage": null,
     "realImageCaption": null,
+    "galleryImages": [],
     "sources": [
       { "title": "Tiêu đề bài viết nguồn thứ nhất", "url": "https://example.com/bai-viet-mot" },
       { "title": "Tiêu đề bài viết nguồn thứ hai", "url": "https://example.com/bai-viet-hai" }

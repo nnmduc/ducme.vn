@@ -47,6 +47,24 @@ statues.forEach(s => {
     const imgPath = path.join(import.meta.dirname, '..', 'src', s.realImage);
     assert(fs.existsSync(imgPath), `File ảnh thực tế ${s.realImage} của tượng "${s.name}" phải tồn tại`);
   }
+
+  // Ảnh phụ (galleryImages): trường phải tồn tại (mảng, có thể rỗng khi chưa khảo cứu ảnh),
+  // mỗi phần tử đã khai báo phải có caption và file thật trên đĩa.
+  assert(Array.isArray(s.galleryImages), `Tượng "${s.id}" phải có trường galleryImages (mảng, có thể rỗng)`);
+  (s.galleryImages || []).forEach((item, i) => {
+    assert(
+      typeof item?.image === 'string' && item.image.length > 0,
+      `Tượng "${s.id}" galleryImages[${i}] phải có đường dẫn image`
+    );
+    assert(
+      typeof item?.caption === 'string' && item.caption.length > 0,
+      `Tượng "${s.id}" galleryImages[${i}] phải có caption ghi rõ nguồn/giấy phép`
+    );
+    if (item?.image) {
+      const imgPath = path.join(import.meta.dirname, '..', 'src', item.image);
+      assert(fs.existsSync(imgPath), `File ảnh phụ ${item.image} của tượng "${s.name}" phải tồn tại`);
+    }
+  });
 });
 
 console.log('\n--- 2. KIỂM TRA 5 TƯỢNG THỜI TT NGÔ ĐÌNH DIỆM (1959–1961) ---');
