@@ -2,8 +2,8 @@
   "schema": "ducme.quy-trinh/v1",
   "id": "lama",
   "started": "2026-09-12T08:00:20.158Z",
-  "updated": "2026-09-12T08:51:30.380Z",
-  "status": "dangchay",
+  "updated": "2026-09-12T09:02:23.687Z",
+  "status": "hoanthanh",
   "rounds": 1,
   "maxRounds": 2,
   "fixes": 0,
@@ -29,6 +29,15 @@
       "result": "xong",
       "agent": "general-purpose",
       "note": "AP_DUNG_CO_DIEU_KIEN 38/40: toa do va nam 1951 xac nhan doc lap dung; 2 dieu kien: bo cau suy luan trong significance, doi .webp sang .jpg/.png"
+    },
+    {
+      "at": "2026-09-12T09:02:16.851Z",
+      "step": "trienkhai",
+      "mode": null,
+      "round": 1,
+      "result": "xong",
+      "agent": "general-purpose",
+      "note": "Sua significance, doi webp->jpg, them 5 anh, 419 test PASS, build OK, commit f68b473, PR #15"
     }
   ],
   "decisions": [
@@ -45,14 +54,28 @@
       "mode": "moi",
       "why": "Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng",
       "verdict": null
+    },
+    {
+      "at": "2026-09-12T08:51:30.380Z",
+      "step": "trienkhai",
+      "mode": null,
+      "why": "Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN",
+      "verdict": "AP_DUNG_CO_DIEU_KIEN"
+    },
+    {
+      "at": "2026-09-12T09:02:19.606Z",
+      "step": "ketthuc",
+      "mode": null,
+      "why": "Đã triển khai xong",
+      "verdict": "AP_DUNG_CO_DIEU_KIEN"
     }
   ],
-  "final": {},
-  "pending": {
-    "at": "2026-09-12T08:51:30.380Z",
-    "step": "trienkhai",
-    "mode": null,
-    "why": "Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN",
-    "verdict": "AP_DUNG_CO_DIEU_KIEN"
-  }
+  "final": {
+    "status": "hoanthanh",
+    "note": "Trien khai thanh cong: 419 test PASS, build OK, PR #15 mo cho",
+    "branch": "claude/wizardly-heisenberg-7l7gt9",
+    "pr": "https://github.com/nnmduc/ducme.vn/pull/15"
+  },
+  "pending": null,
+  "ended": "2026-09-12T09:02:23.687Z"
 }
