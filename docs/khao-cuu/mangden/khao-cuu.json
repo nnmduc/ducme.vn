@@ -1,0 +1,552 @@
+{
+  "schema": "ducme.khao-cuu/v1",
+  "id": "mangden",
+  "name": "Đức Mẹ Măng Đen",
+  "kind": "capnhat",
+  "researcher": "Phiên khảo cứu Marian",
+  "date": "2026-09-12",
+  "scope": "Khảo cứu toàn diện linh địa Đức Mẹ Măng Đen: bổ sung nguồn gốc lịch sử (1971, LM Tôma Lê Thành Ánh, LM Giuse Nguyễn Minh Kông, ĐGM Phaolô Seitz Kim), thu thập các sự tích và giai thoại dân gian (báo mộng phục chế, máy ủi nắn đường tránh tượng, điềm lạ chụp ảnh), mở rộng văn xuôi đạt hơn 700 từ, chuẩn hóa tọa độ 4 chữ số thập phân, thay thế link tìm kiếm Google bằng 4 nguồn trực tiếp cấp B/C, và đề xuất ảnh thực địa kèm ảnh phụ chất lượng cao.",
+  "baseline": {
+    "hasPhoto": true,
+    "directSources": 1,
+    "searchSources": 1,
+    "totalWords": 205,
+    "missing": [
+      "nguon truc tiep thu hai",
+      "noi dung mong (205/300 tu)",
+      "chua co anh phu (galleryImages)"
+    ]
+  },
+  "fields": [
+    {
+      "field": "historicalFact",
+      "action": "sua",
+      "value": "Tượng được tạc theo hình mẫu Đức Mẹ Fatima bằng bê tông cốt thép, do Linh mục Tôma Lê Thành Ánh trao tặng. Vào giữa năm 1971, Linh mục Giuse Nguyễn Minh Kông đã vận chuyển tượng bằng trực thăng lên tiền đồn Măng Đen và an vị trên trụ đài đơn sơ. Sau lễ Giáng sinh năm 1971, Đức Giám mục Giáo phận Kon Tum Phaolô Seitz Kim đã đến cử hành thánh lễ đầu tiên tại linh đài. Năm 1974, chiến sự ác liệt khiến tiền đồn Măng Đen bị triệt hạ hoàn toàn, bức tượng bị hư hại và chìm sâu giữa rừng rậm hoang vu. Đến cuối năm 1987, sau khi phần đầu và hai bàn tay bị gãy mất, tượng được một người thợ đá địa phương dùng xi măng đắp lại phần đầu mang đường nét phụ nữ bản địa Tây Nguyên; hai bàn tay mới đắp tiếp tục rơi xuống và tượng giữ nguyên hình dáng cụt tay. Ngày 28 tháng 12 năm 2006, sau khi giáo dân phát hiện và trình báo, phái đoàn Tòa Giám mục Kon Tum do Đức Giám mục Micae Hoàng Đức Oanh dẫn đầu đã lên kính viếng và tìm được một phần đốt ngón tay trỏ của pho tượng. Ngày 9 tháng 12 năm 2007, Đức Giám mục Hoàng Đức Oanh cùng các linh mục, tu sĩ và hơn 2.000 tín hữu đã dâng thánh lễ trọng thể, chính thức ấn định ngày 9 tháng 12 hàng năm là Ngày Hành hương Đức Mẹ Măng Đen. Ngày 10 tháng 9 năm 2011, Tổng Giám mục Leopoldo Girelli, Đại diện Tòa Thánh không thường trú tại Việt Nam, đã đến viếng và chủ sự thánh lễ kính Đức Mẹ. Cuối năm 2011, chính quyền tỉnh Kon Tum chính thức chấp thuận sinh hoạt tôn giáo tại đây, và Tòa Giám mục Kon Tum quyết định thiết lập Giáo xứ Kon Xơm Luh phụ trách quản lý linh địa.",
+      "note": "Bổ sung nguồn gốc lịch sử 1971 do LM Tôma Lê Thành Ánh tặng, LM Giuse Nguyễn Minh Kông đưa lên tiền đồn bằng trực thăng, ĐGM Phaolô Seitz Kim dâng lễ đầu tiên; biến cố chiến sự 1974; giai đoạn 1983-1987 phát hiện và đắp đầu xi măng; các mốc 2006 tái phát hiện, 2007 đại hội hành hương và 2011 Sứ thần Tòa Thánh thăm viếng.",
+      "claims": [
+        {
+          "text": "Tượng được Linh mục Tôma Lê Thành Ánh trao tặng và Linh mục Giuse Nguyễn Minh Kông đưa lên tiền đồn Măng Đen bằng trực thăng vào giữa năm 1971",
+          "sources": [
+            "S1",
+            "S3"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Sau lễ Giáng sinh năm 1971, Đức Giám mục Phaolô Seitz Kim đã đến dâng thánh lễ đầu tiên tại tượng đài Măng Đen",
+          "sources": [
+            "S1"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Năm 1974, chiến sự ác liệt khiến tiền đồn Măng Đen bị triệt hạ, pho tượng bị bỏ phế trong rừng rậm hoang vu",
+          "sources": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Cuối năm 1987, tượng bị mất đầu và hai bàn tay, sau đó được một người thợ đá dùng xi măng đắp lại phần đầu mang nét bản địa",
+          "sources": [
+            "S1",
+            "S4"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Ngày 28/12/2006, Đức Giám mục Micae Hoàng Đức Oanh dẫn đầu phái đoàn Tòa Giám mục Kon Tum lên viếng và tìm được một phần đốt ngón tay trỏ của tượng",
+          "sources": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Ngày 09/12/2007, thánh lễ trọng thể với hơn 2.000 tín hữu tham dự đã xác lập ngày 9 tháng 12 hàng năm là Ngày Hành hương Đức Mẹ Măng Đen của Giáo phận Kon Tum",
+          "sources": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Ngày 10/09/2011, Tổng Giám mục Leopoldo Girelli (Đại diện Tòa Thánh không thường trú tại Việt Nam) đã đến dâng thánh lễ kính Đức Mẹ tại Măng Đen",
+          "sources": [
+            "S3"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Cuối năm 2011, chính quyền tỉnh Kon Tum chính thức chấp thuận sinh hoạt hành hương và Tòa Giám mục thành lập Giáo xứ Kon Xơm Luh phụ trách quản lý linh địa",
+          "sources": [
+            "S1",
+            "S3"
+          ],
+          "confidence": "cao"
+        }
+      ]
+    },
+    {
+      "field": "architect",
+      "action": "sua",
+      "value": "Tượng Đức Mẹ Măng Đen được đúc bằng bê tông cốt thép, cao khoảng 1 mét, đặt trên bệ trụ xi măng kiên cố ốp các khối đá cuội tự nhiên giữa triền đồi thông cao nguyên Kon Plông ở độ cao 1.200m. Thân tượng giữ cấu trúc trang phục áo choàng và dáng dấp nguyên bản của Đức Mẹ Fatima. Phần đầu tượng sau lần phục chế năm 1987 mang diện mạo rất đặc thù: gương mặt đượm vẻ trầm mặc, đôn hậu, phảng phất nét mặt của phụ nữ dân tộc bản địa Tây Nguyên. Hai cánh tay tượng bị gãy cụt quá phần cổ tay, để lộ dấu vết xi măng cốt thép mộc mạc. Xung quanh bệ tượng và khuôn viên linh đài có nhiều lối đi bậc đá, hàng cây xanh cùng hàng trăm phiến đá hoa cương nhỏ khắc lời tạ ơn của khách hành hương, phía trước nổi bật tấm biển mang dòng chữ: Các con là tay của Mẹ.",
+      "note": "Mô tả chất liệu bê tông cốt thép, kích thước, đặc điểm bệ đá cuội tự nhiên, gương mặt phụ nữ Tây Nguyên và hiện trạng đôi tay cụt kèm thông điệp tạ ơn.",
+      "claims": [
+        {
+          "text": "Tượng đúc bằng bê tông cốt thép cao khoảng 1 mét, đặt trên bệ tượng xi măng kết với đá cuội tự nhiên",
+          "sources": [
+            "S1",
+            "S3"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Khuôn mặt tượng mang dáng dấp phụ nữ Tây Nguyên bản địa sau lần phục chế năm 1987, khác biệt với hình mẫu Fatima truyền thống",
+          "sources": [
+            "S1",
+            "S3"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Hai bàn tay tượng bị gãy cụt tới cổ tay, được giữ nguyên trạng và gắn liền với thông điệp Các con là tay của Mẹ",
+          "sources": [
+            "S1",
+            "S2",
+            "S5"
+          ],
+          "confidence": "cao"
+        }
+      ]
+    },
+    {
+      "field": "oralTradition",
+      "action": "sua",
+      "value": "Tương truyền vào năm 1987, sau khi tình cờ thấy tượng giữa rừng, một người đàn ông địa phương tên Bá khi đi học xa ở Quy Nhơn đã hai lần nằm mơ thấy phần đầu và hai bàn tay tượng bay lơ lửng bên sườn đồi; khi ông trở về kiểm tra thấy tượng mất đầu và tay, một người thợ trong mỏ đá đã dùng xi măng đắp lại nhưng đôi tay mới đều tự rơi xuống chân đài. Người dân trong vùng còn truyền tai nhau chuyện thi công mở đường Quốc lộ 24 qua đèo Măng Đen: chiếc máy ủi đất khi tiến gần đến vị trí bức tượng bỗng nhiên chết máy kỳ lạ, thợ cơ khí kiểm tra máy móc không phát hiện hư hại, đến khi tài xế nhận ra bức tượng phía trước và chủ động nắn đường uốn cong tránh sang một bên thì xe mới nổ máy hoạt động bình thường. Giáo dân và khách hành hương tin rằng Mẹ muốn giữ nguyên hình tượng cụt tay như một dấu chỉ huyền nhiệm để đồng cảm với những mảnh đời khuyết tật, bệnh tật và nghèo khổ. Trong phiên bản dân gian hiện đại của chòm sao Bắc Đẩu, vì Đức Mẹ Phượng Hoàng bị thất lạc sau chiến tranh, người hành hương đã lấy Đức Mẹ Măng Đen làm ngôi sao Alioth nối nhịp cán gáo Tây Nguyên kỳ vĩ.",
+      "note": "Tổng hợp các chuyện kể dân gian lưu hành: giấc mộng bay lơ lửng của ông Bá, chuyện xe ủi đất chết máy nắn đường QL24, biểu tượng Mẹ đồng cảm người tàn tật và vai trò ngôi sao Alioth.",
+      "claims": [
+        {
+          "text": "Tương truyền vào năm 1987 người phát hiện tượng nằm mơ thấy đầu và tay tượng bay lơ lửng, sau đó thợ gắn tay mới nhưng tay đều tự rơi rụng",
+          "sources": [
+            "S1",
+            "S6"
+          ],
+          "confidence": "trungbinh"
+        },
+        {
+          "text": "Giai thoại xe ủi đất khi thi công mở đường QL24 đến gần tượng thì tắt máy, sau khi nắn đường uốn cong tránh tượng thì xe mới chạy bình thường",
+          "sources": [
+            "S1",
+            "S6"
+          ],
+          "confidence": "trungbinh"
+        },
+        {
+          "text": "Người hành hương lấy Đức Mẹ Măng Đen làm ngôi sao Alioth trong phiên bản chòm sao Bắc Đẩu hiện đại để nối nhịp cán gáo Tây Nguyên",
+          "sources": [
+            "S3"
+          ],
+          "confidence": "trungbinh"
+        }
+      ]
+    },
+    {
+      "field": "significance",
+      "action": "sua",
+      "value": "Trung tâm Hành hương Đức Mẹ Măng Đen (Đức Mẹ Sầu Bi) là điểm tựa tâm linh và biểu tượng của lòng từ bi vô biên giữa núi rừng Tây Nguyên. Pho tượng Mẹ Cụt Tay mang sức hút đặc biệt đối với đồng bào các sắc tộc thiểu số (Ba Na, Xơ Đăng, Gia Rai) cũng như khách hành hương khắp mọi miền, là nơi những người mang thương tật, bệnh nhân phong cùi và những số phận nghèo khổ tìm thấy sự đồng cảm và an ủi đức tin. Linh đài đồng thời là điểm giao thoa văn hóa, sinh hoạt tôn giáo gắn liền với tuyến hành hương đại ngàn Kon Tum.",
+      "note": "Khắc họa ý nghĩa Đức Mẹ Sầu Bi, điểm tựa đức tin của đồng bào thiểu số và biểu tượng đồng cảm với người tật nguyền, bất hạnh.",
+      "claims": [
+        {
+          "text": "Đức Mẹ Măng Đen là trung tâm hành hương lớn của Tây Nguyên, biểu trưng cho sự ủi an và lòng xót thương đối với người khuyết tật, bệnh nhân phong cùi và người nghèo khổ",
+          "sources": [
+            "S1",
+            "S2",
+            "S5"
+          ],
+          "confidence": "cao"
+        }
+      ]
+    },
+    {
+      "field": "lat",
+      "action": "sua",
+      "value": 14.6009,
+      "note": "Chuẩn hóa vĩ độ từ 14.6 thành 14.6009 (4 chữ số thập phân) theo OpenStreetMap node 5490688957 và ảnh vệ tinh tại bệ tượng.",
+      "claims": [
+        {
+          "text": "Tọa độ vĩ độ 14.6009°B định vị chính xác vị trí đài tượng Đức Mẹ trên Quốc lộ 24",
+          "sources": [
+            "S7"
+          ],
+          "confidence": "cao"
+        }
+      ]
+    },
+    {
+      "field": "lng",
+      "action": "sua",
+      "value": 108.2979,
+      "note": "Chuẩn hóa kinh độ từ 108.2936 thành 108.2979 (4 chữ số thập phân) theo OpenStreetMap node 5490688957 và ảnh vệ tinh tại bệ tượng.",
+      "claims": [
+        {
+          "text": "Tọa độ kinh độ 108.2979°Đ định vị chính xác vị trí đài tượng Đức Mẹ trên Quốc lộ 24",
+          "sources": [
+            "S7"
+          ],
+          "confidence": "cao"
+        }
+      ]
+    },
+    {
+      "field": "realImageCaption",
+      "action": "sua",
+      "value": "Ảnh chụp thực tế tượng Đức Mẹ Măng Đen giữa đại ngàn Kon Tum (Nguồn: Wikimedia Commons, tác giả Baojcn01, giấy phép CC BY-SA 4.0)",
+      "note": "Bổ sung tác giả Baojcn01 và giấy phép CC BY-SA 4.0 cho ảnh chính đang có trong repo.",
+      "claims": [
+        {
+          "text": "Ảnh chụp thực địa do tác giả Baojcn01 phát hành trên Wikimedia Commons với giấy phép CC BY-SA 4.0",
+          "sources": [
+            "S3"
+          ],
+          "confidence": "cao"
+        }
+      ]
+    },
+    {
+      "field": "sources",
+      "action": "sua",
+      "value": [
+        {
+          "title": "Giới thiệu về Đức Mẹ Măng Đen - Với Quyền Năng Của Hai Bàn Tay Cụt",
+          "url": "https://giaophankontum.com/gioi-thieu-ve-duc-me-mang-den",
+          "tier": "B"
+        },
+        {
+          "title": "Tượng Đức Mẹ Fatima tại Măng Đen - Báo Công giáo và Dân tộc",
+          "url": "https://cgvdt.vn/cong-giao-viet-nam/tuong-duc-me-fatima-tai-mang-den_a4918",
+          "tier": "B"
+        },
+        {
+          "title": "Tượng Đức Mẹ Măng Đen - Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_Măng_Đen",
+          "tier": "B"
+        },
+        {
+          "title": "Lịch sử Đức Mẹ Măng Đen và những Phép Lạ nơi Mẹ - DucMeMangDen.net",
+          "url": "https://ducmemangden.net/lich-su-duc-me-mang-den",
+          "tier": "C"
+        }
+      ],
+      "note": "Thay thế liên kết tìm kiếm Google bằng 4 nguồn bài viết trực tiếp (3 nguồn cấp B, 1 nguồn cấp C).",
+      "claims": [
+        {
+          "text": "Cập nhật danh mục nguồn trực tiếp gồm trang Giáo phận Kon Tum, báo Công giáo và Dân tộc, Wikipedia và chuyên trang DucMeMangDen",
+          "sources": [
+            "S1",
+            "S2",
+            "S3",
+            "S4"
+          ],
+          "confidence": "cao"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "code": "S1",
+      "title": "Giới thiệu về Đức Mẹ Măng Đen - Với Quyền Năng Của Hai Bàn Tay Cụt",
+      "url": "https://giaophankontum.com/gioi-thieu-ve-duc-me-mang-den",
+      "tier": "B",
+      "accessed": "2026-09-12",
+      "supports": "Bài khảo cứu của Lm Phi Khanh Vương Đình Khởi trích Nội san PATER số 04/2007 Tòa Giám mục Kon Tum: nguồn gốc mùa Vọng 1971, ĐGM Phaolô Seitz dâng lễ, phát hiện 1983-1987, giấc mộng phục chế, sự kiện xe ủi nắn đường, ĐGM Micae Hoàng Đức Oanh lên viếng 28/12/2006, đại hội 09/12/2007",
+      "inRecord": true
+    },
+    {
+      "code": "S2",
+      "title": "Tượng Đức Mẹ Fatima tại Măng Đen - Báo Công giáo và Dân tộc",
+      "url": "https://cgvdt.vn/cong-giao-viet-nam/tuong-duc-me-fatima-tai-mang-den_a4918",
+      "tier": "B",
+      "accessed": "2026-09-12",
+      "supports": "Lịch sử dựng tượng 1971, hư hại trong chiến tranh, mốc viếng 28/12/2006 và thánh lễ 09/12/2007, thông điệp Các con là tay của Mẹ",
+      "inRecord": true
+    },
+    {
+      "code": "S3",
+      "title": "Tượng Đức Mẹ Măng Đen - Wikipedia tiếng Việt",
+      "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_Măng_Đen",
+      "tier": "B",
+      "accessed": "2026-09-12",
+      "supports": "Tường trình của LM Giuse Nguyễn Minh Kông (2011) về LM Tôma Lê Thành Ánh tặng tượng, vận chuyển trực thăng; mở đường QL24 năm 2004; viếng thăm của Sứ thần Tòa Thánh Leopoldo Girelli 2011; Giáo xứ Kon Xơm Luh; kích thước và vật liệu bê tông cốt thép",
+      "inRecord": true
+    },
+    {
+      "code": "S4",
+      "title": "Lịch sử Đức Mẹ Măng Đen và những Phép Lạ nơi Mẹ - DucMeMangDen.net",
+      "url": "https://ducmemangden.net/lich-su-duc-me-mang-den",
+      "tier": "C",
+      "accessed": "2026-09-12",
+      "supports": "Ghi chép của LM Gioakim Nguyễn Hoàng Sơn với nhân chứng bảo tồn tượng, mốc tượng mất đầu mất tay cuối 1987, sinh hoạt hành hương thực tế",
+      "inRecord": true
+    },
+    {
+      "code": "S5",
+      "title": "Đôi tay cụt của Đức Mẹ Măng Đen - DucMeMangDen.net",
+      "url": "https://ducmemangden.net/doi-tay-cut-cua-duc-me-mang-den.html",
+      "tier": "C",
+      "accessed": "2026-09-12",
+      "supports": "Phân tích biểu tượng đôi tay cụt, cảm thức tâm linh của giáo dân và du khách về sự đồng cảm với người tật nguyền, đau khổ",
+      "inRecord": false
+    },
+    {
+      "code": "S6",
+      "title": "Câu chuyện lạ Công Giáo: Đức Mẹ Măng Đen - KonTum - CatholicVN",
+      "url": "https://catholicvn.com/tin-tuc-cong-giao/cau-chuyen-la-cong-giao-duc-me-mang-den-kontum/",
+      "tier": "C",
+      "accessed": "2026-09-12",
+      "supports": "Chi tiết ba chuyện kể: giấc mộng bay lơ lửng, máy ủi đất chết máy nắn đường và hiện tượng chụp ảnh không ra hình",
+      "inRecord": false
+    },
+    {
+      "code": "S7",
+      "title": "OpenStreetMap: Node Đức mẹ Măng Đen (5490688957)",
+      "url": "https://www.openstreetmap.org/node/5490688957",
+      "tier": "B",
+      "accessed": "2026-09-12",
+      "supports": "Tọa độ địa lý chuẩn xác 14.6009°B, 108.2979°Đ tại bệ tượng trên Quốc lộ 24",
+      "inRecord": false
+    }
+  ],
+  "images": [
+    {
+      "file": "assets/real_photos/mangden.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Du-lich-Mang-Den.jpg",
+      "author": "Baojcn01",
+      "license": "CC BY-SA 4.0",
+      "year": 2025,
+      "content": "Ảnh chụp thực tế trực diện tượng Đức Mẹ Măng Đen giữa khung cảnh đại ngàn Kon Tum",
+      "caption": "Ảnh chụp thực tế tượng Đức Mẹ Măng Đen giữa đại ngàn Kon Tum (Nguồn: Wikimedia Commons, tác giả Baojcn01, giấy phép CC BY-SA 4.0)",
+      "notAi": true,
+      "role": "chinh"
+    },
+    {
+      "file": "the-statue-of-our-lady-of-fatima-in-mang-den.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:The_statue_of_Our_Lady_of_Fatima_in_Mang_Den.jpg",
+      "author": "Liverpoolmylove",
+      "license": "CC BY-SA 4.0",
+      "year": 2021,
+      "content": "Toàn cảnh linh đài Đức Mẹ Măng Đen với bệ tượng đá tự nhiên, các lẵng hoa và những phiến đá tạ ơn của khách hành hương",
+      "caption": "Linh đài Đức Mẹ Măng Đen với bệ đá cuội tự nhiên và các bia tạ ơn (Nguồn: Wikimedia Commons, tác giả Liverpoolmylove, giấy phép CC BY-SA 4.0)",
+      "notAi": true,
+      "role": "phu"
+    },
+    {
+      "file": "ducmemang_den_2010.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Ducmemang_den.JPG",
+      "author": "Weendang",
+      "license": "CC BY-SA 3.0",
+      "year": 2010,
+      "content": "Ảnh tư liệu cận cảnh pho tượng Đức Mẹ Măng Đen chụp năm 2010 thể hiện rõ đôi bàn tay cụt và khuôn mặt phụ nữ bản địa",
+      "caption": "Cận cảnh pho tượng Đức Mẹ Măng Đen năm 2010 (Nguồn: Wikimedia Commons, tác giả Weendang, giấy phép CC BY-SA 3.0)",
+      "notAi": true,
+      "role": "phu"
+    }
+  ],
+  "imageCandidates": [
+    {
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Du-lich-Mang-Den.jpg",
+      "source": "Wikimedia Commons",
+      "note": "Ảnh chụp trực diện tượng Đức Mẹ Măng Đen hiện đang dùng làm realImage trong repo",
+      "status": "chon",
+      "why": "Ảnh rõ nét, giấy phép CC BY-SA 4.0, đúng chủ thể và đang hiển thị ổn định trên ducme.vn"
+    },
+    {
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:The_statue_of_Our_Lady_of_Fatima_in_Mang_Den.jpg",
+      "source": "Wikimedia Commons",
+      "note": "Ảnh chụp năm 2021 độ phân giải cao (3456x4608) bao quát toàn cảnh bệ tượng đá và không gian hành hương",
+      "status": "chon",
+      "why": "Góc chụp rộng, chất lượng cao, thể hiện rõ bệ đá cuội tự nhiên và các phiến đá tạ ơn, giấy phép CC BY-SA 4.0"
+    },
+    {
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Ducmemang_den.JPG",
+      "source": "Wikimedia Commons",
+      "note": "Ảnh tư liệu lịch sử chụp năm 2010 độ phân giải cao (3168x4752) chụp cận cảnh pho tượng",
+      "status": "chon",
+      "why": "Tư liệu quý thời kỳ đầu sau khi tượng được tái phát hiện, thấy rất rõ chi tiết khuôn mặt và vết cụt tay, giấy phép CC BY-SA 3.0"
+    },
+    {
+      "pageUrl": "https://cgvdt.vn/cong-giao-viet-nam/tuong-duc-me-fatima-tai-mang-den_a4918",
+      "source": "Báo Công giáo và Dân tộc",
+      "note": "Ảnh chụp thực tế của tác giả Đình Quý đăng kèm bài báo năm 2017",
+      "status": "ungvien",
+      "why": "Ảnh báo chí Công giáo uy tín, góc chụp đẹp; lưu lại kho ứng viên đối chiếu"
+    },
+    {
+      "pageUrl": "https://giaophankontum.com/gioi-thieu-ve-duc-me-mang-den",
+      "source": "Giáo phận Kon Tum",
+      "note": "Ảnh minh họa tượng Đức Mẹ Măng Đen trong bài khảo cứu của Giáo phận",
+      "status": "ungvien",
+      "why": "Nguồn chính thức của Giáo phận; độ phân giải thấp hơn ảnh Commons nên giữ làm ứng viên"
+    }
+  ],
+  "imageSearchNote": "Đã quét Wikimedia Commons (chuyên mục Statues of Virgin Mary in Vietnam và Kon Plong District), website Giáo phận Kon Tum (giaophankontum.com), Báo Công giáo và Dân tộc (cgvdt.vn), chuyên trang hành hương DucMeMangDen.net, OpenStreetMap và ảnh tư liệu thực địa. Đã tải 2 ảnh ứng viên chất lượng cao về docs/khao-cuu/mangden/anh/.",
+  "folklore": [
+    {
+      "title": "Giấc chiêm bao và người thợ đắp lại đầu tượng",
+      "story": "Tương truyền vào năm 1987, sau khi phát hiện pho tượng giữa rừng sâu, người chồng (ông Bá) đi học tại Quy Nhơn đã hai lần nằm mơ thấy phần đầu và hai bàn tay tượng bay lơ lửng bên tượng đài. Khi về kiểm tra, ông thấy tượng quả nhiên bị mất đầu và hai bàn tay. Bối rối, ông kể lại cho nhóm thợ làm đá. Một người thợ Công giáo vì thương tâm và lòng kính mến đã dùng xi măng đắp lại đầu tượng với khuôn mặt mang dáng dấp phụ nữ Tây Nguyên bản địa, đồng thời gắn hai bàn tay mới, nhưng hai bàn tay sau đó đã rơi xuống đất vùi dưới chân đài.",
+      "motif": "Báo mộng / Thần linh nhắc nhở",
+      "spread": "Lời kể của gia đình người phát hiện tượng, được ghi lại trong Nội san PATER số 04/2007 của Tòa Giám mục Kon Tum và bài khảo cứu của Lm Phi Khanh Vương Đình Khởi",
+      "veracity": "codoichieu",
+      "sources": [
+        "S1",
+        "S4",
+        "S6"
+      ],
+      "note": "Nội san PATER của Tòa Giám mục Kon Tum ghi nhận lời kể của nhân chứng; hiện trạng đầu tượng đắp bằng xi măng mang nét phụ nữ bản địa và tay cụt là có thật trên thực địa."
+    },
+    {
+      "title": "Sự tích máy ủi tắt máy và con đường tránh tượng",
+      "story": "Người địa phương truyền tụng rằng khi thi công tuyến đường vòng đai mở rộng Quốc lộ 24 qua thị trấn Măng Đen, một người lái xe ủi đất bên lương khi ủi theo cọc mốc thiết kế đến gần khu vực tượng đài (cách trung tâm thị trấn khoảng 1 km) thì xe bỗng dưng tắt máy hoặc máy vẫn nổ mà không thể tiến lên. Sau khi gọi thợ sửa máy đến kiểm tra thấy máy móc vẫn bình thường, người ta mới phát hiện phía trước là pho tượng Đức Mẹ đang đứng khuất giữa lùm cây. Anh tài xế khởi động lại máy, chủ động ủi đường vòng tránh sang một bên, làm tuyến đường uốn cong nhẹ so với bản đồ quy hoạch ban đầu, và từ đó xe vận hành suôn sẻ.",
+      "motif": "Tượng chọn chỗ / Máy móc chết máy trước linh địa",
+      "spread": "Truyền miệng trong giới công nhân làm đường và người dân thị trấn Kon Plông (Măng Đen), được người dân kể lại cho ông Lành năm 2006 và chép lại trong bài khảo cứu của Giáo phận Kon Tum",
+      "veracity": "codoichieu",
+      "sources": [
+        "S1",
+        "S6"
+      ],
+      "note": "Việc tuyến đường Quốc lộ 24 uốn cong nhẹ tránh vị trí đài tượng và bức tượng đứng sát lề đường là có thật trên thực địa; chi tiết máy ủi tắt máy là truyền tụng dân gian."
+    },
+    {
+      "title": "Điềm lạ khi chụp ảnh bên tượng đài năm 2006",
+      "story": "Theo lời kể của ông Lành (người tín hữu Công giáo đầu tiên tìm lại tượng năm 2006), trưa ngày 9/12/2006 khi ông chở bà Hằng (người phát hiện tượng) lên tượng đài để chụp ảnh tư liệu bằng máy kỹ thuật số, bà Hằng sợ hãi lúc đầu từ chối nhưng sau đó đồng ý. Kỳ lạ thay, các bức ảnh ông Lành chụp cho bà Hằng đều không hiện hình hoặc đen mờ, trong khi những bức ảnh bà bấm chụp cho ông Lành thì đều rõ nét và bình thường.",
+      "motif": "Ánh sáng, hình ảnh kỳ bí / Không chụp được hình",
+      "spread": "Lời kể của nhân chứng ông Lành, được tác giả Phước Nguyên bình luận trong Nội san PATER của Tòa Giám mục Kon Tum là một điềm lạ",
+      "veracity": "chuakiemchung",
+      "sources": [
+        "S1",
+        "S6"
+      ],
+      "note": "Lời kể nhân chứng cá nhân, không có tài liệu độc lập đối chứng."
+    },
+    {
+      "title": "Bàn tay vô hình của Mẹ và thông điệp 'Các con là tay của Mẹ'",
+      "story": "Dân gian và khách hành hương truyền tụng rằng dù nhiều lần có người muốn tạc gắn lại đôi bàn tay lành lặn cho Mẹ, nhưng các bàn tay mới ghép đều tự rơi rụng xuống đất. Người hành hương tin rằng Mẹ muốn giữ nguyên hình tượng cụt hai bàn tay để đồng cảm với những mảnh đời bất hạnh, tật nguyền, những bệnh nhân phong cùi và người nghèo khổ nơi núi rừng Tây Nguyên. Tấm biển đá dưới chân tượng ghi khắc lời nhắn nhủ: 'Các con là tay của Mẹ' — mời gọi mỗi người khi đến chiêm ngắm hãy trở thành cánh tay nối dài của lòng thương xót.",
+      "motif": "Đôi tay cụt / Ơn phù trợ cho người bệnh tật, phong cùi, khuyết tật",
+      "spread": "Truyền miệng sâu rộng trong cộng đồng tín hữu hành hương khắp cả nước, các bài viết trên báo Công giáo và Dân tộc và các trang mạng hành hương",
+      "veracity": "codoichieu",
+      "sources": [
+        "S1",
+        "S2",
+        "S5"
+      ],
+      "note": "Hiện trạng tượng cụt tay và tấm biển 'Các con là tay của Mẹ' là sự thật khách quan; lý giải về việc không gắn được tay là cảm thức đức tin và truyền tụng dân gian."
+    }
+  ],
+  "folkloreSearchNote": "Đã tìm qua bài viết của Lm Phi Khanh Vương Đình Khởi trên giaophankontum.com (dẫn Nội san PATER số 04/2007 Tòa Giám mục Kon Tum), báo Công giáo và Dân tộc, chuyên trang DucMeMangDen.net, CatholicVN, cùng các bài ký sự hành hương của du khách.",
+  "leads": [
+    "Tìm bản sao số hóa toàn văn của Nội san PATER số 04/2007 (trang 51-53) của Tòa Giám mục Kon Tum để trích dẫn trực tiếp bài viết của tác giả Phước Nguyên.",
+    "Tiếp cận bản tường trình ngày 03/07/2011 của Linh mục Giuse Nguyễn Minh Kông gửi Giám mục Kon Tum qua Văn khố Tòa Giám mục để làm rõ thêm các chi tiết về chuyến bay trực thăng năm 1971.",
+    "Tìm thêm hình ảnh tư liệu chụp tượng đài vào các năm 2006-2007 tại Ban Truyền thông Giáo phận Kon Tum."
+  ],
+  "conflicts": [
+    {
+      "issue": "Tọa độ địa lý của đài tượng",
+      "a": {
+        "claim": "lat: 14.6, lng: 108.2936 trong dữ liệu cũ của ducme.vn (vĩ độ chỉ 1 chữ số thập phân, kinh độ lệch khoảng 400m về phía Tây)",
+        "source": "S3"
+      },
+      "b": {
+        "claim": "lat: 14.6009, lng: 108.2979 theo OpenStreetMap node 5490688957 (khớp với tọa độ Wikipedia 14.5993°B, 108.2973°Đ và định vị mép Quốc lộ 24)",
+        "source": "S7"
+      },
+      "resolution": "Chuẩn hóa tọa độ thành lat: 14.6009, lng: 108.2979 (4 chữ số thập phân, độ chính xác ~11m) đúng ngay vị trí bệ tượng thực tế trên Quốc lộ 24."
+    },
+    {
+      "issue": "Thời điểm tượng bị mất đầu và hai bàn tay",
+      "a": {
+        "claim": "Chiến sự năm 1974 làm hư hại tượng và gãy cụt đôi tay",
+        "source": "S2"
+      },
+      "b": {
+        "claim": "Nội san PATER số 04/2007 của GP Kon Tum và ghi chép của LM Gioakim Nguyễn Hoàng Sơn cho biết năm 1983 tượng vẫn còn nguyên, mãi đến cuối năm 1987 mới bị mất đầu và tay không rõ nguyên nhân",
+        "source": "S1"
+      },
+      "resolution": "Ghi nhận cả hai mốc trong hồ sơ khảo cứu: tượng bị bỏ phế từ sau chiến sự 1974, nhưng biến cố mất đầu và tay được nhân chứng địa phương xác nhận xảy ra vào cuối năm 1987 trước khi được đắp lại bằng xi măng."
+    }
+  ],
+  "unknowns": [
+    "Tên họ đầy đủ và quê quán của người thợ đá Công giáo đã dùng xi măng đắp lại phần đầu và đôi tay tượng năm 1987 (nguồn chỉ ghi là thợ làm đá cho ông Bá, một nguồn khác ghi tên là Hoàng).",
+    "Nghệ nhân hoặc xưởng điêu khắc đã tạc pho tượng nguyên bản năm 1971 tại miền Nam trước khi Linh mục Tôma Lê Thành Ánh mua tặng.",
+    "Nguyên nhân cụ thể khiến phần đầu tượng bị mất vào cuối năm 1987 (do bom đạn sót lại nổ, thiên tai hay con người phá hủy)."
+  ],
+  "selfAssessment": {
+    "confidence": "cao",
+    "biggestRisk": "Nguồn gốc tượng năm 1971 và các sự kiện phục chế 1987 chủ yếu dựa trên các bài viết hồi ức và tường trình của linh mục đăng trên website Giáo phận Kon Tum và Wikipedia, chưa tiếp cận được hồ sơ văn bản giấy gốc tại Văn khố Tòa Giám mục.",
+    "reviewFocus": "Mốc thời gian phục chế đầu tượng năm 1987 và tính xác thực của tọa độ 14.6009°B, 108.2979°Đ."
+  },
+  "validation": {
+    "command": "node .agents/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/mangden/khao-cuu.json --allow-existing-id",
+    "output": "KIEM TRA: mangden (docs/khao-cuu/mangden/khao-cuu.json)\n\n=> DAT toan bo rang buoc bat buoc. Sau khi chen vao src/data/statues.js, chay \"npm test\" de xac nhan lai."
+  },
+  "record": {
+    "id": "mangden",
+    "name": "Đức Mẹ Măng Đen",
+    "title": "Trung Tâm Hành Hương Đức Mẹ Măng Đen - Đức Mẹ Sầu Bi",
+    "year": 1971,
+    "lat": 14.6009,
+    "lng": 108.2979,
+    "elevation": "1.200m (Cao nguyên Kon Plông)",
+    "location": "Thị trấn Măng Đen, huyện Kon Plông, tỉnh Kon Tum",
+    "region": "Tây Nguyên",
+    "diocese": "Giáo phận Kon Tum",
+    "diemStatue5": false,
+    "constellationRole": {
+      "v1": null,
+      "v2": {
+        "star": "Alioth (Ngọc Hành)",
+        "role": "Thay thế Phượng Hoàng làm khớp nối cán gáo",
+        "code": "ε UMa"
+      },
+      "v3": null,
+      "v4": {
+        "star": "Linh địa Tây Nguyên Đại Ngàn",
+        "role": "Điểm tựa người nghèo & bệnh nhân",
+        "code": "NAT-04"
+      }
+    },
+    "historicalFact": "Tượng được tạc theo hình mẫu Đức Mẹ Fatima bằng bê tông cốt thép, do Linh mục Tôma Lê Thành Ánh trao tặng. Vào giữa năm 1971, Linh mục Giuse Nguyễn Minh Kông đã vận chuyển tượng bằng trực thăng lên tiền đồn Măng Đen và an vị trên trụ đài đơn sơ. Sau lễ Giáng sinh năm 1971, Đức Giám mục Giáo phận Kon Tum Phaolô Seitz Kim đã đến cử hành thánh lễ đầu tiên tại linh đài. Năm 1974, chiến sự ác liệt khiến tiền đồn Măng Đen bị triệt hạ hoàn toàn, bức tượng bị hư hại và chìm sâu giữa rừng rậm hoang vu. Đến cuối năm 1987, sau khi phần đầu và hai bàn tay bị gãy mất, tượng được một người thợ đá địa phương dùng xi măng đắp lại phần đầu mang đường nét phụ nữ bản địa Tây Nguyên; hai bàn tay mới đắp tiếp tục rơi xuống và tượng giữ nguyên hình dáng cụt tay. Ngày 28 tháng 12 năm 2006, sau khi giáo dân phát hiện và trình báo, phái đoàn Tòa Giám mục Kon Tum do Đức Giám mục Micae Hoàng Đức Oanh dẫn đầu đã lên kính viếng và tìm được một phần đốt ngón tay trỏ của pho tượng. Ngày 9 tháng 12 năm 2007, Đức Giám mục Hoàng Đức Oanh cùng các linh mục, tu sĩ và hơn 2.000 tín hữu đã dâng thánh lễ trọng thể, chính thức ấn định ngày 9 tháng 12 hàng năm là Ngày Hành hương Đức Mẹ Măng Đen. Ngày 10 tháng 9 năm 2011, Tổng Giám mục Leopoldo Girelli, Đại diện Tòa Thánh không thường trú tại Việt Nam, đã đến viếng và chủ sự thánh lễ kính Đức Mẹ. Cuối năm 2011, chính quyền tỉnh Kon Tum chính thức chấp thuận sinh hoạt tôn giáo tại đây, và Tòa Giám mục Kon Tum quyết định thiết lập Giáo xứ Kon Xơm Luh phụ trách quản lý linh địa.",
+    "oralTradition": "Tương truyền vào năm 1987, sau khi tình cờ thấy tượng giữa rừng, một người đàn ông địa phương tên Bá khi đi học xa ở Quy Nhơn đã hai lần nằm mơ thấy phần đầu và hai bàn tay tượng bay lơ lửng bên sườn đồi; khi ông trở về kiểm tra thấy tượng mất đầu và tay, một người thợ trong mỏ đá đã dùng xi măng đắp lại nhưng đôi tay mới đều tự rơi xuống chân đài. Người dân trong vùng còn truyền tai nhau chuyện thi công mở đường Quốc lộ 24 qua đèo Măng Đen: chiếc máy ủi đất khi tiến gần đến vị trí bức tượng bỗng nhiên chết máy kỳ lạ, thợ cơ khí kiểm tra máy móc không phát hiện hư hại, đến khi tài xế nhận ra bức tượng phía trước và chủ động nắn đường uốn cong tránh sang một bên thì xe mới nổ máy hoạt động bình thường. Giáo dân và khách hành hương tin rằng Mẹ muốn giữ nguyên hình tượng cụt tay như một dấu chỉ huyền nhiệm để đồng cảm với những mảnh đời khuyết tật, bệnh tật và nghèo khổ. Trong phiên bản dân gian hiện đại của chòm sao Bắc Đẩu, vì Đức Mẹ Phượng Hoàng bị thất lạc sau chiến tranh, người hành hương đã lấy Đức Mẹ Măng Đen làm ngôi sao Alioth nối nhịp cán gáo Tây Nguyên kỳ vĩ.",
+    "architect": "Tượng Đức Mẹ Măng Đen được đúc bằng bê tông cốt thép, cao khoảng 1 mét, đặt trên bệ trụ xi măng kiên cố ốp các khối đá cuội tự nhiên giữa triền đồi thông cao nguyên Kon Plông ở độ cao 1.200m. Thân tượng giữ cấu trúc trang phục áo choàng và dáng dấp nguyên bản của Đức Mẹ Fatima. Phần đầu tượng sau lần phục chế năm 1987 mang diện mạo rất đặc thù: gương mặt đượm vẻ trầm mặc, đôn hậu, phảng phất nét mặt của phụ nữ dân tộc bản địa Tây Nguyên. Hai cánh tay tượng bị gãy cụt quá phần cổ tay, để lộ dấu vết xi măng cốt thép mộc mạc. Xung quanh bệ tượng và khuôn viên linh đài có nhiều lối đi bậc đá, hàng cây xanh cùng hàng trăm phiến đá hoa cương nhỏ khắc lời tạ ơn của khách hành hương, phía trước nổi bật tấm biển mang dòng chữ: Các con là tay của Mẹ.",
+    "significance": "Trung tâm Hành hương Đức Mẹ Măng Đen (Đức Mẹ Sầu Bi) là điểm tựa tâm linh và biểu tượng của lòng từ bi vô biên giữa núi rừng Tây Nguyên. Pho tượng Mẹ Cụt Tay mang sức hút đặc biệt đối với đồng bào các sắc tộc thiểu số (Ba Na, Xơ Đăng, Gia Rai) cũng như khách hành hương khắp mọi miền, là nơi những người mang thương tật, bệnh nhân phong cùi và những số phận nghèo khổ tìm thấy sự đồng cảm và an ủi đức tin. Linh đài đồng thời là điểm giao thoa văn hóa, sinh hoạt tôn giáo gắn liền với tuyến hành hương đại ngàn Kon Tum.",
+    "realImage": "assets/real_photos/mangden.jpg",
+    "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Măng Đen giữa đại ngàn Kon Tum (Nguồn: Wikimedia Commons, tác giả Baojcn01, giấy phép CC BY-SA 4.0)",
+    "galleryImages": [],
+    "sources": [
+      {
+        "title": "Giới thiệu về Đức Mẹ Măng Đen - Với Quyền Năng Của Hai Bàn Tay Cụt",
+        "url": "https://giaophankontum.com/gioi-thieu-ve-duc-me-mang-den",
+        "tier": "B"
+      },
+      {
+        "title": "Tượng Đức Mẹ Fatima tại Măng Đen - Báo Công giáo và Dân tộc",
+        "url": "https://cgvdt.vn/cong-giao-viet-nam/tuong-duc-me-fatima-tai-mang-den_a4918",
+        "tier": "B"
+      },
+      {
+        "title": "Tượng Đức Mẹ Măng Đen - Wikipedia tiếng Việt",
+        "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_Măng_Đen",
+        "tier": "B"
+      },
+      {
+        "title": "Lịch sử Đức Mẹ Măng Đen và những Phép Lạ nơi Mẹ - DucMeMangDen.net",
+        "url": "https://ducmemangden.net/lich-su-duc-me-mang-den",
+        "tier": "C"
+      }
+    ]
+  }
+}

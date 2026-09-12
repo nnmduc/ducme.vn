@@ -46,7 +46,7 @@ thể. Cần thay bằng nguồn trực tiếp (trang giáo phận, báo, kỷ y
 
 Các linh địa sau chỉ có **một** nguồn trực tiếp, nguồn còn lại là link tìm kiếm — nên bổ sung thêm ít
 nhất một nguồn trực tiếp nữa: `phunhai`, `saobiendanang`, `trakieu`, `trinhphong`, `giangson`,
-`ducbasaigon`, `phuonghoang`, `mangden`, `tapao`.
+`ducbasaigon`, `phuonghoang`, `tapao`.
 
 ## 3. Nội dung mỏng nhất (dưới 150 từ) — cần khảo cứu bổ sung trước
 
@@ -63,7 +63,7 @@ trong `project-overview-pdr.md` mục 3.
 | 6 | `trakieu` | Đức Mẹ Trà Kiệu | 143 |
 
 Các linh địa còn lại (166–206 từ): `trinhphong`, `giangson`, `ducbasaigon`, `phuonghoang`, `thacmo`,
-`lavang`, `mangden`, `tapao` — vẫn dưới mốc cạnh tranh ~300 từ nhưng độ ưu tiên thấp hơn.
+`lavang`, `tapao` — vẫn dưới mốc cạnh tranh ~300 từ nhưng độ ưu tiên thấp hơn.
 
 ## 4. Ưu tiên tổng hợp — thiếu cả ảnh, nguồn và nội dung
 
