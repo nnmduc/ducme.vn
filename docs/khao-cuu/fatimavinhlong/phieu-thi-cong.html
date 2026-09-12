@@ -85,7 +85,7 @@ footer.doc{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);
 </header>
 <main>
 <h1>Phiếu thi công: Đức Mẹ Fatima Vĩnh Long</h1>
-<blockquote><p><strong>ÁP DỤNG</strong> — 34/35</p>
+<blockquote><p><strong>ÁP DỤNG</strong> — 37/40</p>
 <p>Được phép triển khai theo đúng phạm vi dưới đây.</p></blockquote>
 <ul><li><strong>Mã linh địa</strong>: <code>fatimavinhlong</code></li><li><strong>Hồ sơ khảo cứu</strong>: <code>docs/khao-cuu/fatimavinhlong/khao-cuu.json</code></li><li><strong>Hồ sơ kiểm chứng</strong>: <code>docs/khao-cuu/fatimavinhlong/kiem-chung.json</code></li><li><strong>Nhánh đề nghị</strong>: <code>data/bo-sung-tu-lieu-fatimavinhlong</code></li></ul>
 <h2>1. Trường được phép sửa</h2>
@@ -130,13 +130,15 @@ footer.doc{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);
 <div class="table-wrap"><table><thead><tr><th>File</th><th>Giấy phép (nếu biết)</th><th>Tác giả</th><th><code>realImageCaption</code></th></tr></thead><tbody><tr><td><code>src/assets/real_photos/fatimavinhlong.jpg</code></td><td>CC BY-SA 4.0</td><td>Philiplam990</td><td>Tượng Đức Mẹ Fatima tại Trung tâm Hành hương Fatima Vĩnh Long, xã Tân Ngãi, TP. Vĩnh Long (Nguồn: Wikimedia Commons, tác giả Philiplam990, giấy phép CC BY-SA 4.0, chụp 12/05/2019)</td></tr></tbody></table></div>
 <h3>4b. Ảnh phụ (<code>galleryImages</code>)</h3>
 <p>Không có ảnh phụ được duyệt — giữ <code>galleryImages: []</code>.</p>
-<h2>5. Chòm sao</h2>
+<h2>5. Chuyện kể được duyệt cho <code>oralTradition</code></h2>
+<p>Không có chuyện kể nào được duyệt — viết <code>oralTradition</code> theo đúng đề xuất ở mục 1, không thêm giai thoại nào khác.</p>
+<h2>6. Chòm sao</h2>
 <p><code>CONSTELLATION_VERSIONS</code> <strong>không được</strong> sửa. Giữ nguyên <code>constellationRole</code> như bản ghi hiện có.</p>
-<h2>6. Việc bắt buộc sau khi sửa dữ liệu</h2>
+<h2>7. Việc bắt buộc sau khi sửa dữ liệu</h2>
 <ul><li class="task todo"><span class="box" aria-hidden="true">○</span><code>node .claude/skills/marian-publish/scripts/validate-record.mjs &lt;file record&gt; --allow-existing-id</code> — hết lỗi chặn</li><li class="task todo"><span class="box" aria-hidden="true">○</span><code>npm test</code> — toàn bộ PASS, 0 FAIL</li><li class="task todo"><span class="box" aria-hidden="true">○</span><code>npm run build</code> — dựng thành công</li><li class="task todo"><span class="box" aria-hidden="true">○</span>Cập nhật <code>docs/marian-sites-missing-info.md</code></li><li class="task todo"><span class="box" aria-hidden="true">○</span>Cập nhật số assertion <code>npm test</code> ở README và tài liệu nếu con số thay đổi</li><li class="task todo"><span class="box" aria-hidden="true">○</span>Commit kèm cả <code>docs/khao-cuu/fatimavinhlong/</code></li></ul>
 <h3>Ảnh hưởng hệ thống theo báo cáo kiểm chứng</h3>
 <div class="table-wrap"><table><thead><tr><th>Mục</th><th>Ảnh hưởng</th></tr></thead><tbody><tr><td>Số lượng linh địa</td><td>không đổi (cập nhật bản ghi đã có, id fatimavinhlong)</td></tr><tr><td>CONSTELLATION_VERSIONS</td><td>không đổi — chỉ đụng v4 (đã có sẵn, không nằm trong phạm vi duyệt lần này)</td></tr><tr><td>Số nguồn trong record</td><td>2 link tìm kiếm Google → 4 bài viết trực tiếp (S1,S2,S3,S5); chạy lại npm test sau khi ghi vào src/data/statues.js</td></tr><tr><td>Ảnh thực địa</td><td>Lần đầu có ảnh thực địa hợp lệ cho bản ghi này (trước đó hasPhoto: false)</td></tr><tr><td>Tài liệu phải cập nhật</td><td>docs/marian-sites-missing-info.md — bỏ fatimavinhlong khỏi danh sách thiếu ảnh/thiếu nguồn nếu đang có mặt</td></tr></tbody></table></div>
-<h2>7. Bản ghi đầy đủ sau khi áp dụng</h2>
+<h2>8. Bản ghi đầy đủ sau khi áp dụng</h2>
 <p>Chỉ dùng các trường đã duyệt ở mục 1. Bản ghi dưới đây là bản đề xuất nguyên vẹn của khảo cứu — đối chiếu, đừng chép nguyên khối.</p>
 <pre class="code" data-lang="json"><code>{
   "id": "fatimavinhlong",

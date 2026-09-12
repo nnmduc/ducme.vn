@@ -36,6 +36,12 @@ Thêm `--json` nếu cần phiếu thi công dạng dữ liệu; `--html` ghi k�
 
 Từ đây trở đi, **phiếu thi công là phạm vi công việc**. Trường không có trong phiếu thì không đụng tới.
 
+Riêng mục **"Chuyện kể được duyệt cho `oralTradition`"** trong phiếu: chỉ viết vào `oralTradition`
+những chuyện có tên trong danh sách đó, và **mỗi ý phải mở đầu bằng nhãn truyền tụng** ("Tương
+truyền", "Theo lời kể", "Người địa phương kể rằng"). Không chuyển bất kỳ ý nào của phần này sang
+`historicalFact`, kể cả khi nghe rất hợp lý. Chuyện nằm ở mục "không được duyệt" thì không đưa lên
+dưới bất kỳ trường nào.
+
 ## Quy trình
 
 ### Bước 1 — Nhánh làm việc

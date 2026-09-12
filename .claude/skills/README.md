@@ -48,7 +48,7 @@ docs/khao-cuu/<id>/
 ├── bao-cao-kiem-chung.md     # sinh ra từ kiem-chung.json
 ├── bao-cao-kiem-chung.html   # sinh ra khi chạy với --html
 ├── phieu-thi-cong.md         # sinh ra từ cả hai, cho marian-publish
-└── anh/                      # ảnh ứng viên kèm ghi chú giấy phép (nếu có)
+└── anh/                      # ảnh ứng viên đã tải về (nếu có)
 ```
 
 ## Công cụ
@@ -95,6 +95,24 @@ Mã dùng chung, không phải skill: `bundle.mjs` (lược đồ + kiểm hợp
 
 ## Ba nguyên tắc xuyên suốt
 
-1. **Không bịa.** Mọi câu trên website phải truy được về một nguồn công khai kiểm chứng được.
+1. **Không bịa.** Mọi câu trên website phải truy được về một nguồn công khai mở được. "Không bịa" khác
+   "không ghi": chuyện có người kể thì cứ ghi, kèm ai kể và kể ở đâu.
 2. **Không ảnh do máy tạo sinh.** Chưa có ảnh thật thì để trống — đó là trạng thái hợp lệ.
 3. **Phân định sự thật lịch sử và truyền tụng dân gian.** Hai trường dữ liệu riêng, không trộn lẫn.
+   Chính cái nhãn này là thứ cho phép dự án thoải mái thu thập và đăng tư liệu chưa chính thống.
+
+## Gom rộng, gắn nhãn kỹ, lọc sau
+
+ducme.vn là dự án **phi lợi nhuận, phục vụ khảo cứu và học tập**. Bộ skill được chỉnh theo hướng thu
+thập rộng thay vì siết chặt:
+
+| Nguồn / tư liệu | Trước | Nay |
+|---|---|---|
+| Blog hành hương, trang du lịch, diễn đàn (cấp C) | chỉ là manh mối, không được dẫn | **dẫn được**, kể cả vào trường `sources` của dữ liệu |
+| Mạng xã hội, video, bình luận (cấp D) | không ghi nhận | ghi vào hồ sơ để chống lưng `folklore`, không vào dữ liệu |
+| Chuyện kể, sự tích, giai thoại | rải rác trong `oralTradition` | có hẳn `folklore[]` với `veracity`, `motif`, `spread` |
+| Ảnh thiếu giấy phép Creative Commons | hay bị loại | **không phải lý do loại** |
+| Ảnh nhặt được trong lúc đọc | mất luôn | vào kho `imageCandidates[]`, lọc ở vòng sau |
+| Manh mối chưa lần hết | mất luôn | vào `leads[]` cho lượt khảo cứu sau |
+
+Hai thứ vẫn tuyệt đối không được: **ảnh do AI tạo sinh**, và **truyền tụng viết như sự thật lịch sử**.
