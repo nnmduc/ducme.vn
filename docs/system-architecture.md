@@ -42,7 +42,7 @@ src/data/statues.js          <- NGUỒN DUY NHẤT. Hai export ESM.
 Dữ liệu chỉ tồn tại **một bản** trong repo. Đảo tương tác nhận dữ liệu từ đúng module mà
 trang dùng để dựng HTML, nên không thể có hiện tượng hai bản lệch nhau.
 
-`tests/test_data_and_integrity.js` kiểm 397 điều kiện trên dữ liệu này: id không trùng,
+`tests/test_data_and_integrity.js` kiểm 419 điều kiện trên dữ liệu này: id không trùng,
 tọa độ nằm trong lãnh thổ, đúng 5 pho tượng thời Đệ nhất Cộng hòa, mọi node của chòm sao
 khớp linh địa có thật, mỗi linh địa có ít nhất hai nguồn dẫn https không phải tên miền trần,
 và tính sẵn sàng của backend `/lien-he/`.

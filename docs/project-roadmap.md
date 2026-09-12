@@ -16,7 +16,7 @@
 - [x] Lưu trữ tệp tin an toàn: Cloudflare R2 lưu trữ tệp đính kèm với cơ chế ký số token HMAC SHA-256 có thời hạn (14 ngày).
 - [x] Bảo vệ chống bot: Tích hợp Cloudflare Turnstile không xâm lấn.
 - [x] Thông báo quản trị: Gửi email tự động qua Cloudflare Email Routing.
-- [x] Bộ 397 bài kiểm thử tự động đảm bảo tính toàn vẹn dữ liệu và cấu hình hệ thống.
+- [x] Bộ 419 bài kiểm thử tự động đảm bảo tính toàn vẹn dữ liệu và cấu hình hệ thống.
 
 ## Giai Đoạn 3: Nâng Cấp Nội Dung & Trải Nghiệm Mở Rộng (v1.2 - Kế Tiếp)
 - [ ] Bổ sung dung lượng văn xuôi lịch sử (khảo cứu sâu để nâng số từ trung vị từ 162 từ lên >300 từ cho 18 trang linh địa).

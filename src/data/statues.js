@@ -618,10 +618,10 @@ export const MARIAN_STATUES_DATA = [
   {
     "id": "lama",
     "name": "Đức Mẹ La Mã Bến Tre",
-    "title": "Trung Tâm Hành Hương Đức Mẹ La Mã Bến Tre - Mẹ Hằng Cứu Giúp Xứ Dừa",
-    "year": 1950,
-    "lat": 10.1583,
-    "lng": 106.4958,
+    "title": "Trung Tâm Hành Hương Đức Mẹ Hằng Cứu Giúp La Mã - Bến Tre",
+    "year": 1951,
+    "lat": 10.0994,
+    "lng": 106.4772,
     "elevation": "5m",
     "location": "Xã Hưng Nhượng, huyện Giồng Trôm, tỉnh Bến Tre",
     "region": "Đồng bằng sông Cửu Long",
@@ -637,21 +637,55 @@ export const MARIAN_STATUES_DATA = [
         "code": "NAT-13"
       }
     },
-    "historicalFact": "Năm 1950, chiến tranh tàn phá nhà thờ họ nhánh La Mã. Bức ảnh Đức Mẹ Hằng Cứu Giúp bị thất lạc dưới bùn sình đáy mương. Đến tháng 10/1950, một phụ nữ đi mò cá đã tình cờ vớt được bức ảnh còn nguyên vẹn kỳ lạ dù ngâm nước nhiều tháng. Giáo phận Vĩnh Long sau đó đã xây dựng thành trung tâm hành hương lớn của vùng sông nước Tây Nam Bộ.",
-    "oralTradition": "Điểm tựa thiêng liêng cho bà con miền Tây vượt qua sóng gió thời loạn và tai ương cuộc sống.",
-    "architect": "Đền thánh Mẹ Hằng Cứu Giúp bên dòng sông nước yên ả rợp bóng dừa xanh.",
-    "significance": "Linh địa Thánh Mẫu độc đáo nhất tại châu thổ sông Mê Kông.",
-    "realImage": null,
-    "realImageCaption": null,
-    "galleryImages": [],
-    "sources": [
+    "historicalFact": "Trước năm 1930, một số gia đình vùng Sơn Đốc (nay thuộc xã Hưng Nhượng, huyện Giồng Trôm, tỉnh Bến Tre) theo linh mục Luca Sách, chánh xứ Cái Bông, xin tòng giáo và lập họ đạo Sơn Đốc; cha Luca Sách tặng họ đạo một bức ảnh Đức Mẹ Hằng Cứu Giúp lồng khung kính. Năm 1947, do chiến tranh Đông Dương, nhiều gia đình tản cư về vùng Bầu Dơi; ông biện Nguyễn Văn Hạt đem bức ảnh về gửi con trai là Nguyễn Văn Thành cất giữ. Ngày 11/11/1949, Giám mục Phêrô Ngô Đình Thục, trong dịp ghé thăm giáo dân lánh nạn, đặt tên họ đạo mới là \"La Mã\". Ngày 2/2/1950, quân Pháp bố ráp vùng Bầu Dơi khiến giáo dân chạy loạn và bức ảnh bị thất lạc; đến ngày 5/5/1950, bà Võ Thị Liễng (thường gọi Sáu Liễng), một tín đồ Cao Đài, tình cờ vớt được khung ảnh — đã phai mờ gần hết — dưới một con rạch khi đi mò cua bắt ốc. Ngày 7/10/1950, trong một đợt bắn phá khác phá hủy nhà cửa quanh vùng, gia đình ông Hạt thoát nạn nhờ núp sau bàn thờ; giáo dân địa phương sau đó tường thuật rằng bức ảnh đã hiện rõ hình trở lại, và tin lành đồn xa thu hút nhiều người đến kính viếng. Trước sự lan truyền này, Giám mục Ngô Đình Thục lập một uỷ ban linh mục triều và dòng để điều tra \"Sự lạ La Mã\", ra huấn lệnh cho phép hành hương kính viếng năm 1952, và chính thức thiết lập La Mã làm trung tâm hành hương kính Đức Mẹ Hằng Cứu Giúp của Giáo phận Vĩnh Long năm 1951 — trung tâm hành hương thứ ba của Giáo hội Công giáo Việt Nam, sau La Vang và Trà Kiệu. Từ năm 1955, cha sở Phêrô Trần Hữu Dư mua đất xây dựng thánh đường mới, hoàn thành và khánh thành trọng thể trong ba ngày giữa tháng 1/1957 với sự tham dự của năm giám mục và hàng vạn giáo dân, lương dân. Giai đoạn 1977-1989, khuôn viên nhà thờ bị trưng dụng làm cơ sở giáo dục; sinh hoạt tôn giáo được khôi phục từ năm 1989. Hằng năm, Giáo phận Vĩnh Long và họ đạo La Mã cử hành hai đại lễ: ngày 5/5 (kỷ niệm tìm lại ảnh) và ngày 7/10 (kỷ niệm sự kiện được tin là ảnh lộ hình).",
+    "oralTradition": "Tương truyền, khi bức ảnh Đức Mẹ được bà Sáu Liễng vớt lên từ lòng rạch, lớp hình đã phai gần hết, chỉ còn thấy một mảng giấy xám lấm bùn; nhưng đến chiều ngày 7/10/1950, giữa cơn bắn phá thiêu rụi xóm làng, ông biện Hạt và người con trai út nép mình sau tấm vách lá duy nhất còn đứng vững — và khi bình yên trở lại, hai cha con sửng sốt thấy khuôn mặt Đức Mẹ và Chúa Hài Đồng bỗng hiện rõ tươi đẹp lạ thường, chỉ còn hai mũ triều thiên là chưa rõ nét. Người dân trong vùng truyền nhau gọi đây là \"phép lạ Đức Mẹ lộ hình\", và kể rằng mũ triều thiên ấy mãi đến lễ Đức Mẹ Mông Triệu 15/8/1951 mới lộ hiện trọn vẹn, cùng lúc những vết rách trên ảnh cũng biến mất trước hàng ngàn người chứng kiến. Nhiều người kể lại đã nhận được ơn lành nhờ đến cầu khấn tại La Mã — trong đó có chuyện về ông Khá, người lái đò bị hư mắt, được ơn sáng mắt trở lại, xin theo đạo và tiếp tục chèo đò đưa khách hành hương qua sông nhiều năm sau đó. Cũng theo lời kể được truyền lại, sở dĩ Giám mục Ngô Đình Thục chọn đặt tên họ đạo là \"La Mã\" vì muốn ví lòng trung kiên giữ đạo của giáo dân nơi vùng bưng biền hẻo lánh này với các tín hữu Rôma thời sơ khai, giữ vững đức tin giữa cơn bách hại.",
+    "architect": "Thánh đường La Mã hiện nay do cha sở Phêrô Trần Hữu Dư khởi công xây dựng từ năm 1955, trên phần đất khoảng 3,5 mẫu mua lại của bà điền chủ Tăng Thị Tư, thay cho ngôi nhà nguyện mái lá vách phên trước đó; công trình hoàn thành đầu năm 1957 với chiều dài 35m, chiều ngang 16m và tháp chuông cao 19m, xây gạch lợp ngói theo lối kiến trúc nhà thờ Công giáo miền Nam giữa thế kỷ 20 — tháp chuông hình vuông, đỉnh chóp mái ngói đỏ, mặt tiền có cửa vòm và ô cửa thông gió hình thoi. Năm 2006, nhân kỷ niệm 50 năm khánh thành, nhà thờ được lát lại nền gạch bông và sơn sửa toàn bộ, đồng thời xây thêm nhà dòng và nhà khách phục vụ khách hành hương. Trong khuôn viên, phía trước nhà thờ hướng ra bờ sông từng có một đài kỷ niệm ghi dòng chữ \"Nơi gặp ảnh Mẹ\" tại đúng đoạn rạch nơi bức ảnh được vớt lên, nay đã bị dòng nước vùi lấp; phía sau nhà thờ, tại nền nhà cũ của gia đình ông biện Hạt, hiện còn một đài kỷ niệm khác đánh dấu nơi xảy ra sự kiện được tin là ảnh lộ hình. Danh tính người thiết kế thánh đường 1957 hiện chưa tìm thấy tài liệu lưu giữ.",
+    "significance": "La Mã Bến Tre là trung tâm hành hương thứ ba của Giáo hội Công giáo Việt Nam, sau Đức Mẹ La Vang và Đức Mẹ Trà Kiệu, và là một trong ba trung tâm hành hương chính thức của Giáo phận Vĩnh Long cùng với Đức Mẹ Fatima Vĩnh Long và Đình Khao. Vào hai dịp đại lễ 5/5 và 7/10 hằng năm, giáo dân khắp miền Tây Nam Bộ và Sài Gòn tìm về kính viếng bức linh ảnh, xin ơn và tạ ơn; không ít người ngoài Công giáo trong vùng cũng đến cầu khấn. Từ một họ đạo nhỏ chỉ khoảng 50 giáo dân khi mới hình thành, La Mã nay là một cộng đồng đức tin gắn bó của vùng đất Giồng Trôm giữa xứ dừa Bến Tre.",
+    "realImage": "assets/real_photos/lama.jpg",
+    "realImageCaption": "Mặt tiền Nhà thờ Đức Mẹ La Mã Bến Tre, xã Hưng Nhượng, Giồng Trôm (Nguồn: Du lịch bụi, dulichbui.vn)",
+    "galleryImages": [
           {
-                "title": "Đức Mẹ La Mã Bến Tre - Wikipedia",
-                "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_La_Mã_Bến_Tre"
+                "image": "assets/real_photos/lama-2.jpg",
+                "caption": "Cổng vào Đền Đức Mẹ Hằng Cứu Giúp La Mã, xác nhận đúng tên gọi chính thức của linh địa (Nguồn: Xứ Dừa Bến Tre, xuduabentre.com)"
           },
           {
-                "title": "Trung tâm Đức Mẹ La Mã Bến Tre - GP Vĩnh Long",
-                "url": "https://www.google.com/search?q=site:giaophanvinhlong.net+\"La+Mã\""
+                "image": "assets/real_photos/lama-3.jpg",
+                "caption": "Nội thất Nhà thờ La Mã nhìn về phía cung thánh (Nguồn: Du lịch bụi, dulichbui.vn)"
+          },
+          {
+                "image": "assets/real_photos/lama-4.jpg",
+                "caption": "Tháp chuông Nhà thờ La Mã nhìn từ sân trước, ảnh chụp trong một dịp lễ (Nguồn: Du lịch bụi, dulichbui.vn)"
+          },
+          {
+                "image": "assets/real_photos/lama-5.jpg",
+                "caption": "Linh ảnh Đức Mẹ Hằng Cứu Giúp La Mã — chính bức ảnh trung tâm của toàn bộ lịch sử linh địa (Nguồn: Wikimedia Commons, tài khoản Baojcn01; xem lưu ý về mâu thuẫn khai báo tác giả trước khi dùng)"
+          }
+    ],
+    "sources": [
+          {
+                "title": "Trung Tâm Hành Hương Đức Mẹ La Mã, Bến Tre - Giáo phận Vĩnh Long",
+                "url": "https://giaophanvinhlong.net/Trung-Tam-Hanh-Huong-Duc-Me-La-Ma-Ben-Tre.html",
+                "tier": "B"
+          },
+          {
+                "title": "Họ Đạo La Mã - Giáo phận Vĩnh Long",
+                "url": "https://giaophanvinhlong.net/Ho-Dao-La-Ma.html",
+                "tier": "B"
+          },
+          {
+                "title": "Đức Mẹ La Mã Bến Tre - Wikipedia tiếng Việt",
+                "url": "https://vi.wikipedia.org/wiki/%C4%90%E1%BB%A9c_M%E1%BA%B9_La_M%C3%A3_B%E1%BA%BFn_Tre",
+                "tier": "B"
+          },
+          {
+                "title": "75 năm Đức Mẹ La Mã - Bến Tre 'lộ hình' và bài học Đức Tin cho người tín hữu - TGP Sài Gòn",
+                "url": "https://tgpsaigon.net/bai-viet/75-nam-duc-me-la-ma-ben-tre-lo-hinh-va-bai-hoc-duc-tin-cho-nguoi-tin-huu-82423",
+                "tier": "B"
+          },
+          {
+                "title": "Nhà thờ La Mã Bến Tre - Ủy ban Đoàn kết Công giáo Việt Nam",
+                "url": "https://ubdkcgvn.org.vn/vi/van-hoa-nghe-thuat/nha-tho-la-ma-ben-tre-o81E018D4.html",
+                "tier": "B"
           }
     ]
   },
