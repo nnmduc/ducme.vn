@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// SINH TU DONG tu .claude/skills — dung sua tay file nay, sua ban goc roi chay: npm run sync:agents
 /**
  * Kiem tra mot ban ghi linh dia de xuat (JSON) TRUOC khi chen vao src/data/statues.js.
  *

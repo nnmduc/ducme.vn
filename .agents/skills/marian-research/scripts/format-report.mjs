@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// SINH TU DONG tu .claude/skills — dung sua tay file nay, sua ban goc roi chay: npm run sync:agents
 /**
  * Sinh bao cao khao cuu tu ho so JSON.
  *
@@ -18,12 +19,16 @@
 
 import path from 'node:path';
 
-import { readJson, validateResearch, RESEARCH_SCHEMA, splitImagesByRole } from '../../_lib/bundle.mjs';
+import {
+  readJson, validateResearch, RESEARCH_SCHEMA, splitImagesByRole,
+  FOLKLORE_VERACITY_LABEL, SOURCE_TIER_LABEL as TIER_LABEL,
+} from '../../_lib/bundle.mjs';
 import { parseArgs, emitReport, reportIssues, table, rel } from '../../_lib/cli.mjs';
 
 const CONF = { cao: 'cao', trungbinh: 'trung bình', thap: 'thấp' };
 const ACTION = { them: 'thêm mới', sua: 'sửa', giunguyen: 'giữ nguyên' };
 const KIND = { moi: 'linh địa mới', capnhat: 'bổ sung tư liệu cho linh địa đã có' };
+const CAND = { ungvien: 'đang cân nhắc', chon: 'đã chọn', loai: 'đã loại' };
 
 const flags = parseArgs(process.argv);
 const file = flags._[0];
@@ -155,6 +160,10 @@ P();
 const inRecord = (bundle.sources || []).filter((s) => s.inRecord);
 P(`Đưa vào trường \`sources\` của dữ liệu: ${inRecord.map((s) => `[${s.code}]`).join(', ')} (${inRecord.length} nguồn).`);
 P();
+P('Cấp nguồn:');
+P();
+Object.entries(TIER_LABEL).forEach(([k, v]) => P(`- **${k}** — ${v.replace(/^[A-D] · /, '')}`));
+P();
 
 P('## 4. Hình ảnh');
 P();
@@ -197,7 +206,70 @@ if (!bundle.images?.length) {
 }
 P();
 
-P('## 5. Mâu thuẫn nguồn & điểm chưa chắc chắn');
+if (bundle.imageCandidates?.length) {
+  P('### Kho ảnh ứng viên');
+  P();
+  P(
+    'Ảnh nhặt được trong lúc đọc tư liệu, chưa qua lọc. Gom rộng trước, lọc sau — mục này để người ' +
+      'kiểm chứng và lượt khảo cứu sau không phải đi tìm lại từ đầu.'
+  );
+  P();
+  P(
+    table(bundle.imageCandidates, [
+      { key: 'pageUrl', label: 'Trang chứa ảnh', map: (c) => `[${c.source || 'liên kết'}](${c.pageUrl})` },
+      { key: 'note', label: 'Ảnh chụp gì' },
+      { key: 'status', label: 'Trạng thái', map: (c) => CAND[c.status] || c.status || 'đang cân nhắc' },
+      { key: 'why', label: 'Lý do chọn / loại' },
+    ])
+  );
+  P();
+}
+
+P('## 5. Chuyện kể & giai thoại');
+P();
+if (bundle.folklore?.length) {
+  P(
+    'Phần này là tư liệu truyền tụng, **không phải sự thật lịch sử đã kiểm chứng**. Nội dung được ' +
+      'chọn sẽ viết vào `oralTradition` kèm nhãn "tương truyền" / "theo lời kể", không bao giờ đưa ' +
+      'vào `historicalFact`.'
+  );
+  P();
+  P(
+    table(bundle.folklore, [
+      { key: 'title', label: 'Chuyện kể' },
+      { key: 'veracity', label: 'Độ xác thực', map: (f) => FOLKLORE_VERACITY_LABEL[f.veracity] || f.veracity },
+      { key: 'spread', label: 'Lưu hành ở đâu' },
+      { key: 'sources', label: 'Nguồn', map: (f) => refs(f.sources) },
+    ])
+  );
+  P();
+  for (const f of bundle.folklore) {
+    P(`### ${f.title}`);
+    P();
+    P('> ' + String(f.story || '').replace(/\n/g, '\n> '));
+    P();
+    const meta = [];
+    if (f.motif) meta.push(`**Mô-típ:** ${f.motif}`);
+    meta.push(`**Độ xác thực:** ${FOLKLORE_VERACITY_LABEL[f.veracity] || f.veracity}`);
+    if (f.spread) meta.push(`**Lưu hành:** ${f.spread}`);
+    meta.push(`**Nguồn:** ${refs(f.sources) || '—'}`);
+    P(meta.join(' · '));
+    P();
+    if (f.note) {
+      P(`_Ghi chú:_ ${f.note}`);
+      P();
+    }
+  }
+} else {
+  P('_Không thu được chuyện kể nào._');
+  if (bundle.folkloreSearchNote) {
+    P();
+    P(`_Đã tìm qua:_ ${bundle.folkloreSearchNote}`);
+  }
+  P();
+}
+
+P('## 6. Mâu thuẫn nguồn & điểm chưa chắc chắn');
 P();
 if (bundle.conflicts?.length) {
   P(
@@ -212,13 +284,23 @@ if (bundle.conflicts?.length) {
   P('_Không phát hiện mâu thuẫn giữa các nguồn._');
 }
 P();
+if (bundle.leads?.length) {
+  P('**Manh mối chưa lần hết — để lượt khảo cứu sau nối tiếp:**');
+  P();
+  bundle.leads.forEach((l) => {
+    if (typeof l === 'string') P(`- ${l}`);
+    else P(`- ${l.lead}${l.where ? ` — ở: ${l.where}` : ''}${l.why ? ` (${l.why})` : ''}`);
+  });
+  P();
+}
+
 P('**Chưa tìm được nguồn, đã cố ý để ngoài đề xuất:**');
 P();
 if (bundle.unknowns?.length) bundle.unknowns.forEach((u) => P(`- ${u}`));
 else P('- _Không ghi nhận._');
 P();
 
-P('## 6. Tự đánh giá');
+P('## 7. Tự đánh giá');
 P();
 const sa = bundle.selfAssessment || {};
 P(
@@ -237,7 +319,7 @@ P(
 );
 P();
 
-P('## 7. Bản ghi dữ liệu đề xuất');
+P('## 8. Bản ghi dữ liệu đề xuất');
 P();
 P('```json');
 P(JSON.stringify(bundle.record, null, 2));
@@ -272,7 +354,12 @@ const written = emitReport({
     title: `Báo cáo khảo cứu: ${bundle.name}`,
     kicker: 'Linh Đài Đức Mẹ Việt Nam · Khảo cứu',
     subtitle: `${bundle.id} · ${bundle.date} · ${KIND[bundle.kind] || bundle.kind}`,
-    badge: { text: `${bundle.sources.length} nguồn · ${totalWords} từ · ${bundle.images?.length || 0} ảnh đề xuất`, tone: 'info' },
+    badge: {
+      text:
+        `${bundle.sources.length} nguồn · ${totalWords} từ · ${bundle.images?.length || 0} ảnh đề xuất` +
+        ` · ${bundle.imageCandidates?.length || 0} ảnh ứng viên · ${bundle.folklore?.length || 0} chuyện kể`,
+      tone: 'info',
+    },
     footer: 'Sinh tự động từ hồ sơ JSON. Nguồn sự thật là file khao-cuu.json, không phải trang này.',
   },
 });

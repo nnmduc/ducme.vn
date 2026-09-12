@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// SINH TU DONG tu .claude/skills — dung sua tay file nay, sua ban goc roi chay: npm run sync:agents
 /**
  * Sinh bao cao kiem chung tu ho so JSON.
  *
@@ -22,12 +23,18 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import {
-  readJson, validateAudit, AUDIT_SCHEMA, AXES, VERDICT_LABEL, VERDICT_ALLOWS_PUBLISH,
+  readJson, validateAudit, AUDIT_SCHEMA, AXES, MAX_SCORE, VERDICT_LABEL, VERDICT_ALLOWS_PUBLISH,
+  FOLKLORE_VERACITY_LABEL,
 } from '../../_lib/bundle.mjs';
 import { parseArgs, emitReport, reportIssues, table, rel, verdictTone } from '../../_lib/cli.mjs';
 
 const STATUS = { OK: 'còn sống', CHET: 'CHẾT', CHUYEN_HUONG: 'chuyển hướng', PROXY_CHAN: 'proxy chặn' };
-const RESULT = { dat: 'Đạt', sua: 'Sửa câu chữ', bo: 'Bỏ' };
+const RESULT = {
+  dat: 'Đạt',
+  sua: 'Sửa câu chữ',
+  bo: 'Bỏ',
+  chuyentruyentung: 'Chuyển sang truyền tụng',
+};
 const LEVEL = { chan: 'CHẶN', nang: 'Nặng', nhe: 'Nhẹ' };
 
 const flags = parseArgs(process.argv);
@@ -69,7 +76,7 @@ if (reportIssues(result, 'KIEM CHUNG')) {
 }
 
 if (flags.check) {
-  console.log(`=> Ho so kiem chung hop le (${bundle.id}, ket luan ${VERDICT_LABEL[bundle.verdict]}, ${result.totalScore}/35).`);
+  console.log(`=> Ho so kiem chung hop le (${bundle.id}, ket luan ${VERDICT_LABEL[bundle.verdict]}, ${result.totalScore}/${MAX_SCORE}).`);
   process.exit(0);
 }
 
@@ -84,7 +91,7 @@ P(`# Báo cáo kiểm chứng: ${research?.name || bundle.name || bundle.id}`);
 P();
 P('## Kết luận');
 P();
-P(`> **${verdictLabel}** — ${result.totalScore}/35`);
+P(`> **${verdictLabel}** — ${result.totalScore}/${MAX_SCORE}`);
 P('>');
 P(`> ${bundle.summary}`);
 P();
@@ -117,7 +124,7 @@ P(
   )
 );
 P();
-P(`**Tổng: ${result.totalScore}/35.**`);
+P(`**Tổng: ${result.totalScore}/${MAX_SCORE}.**`);
 P();
 
 P('## 2. Kiểm nguồn dẫn');
@@ -154,6 +161,33 @@ P(
   ])
 );
 P();
+
+const movedClaims = (bundle.claimChecks || []).filter((c) => c.result === 'chuyentruyentung');
+if (movedClaims.length) {
+  P(
+    `${movedClaims.length} luận điểm không kiểm chứng được như sự thật lịch sử nhưng **không bị bỏ**: ` +
+      'chuyển sang `oralTradition` / `folklore` kèm nhãn "tương truyền", đúng nguyên tắc giữ lại tư liệu ' +
+      'truyền tụng thay vì xoá trắng.'
+  );
+  P();
+}
+
+if (bundle.folkloreChecks?.length) {
+  P('### Kiểm chuyện kể & giai thoại');
+  P();
+  P('Chuyện kể không bị chấm theo chuẩn sự thật lịch sử. Chỉ kiểm ba điều: có nguồn đọc lại được không, có bị nguồn nào bác bỏ không, và có được gắn nhãn truyền tụng không.');
+  P();
+  P(
+    table(bundle.folkloreChecks, [
+      { key: 'title', label: 'Chuyện kể' },
+      { key: 'veracity', label: 'Độ xác thực', map: (c) => FOLKLORE_VERACITY_LABEL[c.veracity] || c.veracity || '—' },
+      { key: 'labelled', label: 'Có gắn nhãn truyền tụng', map: (c) => (c.labelled === false ? '**chưa**' : 'có') },
+      { key: 'result', label: 'Kết luận', map: (c) => (c.result === 'duyet' ? 'DUYỆT' : 'LOẠI') },
+      { key: 'note', label: 'Ghi chú' },
+    ])
+  );
+  P();
+}
 
 if (bundle.crossChecks?.length) {
   P('### Kiểm chéo độc lập');
@@ -241,6 +275,8 @@ const approvedSources = bundle.approved?.sources || [];
 P(`- [${approvedSources.length >= 2 ? 'x' : ' '}] Nguồn đưa vào dữ liệu: ${approvedSources.map((s) => `[${s}]`).join(', ') || 'chưa duyệt nguồn nào'}`);
 const approvedImages = bundle.approved?.images || [];
 P(`- [${approvedImages.length ? 'x' : ' '}] Ảnh: ${approvedImages.length ? approvedImages.join(', ') : '**không duyệt ảnh nào**'}`);
+const approvedFolklore = bundle.approved?.folklore || [];
+P(`- [${approvedFolklore.length ? 'x' : ' '}] Chuyện kể được phép viết vào \`oralTradition\`: ${approvedFolklore.join('; ') || 'không duyệt chuyện nào'}`);
 P(`- [${bundle.approved?.constellation ? 'x' : ' '}] Thay đổi chòm sao (\`CONSTELLATION_VERSIONS\`)`);
 P();
 
@@ -262,12 +298,12 @@ const written = emitReport({
     title: `Báo cáo kiểm chứng: ${research?.name || bundle.name || bundle.id}`,
     kicker: 'Linh Đài Đức Mẹ Việt Nam · Kiểm chứng',
     subtitle: `${bundle.id} · ${bundle.date} · ${bundle.auditor || 'không ghi người kiểm'}`,
-    badge: { text: `${verdictLabel} — ${result.totalScore}/35`, tone: verdictTone(bundle.verdict) },
+    badge: { text: `${verdictLabel} — ${result.totalScore}/${MAX_SCORE}`, tone: verdictTone(bundle.verdict) },
     footer: 'Sinh tự động từ hồ sơ JSON. Nguồn sự thật là file kiem-chung.json, không phải trang này.',
   },
 });
 
 if (!flags.quiet && written.length) {
   written.forEach((w) => console.log(`Đã ghi: ${rel(w)}`));
-  console.log(`Kết luận: ${verdictLabel} (${result.totalScore}/35) — ${canPublish ? 'được phép triển khai' : 'KHÔNG được triển khai'}`);
+  console.log(`Kết luận: ${verdictLabel} (${result.totalScore}/${MAX_SCORE}) — ${canPublish ? 'được phép triển khai' : 'KHÔNG được triển khai'}`);
 }

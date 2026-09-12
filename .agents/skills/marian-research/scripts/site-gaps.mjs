@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// SINH TU DONG tu .claude/skills — dung sua tay file nay, sua ban goc roi chay: npm run sync:agents
 /**
  * Liet ke khoang trong tu lieu cua tung linh dia trong src/data/statues.js.
  *

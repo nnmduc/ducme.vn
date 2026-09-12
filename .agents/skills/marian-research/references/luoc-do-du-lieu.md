@@ -1,3 +1,5 @@
+<!-- SINH TU DONG tu .claude/skills — dung sua tay file nay, sua ban goc roi chay: npm run sync:agents -->
+
 # Lược đồ bản ghi linh địa
 
 Một bản ghi trong `src/data/statues.js`. Các ràng buộc dưới đây được `tests/test_data_and_integrity.js`
@@ -29,6 +31,7 @@ kiểm tự động; vi phạm là CI đỏ.
 | `sources` | array | ≥ 2 phần tử | Mỗi phần tử `{title, url}` |
 | `sources[].title` | string | dài hơn 5 ký tự | Mô tả được nguồn, không chỉ ghi "Wikipedia" |
 | `sources[].url` | string | `https://`, không phải root domain trần | Trỏ thẳng bài viết |
+| `sources[].tier` | string | **tuỳ chọn**, `A` \| `B` \| `C` | Cấp nguồn. Trang chi tiết hiện nhãn "Nguồn gốc" / "Thứ cấp" / "Tham khảo mở" cạnh mỗi nguồn; thiếu khoá này thì không hiện nhãn. Chép thẳng từ `tier` trong `sources[]` của hồ sơ khảo cứu. Cấp `D` không bao giờ vào đây |
 
 Quy trình đề xuất nhiều ảnh (ảnh chính + ảnh phụ, mỗi ảnh gắn `role: "chinh" | "phu"`) nằm ở
 `images[]` của hồ sơ khảo cứu — xem [`ho-so-khao-cuu.md`](ho-so-khao-cuu.md#images--ảnh-đề-xuất) và
@@ -82,8 +85,8 @@ làm khi báo cáo kiểm chứng duyệt rõ ràng.
   "realImageCaption": null,
   "galleryImages": [],
   "sources": [
-    { "title": "...", "url": "https://..." },
-    { "title": "...", "url": "https://..." }
+    { "title": "...", "url": "https://...", "tier": "B" },
+    { "title": "...", "url": "https://...", "tier": "C" }
   ]
 }
 ```

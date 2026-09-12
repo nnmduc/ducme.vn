@@ -3,6 +3,7 @@ name: marian-publish
 description: Triển khai kết quả khảo cứu đã được kiểm chứng vào website ducme.vn — sửa src/data/statues.js, thêm ảnh thực địa, cập nhật tài liệu, chạy npm test và npm run build, commit rồi tạo Pull Request. Use when applying an approved research/audit result to the site, adding or updating a Marian shrine record, adding a verified field photo, or opening the PR that ships that content. Dùng khi người dùng nói "triển khai lên website", "áp dụng báo cáo", "thêm linh địa vào dữ liệu", "tạo PR nội dung mới".
 ---
 
+<!-- SINH TU DONG tu .claude/skills — dung sua tay file nay, sua ban goc roi chay: npm run sync:agents -->
 # Triển khai nội dung lên website
 
 Giai đoạn 3 trong quy trình ba bước: **khảo cứu → kiểm chứng → triển khai**.
@@ -36,6 +37,12 @@ Thêm `--json` nếu cần phiếu thi công dạng dữ liệu; `--html` ghi k�
 
 Từ đây trở đi, **phiếu thi công là phạm vi công việc**. Trường không có trong phiếu thì không đụng tới.
 
+Riêng mục **"Chuyện kể được duyệt cho `oralTradition`"** trong phiếu: chỉ viết vào `oralTradition`
+những chuyện có tên trong danh sách đó, và **mỗi ý phải mở đầu bằng nhãn truyền tụng** ("Tương
+truyền", "Theo lời kể", "Người địa phương kể rằng"). Không chuyển bất kỳ ý nào của phần này sang
+`historicalFact`, kể cả khi nghe rất hợp lý. Chuyện nằm ở mục "không được duyệt" thì không đưa lên
+dưới bất kỳ trường nào.
+
 ## Quy trình
 
 ### Bước 1 — Nhánh làm việc
@@ -46,7 +53,7 @@ Theo `CONTRIBUTING.md` mục 6: `data/<mo-ta>` cho thay đổi dữ liệu linh 
 git checkout -b data/bo-sung-tu-lieu-<id>
 ```
 
-Nếu phiên làm việc đã được chỉ định một nhánh riêng (ví dụ nhánh `agy/...` hoặc `claude/...`), dùng đúng nhánh đó
+Nếu phiên làm việc đã được chỉ định một nhánh riêng (ví dụ nhánh `claude/...`), dùng đúng nhánh đó
 thay vì tạo nhánh mới.
 
 ### Bước 2 — Sửa `src/data/statues.js`
