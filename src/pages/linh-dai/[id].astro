@@ -16,7 +16,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 import SourceList from '../../components/SourceList.astro';
 
 import { MARIAN_STATUES_DATA, CONSTELLATION_VERSIONS } from '../../data/statues.js';
-import { getPhoto } from '../../lib/photos.js';
+import { getPhoto, getGalleryPhotos } from '../../lib/photos.js';
 import {
   getProvince,
   getNeighbours,
@@ -41,6 +41,7 @@ export function getStaticPaths() {
 const { statue } = Astro.props;
 
 const photo = getPhoto(statue.realImage);
+const galleryPhotos = getGalleryPhotos(statue.galleryImages);
 const province = getProvince(statue.location);
 const { prev, next } = getNeighbours(statue.id);
 
@@ -149,6 +150,26 @@ const proseSections = [
             />
             <figcaption>{statue.realImageCaption}</figcaption>
           </figure>
+        )
+      }
+
+      {
+        galleryPhotos.length > 0 && (
+          <div class="gallery">
+            {galleryPhotos.map((entry) => (
+              <figure class="gallery-fig">
+                <Image
+                  src={entry.photo}
+                  alt={`${statue.name} tại ${province}`}
+                  widths={[320, 640]}
+                  sizes="(max-width: 640px) 50vw, 280px"
+                  loading="lazy"
+                  format="avif"
+                />
+                <figcaption>{entry.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
         )
       }
 
@@ -323,6 +344,37 @@ const proseSections = [
     .hero-fig :global(img) {
       max-height: 380px;
     }
+  }
+
+  /* Anh phu (galleryImages), cung nguyen tac voi .hero-fig: khong cat xen,
+     dat giua nen phang. Nho hon anh chinh vi chi mang tinh minh hoa them. */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .gallery-fig {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 12px;
+  }
+  .gallery-fig :global(img) {
+    width: auto;
+    max-width: 100%;
+    max-height: 240px;
+    margin-inline: auto;
+    display: block;
+    border-radius: 2px;
+  }
+  .gallery-fig figcaption {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-subtle);
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--text-tertiary);
   }
 
   .specs {

@@ -27,3 +27,17 @@ export function getPhoto(realImage) {
   const key = Object.keys(photoModules).find((path) => path.endsWith(`/${filename}`));
   return key ? photoModules[key].default : null;
 }
+
+/**
+ * Doi mang `galleryImages` (anh phu, ngoai realImage) thanh danh sach anh
+ * Astro da resolve kem chu thich. Muc chua co file that tren dia (vi du
+ * ban ghi moi tao qua ky nang khao cuu nhung chua co anh) se bi bo qua.
+ *
+ * @returns {{photo: ImageMetadata, caption: string}[]}
+ */
+export function getGalleryPhotos(galleryImages) {
+  if (!Array.isArray(galleryImages)) return [];
+  return galleryImages
+    .map((item) => ({ photo: getPhoto(item?.image), caption: item?.caption }))
+    .filter((entry) => entry.photo);
+}

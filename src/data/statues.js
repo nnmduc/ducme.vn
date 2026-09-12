@@ -42,6 +42,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Linh địa Thánh Mẫu linh thiêng bậc nhất Việt Nam, biểu tượng cho tình thương chở che của Mẹ nơi rừng sâu nước độc.",
     "realImage": "assets/real_photos/lavang.jpg",
     "realImageCaption": "Ảnh chụp thực tế linh đài Đức Mẹ La Vang tại Quảng Trị (Nguồn: Wikimedia Commons)",
+    "galleryImages": [],
     "sources": [
           {
                 "title": "Vương cung Thánh đường Đức Mẹ La Vang - Wikipedia",
@@ -93,6 +94,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Biểu tượng của sự chở che kiên vững trước gươm đạn chiến tranh và lòng trung kiên giữ đạo.",
     "realImage": "assets/real_photos/trakieu.jpg",
     "realImageCaption": "Ảnh chụp thực tế Trung tâm Hành hương Đức Mẹ Trà Kiệu tại Quảng Nam (Nguồn: Wikimedia Commons)",
+    "galleryImages": [],
     "sources": [
           {
                 "title": "Linh địa Đức Mẹ Trà Kiệu 1885 - Wikipedia",
@@ -140,6 +142,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Chứng tích lịch sử hào hùng và bi tráng của thời kỳ di dân khai khẩn dinh điền vùng đất đỏ bazan.",
     "realImage": null,
     "realImageCaption": null,
+    "galleryImages": [],
     "sources": [
           {
                 "title": "Đức Mẹ Phượng Hoàng - Wikipedia",
@@ -187,6 +190,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Biểu tượng của lòng từ bi, sự ủi an vô biên dành cho đồng bào thiểu số và những số phận bất hạnh.",
     "realImage": "assets/real_photos/mangden.jpg",
     "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Măng Đen giữa đại ngàn Kon Tum (Nguồn: Wikimedia Commons)",
+    "galleryImages": [],
     "sources": [
           {
                 "title": "Tượng Đức Mẹ Măng Đen - Wikipedia",
@@ -238,6 +242,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Bảo hộ cho vùng đất dinh điền định cư trù phú giữa đại ngàn Tây Nguyên.",
     "realImage": "assets/real_photos/giangson.jpg",
     "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Giang Sơn trên đồi 822m, Đắk Lắk (Nguồn: Wikimedia Commons)",
+    "galleryImages": [],
     "sources": [
           {
                 "title": "Đức Mẹ Giang Sơn - Wikipedia",
@@ -293,6 +298,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Nơi người lữ hành dừng chân cầu xin bình an trước khi vượt cung đèo dốc hiểm trở bậc nhất Đông Dương.",
     "realImage": null,
     "realImageCaption": null,
+    "galleryImages": [],
     "sources": [
           {
                 "title": "Đức Mẹ Trinh Phong - Wikipedia",
@@ -348,6 +354,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Linh địa bảo trợ cho những người con khai hoang lập nghiệp nơi vùng biên cương rừng thiêng nước độc.",
     "realImage": "assets/real_photos/thacmo.jpg",
     "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Thác Mơ dưới chân núi Bà Rá, Bình Phước (Nguồn: Wikimedia Commons)",
+    "galleryImages": [],
     "sources": [
           {
                 "title": "Đức Mẹ Thác Mơ - Wikipedia",
@@ -403,6 +410,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Điểm tựa đức tin khổng lồ thu hút hàng triệu lượt người mỗi năm đến cầu xin ơn bình an và chữa lành.",
     "realImage": "assets/real_photos/tapao.jpg",
     "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Tà Pao trên sườn núi Tánh Linh, Bình Thuận (Nguồn: Wikimedia Commons)",
+    "galleryImages": [],
     "sources": [
           {
                 "title": "KTS Ngô Viết Thụ và công trình Tượng Đức Mẹ Tà Pao - Wikipedia",
@@ -446,6 +454,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Trung tâm hành hương lớn bậc nhất của Giáo hội Việt Nam thế kỷ 21.",
     "realImage": null,
     "realImageCaption": null,
+    "galleryImages": [],
     "sources": [
           {
                 "title": "Trung tâm Hành hương Đức Mẹ Núi Cúi - GP Xuân Lộc",
@@ -489,6 +498,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Trung tâm hành hương biển nổi tiếng nhất Nam Bộ.",
     "realImage": "assets/real_photos/baidau.jpg",
     "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Bãi Dâu cao 32m tại Vũng Tàu (Nguồn: Wikimedia Commons)",
+    "galleryImages": [],
     "sources": [
           {
                 "title": "Đền Thánh Đức Mẹ Bãi Dâu - Wikipedia",
@@ -532,6 +542,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Trung tâm kính Đức Mẹ Fatima lớn nhất tại vùng đô thị TP. Hồ Chí Minh.",
     "realImage": null,
     "realImageCaption": null,
+    "galleryImages": [],
     "sources": [
           {
                 "title": "Lịch sử Fatima Bình Triệu từ 1966 - TGP Sài Gòn",
@@ -571,6 +582,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Di sản vô giá biểu trưng cho khát vọng hòa bình của dân tộc.",
     "realImage": "assets/real_photos/ducbasaigon.jpg",
     "realImageCaption": "Ảnh chụp thực tế tượng Đức Mẹ Hòa Bình trước Nhà thờ chính tòa Đức Bà Sài Gòn (Nguồn: Wikimedia Commons)",
+    "galleryImages": [],
     "sources": [
           {
                 "title": "Nhà thờ chính tòa Đức Bà Sài Gòn - Wikipedia",
@@ -614,6 +626,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Linh địa Thánh Mẫu độc đáo nhất tại châu thổ sông Mê Kông.",
     "realImage": null,
     "realImageCaption": null,
+    "galleryImages": [],
     "sources": [
           {
                 "title": "Đức Mẹ La Mã Bến Tre - Wikipedia",
@@ -653,6 +666,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Bảo hộ ngư dân, mang lại sự bình an trước bão táp phong ba.",
     "realImage": null,
     "realImageCaption": null,
+    "galleryImages": [],
     "sources": [
           {
                 "title": "Đức Mẹ Sao Biển (Stella Maris) - Wikipedia",
@@ -692,6 +706,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Cột mốc đức tin nơi địa đầu Tây Nam đất nước.",
     "realImage": null,
     "realImageCaption": null,
+    "galleryImages": [],
     "sources": [
           {
                 "title": "Linh đài Đức Mẹ Hòn Chông - GP Long Xuyên",
@@ -731,6 +746,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Trung tâm hành hương Thánh Mẫu lâu đời nhất của Giáo phận Hà Tĩnh.",
     "realImage": null,
     "realImageCaption": null,
+    "galleryImages": [],
     "sources": [
           {
                 "title": "Trung tâm Hành hương Núi Cơm - GP Hà Tĩnh",
@@ -770,6 +786,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Kỳ quan kiến trúc tôn giáo hàng đầu miền Bắc.",
     "realImage": null,
     "realImageCaption": null,
+    "galleryImages": [],
     "sources": [
           {
                 "title": "Vương cung thánh đường Phú Nhai - Wikipedia",
@@ -809,6 +826,7 @@ export const MARIAN_STATUES_DATA = [
     "significance": "Là một trong ba trung tâm hành hương chính thức của Giáo phận Vĩnh Long, giữ vai trò trung tâm Thánh Mẫu hạt nhân của vùng đất Tây Nam Bộ — nơi giáo dân khắp vùng sông nước Cửu Long quy tụ hai lần mỗi năm để cầu nguyện, học hỏi sứ điệp Fatima và tìm sự ủi an, chữa lành tâm hồn.",
     "realImage": "assets/real_photos/fatimavinhlong.jpg",
     "realImageCaption": "Tượng Đức Mẹ Fatima tại Trung tâm Hành hương Fatima Vĩnh Long, xã Tân Ngãi, TP. Vĩnh Long (Nguồn: Wikimedia Commons, tác giả Philiplam990, giấy phép CC BY-SA 4.0, chụp 12/05/2019)",
+    "galleryImages": [],
     "sources": [
           {
                 "title": "Trung Tâm Hành Hương Đức Mẹ Fatima Vĩnh Long - Giáo Phận Vĩnh Long",

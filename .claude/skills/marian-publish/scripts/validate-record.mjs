@@ -138,6 +138,26 @@ for (const r of records) {
     err(id, 'thieu truong realImage (dat null neu chua co anh xac thuc — khong duoc bo trong)');
   }
 
+  // --- Anh phu (galleryImages) ---
+  if (!Array.isArray(r.galleryImages)) {
+    err(id, 'thieu truong galleryImages (phai la mang, de [] neu chua co anh phu nao)');
+  } else {
+    r.galleryImages.forEach((item, i) => {
+      const tag = `galleryImages[${i}]`;
+      if (!/^assets\/real_photos\/[a-z0-9]+-[0-9]+\.(jpg|jpeg|png)$/.test(item?.image || '')) {
+        err(id, `${tag}.image phai co dang "assets/real_photos/<id>-<so-thu-tu>.jpg" (hien: ${item?.image})`);
+      } else {
+        const abs = path.join(ROOT, 'src', item.image);
+        if (!fs.existsSync(abs)) err(id, `file anh khong ton tai: src/${item.image}`);
+      }
+      if (!item?.caption || item.caption.length < 10) {
+        err(id, `${tag}.caption bat buoc, ghi ro noi chup va nguon/giay phep`);
+      } else if (!/nguồn|Nguồn|CC|Public Domain|Wikimedia/i.test(item.caption)) {
+        warn(id, `${tag}.caption nen ghi ro nguon anh va giay phep`);
+      }
+    });
+  }
+
   // --- Nguon ---
   const sources = Array.isArray(r.sources) ? r.sources : [];
   if (sources.length < 2) err(id, `phai co it nhat 2 nguon (hien: ${sources.length})`);

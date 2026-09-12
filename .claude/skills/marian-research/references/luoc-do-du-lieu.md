@@ -21,8 +21,11 @@ kiểm tự động; vi phạm là CI đỏ.
 | `oralTradition` | string | — | Truyền tụng dân gian, giai thoại, ý nghĩa biểu tượng |
 | `architect` | string | — | Kiến trúc, vật liệu, kích thước, người tạc/thiết kế |
 | `significance` | string | — | Giá trị tâm linh, văn hoá, vai trò với cộng đồng |
-| `realImage` | string \| null | file phải tồn tại trong `src/` | `"assets/real_photos/<id>.jpg"` hoặc `null` |
+| `realImage` | string \| null | file phải tồn tại trong `src/` | `"assets/real_photos/<id>.jpg"` hoặc `null` — ảnh chính, hiển thị ở đầu trang chi tiết |
 | `realImageCaption` | string | bắt buộc khi có ảnh | Ghi rõ nội dung ảnh + nguồn + giấy phép |
+| `galleryImages` | array | mảng, có thể rỗng `[]` | Ảnh phụ minh hoạ thêm, ngoài ảnh chính. Mỗi phần tử `{image, caption}`. Trường luôn phải có mặt (dùng `[]` khi chưa khảo cứu ảnh phụ nào) — **hiện tại chỉ điền qua kỹ năng khảo cứu, chưa có kênh cho người dùng tự đóng góp** |
+| `galleryImages[].image` | string | file phải tồn tại trong `src/` | `"assets/real_photos/<id>-<số thứ tự>.jpg"`, ví dụ `"assets/real_photos/lavang-2.jpg"` |
+| `galleryImages[].caption` | string | bắt buộc | Ghi rõ nội dung ảnh + nguồn + giấy phép, cùng chuẩn với `realImageCaption` |
 | `sources` | array | ≥ 2 phần tử | Mỗi phần tử `{title, url}` |
 | `sources[].title` | string | dài hơn 5 ký tự | Mô tả được nguồn, không chỉ ghi "Wikipedia" |
 | `sources[].url` | string | `https://`, không phải root domain trần | Trỏ thẳng bài viết |
@@ -73,6 +76,7 @@ làm khi báo cáo kiểm chứng duyệt rõ ràng.
   "significance": "...",
   "realImage": null,
   "realImageCaption": null,
+  "galleryImages": [],
   "sources": [
     { "title": "...", "url": "https://..." },
     { "title": "...", "url": "https://..." }
