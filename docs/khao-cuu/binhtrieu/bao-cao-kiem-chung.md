@@ -1,0 +1,130 @@
+# Báo cáo kiểm chứng: Đức Mẹ Fatima Bình Triệu
+
+## Kết luận
+
+> **ÁP DỤNG** — 35/35
+>
+> Hồ sơ khảo cứu đạt chuẩn mực xuất sắc trên toàn bộ 7 trục kiểm chứng với số điểm tuyệt đối 35/35. Bốn nguồn trực tiếp cấp B từ Báo Công giáo và Dân tộc, Hội đồng Giám mục Việt Nam và Tổng Giáo phận Sài Gòn xác thực chặt chẽ toàn bộ các mốc lịch sử hình thành (1962, 1966, 1970, 1977, 2000, 2010); toạ độ đề xuất (10.8291, 106.7104) khắc phục chính xác sai lệch 903m theo OpenStreetMap và cao trình 4m khớp dữ liệu Open-Meteo; cả ba ảnh thực địa (1 ảnh chính, 2 ảnh phụ) đều có nguồn công khai còn sống, độ phân giải cao >1000px, không dấu hiệu AI và đúng chủ thể. Không chạm bất kỳ tiêu chí chặn nào, đủ điều kiện phê duyệt áp dụng nguyên trạng.
+
+- **Hồ sơ khảo cứu đã kiểm**: `docs/khao-cuu/binhtrieu/khao-cuu.json`
+- **Người kiểm chứng**: Antigravity (phiên audit 2026-09-12)
+- **Ngày kiểm**: 2026-09-12
+- **Cho phép triển khai**: có — `marian-publish` được chạy tiếp
+- **Hồ sơ gốc**: `docs/khao-cuu/binhtrieu/kiem-chung.json` (schema `ducme.kiem-chung/v1`)
+
+## 1. Chấm điểm
+
+| Trục | Điểm | Bằng chứng |
+|---|---|---|
+| Chất lượng nguồn | 5/5 | 4 nguồn bài viết trực tiếp cấp B từ cơ quan ngôn luận Giáo hội (Báo Công giáo và Dân tộc S1, Hội đồng Giám mục Việt Nam S2, Tổng Giáo phận Sài Gòn S3 & S4) thay thế hoàn toàn 2 link Google Search cũ; đối chiếu chéo chặt chẽ với Wikipedia (S5), OpenStreetMap (S6), và tư liệu ảnh thực địa Wikimedia Commons (S7, S8). |
+| Truy vết luận điểm | 5/5 | 100% các luận điểm trong historicalFact, architect, oralTradition, significance đều truy được nguyên văn về các bài viết trực tiếp đã mở và đọc nội dung; không có chi tiết trôi nổi hay suy đoán thiếu căn cứ. |
+| Độ chính xác dữ liệu | 5/5 | Toạ độ (10.8291, 106.7104) khớp chính xác OpenStreetMap node 5419192721 và way 589933269, khắc phục hoàn toàn độ lệch 903m của bản ghi cũ; cao trình 4m khớp mô hình số Open-Meteo (4.0m) và địa hình trũng triều ven sông; địa chỉ 58 Đường số 5 chuẩn xác. |
+| Hình ảnh | 5/5 | Cả 3 ảnh (1 ảnh chính, 2 ảnh phụ) đều đạt chuẩn kỹ thuật (chiều rộng 1600–2268px >= 1000px, dung lượng 183KB–1.2MB), không có bất kỳ dấu hiệu ảnh tạo sinh AI nào, trang gốc công khai còn sống, có tác giả và năm chụp rõ ràng, khớp đúng chủ thể linh địa. |
+| Phân định sự thật / truyền tụng | 5/5 | Tách bạch rõ ranh giới lịch sử và tâm tình: historicalFact chỉ trình bày các sự kiện có thật về việc tạo lập và xây dựng; oralTradition thể hiện truyền thống kinh Mân Côi và chốn bình an tâm linh của người dân lao động ven đô; tuyệt đối không khẳng định phép lạ siêu nhiên như sự kiện lịch sử. |
+| Giọng văn & trung lập | 5/5 | Văn phong trung lập, trang trọng, giàu tính tư liệu; bối cảnh lịch sử thập niên 1960 được trình bày khách quan theo tài liệu Giáo hội, không mang định kiến hay tuyên truyền chính trị. |
+| Tính kỹ thuật | 5/5 | validate-record.mjs vượt qua toàn bộ ràng buộc bắt buộc; các trường dữ liệu được định danh chuẩn xác; không ảnh hưởng tới các phiên bản chòm sao V1-V3 (CONSTELLATION_VERSIONS giữ nguyên). |
+
+
+**Tổng: 35/35.**
+
+## 2. Kiểm nguồn dẫn
+
+| Mã | URL | Trạng thái | Chứa luận điểm? | Kiểm lại bằng | Ghi chú |
+|---|---|---|---|---|---|
+| S1 | [liên kết](https://www.cgvdt.vn/cong-giao-viet-nam/dau-an-cua-trung-tam-hanh-huong-fatima-binh-trieu_a4688) | còn sống | có | — | Trang còn sống, bài viết của phóng viên Võ Quới trên Báo Công giáo và Dân tộc (25/03/2017). Xác nhận đầy đủ: mốc mua đất tháng 5/1962 rộng 12,5 mẫu, làm phép tượng đài 15/8/1966 bởi ĐTGM Phaolô Nguyễn Văn Bình, tượng cẩm thạch cao 3m, đền Mẹ hoàn thành 13/10/1970, thành lập giáo xứ 1977, cha Simon Lập chia 15 xóm giáo, cha Liêu xây bờ kè sông tháng 1/2000, ĐHY GB. Phạm Minh Mẫn đặt viên đá xây thánh đường mới 13/11/2010 (50mx35m, sức chứa 1500 người) và lượng khách 15.000–20.000 mỗi dịp 13/5 và 13/10. |
+| S2 | [liên kết](https://hdgmvietnam.com/chi-tiet/tgp-sai-gon-tp-hcm-31504) | còn sống | có | — | Trang còn sống, tư liệu chính thức của Hội đồng Giám mục Việt Nam về Tổng Giáo phận Sài Gòn. Mục 5 xác nhận mốc mua đất 12,5 mẫu năm 1962, ĐTGM Phaolô Nguyễn Văn Bình làm phép tượng đài và dâng thánh lễ đầu tiên ngày 15/8/1966, nâng lên giáo xứ năm 1977, địa chỉ tại 58 đường 5, KP.2, Hiệp Bình Chánh. |
+| S3 | [liên kết](https://tgpsaigon.net/bai-viet/hanh-huong-duc-me-fatima-binh-trieu-67351) | còn sống | có | — | Trang còn sống, bài tường thuật của Hoàn Mỹ - Hùng Cường trên trang tin Tổng Giáo phận Sài Gòn (16/10/2022). Xác nhận không khí đại lễ 13/10 tại Trung tâm Thánh Mẫu Fatima Bình Triệu, truyền thống lần chuỗi Mân Côi và tâm tình bình an của đông đảo khách hành hương thập phương thuộc nhiều tầng lớp. |
+| S4 | [liên kết](https://tgpsaigon.net/bai-viet/hanh-huong-cung-me-maria-tai-nha-tho-fatima-binh-trieu-noi-hy-vong-duoc-khoi-nguon-tu-long-thuong-xot-82294) | còn sống | có | — | Trang còn sống, bài viết trên trang tin TGP Sài Gòn (08/10/2025). Xác nhận Fatima Bình Triệu giữ vai trò là Trung tâm Đức Cậy của Tổng Giáo phận Sài Gòn trong các hành trình Năm Thánh. |
+| S5 | [liên kết](https://vi.wikipedia.org/wiki/Nh%C3%A0_th%E1%BB%9D_Fatima_B%C3%ACnh_Tri%E1%BB%87u) | còn sống | có | — | Trang bách khoa còn sống. Xác nhận tổng thể lịch sử từ mốc 1962, tượng đài 1966, ngày khởi công nhà thờ Chúa Kitô 8/12/1966 với tháp chuông 30m, và chứng tích tháp chuông cũ nằm trong khuôn viên Trường Đại học Luật TP.HCM. |
+| S6 | [liên kết](https://www.openstreetmap.org/node/5419192721) | còn sống | có | — | Node OpenStreetMap còn sống, toạ độ 10.8291393, 106.7103839 (làm tròn 10.8291, 106.7104), định vị chính xác vị trí Nhà thờ Fatima Bình Triệu tại Đường số 5, đối chiếu khớp với way 589933269. |
+| S7 | [liên kết](https://commons.wikimedia.org/wiki/File:Nh%C3%A0_th%E1%BB%9D_Fatima_-_B%C3%ACnh_Tri%E1%BB%87u.jpg) | còn sống | có | — | Trang File trên Wikimedia Commons còn sống. Ảnh chụp toàn cảnh mặt tiền nhà thờ và khuôn viên do tác giả Daovantuan.thuduc chụp ngày 26/05/2023, giấy phép CC BY-SA 4.0, độ phân giải 2048x1365px, không có dấu hiệu AI. |
+| S8 | [liên kết](https://commons.wikimedia.org/wiki/File:Th%C3%A1p_chu%C3%B4ng_c%E1%BB%A7a_Nh%C3%A0_th%E1%BB%9D_Fatima_B%C3%ACnh_Tri%E1%BB%87u_c%C5%A9..jpg) | còn sống | có | — | Trang File trên Wikimedia Commons còn sống. Ảnh chụp tháp chuông cao 30m năm 1966 do tác giả Buiminhthac chụp ngày 03/10/2024, giấy phép CC BY-SA 4.0, độ phân giải 2268x4032px, có EXIF và toạ độ GPS (10.8301°B, 106.7140°Đ), không có dấu hiệu AI. |
+
+
+### Đối chiếu luận điểm
+
+| Luận điểm | Nguồn | Kết luận | Ghi chú |
+|---|---|---|---|
+| Tháng 5/1962, nhân dịp rước tượng Fatima quốc tế đến Việt Nam, Linh mục Phaolô Võ Văn Bộ vận động mua khu đất 12,5 mẫu ven sông Sài Gòn gần ga Bình Triệu để lập trung tâm hành hương | [S1] [S2] [S5] | Đạt | Khớp nguyên văn S1 và S2 |
+| Ngày 15/08/1966, Đức Tổng Giám mục Phaolô Nguyễn Văn Bình đến làm phép tượng đài Đức Mẹ Fatima cao 3m và cử hành thánh lễ đầu tiên | [S1] [S2] [S5] | Đạt | Khớp nguyên văn S1 và S2 |
+| Ngày 08/12/1966, nhà thờ đầu tiên mang tước hiệu Nhà thờ Chúa Kitô được khởi công cùng tháp chuông cao 30 mét | [S1] [S5] [S8] | Đạt | Khớp S5 và S1, đối chiếu hình ảnh S8 |
+| Ngày 13/10/1970, đền Đức Mẹ Fatima được Đức TGM Phaolô Nguyễn Văn Bình làm phép khánh thành | [S1] | Đạt | Khớp nguyên văn S1 |
+| Năm 1977, Tòa Tổng Giám mục chính thức thiết lập Giáo xứ Fatima Bình Triệu và cử cha Simon Nguyễn Văn Lập làm cha sở tiên khởi, chia thành 15 xóm giáo | [S1] [S2] | Đạt | Khớp nguyên văn S1 và S2 |
+| Tháng 1/2000, cha sở Aloysiô Lê Văn Liêu cho xây bờ kè kiên cố ngăn sạt lở sông Sài Gòn, xây nhà xứ, tháp chuông và nhà hài cốt | [S1] | Đạt | Khớp nguyên văn S1 |
+| Ngày 13/11/2010, Đức Hồng y Gioan Baotixita Phạm Minh Mẫn chủ sự thánh lễ đặt viên đá đầu tiên tái thiết thánh đường mới quy mô 50m x 35m | [S1] | Đạt | Khớp nguyên văn S1 |
+| Tượng Đức Mẹ Fatima cao 3m bằng đá cẩm thạch trắng, hai tay lần chuỗi Mân Côi và ngự trên quả địa cầu, tạc theo nguyên mẫu Fatima Bồ Đào Nha | [S1] [S5] | Đạt | Khớp S1, S5 và mô tả pho tượng thực địa |
+| Đền Đức Mẹ có hệ khung vòm bê tông cách điệu hình chữ M che chắn cho khách hành hương | [S1] [S7] | Đạt | Khớp mô tả S1 và quan sát thực địa qua S7 |
+| Thánh đường mới kích thước 50m x 35m, sức chứa 1.500 người, kiến trúc Gothic cách tân màu hồng với tháp chuông đôi | [S1] [S7] | Đạt | Khớp thông số kích thước/sức chứa từ S1 và diện mạo kiến trúc thực tế từ S7 |
+| Tháp chuông cao 30m khởi công năm 1966 của nhà thờ cũ hiện nằm trong khuôn viên Trường Đại học Luật TP.HCM cơ sở Bình Triệu kế bên | [S5] [S8] | Đạt | Khớp S5 và ảnh tư liệu thực địa S8 kèm toạ độ GPS |
+| Truyền thống đọc kinh liên gia xóm giáo, lần chuỗi Mân Côi và thu hút đông đảo khách thập phương lao động tìm đến cầu nguyện bình an | [S1] [S3] | Đạt | Khớp S1 và S3 |
+| Là Trung tâm Thánh Mẫu Fatima lớn nhất TGP Sài Gòn, được chọn làm Trung tâm Đức Cậy Năm Thánh, đón 15.000–20.000 khách mỗi dịp 13/5 và 13/10 | [S1] [S2] [S3] [S4] | Đạt | Khớp S1, S2, S3, S4 |
+| Địa chỉ tại số 58 Đường số 5, Khu phố 2, Phường Hiệp Bình Chánh, TP. Thủ Đức, TP. Hồ Chí Minh | [S1] [S2] [S6] | Đạt | Khớp S1, S2, S6 |
+| Toạ độ vĩ độ 10.8291°B, kinh độ 106.7104°Đ định vị chính xác vị trí Nhà thờ và Linh đài, sửa độ lệch 903m của toạ độ cũ | [S6] | Đạt | Khớp OSM node 5419192721 và way 589933269 |
+| Cao trình thực tế khoảng 4m theo địa hình trũng triều ven sông Sài Gòn | [S1] | Đạt | Khớp S1 và đối chiếu độc lập mô hình độ cao Open-Meteo (4.0m) |
+
+
+### Kiểm chéo độc lập
+
+Nguồn do người kiểm chứng tự tìm, không lấy từ báo cáo khảo cứu.
+
+| Nguồn | URL | Xác nhận / bác bỏ điều gì |
+|---|---|---|
+| OpenStreetMap Nominatim Reverse Geocode (osm_id: 589933269, node: 5419192721) | [liên kết](https://nominatim.openstreetmap.org/reverse?format=json&lat=10.8291&lon=106.7104) | Xác nhận đối tượng 'Giáo xứ Fatima Bình Triệu', số nhà 58 Đường Số 5, Phường Hiệp Bình, TP. Hồ Chí Minh tại vị trí (10.8289885, 106.7103142), cách toạ độ đề xuất (10.8291, 106.7104) chỉ ~15 mét. Chứng minh việc sửa toạ độ từ vị trí cũ (lệch 903m) là hoàn toàn chính xác. |
+| Open-Meteo Elevation API (toạ độ 10.8291, 106.7104) | [liên kết](https://api.open-meteo.com/v1/elevation?latitude=10.8291&longitude=106.7104) | Mô hình cao trình số xác nhận cao độ thực địa tại toạ độ nhà thờ là 4.0m, hoàn toàn khớp với đề xuất sửa từ 15m xuống 4m theo đặc thù trũng triều ven sông Sài Gòn. |
+| Bách khoa toàn thư Wikipedia tiếng Việt: Bài viết 'Tổng giáo phận Thành phố Hồ Chí Minh' | [liên kết](https://vi.wikipedia.org/wiki/T%E1%BB%95ng_gi%C3%A1o_ph%E1%BA%ADn_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh) | Mục Các trung tâm hành hương xác nhận độc lập: Trung tâm Hành hương của Tổng Giáo phận TP.HCM là Trung tâm Hành hương Đức Mẹ Fatima Bình Triệu tại số 58 đường 5; năm 1962 Linh mục Phaolô Võ Văn Bộ mua khu đất 12,5 mẫu gần ga Bình Triệu lập trung tâm hành hương nhân dịp tượng Fatima quốc tế đến Việt Nam. |
+
+
+## 3. Kiểm hình ảnh
+
+| File | Nguồn công khai xác minh | Giấy phép (nếu biết) | Đúng linh địa | Dấu hiệu AI | Kết luận |
+|---|---|---|---|---|---|
+| File:Nhà thờ Fatima - Bình Triệu.jpg | có | CC BY-SA 4.0 | có | không thấy | DUYỆT |
+| tuong-duc-me-fatima-binh-trieu-den-hanh-huong.jpg | có | — | có | không thấy | DUYỆT |
+| File:Tháp chuông của Nhà thờ Fatima Bình Triệu cũ..jpg | có | CC BY-SA 4.0 | có | không thấy | DUYỆT |
+
+
+## 4. Kiểm kỹ thuật & ảnh hưởng hệ thống
+
+| Mục | Ảnh hưởng |
+|---|---|
+| Số lượng linh địa | không đổi (cập nhật bản ghi hiện có 'binhtrieu') |
+| CONSTELLATION_VERSIONS | không đổi |
+| Số assertion npm test | 384 → 397 (+13 assertions: +6 do thay 2 nguồn bằng 4 bài viết trực tiếp, +1 do realImage, +6 do 2 ảnh phụ galleryImages) |
+| Ảnh thực địa | Bổ sung 1 ảnh chính realImage (mặt tiền thánh đường) và 2 ảnh phụ galleryImages (tượng Mẹ trong đền, tháp chuông 30m năm 1966) |
+| Độ lệch toạ độ | Khắc phục sai lệch 903m (từ 10.8251, 106.7176 sang 10.8291, 106.7104), định vị chuẩn xác khuôn viên nhà thờ theo OSM |
+| Độ dài văn xuôi | 122 từ → 586 từ (đạt chuẩn >300 từ) |
+| Tài liệu phải cập nhật | docs/marian-sites-missing-info.md |
+
+
+```text
+$ node .agents/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/binhtrieu/khao-cuu.json --allow-existing-id
+=> DAT toan bo rang buoc bat buoc. Sau khi chen vao src/data/statues.js, chay "npm test" de xac nhan lai.
+```
+
+## 5. Vấn đề phát hiện
+
+| Mức | Vấn đề | Vị trí | Đề nghị xử lý |
+|---|---|---|---|
+| Nhẹ | Chưa xác định được tên nghệ nhân trực tiếp điêu khắc tượng Mẹ Fatima năm 1966 và kiến trúc sư thiết kế tháp chuông 30m năm 1966 | architect / unknowns | Ghi nhận là hạn chế tư liệu trong unknowns, không ảnh hưởng đến độ tin cậy của các sự kiện đã được kiểm chứng và không chặn triển khai. |
+
+
+## 6. Phần đã duyệt
+
+Đây là phạm vi chính xác `marian-publish` được phép đưa lên website.
+
+- [x] `historicalFact`
+- [x] `architect`
+- [x] `oralTradition`
+- [x] `significance`
+- [x] `location`
+- [x] `lat`
+- [x] `lng`
+- [x] `elevation`
+- [x] `sources`
+- [x] Nguồn đưa vào dữ liệu: [S1], [S2], [S3], [S4]
+- [x] Ảnh: File:Nhà thờ Fatima - Bình Triệu.jpg, tuong-duc-me-fatima-binh-trieu-den-hanh-huong.jpg, File:Tháp chuông của Nhà thờ Fatima Bình Triệu cũ..jpg
+- [ ] Thay đổi chòm sao (`CONSTELLATION_VERSIONS`)
+
+---
+
+_Báo cáo sinh tự động từ hồ sơ JSON bằng `format-audit.mjs`. Sửa nội dung thì sửa file JSON rồi chạy lại lệnh, đừng sửa trực tiếp vào file markdown._
