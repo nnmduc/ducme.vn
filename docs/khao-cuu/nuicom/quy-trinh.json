@@ -1,0 +1,24 @@
+{
+  "schema": "ducme.quy-trinh/v1",
+  "id": "nuicom",
+  "started": "2026-09-16T14:45:29.132Z",
+  "updated": "2026-09-16T14:45:32.134Z",
+  "status": "dangchay",
+  "rounds": 0,
+  "maxRounds": 2,
+  "fixes": 0,
+  "maxFixes": 2,
+  "options": {
+    "pr": true
+  },
+  "steps": [],
+  "decisions": [],
+  "final": {},
+  "pending": {
+    "at": "2026-09-16T14:45:32.134Z",
+    "step": "khaocuu",
+    "mode": "moi",
+    "why": "Chưa có docs/khao-cuu/<id>/khao-cuu.json — khảo cứu từ đầu",
+    "verdict": null
+  }
+}
