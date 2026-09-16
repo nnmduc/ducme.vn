@@ -846,46 +846,6 @@ export const MARIAN_STATUES_DATA = [
     ]
   },
   {
-    "id": "nuicom",
-    "name": "Đức Mẹ Núi Cơm (Hà Tĩnh)",
-    "title": "Trung Tâm Hành Hương Đức Mẹ Núi Cơm - Đền Thánh Mẹ Thiên Chúa",
-    "year": 1890,
-    "lat": 18.256,
-    "lng": 105.962,
-    "elevation": "65m",
-    "location": "Xã Cẩm Xuyên (Hà Vàng xưa), tỉnh Hà Tĩnh",
-    "region": "Bắc Trung Bộ",
-    "diocese": "Giáo phận Hà Tĩnh",
-    "diemStatue5": false,
-    "constellationRole": {
-      "v1": null,
-      "v2": null,
-      "v3": null,
-      "v4": {
-        "star": "Thánh Mẫu Bắc Trung Bộ",
-        "role": "Linh đài Dãy Lam Hồng",
-        "code": "NAT-16"
-      }
-    },
-    "historicalFact": "Núi Cơm là ngọn đồi tròn trĩnh giữa cánh đồng như chiếc bát úp. Giáo dân xứ Hà Vàng từ cuối thế kỷ 19 đã lập đền kính Mẹ Thiên Chúa tại đây. Qua bao cuộc chiến tranh khốc liệt và biến cố lịch sử vùng Bắc Trung Bộ, đền thánh Núi Cơm vẫn là chốn về cầu nguyện của người dân xứ Nghệ Tĩnh.",
-    "oralTradition": "Ngôi sao kết nối dải đất miền Trung từ Đèo Ngang trở ra, biểu trưng cho niềm hy vọng giữa mảnh đất gió lào cát trắng.",
-    "architect": "Quần thể thánh đài trên đồi Núi Cơm rợp bóng cây xanh.",
-    "significance": "Trung tâm hành hương Thánh Mẫu lâu đời nhất của Giáo phận Hà Tĩnh.",
-    "realImage": null,
-    "realImageCaption": null,
-    "galleryImages": [],
-    "sources": [
-          {
-                "title": "Trung tâm Hành hương Núi Cơm - GP Hà Tĩnh",
-                "url": "https://www.google.com/search?q=site:giaophanhatinh.com+\"Núi+Cơm\""
-          },
-          {
-                "title": "Linh đài Mẹ Núi Cơm - Tư liệu Giáo phận Hà Tĩnh",
-                "url": "https://www.google.com/search?q=\"Đức+Mẹ+Núi+Cơm\"+Thuận+Lộc+Hà+Tĩnh"
-          }
-    ]
-  },
-  {
     "id": "phunhai",
     "name": "Vương Cung Thánh Đường Phú Nhai",
     "title": "Đại Vương Cung Thánh Đường Đức Mẹ Vô Nhiễm Nguyên Tội Phú Nhai",
@@ -1134,14 +1094,13 @@ export const CONSTELLATION_VERSIONS = {
     "name": "Phiên Bản 4: Toàn Cảnh Các Linh Địa Thánh Mẫu Việt Nam (Bắc - Trung - Nam)",
     "shortName": "V4: Toàn Quốc Xuyên Việt",
     "tagline": "Mạng lưới các Đại Trung tâm Thánh Mẫu trải dài dọc chiều dài dải đất hình chữ S",
-    "description": "Từ Đền Thánh Phú Nhai (Nam Định), Núi Cơm (Hà Tĩnh), La Vang (Quảng Trị), Trà Kiệu, Sao Biển (Đà Nẵng), qua Măng Đen, Giang Sơn Tây Nguyên, xuống Tà Pao, Núi Cúi, Bãi Dâu, Nhà Thờ Đức Bà Sài Gòn, La Mã Bến Tre và Hòn Chông Kiên Giang.",
+    "description": "Từ Đền Thánh Phú Nhai (Nam Định), La Vang (Quảng Trị), Trà Kiệu, Sao Biển (Đà Nẵng), qua Măng Đen, Giang Sơn Tây Nguyên, xuống Tà Pao, Núi Cúi, Bãi Dâu, Nhà Thờ Đức Bà Sài Gòn, La Mã Bến Tre và Hòn Chông Kiên Giang.",
     "badge": "Hành Hương Xuyên Việt",
     "color": "#10b981",
     "strokeColor": "rgba(16, 185, 129, 0.8)",
     "glowColor": "rgba(16, 185, 129, 0.35)",
     "nodes": [
       "phunhai",
-      "nuicom",
       "lavang",
       "saobiendanang",
       "trakieu",
@@ -1162,10 +1121,6 @@ export const CONSTELLATION_VERSIONS = {
     "segments": [
       [
         "phunhai",
-        "nuicom"
-      ],
-      [
-        "nuicom",
         "lavang"
       ],
       [

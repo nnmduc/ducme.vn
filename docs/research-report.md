@@ -32,7 +32,7 @@
 3. **Phiên bản 3 (Ngũ Giác Đài Miền Nam - 5 Tượng Dinh Điền Ngô Đình Diệm):**
    - Chỉ nối 5 tượng thời Đệ nhất Cộng hòa tạo thành lá chắn ngũ giác bảo bọc cao nguyên và cửa ngõ Nam Bộ.
 4. **Phiên bản 4 (Tuyến Thánh Mẫu Xuyên Việt - Đại Hành Hương):**
-   - Mở rộng tới: Đức Mẹ Núi Cơm (Hà Tĩnh), Phú Nhai (Nam Định), Sao Biển (Đà Nẵng), Núi Cúi (Đồng Nai - tượng cao nhất VN), Bãi Dâu (Vũng Tàu), Fatima Bình Triệu (Sài Gòn), La Mã Bến Tre, Hòn Chông (Kiên Giang).
+   - Mở rộng tới: Phú Nhai (Nam Định), Sao Biển (Đà Nẵng), Núi Cúi (Đồng Nai - tượng cao nhất VN), Bãi Dâu (Vũng Tàu), Fatima Bình Triệu (Sài Gòn), La Mã Bến Tre, Hòn Chông (Kiên Giang).
 
 ## 4. Đánh Giá Khách Quan: Tư Liệu Lịch Sử vs Truyền Thuyết Dân Gian
 * **Tư liệu lịch sử:** Việc đúc 5 pho tượng thời TT Ngô Đình Diệm năm 1959–1961 có hồ sơ lưu trữ xác nhận tại Phủ Tổng ủy Dinh điền, Giáo phận Ban Mê Thuột, Nha Trang, Phan Thiết và KTS Ngô Viết Thụ.
