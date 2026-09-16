@@ -19,7 +19,7 @@ Dung) và quy chuẩn đóng góp tại [`CONTRIBUTING.md`](../CONTRIBUTING.md) 
   CONTRIBUTING.md) nhưng chỉ là kết quả tìm kiếm, không phải một bài viết/trang cụ thể. Nên thay bằng
   liên kết trực tiếp khi tìm được nguồn thật.
 
-## 1. Chưa có ảnh thực địa (6/18 linh địa)
+## 1. Chưa có ảnh thực địa (5/17 linh địa)
 
 Ưu tiên cao nhất theo `CONTRIBUTING.md` mục 2.A. Cần ảnh chụp thật (chính diện tượng + toàn cảnh linh
 đài), giấy phép CC-BY-SA/CC-BY/Public Domain hoặc do người chụp tự nguyện phát hành.
@@ -27,7 +27,6 @@ Dung) và quy chuẩn đóng góp tại [`CONTRIBUTING.md`](../CONTRIBUTING.md) 
 | id | Tên linh địa | Giáo phận | Ghi chú thực địa |
 |---|---|---|---|
 | `honchong` | Đức Mẹ Hòn Chông (Kiên Giang) | GP Long Xuyên | Thắng cảnh du lịch, khả năng có ảnh du khách chụp |
-| `nuicom` | Đức Mẹ Núi Cơm (Hà Tĩnh) | GP Hà Tĩnh | |
 | `phunhai` | Vương Cung Thánh Đường Phú Nhai | GP Bùi Chu | Công trình nổi tiếng, nhiều khả năng đã có ảnh trên Wikimedia Commons — ưu tiên kiểm tra trước khi đi khảo sát thực địa |
 | `saobiendanang` | Đức Mẹ Sao Biển (Đà Nẵng) | GP Đà Nẵng | Bãi biển Mỹ Khê, dễ tiếp cận |
 | `trinhphong` | Đức Mẹ Trinh Phong | GP Nha Trang | Đèo Ngoạn Mục, đã có hành hương trở lại từ 2007 |
@@ -38,9 +37,7 @@ Dung) và quy chuẩn đóng góp tại [`CONTRIBUTING.md`](../CONTRIBUTING.md) 
 Đạt tối thiểu 2 nguồn theo quy định, nhưng **toàn bộ** nguồn đều là link tìm kiếm thay vì bài viết cụ
 thể. Cần thay bằng nguồn trực tiếp (trang giáo phận, báo, kỷ yếu, Wikipedia...).
 
-| id | Tên linh địa | Số nguồn (trực tiếp/tìm kiếm) |
-|---|---|---|
-| `nuicom` | Đức Mẹ Núi Cơm (Hà Tĩnh) | 0/2 |
+Hiện không có linh địa nào thuộc diện này (0/2 nguồn trực tiếp).
 
 Các linh địa sau chỉ có **một** nguồn trực tiếp, nguồn còn lại là link tìm kiếm — nên bổ sung thêm ít
 nhất một nguồn trực tiếp nữa: `phunhai`, `saobiendanang`, `trakieu`, `trinhphong`, `giangson`,
@@ -54,10 +51,9 @@ trong `project-overview-pdr.md` mục 3.
 | Thứ tự | id | Tên linh địa | Số từ ước tính |
 |---|---|---|---|
 | 1 | `baidau` | Đức Mẹ Bãi Dâu | 105 |
-| 2 | `nuicom` | Đức Mẹ Núi Cơm (Hà Tĩnh) | 117 |
-| 3 | `phunhai` | Vương Cung Thánh Đường Phú Nhai | 120 |
-| 4 | `saobiendanang` | Đức Mẹ Sao Biển (Đà Nẵng) | 140 |
-| 5 | `trakieu` | Đức Mẹ Trà Kiệu | 143 |
+| 2 | `phunhai` | Vương Cung Thánh Đường Phú Nhai | 120 |
+| 3 | `saobiendanang` | Đức Mẹ Sao Biển (Đà Nẵng) | 140 |
+| 4 | `trakieu` | Đức Mẹ Trà Kiệu | 143 |
 
 Các linh địa còn lại (166–206 từ): `trinhphong`, `giangson`, `ducbasaigon`, `phuonghoang`, `thacmo`,
 `lavang`, `tapao` — vẫn dưới mốc cạnh tranh ~300 từ nhưng độ ưu tiên thấp hơn.
@@ -67,9 +63,8 @@ Các linh địa còn lại (166–206 từ): `trinhphong`, `giangson`, `ducbasa
 Các linh địa dưới đây thiếu đồng thời cả ba mặt (ảnh, nguồn trực tiếp, nội dung), nên là mục tiêu đóng
 góp có tác động cao nhất:
 
-1. **`nuicom`** — Đức Mẹ Núi Cơm: không ảnh, 0 nguồn trực tiếp, 117 từ.
-2. **`saobiendanang`** — Đức Mẹ Sao Biển: không ảnh, 1 nguồn trực tiếp, 140 từ.
-3. **`phunhai`** — Vương Cung Thánh Đường Phú Nhai: không ảnh, 1 nguồn trực tiếp, 120 từ.
+1. **`saobiendanang`** — Đức Mẹ Sao Biển: không ảnh, 1 nguồn trực tiếp, 140 từ.
+2. **`phunhai`** — Vương Cung Thánh Đường Phú Nhai: không ảnh, 1 nguồn trực tiếp, 120 từ.
 
 ## 5. Đã tương đối đầy đủ (không cần ưu tiên)
 

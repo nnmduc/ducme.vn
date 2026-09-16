@@ -24,7 +24,7 @@ function assert(condition, message) {
 }
 
 console.log(`--- 1. KIỂM TRA BỘ DỮ LIỆU TƯỢNG ĐỨC MẸ (${statues.length} TƯỢNG) ---`);
-const MIN_STATUE_COUNT = 18;
+const MIN_STATUE_COUNT = 17;
 assert(
   Array.isArray(statues) && statues.length >= MIN_STATUE_COUNT,
   `Số lượng tượng phải >= ${MIN_STATUE_COUNT} (hiện có: ${statues.length})`
