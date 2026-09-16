@@ -2,8 +2,8 @@
   "schema": "ducme.quy-trinh/v1",
   "id": "nuicom",
   "started": "2026-09-16T14:45:29.132Z",
-  "updated": "2026-09-16T14:45:32.134Z",
-  "status": "dangchay",
+  "updated": "2026-09-16T14:50:22.178Z",
+  "status": "cannguoiquyet",
   "rounds": 0,
   "maxRounds": 2,
   "fixes": 0,
@@ -12,13 +12,21 @@
     "pr": true
   },
   "steps": [],
-  "decisions": [],
-  "final": {},
-  "pending": {
-    "at": "2026-09-16T14:45:32.134Z",
-    "step": "khaocuu",
-    "mode": "moi",
-    "why": "Chưa có docs/khao-cuu/<id>/khao-cuu.json — khảo cứu từ đầu",
-    "verdict": null
-  }
+  "decisions": [
+    {
+      "at": "2026-09-16T14:45:32.134Z",
+      "step": "khaocuu",
+      "mode": "moi",
+      "why": "Chưa có docs/khao-cuu/<id>/khao-cuu.json — khảo cứu từ đầu",
+      "verdict": null
+    }
+  ],
+  "final": {
+    "status": "cannguoiquyet",
+    "note": "Khong tim duoc bat ky nguon nao xac nhan su ton tai cua linh dia Duc Me Nui Com o Ha Tinh - can nguoi dung xac nhan ten/dia danh chinh xac",
+    "branch": null,
+    "pr": null
+  },
+  "pending": null,
+  "ended": "2026-09-16T14:50:22.178Z"
 }
