@@ -2,8 +2,8 @@
   "schema": "ducme.quy-trinh/v1",
   "id": "nuicui",
   "started": "2026-09-16T14:04:20.399Z",
-  "updated": "2026-09-16T14:19:08.723Z",
-  "status": "dangchay",
+  "updated": "2026-09-16T14:35:29.092Z",
+  "status": "hoanthanh",
   "rounds": 0,
   "maxRounds": 2,
   "fixes": 0,
@@ -20,6 +20,15 @@
       "result": "xong",
       "agent": null,
       "note": "Ket luan AP_DUNG_CO_DIEU_KIEN (35/40) - 5 dieu kien can sua truoc khi trien khai"
+    },
+    {
+      "at": "2026-09-16T14:35:21.713Z",
+      "step": "trienkhai",
+      "mode": null,
+      "round": 0,
+      "result": "xong",
+      "agent": null,
+      "note": "Da trien khai qua PR #16, 459 test PASS, build thanh cong"
     }
   ],
   "decisions": [
@@ -29,14 +38,28 @@
       "mode": "moi",
       "why": "Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng",
       "verdict": null
+    },
+    {
+      "at": "2026-09-16T14:19:08.723Z",
+      "step": "trienkhai",
+      "mode": null,
+      "why": "Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN",
+      "verdict": "AP_DUNG_CO_DIEU_KIEN"
+    },
+    {
+      "at": "2026-09-16T14:35:24.530Z",
+      "step": "ketthuc",
+      "mode": null,
+      "why": "Đã triển khai xong",
+      "verdict": "AP_DUNG_CO_DIEU_KIEN"
     }
   ],
-  "final": {},
-  "pending": {
-    "at": "2026-09-16T14:19:08.723Z",
-    "step": "trienkhai",
-    "mode": null,
-    "why": "Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN",
-    "verdict": "AP_DUNG_CO_DIEU_KIEN"
-  }
+  "final": {
+    "status": "hoanthanh",
+    "note": "Trien khai qua PR #16 (https://github.com/nnmduc/ducme.vn/pull/16), 459 test PASS, build thanh cong",
+    "branch": null,
+    "pr": null
+  },
+  "pending": null,
+  "ended": "2026-09-16T14:35:29.092Z"
 }

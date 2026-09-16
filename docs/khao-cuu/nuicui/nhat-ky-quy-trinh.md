@@ -1,18 +1,20 @@
 # Nhật ký quy trình tự động: Đức Mẹ Núi Cúi
 
-**Kết quả cuối cùng:** Đang chạy
+**Kết quả cuối cùng:** Hoàn thành — nội dung đã lên nhánh / Pull Request
 
 - Mã linh địa: `nuicui`
-- Bắt đầu: 2026-09-16 14:04 · Kết thúc: — · Tổng: 15 phút
+- Bắt đầu: 2026-09-16 14:04 · Kết thúc: 2026-09-16 14:35 · Tổng: 31 phút
 - Số vòng khảo cứu đã chạy: 0 / tối đa 2
 - Số lần sửa lược đồ: 0 / tối đa 2
 - Tạo Pull Request: có
+- Ghi chú: Trien khai qua PR #16 (https://github.com/nnmduc/ducme.vn/pull/16), 459 test PASS, build thanh cong
 
 ## 1. Các bước đã chạy
 
 | Thời điểm | Bước | Chế độ | Vòng | Kết quả | Ghi chú |
 |---|---|---|---|---|---|
 | 2026-09-16 14:19 | Kiểm chứng | làm mới từ đầu | 0 | xong | Ket luan AP_DUNG_CO_DIEU_KIEN (35/40) - 5 dieu kien can sua truoc khi trien khai |
+| 2026-09-16 14:35 | Triển khai | — | 0 | xong | Da trien khai qua PR #16, 459 test PASS, build thanh cong |
 
 
 ## 2. Các điểm rẽ nhánh
@@ -23,6 +25,8 @@ kế tiếp, và bước đó đã chạy xong. Quyết định chưa thi hành 
 | Thời điểm | Chọn bước | Chế độ | Kết luận kiểm chứng | Lý do |
 |---|---|---|---|---|
 | 2026-09-16 14:04 | Kiểm chứng | làm mới từ đầu | — | Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng |
+| 2026-09-16 14:19 | Triển khai | — | ÁP DỤNG CÓ ĐIỀU KIỆN | Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN |
+| 2026-09-16 14:35 | Kết thúc | — | ÁP DỤNG CÓ ĐIỀU KIỆN | Đã triển khai xong |
 
 
 ## 3. Hồ sơ sinh ra
@@ -63,7 +67,8 @@ kế tiếp, và bước đó đã chạy xong. Quyết định chưa thi hành 
 
 ## 6. Việc còn lại cho người đọc
 
-Lượt chạy chưa kết thúc.
+Không còn việc bắt buộc. Người duyệt Pull Request vẫn nên đọc báo cáo kiểm chứng trước khi merge —
+bộ điều phối không bao giờ tự merge.
 
 ---
 
