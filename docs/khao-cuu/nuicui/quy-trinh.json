@@ -1,0 +1,24 @@
+{
+  "schema": "ducme.quy-trinh/v1",
+  "id": "nuicui",
+  "started": "2026-09-16T14:04:20.399Z",
+  "updated": "2026-09-16T14:04:22.969Z",
+  "status": "dangchay",
+  "rounds": 0,
+  "maxRounds": 2,
+  "fixes": 0,
+  "maxFixes": 2,
+  "options": {
+    "pr": true
+  },
+  "steps": [],
+  "decisions": [],
+  "final": {},
+  "pending": {
+    "at": "2026-09-16T14:04:22.969Z",
+    "step": "kiemchung",
+    "mode": "moi",
+    "why": "Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng",
+    "verdict": null
+  }
+}
