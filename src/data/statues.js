@@ -442,10 +442,10 @@ export const MARIAN_STATUES_DATA = [
     "id": "nuicui",
     "name": "Đức Mẹ Núi Cúi",
     "title": "Trung Tâm Hành Hương Đức Mẹ Núi Cúi - Mẹ Vô Nhiễm Hồ Trị An",
-    "year": 2020,
-    "lat": 11.0428,
-    "lng": 107.1511,
-    "elevation": "120m",
+    "year": 2014,
+    "lat": 11.0855,
+    "lng": 107.1548,
+    "elevation": "176m (chưa xác minh chắc chắn, xem note)",
     "location": "Xã Gia Tân 1, huyện Thống Nhất, tỉnh Đồng Nai",
     "region": "Đông Nam Bộ",
     "diocese": "Giáo phận Xuân Lộc",
@@ -460,25 +460,81 @@ export const MARIAN_STATUES_DATA = [
         "code": "NAT-09"
       }
     },
-    "historicalFact": "Khởi công xây dựng năm 2018 và khánh thành tượng đài năm 2020 dưới sự chủ trì của Đức Giám mục Giuse Đinh Đức Đạo (Giáo phận Xuân Lộc). Tượng Đức Mẹ Vô Nhiễm cao 33m (tổng công trình cao 50m bao gồm khối đế), hiện là tượng Đức Mẹ cao nhất Việt Nam, tọa lạc trên đỉnh đồi Núi Cúi nhìn thẳng ra lòng hồ Trị An bao la.",
-    "oralTradition": "Tên gọi 'Núi Cúi' mang thông điệp người tín hữu cúi mình tôn phục trước nhan Thiên Chúa và tìm về sự khiêm nhường bình an.",
-    "architect": "Kiến trúc điêu khắc bê tông cốt thép hiện đại quy mô kỷ lục, quảng trường rộng lớn bên mặt nước hồ thủy điện.",
-    "significance": "Trung tâm hành hương lớn bậc nhất của Giáo hội Việt Nam thế kỷ 21.",
-    "realImage": null,
-    "realImageCaption": null,
-    "galleryImages": [],
+    "historicalFact": "Tháng 11/2013, Đức cha Đaminh Nguyễn Chu Trinh (Giám mục Giáo phận Xuân Lộc) công bố ý định xây một trung tâm hành hương kính Đức Mẹ; kế hoạch ban đầu đặt tại xứ Russeykeo (giáo xứ ở Suối Cát, huyện Xuân Lộc, Đồng Nai) không thực hiện được vì đất nằm trong vành đai quốc phòng. Nhân dịp thăm giáo xứ Dốc Mơ (giáo hạt Gia Kiệm) Tết 2014, ngài chọn ngọn đồi bên hồ Trị An và đặt tên là Núi Cát Minh. Ngày 13/3/2014, UBND tỉnh Đồng Nai chấp thuận cho Tòa Giám mục Xuân Lộc thành lập Trung tâm Hành hương, cấp 13,5 ha trong tổng số đất đã sang nhượng để xây dựng. Lễ đặt viên đá đầu tiên cử hành ngày 18/9/2015 với khoảng 50.000 giáo dân, 500 linh mục, 30 giám mục và Hồng y Phêrô Nguyễn Văn Nhơn tham dự; Nhà Nguyện Thánh Thể hoàn thành ngay sau đó bằng kinh phí đóng góp của các linh mục trong giáo phận. Sáng 15/8/2018, Đức cha Giuse Đinh Đức Đạo làm phép khu đất và chính thức khởi công xây dựng Tượng Đài Đức Mẹ, Đền Thánh và các hạng mục chính (khoảng 17.000 người dự lễ). Phần tượng đài chính — do kiến trúc sư Ngô Viết Nam Sơn thiết kế, mô phỏng theo mẫu tượng Đức Mẹ được cho là vớt lên từ sông Mekong (hiện đặt tại xã Arey Khsath, Campuchia) — được công ty Vĩnh Cửu thi công bằng công nghệ CNC kết hợp bê tông cốt sợi thủy tinh (GRC), khởi công khoảng tháng 10/2020 và hoàn thành tháng 12/2021. Tượng cao 33m (thân tượng rộng nhất 9,5m) đặt trên đế ba tầng cao tổng cộng 17m (đường kính lớn nhất 66m), tổng chiều cao công trình 50m — hiện là tượng Đức Mẹ cao nhất Việt Nam. Ba con số mang ý nghĩa biểu tượng: 17m là tuổi Đức Mẹ khi thưa 'Xin Vâng', 33m là số năm tại thế của Chúa Giêsu, 50m kỷ niệm 50 năm thành lập Giáo phận Xuân Lộc (1965–2015). Trung tâm mở cửa đón khách hành hương từ mùng 2 Tết Nhâm Dần (2/2/2022) dù một số hạng mục còn dở dang; hệ thống chiếu sáng nghệ thuật hoàn thành ngày 22/7/2022. Quảng trường có sức chứa hơn 100.000 người, được xem là trung tâm hành hương Công giáo lớn nhất Việt Nam.",
+    "oralTradition": "Theo cách giải thích được các trang giới thiệu và giáo phận phổ biến, 'Núi Cúi' không phải là địa danh có sẵn mà là tên do chính Đức cha Đaminh và cộng đoàn tín hữu đặt cho ngọn đồi, mang thông điệp hai chiều: từ trời cao Đức Mẹ cúi xuống nhìn xem, lắng nghe và đón nhận lời cầu xin của đoàn con — nhất là những ai đang mang gánh nặng bệnh tật, tội lỗi và lo toan cuộc sống; đáp lại, đoàn con cúi đầu tôn phục và phó thác nơi Mẹ. Tên gọi chính thức ban đầu Đức cha đặt cho ngọn núi là 'Núi Cát Minh'. Tương truyền, một người từng lên thăm khu vực này khi công trình còn ở giai đoạn đầu (mới chỉ có một tượng tạm, phỏng theo mẫu Đức Mẹ Cửu Long) thuật lại lời một cụ ông trông coi khu đất, mô tả viễn cảnh một pho tượng Mẹ cao lớn nhìn xuống đàn con đang chới với giữa biển đời, kiếm tìm sự chở che của Mẹ — hình dung này về sau ứng với chính pho tượng cao 50m hiện tại. Trung tâm cũng lưu truyền một số chứng từ ơn lành hiện đại: một cháu bé mắc bệnh xơ nang được cứu sống, một người bệnh tim bẩm sinh 57 năm được cho là đã hồi phục, và một số bệnh nhân Covid-19 được ghi nhận khỏi bệnh sau khi cầu khấn tại đây — đây đều là chứng từ cá nhân được các trang hành hương thuật lại, chưa qua xác minh của giáo quyền.",
+    "architect": "Kiến trúc sư Ngô Viết Nam Sơn (con trai kiến trúc sư Ngô Viết Thụ, người thiết kế Dinh Độc Lập) thực hiện thiết kế quần thể. Tượng Đức Mẹ cao 33m, đặt trên khối đế ba tầng cao tổng cộng 17m (tầng lớn nhất đường kính 66m cao 7m, tầng giữa đường kính 19,5m cao 5m), tổng công trình cao 50m. Công ty Vĩnh Cửu thi công phần tượng bằng công nghệ CNC kết hợp bê tông cốt sợi thủy tinh (GRC) — vật liệu cho phép tạo hình chi tiết và bề mặt sáng bóng khi có ánh sáng chiếu vào — khởi công khoảng tháng 10/2020, hoàn thành tháng 12/2021. Khối đế được chạm khắc hình các thánh và tiên tri; quần thể còn có Đền Thánh - Nhà Đa Năng sức chứa khoảng 5.000 người với 12 nhà nguyện nhỏ kính Đức Mẹ theo các nơi hành hương khác nhau trên thế giới, Nhà Nguyện Thánh Thể kiểu nhà rông 400 chỗ, và một Đường Thánh Giá 365 bậc với 14 chặng đàng.",
+    "significance": "Trung tâm hành hương Công giáo lớn nhất Việt Nam, quảng trường sức chứa hơn 100.000 người. Nơi tôn kính Đức Mẹ dưới ba tước hiệu: Mẹ Vô Nhiễm Nguyên Tội, Nữ Vương Các Thánh Tử Đạo Việt Nam, và Mẹ Lòng Thương Xót — đồng thời là nơi đền tạ cho tội ác hủy hoại sự sống, đặc biệt tội phá thai và chiến tranh. Lễ kính chính vào ngày 8/12 hằng năm (lễ Đức Mẹ Vô Nhiễm Nguyên Tội). Tổng Giám mục Leopoldo Girelli (nguyên Đại diện Tòa Thánh không thường trú tại Việt Nam) từng gọi nơi đây là 'linh địa hiếm có'.",
+    "realImage": "assets/real_photos/nuicui.jpg",
+    "realImageCaption": "Tượng Đức Mẹ Núi Cúi, Thống Nhất, Đồng Nai (Nguồn: Wikimedia Commons, tác giả Theodor, giấy phép CC BY-SA 4.0, chụp 2024)",
+    "galleryImages": [
+      {
+        "image": "assets/real_photos/nuicui-2.jpg",
+        "caption": "Tượng Đức Mẹ Núi Cúi, góc chụp khác (Nguồn: Wikimedia Commons, tác giả Theodor, giấy phép CC BY-SA 4.0, chụp 2024)"
+      },
+      {
+        "image": "assets/real_photos/nuicui-3.jpg",
+        "caption": "Cận cảnh tượng Đức Mẹ Núi Cúi (Nguồn: Wikimedia Commons, tác giả Theodor, giấy phép CC BY-SA 4.0, chụp 2024)"
+      },
+      {
+        "image": "assets/real_photos/nuicui-4.jpg",
+        "caption": "Toàn cảnh khu vực tượng Đức Mẹ Núi Cúi (Nguồn: Wikimedia Commons, tác giả Theodor, giấy phép CC BY-SA 4.0, chụp 2024)"
+      }
+    ],
     "sources": [
           {
-                "title": "Trung tâm Hành hương Đức Mẹ Núi Cúi - GP Xuân Lộc",
-                "url": "https://www.google.com/search?q=site:giaophanxuanloc.net+\"Núi+Cúi\""
+                "title": "TTHH Đức Mẹ Núi Cúi - Giáo phận Xuân Lộc",
+                "url": "https://giaophanxuanloc.net/chi-tiet/tthh-duc-me-nui-cui",
+                "tier": "B"
           },
           {
-                "title": "Tượng Đức Mẹ cao nhất Việt Nam - Báo Lao Động",
-                "url": "https://www.google.com/search?q=site:laodong.vn+\"Đức+Mẹ+Núi+Cúi\""
+                "title": "Trung tâm hành hương Đức Mẹ Núi Cúi - Wikipedia tiếng Việt",
+                "url": "https://vi.wikipedia.org/wiki/Trung_tâm_hành_hương_Đức_Mẹ_Núi_Cúi",
+                "tier": "B"
           },
           {
-                "title": "Khảo cứu công trình Trung tâm Đức Mẹ Núi Cúi",
-                "url": "https://www.google.com/search?q=\"Đức+Mẹ+Núi+Cúi\"+Giáo+phận+Xuân+Lộc"
+                "title": "Thánh lễ xây dựng Trung tâm Đức Mẹ Núi Cúi - HĐGM Việt Nam",
+                "url": "https://hdgmvietnam.com/chi-tiet/thanh-le-xay-dung-trung-tam-duc-me-nui-cui-34127",
+                "tier": "B"
+          },
+          {
+                "title": "Công trình trung tâm Đức Mẹ Núi Cúi - Báo Công giáo và Dân tộc",
+                "url": "https://cgvdt.vn/cong-trinh-trung-tam-uc-me-nui-cui_a14547",
+                "tier": "B"
+          },
+          {
+                "title": "Núi Cúi đã có tượng Đức Mẹ - Báo Công giáo và Dân tộc",
+                "url": "https://www.cgvdt.vn/cong-giao-viet-nam/nui-cui-da-co-tuong-duc-me_a1978",
+                "tier": "B"
+          },
+          {
+                "title": "Trung tâm hành hương Đức Mẹ Núi Cúi đón hàng ngàn lượt khách mỗi ngày dịp Tết - Thanh Niên",
+                "url": "https://thanhnien.vn/trung-tam-hanh-huong-duc-me-nui-cui-don-hang-ngan-luot-khach-moi-ngay-dip-tet-1851426967.htm",
+                "tier": "B"
+          },
+          {
+                "title": "Tượng Đức Mẹ Maria cao nhất Việt Nam trên đỉnh Núi Cúi, Đồng Nai - Znews",
+                "url": "https://znews.vn/tuong-duc-me-maria-cao-nhat-viet-nam-tren-dinh-nui-cui-dong-nai-post1290989.html",
+                "tier": "B"
+          },
+          {
+                "title": "Hành hương Đức Mẹ Núi Cúi, điểm đến tâm linh ngay tại Đồng Nai - Mia.vn",
+                "url": "https://mia.vn/cam-nang-du-lich/hanh-huong-duc-me-nui-cui-16038",
+                "tier": "C"
+          },
+          {
+                "title": "Dự án - Tượng Đức Mẹ Núi Cúi cao nhất Việt Nam - Vĩnh Cửu GRC",
+                "url": "https://vinhcuu.vn/du-an/du-an-tuong-duc-me-nui-cui-cao-nhat-viet-nam/",
+                "tier": "C"
+          },
+          {
+                "title": "HÀNH HƯƠNG ĐỨC MẸ NÚI CÚI - Bùi Công Thuấn",
+                "url": "https://buicongthuan.com/hanh-huong-duc-me-nui-cui-bui-cong-thuan/",
+                "tier": "C"
+          },
+          {
+                "title": "Núi Cúi về giữa thiên nhiên - Giáo phận Phú Cường",
+                "url": "https://giaophanphucuong.org/bai-viet/tan-man---do-day/nui-cui-ve-giua-thien-nhien",
+                "tier": "C"
           }
     ]
   },
