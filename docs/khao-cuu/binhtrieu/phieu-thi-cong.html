@@ -85,7 +85,7 @@ footer.doc{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);
 </header>
 <main>
 <h1>Phiếu thi công: Đức Mẹ Fatima Bình Triệu</h1>
-<blockquote><p><strong>ÁP DỤNG</strong> — 35/35</p>
+<blockquote><p><strong>ÁP DỤNG</strong> — 39/40</p>
 <p>Được phép triển khai theo đúng phạm vi dưới đây.</p></blockquote>
 <ul><li><strong>Mã linh địa</strong>: <code>binhtrieu</code></li><li><strong>Hồ sơ khảo cứu</strong>: <code>docs/khao-cuu/binhtrieu/khao-cuu.json</code></li><li><strong>Hồ sơ kiểm chứng</strong>: <code>docs/khao-cuu/binhtrieu/kiem-chung.json</code></li><li><strong>Nhánh đề nghị</strong>: <code>data/bo-sung-tu-lieu-binhtrieu</code></li></ul>
 <h2>1. Trường được phép sửa</h2>
@@ -126,19 +126,22 @@ footer.doc{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);
   }
 ]</code></pre>
 <h2>3. Nguồn đưa vào dữ liệu</h2>
-<div class="table-wrap"><table><thead><tr><th>Tiêu đề</th><th>URL</th></tr></thead><tbody><tr><td>Dấu ấn của Trung tâm hành hương Fatima Bình Triệu - Báo Công giáo và Dân tộc</td><td><a href="https://www.cgvdt.vn/cong-giao-viet-nam/dau-an-cua-trung-tam-hanh-huong-fatima-binh-trieu_a4688">liên kết</a></td></tr><tr><td>Tổng Giáo phận Sài Gòn - TP.HCM: Trung tâm hành hương Đức Mẹ Fatima Bình Triệu - HĐGMVN</td><td><a href="https://hdgmvietnam.com/chi-tiet/tgp-sai-gon-tp-hcm-31504">liên kết</a></td></tr><tr><td>Hành hương Đức Mẹ Fatima Bình Triệu - Tổng Giáo phận Sài Gòn</td><td><a href="https://tgpsaigon.net/bai-viet/hanh-huong-duc-me-fatima-binh-trieu-67351">liên kết</a></td></tr><tr><td>Hành hương cùng Mẹ Maria tại Nhà thờ Fatima Bình Triệu: Nơi hy vọng được khơi nguồn - TGP Sài Gòn</td><td><a href="https://tgpsaigon.net/bai-viet/hanh-huong-cung-me-maria-tai-nha-tho-fatima-binh-trieu-noi-hy-vong-duoc-khoi-nguon-tu-long-thuong-xot-82294">liên kết</a></td></tr></tbody></table></div>
+<p>Chép cả <code>tier</code> vào từng phần tử <code>sources</code> của bản ghi — trang chi tiết dùng nó để hiện nhãn cấp nguồn.</p>
+<div class="table-wrap"><table><thead><tr><th>Tiêu đề</th><th>URL</th><th>Cấp</th></tr></thead><tbody><tr><td>Dấu ấn của Trung tâm hành hương Fatima Bình Triệu - Báo Công giáo và Dân tộc</td><td><a href="https://www.cgvdt.vn/cong-giao-viet-nam/dau-an-cua-trung-tam-hanh-huong-fatima-binh-trieu_a4688">liên kết</a></td><td>B</td></tr><tr><td>Tổng Giáo phận Sài Gòn - TP.HCM: Trung tâm hành hương Đức Mẹ Fatima Bình Triệu - HĐGMVN</td><td><a href="https://hdgmvietnam.com/chi-tiet/tgp-sai-gon-tp-hcm-31504">liên kết</a></td><td>B</td></tr><tr><td>Hành hương Đức Mẹ Fatima Bình Triệu - Tổng Giáo phận Sài Gòn</td><td><a href="https://tgpsaigon.net/bai-viet/hanh-huong-duc-me-fatima-binh-trieu-67351">liên kết</a></td><td>B</td></tr><tr><td>Hành hương cùng Mẹ Maria tại Nhà thờ Fatima Bình Triệu: Nơi hy vọng được khơi nguồn - TGP Sài Gòn</td><td><a href="https://tgpsaigon.net/bai-viet/hanh-huong-cung-me-maria-tai-nha-tho-fatima-binh-trieu-noi-hy-vong-duoc-khoi-nguon-tu-long-thuong-xot-82294">liên kết</a></td><td>B</td></tr></tbody></table></div>
 <h2>4. Hình ảnh</h2>
 <h3>4a. Ảnh chính (<code>realImage</code>)</h3>
 <div class="table-wrap"><table><thead><tr><th>File</th><th>Giấy phép (nếu biết)</th><th>Tác giả</th><th><code>realImageCaption</code></th></tr></thead><tbody><tr><td><code>src/assets/real_photos/binhtrieu.jpg</code></td><td>CC BY-SA 4.0</td><td>Daovantuan.thuduc</td><td>Toàn cảnh thánh đường và khuôn viên Trung tâm Hành hương Fatima Bình Triệu, TP. Thủ Đức (Nguồn: Wikimedia Commons, tác giả Daovantuan.thuduc, giấy phép CC BY-SA 4.0, chụp 2023)</td></tr></tbody></table></div>
 <h3>4b. Ảnh phụ (<code>galleryImages</code>)</h3>
 <div class="table-wrap"><table><thead><tr><th>File</th><th>Giấy phép (nếu biết)</th><th>Tác giả</th><th><code>galleryImages[].caption</code></th></tr></thead><tbody><tr><td><code>src/assets/real_photos/binhtrieu-2.jpg</code></td><td>—</td><td>Võ Quới / Báo Công giáo và Dân tộc</td><td>Tượng Đức Mẹ Fatima và giáo dân kính viếng tại đền Đức Mẹ Bình Triệu (Nguồn: Báo Công giáo và Dân tộc, bài 'Dấu ấn của Trung tâm hành hương Fatima Bình Triệu', tác giả Võ Quới, đăng 2017)</td></tr><tr><td><code>src/assets/real_photos/binhtrieu-3.jpg</code></td><td>CC BY-SA 4.0</td><td>Buiminhthac</td><td>Tháp chuông cao 30m xây năm 1966 của Trung tâm Fatima Bình Triệu cũ trong khuôn viên ĐH Luật TP.HCM (Nguồn: Wikimedia Commons, tác giả Buiminhthac, giấy phép CC BY-SA 4.0, chụp 2024)</td></tr></tbody></table></div>
-<h2>5. Chòm sao</h2>
+<h2>5. Chuyện kể được duyệt cho <code>oralTradition</code></h2>
+<p>Không có chuyện kể nào được duyệt — viết <code>oralTradition</code> theo đúng đề xuất ở mục 1, không thêm giai thoại nào khác.</p>
+<h2>6. Chòm sao</h2>
 <p><code>CONSTELLATION_VERSIONS</code> <strong>không được</strong> sửa. Giữ nguyên <code>constellationRole</code> như bản ghi hiện có.</p>
-<h2>6. Việc bắt buộc sau khi sửa dữ liệu</h2>
+<h2>7. Việc bắt buộc sau khi sửa dữ liệu</h2>
 <ul><li class="task todo"><span class="box" aria-hidden="true">○</span><code>node .agents/skills/marian-publish/scripts/validate-record.mjs &lt;file record&gt; --allow-existing-id</code> — hết lỗi chặn</li><li class="task todo"><span class="box" aria-hidden="true">○</span><code>npm test</code> — toàn bộ PASS, 0 FAIL</li><li class="task todo"><span class="box" aria-hidden="true">○</span><code>npm run build</code> — dựng thành công</li><li class="task todo"><span class="box" aria-hidden="true">○</span>Cập nhật <code>docs/marian-sites-missing-info.md</code></li><li class="task todo"><span class="box" aria-hidden="true">○</span>Cập nhật số assertion <code>npm test</code> ở README và tài liệu nếu con số thay đổi</li><li class="task todo"><span class="box" aria-hidden="true">○</span>Commit kèm cả <code>docs/khao-cuu/binhtrieu/</code></li></ul>
 <h3>Ảnh hưởng hệ thống theo báo cáo kiểm chứng</h3>
 <div class="table-wrap"><table><thead><tr><th>Mục</th><th>Ảnh hưởng</th></tr></thead><tbody><tr><td>Số lượng linh địa</td><td>không đổi (cập nhật bản ghi hiện có 'binhtrieu')</td></tr><tr><td>CONSTELLATION_VERSIONS</td><td>không đổi</td></tr><tr><td>Số assertion npm test</td><td>384 → 397 (+13 assertions: +6 do thay 2 nguồn bằng 4 bài viết trực tiếp, +1 do realImage, +6 do 2 ảnh phụ galleryImages)</td></tr><tr><td>Ảnh thực địa</td><td>Bổ sung 1 ảnh chính realImage (mặt tiền thánh đường) và 2 ảnh phụ galleryImages (tượng Mẹ trong đền, tháp chuông 30m năm 1966)</td></tr><tr><td>Độ lệch toạ độ</td><td>Khắc phục sai lệch 903m (từ 10.8251, 106.7176 sang 10.8291, 106.7104), định vị chuẩn xác khuôn viên nhà thờ theo OSM</td></tr><tr><td>Độ dài văn xuôi</td><td>122 từ → 586 từ (đạt chuẩn &gt;300 từ)</td></tr><tr><td>Tài liệu phải cập nhật</td><td>docs/marian-sites-missing-info.md</td></tr></tbody></table></div>
-<h2>7. Bản ghi đầy đủ sau khi áp dụng</h2>
+<h2>8. Bản ghi đầy đủ sau khi áp dụng</h2>
 <p>Chỉ dùng các trường đã duyệt ở mục 1. Bản ghi dưới đây là bản đề xuất nguyên vẹn của khảo cứu — đối chiếu, đừng chép nguyên khối.</p>
 <pre class="code" data-lang="json"><code>{
   "id": "binhtrieu",

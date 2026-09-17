@@ -623,19 +623,23 @@ export const MARIAN_STATUES_DATA = [
     "sources": [
           {
                 "title": "Dấu ấn của Trung tâm hành hương Fatima Bình Triệu - Báo Công giáo và Dân tộc",
-                "url": "https://www.cgvdt.vn/cong-giao-viet-nam/dau-an-cua-trung-tam-hanh-huong-fatima-binh-trieu_a4688"
+                "url": "https://www.cgvdt.vn/cong-giao-viet-nam/dau-an-cua-trung-tam-hanh-huong-fatima-binh-trieu_a4688",
+                "tier": "B"
           },
           {
                 "title": "Tổng Giáo phận Sài Gòn - TP.HCM: Trung tâm hành hương Đức Mẹ Fatima Bình Triệu - HĐGMVN",
-                "url": "https://hdgmvietnam.com/chi-tiet/tgp-sai-gon-tp-hcm-31504"
+                "url": "https://hdgmvietnam.com/chi-tiet/tgp-sai-gon-tp-hcm-31504",
+                "tier": "B"
           },
           {
                 "title": "Hành hương Đức Mẹ Fatima Bình Triệu - Tổng Giáo phận Sài Gòn",
-                "url": "https://tgpsaigon.net/bai-viet/hanh-huong-duc-me-fatima-binh-trieu-67351"
+                "url": "https://tgpsaigon.net/bai-viet/hanh-huong-duc-me-fatima-binh-trieu-67351",
+                "tier": "B"
           },
           {
                 "title": "Hành hương cùng Mẹ Maria tại Nhà thờ Fatima Bình Triệu: Nơi hy vọng được khơi nguồn - TGP Sài Gòn",
-                "url": "https://tgpsaigon.net/bai-viet/hanh-huong-cung-me-maria-tai-nha-tho-fatima-binh-trieu-noi-hy-vong-duoc-khoi-nguon-tu-long-thuong-xot-82294"
+                "url": "https://tgpsaigon.net/bai-viet/hanh-huong-cung-me-maria-tai-nha-tho-fatima-binh-trieu-noi-hy-vong-duoc-khoi-nguon-tu-long-thuong-xot-82294",
+                "tier": "B"
           }
     ]
   },
