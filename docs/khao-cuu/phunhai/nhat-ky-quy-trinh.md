@@ -1,9 +1,9 @@
 # Nhật ký quy trình tự động: Vương Cung Thánh Đường Phú Nhai
 
-**Kết quả cuối cùng:** Đang chạy
+**Kết quả cuối cùng:** Hoàn thành — nội dung đã lên nhánh / Pull Request
 
 - Mã linh địa: `phunhai`
-- Bắt đầu: 2026-09-24 06:42 · Kết thúc: — · Tổng: 20 phút
+- Bắt đầu: 2026-09-24 06:42 · Kết thúc: 2026-09-24 07:08 · Tổng: 26 phút
 - Số vòng khảo cứu đã chạy: 1 / tối đa 2
 - Số lần sửa lược đồ: 0 / tối đa 2
 - Tạo Pull Request: có
@@ -14,6 +14,7 @@
 |---|---|---|---|---|---|
 | 2026-09-24 06:53 | Khảo cứu | làm mới từ đầu | 1 | xong | 16 nguon, 4 chuyen ke, 3 anh de xuat; sua toa do, ngay phong, title |
 | 2026-09-24 07:02 | Kiểm chứng | làm mới từ đầu | 1 | xong | AP_DUNG_CO_DIEU_KIEN 33/40; 2 loi trich nguon phai sua |
+| 2026-09-24 07:08 | Triển khai | — | 1 | xong | commit 2665f5c, PR nnmduc/ducme.vn#18, 457 PASS |
 
 
 ## 2. Các điểm rẽ nhánh
@@ -25,6 +26,8 @@ kế tiếp, và bước đó đã chạy xong. Quyết định chưa thi hành 
 |---|---|---|---|---|
 | 2026-09-24 06:42 | Khảo cứu | làm mới từ đầu | — | Chưa có docs/khao-cuu/<id>/khao-cuu.json — khảo cứu từ đầu |
 | 2026-09-24 06:53 | Kiểm chứng | làm mới từ đầu | — | Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng |
+| 2026-09-24 07:02 | Triển khai | — | ÁP DỤNG CÓ ĐIỀU KIỆN | Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN |
+| 2026-09-24 07:08 | Kết thúc | — | ÁP DỤNG CÓ ĐIỀU KIỆN | Đã triển khai xong |
 
 
 ## 3. Hồ sơ sinh ra
@@ -71,7 +74,8 @@ kế tiếp, và bước đó đã chạy xong. Quyết định chưa thi hành 
 
 ## 6. Việc còn lại cho người đọc
 
-Lượt chạy chưa kết thúc.
+Không còn việc bắt buộc. Người duyệt Pull Request vẫn nên đọc báo cáo kiểm chứng trước khi merge —
+bộ điều phối không bao giờ tự merge.
 
 ---
 
