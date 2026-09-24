@@ -3,7 +3,7 @@
 **Kết quả cuối cùng:** Đang chạy
 
 - Mã linh địa: `honchong`
-- Bắt đầu: 2026-09-24 14:50 · Kết thúc: — · Tổng: 25 phút
+- Bắt đầu: 2026-09-24 14:50 · Kết thúc: — · Tổng: 40 phút
 - Số vòng khảo cứu đã chạy: 1 / tối đa 2
 - Số lần sửa lược đồ: 0 / tối đa 2
 - Tạo Pull Request: có
@@ -13,6 +13,8 @@
 | Thời điểm | Bước | Chế độ | Vòng | Kết quả | Ghi chú |
 |---|---|---|---|---|---|
 | 2026-09-24 15:15 | Khảo cứu | làm mới từ đầu | 1 | xong | Vong 1 cap nhat: 20 nguon (13 A/B), 4 truyen tung, 3 anh de xuat (thap chuong/phe tich, chua co anh tuong >=1000px) |
+| 2026-09-24 15:30 | Kiểm chứng | làm mới từ đầu | 1 | xong | AP_DUNG_CO_DIEU_KIEN 32/40, 8 dieu kien; anh chinh la thap chuong vi chua co anh tuong >=1000px |
+| 2026-09-24 15:30 | Lưu trữ hồ sơ cũ | — | 1 | xong | kiem-chung.json -> kiem-chung.vong1.json, bao-cao-kiem-chung.md -> bao-cao-kiem-chung.vong1.md, bao-cao-kiem-chung.html -> bao-cao-kiem-chung.vong1.html |
 
 
 ## 2. Các điểm rẽ nhánh
@@ -23,6 +25,7 @@ kế tiếp, và bước đó đã chạy xong. Quyết định chưa thi hành 
 | Thời điểm | Chọn bước | Chế độ | Kết luận kiểm chứng | Lý do |
 |---|---|---|---|---|
 | 2026-09-24 14:50 | Khảo cứu | làm mới từ đầu | — | Chưa có docs/khao-cuu/<id>/khao-cuu.json — khảo cứu từ đầu |
+| 2026-09-24 15:15 | Kiểm chứng | làm mới từ đầu | — | Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng |
 
 
 ## 3. Hồ sơ sinh ra
@@ -35,6 +38,9 @@ kế tiếp, và bước đó đã chạy xong. Quyết định chưa thi hành 
 | bao-cao-kiem-chung.md | báo cáo kiểm chứng | không |
 | phieu-thi-cong.md | phiếu thi công cho triển khai | không |
 | quy-trinh.json | trạng thái lượt chạy (bản gốc của trang này) | có |
+| bao-cao-kiem-chung.vong1.html | hồ sơ kiểm chứng của vòng trước (lưu trữ) | có |
+| bao-cao-kiem-chung.vong1.md | hồ sơ kiểm chứng của vòng trước (lưu trữ) | có |
+| kiem-chung.vong1.json | hồ sơ kiểm chứng của vòng trước (lưu trữ) | có |
 
 
 ## 4. Tóm tắt khảo cứu
