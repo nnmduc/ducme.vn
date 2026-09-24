@@ -19,14 +19,13 @@ Dung) và quy chuẩn đóng góp tại [`CONTRIBUTING.md`](../CONTRIBUTING.md) 
   CONTRIBUTING.md) nhưng chỉ là kết quả tìm kiếm, không phải một bài viết/trang cụ thể. Nên thay bằng
   liên kết trực tiếp khi tìm được nguồn thật.
 
-## 1. Chưa có ảnh thực địa (4/17 linh địa)
+## 1. Chưa có ảnh thực địa (3/17 linh địa)
 
 Ưu tiên cao nhất theo `CONTRIBUTING.md` mục 2.A. Cần ảnh chụp thật (chính diện tượng + toàn cảnh linh
 đài), giấy phép CC-BY-SA/CC-BY/Public Domain hoặc do người chụp tự nguyện phát hành.
 
 | id | Tên linh địa | Giáo phận | Ghi chú thực địa |
 |---|---|---|---|
-| `honchong` | Đức Mẹ Hòn Chông (Kiên Giang) | GP Long Xuyên | Thắng cảnh du lịch, khả năng có ảnh du khách chụp |
 | `saobiendanang` | Đức Mẹ Sao Biển (Đà Nẵng) | GP Đà Nẵng | Bãi biển Mỹ Khê, dễ tiếp cận |
 | `trinhphong` | Đức Mẹ Trinh Phong | GP Nha Trang | Đèo Ngoạn Mục, đã có hành hương trở lại từ 2007 |
 | `phuonghoang` | Đức Mẹ Phượng Hoàng | GP Kon Tum | Vị trí hẻo lánh trên núi biên giới — khó khảo sát nhất trong danh sách |
@@ -66,7 +65,7 @@ góp có tác động cao nhất:
 ## 5. Đã tương đối đầy đủ (không cần ưu tiên)
 
 Có ảnh thực địa và ≥2 nguồn, kể cả khi vẫn còn mỏng: `lavang`, `mangden`, `giangson`, `thacmo`,
-`tapao`, `ducbasaigon`, `fatimavinhlong`, `binhtrieu`, `lama`, `nuicui`, `phunhai` (ảnh chính + 2 ảnh phụ Wikimedia Commons, 4 nguồn trực tiếp, khoảng 750 từ). Vẫn hoan nghênh bổ sung nếu có tư liệu mới, nhưng không phải
+`tapao`, `ducbasaigon`, `fatimavinhlong`, `binhtrieu`, `lama`, `nuicui`, `phunhai` (ảnh chính + 2 ảnh phụ Wikimedia Commons, 4 nguồn trực tiếp, khoảng 750 từ), `honchong` (ảnh chính chụp tượng năm 2012 + 3 ảnh phụ Flickr, 6 nguồn trực tiếp có cấp nguồn, khoảng 1.280 từ; ảnh chính chỉ 800x600, dùng theo ngoại lệ 800px tạm thời của chủ dự án — nên thay bằng ảnh tượng ≥1000px khi tìm được). Vẫn hoan nghênh bổ sung nếu có tư liệu mới, nhưng không phải
 việc cấp thiết.
 
 ---
