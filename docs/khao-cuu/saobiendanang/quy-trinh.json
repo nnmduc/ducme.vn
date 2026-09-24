@@ -2,23 +2,41 @@
   "schema": "ducme.quy-trinh/v1",
   "id": "saobiendanang",
   "started": "2026-09-24T14:57:58.672Z",
-  "updated": "2026-09-24T14:57:58.774Z",
-  "status": "dangchay",
-  "rounds": 0,
+  "updated": "2026-09-24T15:02:41.157Z",
+  "status": "cannguoiquyet",
+  "rounds": 1,
   "maxRounds": 2,
   "fixes": 0,
   "maxFixes": 2,
   "options": {
     "pr": true
   },
-  "steps": [],
-  "decisions": [],
-  "final": {},
-  "pending": {
-    "at": "2026-09-24T14:57:58.774Z",
-    "step": "khaocuu",
-    "mode": "moi",
-    "why": "Chưa có docs/khao-cuu/<id>/khao-cuu.json — khảo cứu từ đầu",
-    "verdict": null
-  }
+  "steps": [
+    {
+      "at": "2026-09-24T15:02:41.076Z",
+      "step": "khaocuu",
+      "mode": "moi",
+      "round": 1,
+      "result": "loi",
+      "agent": null,
+      "note": "BLOCKED: tranh chap dat dai + cao buoc quan chuc dia phuong (GSR 2015), vu pha hoai 12/2024, tinh chinh thuc chua ro — can nguoi quyet"
+    }
+  ],
+  "decisions": [
+    {
+      "at": "2026-09-24T14:57:58.774Z",
+      "step": "khaocuu",
+      "mode": "moi",
+      "why": "Chưa có docs/khao-cuu/<id>/khao-cuu.json — khảo cứu từ đầu",
+      "verdict": null
+    }
+  ],
+  "final": {
+    "status": "cannguoiquyet",
+    "note": "",
+    "branch": null,
+    "pr": null
+  },
+  "pending": null,
+  "ended": "2026-09-24T15:02:41.156Z"
 }
