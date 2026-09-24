@@ -129,7 +129,7 @@ tuong-duc-me/
 ├── scripts/
 │   └── sync-agent-skills.mjs     # Sinh bản sao skill cho Antigravity từ bản gốc .claude/skills
 ├── tests/
-│   └── test_data_and_integrity.js # Bộ 457 bài kiểm thử tính toàn vẹn dữ liệu & backend
+│   └── test_data_and_integrity.js # Bộ 482 bài kiểm thử tính toàn vẹn dữ liệu & backend
 ├── astro.config.mjs              # Cấu hình Astro
 ├── package.json                  # Khai báo phụ thuộc và kịch bản lệnh
 ├── CONTRIBUTING.md               # Hướng dẫn tham gia đóng góp mã nguồn và tư liệu
@@ -184,7 +184,7 @@ npm test
 
 ## 7. Kiểm thử toàn vẹn dữ liệu
 
-Dự án sở hữu bộ kiểm thử nghiêm ngặt gồm **459 điều kiện kiểm thử** độc lập trong `tests/test_data_and_integrity.js`, đảm bảo dữ liệu và cấu hình hệ thống không bao giờ bị sai lệch:
+Dự án sở hữu bộ kiểm thử nghiêm ngặt gồm **482 điều kiện kiểm thử** độc lập trong `tests/test_data_and_integrity.js`, đảm bảo dữ liệu và cấu hình hệ thống không bao giờ bị sai lệch:
 
 ```bash
 npm test
