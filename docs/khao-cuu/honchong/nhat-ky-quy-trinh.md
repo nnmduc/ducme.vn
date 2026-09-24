@@ -3,8 +3,8 @@
 **Kết quả cuối cùng:** Đang chạy
 
 - Mã linh địa: `honchong`
-- Bắt đầu: 2026-09-24 14:50 · Kết thúc: — · Tổng: 40 phút
-- Số vòng khảo cứu đã chạy: 1 / tối đa 2
+- Bắt đầu: 2026-09-24 14:50 · Kết thúc: — · Tổng: 46 phút
+- Số vòng khảo cứu đã chạy: 2 / tối đa 2
 - Số lần sửa lược đồ: 0 / tối đa 2
 - Tạo Pull Request: có
 
@@ -15,6 +15,7 @@
 | 2026-09-24 15:15 | Khảo cứu | làm mới từ đầu | 1 | xong | Vong 1 cap nhat: 20 nguon (13 A/B), 4 truyen tung, 3 anh de xuat (thap chuong/phe tich, chua co anh tuong >=1000px) |
 | 2026-09-24 15:30 | Kiểm chứng | làm mới từ đầu | 1 | xong | AP_DUNG_CO_DIEU_KIEN 32/40, 8 dieu kien; anh chinh la thap chuong vi chua co anh tuong >=1000px |
 | 2026-09-24 15:30 | Lưu trữ hồ sơ cũ | — | 1 | xong | kiem-chung.json -> kiem-chung.vong1.json, bao-cao-kiem-chung.md -> bao-cao-kiem-chung.vong1.md, bao-cao-kiem-chung.html -> bao-cao-kiem-chung.vong1.html |
+| 2026-09-24 15:36 | Khảo cứu | bổ sung theo yêu cầu của kiểm chứng | 2 | xong | Bo sung theo quyet dinh nguoi dung (noi nguong anh 800px): anh chinh la tuong Duc Me 800x600 (gplongxuyen.net qua melavang.info); ap dung 6/8 dieu kien vong 1, 2 dieu kien anh thay theo quyet dinh moi |
 
 
 ## 2. Các điểm rẽ nhánh
@@ -46,11 +47,11 @@ kế tiếp, và bước đó đã chạy xong. Quyết định chưa thi hành 
 ## 4. Tóm tắt khảo cứu
 
 - Nguồn thu được: 20 · đưa vào dữ liệu: 6
-- Chuyện kể ghi nhận: 4
-- Ảnh đề xuất: 3 · ảnh ứng viên đã gom: 18
+- Chuyện kể ghi nhận: 3
+- Ảnh đề xuất: 4 · ảnh ứng viên đã gom: 19
 - Điểm chưa rõ (`unknowns`): 9 · mâu thuẫn nguồn: 6
 - Hồ sơ đúng lược đồ: có
-- Rủi ro lớn nhất người khảo cứu tự nêu: Ảnh: không có ảnh tượng Đức Mẹ đạt 1000px; ảnh chính đề xuất là tháp chuông nhà thờ (đúng khuôn viên nhưng không phải chủ thể chính), và cả 3 ảnh là ảnh Flickr "All rights reserved" — hợp quy chuẩn dự án (không đòi CC) nhưng người duyệt nên cân nhắc; ảnh 2010 đã qua xử lý HDR của người chụp (không phải AI). Nội dung: bản ghi cũ có vài ý không nguồn (Diệm "chủ sự", "không vết đạn", "đá nhân tạo") đã được gỡ; chuyện Khmer Đỏ 1978 là chủ đề chiến tranh nhạy cảm vừa phải, chỉ đặt ở oralTradition với nhãn và viết trung tính. S2 là bản chép lại trên trang cá nhân violet.vn của lược sử giáo phận.
+- Rủi ro lớn nhất người khảo cứu tự nêu: Ảnh: ảnh chính là ảnh tượng 800x600 (2012) — dưới chuẩn 1000px của dự án, chỉ đạt nhờ quyết định nới ngưỡng xuống 800px của người dùng, là ngoại lệ tạm thời riêng cho honchong; tác giả ảnh không được ghi (chỉ biết nguồn gplongxuyen.net qua bản đăng lại trên melavang.info), chưa tìm được bài gốc hay bản lớn hơn vì web.archive.org không vào được. Ảnh có đoàn linh mục đồng tế đứng trước tượng (nhân vật công khai trong nghi lễ, không phải trẻ em). Ba ảnh phụ là ảnh Flickr "All rights reserved" — hợp quy chuẩn dự án (không đòi CC). Nội dung: đã áp dụng các điều kiện câu chữ của kiểm chứng vòng 1 (historicalFact 3 chỗ, oralTradition bỏ câu S19); chuyện Khmer Đỏ 1978 vẫn chỉ ở oralTradition với nhãn, viết trung tính. S2 là bản chép lại trên trang cá nhân violet.vn của lược sử giáo phận. Điều kiện 6–7 của vòng 1 (tháp chuông làm realImage) đã được thay theo quyết định ảnh mới của người dùng nên người kiểm chứng cần duyệt lại phần ảnh.
 
 ## 6. Việc còn lại cho người đọc
 

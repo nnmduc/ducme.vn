@@ -2,9 +2,9 @@
   "schema": "ducme.quy-trinh/v1",
   "id": "honchong",
   "started": "2026-09-24T14:50:27.449Z",
-  "updated": "2026-09-24T15:30:22.199Z",
+  "updated": "2026-09-24T15:36:04.662Z",
   "status": "dangchay",
-  "rounds": 1,
+  "rounds": 2,
   "maxRounds": 2,
   "fixes": 0,
   "maxFixes": 2,
@@ -37,6 +37,15 @@
       "result": "xong",
       "agent": null,
       "note": "kiem-chung.json -> kiem-chung.vong1.json, bao-cao-kiem-chung.md -> bao-cao-kiem-chung.vong1.md, bao-cao-kiem-chung.html -> bao-cao-kiem-chung.vong1.html"
+    },
+    {
+      "at": "2026-09-24T15:36:04.533Z",
+      "step": "khaocuu",
+      "mode": "bosung",
+      "round": 2,
+      "result": "xong",
+      "agent": null,
+      "note": "Bo sung theo quyet dinh nguoi dung (noi nguong anh 800px): anh chinh la tuong Duc Me 800x600 (gplongxuyen.net qua melavang.info); ap dung 6/8 dieu kien vong 1, 2 dieu kien anh thay theo quyet dinh moi"
     }
   ],
   "decisions": [
@@ -56,5 +65,11 @@
     }
   ],
   "final": {},
-  "pending": null
+  "pending": {
+    "at": "2026-09-24T15:36:04.662Z",
+    "step": "kiemchung",
+    "mode": "moi",
+    "why": "Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng",
+    "verdict": null
+  }
 }
