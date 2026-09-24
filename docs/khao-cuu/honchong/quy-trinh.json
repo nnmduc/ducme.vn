@@ -2,8 +2,8 @@
   "schema": "ducme.quy-trinh/v1",
   "id": "honchong",
   "started": "2026-09-24T14:50:27.449Z",
-  "updated": "2026-09-24T15:47:42.891Z",
-  "status": "dangchay",
+  "updated": "2026-09-24T15:53:33.448Z",
+  "status": "hoanthanh",
   "rounds": 2,
   "maxRounds": 2,
   "fixes": 0,
@@ -55,6 +55,15 @@
       "result": "xong",
       "agent": null,
       "note": "Vong 2: AP_DUNG_CO_DIEU_KIEN 35/40, duyet 4 anh (anh chinh tuong 800px theo nguong noi tam thoi), 2 sua cau chu"
+    },
+    {
+      "at": "2026-09-24T15:53:33.337Z",
+      "step": "trienkhai",
+      "mode": null,
+      "round": 2,
+      "result": "xong",
+      "agent": null,
+      "note": "Commit 8a71491, npm test 473 PASS, build OK, PR #20"
     }
   ],
   "decisions": [
@@ -78,14 +87,28 @@
       "mode": "moi",
       "why": "Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng",
       "verdict": null
+    },
+    {
+      "at": "2026-09-24T15:47:42.891Z",
+      "step": "trienkhai",
+      "mode": null,
+      "why": "Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN",
+      "verdict": "AP_DUNG_CO_DIEU_KIEN"
+    },
+    {
+      "at": "2026-09-24T15:53:33.393Z",
+      "step": "ketthuc",
+      "mode": null,
+      "why": "Đã triển khai xong",
+      "verdict": "AP_DUNG_CO_DIEU_KIEN"
     }
   ],
-  "final": {},
-  "pending": {
-    "at": "2026-09-24T15:47:42.891Z",
-    "step": "trienkhai",
-    "mode": null,
-    "why": "Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN",
-    "verdict": "AP_DUNG_CO_DIEU_KIEN"
-  }
+  "final": {
+    "status": "hoanthanh",
+    "note": "Anh chinh 800px theo ngoai le tam thoi cua chu du an",
+    "branch": "claude/duc-me-hon-chong-pipeline-cmhjpd",
+    "pr": "https://github.com/nnmduc/ducme.vn/pull/20"
+  },
+  "pending": null,
+  "ended": "2026-09-24T15:53:33.448Z"
 }

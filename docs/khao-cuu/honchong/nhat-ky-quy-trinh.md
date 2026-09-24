@@ -1,12 +1,15 @@
 # Nhật ký quy trình tự động: Đức Mẹ Hòn Chông (Kiên Giang)
 
-**Kết quả cuối cùng:** Đang chạy
+**Kết quả cuối cùng:** Hoàn thành — nội dung đã lên nhánh / Pull Request
 
 - Mã linh địa: `honchong`
-- Bắt đầu: 2026-09-24 14:50 · Kết thúc: — · Tổng: 57 phút
+- Bắt đầu: 2026-09-24 14:50 · Kết thúc: 2026-09-24 15:53 · Tổng: 63 phút
 - Số vòng khảo cứu đã chạy: 2 / tối đa 2
 - Số lần sửa lược đồ: 0 / tối đa 2
 - Tạo Pull Request: có
+- Nhánh: `claude/duc-me-hon-chong-pipeline-cmhjpd`
+- Pull Request: https://github.com/nnmduc/ducme.vn/pull/20
+- Ghi chú: Anh chinh 800px theo ngoai le tam thoi cua chu du an
 
 ## 1. Các bước đã chạy
 
@@ -17,6 +20,7 @@
 | 2026-09-24 15:30 | Lưu trữ hồ sơ cũ | — | 1 | xong | kiem-chung.json -> kiem-chung.vong1.json, bao-cao-kiem-chung.md -> bao-cao-kiem-chung.vong1.md, bao-cao-kiem-chung.html -> bao-cao-kiem-chung.vong1.html |
 | 2026-09-24 15:36 | Khảo cứu | bổ sung theo yêu cầu của kiểm chứng | 2 | xong | Bo sung theo quyet dinh nguoi dung (noi nguong anh 800px): anh chinh la tuong Duc Me 800x600 (gplongxuyen.net qua melavang.info); ap dung 6/8 dieu kien vong 1, 2 dieu kien anh thay theo quyet dinh moi |
 | 2026-09-24 15:47 | Kiểm chứng | làm mới từ đầu | 2 | xong | Vong 2: AP_DUNG_CO_DIEU_KIEN 35/40, duyet 4 anh (anh chinh tuong 800px theo nguong noi tam thoi), 2 sua cau chu |
+| 2026-09-24 15:53 | Triển khai | — | 2 | xong | Commit 8a71491, npm test 473 PASS, build OK, PR #20 |
 
 
 ## 2. Các điểm rẽ nhánh
@@ -29,6 +33,8 @@ kế tiếp, và bước đó đã chạy xong. Quyết định chưa thi hành 
 | 2026-09-24 14:50 | Khảo cứu | làm mới từ đầu | — | Chưa có docs/khao-cuu/<id>/khao-cuu.json — khảo cứu từ đầu |
 | 2026-09-24 15:15 | Kiểm chứng | làm mới từ đầu | — | Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng |
 | 2026-09-24 15:36 | Kiểm chứng | làm mới từ đầu | — | Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng |
+| 2026-09-24 15:47 | Triển khai | — | ÁP DỤNG CÓ ĐIỀU KIỆN | Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN |
+| 2026-09-24 15:53 | Kết thúc | — | ÁP DỤNG CÓ ĐIỀU KIỆN | Đã triển khai xong |
 
 
 ## 3. Hồ sơ sinh ra
@@ -72,7 +78,8 @@ kế tiếp, và bước đó đã chạy xong. Quyết định chưa thi hành 
 
 ## 6. Việc còn lại cho người đọc
 
-Lượt chạy chưa kết thúc.
+Không còn việc bắt buộc. Người duyệt Pull Request vẫn nên đọc báo cáo kiểm chứng trước khi merge —
+bộ điều phối không bao giờ tự merge.
 
 ---
 
