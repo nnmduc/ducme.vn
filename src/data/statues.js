@@ -764,12 +764,12 @@ export const MARIAN_STATUES_DATA = [
   {
     "id": "saobiendanang",
     "name": "Đức Mẹ Sao Biển (Đà Nẵng)",
-    "title": "Đền Thánh Đức Mẹ Sao Biển (Stella Maris) Mỹ Khê",
-    "year": 1960,
-    "lat": 16.0538,
-    "lng": 108.2465,
-    "elevation": "8m",
-    "location": "Bãi biển Mỹ Khê, phường Phước Mỹ, quận Sơn Trà, TP. Đà Nẵng",
+    "title": "Tượng Đức Mẹ Sao Biển (Stella Maris) – bãi biển Mỹ Khê, Đà Nẵng",
+    "year": 1974,
+    "lat": 16.0479,
+    "lng": 108.2483,
+    "elevation": "Xấp xỉ mực nước biển (sát bãi biển Mỹ Khê; chưa có số đo)",
+    "location": "Góc đường Võ Nguyên Giáp – Phan Tứ, cạnh tu viện Dòng Thánh Phaolô Thành Chartres, bãi biển Mỹ Khê, phường Ngũ Hành Sơn, TP. Đà Nẵng (trước 01/7/2025 thuộc quận Ngũ Hành Sơn)",
     "region": "Duyên hải Nam Trung Bộ",
     "diocese": "Giáo phận Đà Nẵng",
     "diemStatue5": false,
@@ -778,26 +778,66 @@ export const MARIAN_STATUES_DATA = [
       "v2": null,
       "v3": null,
       "v4": {
-        "star": "Chính danh Stella Maris Miền Trung",
+        "star": "Stella Maris Miền Trung",
         "role": "Bảo hộ Duyên hải",
         "code": "NAT-14"
       }
     },
-    "historicalFact": "Được thành lập khoảng năm 1960 bởi các cha dòng Phaolô Đà Nẵng bên bờ biển Mỹ Khê. Tượng Đức Mẹ mang tước hiệu chính thức 'Stella Maris' (Sao Biển) với đôi tay dang rộng hướng về đại dương. Trải qua các trận siêu bão lịch sử như Xangsane 2006, tượng Mẹ vẫn đứng vững vàng giữa sóng to gió lớn, trở thành điểm tựa tâm linh sâu sắc cho ngư dân miền Trung trước khi giong buồm ra khơi.",
-    "oralTradition": "Là hiện thân trực tiếp cho tước hiệu 'Stella Maris' - Sao Biển, ngọn sao Bắc Đẩu soi lối dẫn tàu bè cập bến an toàn.",
-    "architect": "Đền thờ mở hướng nhìn trực diện ra bờ cát trắng và làn sóng xanh biếc của biển Đà Nẵng.",
-    "significance": "Bảo hộ ngư dân, mang lại sự bình an trước bão táp phong ba.",
-    "realImage": null,
-    "realImageCaption": null,
-    "galleryImages": [],
+    "historicalFact": "Theo Global Sisters Report (Joachim Pham, 15/06/2015), năm 1960 các nữ tu Dòng Thánh Phaolô Thành Chartres khai hoang vùng ven biển Mỹ Khê, dựng tu viện, trồng cây, chăn nuôi và làm nước mắm tại đây; tượng Đức Mẹ do các nữ tu dựng năm 1974. Bài viết đăng trên Radio Veritas Asia năm 2007 cho biết trước kia tượng đứng nép trong góc tường tu viện các nữ tu hưu dưỡng; khi nhà nước làm đường ven biển, bức tường bao không còn nên tượng đứng lộ thiên dưới một mái tôn dựng trên bốn cột sắt. Đầu tháng 10/2006, bão Xangsane đổ bộ Đà Nẵng. Cũng theo Global Sisters Report, khu công viên quanh tượng được đặt tên Sao Biển và có thêm tượng Thánh Giuse; năm 2008 các nữ tu xây bệ mới và mái kính kiên cố che tượng; tháng 6/2014 có thêm tượng Chúa Giêsu bằng đá bên cạnh một cây thánh giá gỗ cao khoảng 8 m. Nguồn này ghi các nữ tu cùng Giám mục Giáo phận Đà Nẵng chủ sự giờ cầu nguyện hằng tháng trước tượng.\n\nGlobal Sisters Report (2015) còn thuật lại lời một nữ tu trong cộng đoàn rằng sau năm 1975 khoảng 5.000 m² đất của nhà dòng bị thu hồi, năm 2005 thêm khoảng 5.000 m² được lấy để làm đường và công viên ven biển mà không bồi thường, việc yêu cầu dời tượng kéo dài đến năm 2006, và năm 2012 các nữ tu phản đối việc một cán bộ địa phương định mở nhà hàng trong công viên. ducme.vn chỉ thuật lại theo nguồn đã dẫn, không xác minh độc lập và không đưa ra nhận định về tranh chấp này.\n\nTheo trang tin CGvST (02/01/2025), tối 26/12/2024 tượng bị phá hoại, phần đầu và tay trái của tượng Chúa Hài Đồng bị đập vỡ. ducme.vn chỉ thuật lại theo nguồn đã dẫn, không xác minh độc lập và không đưa ra nhận định về vụ việc.\n\nVề tính chính thức: bài viết năm 2007 ghi “hiện nay giáo quyền chưa nói gì về Đức Mẹ Sao Biển”; hồ sơ khảo cứu của ducme.vn chưa tìm thấy văn bản nào của Giáo phận Đà Nẵng xác nhận danh xưng đền thánh hay trung tâm hành hương cho nơi này.",
+    "oralTradition": "Người địa phương kể rằng trong cơn bão Xangsane đầu tháng 10/2006, khi hàng phi lao quanh đó bị bật gốc, gãy ngọn, thì “căn lều” mái tôn che tượng vẫn đứng yên, pho tượng trên kệ đá sơ sài không hề hấn gì; từ đó người Công giáo lẫn người ngoài Công giáo kéo đến cầu nguyện mỗi ngày một đông. Theo lời kể chép trong bài viết năm 2007 của Radio Veritas Asia, trước cơn bão một số người dân quanh vùng chưa biết tượng là ai; vì tin rằng người chết trôi trên biển linh thiêng, họ nghĩ đây là một bà “trồi lên từ biển”, mang hương hoa đến khấn và tin rằng mình được nhận lời, về sau mới được giải thích đó là Đức Maria của đạo Công giáo. Cũng bài viết ấy kể rằng bảng tạ ơn nhiều đến mức dưới chân tượng hết chỗ, người ta phải cột thêm cành thông quanh “căn lều” để treo, và kể về một thanh niên mang hoa đến trong một buổi sáng mưa, chỉ nói mình đã được ơn, xin giữ ơn ấy trong lòng và từ đó ngày nào cũng đến tạ ơn. Một nữ tu được dẫn lời rằng nhìn Mẹ “ẵm Giêsu trên tay, đầu hơi cúi xuống như muốn hỏi các con cần gì” thì thấy Mẹ thật gần gũi. Global Sisters Report (2015) ghi lời một phụ nữ kể bà đến tạ ơn mỗi năm hai lần vì tin Mẹ đã giúp con trai bà khỏi bệnh ung thư gan năm 2011 — đó là niềm tin của người kể, không phải điều ducme.vn xác nhận.",
+    "architect": "Tượng Đức Mẹ đứng, bồng Chúa Hài Đồng trên tay, khoác áo choàng xanh, đầu đội triều thiên, dáng hơi nghiêng về phía trước. Theo bài viết năm 2007, khi ấy tượng đặt trên bệ đá dưới một mái tôn tuềnh toàng dựng trên bốn cột sắt, sát rừng phi lao ven biển. Theo Global Sisters Report, năm 2008 các nữ tu xây bệ mới và mái kính kiên cố; ảnh chụp những năm gần đây cho thấy một vọng đình mái kính khung sắt đặt trên các cột tròn, quanh bệ có các bảng đá ghi kinh nguyện. Khuôn viên là một công viên ven biển với hàng phi lao, cây cảnh cắt tỉa, thảm cỏ và lối đi bê tông, có thêm tượng Thánh Giuse, tượng Chúa Giêsu bằng đá (2014) và cây thánh giá gỗ cao khoảng 8 m. Diện tích được các nguồn ghi khác nhau: khoảng một mẫu Anh theo Global Sisters Report, khoảng 3.000 m² theo báo Công giáo và Dân tộc (2022), gần 5.000 m² theo một số trang hành hương. Chưa tìm thấy thông tin về chất liệu, chiều cao tượng hay người tạc.",
+    "significance": "Nằm sát bãi biển Mỹ Khê, giữa dãy khách sạn, quán ăn và phố du lịch nhộn nhịp, tượng Đức Mẹ Sao Biển là chỗ dừng chân cầu nguyện quen thuộc của người Công giáo Đà Nẵng và khách hành hương qua thành phố. Các bài viết mô tả cảnh buổi tối, khoảng từ 18 đến 22 giờ, từng gia đình, người đi làm về và nhiều nhóm sinh viên Công giáo xa quê đến lần chuỗi Mân Côi, hát kinh, dâng hoa tươi; người ngoài Công giáo cũng đến thắp hương, đặt hoa và treo bảng tạ ơn. Theo Global Sisters Report, mỗi tháng nhà dòng bên cạnh đón từ 10 đến 30 đoàn hành hương. Tước hiệu Sao Biển (Stella Maris) — ngôi sao dẫn lối người đi biển — gắn nơi này với hình ảnh che chở giữa bão tố của một thành phố biển thường hứng chịu bão. Một số trang hành hương mô tả thêm rằng vào sáng thứ Bảy đầu tháng, sau Thánh lễ tại nguyện đường cộng đoàn Dòng Phaolô, Đức Giám mục cùng các nữ tu và giáo dân rước ra viếng tượng.",
+    "realImage": "assets/real_photos/saobiendanang.jpg",
+    "realImageCaption": "Tượng Đức Mẹ Sao Biển dưới vọng đình mái kính bên bãi biển Mỹ Khê, Đà Nẵng (Nguồn: Tượng Công Giáo Phan Thiên, tuongconggiaophanthien.com, bài đăng 29/05/2023)",
+    "galleryImages": [
+      {
+        "image": "assets/real_photos/saobiendanang-2.jpg",
+        "caption": "Mái tôn tạm che tượng Đức Mẹ Sao Biển bên bãi Mỹ Khê tháng 4/2007, vài tháng sau bão Xangsane (Nguồn: bài “Viếng thăm và tạ ơn Đức Mẹ Sao Biển, Đà Nẵng”, Radio Veritas Asia 2007, đăng lại trên vntaiwan.catholic.org.tw)"
+      },
+      {
+        "image": "assets/real_photos/saobiendanang-3.jpg",
+        "caption": "Bảng tạ ơn treo trên hàng rào cành thông quanh tượng Đức Mẹ Sao Biển, Đà Nẵng, năm 2007 (Nguồn: bài “Viếng thăm và tạ ơn Đức Mẹ Sao Biển, Đà Nẵng”, Radio Veritas Asia 2007, đăng lại trên vntaiwan.catholic.org.tw)"
+      },
+      {
+        "image": "assets/real_photos/saobiendanang-4.jpg",
+        "caption": "Người trẻ cầu nguyện buổi tối trước tượng Đức Mẹ Sao Biển, Đà Nẵng (Nguồn: Ymagazine – Ủy ban Mục vụ Giới trẻ, bài của Nguyễn Khảm, 2021)"
+      }
+    ],
     "sources": [
           {
-                "title": "Đức Mẹ Sao Biển (Stella Maris) - Wikipedia",
-                "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_Sao_Biển"
+                "title": "Nuns struggle to protect seaside religious site for pilgrims — Global Sisters Report (Joachim Pham, 15/06/2015)",
+                "url": "https://www.globalsistersreport.org/ministry/nuns-struggle-protect-seaside-religious-site-pilgrims-26751",
+                "tier": "B"
           },
           {
-                "title": "Đền Đức Mẹ Sao Biển Mỹ Khê - GP Đà Nẵng",
-                "url": "https://www.google.com/search?q=site:giaophandanang.org+\"Sao+Biển\""
+                "title": "Đức Mẹ Sao Biển Đà Nẵng khoảng lặng bình yên — Báo Công giáo và Dân tộc (23/03/2022)",
+                "url": "https://www.cgvdt.vn/ban-doc/uc-me-sao-bien-a-nang-khoang-lang-binh-yen_a14401",
+                "tier": "B"
+          },
+          {
+                "title": "Viếng thăm và tạ ơn Đức Mẹ Sao Biển, Đà Nẵng — Minh Nguyên, Radio Veritas Asia (01/05/2007)",
+                "url": "https://vntaiwan.catholic.org.tw/07news/7news275.htm",
+                "tier": "C"
+          },
+          {
+                "title": "Đức Mẹ Sao Biển Đà Nẵng — Ymagazine, UB Mục vụ Giới trẻ (Nguyễn Khảm, 06/05/2021)",
+                "url": "https://ymagazine.net/vn/bai-viet/duc-me-sao-bien-da-nang",
+                "tier": "C"
+          },
+          {
+                "title": "Đền Đức Mẹ Sao Biển – Đà Nẵng — MeLaVang.info",
+                "url": "https://melavang.info/den-duc-me-sao-bien-da-nang/",
+                "tier": "C"
+          },
+          {
+                "title": "Đức Mẹ Sao Biển – Địa điểm hành hương Công giáo tại Đà Nẵng — Tượng Công Giáo Phan Thiên (29/05/2023)",
+                "url": "https://www.tuongconggiaophanthien.com/tin-tuc/duc-me-sao-bien-dia-diem-hanh-huong-cong-giao-tai-da-nang-n125.html",
+                "tier": "C"
+          },
+          {
+                "title": "Kẻ xấu phá hoại tượng Đức Mẹ Sao Biển tại Đà Nẵng — CGvST (02/01/2025)",
+                "url": "https://cgvst.com/ke-xau-pha-hoai-tuong-duc-me-sao-bien-tai-da-nang/",
+                "tier": "C"
           }
     ]
   },
