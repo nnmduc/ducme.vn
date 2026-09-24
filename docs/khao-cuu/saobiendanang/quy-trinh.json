@@ -2,8 +2,8 @@
   "schema": "ducme.quy-trinh/v1",
   "id": "saobiendanang",
   "started": "2026-09-24T15:10:50.813Z",
-  "updated": "2026-09-24T15:35:29.280Z",
-  "status": "dangchay",
+  "updated": "2026-09-24T15:43:24.334Z",
+  "status": "hoanthanh",
   "rounds": 1,
   "maxRounds": 2,
   "fixes": 0,
@@ -29,6 +29,15 @@
       "result": "xong",
       "agent": null,
       "note": "AP_DUNG_CO_DIEU_KIEN 34/40, 7 dieu kien; 4 anh duyet"
+    },
+    {
+      "at": "2026-09-24T15:41:54.874Z",
+      "step": "trienkhai",
+      "mode": null,
+      "round": 1,
+      "result": "xong",
+      "agent": null,
+      "note": "Commit 7f0b6c1: 482 PASS, build 23 trang; 7 dieu kien da lam; 4 anh (<1000px, da duoc kiem chung chap nhan)"
     }
   ],
   "decisions": [
@@ -45,14 +54,21 @@
       "mode": "moi",
       "why": "Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng",
       "verdict": null
+    },
+    {
+      "at": "2026-09-24T15:35:29.280Z",
+      "step": "trienkhai",
+      "mode": null,
+      "why": "Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN",
+      "verdict": "AP_DUNG_CO_DIEU_KIEN"
     }
   ],
-  "final": {},
-  "pending": {
-    "at": "2026-09-24T15:35:29.280Z",
-    "step": "trienkhai",
-    "mode": null,
-    "why": "Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN",
-    "verdict": "AP_DUNG_CO_DIEU_KIEN"
-  }
+  "final": {
+    "status": "hoanthanh",
+    "note": "",
+    "branch": "claude/full-pipeline-duc-me-sao-bien-e069ft",
+    "pr": "https://github.com/nnmduc/ducme.vn/pull/19"
+  },
+  "pending": null,
+  "ended": "2026-09-24T15:43:24.334Z"
 }
