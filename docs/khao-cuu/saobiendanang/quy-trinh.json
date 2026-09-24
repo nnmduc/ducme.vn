@@ -2,7 +2,7 @@
   "schema": "ducme.quy-trinh/v1",
   "id": "saobiendanang",
   "started": "2026-09-24T15:10:50.813Z",
-  "updated": "2026-09-24T15:25:13.429Z",
+  "updated": "2026-09-24T15:35:29.280Z",
   "status": "dangchay",
   "rounds": 1,
   "maxRounds": 2,
@@ -20,6 +20,15 @@
       "result": "xong",
       "agent": null,
       "note": "DONE_WITH_CONCERNS: 16 nguon (7 vao ban ghi), 7 chuyen ke, 4 anh de xuat; lich su dua chu yeu vao GSR 2015"
+    },
+    {
+      "at": "2026-09-24T15:35:29.175Z",
+      "step": "kiemchung",
+      "mode": "moi",
+      "round": 1,
+      "result": "xong",
+      "agent": null,
+      "note": "AP_DUNG_CO_DIEU_KIEN 34/40, 7 dieu kien; 4 anh duyet"
     }
   ],
   "decisions": [
@@ -29,14 +38,21 @@
       "mode": "moi",
       "why": "Chưa có docs/khao-cuu/<id>/khao-cuu.json — khảo cứu từ đầu",
       "verdict": null
+    },
+    {
+      "at": "2026-09-24T15:25:13.429Z",
+      "step": "kiemchung",
+      "mode": "moi",
+      "why": "Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng",
+      "verdict": null
     }
   ],
   "final": {},
   "pending": {
-    "at": "2026-09-24T15:25:13.429Z",
-    "step": "kiemchung",
-    "mode": "moi",
-    "why": "Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng",
-    "verdict": null
+    "at": "2026-09-24T15:35:29.280Z",
+    "step": "trienkhai",
+    "mode": null,
+    "why": "Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN",
+    "verdict": "AP_DUNG_CO_DIEU_KIEN"
   }
 }
