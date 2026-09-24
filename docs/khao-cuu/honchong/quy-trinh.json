@@ -2,7 +2,7 @@
   "schema": "ducme.quy-trinh/v1",
   "id": "honchong",
   "started": "2026-09-24T14:50:27.449Z",
-  "updated": "2026-09-24T15:36:04.662Z",
+  "updated": "2026-09-24T15:47:42.891Z",
   "status": "dangchay",
   "rounds": 2,
   "maxRounds": 2,
@@ -46,6 +46,15 @@
       "result": "xong",
       "agent": null,
       "note": "Bo sung theo quyet dinh nguoi dung (noi nguong anh 800px): anh chinh la tuong Duc Me 800x600 (gplongxuyen.net qua melavang.info); ap dung 6/8 dieu kien vong 1, 2 dieu kien anh thay theo quyet dinh moi"
+    },
+    {
+      "at": "2026-09-24T15:47:42.755Z",
+      "step": "kiemchung",
+      "mode": "moi",
+      "round": 2,
+      "result": "xong",
+      "agent": null,
+      "note": "Vong 2: AP_DUNG_CO_DIEU_KIEN 35/40, duyet 4 anh (anh chinh tuong 800px theo nguong noi tam thoi), 2 sua cau chu"
     }
   ],
   "decisions": [
@@ -62,14 +71,21 @@
       "mode": "moi",
       "why": "Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng",
       "verdict": null
+    },
+    {
+      "at": "2026-09-24T15:36:04.662Z",
+      "step": "kiemchung",
+      "mode": "moi",
+      "why": "Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng",
+      "verdict": null
     }
   ],
   "final": {},
   "pending": {
-    "at": "2026-09-24T15:36:04.662Z",
-    "step": "kiemchung",
-    "mode": "moi",
-    "why": "Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng",
-    "verdict": null
+    "at": "2026-09-24T15:47:42.891Z",
+    "step": "trienkhai",
+    "mode": null,
+    "why": "Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN",
+    "verdict": "AP_DUNG_CO_DIEU_KIEN"
   }
 }
