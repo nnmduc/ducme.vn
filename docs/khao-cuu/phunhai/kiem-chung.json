@@ -1,0 +1,483 @@
+{
+  "schema": "ducme.kiem-chung/v1",
+  "id": "phunhai",
+  "name": "Vương Cung Thánh Đường Phú Nhai",
+  "researchReport": "docs/khao-cuu/phunhai/khao-cuu.json",
+  "auditor": "Claude (phiên marian-audit độc lập, 2026-09-24)",
+  "date": "2026-09-24",
+  "verdict": "AP_DUNG_CO_DIEU_KIEN",
+  "summary": "Hồ sơ đạt về cấu trúc, toạ độ mới đã đối chiếu độc lập (lệch 5m so với tâm toà nhà trên OSM; toạ độ cũ thực ra trỏ vào nhà thờ Lục Thủy), ba ảnh Commons là ảnh máy Sony năm 2011, đúng chủ thể, không dấu hiệu AI. Không duyệt nguyên trạng vì hai lỗi truy vết: vế 'Tiểu Vương cung Thánh đường đầu tiên ở miền Bắc' trong significance chỉ dẫn S15 mà S15 mở ra không có câu đó (tiêu chí chặn B2), và câu 'quật đổ cùng 48 nhà thờ khác' đọc sai nguồn S2 ('đổ 48 nhà thờ, trong đó có đền thánh Phú Nhai'). Sửa đúng hai chỗ này thì triển khai được.",
+  "scores": [
+    {
+      "axis": "nguon",
+      "score": 4,
+      "evidence": "Bốn nguồn đưa vào dữ liệu (S1 Wikipedia vi, S2 trang giáo phận Bùi Chu, S4 cổng thông tin xã Xuân Hưng, S5 VOV5) đều mở được và đúng chủ đề; ngoài ra S3 (HĐGM), S6 (TTXVN) cấp B cũng mở được. Trừ 1 điểm vì nhiều nguồn chép chuyền nhau (S7 chép S2; S5, S6, trang du lịch chép Wikipedia) và không có nguồn cấp A."
+    },
+    {
+      "axis": "truyvet",
+      "score": 3,
+      "evidence": "Phần lớn luận điểm tìm thấy trong nguồn được gán. Nhưng: (1) 'đầu tiên ở miền Bắc' gán cho S15, S15 không có câu này; (2) 'cùng 48 nhà thờ khác' lệch nguyên văn S2/S7; (3) S14 được mô tả là nhắc 'lớn nhất Đông Nam Á' nhưng thực chứa 'lớn nhất Đông Dương', còn S13 (403) không đọc được; (4) chi tiết 'chín gian, cột lim' năm 1881 chỉ có ở S1, không có ở S2, S4 dù cả ba được gán."
+    },
+    {
+      "axis": "chinhxac",
+      "score": 4,
+      "evidence": "Toạ độ 20.3000, 106.3632 cách tâm way OSM 1177046930 (tự tính từ 4 nút: 20.30000, 106.36324) 5m, cách toạ độ Wikipedia vi 41m; reverse geocode trả đúng 'Vương cung thánh đường Đức Mẹ Vô nhiễm Nguyên tội, Xã Xuân Hưng, Tỉnh Ninh Bình'. Toạ độ cũ 20.3275, 106.3317 reverse geocode ra 'Nhà thờ Giáo xứ Lục Thuỷ' — sửa là đúng. Toạ độ Wikipedia en / Wikidata (20.3077, 106.3298) rơi vào đường Trung Linh, xã Xuân Trường, cách 3,6km — đúng là sai. Địa chỉ hành chính mới khớp S4 và OSM. Ngày 12/8/2008 khớp S2, S3, S4, S6. Trừ 1 điểm vì lỗi '48 nhà thờ khác' và elevation 10m vẫn không có nguồn."
+    },
+    {
+      "axis": "hinhanh",
+      "score": 5,
+      "evidence": "Ba ảnh (1 chính, 2 phụ) có trang File: trên Commons còn sống, tải lên 2/1/2013 bởi Hoangvantoanajc ('Own work', CC BY-SA 3.0), EXIF Sony SLT-A33 ngày 5/4/2011; bản 1280×850 trong anh/ còn giữ chuỗi SONY trong metadata, không có C2PA/JUMBF. Nhìn tận mắt: mặt tiền hai tháp, lăng đá bên trái, tượng Thánh Đa Minh bên phải — khớp mô tả S1, S5; bảng đồng 'Lăng các anh hùng tử đạo' đọc được rõ; nội thất vòm sườn vàng, cột trắng nhất quán. Không dấu hiệu AI."
+    },
+    {
+      "axis": "phandinh",
+      "score": 4,
+      "evidence": "Ranh giới rõ: cụm 'lớn nhất Đông Nam Á' đã được rút khỏi historicalFact; xổ số 1930 (chỉ Wikipedia, không chú thích) được đặt đúng ở oralTradition; 'Đức Mẹ nhận lời' viết như niềm tin. Bốn ý trong oralTradition đều có nhãn ('vẫn truyền nhau', 'Theo lời các cụ trong vùng kể lại', 'Một số bài viết chép lại rằng', 'lưu truyền'). Trừ 1 điểm vì 'đầu tiên ở miền Bắc' — một khẳng định không có nguồn — lọt vào significance như sự thật."
+    },
+    {
+      "axis": "giongvan",
+      "score": 5,
+      "evidence": "Trung lập, kính trọng. Đoạn chiếm đóng 1949–1953 viết ngắn, mô tả sự kiện ('chiếm đóng khu nhà thờ làm đồn bốt'), bỏ các chi tiết mang tính quy kết trong S1 ('tề ngụy', 'tra tấn cán bộ du kích'). Niềm tin mô tả như niềm tin."
+    },
+    {
+      "axis": "kythuat",
+      "score": 4,
+      "evidence": "validate-record.mjs --allow-existing-id: ĐẠT, 1 cảnh báo 'lat chỉ có 1 chữ số thập phân' — đã giải trình (20.3000 bị JSON rút gọn thành 20.3; giá trị đo được 20.30000, sai khác 5m). format-report --check: hợp lệ, 1 cảnh báo elevation chưa có claims (đã ghi ở unknowns). check-sources: 15/16 OK, S13 (iVIVU) 403 Cloudflare — không nằm trong trường sources của dữ liệu."
+    },
+    {
+      "axis": "hapdan",
+      "score": 4,
+      "evidence": "Văn xuôi tăng từ ~120 lên trên 300 từ, có bốn chuyện kể có nguồn đọc lại được (lời khấn 1858, gốc tích Thủy Nhai Hạ thôn, xổ số 1930, 'lớn nhất Đông Dương'), 12 ảnh ứng viên, 6 manh mối cụ thể (dấu lạ tuyết rơi 1866, sách lịch sử xã, album ký ức giáo xứ, kênh YouTube). Chưa đọc được trang du lịch và video nên phần chuyện kể dân gian thật sự còn mỏng."
+    }
+  ],
+  "totalScore": 33,
+  "sourceChecks": [
+    {
+      "code": "S1",
+      "url": "https://vi.wikipedia.org/wiki/Vương_cung_thánh_đường_Phú_Nhai",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Đã đọc toàn văn. Có: 1866 gỗ lợp bổi; 1881 chín gian cột lim hai tháp; 1916 khởi công, khánh thành 1922, bão 24/6/1929; xổ số 1930 (không chú thích); cung hiến 8/12/1933 ở thân bài nhưng hộp thông tin ghi 7/12/1933; 11/1949 chiếm đóng, 24/06/1953 rút khỏi bốt (dẫn sách Lịch sử Đảng bộ xã Xuân Phương); trùng tu 17/3/2003–26/9/2004; 80×27×30m, tháp 44m, 2160m², chuông 2000/1200/600/100kg; đài Thánh Đa Minh 17m (tượng 2,3m); lăng 83 vị tử đạo 15m; toạ độ 20.299946, 106.362811; xã Xuân Hưng, Ninh Bình."
+    },
+    {
+      "code": "S2",
+      "url": "https://gpbuichu.org/index.php/giao-phan/Gioi-thieu-Giao-phan.html",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Script báo không thấy chuỗi đầy đủ 'Vương Cung Thánh Đường Phú Nhai' vì trang dùng 'Đền thánh Phú Nhai' — mở tay thấy mục riêng. Có nguyên văn lời khấn 1858; 1868 cha Hoà làm giám mục; 1881 khởi công (không nói chín gian / cột lim); '8/12/1923, sau 6 năm xây dựng... dài 88 m, 2 tháp cao 30 m... do cha chính Y thiết kế'; '30/9/1929, một trận bão lớn đã làm đổ 48 nhà thờ, trong đó có đền thánh Phú Nhai'; 1933 80×27×30m tháp 44m 'lớn lao và đồ sộ nhất Đông Dương'; xức dầu 7/12/1933 bởi Đức cha Pedro Muñagorri Trung; 6 thánh tử đạo (có tên); 12/8/2008 phong và 8/12/2008 công bố; lỗi đánh máy '150 năm (1848-2008)'."
+    },
+    {
+      "code": "S3",
+      "url": "https://hdgmvietnam.com/chi-tiet/gp-bui-chu-31467",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Có: xây từ 1881, bão 1929, hoàn thành 1933, 80×27×30m tháp 44m, 12/8/2008 phong Tiểu Vương cung. Không có lời khấn 1858 chi tiết như claim gán (chỉ nêu Đức Mẹ Vô Nhiễm là quan thầy giáo phận) — không ảnh hưởng vì S2 đã chứa."
+    },
+    {
+      "code": "S4",
+      "url": "https://xuanhung.ninhbinh.gov.vn/2025/08/05/lich-su-hinh-thanh-va-phat-trien-cua-nha-tho-phu-nhai/",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Script không thấy chuỗi đầy đủ vì trang dùng 'Nhà thờ Phú Nhai' — mở tay đúng bài. Có: xã Xuân Hưng, tỉnh Ninh Bình; 1866 nhà thờ gỗ; 1881 kiểu Á Đông hai tháp (không nói chín gian/cột lim); 1916–1922; bão 24/6/1929; làm phép 7/12/1933 (không nêu tên giám mục); 2160m², 80×27×30m tháp 44m; trùng tu 2003–2004; 12/8/2008."
+    },
+    {
+      "code": "S5",
+      "url": "https://vovworld.vn/vi-VN/viet-nam-dat-nuoc-con-nguoi/nha-tho-phu-nhai-mot-trong-4-tieu-vuong-cung-thanh-duong-o-viet-nam-817620.vov",
+      "status": "CHUYEN_HUONG",
+      "containsClaim": true,
+      "note": "Chuyển hướng 1 lần sang ...-1733427.vov5, cùng bài. Có: xã Xuân Phương, huyện Xuân Trường, Nam Định; 1866/1881/1916–1922/1929/1933; trùng tu 3/2003–9/2004; 2008; đài Thánh Đa Minh 17m; lăng 83 người tử đạo 15m; 14 chặng Đàng Thánh Giá; lời giáo dân ghi rộng 30m; 4 chuông từ Pháp, quả 2 tấn chỉ dùng dịp đại lễ; lễ 7/12, 8/12, 24/12."
+    },
+    {
+      "code": "S6",
+      "url": "https://vietnam.vnanet.vn/vietnamese/tin-tuc/tieu-vuong-cung-thanh-duong-phu-nhai-85371.html",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Có: trùng tu 17/3/2003 – 26/9/2004 (ghi do GM Đaminh Nguyễn Chu Trinh); 80×35×30m tháp 44m; 4 chuông đúc tại Pháp, quả 2 tấn chỉ dùng dịp đại lễ; tượng Thánh Đa Minh 17m; 12/8/2008; lễ 7/12 và 8/12; chú thích ảnh 'Được cho là nhà thờ lớn nhất Đông Nam Á'."
+    },
+    {
+      "code": "S7",
+      "url": "https://hddmvn.net/vuong-cung-thanh-duong-phu-nhai/",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Chép gần nguyên văn S2 (không độc lập). Có tên và năm sinh-tử 6 thánh; 'Lời khấn hứa đã được Đức Mẹ nhận lời'; 8.12.1923 dài 88m do cha chính Y thiết kế; '30.9.1929, cơn bão Ất Tỵ đã làm đổ 48 nhà thờ, trong đó có đền thánh Phú Nhai'; lăng 87 tôi tớ Chúa; chuông '3 và 1 tấn, 6 và 1 tạ'."
+    },
+    {
+      "code": "S8",
+      "url": "https://gpbuichu.org/news/TIN-GIAO-PHAN-75/thuy-nhai-mo-nam-thanh-dip-nha-tho-100-nam-5263.html",
+      "status": "CHUYEN_HUONG",
+      "containsClaim": true,
+      "note": "Chuyển hướng sang /index.php/news/..., cùng bài về giáo xứ Thủy Nhai. Có nguyên văn 'Theo truyền ngôn... nghe các cụ kể lại là mấy ông đó có tên là: Ông Tổng, Ông Huyện, Ông Điện, Ông Bành' và 'Theo gia phả Phú Nhai của linh mục Đinh Xuân Bách... dòng họ Đinh... đặt tên là Thủy Nhai Hạ thôn (xứ Phú Nhai ngày nay)'."
+    },
+    {
+      "code": "S9",
+      "url": "https://www.openstreetmap.org/way/1177046930",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Tự gọi API /api/0.6/way/1177046930/full: thẻ basilica=minor, building=church, name 'Vương cung thánh đường Đức Mẹ Vô nhiễm Nguyên tội'; 4 nút góc cho tâm ≈ 20.30000, 106.36324 — khớp số hồ sơ ghi."
+    },
+    {
+      "code": "S10",
+      "url": "https://en.wikipedia.org/wiki/Basilica_of_Immaculate_Conception,_Phu_Nhai",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Có toạ độ 20.3077, 106.3298 và câu 'each of which weighs two tons' — đúng như hồ sơ dùng để ghi mâu thuẫn. Cũng ghi 'completed in 1923' cho ngôi thứ hai theo cách đếm của nó (ủng hộ mốc 1923)."
+    },
+    {
+      "code": "S11",
+      "url": "https://commons.wikimedia.org/wiki/Category:Basilica_of_Phu_Nhai",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Thể loại tồn tại, chứa các ảnh đề xuất."
+    },
+    {
+      "code": "S12",
+      "url": "https://phunhai.com/phu-nhai-dong-chay-ky-uc-va-duc-tin/",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Đúng là lời kêu gọi góp tư liệu, hồi ký cho 'Album Ký Ức Phú Nhai – Dòng chảy Đức Tin' hướng tới 500 năm Tin Mừng (1533–2033). Chỉ là manh mối, không dùng cho luận điểm nào."
+    },
+    {
+      "code": "S13",
+      "url": "https://www.ivivu.com/blog/2023/01/nha-tho-phu-nhai-tieu-vuong-cung-thanh-duong-lon-nhat-dong-nam-a/",
+      "status": "CHET",
+      "containsClaim": false,
+      "recheckedWith": "WebFetch",
+      "note": "curl trả 403 trang Cloudflare 'Just a moment...'; WebFetch cũng 403. Không đọc được — chỉ còn tiêu đề URL. Không nằm trong trường sources của dữ liệu; luận điểm 'lớn nhất Đông Nam Á' đã có S6 (TTXVN) và S15 chống lưng nên không mất gì."
+    },
+    {
+      "code": "S14",
+      "url": "https://congdankhuyenhoc.vn/chiem-nguong-ve-long-lay-cua-tieu-vuong-cung-thanh-duong-phu-nhai-179221212174029264.htm",
+      "status": "OK",
+      "containsClaim": false,
+      "note": "Hồ sơ nói S14 'nhắc lại cách nói lớn nhất Đông Nam Á' — mở toàn văn không có cụm này. S14 chỉ ghi 'khánh thành vào năm 1923 và 1933... cơ sở Công giáo lớn nhất Đông Dương thời bấy giờ'. Vế 'Đông Dương' đúng, vế 'Đông Nam Á' sai nguồn. Ghi chú thêm: S14 là nguồn độc lập ủng hộ mốc 1923."
+    },
+    {
+      "code": "S15",
+      "url": "https://vntravel.org.vn/net-doc-dao-nha-tho-phu-nhai-tieu-vuong-cung-thanh-duong-lon-nhat-dong-nam-a-a2713.html",
+      "status": "OK",
+      "containsClaim": false,
+      "note": "Đây là nguồn duy nhất được gán cho 'Tiểu Vương cung Thánh đường đầu tiên ở miền Bắc' trong significance. Mở toàn văn: có 'một trong 4 Tiểu Vương cung Thánh đường tại Việt Nam' và 'lớn nhất Đông Nam Á', KHÔNG có 'đầu tiên' hay 'miền Bắc'. Luận điểm không có trong nguồn — tiêu chí chặn B2."
+    },
+    {
+      "code": "S16",
+      "url": "https://www.youtube.com/channel/UCxyt-KyOg_Q9lmArPCOwxIA",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Tiêu đề kênh thật là 'Vương Cung Thánh Đường Phú Nhai' (đọc từ metadata trang). Cấp D, manh mối, không dùng cho luận điểm nào."
+    }
+  ],
+  "claimChecks": [
+    {
+      "claim": "Năm 1858 GM Valentinô Berrio-Ochoa Vinh và cha chính Emmanuel Riaño Hòa dâng giáo phận Bùi Chu cho Đức Mẹ Vô Nhiễm, khấn hứa nhận Người làm bổn mạng và xây thánh đường",
+      "sources": ["S2", "S7"],
+      "result": "dat",
+      "note": "S2 có nguyên văn lời khấn ở hai chỗ; S7 chép lại. S3 chỉ nêu Đức Mẹ Vô Nhiễm là quan thầy, không có lời khấn."
+    },
+    {
+      "claim": "Năm 1866 cha Hòa dựng nhà thờ đầu tiên bằng gỗ, lợp bổi, sau khi triều Tự Đức chấm dứt cấm đạo",
+      "sources": ["S1", "S4", "S5"],
+      "result": "dat",
+      "note": "Cả ba đều có; VietnamNet EN và vietnamcatholictours (tự tìm) cũng ghi 1866."
+    },
+    {
+      "claim": "Năm 1881, khi đã làm giám mục, ngài khởi công ngôi thánh đường thứ hai kiểu Á Đông, chín gian, cột lim, có hai tháp chuông",
+      "sources": ["S1", "S2", "S4"],
+      "result": "dat",
+      "note": "S1 chứa đủ (9 gian, cột xà gỗ lim, hai tháp). S2 chỉ có '1881 khởi công' và '1868 làm giám mục'; S4 chỉ có 'Á Đông, hai tháp chuông'. Đủ chống lưng nhưng gán nguồn rộng hơn thực tế."
+    },
+    {
+      "claim": "Ngôi thánh đường Gothic thứ ba do cha chính Y thiết kế, khánh thành 8/12/1923, dài 88m, hai tháp cao 30m",
+      "sources": ["S2", "S7"],
+      "result": "dat",
+      "note": "S2 nguyên văn. Mâu thuẫn 1922 (S1, S4, S5, vietnamcatholictours) với 1923 (S2, S7, S14, Wikipedia en) — chấp nhận 1923 theo trang giáo phận vì có ngày cụ thể và có hai nguồn không chép S2 (S14, Wikipedia en) cùng ghi 1923."
+    },
+    {
+      "claim": "Trận bão năm 1929 quật đổ đền thánh 'cùng 48 nhà thờ khác trong giáo phận'",
+      "sources": ["S2", "S1"],
+      "result": "sua",
+      "note": "S2: 'một trận bão lớn đã làm đổ 48 nhà thờ, trong đó có đền thánh Phú Nhai' (S7 y hệt). 48 là tổng số, đã gồm Phú Nhai — viết 'cùng 48 nhà thờ khác' thành 49. S1 không nhắc con số 48. Sửa câu chữ theo conditions[0]."
+    },
+    {
+      "claim": "Tái thiết hoàn tất 1933; ngày 7/12/1933 GM Pedro Muñagorri Trung xức dầu thánh hiến",
+      "sources": ["S2", "S4"],
+      "result": "dat",
+      "note": "S2 có ngày và tên giám mục; S4 có ngày 7/12/1933 nhưng không nêu tên. Hộp thông tin S1 cũng ghi 7/12/1933 (thân bài S1 và Wikipedia en ghi 8/12)."
+    },
+    {
+      "claim": "Từ 11/1949 đến 6/1953 quân viễn chinh Pháp chiếm đóng khu nhà thờ làm đồn bốt",
+      "sources": ["S1"],
+      "result": "dat",
+      "note": "S1 có '11/1949... lấy nhà thờ có ngọn tháp cao làm điểm uy hiếp' và '24/06/1953... rút khỏi bốt Phú Nhai', dẫn sách Lịch sử Đảng bộ xã Xuân Phương. Wikipedia en (S10) và thecatholictravelguide (tự tìm) cũng ghi 'the French took over the church'. Câu trong hồ sơ trung tính, giữ."
+    },
+    {
+      "claim": "Đại trùng tu từ 17/3/2003 đến 26/9/2004",
+      "sources": ["S1", "S6"],
+      "result": "dat",
+      "note": "Cả hai ghi đúng ngày. Hồ sơ khôn ngoan không nêu tên giám mục chủ trì vì S1 (GM Hoàng Văn Tiệm) và S5/S6 (GM Nguyễn Chu Trinh) khác nhau."
+    },
+    {
+      "claim": "Ngày 12/8/2008 Tòa Thánh ban tước hiệu Tiểu Vương cung Thánh đường; GM Giuse Hoàng Văn Tiệm công bố ngày 8/12/2008",
+      "sources": ["S2", "S3", "S6"],
+      "result": "dat",
+      "note": "12/8/2008 có ở S2, S3, S4, S6; ngày công bố 8/12/2008 chỉ có ở S2. Bản cũ ghi 14/01/2008 là sai."
+    },
+    {
+      "claim": "Kích thước 80m × 27m × 30m, tháp 44m, diện tích sàn khoảng 2.160m²",
+      "sources": ["S1", "S2", "S3"],
+      "result": "dat",
+      "note": "80×27 = 2.160 nên con số diện tích nhất quán. S5 (lời giáo dân) ghi rộng 30m, S6 ghi 35m — chọn 27m theo ba nguồn là hợp lý."
+    },
+    {
+      "claim": "Bốn quả chuông đúc tại Pháp, 'Wikipedia tiếng Việt ghi' 2.000/1.200/600/100kg, quả lớn nhất chỉ đánh dịp đại lễ",
+      "sources": ["S1", "S5", "S6"],
+      "result": "dat",
+      "note": "Trọng lượng có nhãn nguồn rõ ràng. S5, S6 xác nhận 'quả nặng 2 tấn chỉ sử dụng trong các dịp đại lễ'."
+    },
+    {
+      "claim": "Chữ Hán quanh ô kính, búp sen trên mái vòm",
+      "sources": ["S1"],
+      "result": "dat",
+      "note": "S1 nguyên văn; S5 cũng nhắc 'các hàng chữ nho trang trí'."
+    },
+    {
+      "claim": "Đài Thánh Đa Minh 17m (tượng 2,3m) bên phải, lăng hài cốt tử đạo 15m bên trái, 14 chặng Đàng Thánh Giá",
+      "sources": ["S1", "S6", "S11"],
+      "result": "dat",
+      "note": "S1, S5 có đủ; ảnh mặt tiền Commons xác nhận vị trí trái/phải."
+    },
+    {
+      "claim": "Phú Nhai là quê của 6 trong 117 Thánh Tử đạo Việt Nam (liệt kê tên)",
+      "sources": ["S2", "S7"],
+      "result": "dat",
+      "note": "S2 có đủ 6 tên; S7 thêm phân biệt linh mục / giáo dân khớp cách viết trong significance."
+    },
+    {
+      "claim": "Lễ 7/12 (cung hiến) và 8/12 (Vô Nhiễm) là các lễ lớn",
+      "sources": ["S5", "S6"],
+      "result": "dat"
+    },
+    {
+      "claim": "Phú Nhai là Tiểu Vương cung Thánh đường đầu tiên ở miền Bắc",
+      "sources": ["S15"],
+      "result": "bo",
+      "note": "S15 không chứa câu này. Tự tìm: Sở Kiện được phong 24/6/2010 (Wikipedia vi Sở Kiện), La Vang và Đức Bà Sài Gòn không ở miền Bắc — suy luận theo niên đại thì có thể đúng, nhưng không nguồn nào đã mở nói ra điều đó, và người kiểm chứng không tự viết luận điểm mới. Bỏ vế này khỏi significance theo conditions[1]; khảo cứu có thể bổ sung lại khi có nguồn nêu thẳng."
+    },
+    {
+      "claim": "Lời các cụ kể về khai khẩn Thủy Nhai và gia phả họ Đinh lập Thủy Nhai Hạ thôn (Phú Nhai)",
+      "sources": ["S8"],
+      "result": "chuyentruyentung",
+      "note": "S8 tự ghi 'Theo truyền ngôn', 'nghe các cụ kể lại' — đúng ngăn oralTradition, đã có nhãn."
+    },
+    {
+      "claim": "Cuộc xổ số toàn quốc năm 1930 để lấy kinh phí tái thiết",
+      "sources": ["S1"],
+      "result": "chuyentruyentung",
+      "note": "S1 ghi nhưng không chú thích; Wikipedia en và vietnamcatholictours lặp lại (có thể chép Wikipedia). Đặt ở oralTradition với 'Một số bài viết chép lại rằng' là đúng ngăn."
+    },
+    {
+      "claim": "Cách nói 'đồ sộ nhất Đông Dương' / 'lớn nhất Đông Nam Á'",
+      "sources": ["S2", "S13", "S14"],
+      "result": "chuyentruyentung",
+      "note": "'Đông Dương' có ở S2, S4, S5, S14. 'Đông Nam Á' KHÔNG có ở S14, S13 không đọc được — nhưng có ở S6 (TTXVN, chú thích ảnh) và S15. Nội dung oralTradition đúng, chỉ gán nguồn sai trong hồ sơ; không ảnh hưởng dữ liệu vì S13, S14 không vào trường sources."
+    },
+    {
+      "claim": "Toạ độ 20.3000, 106.3632; địa chỉ làng Phú Nhai, xã Xuân Hưng, tỉnh Ninh Bình (trước 2025: xã Xuân Phương, huyện Xuân Trường, Nam Định)",
+      "sources": ["S9", "S1", "S4", "S5"],
+      "result": "dat",
+      "note": "Xem crossChecks: OSM tự tính lại lệch 5m, Nominatim node 'nhà thờ Phú Nhai' lệch ~70m, reverse geocode ra đúng toà nhà tại Xã Xuân Hưng, Tỉnh Ninh Bình."
+    }
+  ],
+  "crossChecks": [
+    {
+      "title": "OpenStreetMap API — way 1177046930/full (tự gọi, tự tính tâm)",
+      "url": "https://www.openstreetmap.org/api/0.6/way/1177046930/full",
+      "finding": "Bốn nút góc 20.29980/106.36289, 20.29997/106.36366, 20.30024/106.36359, 20.30006/106.36282 → tâm ≈ 20.30002, 106.36324; cách toạ độ đề xuất 5m. Thẻ basilica=minor."
+    },
+    {
+      "title": "Nominatim — tìm 'Phú Nhai' và reverse geocode ba toạ độ",
+      "url": "https://nominatim.openstreetmap.org/reverse?lat=20.3000&lon=106.3632&format=json&zoom=18",
+      "finding": "Toạ độ đề xuất → 'Vương cung thánh đường Đức Mẹ Vô nhiễm Nguyên tội, Cầu Mã 2, Xã Xuân Hưng, Tỉnh Ninh Bình'. Node 10712565105 'nhà thờ Phú Nhai' ở 20.29945, 106.36370 (~70m). Toạ độ cũ 20.3275, 106.3317 → 'Nhà thờ Giáo xứ Lục Thuỷ, Xã Xuân Hồng' (bản ghi hiện tại đang chỉ vào một nhà thờ khác, cách 4,5km). Toạ độ Wikipedia en 20.3077, 106.3298 → 'Đường Trung Linh, Xã Xuân Trường' (3,6km)."
+    },
+    {
+      "title": "Wikidata Q10834009",
+      "url": "https://www.wikidata.org/wiki/Q10834009",
+      "finding": "P625 = 20.307651, 106.329848 (trùng toạ độ sai của Wikipedia en — không dùng); P571 = 1933. Xác nhận toạ độ Wikipedia en/Wikidata là nguồn sai chứ không phải OSM."
+    },
+    {
+      "title": "Vương cung thánh đường Sở Kiện — Wikipedia tiếng Việt",
+      "url": "https://vi.wikipedia.org/wiki/Vương_cung_thánh_đường_Sở_Kiện",
+      "finding": "Sở Kiện được Bộ Phụng Tự nâng lên tiểu vương cung thánh đường ngày 24/6/2010, công bố 8/12/2011; trang liệt kê 'Vương cung thánh đường Phú Nhai (2008)'. Phú Nhai phong trước Sở Kiện — nhưng không nguồn nào nói thẳng 'đầu tiên ở miền Bắc'."
+    },
+    {
+      "title": "Phu Nhai church, one of four minor basilicas in Vietnam — VietnamNet (EN)",
+      "url": "https://vietnamnet.vn/en/phu-nhai-church-one-of-four-minor-basilicas-in-vietnam-606514.html",
+      "finding": "Xác nhận 1866 (cha Emmanuel Riano Hoa), bão 1929, xây lại 1933 'biggest church in Indochina at that time', 2008 minor basilica, Giáo phận Bùi Chu, 2.160m², tượng Thánh Đa Minh 17m, lăng 83 vị tử đạo 15m. Bài bản tiếng Anh của VOV nên không hoàn toàn độc lập với S5."
+    },
+    {
+      "title": "Phu Nhai Basilica — Vietnam Catholic Tours",
+      "url": "https://vietnamcatholictours.vn/destination/phu-nhai-basilica/",
+      "finding": "Giáo phận Bùi Chu; 1866; 1916 khởi công, 'consecrated in 1922', bão 24/6/1929; xổ số 1930; 8/12/1933; 2008 Benedict XVI phong minor basilica. Chép Wikipedia vi — ghi nhận phe '1922'."
+    },
+    {
+      "title": "Phu Nhai, Vietnam: Basilica of Immaculate Conception — The Catholic Travel Guide",
+      "url": "https://thecatholictravelguide.com/destinations/vietnam-socialist-republic-of-vietnam-cong-hoa-xa-hoi-chu-nghia-viet-nam/phu-nhai-vietnam-basilica-of-immaculate-conception/",
+      "finding": "Chép Wikipedia en: 1866, 1916–1923, bão 24/6/1929, xổ số, 8/12/1933, quân Pháp chiếm nhà thờ thời chiến tranh Đông Dương, trùng tu 2003–26/9/2004, 2008 Benedict XVI."
+    },
+    {
+      "title": "WebSearch 'gcatholic Phu Nhai minor basilica 2008 Bui Chu'",
+      "url": "https://en.wikipedia.org/wiki/Basilica_of_Immaculate_Conception,_Phu_Nhai",
+      "finding": "Kết quả tìm kiếm nêu 'Pope Benedict XVI raised the shrine to the status of Minor Basilica via his decree on 12 August 2008' — khớp 12/8/2008 của S2, S3, S4, S6."
+    }
+  ],
+  "imageChecks": [
+    {
+      "file": "File:Vương cung thánh đường Phú Nhai.JPG",
+      "sourceVerified": true,
+      "license": "CC BY-SA 3.0",
+      "subjectMatches": true,
+      "aiSignals": [],
+      "result": "duyet",
+      "note": "Mở trang File: trên Commons: 'Own work', tác giả Hoangvantoanajc, tải lên 2/1/2013 bằng UploadWizard, gốc 2.288×1.520; EXIF Sony SLT-A33, 5/4/2011. Bản tải về docs/khao-cuu/phunhai/anh/phunhai-mat-tien.jpg 1280×850, còn metadata SONY, check-image không thấy dấu hiệu AI hay C2PA. Nhìn trực tiếp: mặt tiền Gothic hai tháp, lăng đá có thánh giá bên trái, cột tượng Thánh Đa Minh bên phải, chữ trên mặt tiền và bảng lăng rõ nét tiếng Việt — đúng Phú Nhai. Dùng làm realImage."
+    },
+    {
+      "file": "File:Nội thất vương cung thánh đường Phú Nhai.JPG",
+      "sourceVerified": true,
+      "license": "CC BY-SA 3.0",
+      "subjectMatches": true,
+      "aiSignals": [],
+      "result": "duyet",
+      "note": "Trang File: còn sống, cùng tác giả, tải lên 2/1/2013, EXIF Sony SLT-A33 5/4/2011. Bản anh/phunhai-3-noi-that.jpg 1280×850. Vòm sườn nhọn nền vàng, cột trắng, bàn thờ gỗ thếp vàng — nhất quán về hình học, không méo; ảnh cùng loạt với ảnh mặt tiền. Ảnh phụ."
+    },
+    {
+      "file": "File:Lăng hài cốt tử đạo Phú Nhai.JPG",
+      "sourceVerified": true,
+      "license": "CC BY-SA 3.0",
+      "subjectMatches": true,
+      "aiSignals": [],
+      "result": "duyet",
+      "note": "Trang File: còn sống, cùng tác giả, tải lên 2/1/2013, EXIF Sony SLT-A33 5/4/2011. Bản anh/phunhai-2-lang-tu-dao.jpg 1280×850. Bảng đồng đọc được 'LĂNG CÁC ANH HÙNG TỬ ĐẠO'; hình dáng lăng khớp khối lăng bên trái trong ảnh mặt tiền. Ảnh phụ."
+    }
+  ],
+  "folkloreChecks": [
+    {
+      "title": "Lời khấn năm 1858 và đền thánh tạ ơn",
+      "veracity": "codoichieu",
+      "labelled": true,
+      "result": "duyet",
+      "note": "Nguồn S2, S7 đọc lại được. Phần sự kiện (lời khấn) đã ở historicalFact; phần 'Đức Mẹ nhận lời' ở oralTradition mở bằng 'Người Công giáo Bùi Chu vẫn truyền nhau' — đúng cách mô tả niềm tin."
+    },
+    {
+      "title": "Thủy Nhai Hạ thôn — gốc tích làng Phú Nhai",
+      "veracity": "chuakiemchung",
+      "labelled": true,
+      "result": "duyet",
+      "note": "S8 còn sống, nguyên văn 'Theo truyền ngôn... nghe các cụ kể lại'. oralTradition mở bằng 'Theo lời các cụ trong vùng kể lại'."
+    },
+    {
+      "title": "Cuộc xổ số toàn quốc năm 1930",
+      "veracity": "chuakiemchung",
+      "labelled": true,
+      "result": "duyet",
+      "note": "S1 còn sống, có câu này (không chú thích). Không nguồn A/B nào bác bỏ. Nhãn 'Một số bài viết chép lại rằng' là nhãn thuật lại, chấp nhận được."
+    },
+    {
+      "title": "'Lớn nhất Đông Dương' rồi 'lớn nhất Đông Nam Á'",
+      "veracity": "chuakiemchung",
+      "labelled": true,
+      "result": "duyet",
+      "note": "'Đông Dương' có ở S2; 'Đông Nam Á' có ở S6 và S15 (không phải S13/S14 như hồ sơ ghi). oralTradition ghi rõ 'đó là cách nói lưu hành rộng, chưa có số liệu so sánh đi kèm' — đúng ngăn."
+    }
+  ],
+  "issues": [
+    {
+      "level": "chan",
+      "issue": "Vế 'và là Tiểu Vương cung Thánh đường đầu tiên ở miền Bắc' chỉ dẫn S15, S15 mở ra không có câu này (tiêu chí B2)",
+      "where": "significance, câu 1",
+      "fix": "Bỏ vế này (conditions[1]). Khảo cứu có thể bổ sung lại ở lượt sau nếu tìm được nguồn nêu thẳng."
+    },
+    {
+      "level": "nang",
+      "issue": "'quật đổ cùng 48 nhà thờ khác' lệch nguyên văn S2 ('làm đổ 48 nhà thờ, trong đó có đền thánh Phú Nhai') — thành 49 nhà thờ",
+      "where": "historicalFact, câu 4",
+      "fix": "Sửa câu chữ theo conditions[0]"
+    },
+    {
+      "level": "nhe",
+      "issue": "Bảng sources[] của hồ sơ gán sai nội dung cho S14 (không có 'Đông Nam Á') và S13 không đọc được (403)",
+      "where": "khao-cuu.json sources S13, S14; claims của oralTradition",
+      "fix": "Không ảnh hưởng dữ liệu vì S13, S14 không vào trường sources. Ghi nhận cho lượt khảo cứu sau: nguồn đúng của 'lớn nhất Đông Nam Á' là S6, S15."
+    },
+    {
+      "level": "nhe",
+      "issue": "Claim năm 1881 gán S2, S4 cho chi tiết 'chín gian, cột lim' mà hai nguồn này không có",
+      "where": "historicalFact claims[2]",
+      "fix": "S1 đã chứa đủ nên không phải sửa văn bản. Ghi nhận."
+    },
+    {
+      "level": "nhe",
+      "issue": "Mốc khánh thành ngôi thứ ba 1922 (S1, S4, S5) hay 8/12/1923 (S2, S7, S14, Wikipedia en) chưa thống nhất",
+      "where": "historicalFact, câu 4",
+      "fix": "Chấp nhận 8/12/1923 theo trang giáo phận. Không chặn."
+    },
+    {
+      "level": "nhe",
+      "issue": "elevation '10m' không có nguồn",
+      "where": "record.elevation (giunguyen)",
+      "fix": "Không nằm trong approved.fields nên giữ nguyên bản cũ; ghi nhận ở unknowns."
+    },
+    {
+      "level": "nhe",
+      "issue": "check-sources thoát mã 1 vì S13 chết (403 Cloudflare)",
+      "where": "S13",
+      "fix": "S13 không vào dữ liệu; đã kiểm lại bằng WebFetch, vẫn 403. Không chặn."
+    }
+  ],
+  "conditions": [
+    "Trong historicalFact, thay nguyên cụm 'nhưng bị trận bão năm 1929 quật đổ cùng 48 nhà thờ khác trong giáo phận.' bằng 'nhưng bị trận bão năm 1929 quật đổ; trận bão ấy làm đổ 48 nhà thờ trong giáo phận, trong đó có đền thánh Phú Nhai.' (theo nguyên văn S2). Phần còn lại của historicalFact giữ đúng giá trị đề xuất trong khao-cuu.json.",
+    "Trong significance, thay nguyên cụm 'Đức Mẹ Vô Nhiễm Nguyên Tội, bổn mạng giáo phận, và là Tiểu Vương cung Thánh đường đầu tiên ở miền Bắc.' bằng 'Đức Mẹ Vô Nhiễm Nguyên Tội, bổn mạng giáo phận.' Phần còn lại của significance giữ đúng giá trị đề xuất.",
+    "Các trường architect, oralTradition, title, location, lat (20.3), lng (106.3632), sources dùng đúng giá trị đề xuất trong khao-cuu.json, không sửa thêm.",
+    "Trường sources của dữ liệu gồm đúng bốn nguồn S1, S2, S4, S5 như giá trị đề xuất; không đưa S13, S14, S15, S16 vào.",
+    "Dùng File:Vương cung thánh đường Phú Nhai.JPG (bản tải sẵn docs/khao-cuu/phunhai/anh/phunhai-mat-tien.jpg) làm realImage, realImageCaption đúng caption đề xuất trong images[0].",
+    "Dùng File:Nội thất vương cung thánh đường Phú Nhai.JPG (anh/phunhai-3-noi-that.jpg) và File:Lăng hài cốt tử đạo Phú Nhai.JPG (anh/phunhai-2-lang-tu-dao.jpg) làm galleryImages, đúng caption đề xuất trong images[1] và images[2].",
+    "Không sửa year, elevation, region, diocese, diemStatue5, constellationRole và CONSTELLATION_VERSIONS."
+  ],
+  "approved": {
+    "fields": [
+      "historicalFact",
+      "architect",
+      "significance",
+      "oralTradition",
+      "lat",
+      "lng",
+      "location",
+      "title",
+      "sources",
+      "realImage",
+      "galleryImages"
+    ],
+    "sources": ["S1", "S2", "S4", "S5"],
+    "images": [
+      "File:Vương cung thánh đường Phú Nhai.JPG",
+      "File:Nội thất vương cung thánh đường Phú Nhai.JPG",
+      "File:Lăng hài cốt tử đạo Phú Nhai.JPG"
+    ],
+    "folklore": [
+      "Lời khấn năm 1858 và đền thánh tạ ơn",
+      "Thủy Nhai Hạ thôn — gốc tích làng Phú Nhai",
+      "Cuộc xổ số toàn quốc năm 1930",
+      "'Lớn nhất Đông Dương' rồi 'lớn nhất Đông Nam Á'"
+    ],
+    "constellation": false
+  },
+  "impact": {
+    "Số lượng linh địa": "không đổi (cập nhật bản ghi phunhai đã có)",
+    "CONSTELLATION_VERSIONS": "không đổi — phunhai vẫn là node đầu của V4, không thuộc V1/V2",
+    "Toạ độ": "dịch khoảng 4,5km về đúng toà nhà thờ (toạ độ cũ trỏ vào nhà thờ Lục Thủy); đoạn V4 phunhai → lavang dài thay đổi không đáng kể",
+    "Nguồn trong dữ liệu": "2 → 4 (bỏ link tìm kiếm Google, thêm trang giáo phận, trang xã, VOV5)",
+    "Ảnh thực địa": "lần đầu có realImage và 2 ảnh galleryImages cho bản ghi này (chép từ docs/khao-cuu/phunhai/anh/ sang src/assets/real_photos/)",
+    "Tài liệu phải cập nhật": ["docs/marian-sites-missing-info.md"]
+  },
+  "validation": {
+    "command": "node .claude/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/phunhai/khao-cuu.json --allow-existing-id",
+    "output": "KIEM TRA: phunhai (docs/khao-cuu/phunhai/khao-cuu.json)\n\nCANH BAO (1) — khong chan, nhung nen xu ly:\n  ! [phunhai] lat chi co 1 chu so thap phan — do chinh xac qua tho cho mot linh dai\n\n=> DAT toan bo rang buoc bat buoc."
+  }
+}

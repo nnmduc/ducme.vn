@@ -852,12 +852,12 @@ export const MARIAN_STATUES_DATA = [
   {
     "id": "phunhai",
     "name": "Vương Cung Thánh Đường Phú Nhai",
-    "title": "Đại Vương Cung Thánh Đường Đức Mẹ Vô Nhiễm Nguyên Tội Phú Nhai",
+    "title": "Vương Cung Thánh Đường Đức Mẹ Vô Nhiễm Nguyên Tội Phú Nhai",
     "year": 1866,
-    "lat": 20.3275,
-    "lng": 106.3317,
+    "lat": 20.3,
+    "lng": 106.3632,
     "elevation": "10m",
-    "location": "Xã Xuân Phương, huyện Xuân Trường, tỉnh Nam Định",
+    "location": "Làng Phú Nhai, xã Xuân Hưng, tỉnh Ninh Bình (trước 2025: xã Xuân Phương, huyện Xuân Trường, tỉnh Nam Định)",
     "region": "Đồng bằng sông Hồng",
     "diocese": "Giáo phận Bùi Chu",
     "diemStatue5": false,
@@ -871,21 +871,42 @@ export const MARIAN_STATUES_DATA = [
         "code": "NAT-17"
       }
     },
-    "historicalFact": "Lịch sử xây dựng từ năm 1866 sau khi chấm dứt thời kỳ cấm đạo triều Tự Đức. Ngôi thánh đường hiện nay được khánh thành năm 1933 theo phong cách kiến trúc Gothic hùng vĩ dài 80m, tháp chuông cao 44m. Ngày 14/01/2008, Tòa Thánh nâng lên bậc Tiểu Vương Cung Thánh Đường, là một trong những thánh đường Công giáo lớn nhất Đông Nam Á.",
-    "oralTradition": "Ngôi sao sáng đại diện cho cái nôi đón nhận Tin Mừng lâu đời nhất ở đồng bằng Bắc Bộ.",
-    "architect": "Kiến trúc Gothic kinh điển với các mái vòm vút cao, hệ thống kính màu tráng lệ và hai tháp chuông uy nghiêm.",
-    "significance": "Kỳ quan kiến trúc tôn giáo hàng đầu miền Bắc.",
-    "realImage": null,
-    "realImageCaption": null,
-    "galleryImages": [],
+    "historicalFact": "Năm 1858, giữa thời cấm đạo, Giám mục Valentinô Berrio-Ochoa Vinh và cha chính Emmanuel Riaño Hòa dâng Giáo phận Bùi Chu cho Đức Maria Vô Nhiễm Nguyên Tội, khấn hứa nếu giáo phận được bình an sẽ nhận Người làm bổn mạng và xây một thánh đường xứng đáng dâng kính Người. Năm 1866, sau khi triều Tự Đức chấm dứt lệnh cấm đạo, cha Hòa dựng tại Phú Nhai ngôi nhà thờ đầu tiên bằng gỗ, lợp bổi. Năm 1881, khi đã làm giám mục, ngài khởi công ngôi thánh đường thứ hai kiểu Á Đông, chín gian, cột lim, có hai tháp chuông. Ngôi thánh đường Gothic thứ ba do cha chính Y thiết kế, khánh thành ngày 8/12/1923 với chiều dài 88m và hai tháp cao 30m, nhưng bị trận bão năm 1929 quật đổ; trận bão ấy làm đổ 48 nhà thờ trong giáo phận, trong đó có đền thánh Phú Nhai. Công cuộc tái thiết hoàn tất năm 1933; ngày 7/12/1933, Giám mục Pedro Muñagorri Trung xức dầu thánh hiến đền thánh dâng kính Đức Mẹ Vô Nhiễm Nguyên Tội. Từ tháng 11/1949 đến tháng 6/1953, quân viễn chinh Pháp chiếm đóng khu nhà thờ làm đồn bốt. Công trình được đại trùng tu từ 17/3/2003 đến 26/9/2004. Ngày 12/8/2008, nhân kỷ niệm 150 năm dâng giáo phận cho Đức Mẹ, Tòa Thánh ban tước hiệu Tiểu Vương cung Thánh đường; sắc lệnh được Giám mục Giuse Hoàng Văn Tiệm công bố ngày 8/12/2008.",
+    "oralTradition": "Người Công giáo Bùi Chu vẫn truyền nhau về lời khấn năm 1858 như một lời hứa đã được Đức Mẹ nhận lời: giữa lúc bách hại ác liệt nhất, Đức cha Vinh và cha chính Hòa hứa rằng nếu giáo phận được bình an sẽ nhận Mẹ làm bổn mạng và dựng một đền thờ nguy nga; các bài viết của giáo phận chép lại rằng “lời khấn hứa đã được Đức Mẹ nhận lời”, và ngôi đền thánh hôm nay được người trong xứ coi là lời tạ ơn ấy. Theo lời các cụ trong vùng kể lại, khoảng thế kỷ XIII có mấy ông tên Tổng, Huyện, Điện, Bành từ miền Tam Đảo về khai khẩn bãi ven sông, lập nên làng Thủy Nhai; đến khoảng thế kỷ XV, theo gia phả, dòng họ Đinh từ Thủy Nhai dời xuống phía nam lập Thủy Nhai Hạ thôn — tức xứ Phú Nhai ngày nay. Một số bài viết chép lại rằng để có tiền dựng lại thánh đường sau trận bão 1929, năm 1930 giáo phận đã mở một cuộc xổ số trên toàn quốc. Còn niềm tự hào lưu truyền lâu nhất có lẽ là lời khen rằng đền thánh 1933 “lớn lao và đồ sộ nhất Đông Dương” — ngày nay báo chí, trang du lịch quen gọi là “Tiểu Vương cung Thánh đường lớn nhất Đông Nam Á”; đó là cách nói lưu hành rộng, chưa có số liệu so sánh đi kèm.",
+    "architect": "Thánh đường theo phong cách Gothic kiểu Pháp, dài 80m, rộng 27m, mái cao 30m, hai tháp chuông mặt tiền cao 44m, diện tích sàn khoảng 2.160m². Trong tháp có bốn quả chuông đúc tại Pháp; Wikipedia tiếng Việt ghi trọng lượng 2.000kg, 1.200kg, 600kg và 100kg, quả lớn nhất chỉ đánh vào dịp đại lễ. Giữa khung Gothic là nhiều chi tiết Á Đông: chữ Hán trang trí quanh các ô kính, búp sen trên mái vòm. Trước mặt tiền, bên phải là đài Thánh Đa Minh cao 17m (riêng phần tượng 2,3m), bên trái là lăng hài cốt các vị tử đạo quê Phú Nhai cao 15m; quanh nhà thờ có phù điêu 14 chặng Đàng Thánh Giá. Ngôi thánh đường Gothic trước đó (1923) do cha chính Y thiết kế và chỉ huy xây dựng; người thiết kế ngôi đền thánh tái thiết năm 1933 thì chưa nguồn nào nêu tên.",
+    "significance": "Đền thánh Phú Nhai là công trình hiện thực hóa lời khấn năm 1858 của Giáo phận Bùi Chu với Đức Mẹ Vô Nhiễm Nguyên Tội, bổn mạng giáo phận. Giáo xứ Phú Nhai là quê hương của sáu trong 117 Thánh Tử đạo Việt Nam: bốn linh mục Dòng Đa Minh Vinhsơn Phạm Hiếu Liêm, Tôma Đinh Viết Dụ, Vinhsơn Đỗ Yến, Đaminh Đinh Đức Mậu và hai giáo dân Đaminh Đinh Đạt, Giuse Trần Văn Tuấn. Hằng năm, lễ kỷ niệm cung hiến (7/12) và lễ Đức Mẹ Vô Nhiễm Nguyên Tội (8/12) là dịp hành hương lớn của giáo phận.",
+    "realImage": "assets/real_photos/phunhai.jpg",
+    "realImageCaption": "Mặt tiền Vương cung Thánh đường Phú Nhai, bên trái lăng tử đạo, bên phải đài Thánh Đa Minh (Ảnh: Hoangvantoanajc, 2011 — Nguồn: Wikimedia Commons, CC BY-SA 3.0)",
+    "galleryImages": [
+      {
+        "image": "assets/real_photos/phunhai-2.jpg",
+        "caption": "Nội thất Vương cung Thánh đường Phú Nhai nhìn về cung thánh (Ảnh: Hoangvantoanajc, 2011 — Nguồn: Wikimedia Commons, CC BY-SA 3.0)"
+      },
+      {
+        "image": "assets/real_photos/phunhai-3.jpg",
+        "caption": "Lăng lưu giữ hài cốt các vị tử đạo quê Phú Nhai trước thánh đường (Ảnh: Hoangvantoanajc, 2011 — Nguồn: Wikimedia Commons, CC BY-SA 3.0)"
+      }
+    ],
     "sources": [
           {
-                "title": "Vương cung thánh đường Phú Nhai - Wikipedia",
-                "url": "https://vi.wikipedia.org/wiki/Vương_cung_thánh_đường_Phú_Nhai"
+                "title": "Vương cung thánh đường Phú Nhai - Wikipedia tiếng Việt",
+                "url": "https://vi.wikipedia.org/wiki/Vương_cung_thánh_đường_Phú_Nhai",
+                "tier": "B"
           },
           {
-                "title": "Đại Vương cung Thánh đường Phú Nhai - GP Bùi Chu",
-                "url": "https://www.google.com/search?q=site:gpbuichu.org+\"Phú+Nhai\""
+                "title": "Giới thiệu Giáo phận Bùi Chu - Trang tin Giáo phận Bùi Chu",
+                "url": "https://gpbuichu.org/index.php/giao-phan/Gioi-thieu-Giao-phan.html",
+                "tier": "B"
+          },
+          {
+                "title": "Lịch sử hình thành và phát triển của Nhà thờ Phú Nhai - Cổng thông tin xã Xuân Hưng, Ninh Bình",
+                "url": "https://xuanhung.ninhbinh.gov.vn/2025/08/05/lich-su-hinh-thanh-va-phat-trien-cua-nha-tho-phu-nhai/",
+                "tier": "B"
+          },
+          {
+                "title": "Nhà thờ Phú Nhai, một trong 4 Tiểu Vương cung Thánh đường ở Việt Nam - VOV5",
+                "url": "https://vovworld.vn/vi-VN/viet-nam-dat-nuoc-con-nguoi/nha-tho-phu-nhai-mot-trong-4-tieu-vuong-cung-thanh-duong-o-viet-nam-817620.vov",
+                "tier": "B"
           }
     ]
   },
