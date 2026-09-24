@@ -2,7 +2,7 @@
   "schema": "ducme.quy-trinh/v1",
   "id": "phunhai",
   "started": "2026-09-24T06:42:58.507Z",
-  "updated": "2026-09-24T06:53:57.233Z",
+  "updated": "2026-09-24T07:02:41.147Z",
   "status": "dangchay",
   "rounds": 1,
   "maxRounds": 2,
@@ -20,6 +20,15 @@
       "result": "xong",
       "agent": null,
       "note": "16 nguon, 4 chuyen ke, 3 anh de xuat; sua toa do, ngay phong, title"
+    },
+    {
+      "at": "2026-09-24T07:02:41.015Z",
+      "step": "kiemchung",
+      "mode": "moi",
+      "round": 1,
+      "result": "xong",
+      "agent": null,
+      "note": "AP_DUNG_CO_DIEU_KIEN 33/40; 2 loi trich nguon phai sua"
     }
   ],
   "decisions": [
@@ -29,14 +38,21 @@
       "mode": "moi",
       "why": "Chưa có docs/khao-cuu/<id>/khao-cuu.json — khảo cứu từ đầu",
       "verdict": null
+    },
+    {
+      "at": "2026-09-24T06:53:57.233Z",
+      "step": "kiemchung",
+      "mode": "moi",
+      "why": "Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng",
+      "verdict": null
     }
   ],
   "final": {},
   "pending": {
-    "at": "2026-09-24T06:53:57.233Z",
-    "step": "kiemchung",
-    "mode": "moi",
-    "why": "Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng",
-    "verdict": null
+    "at": "2026-09-24T07:02:41.147Z",
+    "step": "trienkhai",
+    "mode": null,
+    "why": "Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN",
+    "verdict": "AP_DUNG_CO_DIEU_KIEN"
   }
 }

@@ -19,7 +19,7 @@ Dung) và quy chuẩn đóng góp tại [`CONTRIBUTING.md`](../CONTRIBUTING.md) 
   CONTRIBUTING.md) nhưng chỉ là kết quả tìm kiếm, không phải một bài viết/trang cụ thể. Nên thay bằng
   liên kết trực tiếp khi tìm được nguồn thật.
 
-## 1. Chưa có ảnh thực địa (5/17 linh địa)
+## 1. Chưa có ảnh thực địa (4/17 linh địa)
 
 Ưu tiên cao nhất theo `CONTRIBUTING.md` mục 2.A. Cần ảnh chụp thật (chính diện tượng + toàn cảnh linh
 đài), giấy phép CC-BY-SA/CC-BY/Public Domain hoặc do người chụp tự nguyện phát hành.
@@ -27,7 +27,6 @@ Dung) và quy chuẩn đóng góp tại [`CONTRIBUTING.md`](../CONTRIBUTING.md) 
 | id | Tên linh địa | Giáo phận | Ghi chú thực địa |
 |---|---|---|---|
 | `honchong` | Đức Mẹ Hòn Chông (Kiên Giang) | GP Long Xuyên | Thắng cảnh du lịch, khả năng có ảnh du khách chụp |
-| `phunhai` | Vương Cung Thánh Đường Phú Nhai | GP Bùi Chu | Công trình nổi tiếng, nhiều khả năng đã có ảnh trên Wikimedia Commons — ưu tiên kiểm tra trước khi đi khảo sát thực địa |
 | `saobiendanang` | Đức Mẹ Sao Biển (Đà Nẵng) | GP Đà Nẵng | Bãi biển Mỹ Khê, dễ tiếp cận |
 | `trinhphong` | Đức Mẹ Trinh Phong | GP Nha Trang | Đèo Ngoạn Mục, đã có hành hương trở lại từ 2007 |
 | `phuonghoang` | Đức Mẹ Phượng Hoàng | GP Kon Tum | Vị trí hẻo lánh trên núi biên giới — khó khảo sát nhất trong danh sách |
@@ -40,7 +39,7 @@ thể. Cần thay bằng nguồn trực tiếp (trang giáo phận, báo, kỷ y
 Hiện không có linh địa nào thuộc diện này (0/2 nguồn trực tiếp).
 
 Các linh địa sau chỉ có **một** nguồn trực tiếp, nguồn còn lại là link tìm kiếm — nên bổ sung thêm ít
-nhất một nguồn trực tiếp nữa: `phunhai`, `saobiendanang`, `trakieu`, `trinhphong`, `giangson`,
+nhất một nguồn trực tiếp nữa: `saobiendanang`, `trakieu`, `trinhphong`, `giangson`,
 `ducbasaigon`, `phuonghoang`, `tapao`.
 
 ## 3. Nội dung mỏng nhất (dưới 150 từ) — cần khảo cứu bổ sung trước
@@ -51,9 +50,8 @@ trong `project-overview-pdr.md` mục 3.
 | Thứ tự | id | Tên linh địa | Số từ ước tính |
 |---|---|---|---|
 | 1 | `baidau` | Đức Mẹ Bãi Dâu | 105 |
-| 2 | `phunhai` | Vương Cung Thánh Đường Phú Nhai | 120 |
-| 3 | `saobiendanang` | Đức Mẹ Sao Biển (Đà Nẵng) | 140 |
-| 4 | `trakieu` | Đức Mẹ Trà Kiệu | 143 |
+| 2 | `saobiendanang` | Đức Mẹ Sao Biển (Đà Nẵng) | 140 |
+| 3 | `trakieu` | Đức Mẹ Trà Kiệu | 143 |
 
 Các linh địa còn lại (166–206 từ): `trinhphong`, `giangson`, `ducbasaigon`, `phuonghoang`, `thacmo`,
 `lavang`, `tapao` — vẫn dưới mốc cạnh tranh ~300 từ nhưng độ ưu tiên thấp hơn.
@@ -64,12 +62,11 @@ Các linh địa dưới đây thiếu đồng thời cả ba mặt (ảnh, ngu�
 góp có tác động cao nhất:
 
 1. **`saobiendanang`** — Đức Mẹ Sao Biển: không ảnh, 1 nguồn trực tiếp, 140 từ.
-2. **`phunhai`** — Vương Cung Thánh Đường Phú Nhai: không ảnh, 1 nguồn trực tiếp, 120 từ.
 
 ## 5. Đã tương đối đầy đủ (không cần ưu tiên)
 
 Có ảnh thực địa và ≥2 nguồn, kể cả khi vẫn còn mỏng: `lavang`, `mangden`, `giangson`, `thacmo`,
-`tapao`, `ducbasaigon`, `fatimavinhlong`, `binhtrieu`, `lama`, `nuicui`. Vẫn hoan nghênh bổ sung nếu có tư liệu mới, nhưng không phải
+`tapao`, `ducbasaigon`, `fatimavinhlong`, `binhtrieu`, `lama`, `nuicui`, `phunhai` (ảnh chính + 2 ảnh phụ Wikimedia Commons, 4 nguồn trực tiếp, khoảng 750 từ). Vẫn hoan nghênh bổ sung nếu có tư liệu mới, nhưng không phải
 việc cấp thiết.
 
 ---
