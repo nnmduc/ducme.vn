@@ -1,0 +1,74 @@
+{
+  "schema": "ducme.quy-trinh/v1",
+  "id": "saobiendanang",
+  "started": "2026-09-24T15:10:50.813Z",
+  "updated": "2026-09-24T15:43:24.334Z",
+  "status": "hoanthanh",
+  "rounds": 1,
+  "maxRounds": 2,
+  "fixes": 0,
+  "maxFixes": 2,
+  "options": {
+    "pr": true
+  },
+  "steps": [
+    {
+      "at": "2026-09-24T15:25:13.298Z",
+      "step": "khaocuu",
+      "mode": "moi",
+      "round": 1,
+      "result": "xong",
+      "agent": null,
+      "note": "DONE_WITH_CONCERNS: 16 nguon (7 vao ban ghi), 7 chuyen ke, 4 anh de xuat; lich su dua chu yeu vao GSR 2015"
+    },
+    {
+      "at": "2026-09-24T15:35:29.175Z",
+      "step": "kiemchung",
+      "mode": "moi",
+      "round": 1,
+      "result": "xong",
+      "agent": null,
+      "note": "AP_DUNG_CO_DIEU_KIEN 34/40, 7 dieu kien; 4 anh duyet"
+    },
+    {
+      "at": "2026-09-24T15:41:54.874Z",
+      "step": "trienkhai",
+      "mode": null,
+      "round": 1,
+      "result": "xong",
+      "agent": null,
+      "note": "Commit 7f0b6c1: 482 PASS, build 23 trang; 7 dieu kien da lam; 4 anh (<1000px, da duoc kiem chung chap nhan)"
+    }
+  ],
+  "decisions": [
+    {
+      "at": "2026-09-24T15:10:50.871Z",
+      "step": "khaocuu",
+      "mode": "moi",
+      "why": "Chưa có docs/khao-cuu/<id>/khao-cuu.json — khảo cứu từ đầu",
+      "verdict": null
+    },
+    {
+      "at": "2026-09-24T15:25:13.429Z",
+      "step": "kiemchung",
+      "mode": "moi",
+      "why": "Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng",
+      "verdict": null
+    },
+    {
+      "at": "2026-09-24T15:35:29.280Z",
+      "step": "trienkhai",
+      "mode": null,
+      "why": "Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN",
+      "verdict": "AP_DUNG_CO_DIEU_KIEN"
+    }
+  ],
+  "final": {
+    "status": "hoanthanh",
+    "note": "",
+    "branch": "claude/full-pipeline-duc-me-sao-bien-e069ft",
+    "pr": "https://github.com/nnmduc/ducme.vn/pull/19"
+  },
+  "pending": null,
+  "ended": "2026-09-24T15:43:24.334Z"
+}
