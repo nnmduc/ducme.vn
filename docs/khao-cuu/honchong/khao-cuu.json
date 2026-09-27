@@ -3,39 +3,51 @@
   "id": "honchong",
   "name": "Đức Mẹ Hòn Chông (Kiên Giang)",
   "kind": "capnhat",
-  "researcher": "Antigravity (phiên khảo cứu 2026-09-12)",
-  "date": "2026-09-12",
-  "scope": "Bổ sung nguồn gốc lịch sử khởi lập năm 1959, đối chiếu mốc niên đại 1963, cập nhật toạ độ chính xác từ OpenStreetMap, bổ sung tư liệu văn xuôi toàn diện (lịch sử, kiến trúc, truyền tụng, ý nghĩa), thay 2 link tìm kiếm Google bằng 4 nguồn trực tiếp, và đề xuất 1 ảnh thực địa xác thực.",
+  "researcher": "Claude Opus 5.5 (phiên khảo cứu 2026-09-24, marian-research)",
+  "date": "2026-09-24",
+  "scope": "Bản cập nhật: ưu tiên tìm ảnh thực địa đạt chuẩn (≥1000px, trang nguồn kiểm được) cho khuôn viên Tượng Đài Đức Mẹ Nữ Vương Hòa Bình Hòn Chông; đọc lại nguyên văn lược sử giáo xứ để đối chiếu từng câu của bản ghi hiện có; cập nhật địa giới hành chính sau 01/7/2025; ghi nhận hiện trạng nhà thờ đá đã xây lại; tách các ý không nguồn của bản cũ. Vòng bổ sung 2026-09-24 sau kiểm chứng vòng 1: áp dụng các điều kiện câu chữ và quyết định ảnh mới của người dùng (nới ngưỡng 800px tạm thời, ưu tiên ảnh tượng có nguồn đầy đủ).",
   "baseline": {
     "hasPhoto": false,
-    "directSources": 0,
-    "searchSources": 2,
-    "totalWords": 100,
+    "directSources": 4,
+    "searchSources": 0,
+    "totalWords": 784,
     "missing": [
-      "ảnh thực địa",
-      "nguồn trực tiếp (chỉ có link tìm kiếm)",
-      "nội dung mỏng (100/300 từ)"
+      "ảnh thực địa"
     ]
   },
   "fields": [
     {
-      "field": "year",
+      "field": "title",
       "action": "sua",
-      "value": 1959,
-      "note": "Sửa từ 1963 sang 1959. Nguồn Lược sử Giáo xứ Hòn Chông ghi rõ sự kiện đặt Tượng Đài Đức Mẹ Nữ Vương Hoà Bình diễn ra vào ngày 08/12/1959 do Đức Cha Phaolô Nguyễn Văn Bình chủ sự và TT Ngô Đình Diệm hiện diện nhân dịp bế mạc Năm Thánh Mẫu 1959.",
+      "value": "Tượng Đài Đức Mẹ Nữ Vương Hòa Bình - Giáo xứ Hòn Chông",
+      "note": "Bản cũ \"Linh Đài Đức Mẹ Hòn Chông - Đền Thánh Nữ Vương Hòa Bình\": chưa nguồn nào gọi nơi này là \"Đền Thánh\". Nguồn gọi là \"Tượng Đài Đức Mẹ Nữ Vương Hoà Bình\" / \"Đài Đức Mẹ\" (S2), \"tượng đài Đức Maria\" (S3).",
       "claims": [
         {
-          "text": "Tượng đài Đức Mẹ Nữ Vương Hoà Bình tại Hòn Chông được làm phép và đặt vào ngày 08/12/1959",
+          "text": "Tên \"Tượng Đài Đức Mẹ Nữ Vương Hoà Bình\" và \"Đài Đức Mẹ Nữ Vương Hoà Bình\"",
           "sources": [
             "S2"
           ],
           "confidence": "cao"
         },
         {
-          "text": "Nghi thức làm phép do Đức Cha Phaolô Nguyễn Văn Bình, Giám mục Cần Thơ, chủ sự cùng sự hiện diện của Tổng thống Ngô Đình Diệm",
+          "text": "Tước hiệu Nữ Vương Hòa Bình, bổn mạng giáo xứ ngày 01/01",
           "sources": [
             "S2",
-            "S6"
+            "S4"
+          ],
+          "confidence": "cao"
+        }
+      ]
+    },
+    {
+      "field": "year",
+      "action": "giunguyen",
+      "note": "1959 là năm đặt tượng đài; giáo xứ có từ 1931 nhưng linh địa Đức Mẹ khởi lập 1959.",
+      "claims": [
+        {
+          "text": "Tượng Đài Đức Mẹ Nữ Vương Hoà Bình được đặt ngày 08/12/1959",
+          "sources": [
+            "S2"
           ],
           "confidence": "cao"
         }
@@ -43,44 +55,41 @@
     },
     {
       "field": "lat",
-      "action": "sua",
-      "value": 10.1582,
-      "note": "Cập nhật từ 10.1477 (ước lượng cũ tại Bãi Giếng) sang 10.1582 theo node 2331791879 trên OpenStreetMap, định vị chính xác khuôn viên Nhà thờ và Linh đài Hòn Chông.",
+      "action": "giunguyen",
+      "note": "Toạ độ là điểm OSM của nhà thờ; tượng nằm trong cùng khuôn viên (ước chừng dưới 100m). Chưa có nguồn thứ hai độc lập với OSM (Nominatim cùng dữ liệu).",
       "claims": [
         {
-          "text": "Toạ độ vĩ độ 10.1582°B định vị chính xác vị trí Nhà thờ và Linh đài Hòn Chông",
+          "text": "Vĩ độ 10.1582 (node OSM 10.1582055)",
           "sources": [
             "S5"
           ],
-          "confidence": "cao"
+          "confidence": "trungbinh"
         }
       ]
     },
     {
       "field": "lng",
-      "action": "sua",
-      "value": 104.6113,
-      "note": "Cập nhật từ 104.6067 sang 104.6113 theo dữ liệu OpenStreetMap.",
+      "action": "giunguyen",
       "claims": [
         {
-          "text": "Toạ độ kinh độ 104.6113°Đ định vị chính xác vị trí Nhà thờ và Linh đài Hòn Chông",
+          "text": "Kinh độ 104.6113 (node OSM 104.6112725)",
           "sources": [
             "S5"
           ],
-          "confidence": "cao"
+          "confidence": "trungbinh"
         }
       ]
     },
     {
       "field": "elevation",
       "action": "sua",
-      "value": "10m",
-      "note": "Khuôn viên nhà thờ và linh đài nằm ở vùng đồng bằng ven biển chân núi đá vôi; sửa từ mức ước tính cũ 30m sang 10m cho sát thực địa ven mép nước biển Tây.",
+      "value": "Khoảng 10m (chân núi, sát biển Hà Tiên – Kiên Lương)",
+      "note": "Bản cũ \"10m\" không có nguồn; SRTM 30m cho 11 m.",
       "claims": [
         {
-          "text": "Cao độ thực địa khu vực linh đài ven biển chân núi khoảng 10m so với mực nước biển",
+          "text": "Độ cao mô hình SRTM tại toạ độ là 11 m",
           "sources": [
-            "S5"
+            "S20"
           ],
           "confidence": "trungbinh"
         }
@@ -89,31 +98,21 @@
     {
       "field": "location",
       "action": "sua",
-      "value": "Ấp Hòn Chông, xã Bình An, huyện Kiên Lương, tỉnh Kiên Giang",
-      "note": "Bổ sung tên ấp Hòn Chông theo đúng địa chỉ giáo xứ trong tài liệu mục vụ.",
+      "value": "Ấp Hòn Chông, xã Kiên Lương, tỉnh An Giang (trước 01/7/2025: xã Bình An, huyện Kiên Lương, tỉnh Kiên Giang), ven Đường tỉnh 971, vùng biển Hà Tiên – Kiên Lương",
+      "note": "Cập nhật theo sắp xếp hành chính 01/7/2025 (Kiên Giang nhập vào An Giang; xã Bình An nhập vào xã Kiên Lương). Tên hiển thị \"Đức Mẹ Hòn Chông (Kiên Giang)\" giữ nguyên để khỏi đổi đường dẫn — người duyệt có thể cân nhắc đổi \"(An Giang)\".",
       "claims": [
         {
-          "text": "Linh đài toạ lạc tại Ấp Hòn Chông, xã Bình An, huyện Kiên Lương, tỉnh Kiên Giang",
+          "text": "Xã Kiên Lương (An Giang) lập từ thị trấn Kiên Lương, xã Bình An, xã Bình Trị; có ấp Hòn Chông",
           "sources": [
-            "S2",
-            "S5"
+            "S10"
           ],
           "confidence": "cao"
-        }
-      ]
-    },
-    {
-      "field": "title",
-      "action": "sua",
-      "value": "Linh Đài Đức Mẹ Hòn Chông - Đền Thánh Nữ Vương Hòa Bình",
-      "note": "Bổ sung danh hiệu chính thức Nữ Vương Hòa Bình theo tước hiệu bổn mạng ngày 01/01 của giáo xứ và giáo phận.",
-      "claims": [
+        },
         {
-          "text": "Danh hiệu chính thức của đài Đức Mẹ là Đức Mẹ Nữ Vương Hòa Bình",
+          "text": "Nhà thờ nằm trên Đường tỉnh 971, Hòn Chông, xã Kiên Lương",
           "sources": [
-            "S1",
-            "S2",
-            "S3"
+            "S5",
+            "S11"
           ],
           "confidence": "cao"
         }
@@ -122,93 +121,138 @@
     {
       "field": "historicalFact",
       "action": "sua",
-      "value": "Khởi đầu từ năm 1931 khi linh mục Jean Marie Merdrignac thuộc Hội Thừa sai Hải ngoại Paris (MEP) đến mở điểm truyền giáo tại Hòn Chông, sau đó ngôi nhà thờ bằng đá kiên cố đầu tiên được xây dựng từ năm 1936 đến 1940. Sau năm 1945, linh mục Phêrô Võ Thành Trinh về coi sóc xứ đạo giai đoạn 1946–1953. Đến ngày 08/12/1959, nhân dịp bế mạc Năm Thánh Mẫu toàn quốc, Tượng Đài Đức Mẹ Nữ Vương Hoà Bình được long trọng làm phép và cung nghinh dưới sự chủ sự của Đức Cha Phaolô Nguyễn Văn Bình (lúc bấy giờ là Giám mục Địa phận Cần Thơ) cùng sự hiện diện của Tổng thống Ngô Đình Diệm và cha sở Augustinô Phan Xuân Trọng. Sau khi Giáo phận Long Xuyên được thành lập tháng 11/1960, giáo xứ thuộc về giáo phận mới dưới thời cha Antôn Lương Công Đại (từ 1962). Từ năm 1965, chiến tranh ác liệt tàn phá khiến nhà thờ đá đổ nát và giáo xứ bị bỏ hoang nhiều năm, nhưng tượng Đức Mẹ ngoài trời vẫn đứng vững. Năm 1991, nhờ sự vận động của linh mục Phêrô Võ Thành Trinh trước khi qua đời, giáo xứ được phép tái thiết; linh mục Vinhsơn Nguyễn Minh Chu về phụ trách năm 1992 từng bước quy tụ giáo dân, phục dựng đài Mẹ và phát triển cơ sở giáo dục với sự cộng tác của Tu hội Nữ Tử Bác Ái Vinh Sơn từ năm 2002. Hằng năm vào ngày 01/01 (Đại lễ Đức Maria Mẹ Thiên Chúa - Nữ Vương Hòa Bình, bổn mạng giáo phận và giáo xứ), Đức Giám mục Giáo phận Long Xuyên đều về chủ sự Thánh lễ hành hương cấp giáo phận, quy tụ từ 4.000 đến trên 5.000 tín hữu.",
-      "note": "Mở rộng từ 47 từ lên 246 từ, làm rõ nguồn gốc 1959, các giai đoạn lịch sử và truyền thống hành hương chính thức.",
+      "value": "Theo lược sử giáo xứ do linh mục chánh sở Vinhsơn Nguyễn Minh Chu biên soạn (đăng trên trang Giáo phận Long Xuyên), cộng đoàn Công giáo Hòn Chông khởi đầu từ năm 1931 với linh mục Jean-Marie Merdrignac thuộc Hội Thừa sai Paris (MEP), cha sở họ đạo Đất Hứa. Lược sử dẫn một tài liệu của Hội Thừa sai cho biết năm 1931 có khoảng 3.000 giáo dân nghèo gốc Nam Định, Ninh Bình, Thái Bình vốn làm phu đồn điền cao su và tiêu ở Phú Quốc bị bỏ rơi sau cuộc khủng hoảng kinh tế 1929; cha Merdrignac đưa họ về lập họ đạo Đất Hứa, rồi năm 1932 đến vùng Hòn Chông, Rẫy Mới, Rạch Đùng, tiếp nhận đất của một đồn điền tiêu do chủ người Pháp phá sản để lại. Nhà thờ đá Hòn Chông khởi công năm 1936, khánh thành năm 1940 và trở thành trung tâm sinh hoạt Công giáo của cả vùng Hà Tiên. Từ năm 1946 đến 1953, linh mục Phêrô Võ Thành Trinh, vừa thụ phong tại Cần Thơ, coi sóc vùng truyền giáo này. Trong thời linh mục Augustinô Phan Xuân Trọng làm chánh xứ (1958–1962), ngày 08/12/1959 diễn ra biến cố đặt Tượng Đài Đức Mẹ Nữ Vương Hòa Bình; lược sử ghi biến cố có sự hiện diện của Đức Cha Phaolô Nguyễn Văn Bình, khi ấy là Giám mục Đại diện Tông tòa Cần Thơ, và \"ông Ngô\". Giáo phận Long Xuyên được thành lập ngày 24/11/1960. Khoảng năm 1964–1965, chiến sự trong vùng trở nên ác liệt, linh mục Antôn Lương Công Đại rút về coi họ đạo Kiên Lương, giáo dân tản cư ra các hải đảo và nhà thờ Hòn Chông bị bỏ hoang; sau năm 1975, dấu tích còn lại là ngôi nhà thờ đá đổ nát và đài Đức Mẹ đứng giữa lùm cây hoang vắng. Đầu năm 1991, linh mục Võ Thành Trinh trở lại Hòn Chông và đề nghị phục hồi họ đạo. Ngày 19/04/1991, UBND tỉnh Kiên Giang ký quyết định số 29/TB-UB chấp thuận phục hồi Giáo xứ Hòn Chông; ngày 25/10/1991, Ban Tôn giáo tỉnh chấp thuận để linh mục Vinhsơn Nguyễn Minh Chu phụ trách; ngày 01/12/1991, giáo dân các xứ Hà Tiên, Kiên Lương, Hòa Giang, Đất Hứa, Rạch Đùng cùng giáo dân Hòn Chông phát quang khu nhà thờ và Đài Đức Mẹ. Ngày 31/08/1993, họ đạo nhận chuyển nhượng lại khu đất vườn 4.150 m² có Đài Đức Mẹ. Giáo xứ lần lượt mở một điểm trường (1997), xe đưa đón học sinh (1998) và trường mầm non (2002) do các nữ tu Tu hội Nữ Tử Bác Ái Vinh Sơn phụ trách; các nữ tu có mặt tại giáo xứ từ tháng 10/2002. Ngày 01/01/2012, văn thư thành lập Giáo hạt Hà Tiên được công bố ngay trong cuộc hành hương tại Hòn Chông. Ngày 01/01/2013, trong cuộc hành hương có trên 5.000 người tham dự, Đức Giám mục làm phép diện tích và viên đá đầu tiên xây dựng lại nhà thờ. Hằng năm vào ngày 01/01, lễ Đức Maria Mẹ Thiên Chúa – Nữ Vương Hòa Bình, bổn mạng của Giáo phận Long Xuyên và của giáo xứ, giáo phận tổ chức thánh lễ hành hương tại nhà thờ Hòn Chông; các năm 2025 và 2026 do Đức Giám mục giáo phận chủ sự. Từ 01/7/2025, khu vực Hòn Chông thuộc xã Kiên Lương, tỉnh An Giang.",
+      "note": "Sửa 4 chỗ của bản cũ: (1) \"Đức Cha Bình chủ sự cùng sự hiện diện của Tổng thống Ngô Đình Diệm\" -> nguồn chỉ ghi \"do Đức Cha Phaolô Bình và ông Ngô hiện diện\", nên giữ nguyên chữ \"ông Ngô\" trong ngoặc kép; (2) bỏ \"nhân dịp bế mạc Năm Thánh Mẫu toàn quốc\" và \"cung nghinh\" vì S2 không nói; (3) bỏ \"tượng Đức Mẹ ngoài trời vẫn đứng vững\" (không nguồn), thay bằng mô tả hiện trạng sau 1975 của S2; (4) 1965 -> \"khoảng 1964–1965\" vì S2 ghi cả hai. Bổ sung: gốc giáo dân phu đồn điền, các quyết định phục hồi 1991, chuộc đất có Đài Đức Mẹ 1993, Giáo hạt Hà Tiên 2012, đặt viên đá xây lại nhà thờ 2013, địa giới mới 2025. Vòng bổ sung sau kiểm chứng vòng 1: áp dụng đúng 3 điều kiện câu chữ (\"ký quyết định\" số 29/TB-UB theo nguyên văn S2; tách mốc trường mầm non 2002 với mốc các nữ tu có mặt từ 10/2002; \"Giám mục Đại diện Tông tòa Cần Thơ\" theo S6).",
       "claims": [
         {
-          "text": "Điểm truyền giáo thành lập năm 1931 bởi Lm MEP Jean Marie Merdrignac, xây nhà thờ đá kiên cố 1936–1940",
+          "text": "Lm MEP Jean-Marie Merdrignac, cha sở Đất Hứa, khởi đầu giáo điểm từ 1931",
           "sources": [
             "S2"
           ],
           "confidence": "cao"
         },
         {
-          "text": "Lm Phêrô Võ Thành Trinh coi sóc giai đoạn 1946–1953",
+          "text": "Gốc giáo dân: khoảng 3.000 phu đồn điền Phú Quốc gốc Nam Định, Ninh Bình, Thái Bình sau khủng hoảng 1929 (theo tài liệu MEP được S2 dẫn); đất đồn điền tiêu ở Hòn Chông năm 1932",
           "sources": [
             "S2"
           ],
-          "confidence": "cao"
+          "confidence": "trungbinh"
         },
         {
-          "text": "Biến cố đặt Tượng Đài Đức Mẹ Nữ Vương Hoà Bình diễn ra ngày 08/12/1959 do Đức Cha Phaolô Nguyễn Văn Bình chủ sự và TT Ngô Đình Diệm hiện diện",
+          "text": "Nhà thờ đá khởi công 1936, khánh thành 1940",
           "sources": [
             "S2",
+            "S12"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Lm Võ Thành Trinh coi sóc 1946–1953, thụ phong tại Cần Thơ 1946",
+          "sources": [
+            "S2",
+            "S9"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Biến cố đặt Tượng Đài Đức Mẹ Nữ Vương Hoà Bình ngày 08/12/1959 thời Lm Phan Xuân Trọng (1958–1962), \"do Đức Cha Phaolô Bình và ông Ngô hiện diện\"",
+          "sources": [
+            "S2"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Đức Cha Phaolô Nguyễn Văn Bình là Giám mục Đại diện Tông tòa Cần Thơ vào năm 1959",
+          "sources": [
             "S6"
           ],
           "confidence": "cao"
         },
         {
-          "text": "Sau 1960 thuộc Giáo phận Long Xuyên, cha Antôn Lương Công Đại coi sóc từ 1962",
+          "text": "Giáo phận Long Xuyên thành lập 24/11/1960",
+          "sources": [
+            "S8"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Khoảng 1964–1965 giáo xứ bị bỏ hoang, Lm Lương Công Đại rút về Kiên Lương; sau 1975 còn nhà thờ đổ nát và đài Đức Mẹ giữa lùm cây",
           "sources": [
             "S2"
           ],
           "confidence": "cao"
         },
         {
-          "text": "Chiến tranh năm 1965 làm nhà thờ đá đổ nát, giáo xứ bỏ hoang nhưng tượng Đức Mẹ vẫn nguyên vẹn",
+          "text": "19/04/1991 UBND tỉnh Kiên Giang ký quyết định số 29/TB-UB; 25/10/1991 Ban Tôn giáo tỉnh chấp thuận Lm Nguyễn Minh Chu; 01/12/1991 phát quang khu nhà thờ và Đài Đức Mẹ; 31/08/1993 chuộc lại 4.150 m² đất có Đài Đức Mẹ",
           "sources": [
             "S2"
           ],
           "confidence": "cao"
         },
         {
-          "text": "Năm 1991 Lm Võ Thành Trinh vận động tái thiết; Lm Nguyễn Minh Chu về phụ trách từ 1992 phục dựng đài Mẹ và cơ sở bác ái",
+          "text": "Điểm trường 1997, xe đưa đón 1998, trường mầm non 2002 do các nữ tu Nữ Tử Bác Ái Vinh Sơn phụ trách; các nữ tu có mặt tại giáo xứ từ 10/2002",
           "sources": [
             "S2"
           ],
           "confidence": "cao"
         },
         {
-          "text": "Đại lễ hành hương giáo phận diễn ra định kỳ ngày 01/01 hằng năm do Đức Giám mục giáo phận chủ sự quy tụ 4.000–5.000 khách hành hương",
+          "text": "01/01/2012 công bố văn thư thành lập Giáo hạt Hà Tiên tại cuộc hành hương Hòn Chông",
+          "sources": [
+            "S4"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "01/01/2013 trên 5.000 người hành hương; Đức Giám mục làm phép viên đá đầu tiên xây dựng nhà thờ",
+          "sources": [
+            "S3"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Thánh lễ hành hương 01/01/2025 và 01/01/2026 do Đức Giám mục giáo phận chủ sự tại nhà thờ Hòn Chông",
           "sources": [
             "S1",
-            "S3",
             "S7"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Từ 01/7/2025 Hòn Chông thuộc xã Kiên Lương, tỉnh An Giang",
+          "sources": [
+            "S10"
           ],
           "confidence": "cao"
         }
       ]
     },
     {
-      "field": "architect",
+      "field": "oralTradition",
       "action": "sua",
-      "value": "Tượng Đức Mẹ Hòn Chông được tạc bằng chất liệu đá nhân tạo và xi măng trắng theo mẫu tượng Đức Mẹ Lộ Đức / Nữ Vương Hòa Bình: Mẹ đứng thẳng trang trọng, đầu đội khăn trùm trắng dài, hai tay chắp trước ngực cầu nguyện, tà áo choàng viền sắc xanh buông rủ thanh thoát. Bức tượng được tôn trí trên bệ đài đa giác ốp gạch trang nghiêm cao ráo, đặt giữa quảng trường trung tâm khuôn viên giáo xứ hướng nhìn ra vùng biển vịnh Thái Lan. Phía sau tượng đài là cụm kết cấu khánh tiết hình tam giác vươn cao với các dải màu Thánh Mẫu tỏa rộng. Liền kề với khuôn viên linh đài là phế tích ngôi nhà thờ đá Hòn Chông cổ kính xây năm 1936–1940 bằng những khối đá xẻ tự nhiên dày dặn của vùng núi đá vôi Kiên Lương — một chứng tích kiến trúc tôn giáo và chiến tranh hiếm có còn lưu giữ lại tại miền duyên hải Tây Nam Bộ. Danh tính nghệ nhân trực tiếp tạc bức tượng năm 1959 hiện chưa tìm thấy tài liệu văn khố lưu giữ.",
-      "note": "Mở rộng từ 14 từ lên 162 từ, mô tả chi tiết hình thái tượng, bệ đài, khuôn viên và mối liên hệ kiến trúc với phế tích nhà thờ đá cổ 1936–1940.",
+      "value": "Theo những lời kể lưu truyền, số phận ngôi nhà thờ đá không được thuật lại thống nhất. Một du khách chụp phế tích năm 2004 ghi lại điều nghe được tại chỗ: nhà thờ đã bị bom đạn chiến tranh phá hủy và được giữ nguyên hiện trạng. Một số bài báo mạng (Kiến Thức 2019 và 2023, được nhiều trang chép lại) thì viết rằng nhà thờ bị quân Khmer Đỏ phá hủy năm 1978 khi tràn qua biên giới, khiến hàng chục giáo dân thiệt mạng. Lược sử của chính giáo xứ không nhắc chi tiết này, chỉ ghi giáo xứ bị bỏ hoang từ khoảng 1964–1965 và sau năm 1975 chỉ còn nhà thờ đổ nát cùng đài Đức Mẹ giữa lùm cây. Trong nhiều năm, người đi đường và khách chụp ảnh quen gọi nơi này là \"nhà thờ đá Hòn Chông\" hay \"nhà thờ đổ\": những bức tường đá không mái, tháp chuông vuông còn đứng và pho tượng Đức Mẹ trắng phía sau trở thành một điểm dừng chân trên cung đường Hà Tiên – Chùa Hang – Hòn Phụ Tử.",
+      "note": "Bỏ 3 ý của bản cũ không tìm được nguồn nào: \"tượng sừng sững nguyên vẹn không vết đạn tích\", \"gắn với phong trào lập linh đài Thánh Mẫu che chở biên cương\", và các chi tiết \"hướng về Phú Quốc và hải đảo\" dạng khẳng định. Vòng bổ sung sau kiểm chứng vòng 1: xoá câu mở đầu về \"Đức Mẹ che chở người đi biển\" / chuyện cứu ngư dân Phú Quốc (nguồn duy nhất là tựa video YouTube S19, thumbnail nghi AI, không xem được nội dung) và đổi câu kế tiếp thành câu mở đầu bằng nhãn truyền tụng, đúng điều kiện 4–5 của kiểm chứng.",
       "claims": [
         {
-          "text": "Tượng Mẹ tạc theo mẫu Đức Mẹ Lộ Đức / Nữ Vương Hòa Bình, đứng thẳng chắp tay cầu nguyện, áo choàng buông rủ",
+          "text": "Chú thích ảnh 2004: nhà thờ bị bom đạn chiến tranh, giữ nguyên hiện trạng",
           "sources": [
-            "S3"
+            "S18"
           ],
-          "confidence": "cao"
+          "confidence": "trungbinh"
         },
         {
-          "text": "Tượng ngự trên bệ đài cao ráo giữa quảng trường giáo xứ, phía sau có kết cấu vòm khánh tiết tỏa dải màu Thánh Mẫu",
+          "text": "Báo mạng viết nhà thờ bị Khmer Đỏ phá năm 1978",
           "sources": [
-            "S3"
+            "S12",
+            "S13"
           ],
-          "confidence": "cao"
+          "confidence": "trungbinh"
         },
         {
-          "text": "Khuôn viên linh đài liền kề phế tích nhà thờ đá Hòn Chông xây từ 1936–1940 bằng đá núi tự nhiên",
+          "text": "Cách gọi \"nhà thờ đổ\", cảnh tường đá, tháp chuông và đài Đức Mẹ",
           "sources": [
-            "S2"
-          ],
-          "confidence": "cao"
-        },
-        {
-          "text": "Tên nghệ nhân tạc tượng năm 1959 chưa tìm thấy tài liệu lưu lại",
-          "sources": [
+            "S15",
+            "S16",
             "S2"
           ],
           "confidence": "trungbinh"
@@ -216,23 +260,46 @@
       ]
     },
     {
-      "field": "oralTradition",
+      "field": "architect",
       "action": "sua",
-      "value": "Đức Mẹ Hòn Chông được cộng đồng ngư dân duyên hải Kiên Lương và vùng vịnh Thái Lan tôn kính là Đấng che chở cho những chuyến ra khơi đánh bắt xa bờ hướng về Phú Quốc và hải đảo, gìn giữ cho ghe thuyền bình an trước sóng gió giông bão. Giáo dân địa phương còn lưu truyền giai thoại rằng suốt những năm bom đạn chiến tranh khốc liệt sau năm 1965 làm sập đổ toàn bộ phần mái và nội thất ngôi thánh đường đá cổ, chỉ riêng tượng Đức Mẹ ngoài trời vẫn sừng sững nguyên vẹn không vết đạn tích. Ngoài ra, do sự kiện Tổng thống Ngô Đình Diệm cùng Đức Cha Phaolô Nguyễn Văn Bình hiện diện tại lễ làm phép đài Mẹ ngày 08/12/1959, nhiều tín hữu địa phương qua các thế hệ thường gắn kết sự hiện diện của Đức Mẹ Hòn Chông với phong trào thiết lập các linh đài Thánh Mẫu che chở biên cương miền Nam thời kỳ đó.",
-      "note": "Mở rộng từ 28 từ lên 153 từ, phân định rành mạch giữa niềm tin dân gian về sự che chở sông nước biển khơi, giai thoại chiến tranh và cách người dân liên hệ lịch sử.",
+      "value": "Tượng Đức Mẹ Nữ Vương Hòa Bình Hòn Chông là tượng đứng ngoài trời theo dáng Đức Mẹ Lộ Đức: áo trắng, áo choàng xanh nhạt, hai tay chắp trước ngực, trên đầu có vầng hào quang (theo ảnh đại lễ 01/01/2012 trên Kỷ yếu Mẹ La Vang). Trong ảnh năm 2012, tượng đặt trên một trụ bệ vuông ốp đá có ô trang trí hình thoi, phía sau là một khối tường cao hình tam giác, phía trước là vòng cung mang hàng chữ \"Nữ Vương ban sự bình an cầu cho chúng con\". Các ảnh giới thiệu trên trang Giáo phận Long Xuyên năm 2025–2026 cho thấy vòng cung chữ này vẫn còn, sơn hai màu xanh – đỏ, với bậc cấp sơn đỏ dẫn lên bệ tượng. Chất liệu, chiều cao tượng và người tạc chưa tìm thấy trong tư liệu. Ngôi nhà thờ đá cũ (1936–1940) được xây bằng đá địa phương, kết bằng vôi, cát và mủ cây ô dước; xi măng và sắt thép vì hiếm nên chỉ dùng cho ô vòm, sàn hát, cầu thang và trét mạch chống thấm (theo lược sử giáo xứ). Ảnh chụp năm 2010 cho thấy thân nhà thờ chỉ còn những bức tường đá không mái với các ô cửa vòm, trong khi tháp chuông vuông vẫn đứng, có thánh giá trên đỉnh. Ảnh năm 2020 và ảnh giới thiệu của giáo phận năm 2025 cho thấy nhà thờ đá đã được xây dựng lại, với mặt tiền tháp chuông, bậc cấp đá và tảng đá khắc tên \"Giáo xứ Hòn Chông\"; năm hoàn thành ngôi nhà thờ mới và việc tháp chuông cũ có được giữ lại hay không chưa có nguồn xác nhận.",
+      "note": "Bỏ các chi tiết không nguồn của bản cũ: \"đá nhân tạo và xi măng trắng\", \"bệ đa giác ốp gạch\", \"hướng nhìn ra vịnh Thái Lan\", \"khối đá xẻ tự nhiên dày dặn của núi đá vôi\". Mô tả tượng dựa trên ảnh của S4 (2012) và ảnh giới thiệu S1/S7; mô tả nhà thờ dựa trên S2 và ảnh Flickr S15, S17.",
       "claims": [
         {
-          "text": "Niềm tin của ngư dân biển Tây vào sự che chở của Đức Mẹ cho các chuyến tàu thuyền đánh bắt xa bờ",
+          "text": "Dáng tượng, bệ vuông, khối tường tam giác, vòng cung chữ (ảnh 01/01/2012)",
+          "sources": [
+            "S4"
+          ],
+          "confidence": "trungbinh"
+        },
+        {
+          "text": "Vòng cung chữ xanh – đỏ và bậc cấp đỏ còn thấy trong ảnh 2025–2026",
           "sources": [
             "S1",
-            "S3"
+            "S7"
+          ],
+          "confidence": "trungbinh"
+        },
+        {
+          "text": "Vật liệu xây nhà thờ đá 1936–1940",
+          "sources": [
+            "S2"
           ],
           "confidence": "cao"
         },
         {
-          "text": "Truyền tụng dân gian về việc tượng Mẹ vẫn nguyên vẹn không vết đạn dù nhà thờ đá bị chiến tranh tàn phá",
+          "text": "Phế tích không mái và tháp chuông còn đứng năm 2010",
           "sources": [
-            "S2"
+            "S15",
+            "S16"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Nhà thờ đá đã được xây lại (ảnh 2020 và ảnh giới thiệu 2025)",
+          "sources": [
+            "S17",
+            "S7"
           ],
           "confidence": "trungbinh"
         }
@@ -241,22 +308,94 @@
     {
       "field": "significance",
       "action": "sua",
-      "value": "Là trung tâm hành hương Thánh Mẫu hạt nhân và quan trọng nhất của Giáo hạt Hà Tiên thuộc Giáo phận Long Xuyên, trấn giữ vị trí điểm mốc tâm linh thiêng liêng nơi địa đầu Tây Nam Tổ quốc nhìn ra vịnh Thái Lan. Linh đài là điểm tựa đức tin bền bỉ nơi các tín hữu tề tựu vào ngày đầu năm dương lịch để cầu nguyện cho hòa bình thế giới và đất nước, đồng thời giữ vai trò trung tâm liên kết tinh thần bác ái, hòa hợp giữa ba cộng đồng dân tộc Kinh, Khmer và Hoa cùng chung sống tại vùng duyên hải Kiên Lương.",
-      "note": "Mở rộng từ 11 từ lên 105 từ, làm rõ vị thế trung tâm hành hương giáo hạt, vai trò biểu tượng Tây Nam và ý nghĩa gắn kết ba sắc tộc.",
+      "value": "Hòn Chông là nơi Giáo phận Long Xuyên mừng lễ bổn mạng giáo phận – lễ Đức Mẹ Nữ Vương Hòa Bình ngày đầu năm dương lịch – bằng một cuộc hành hương chung: hàng nghìn tín hữu (hơn 4.000 người năm 2012, trên 5.000 người năm 2013) từ khắp giáo phận về giáo xứ nhỏ ở cực tây nam này. Trong thư gửi đoàn hành hương năm 2012, Đức Giám mục xác định lễ Đức Mẹ Nữ Vương Hòa Bình đầu năm là lễ bổn mạng giáo phận và dâng cộng đoàn cho Đức Mẹ. Cuộc hành hương còn gắn với các mốc tổ chức của vùng Hà Tiên: công bố thành lập Giáo hạt Hà Tiên (2012) và giáo họ Sơn Hải – Hòn Heo (2013). Với lịch sử gần một thế kỷ – lập họ đạo cho những người phu đồn điền thất nghiệp, bị bỏ hoang hơn hai thập niên, rồi được phục hồi từ năm 1991 – Hòn Chông là chứng tích về sự bền bỉ của một cộng đoàn nhỏ. Lược sử giáo xứ nhấn mạnh công cuộc tái thiết gắn với giáo dục và quan hệ với cư dân ba sắc tộc Việt, Khmer, Hoa trong vùng, qua điểm trường, xe đưa đón học sinh và trường mầm non không phân biệt dân tộc hay tôn giáo.",
+      "note": "Bỏ cụm \"hạt nhân và quan trọng nhất của Giáo hạt Hà Tiên\" (so sánh không nguồn).",
       "claims": [
         {
-          "text": "Là trung tâm hành hương Thánh Mẫu quan trọng nhất của Giáo hạt Hà Tiên thuộc Giáo phận Long Xuyên",
+          "text": "Lễ Đức Mẹ Nữ Vương Hòa Bình đầu năm là lễ bổn mạng GP Long Xuyên; hơn 4.000 người năm 2012",
           "sources": [
-            "S1",
-            "S3",
             "S4"
           ],
           "confidence": "cao"
         },
         {
-          "text": "Vai trò trung tâm bác ái hòa hợp cộng đồng giữa các sắc tộc Kinh, Khmer và Hoa tại vùng Kiên Lương",
+          "text": "Trên 5.000 người năm 2013; lập giáo họ Sơn Hải – Hòn Heo",
+          "sources": [
+            "S3"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Tái thiết gắn với giáo dục, ba sắc tộc Việt – Khmer – Hoa",
           "sources": [
             "S2"
+          ],
+          "confidence": "cao"
+        }
+      ]
+    },
+    {
+      "field": "realImage",
+      "action": "them",
+      "value": "assets/real_photos/honchong.jpg",
+      "note": "Đề xuất từ images[0] (honchong-ungvien-dai-me-2012-800px.jpg) — ảnh chụp thật pho tượng Đức Mẹ, 800x600. Dùng ngưỡng 800px theo quyết định của người dùng (ngoại lệ tạm thời chỉ cho honchong, xem imageSearchNote). Ảnh tháp chuông 2015 (ảnh chính cũ) chuyển xuống galleryImages. Trong record vẫn để null vì file chưa có trong src/ — marian-publish sẽ chép khi được duyệt.",
+      "claims": [
+        {
+          "text": "Ảnh đài Đức Mẹ Hòn Chông với đoàn đồng tế ngày 01/01/2012; khớp mô tả vòng cung chữ \"Nữ Vương ban sự bình an cầu cho chúng con\" và bậc cấp đỏ trong ảnh giới thiệu của giáo phận 2025–2026; bài ghi nguồn gplongxuyen.net",
+          "sources": [
+            "S4",
+            "S1",
+            "S7"
+          ],
+          "confidence": "cao"
+        }
+      ]
+    },
+    {
+      "field": "realImageCaption",
+      "action": "them",
+      "value": "Tượng Đức Mẹ Nữ Vương Hòa Bình Hòn Chông trong thánh lễ hành hương ngày 01/01/2012, Giáo xứ Hòn Chông, Giáo phận Long Xuyên (Nguồn: Giáo phận Long Xuyên – gplongxuyen.net, đăng lại trên Kỷ yếu Mẹ La Vang, melavang.info/hanh-huong-duc-me-hon-chong; không rõ tác giả)",
+      "claims": [
+        {
+          "text": "Ngày chụp (thánh lễ 01/01/2012), nguồn gplongxuyen.net và trang đăng lại lấy từ bài S4; tác giả không được ghi",
+          "sources": [
+            "S4"
+          ],
+          "confidence": "cao"
+        }
+      ]
+    },
+    {
+      "field": "galleryImages",
+      "action": "them",
+      "value": [
+        {
+          "image": "assets/real_photos/honchong-2.jpg",
+          "caption": "Tháp chuông nhà thờ đá Hòn Chông, khuôn viên Tượng Đài Đức Mẹ Nữ Vương Hòa Bình, xã Kiên Lương, An Giang, chụp 06/06/2015 (Nguồn: Flickr, phong boca – phongtruongan, flickr.com/photos/131585815@N04/18694918341; bảo lưu mọi quyền)"
+        },
+        {
+          "image": "assets/real_photos/honchong-3.jpg",
+          "caption": "Phế tích nhà thờ đá Hòn Chông và tháp chuông năm 2010 (Nguồn: Flickr, nguyenhuulongtri – NHLT.Ftb, chụp 21/08/2010; bảo lưu mọi quyền)"
+        },
+        {
+          "image": "assets/real_photos/honchong-4.jpg",
+          "caption": "Lòng phế tích nhà thờ đá Hòn Chông nhìn từ tháp chuông, năm 2010 (Nguồn: Flickr, nguyenhuulongtri – NHLT.Ftb, chụp 21/08/2010; bảo lưu mọi quyền)"
+        }
+      ],
+      "note": "Record vẫn để [] vì file chưa có trong src/. Thứ tự mới sau vòng bổ sung: honchong-2 = tháp chuông 2015 (honchong-thap-chuong-2015.jpg, trước là ảnh chính), honchong-3 = toàn cảnh phế tích 2010 (honchong-phe-tich-toan-canh-2010.jpg, đã bỏ cụm \", phía xa là đài Đức Mẹ Nữ Vương Hòa Bình\" theo điều kiện kiểm chứng), honchong-4 = lòng phế tích nhìn từ tháp chuông 2010 (honchong-phe-tich-tu-thap-chuong-2010.jpg). Lưu ý: điều kiện 6–7 của kiểm chứng vòng 1 (tháp chuông làm realImage, phế tích là honchong-2/-3) được thay bằng bố trí này theo quyết định ảnh mới của người dùng.",
+      "claims": [
+        {
+          "text": "Ảnh tháp chuông nhà thờ đá Hòn Chông trên Flickr, 06/06/2015",
+          "sources": [
+            "S14"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Hai ảnh phế tích nhà thờ năm 2010 trên Flickr",
+          "sources": [
+            "S15",
+            "S16"
           ],
           "confidence": "cao"
         }
@@ -268,30 +407,46 @@
       "value": [
         {
           "title": "Thánh lễ Hành hương Đức Mẹ Hòn Chông 2026 - Giáo phận Long Xuyên",
-          "url": "https://giaophanlongxuyen.org/tin-tuc/thanh-le-hanh-huong-duc-me-hon-chong-2026.html"
+          "url": "https://giaophanlongxuyen.org/tin-tuc/thanh-le-hanh-huong-duc-me-hon-chong-2026.html",
+          "tier": "B"
         },
         {
-          "title": "Lược sử Giáo xứ Hòn Chông - Giáo phận Long Xuyên",
-          "url": "https://trancaolan76.violet.vn/entry/nha-tho-giao-xu-hon-chong-9524201.html"
+          "title": "Lược sử Giáo xứ Hòn Chông (Lm Chánh sở Vinhsơn Nguyễn Minh Chu, nguồn: trang web Giáo phận Long Xuyên; bản chép lại trên violet.vn)",
+          "url": "https://trancaolan76.violet.vn/entry/nha-tho-giao-xu-hon-chong-9524201.html",
+          "tier": "B"
         },
         {
-          "title": "Hành hương kính Đức Mẹ tại Hòn Chông - Kỷ yếu Mẹ La Vang (dẫn nguồn gplongxuyen.net)",
-          "url": "https://melavang.info/hanh-huong-kinh-duc-me-tai-hon-chong/"
+          "title": "Hành hương kính Đức Mẹ tại Hòn Chông (01/01/2013) - Mẹ La Vang (melavang.info)",
+          "url": "https://melavang.info/hanh-huong-kinh-duc-me-tai-hon-chong/",
+          "tier": "B"
+        },
+        {
+          "title": "Hành hương Đức Mẹ Hòn Chông (01/01/2012) - Mẹ La Vang, dẫn nguồn gplongxuyen.net",
+          "url": "https://melavang.info/hanh-huong-duc-me-hon-chong/",
+          "tier": "B"
         },
         {
           "title": "Thánh Lễ hành hương Đức Mẹ Hòn Chông năm 2025 - Giáo phận Long Xuyên",
-          "url": "https://giaophanlongxuyen.org/tin-tuc/thanh-le-hanh-huong-duc-me-hon-chong-nam-2025.html"
+          "url": "https://giaophanlongxuyen.org/tin-tuc/thanh-le-hanh-huong-duc-me-hon-chong-nam-2025.html",
+          "tier": "B"
+        },
+        {
+          "title": "Kiên Lương (xã) – Wikipedia tiếng Việt (đơn vị hành chính sau 01/7/2025)",
+          "url": "https://vi.wikipedia.org/wiki/Ki%C3%AAn_L%C6%B0%C6%A1ng_(x%C3%A3)",
+          "tier": "B"
         }
       ],
-      "note": "Thay thế hoàn toàn 2 đường link tìm kiếm Google cũ bằng 4 bài viết trực tiếp.",
+      "note": "Giữ 4 nguồn cũ (S1, S2, S3, S7), thêm S4 (đã mở lại, có nội dung trực tiếp) và S10 (địa giới hành chính mới). Kèm tier.",
       "claims": [
         {
-          "text": "Thay thế 2 đường link tìm kiếm Google cũ bằng 4 bài viết trực tiếp đáng tin cậy",
+          "text": "Tất cả 6 nguồn đều mở được ngày 2026-09-24",
           "sources": [
             "S1",
             "S2",
             "S3",
-            "S7"
+            "S4",
+            "S7",
+            "S10"
           ],
           "confidence": "cao"
         }
@@ -304,44 +459,44 @@
       "title": "Thánh lễ Hành hương Đức Mẹ Hòn Chông 2026 - Giáo phận Long Xuyên",
       "url": "https://giaophanlongxuyen.org/tin-tuc/thanh-le-hanh-huong-duc-me-hon-chong-2026.html",
       "tier": "B",
-      "accessed": "2026-09-12",
-      "supports": "Lịch đại lễ hành hương thường niên ngày 01/01/2026 tại Giáo xứ Hòn Chông, Kiên Lương do Đức Giám mục giáo phận chủ sự",
+      "accessed": "2026-09-24",
+      "supports": "Thánh lễ hành hương do Đức Giám mục cử hành lúc 8g30 ngày 01/01/2026 tại nhà thờ giáo xứ Hòn Chông, Kiên Lương; ảnh giới thiệu (1920x1080) có ảnh tượng Đức Mẹ dưới vòng cung chữ \"Nữ Vương ban sự bình an cầu cho chúng con\" và mặt tiền nhà thờ đá hiện nay",
       "inRecord": true
     },
     {
       "code": "S2",
-      "title": "Lược sử Giáo xứ Hòn Chông - Giáo phận Long Xuyên",
+      "title": "Lược sử Giáo xứ Hòn Chông (Lm Chánh sở Vinhsơn Nguyễn Minh Chu, nguồn: trang web Giáo phận Long Xuyên; bản chép lại trên violet.vn)",
       "url": "https://trancaolan76.violet.vn/entry/nha-tho-giao-xu-hon-chong-9524201.html",
       "tier": "B",
-      "accessed": "2026-09-12",
-      "supports": "Lược sử hoàn chỉnh của giáo xứ và linh đài: thành lập năm 1931, xây nhà thờ đá 1936–1940, biến cố đặt Tượng Đài Đức Mẹ Nữ Vương Hoà Bình ngày 08/12/1959 do Đức Cha Phaolô Bình và TT Ngô Đình Diệm hiện diện; biến cố chiến tranh 1965; công cuộc tái thiết 1991–1992 của cha Võ Thành Trinh và cha Nguyễn Minh Chu; địa giới ấp Hòn Chông, Bình An, Kiên Lương",
+      "accessed": "2026-09-24",
+      "supports": "Toàn bộ lược sử: Lm MEP Jean-Marie Merdrignac từ 1931, gốc giáo dân phu đồn điền Phú Quốc, đất đồn điền tiêu 1932, nhà thờ đá 1936–1940 và vật liệu xây; Lm Võ Thành Trinh 1946–1953; Lm Phan Xuân Trọng 1958–1962 và biến cố đặt Tượng Đài Đức Mẹ Nữ Vương Hoà Bình ngày 08/12/1959 \"do Đức Cha Phaolô Bình và ông Ngô hiện diện\"; Lm Lương Công Đại 1962–1964/65, giáo xứ bỏ hoang; hiện trạng sau 1975; các quyết định phục hồi 1991, phát quang khu nhà thờ và Đài Đức Mẹ 01/12/1991, chuộc đất có Đài Đức Mẹ 31/08/1993; trường học, nhà trẻ, Nữ Tử Bác Ái từ 10/2002; ba sắc tộc Việt – Khmer – Hoa. Đây là bản chép lại (ghi \"Nguồn: Trang Web Giáo Phận Long Xuyên\", đăng 20/08/2013); bản gốc trên trang giáo phận cũ chưa lần ra.",
       "inRecord": true
     },
     {
       "code": "S3",
-      "title": "Hành hương kính Đức Mẹ tại Hòn Chông - Kỷ yếu Mẹ La Vang (dẫn nguồn gplongxuyen.net)",
+      "title": "Hành hương kính Đức Mẹ tại Hòn Chông (01/01/2013) - Mẹ La Vang (melavang.info)",
       "url": "https://melavang.info/hanh-huong-kinh-duc-me-tai-hon-chong/",
       "tier": "B",
-      "accessed": "2026-09-12",
-      "supports": "Quy mô hành hương đầu năm trên 5.000 người, nghi thức rước kiệu và viếng tượng đài Đức Mẹ Hòn Chông, lễ đặt viên đá xây dựng lại nhà thờ (01/01/2013), hình ảnh thực địa của tượng đài Mẹ",
+      "accessed": "2026-09-24",
+      "supports": "Ngày 01/01/2013 có trên 5.000 người hành hương; đoàn rước dừng tại tượng đài Đức Maria; Đức Cha làm phép diện tích và viên đá đầu tiên xây dựng nhà thờ; công bố sắc lệnh thành lập giáo họ Sơn Hải (Hòn Heo); Đức Mẹ là bổn mạng giáo phận và giáo xứ",
       "inRecord": true
     },
     {
       "code": "S4",
-      "title": "Hành hương Đức Mẹ Hòn Chông - Kỷ yếu Mẹ La Vang (dẫn nguồn gplongxuyen.net)",
+      "title": "Hành hương Đức Mẹ Hòn Chông (01/01/2012) - Mẹ La Vang, dẫn nguồn gplongxuyen.net",
       "url": "https://melavang.info/hanh-huong-duc-me-hon-chong/",
       "tier": "B",
-      "accessed": "2026-09-12",
-      "supports": "Sự kiện công bố văn thư thành lập Giáo hạt Hà Tiên tại Hòn Chông ngày 01/01/2012, bổ nhiệm cha sở Hòn Chông kiêm quản hạt, tước hiệu Đức Mẹ Nữ Vương Hòa Bình",
-      "inRecord": false
+      "accessed": "2026-09-24",
+      "supports": "Ngày 01/01/2012 hơn 4.000 người hành hương tôn vinh Đức Mẹ tước hiệu Nữ Vương Hòa Bình; Cha Tổng Đại diện chủ trì thay Đức Giám mục; công bố văn thư thành lập Giáo hạt Hà Tiên; thư Đức Giám mục xác định lễ Đức Mẹ Nữ Vương Hòa Bình đầu năm là lễ bổn mạng Giáo phận Long Xuyên; bài ghi \"Nguồn: gplongxuyen.net\", người đăng \"admin\", ngày đăng 11/11/2013 (article:published_time 2013-11-11T04:07:49Z). Ảnh duy nhất trong bài: wp-content/uploads/2013/11/leducme3resizean4.jpg, 800x600, không ghi tác giả — ảnh đài Đức Mẹ với đoàn đồng tế, đề xuất làm ảnh chính",
+      "inRecord": true
     },
     {
       "code": "S5",
-      "title": "OpenStreetMap — Dữ liệu toạ độ Nhà thờ và Linh đài Hòn Chông (Node 2331791879)",
+      "title": "OpenStreetMap - node 2331791879 \"Nhà thờ Hòn Chông\"",
       "url": "https://www.openstreetmap.org/node/2331791879",
       "tier": "B",
-      "accessed": "2026-09-12",
-      "supports": "Toạ độ chính xác 10.1582°B, 104.6113°Đ tại Ấp Hòn Chông, xã Bình An, huyện Kiên Lương, tỉnh Kiên Giang trên trục Đường tỉnh 971",
+      "accessed": "2026-09-24",
+      "supports": "Toạ độ 10.1582055, 104.6112725 (amenity=place_of_worship, religion=christian, sửa lần cuối 04/01/2025); Nominatim trả địa chỉ \"Hòn Chông, Xã Kiên Lương, Tỉnh An Giang\"",
       "inRecord": false
     },
     {
@@ -350,7 +505,7 @@
       "url": "https://vi.wikipedia.org/wiki/Phaol%C3%B4_Nguy%E1%BB%85n_V%C4%83n_B%C3%ACnh",
       "tier": "B",
       "accessed": "2026-09-12",
-      "supports": "Xác nhận vai trò Giám mục Địa phận Cần Thơ (1955–1960) của Đức Cha Phaolô Nguyễn Văn Bình coi sóc địa hạt Hòn Chông trước khi chia tách Giáo phận Long Xuyên vào cuối năm 1960",
+      "supports": "Đức Cha Phaolô Nguyễn Văn Bình là Giám mục Cần Thơ 1955–1960 (đối chiếu lượt 2026-09-12, lượt này chưa mở lại)",
       "inRecord": false
     },
     {
@@ -358,74 +513,486 @@
       "title": "Thánh Lễ hành hương Đức Mẹ Hòn Chông năm 2025 - Giáo phận Long Xuyên",
       "url": "https://giaophanlongxuyen.org/tin-tuc/thanh-le-hanh-huong-duc-me-hon-chong-nam-2025.html",
       "tier": "B",
-      "accessed": "2026-09-12",
-      "supports": "Thánh lễ hành hương Đức Mẹ Hòn Chông năm 2025 cử hành ngày 01/01/2025 tại Nhà thờ Giáo xứ Hòn Chông, Giáo hạt Hà Tiên",
+      "accessed": "2026-09-24",
+      "supports": "Thánh lễ do Đức Giám mục giáo phận cử hành 9g00 ngày 01/01/2025 tại nhà thờ giáo xứ Hòn Chông, giáo hạt Hà Tiên; ảnh giới thiệu (1920x1080) cho thấy nhà thờ đá đã xây dựng lại với tháp chuông, bậc cấp và tảng đá khắc \"Giáo xứ Hòn Chông\", và ảnh nhỏ đài Đức Mẹ",
       "inRecord": true
+    },
+    {
+      "code": "S8",
+      "title": "Giáo phận Long Xuyên – Wikipedia tiếng Việt",
+      "url": "https://vi.wikipedia.org/wiki/Gi%C3%A1o_ph%E1%BA%ADn_Long_Xuy%C3%AAn",
+      "tier": "B",
+      "accessed": "2026-09-24",
+      "supports": "Giáo phận Long Xuyên được thành lập ngày 24/11/1960; Giám mục chính tòa hiện nay Giuse Trần Văn Toản (từ 2019). Bài có liệt kê \"Trung tâm hành hương Đức Mẹ Hòn Chông\" và \"Họ đạo Hòn Chông\" (đính chính theo kiểm chứng vòng 1).",
+      "inRecord": false
+    },
+    {
+      "code": "S9",
+      "title": "Phêrô Võ Thành Trinh – Wikipedia tiếng Việt",
+      "url": "https://vi.wikipedia.org/wiki/Ph%C3%AAr%C3%B4_V%C3%B5_Th%C3%A0nh_Trinh",
+      "tier": "B",
+      "accessed": "2026-09-24",
+      "supports": "Lm Võ Thành Trinh (1916–1991) thụ phong linh mục tháng 9/1946 tại Cần Thơ, mất ngày 21/08/1991 (Wikipedia ghi tại Bệnh viện Chợ Rẫy; S2 ghi Bệnh viện Thống Nhất)",
+      "inRecord": false
+    },
+    {
+      "code": "S10",
+      "title": "Kiên Lương (xã) – Wikipedia tiếng Việt (đơn vị hành chính sau 01/7/2025)",
+      "url": "https://vi.wikipedia.org/wiki/Ki%C3%AAn_L%C6%B0%C6%A1ng_(x%C3%A3)",
+      "tier": "B",
+      "accessed": "2026-09-24",
+      "supports": "Xã Kiên Lương, tỉnh An Giang thành lập theo Nghị quyết 1654/NQ-UBTVQH15 (2025) từ thị trấn Kiên Lương, xã Bình An, xã Bình Trị; gồm 18 ấp, trong đó có ấp Hòn Chông",
+      "inRecord": true
+    },
+    {
+      "code": "S11",
+      "title": "Thăm, tặng quà chức sắc tiêu biểu tại hai xã Hòn Đất và Kiên Lương dịp Lễ Phục sinh 2026 - Báo An Giang",
+      "url": "https://baoangiang.com.vn/tham-tang-qua-chuc-sac-tieu-bieu-tai-hai-xa-hon-dat-va-kien-luong-dip-le-phuc-sinh-2026-a481107.html",
+      "tier": "B",
+      "accessed": "2026-09-24",
+      "supports": "Linh mục Nguyễn Công Chính là chánh xứ Giáo xứ Hòn Chông (xã Kiên Lương, An Giang) vào dịp Phục sinh 2026",
+      "inRecord": false
+    },
+    {
+      "code": "S12",
+      "title": "Loạt nhà thờ cổ trở thành chứng tích chiến tranh ở Việt Nam - Kiến Thức (21/12/2023)",
+      "url": "https://kienthuc.net.vn/loat-nha-tho-co-tro-thanh-chung-tich-chien-tranh-o-viet-nam-post958314.html",
+      "tier": "C",
+      "accessed": "2026-09-24",
+      "supports": "Nhà thờ giáo xứ Hòn Chông xây 1936–1940 bằng đá nên gọi là nhà thờ đá Hòn Chông; theo kết quả tìm kiếm, bài viết rằng năm 1978 nhà thờ bị Pol Pot phá hủy, hàng chục giáo dân thiệt mạng, còn tháp chuông tương đối nguyên vẹn (kiểm chứng vòng 1 đã đọc được nguyên văn đoạn này)",
+      "inRecord": false
+    },
+    {
+      "code": "S13",
+      "title": "Chùm ảnh: Nhà thờ đá Hòn Chông - một chứng tích về tội ác Khmer Đỏ - Redsvn.net (theo Kiến Thức, 10/01/2019)",
+      "url": "https://redsvn.net/chum-anh-nha-tho-da-hon-chong-mot-chung-tich-ve-toi-ac-khmer-do/",
+      "tier": "C",
+      "accessed": "2026-09-24",
+      "supports": "Chép lại bài Kiến Thức: nhà thờ xây 1936–1940 theo kiểu Pháp; \"Năm 1978, nhà thờ đã bị quân Khmer Đỏ phá hủy sau khi tràn qua biên giới Việt Nam\"; 19 ảnh phế tích (không có ảnh tượng Đức Mẹ). Cùng một chuỗi nội dung với S12, không tính là nguồn độc lập.",
+      "inRecord": false
+    },
+    {
+      "code": "S14",
+      "title": "Flickr - \"2015 06 11_104 Nhà Thờ Hon Chong. Kiên Giang. VietNam\" (phong boca)",
+      "url": "https://www.flickr.com/photos/131585815@N04/18694918341/",
+      "tier": "C",
+      "accessed": "2026-09-24",
+      "supports": "Ảnh tháp chuông nhà thờ đá Hòn Chông, chụp 06/06/2015, bản gốc 4000x6000; giấy phép: All rights reserved",
+      "inRecord": false
+    },
+    {
+      "code": "S15",
+      "title": "Flickr - \"Nhà thờ Hòn Chông\" (nguyenhuulongtri, NHLT.Ftb), toàn cảnh phế tích 2010",
+      "url": "https://www.flickr.com/photos/84012769@N00/4972512149/",
+      "tier": "C",
+      "accessed": "2026-09-24",
+      "supports": "Ảnh toàn cảnh phế tích nhà thờ đá và tháp chuông, chụp 21/08/2010; phía xa có khối đài Đức Mẹ màu trắng; giấy phép: All rights reserved",
+      "inRecord": false
+    },
+    {
+      "code": "S16",
+      "title": "Flickr - \"Nhà thờ Hòn Chông - góc chụp từ tháp chuông\" (nguyenhuulongtri, NHLT.Ftb)",
+      "url": "https://www.flickr.com/photos/84012769@N00/5003352243/",
+      "tier": "C",
+      "accessed": "2026-09-24",
+      "supports": "Ảnh lòng phế tích nhà thờ đá nhìn từ tháp chuông, chụp 21/08/2010; giấy phép: All rights reserved. Cùng người chụp còn các ảnh 5003973386, 5003979870, 5079796413, 5080442820, 4918652967, 4918638243 (album cùng ngày, có tựa \"Nhà thờ đổ - Hòn Chông - Hà Tiên\")",
+      "inRecord": false
+    },
+    {
+      "code": "S17",
+      "title": "Flickr - \"Church Hon Chong - VietNam\" (Hieu nghia TRAN)",
+      "url": "https://www.flickr.com/photos/hieunghiafoto/50631507547/",
+      "tier": "C",
+      "accessed": "2026-09-24",
+      "supports": "Ảnh mặt tiền nhà thờ đá Hòn Chông đã xây lại, chụp 05/11/2020, bản gốc 6250x4088; có trẻ em đứng trên bậc cấp; giấy phép: All rights reserved",
+      "inRecord": false
+    },
+    {
+      "code": "S18",
+      "title": "Flickr - \"Ruins of Hon Chong church\" (Anh Hoa Cao, 2004)",
+      "url": "https://www.flickr.com/photos/caoanhhoa/2502578440/",
+      "tier": "D",
+      "accessed": "2026-09-24",
+      "supports": "Chú thích của người chụp: \"The church has been bombed during the war and has been kept with as-is status\" (ảnh 512x384, chụp 28/03/2004)",
+      "inRecord": false
+    },
+    {
+      "code": "S19",
+      "title": "YouTube - \"Đức Mẹ Hòn Chông – Phép Lạ Cứu Ngư Dân Phú Quốc\" (kênh TIẾNG GỌI ĐỨC TIN)",
+      "url": "https://www.youtube.com/watch?v=E4YPowcAbTA",
+      "tier": "D",
+      "accessed": "2026-09-24",
+      "supports": "Chỉ đọc được tựa đề và tên kênh qua oEmbed; YouTube chặn truy cập trang nên chưa xem được mô tả hay nội dung video. BỊ LOẠI sau kiểm chứng vòng 1 (thumbnail nghi AI, không xem được nội dung): không làm nguồn cho bất kỳ trường nào; chỉ còn nhắc trong leads[].",
+      "inRecord": false
+    },
+    {
+      "code": "S20",
+      "title": "OpenTopoData - SRTM 30m tại 10.1582, 104.6113",
+      "url": "https://api.opentopodata.org/v1/srtm30m?locations=10.1582,104.6113",
+      "tier": "C",
+      "accessed": "2026-09-24",
+      "supports": "Độ cao mô hình SRTM 30m tại toạ độ nhà thờ: 11 m",
+      "inRecord": false
     }
   ],
   "images": [
     {
-      "file": "honchong_03.jpg",
-      "filePage": "https://melavang.info/hanh-huong-kinh-duc-me-tai-hon-chong/",
-      "author": "Ban Truyền thông Giáo phận Long Xuyên",
-      "year": 2013,
-      "content": "Tượng Đức Mẹ Hòn Chông (Đức Mẹ Nữ Vương Hòa Bình) đặt trên bệ đài trong khuôn viên Giáo xứ Hòn Chông, giữa đoàn linh mục đồng tế do Đức Giám mục giáo phận dẫn đầu và đông đảo cộng đoàn giáo dân hành hương ngày 01/01/2013",
-      "caption": "Đức Giám mục và đoàn linh mục đồng tế viếng tượng Đức Mẹ Hòn Chông trong ngày đại lễ hành hương đầu năm (Nguồn: Kỷ yếu Mẹ La Vang, dẫn nguồn Ban Truyền thông GP Long Xuyên, chụp 01/01/2013)",
+      "file": "honchong-ungvien-dai-me-2012-800px.jpg",
+      "filePage": "https://melavang.info/hanh-huong-duc-me-hon-chong/",
+      "author": "Không rõ tác giả (ảnh đi kèm bài tin của trang Giáo phận Long Xuyên cũ gplongxuyen.net; melavang.info đăng lại 11/11/2013, người đăng \"admin\")",
+      "year": 2012,
+      "content": "Tượng Đức Mẹ Nữ Vương Hòa Bình Hòn Chông (áo trắng, choàng xanh nhạt, hào quang trên đầu, tay chắp) đứng trên trụ bệ vuông ốp đá có ô hình thoi, sau lưng là khối tường tam giác, phía trước là vòng cung chữ \"Nữ Vương ban sự bình an cầu cho chúng con\"; dưới chân là bàn thờ ngoài trời và đoàn linh mục đồng tế mặc lễ phục vàng, thánh lễ hành hương 01/01/2012. 800x600, không EXIF; trùng từng byte với https://melavang.info/wp-content/uploads/2013/11/leducme3resizean4.jpg (bản lớn nhất trên trang; tên tệp có chữ \"resize\" nên bản gốc có thể lớn hơn nhưng chưa tìm thấy). Ảnh chụp thật, không ghép chữ, không dấu hiệu AI.",
+      "caption": "Tượng Đức Mẹ Nữ Vương Hòa Bình Hòn Chông trong thánh lễ hành hương ngày 01/01/2012, Giáo xứ Hòn Chông, Giáo phận Long Xuyên (Nguồn: Giáo phận Long Xuyên – gplongxuyen.net, đăng lại trên Kỷ yếu Mẹ La Vang, melavang.info/hanh-huong-duc-me-hon-chong; không rõ tác giả)",
       "notAi": true,
       "role": "chinh"
-    }
-  ],
-  "imageSearchNote": "Đã khảo sát qua Wikimedia Commons (tìm thấy File:Hòn Chông (50572156981).jpg nhưng chỉ là ảnh phong cảnh hoàng hôn biển Hòn Chông, không chụp tượng hay linh đài), Flickr, và trang tin giáo phận. Trang giaophanlongxuyen.org hiện được bảo vệ bằng hệ thống tường lửa OneShield chống bot tự động, khiến các lệnh fetch/curl trực tiếp trả mã 403 (nhưng người dùng duyệt web bình thường vẫn truy cập được). Tìm thấy 1 ảnh thực địa xác thực công khai tại bài viết Kỷ yếu Mẹ La Vang (dẫn nguồn Ban Truyền thông GP Long Xuyên) chụp đúng quang cảnh viếng tượng Đức Mẹ Hòn Chông ngày 01/01/2013, đáp ứng đầy đủ tiêu chuẩn ảnh thực tế, không AI, có trang nguồn ổn định.",
-  "conflicts": [
-    {
-      "issue": "Năm khởi lập linh đài Đức Mẹ",
-      "a": {
-        "claim": "Năm 1963",
-        "source": "Dữ liệu ban đầu của dự án trong src/data/statues.js"
-      },
-      "b": {
-        "claim": "Ngày 08/12/1959",
-        "source": "S2"
-      },
-      "resolution": "Đề xuất cập nhật year: 1959 theo tài liệu Lược sử Giáo xứ Hòn Chông (ghi rõ ngày lễ làm phép và cung nghinh Tượng Đài Đức Mẹ Nữ Vương Hoà Bình ngày 08/12/1959 nhân bế mạc Năm Thánh Mẫu). Mốc 1963 trong dữ liệu cũ có thể là thời điểm tu sửa sau khi thành lập tân Giáo phận Long Xuyên hoặc gắn với giai đoạn Cha Antôn Lương Công Đại (1962–1965), đã được ghi nhận và giải thích trong historicalFact."
     },
     {
-      "issue": "Toạ độ địa lý linh đài",
+      "file": "honchong-thap-chuong-2015.jpg",
+      "filePage": "https://www.flickr.com/photos/131585815@N04/18694918341/",
+      "author": "phong boca (Flickr: phongtruongan)",
+      "license": "All rights reserved (Flickr)",
+      "year": 2015,
+      "content": "Tháp chuông vuông bằng đá của nhà thờ Hòn Chông với đồng hồ và thánh giá trên đỉnh, bậc cấp đá phía trước, cây phượng nở hoa bên trái; bản tải về 1365x2048 (bản gốc trên Flickr 4000x6000)",
+      "caption": "Tháp chuông nhà thờ đá Hòn Chông, khuôn viên Tượng Đài Đức Mẹ Nữ Vương Hòa Bình, xã Kiên Lương, An Giang, chụp 06/06/2015 (Nguồn: Flickr, phong boca – phongtruongan, flickr.com/photos/131585815@N04/18694918341; bảo lưu mọi quyền)",
+      "notAi": true,
+      "role": "phu"
+    },
+    {
+      "file": "honchong-phe-tich-toan-canh-2010.jpg",
+      "filePage": "https://www.flickr.com/photos/84012769@N00/4972512149/",
+      "author": "nguyenhuulongtri (NHLT.Ftb, Flickr)",
+      "license": "All rights reserved (Flickr)",
+      "year": 2010,
+      "content": "Toàn cảnh phế tích nhà thờ đá Hòn Chông: tường đá không mái bên trái, tháp chuông bên phải; giữa khung hình phía xa có một khối màu trắng (lượt khảo cứu trước cho là đài Đức Mẹ, kiểm chứng vòng 1 chưa xác nhận được nên caption không nhắc); ảnh xử lý HDR của người chụp (không phải AI); 1024x610",
+      "caption": "Phế tích nhà thờ đá Hòn Chông và tháp chuông năm 2010 (Nguồn: Flickr, nguyenhuulongtri – NHLT.Ftb, chụp 21/08/2010; bảo lưu mọi quyền)",
+      "notAi": true,
+      "role": "phu"
+    },
+    {
+      "file": "honchong-phe-tich-tu-thap-chuong-2010.jpg",
+      "filePage": "https://www.flickr.com/photos/84012769@N00/5003352243/",
+      "author": "nguyenhuulongtri (NHLT.Ftb, Flickr)",
+      "license": "All rights reserved (Flickr)",
+      "year": 2010,
+      "content": "Lòng phế tích nhà thờ đá nhìn từ tháp chuông: hai dãy tường đá có ô cửa vòm, bồn hoa giữa lối đi, hang đá phủ dây leo ở cuối; ảnh xử lý HDR; 1024x691",
+      "caption": "Lòng phế tích nhà thờ đá Hòn Chông nhìn từ tháp chuông, năm 2010 (Nguồn: Flickr, nguyenhuulongtri – NHLT.Ftb, chụp 21/08/2010; bảo lưu mọi quyền)",
+      "notAi": true,
+      "role": "phu"
+    }
+  ],
+  "imageCandidates": [
+    {
+      "pageUrl": "https://giaophanlongxuyen.org/tin-tuc/thanh-le-hanh-huong-duc-me-hon-chong-2026.html",
+      "source": "Giáo phận Long Xuyên",
+      "note": "Ảnh giới thiệu 1920x1080 (tải về: anh/honchong-ungvien-banner-giaophan-2026.jpg): ảnh tượng Đức Mẹ dưới vòng cung chữ ghép với ảnh nhà thờ và chữ lớn",
+      "status": "loai",
+      "why": "Ảnh ghép đồ hoạ có chữ đè; phần ảnh tượng chỉ khoảng 700px, không đạt 1000px. Giữ làm tư liệu hiện trạng 2026."
+    },
+    {
+      "pageUrl": "https://giaophanlongxuyen.org/tin-tuc/thanh-le-hanh-huong-duc-me-hon-chong-nam-2025.html",
+      "source": "Giáo phận Long Xuyên",
+      "note": "Ảnh giới thiệu 1920x1080 (tải về: anh/honchong-ungvien-banner-giaophan-2025.jpg): mặt tiền nhà thờ đá xây lại + ảnh nhỏ đài Đức Mẹ",
+      "status": "loai",
+      "why": "Ảnh ghép có chữ và logo đè lên; dùng làm bằng chứng hiện trạng nhà thờ mới, không dùng làm ảnh trang"
+    },
+    {
+      "pageUrl": "https://melavang.info/hanh-huong-duc-me-hon-chong/",
+      "source": "Mẹ La Vang (dẫn gplongxuyen.net)",
+      "note": "Ảnh đài Đức Mẹ Hòn Chông với đoàn đồng tế ngày 01/01/2012, 800x600 (tải về: anh/honchong-ungvien-dai-me-2012-800px.jpg; trùng từng byte với wp-content/uploads/2013/11/leducme3resizean4.jpg). Các cỡ trên trang: 300x225, 696x522, 768x576, 800x600 — 800x600 là lớn nhất; -scaled và bản không hậu tố khác đều 404.",
+      "status": "chon",
+      "why": "CHỌN làm ảnh chính (vòng bổ sung 2026-09-24): đúng pho tượng Hòn Chông, ảnh chụp thật, không chữ đè, không dấu hiệu AI; bài ghi \"Nguồn: gplongxuyen.net\", đăng lại 11/11/2013. Đạt 800px theo ngưỡng nới tạm thời của người dùng cho riêng honchong. Chưa tìm được bản lớn hơn: gplongxuyen.net đã chết, web.archive.org không vào được từ phiên này."
+    },
+    {
+      "pageUrl": "https://melavang.info/hanh-huong-kinh-duc-me-tai-hon-chong/",
+      "source": "Mẹ La Vang",
+      "note": "Ảnh honchong_03 (đoàn đồng tế viếng tượng 01/01/2013), 300x225",
+      "status": "loai",
+      "why": "Đã bị loại ở lượt kiểm chứng 2026-09-12 vì 300x225px"
+    },
+    {
+      "pageUrl": "https://www.flickr.com/photos/131585815@N04/18694918341/",
+      "source": "Flickr (phong boca)",
+      "note": "Tháp chuông nhà thờ đá 2015, gốc 4000x6000",
+      "status": "chon",
+      "why": "Đúng khuôn viên linh địa, độ phân giải cao, không người, không dấu hiệu AI. Vòng bổ sung: chuyển từ ảnh chính xuống ảnh phụ vì đã có ảnh tượng Đức Mẹ (800px) làm ảnh chính theo quyết định của người dùng."
+    },
+    {
+      "pageUrl": "https://www.flickr.com/photos/84012769@N00/4972512149/",
+      "source": "Flickr (nguyenhuulongtri)",
+      "note": "Toàn cảnh phế tích + tháp chuông 2010, thấy đài Đức Mẹ ở xa",
+      "status": "chon",
+      "why": "Ghi lại hiện trạng phế tích trước khi xây lại; đạt 1024px. Caption đã bỏ cụm \"phía xa là đài Đức Mẹ\" theo kiểm chứng vòng 1."
+    },
+    {
+      "pageUrl": "https://www.flickr.com/photos/84012769@N00/5003352243/",
+      "source": "Flickr (nguyenhuulongtri)",
+      "note": "Lòng phế tích nhìn từ tháp chuông 2010",
+      "status": "chon",
+      "why": "Rõ cấu trúc phế tích; đạt 1024px"
+    },
+    {
+      "pageUrl": "https://www.flickr.com/photos/84012769@N00/5003973386/",
+      "source": "Flickr (nguyenhuulongtri)",
+      "note": "Phế tích ban đêm 2010, khối đài Đức Mẹ trắng thấy ở giữa (tải về: anh/honchong-phe-tich-dem-2010.jpg), 1024x691",
+      "status": "ungvien",
+      "why": "Đạt kích thước, đúng chủ thể; để dự phòng vì ảnh đêm xử lý màu mạnh"
+    },
+    {
+      "pageUrl": "https://www.flickr.com/photos/84012769@N00/5003979870/",
+      "source": "Flickr (nguyenhuulongtri)",
+      "note": "Lối đi giữa phế tích ban đêm hướng về tháp chuông, 1024x691",
+      "status": "ungvien"
+    },
+    {
+      "pageUrl": "https://www.flickr.com/photos/84012769@N00/5079796413/",
+      "source": "Flickr (nguyenhuulongtri)",
+      "note": "Tháp chuông ban đêm, bên phải thấy vòng cung đài Đức Mẹ mờ, 680x1024",
+      "status": "ungvien",
+      "why": "Chiều rộng 680px — chỉ dùng được nếu nới ngưỡng"
+    },
+    {
+      "pageUrl": "https://www.flickr.com/photos/84012769@N00/5080442820/",
+      "source": "Flickr (nguyenhuulongtri)",
+      "note": "Tháp chuông ban đêm có trăng, 691x1024",
+      "status": "ungvien"
+    },
+    {
+      "pageUrl": "https://www.flickr.com/photos/84012769@N00/4918652967/",
+      "source": "Flickr (nguyenhuulongtri)",
+      "note": "\"Nhà thờ đổ - Hòn Chông - Hà Tiên\", 1024x986: đã xem ở vòng bổ sung — phế tích và tháp chuông ban đêm, cành cây khô phía trên, một tượng đá nhỏ trên bệ ở tiền cảnh; không thấy tượng Đức Mẹ",
+      "status": "ungvien",
+      "why": "Đúng địa điểm nhưng không chụp tượng Đức Mẹ; ảnh đêm xử lý màu mạnh. Để dự phòng."
+    },
+    {
+      "pageUrl": "https://www.flickr.com/photos/hieunghiafoto/50631507547/",
+      "source": "Flickr (Hieu nghia TRAN)",
+      "note": "Mặt tiền nhà thờ đá đã xây lại, 05/11/2020, gốc 6250x4088",
+      "status": "ungvien",
+      "why": "Ảnh hiện trạng tốt nhất, nhưng có 6 trẻ em nhận diện được mặt đứng tạo dáng — để người duyệt quyết (tôn trọng chủ thể là trẻ vị thành niên)"
+    },
+    {
+      "pageUrl": "https://www.flickr.com/photos/caoanhhoa/2502578440/",
+      "source": "Flickr (Anh Hoa Cao)",
+      "note": "Phế tích nhà thờ 2004, 512x384, chú thích \"bombed during the war\"",
+      "status": "loai",
+      "why": "Quá nhỏ; giữ làm nguồn cho folklore"
+    },
+    {
+      "pageUrl": "https://redsvn.net/chum-anh-nha-tho-da-hon-chong-mot-chung-tich-ve-toi-ac-khmer-do/",
+      "source": "Redsvn.net (theo Kiến Thức)",
+      "note": "19 ảnh phế tích nhà thờ đá (tháp chuông, chuông rỉ, cửa sổ vòm, dấu thập tự bị đục), không có ảnh tượng Đức Mẹ",
+      "status": "ungvien",
+      "why": "Chưa kiểm kích thước và tác giả gốc; nội dung bài lệch với lược sử giáo xứ"
+    },
+    {
+      "pageUrl": "https://kienthuc.net.vn/loat-nha-tho-co-tro-thanh-chung-tich-chien-tranh-o-viet-nam-post958314.html",
+      "source": "Kiến Thức",
+      "note": "Ảnh minh hoạ nhà thờ đá Hòn Chông (định dạng .avif)",
+      "status": "ungvien",
+      "why": "Chưa tải về kiểm"
+    },
+    {
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:H%C3%B2n_Ch%C3%B4ng_(50572156981).jpg",
+      "source": "Wikimedia Commons",
+      "note": "Ảnh hoàng hôn biển Hòn Chông",
+      "status": "loai",
+      "why": "Không chụp tượng hay nhà thờ — sai chủ thể"
+    },
+    {
+      "pageUrl": "https://www.flickr.com/photos/82493894@N06/13466355394/",
+      "source": "Flickr (Nguyen105)",
+      "note": "\"Hon Chong, Kien Luong\" — bờ đá và các hòn đảo",
+      "status": "loai",
+      "why": "Phong cảnh biển, sai chủ thể"
+    },
+    {
+      "pageUrl": "http://kpe.parish.chuathuongxot.org/DucMe/DucMeHonChong.htm",
+      "source": "Giáo xứ Chúa Thương Xót (trang kpe.parish.chuathuongxot.org, bài \"Đức Mẹ Hòn Chông\", chép lại tin 01/01/2013)",
+      "note": "2 ảnh: image001.jpg 300x225 (EXIF Sony DSC-W350, 03/01/2013 — cùng ảnh honchong_03 của melavang) và image002.jpg 372x279",
+      "status": "loai",
+      "why": "Quá nhỏ (dưới 800px kể cả theo ngưỡng nới); HTTPS của trang lỗi chứng chỉ, chỉ mở được qua HTTP"
+    }
+  ],
+  "imageSearchNote": "Đã tìm qua: Wikimedia Commons (API search 'Hòn Chông', 'Kiên Lương' — chỉ có ảnh phong cảnh biển, không có ảnh nhà thờ/tượng; API bị giới hạn tần suất nên một số truy vấn không chạy được); trang Giáo phận Long Xuyên (tìm kiếm nội bộ 'Hòn Chông' chỉ ra 2 bài 2025, 2026, mỗi bài một ảnh giới thiệu ghép chữ); melavang.info (ảnh lớn nhất 800x600); giaoxugiaohovietnam.com (trang và ảnh đã 404; bản web.archive.org có tồn tại nhưng web.archive.org không truy cập được từ phiên này); Flickr (tìm 'hon chong church', 'nha tho hon chong', 'hon chong kien giang', 'duc me hon chong' và trong ảnh của người dùng nguyenhuulongtri — tìm được 12 ảnh nhà thờ/phế tích đúng địa điểm, không ảnh nào chụp cận tượng Đức Mẹ); Redsvn/Kiến Thức (19 ảnh phế tích, không ảnh tượng); các trang du lịch (ivivu trả 403, petrotimes, tourmientay, honcuada, dulichbui — không có ảnh nhà thờ/tượng); YouTube (có 10+ video về Đài Đức Mẹ Hòn Chông nhưng bị chặn truy cập, không lấy được ảnh). KẾT LUẬN: không tìm được ảnh nào chụp rõ pho tượng Đức Mẹ đạt chiều rộng ≥1000px; ảnh tượng rõ nhất là ảnh 800x600 năm 2012 trên melavang.info (đã loại vì kích thước). Ba ảnh đề xuất đều là nhà thờ/phế tích trong cùng khuôn viên. VÒNG BỔ SUNG 2026-09-24 (sau kiểm chứng vòng 1): QUYẾT ĐỊNH CỦA NGƯỜI DÙNG (chủ dự án), nguyên văn: \"Vì linh đài này đang thiếu ảnh, tạm thời giảm yêu cầu về chất lượng ảnh, ưu tiên có ảnh chụp với nguồn đầy đủ là được.\" Theo đó ngưỡng chiều rộng 1000px được nới xuống 800px — NGOẠI LỆ TẠM THỜI, CHỈ áp dụng cho honchong, không phải chuẩn mới của dự án; hai lằn ranh không đổi (không ảnh AI, không ảnh sai linh địa) và ảnh ghép đồ hoạ có chữ đè vẫn không dùng. Áp dụng: ảnh tượng 800x600 năm 2012 (S4) được nâng thành ảnh chính (check-image --min-width=800: không lỗi chặn, không dấu hiệu AI); ảnh tháp chuông 2015 chuyển thành ảnh phụ. Khi có ảnh tượng ≥1000px nguồn rõ, nên thay ảnh chính và bỏ ngoại lệ. Tìm thêm trong vòng này (có giới hạn thời gian): mở lại melavang.info (các cỡ ảnh 300/696/768/800px, 800x600 là lớn nhất, ảnh trùng từng byte với file đã tải); truy bài gốc gplongxuyen.net qua archive.org availability API (có bản lưu trang chủ gplongxuyen.net 2026 và gplongxuyen.org 2025, nhưng web.archive.org — cả curl lẫn WebFetch — đều bị ngắt kết nối nên không mở được bài gốc hay bản ảnh lớn hơn); tìm tên tệp \"leducme3resizean4\" (không ra); WebSearch tin hành hương 01/01/2012 trên các trang Công giáo khác (không ra bản khác); kpe.parish.chuathuongxot.org (2 ảnh 300x225 và 372x279); tin 2025, 2026 của giaophanlongxuyen.org (không có album ảnh, chỉ ảnh giới thiệu); ảnh Flickr 4918652967 (không có tượng); Wikimedia Commons API (bị giới hạn tần suất, không chạy được). Không tìm được ảnh tượng nào khác ≥800px có nguồn đầy đủ.",
+  "folklore": [
+    {
+      "title": "Nhà thờ đá bị Khmer Đỏ phá năm 1978",
+      "story": "Bài của báo Kiến Thức (được Redsvn chép lại năm 2019, và nhắc lại trong bài năm 2023) viết rằng năm 1978, nhà thờ đá Hòn Chông bị quân Khmer Đỏ phá hủy sau khi tràn qua biên giới, hàng chục giáo dân thiệt mạng, từ đó nhà thờ chỉ còn phế tích, tháp chuông là phần còn nguyên vẹn nhất.",
+      "motif": "Mốc thời chiến",
+      "spread": "Báo mạng và các trang chép lại; lan rộng trong bài du lịch \"nhà thờ đá Hòn Chông\"",
+      "veracity": "chuakiemchung",
+      "sources": [
+        "S12",
+        "S13"
+      ],
+      "note": "Mâu thuẫn một phần với lược sử giáo xứ (S2): lược sử ghi giáo xứ bỏ hoang từ khoảng 1964–1965, giáo dân tản cư ra hải đảo, không nhắc năm 1978. Không nguồn A/B nào xác nhận hay bác bỏ. Chỉ viết vào oralTradition với nhãn \"một số bài báo mạng viết rằng\". Chủ đề chiến tranh biên giới — viết trung tính, không thêm số liệu."
+    },
+    {
+      "title": "Nhà thờ bị bom đạn chiến tranh phá, giữ nguyên hiện trạng",
+      "story": "Người chụp ảnh phế tích năm 2004 (Flickr, Anh Hoa Cao) ghi chú: nhà thờ đã bị bom đạn trong chiến tranh và được giữ nguyên hiện trạng.",
+      "motif": "Mốc thời chiến",
+      "spread": "Chú thích ảnh Flickr",
+      "veracity": "chuakiemchung",
+      "sources": [
+        "S18"
+      ],
+      "note": "Có thể là lời nghe kể tại chỗ; không rõ cuộc chiến nào. Phù hợp với S2 ở chỗ \"chiến sự ác liệt\" 1964–1965, nhưng S2 không nói nhà thờ bị bom."
+    },
+    {
+      "title": "Cái tên dân gian \"nhà thờ đổ\"",
+      "story": "Trước khi nhà thờ được xây lại, người chụp ảnh và khách qua đường gọi nơi này là \"nhà thờ đổ – Hòn Chông – Hà Tiên\" hay \"nhà thờ đá Hòn Chông\"; tường đá không mái, tháp chuông và đài Đức Mẹ trắng phía sau là cảnh quen thuộc trên đường đi Chùa Hang, Hòn Phụ Tử.",
+      "motif": "Tên gọi dân gian",
+      "spread": "Tựa ảnh Flickr 2010, bài du lịch",
+      "veracity": "codoichieu",
+      "sources": [
+        "S15",
+        "S16",
+        "S2"
+      ],
+      "note": "Phần nền (nhà thờ đổ nát, đài Đức Mẹ còn) có trong S2; cái tên \"nhà thờ đổ\" chỉ thấy trong tựa ảnh Flickr."
+    }
+  ],
+  "folkloreSearchNote": "Tìm 'Hòn Chông' + tượng Đức Mẹ / phép lạ / Nữ Vương ban sự bình an / Khmer Đỏ / nhà thờ đá; đọc nguyên văn lược sử giáo xứ (S2) và 2 bài hành hương trên melavang.info; YouTube liệt kê được các video 'Đức Mẹ Hòn Chông – Phép Lạ Cứu Ngư Dân Phú Quốc', 'Xây dựng Đài Đức Mẹ Hòn Chông', 'Đài Đức Mẹ Hòn Chông 09/03/2019', 'Tưởng niệm Quý Cha Sở Hòn Chông đã qua đời' nhưng không xem được nội dung. Facebook (trang Giáo xứ Hòn Chông, bài của Thánh Đường Việt Nam) không đọc được. Chưa có bình luận Google Maps. Vòng bổ sung (sau kiểm chứng vòng 1): chuyện \"Đức Mẹ Hòn Chông cứu ngư dân Phú Quốc\" (S19) đã được rút khỏi folklore[] và chuyển sang leads[] với nhãn BỊ LOẠI (thumbnail nghi AI, không xem được nội dung).",
+  "leads": [
+    {
+      "lead": "[BỊ LOẠI khỏi bản ghi sau kiểm chứng vòng 1] Chuyện \"Đức Mẹ Hòn Chông cứu ngư dân Phú Quốc\" và ý \"Đức Mẹ che chở người đi biển\": nguồn duy nhất là tựa video YouTube \"Đức Mẹ Hòn Chông – Phép Lạ Cứu Ngư Dân Phú Quốc\" (kênh TIẾNG GỌI ĐỨC TIN, S19). Chỉ giữ ở đây làm ghi chú, không đưa vào bất kỳ trường nào của bản ghi.",
+      "where": "https://www.youtube.com/watch?v=E4YPowcAbTA",
+      "why": "Bị loại vì: ảnh thu nhỏ của video mang dấu hiệu AI, không xem được nội dung video (YouTube chặn), không có người kể hay nguồn thứ hai. Chỉ xét lại nếu lượt sau xem được video, xác nhận không dùng hình/giọng AI và tìm được lời kể độc lập (giáo xứ, ngư dân, báo)."
+    },
+    {
+      "lead": "Video \"Xây dựng Đài Đức Mẹ Hòn Chông\" (kênh Dung Pham) — có thể cho biết năm làm lại đài Mẹ và khung vòm kính thấy trong ảnh 2026",
+      "where": "https://www.youtube.com/watch?v=vvwp29Favhw",
+      "why": "Mốc tu sửa đài Mẹ chưa có nguồn"
+    },
+    {
+      "lead": "Bản lưu trang giáo xứ Hòn Chông trên giaoxugiaohovietnam.com (có ảnh HonChong-01012009-14.jpg 600x450 và ảnh 458x343)",
+      "where": "http://web.archive.org/web/20230927215147/https://giaoxugiaohovietnam.com/LongXuyen/01-Giao-Phan-LongXuyen-HonChong.htm",
+      "why": "Có thể có thêm ảnh tượng 2009 và lược sử bản gốc; web.archive.org không vào được từ phiên này"
+    },
+    {
+      "lead": "Bản gốc lược sử trên trang Giáo phận Long Xuyên cũ (gplongxuyen.net / gplongxuyen.org)",
+      "where": "Hai tên miền đều không kết nối được (502) trong phiên này; Wayback availability API không có bản lưu cho gplongxuyen.org",
+      "why": "Nâng S2 từ bản chép lại lên bản gốc"
+    },
+    {
+      "lead": "Trang Facebook \"Giáo Xứ Hòn Chông\" và bài \"Nhà thờ đá Giáo xứ Hòn Chông - Giáo hạt Hà Tiên\" của Thánh Đường Việt Nam",
+      "where": "https://www.facebook.com/GiaoXuHonChong/ ; https://www.facebook.com/thanhduongvietnam/posts/3620536914838108/",
+      "why": "Có thể có ảnh tượng độ phân giải cao, ngày khánh thành nhà thờ mới; cần xin phép người đăng"
+    },
+    {
+      "lead": "Liên hệ người chụp Flickr hieunghiafoto (ảnh 2020) hoặc tìm thêm ảnh cùng buổi chụp có đài Đức Mẹ",
+      "where": "https://www.flickr.com/photos/hieunghiafoto/",
+      "why": "Bản gốc 6250px, có thể có ảnh tượng không có người"
+    },
+    {
+      "lead": "Ngày làm phép/khánh thành nhà thờ đá mới (sau 01/01/2013, trước 11/2020)",
+      "where": "Tìm tiếp trên hdgmvietnam.com, tgpsaigon.net, vietcatholic theo từ khoá \"Hòn Chông\" 2016–2020",
+      "why": "Mốc quan trọng cho historicalFact"
+    }
+  ],
+  "conflicts": [
+    {
+      "issue": "Danh tính \"ông Ngô\" hiện diện lễ đặt tượng 08/12/1959",
       "a": {
-        "claim": "10.1477, 104.6067",
-        "source": "Dữ liệu ban đầu trong src/data/statues.js"
+        "claim": "Tổng thống Ngô Đình Diệm hiện diện (bản ghi hiện tại trên website)",
+        "source": "src/data/statues.js (lượt 2026-09-12, suy từ S2)"
       },
       "b": {
-        "claim": "10.1582, 104.6113",
-        "source": "S5"
+        "claim": "Nguyên văn nguồn: \"do Đức Cha Phaolô Bình và ông Ngô hiện diện\" — không ghi tên, không ghi chức vụ",
+        "source": "S2"
       },
-      "resolution": "Cập nhật sang toạ độ đo đạc thực địa của OpenStreetMap (node 2331791879 Nhà thờ Hòn Chông) 10.1582, 104.6113 tại Ấp Hòn Chông; toạ độ cũ nằm chếch về phía nam tại khu vực Bãi Giếng cách vị trí nhà thờ hơn 1km."
+      "resolution": "Viết đúng nguyên văn \"ông Ngô\" trong historicalFact. Việc đồng nhất với TT Ngô Đình Diệm là suy luận hợp lý nhưng chưa có nguồn thứ hai (tìm \"Ngô Đình Diệm\" \"Hòn Chông\" 1959 không ra) — ghi vào unknowns."
+    },
+    {
+      "issue": "Nguyên nhân và thời điểm nhà thờ đá bị tàn phá",
+      "a": {
+        "claim": "Giáo xứ bỏ hoang từ khoảng 1964–1965 vì chiến sự; sau 1975 nhà thờ đổ nát (không nói ai phá, khi nào)",
+        "source": "S2"
+      },
+      "b": {
+        "claim": "Nhà thờ bị quân Khmer Đỏ phá hủy năm 1978, hàng chục giáo dân thiệt mạng",
+        "source": "S12, S13 (cùng một chuỗi nội dung báo Kiến Thức)"
+      },
+      "resolution": "Không có nguồn A/B nào nói năm 1978; S2 (cấp B) im lặng chứ không bác bỏ. historicalFact chỉ ghi điều S2 nói; thuyết 1978 và lời kể \"bị bom\" (S18) đưa vào oralTradition kèm nhãn. Không phải mâu thuẫn giữa hai nguồn A/B nên không dừng lại."
+    },
+    {
+      "issue": "Nhiệm kỳ Lm Antôn Lương Công Đại và năm bỏ hoang",
+      "a": {
+        "claim": "1962–1965; \"1965: Giáo xứ bị bỏ hoang từ đây\"",
+        "source": "S2 (phần niên biểu)"
+      },
+      "b": {
+        "claim": "Lm Lương Công Đại (1962–1964), rồi rút về Kiên Lương",
+        "source": "S2 (phần tiểu sử)"
+      },
+      "resolution": "Viết \"khoảng 1964–1965\"."
+    },
+    {
+      "issue": "Nhiệm kỳ Lm Nguyễn Văn Tống",
+      "a": {
+        "claim": "1956 được cử về; 1956–1958",
+        "source": "S2 (niên biểu)"
+      },
+      "b": {
+        "claim": "1955–1958",
+        "source": "S2 (tiểu sử)"
+      },
+      "resolution": "Không đưa vào historicalFact."
+    },
+    {
+      "issue": "Nơi Lm Võ Thành Trinh qua đời (21/08/1991)",
+      "a": {
+        "claim": "Bệnh viện Thống Nhất",
+        "source": "S2"
+      },
+      "b": {
+        "claim": "Bệnh viện Chợ Rẫy",
+        "source": "S9"
+      },
+      "resolution": "Không cần cho linh địa; không ghi nơi mất."
+    },
+    {
+      "issue": "Tên đơn vị hành chính",
+      "a": {
+        "claim": "Xã Bình An, huyện Kiên Lương, tỉnh Kiên Giang",
+        "source": "src/data/statues.js, S2"
+      },
+      "b": {
+        "claim": "Xã Kiên Lương, tỉnh An Giang (từ 01/7/2025)",
+        "source": "S10, S11, S5"
+      },
+      "resolution": "Ghi tên mới, kèm tên cũ trong ngoặc."
     }
   ],
   "unknowns": [
-    "Danh tính nhà điêu khắc/nghệ nhân trực tiếp tạc pho tượng Đức Mẹ nguyên bản năm 1959 — chưa tìm thấy trong tài liệu nào",
-    "Chiều cao chính xác tính riêng của thân tượng (không kể bệ đài)",
-    "Tên kiến trúc sư thiết kế ngôi nhà thờ đá Hòn Chông cổ năm 1936–1940",
-    "Thông tin chi tiết về các đợt đại tu tôn tạo đài Đức Mẹ từ sau năm 1992 đến nay"
+    "Chưa tìm được ảnh nào chụp rõ pho tượng Đức Mẹ Nữ Vương Hòa Bình Hòn Chông đạt chiều rộng ≥1000px. Ảnh chính đề xuất là ảnh 800x600 năm 2012 (S4), chỉ dùng được nhờ ngoại lệ 800px tạm thời của người dùng. Chưa lần được tác giả ảnh, bài gốc trên gplongxuyen.net và bản ảnh lớn hơn (tên tệp \"leducme3resizean4\" cho thấy đã bị thu nhỏ) vì trang giáo phận cũ đã chết và web.archive.org không vào được từ phiên này.",
+    "Danh tính \"ông Ngô\" trong lễ đặt tượng 08/12/1959 (nhiều khả năng là TT Ngô Đình Diệm nhưng chưa có nguồn thứ hai).",
+    "Ai chủ sự nghi thức làm phép tượng năm 1959 — S2 chỉ ghi \"hiện diện\", không ghi \"chủ sự\"; cũng không nguồn nào nối biến cố với việc bế mạc Năm Thánh Mẫu.",
+    "Chất liệu, chiều cao, người tạc và nơi đặt làm pho tượng 1959; pho tượng hiện nay có còn là tượng gốc 1959 hay đã thay/tu sửa.",
+    "Thời điểm và nội dung các đợt tu sửa đài Đức Mẹ (khối tường tam giác năm 2012 không còn thấy trong ảnh 2026; ảnh 2026 cho thấy tượng đặt trong một khung vòm).",
+    "Năm hoàn thành và làm phép ngôi nhà thờ đá xây lại (viên đá đầu tiên 01/01/2013; ảnh 11/2020 đã thấy nhà thờ hoàn chỉnh), và tháp chuông cũ có được giữ lại không.",
+    "Nguyên nhân cụ thể khiến nhà thờ đá đổ nát (bom đạn 1964–1975 hay cuộc tấn công 1978) — chưa có nguồn A/B.",
+    "Toạ độ riêng của bệ tượng (hiện dùng điểm OSM của nhà thờ, cùng khuôn viên).",
+    "Chuyện kể của người địa phương/ngư dân về Đức Mẹ Hòn Chông — chưa có lời kể trực tiếp nào; tựa video YouTube S19 đã bị loại sau kiểm chứng vòng 1."
   ],
   "selfAssessment": {
-    "confidence": "cao",
-    "biggestRisk": "Trang tin chính thức của Giáo phận Long Xuyên (giaophanlongxuyen.org) hiện có lớp bảo vệ bot OneShield chặn cào dữ liệu tự động (trả về HTTP 403 trên curl/fetch script), dù bài viết vẫn truy cập bình thường trên trình duyệt web. Nội dung đã được đối chiếu chéo qua tài liệu lược sử giáo xứ và các bản tin kỷ yếu lưu trữ trên melavang.info.",
-    "reviewFocus": "Xác nhận việc cập nhật mốc năm 1959 thay cho 1963; kiểm tra toạ độ mới 10.1582, 104.6113 và thẩm định ảnh thực địa đề xuất honchong_03.jpg từ melavang.info/hanh-huong-kinh-duc-me-tai-hon-chong/."
+    "confidence": "trungbinh",
+    "biggestRisk": "Ảnh: ảnh chính là ảnh tượng 800x600 (2012) — dưới chuẩn 1000px của dự án, chỉ đạt nhờ quyết định nới ngưỡng xuống 800px của người dùng, là ngoại lệ tạm thời riêng cho honchong; tác giả ảnh không được ghi (chỉ biết nguồn gplongxuyen.net qua bản đăng lại trên melavang.info), chưa tìm được bài gốc hay bản lớn hơn vì web.archive.org không vào được. Ảnh có đoàn linh mục đồng tế đứng trước tượng (nhân vật công khai trong nghi lễ, không phải trẻ em). Ba ảnh phụ là ảnh Flickr \"All rights reserved\" — hợp quy chuẩn dự án (không đòi CC). Nội dung: đã áp dụng các điều kiện câu chữ của kiểm chứng vòng 1 (historicalFact 3 chỗ, oralTradition bỏ câu S19); chuyện Khmer Đỏ 1978 vẫn chỉ ở oralTradition với nhãn, viết trung tính. S2 là bản chép lại trên trang cá nhân violet.vn của lược sử giáo phận. Điều kiện 6–7 của vòng 1 (tháp chuông làm realImage) đã được thay theo quyết định ảnh mới của người dùng nên người kiểm chứng cần duyệt lại phần ảnh.",
+    "reviewFocus": "(1) Kiểm lại ảnh chính mới honchong-ungvien-dai-me-2012-800px.jpg: trang S4 còn sống, ảnh trùng file trên trang, đúng tượng Hòn Chông, không AI; áp ngưỡng 800px theo ngoại lệ tạm thời của người dùng; (2) caption ảnh chính ghi nguồn gplongxuyen.net + melavang.info, không rõ tác giả — đủ chưa; (3) thứ tự galleryImages mới (tháp chuông 2015, toàn cảnh 2010 đã bỏ cụm đài Đức Mẹ, lòng phế tích 2010); (4) xác nhận 3 chỗ sửa historicalFact và 2 chỗ sửa oralTradition khớp nguyên văn điều kiện; (5) S19 đã rút khỏi mọi trường đề xuất (chỉ còn ở leads/sources làm ghi chú bị loại)."
   },
   "validation": {
-    "command": "node .agents/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/honchong/khao-cuu.json --allow-existing-id",
-    "output": "=> DAT toan bo rang buoc bat buoc. Sau khi chen vao src/data/statues.js, chay \"npm test\" de xac nhan lai."
+    "command": "node .claude/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/honchong/khao-cuu.json --allow-existing-id",
+    "output": "KIEM TRA: honchong (docs/khao-cuu/honchong/khao-cuu.json)\n\n=> DAT toan bo rang buoc bat buoc. Sau khi chen vao src/data/statues.js, chay \"npm test\" de xac nhan lai."
   },
   "record": {
     "id": "honchong",
     "name": "Đức Mẹ Hòn Chông (Kiên Giang)",
-    "title": "Linh Đài Đức Mẹ Hòn Chông - Đền Thánh Nữ Vương Hòa Bình",
+    "title": "Tượng Đài Đức Mẹ Nữ Vương Hòa Bình - Giáo xứ Hòn Chông",
     "year": 1959,
     "lat": 10.1582,
     "lng": 104.6113,
-    "elevation": "10m",
-    "location": "Ấp Hòn Chông, xã Bình An, huyện Kiên Lương, tỉnh Kiên Giang (vùng vịnh Rạch Giá - Hà Tiên)",
+    "elevation": "Khoảng 10m (chân núi, sát biển Hà Tiên – Kiên Lương)",
+    "location": "Ấp Hòn Chông, xã Kiên Lương, tỉnh An Giang (trước 01/7/2025: xã Bình An, huyện Kiên Lương, tỉnh Kiên Giang), ven Đường tỉnh 971, vùng biển Hà Tiên – Kiên Lương",
     "region": "Đồng bằng sông Cửu Long",
     "diocese": "Giáo phận Long Xuyên",
     "diemStatue5": false,
@@ -439,29 +1006,43 @@
         "code": "NAT-15"
       }
     },
-    "historicalFact": "Khởi đầu từ năm 1931 khi linh mục Jean Marie Merdrignac thuộc Hội Thừa sai Hải ngoại Paris (MEP) đến mở điểm truyền giáo tại Hòn Chông, sau đó ngôi nhà thờ bằng đá kiên cố đầu tiên được xây dựng từ năm 1936 đến 1940. Sau năm 1945, linh mục Phêrô Võ Thành Trinh về coi sóc xứ đạo giai đoạn 1946–1953. Đến ngày 08/12/1959, nhân dịp bế mạc Năm Thánh Mẫu toàn quốc, Tượng Đài Đức Mẹ Nữ Vương Hoà Bình được long trọng làm phép và cung nghinh dưới sự chủ sự của Đức Cha Phaolô Nguyễn Văn Bình (lúc bấy giờ là Giám mục Địa phận Cần Thơ) cùng sự hiện diện của Tổng thống Ngô Đình Diệm và cha sở Augustinô Phan Xuân Trọng. Sau khi Giáo phận Long Xuyên được thành lập tháng 11/1960, giáo xứ thuộc về giáo phận mới dưới thời cha Antôn Lương Công Đại (từ 1962). Từ năm 1965, chiến tranh ác liệt tàn phá khiến nhà thờ đá đổ nát và giáo xứ bị bỏ hoang nhiều năm, nhưng tượng Đức Mẹ ngoài trời vẫn đứng vững. Năm 1991, nhờ sự vận động của linh mục Phêrô Võ Thành Trinh trước khi qua đời, giáo xứ được phép tái thiết; linh mục Vinhsơn Nguyễn Minh Chu về phụ trách năm 1992 từng bước quy tụ giáo dân, phục dựng đài Mẹ và phát triển cơ sở giáo dục với sự cộng tác của Tu hội Nữ Tử Bác Ái Vinh Sơn từ năm 2002. Hằng năm vào ngày 01/01 (Đại lễ Đức Maria Mẹ Thiên Chúa - Nữ Vương Hòa Bình, bổn mạng giáo phận và giáo xứ), Đức Giám mục Giáo phận Long Xuyên đều về chủ sự Thánh lễ hành hương cấp giáo phận, quy tụ từ 4.000 đến trên 5.000 tín hữu.",
-    "oralTradition": "Đức Mẹ Hòn Chông được cộng đồng ngư dân duyên hải Kiên Lương và vùng vịnh Thái Lan tôn kính là Đấng che chở cho những chuyến ra khơi đánh bắt xa bờ hướng về Phú Quốc và hải đảo, gìn giữ cho ghe thuyền bình an trước sóng gió giông bão. Giáo dân địa phương còn lưu truyền giai thoại rằng suốt những năm bom đạn chiến tranh khốc liệt sau năm 1965 làm sập đổ toàn bộ phần mái và nội thất ngôi thánh đường đá cổ, chỉ riêng tượng Đức Mẹ ngoài trời vẫn sừng sững nguyên vẹn không vết đạn tích. Ngoài ra, do sự kiện Tổng thống Ngô Đình Diệm cùng Đức Cha Phaolô Nguyễn Văn Bình hiện diện tại lễ làm phép đài Mẹ ngày 08/12/1959, nhiều tín hữu địa phương qua các thế hệ thường gắn kết sự hiện diện của Đức Mẹ Hòn Chông với phong trào thiết lập các linh đài Thánh Mẫu che chở biên cương miền Nam thời kỳ đó.",
-    "architect": "Tượng Đức Mẹ Hòn Chông được tạc bằng chất liệu đá nhân tạo và xi măng trắng theo mẫu tượng Đức Mẹ Lộ Đức / Nữ Vương Hòa Bình: Mẹ đứng thẳng trang trọng, đầu đội khăn trùm trắng dài, hai tay chắp trước ngực cầu nguyện, tà áo choàng viền sắc xanh buông rủ thanh thoát. Bức tượng được tôn trí trên bệ đài đa giác ốp gạch trang nghiêm cao ráo, đặt giữa quảng trường trung tâm khuôn viên giáo xứ hướng nhìn ra vùng biển vịnh Thái Lan. Phía sau tượng đài là cụm kết cấu khánh tiết hình tam giác vươn cao với các dải màu Thánh Mẫu tỏa rộng. Liền kề với khuôn viên linh đài là phế tích ngôi nhà thờ đá Hòn Chông cổ kính xây năm 1936–1940 bằng những khối đá xẻ tự nhiên dày dặn của vùng núi đá vôi Kiên Lương — một chứng tích kiến trúc tôn giáo và chiến tranh hiếm có còn lưu giữ lại tại miền duyên hải Tây Nam Bộ. Danh tính nghệ nhân trực tiếp tạc bức tượng năm 1959 hiện chưa tìm thấy tài liệu văn khố lưu giữ.",
-    "significance": "Là trung tâm hành hương Thánh Mẫu hạt nhân và quan trọng nhất của Giáo hạt Hà Tiên thuộc Giáo phận Long Xuyên, trấn giữ vị trí điểm mốc tâm linh thiêng liêng nơi địa đầu Tây Nam Tổ quốc nhìn ra vịnh Thái Lan. Linh đài là điểm tựa đức tin bền bỉ nơi các tín hữu tề tựu vào ngày đầu năm dương lịch để cầu nguyện cho hòa bình thế giới và đất nước, đồng thời giữ vai trò trung tâm liên kết tinh thần bác ái, hòa hợp giữa ba cộng đồng dân tộc Kinh, Khmer và Hoa cùng chung sống tại vùng duyên hải Kiên Lương.",
+    "historicalFact": "Theo lược sử giáo xứ do linh mục chánh sở Vinhsơn Nguyễn Minh Chu biên soạn (đăng trên trang Giáo phận Long Xuyên), cộng đoàn Công giáo Hòn Chông khởi đầu từ năm 1931 với linh mục Jean-Marie Merdrignac thuộc Hội Thừa sai Paris (MEP), cha sở họ đạo Đất Hứa. Lược sử dẫn một tài liệu của Hội Thừa sai cho biết năm 1931 có khoảng 3.000 giáo dân nghèo gốc Nam Định, Ninh Bình, Thái Bình vốn làm phu đồn điền cao su và tiêu ở Phú Quốc bị bỏ rơi sau cuộc khủng hoảng kinh tế 1929; cha Merdrignac đưa họ về lập họ đạo Đất Hứa, rồi năm 1932 đến vùng Hòn Chông, Rẫy Mới, Rạch Đùng, tiếp nhận đất của một đồn điền tiêu do chủ người Pháp phá sản để lại. Nhà thờ đá Hòn Chông khởi công năm 1936, khánh thành năm 1940 và trở thành trung tâm sinh hoạt Công giáo của cả vùng Hà Tiên. Từ năm 1946 đến 1953, linh mục Phêrô Võ Thành Trinh, vừa thụ phong tại Cần Thơ, coi sóc vùng truyền giáo này. Trong thời linh mục Augustinô Phan Xuân Trọng làm chánh xứ (1958–1962), ngày 08/12/1959 diễn ra biến cố đặt Tượng Đài Đức Mẹ Nữ Vương Hòa Bình; lược sử ghi biến cố có sự hiện diện của Đức Cha Phaolô Nguyễn Văn Bình, khi ấy là Giám mục Đại diện Tông tòa Cần Thơ, và \"ông Ngô\". Giáo phận Long Xuyên được thành lập ngày 24/11/1960. Khoảng năm 1964–1965, chiến sự trong vùng trở nên ác liệt, linh mục Antôn Lương Công Đại rút về coi họ đạo Kiên Lương, giáo dân tản cư ra các hải đảo và nhà thờ Hòn Chông bị bỏ hoang; sau năm 1975, dấu tích còn lại là ngôi nhà thờ đá đổ nát và đài Đức Mẹ đứng giữa lùm cây hoang vắng. Đầu năm 1991, linh mục Võ Thành Trinh trở lại Hòn Chông và đề nghị phục hồi họ đạo. Ngày 19/04/1991, UBND tỉnh Kiên Giang ký quyết định số 29/TB-UB chấp thuận phục hồi Giáo xứ Hòn Chông; ngày 25/10/1991, Ban Tôn giáo tỉnh chấp thuận để linh mục Vinhsơn Nguyễn Minh Chu phụ trách; ngày 01/12/1991, giáo dân các xứ Hà Tiên, Kiên Lương, Hòa Giang, Đất Hứa, Rạch Đùng cùng giáo dân Hòn Chông phát quang khu nhà thờ và Đài Đức Mẹ. Ngày 31/08/1993, họ đạo nhận chuyển nhượng lại khu đất vườn 4.150 m² có Đài Đức Mẹ. Giáo xứ lần lượt mở một điểm trường (1997), xe đưa đón học sinh (1998) và trường mầm non (2002) do các nữ tu Tu hội Nữ Tử Bác Ái Vinh Sơn phụ trách; các nữ tu có mặt tại giáo xứ từ tháng 10/2002. Ngày 01/01/2012, văn thư thành lập Giáo hạt Hà Tiên được công bố ngay trong cuộc hành hương tại Hòn Chông. Ngày 01/01/2013, trong cuộc hành hương có trên 5.000 người tham dự, Đức Giám mục làm phép diện tích và viên đá đầu tiên xây dựng lại nhà thờ. Hằng năm vào ngày 01/01, lễ Đức Maria Mẹ Thiên Chúa – Nữ Vương Hòa Bình, bổn mạng của Giáo phận Long Xuyên và của giáo xứ, giáo phận tổ chức thánh lễ hành hương tại nhà thờ Hòn Chông; các năm 2025 và 2026 do Đức Giám mục giáo phận chủ sự. Từ 01/7/2025, khu vực Hòn Chông thuộc xã Kiên Lương, tỉnh An Giang.",
+    "oralTradition": "Theo những lời kể lưu truyền, số phận ngôi nhà thờ đá không được thuật lại thống nhất. Một du khách chụp phế tích năm 2004 ghi lại điều nghe được tại chỗ: nhà thờ đã bị bom đạn chiến tranh phá hủy và được giữ nguyên hiện trạng. Một số bài báo mạng (Kiến Thức 2019 và 2023, được nhiều trang chép lại) thì viết rằng nhà thờ bị quân Khmer Đỏ phá hủy năm 1978 khi tràn qua biên giới, khiến hàng chục giáo dân thiệt mạng. Lược sử của chính giáo xứ không nhắc chi tiết này, chỉ ghi giáo xứ bị bỏ hoang từ khoảng 1964–1965 và sau năm 1975 chỉ còn nhà thờ đổ nát cùng đài Đức Mẹ giữa lùm cây. Trong nhiều năm, người đi đường và khách chụp ảnh quen gọi nơi này là \"nhà thờ đá Hòn Chông\" hay \"nhà thờ đổ\": những bức tường đá không mái, tháp chuông vuông còn đứng và pho tượng Đức Mẹ trắng phía sau trở thành một điểm dừng chân trên cung đường Hà Tiên – Chùa Hang – Hòn Phụ Tử.",
+    "architect": "Tượng Đức Mẹ Nữ Vương Hòa Bình Hòn Chông là tượng đứng ngoài trời theo dáng Đức Mẹ Lộ Đức: áo trắng, áo choàng xanh nhạt, hai tay chắp trước ngực, trên đầu có vầng hào quang (theo ảnh đại lễ 01/01/2012 trên Kỷ yếu Mẹ La Vang). Trong ảnh năm 2012, tượng đặt trên một trụ bệ vuông ốp đá có ô trang trí hình thoi, phía sau là một khối tường cao hình tam giác, phía trước là vòng cung mang hàng chữ \"Nữ Vương ban sự bình an cầu cho chúng con\". Các ảnh giới thiệu trên trang Giáo phận Long Xuyên năm 2025–2026 cho thấy vòng cung chữ này vẫn còn, sơn hai màu xanh – đỏ, với bậc cấp sơn đỏ dẫn lên bệ tượng. Chất liệu, chiều cao tượng và người tạc chưa tìm thấy trong tư liệu. Ngôi nhà thờ đá cũ (1936–1940) được xây bằng đá địa phương, kết bằng vôi, cát và mủ cây ô dước; xi măng và sắt thép vì hiếm nên chỉ dùng cho ô vòm, sàn hát, cầu thang và trét mạch chống thấm (theo lược sử giáo xứ). Ảnh chụp năm 2010 cho thấy thân nhà thờ chỉ còn những bức tường đá không mái với các ô cửa vòm, trong khi tháp chuông vuông vẫn đứng, có thánh giá trên đỉnh. Ảnh năm 2020 và ảnh giới thiệu của giáo phận năm 2025 cho thấy nhà thờ đá đã được xây dựng lại, với mặt tiền tháp chuông, bậc cấp đá và tảng đá khắc tên \"Giáo xứ Hòn Chông\"; năm hoàn thành ngôi nhà thờ mới và việc tháp chuông cũ có được giữ lại hay không chưa có nguồn xác nhận.",
+    "significance": "Hòn Chông là nơi Giáo phận Long Xuyên mừng lễ bổn mạng giáo phận – lễ Đức Mẹ Nữ Vương Hòa Bình ngày đầu năm dương lịch – bằng một cuộc hành hương chung: hàng nghìn tín hữu (hơn 4.000 người năm 2012, trên 5.000 người năm 2013) từ khắp giáo phận về giáo xứ nhỏ ở cực tây nam này. Trong thư gửi đoàn hành hương năm 2012, Đức Giám mục xác định lễ Đức Mẹ Nữ Vương Hòa Bình đầu năm là lễ bổn mạng giáo phận và dâng cộng đoàn cho Đức Mẹ. Cuộc hành hương còn gắn với các mốc tổ chức của vùng Hà Tiên: công bố thành lập Giáo hạt Hà Tiên (2012) và giáo họ Sơn Hải – Hòn Heo (2013). Với lịch sử gần một thế kỷ – lập họ đạo cho những người phu đồn điền thất nghiệp, bị bỏ hoang hơn hai thập niên, rồi được phục hồi từ năm 1991 – Hòn Chông là chứng tích về sự bền bỉ của một cộng đoàn nhỏ. Lược sử giáo xứ nhấn mạnh công cuộc tái thiết gắn với giáo dục và quan hệ với cư dân ba sắc tộc Việt, Khmer, Hoa trong vùng, qua điểm trường, xe đưa đón học sinh và trường mầm non không phân biệt dân tộc hay tôn giáo.",
     "realImage": null,
     "realImageCaption": null,
     "galleryImages": [],
     "sources": [
       {
         "title": "Thánh lễ Hành hương Đức Mẹ Hòn Chông 2026 - Giáo phận Long Xuyên",
-        "url": "https://giaophanlongxuyen.org/tin-tuc/thanh-le-hanh-huong-duc-me-hon-chong-2026.html"
+        "url": "https://giaophanlongxuyen.org/tin-tuc/thanh-le-hanh-huong-duc-me-hon-chong-2026.html",
+        "tier": "B"
       },
       {
-        "title": "Lược sử Giáo xứ Hòn Chông - Giáo phận Long Xuyên",
-        "url": "https://trancaolan76.violet.vn/entry/nha-tho-giao-xu-hon-chong-9524201.html"
+        "title": "Lược sử Giáo xứ Hòn Chông (Lm Chánh sở Vinhsơn Nguyễn Minh Chu, nguồn: trang web Giáo phận Long Xuyên; bản chép lại trên violet.vn)",
+        "url": "https://trancaolan76.violet.vn/entry/nha-tho-giao-xu-hon-chong-9524201.html",
+        "tier": "B"
       },
       {
-        "title": "Hành hương kính Đức Mẹ tại Hòn Chông - Kỷ yếu Mẹ La Vang (dẫn nguồn gplongxuyen.net)",
-        "url": "https://melavang.info/hanh-huong-kinh-duc-me-tai-hon-chong/"
+        "title": "Hành hương kính Đức Mẹ tại Hòn Chông (01/01/2013) - Mẹ La Vang (melavang.info)",
+        "url": "https://melavang.info/hanh-huong-kinh-duc-me-tai-hon-chong/",
+        "tier": "B"
+      },
+      {
+        "title": "Hành hương Đức Mẹ Hòn Chông (01/01/2012) - Mẹ La Vang, dẫn nguồn gplongxuyen.net",
+        "url": "https://melavang.info/hanh-huong-duc-me-hon-chong/",
+        "tier": "B"
       },
       {
         "title": "Thánh Lễ hành hương Đức Mẹ Hòn Chông năm 2025 - Giáo phận Long Xuyên",
-        "url": "https://giaophanlongxuyen.org/tin-tuc/thanh-le-hanh-huong-duc-me-hon-chong-nam-2025.html"
+        "url": "https://giaophanlongxuyen.org/tin-tuc/thanh-le-hanh-huong-duc-me-hon-chong-nam-2025.html",
+        "tier": "B"
+      },
+      {
+        "title": "Kiên Lương (xã) – Wikipedia tiếng Việt (đơn vị hành chính sau 01/7/2025)",
+        "url": "https://vi.wikipedia.org/wiki/Ki%C3%AAn_L%C6%B0%C6%A1ng_(x%C3%A3)",
+        "tier": "B"
       }
     ]
   }

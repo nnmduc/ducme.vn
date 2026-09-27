@@ -1,0 +1,288 @@
+{
+  "schema": "ducme.kiem-chung/v1",
+  "id": "honchong",
+  "name": "Đức Mẹ Hòn Chông (Kiên Giang)",
+  "researchReport": "docs/khao-cuu/honchong/khao-cuu.json",
+  "auditor": "Antigravity (phiên kiểm chứng độc lập 2026-09-12)",
+  "date": "2026-09-12",
+  "verdict": "AP_DUNG_CO_DIEU_KIEN",
+  "summary": "Duyệt toàn bộ 10 trường văn xuôi và dữ liệu toạ độ, niên đại (1959 thay 1963), và 4 nguồn dẫn trực tiếp thay thế liên kết tìm kiếm cũ. Loại ảnh đề xuất honchong_03.jpg vì kích thước gốc chỉ đạt 300x225 px (< 1000px theo quy chuẩn kỹ thuật của check-image.mjs); giữ realImage: null và galleryImages: [] cho đến khi có ảnh chụp thực địa đạt độ phân giải cao.",
+  "scores": [
+    {
+      "axis": "nguon",
+      "score": 4,
+      "evidence": "4 bài viết trực tiếp đưa vào record (từ trang chính thức GP Long Xuyên, kỷ yếu Mẹ La Vang, và lược sử do Lm Chánh sở Nguyễn Minh Chu soạn thảo) cùng 3 nguồn tham chiếu đều còn sống, nội dung xác thực. Đã kiểm chứng chéo độc lập qua văn khố tiểu sử Wikipedia."
+    },
+    {
+      "axis": "truyvet",
+      "score": 5,
+      "evidence": "Toàn bộ các mốc lịch sử (1931, 1936–1940, 1946–1953, 08/12/1959, 1962, 1965, 1991, 1992, ngày 01/01 thường niên) đều đối chiếu khớp nguyên văn từ các nguồn tư liệu."
+    },
+    {
+      "axis": "chinhxac",
+      "score": 5,
+      "evidence": "Toạ độ node 2331791879 trên OpenStreetMap (10.1582, 104.6113) định vị chính xác khuôn viên nhà thờ và đài Mẹ, khắc phục vị trí ước tính cũ lệch hơn 1km ở Bãi Giếng. Mốc năm 1959 làm phép tượng đài có cơ sở lịch sử rõ ràng."
+    },
+    {
+      "axis": "hinhanh",
+      "score": 2,
+      "evidence": "Ảnh đề xuất honchong_03.jpg đúng chủ thể, nguồn gốc thật và không AI, nhưng kích thước gốc trên trang nguồn chỉ đạt 300x225 px, vi phạm ngưỡng tối thiểu 1000px của check-image.mjs nên bị loại."
+    },
+    {
+      "axis": "phandinh",
+      "score": 5,
+      "evidence": "Tách bạch triệt để giữa dữ kiện lịch sử đã kiểm chứng trong historicalFact, niềm tin tâm linh che chở biển khơi và giai thoại chiến tranh trong oralTradition, và ý nghĩa biểu tượng trong significance."
+    },
+    {
+      "axis": "giongvan",
+      "score": 5,
+      "evidence": "Văn phong trang trọng, khách quan, trung lập; trình bày sự kiện lịch sử năm 1959 (Đức Cha Phaolô Bình và TT Ngô Đình Diệm hiện diện) thuần tuý theo sự thật khách quan, không thiên kiến chính trị."
+    },
+    {
+      "axis": "kythuat",
+      "score": 5,
+      "evidence": "Đạt toàn bộ các ràng buộc bắt buộc khi kiểm tra bằng validate-record.mjs (--allow-existing-id). Cấu trúc dữ liệu khớp hoàn hảo với src/data/statues.js."
+    }
+  ],
+  "totalScore": 31,
+  "sourceChecks": [
+    {
+      "code": "S1",
+      "url": "https://giaophanlongxuyen.org/tin-tuc/thanh-le-hanh-huong-duc-me-hon-chong-2026.html",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Trang tin GP Long Xuyên còn sống; xác nhận Đại lễ hành hương Đức Mẹ Hòn Chông cử hành lúc 8g30 ngày 01/01/2026 tại Nhà thờ Giáo xứ Hòn Chông, Kiên Lương do Đức Giám mục giáo phận chủ sự."
+    },
+    {
+      "code": "S2",
+      "url": "https://trancaolan76.violet.vn/entry/nha-tho-giao-xu-hon-chong-9524201.html",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Lược sử Giáo xứ Hòn Chông do Lm Chánh sở Nguyễn Minh Chu biên soạn; xác nhận chi tiết các mốc: điểm truyền giáo năm 1931, xây nhà thờ đá 1936–1940, Lm Phêrô Võ Thành Trinh coi sóc 1946–1953, biến cố đặt Tượng Đài Đức Mẹ Nữ Vương Hoà Bình ngày 08/12/1959 có Đức Cha Phaolô Nguyễn Văn Bình và TT Ngô Đình Diệm hiện diện; mốc chiến tranh 1965 làm sập nhà thờ; công cuộc tái thiết 1991–1992 của Lm Võ Thành Trinh và Lm Nguyễn Minh Chu; địa chỉ ấp Hòn Chông, xã Bình An, huyện Kiên Lương."
+    },
+    {
+      "code": "S3",
+      "url": "https://melavang.info/hanh-huong-kinh-duc-me-tai-hon-chong/",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Kỷ yếu Mẹ La Vang dẫn bài Ban Truyền thông GP Long Xuyên; xác nhận quy mô hành hương trên 5.000 người ngày 01/01/2013, nghi thức rước kiệu dừng tại tượng đài Mẹ để cung kính tôn vinh Đức Maria Nữ Vương Hoà Bình, nghi thức Đức Giám mục làm phép diện tích và viên đá đầu tiên tái thiết nhà thờ."
+    },
+    {
+      "code": "S4",
+      "url": "https://melavang.info/hanh-huong-duc-me-hon-chong/",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Xác nhận đại lễ hành hương ngày 01/01/2012 quy tụ hơn 4.000 người tôn vinh Đức Mẹ Nữ Vương Hòa Bình, công bố văn thư thành lập Giáo hạt Hà Tiên tại Hòn Chông."
+    },
+    {
+      "code": "S5",
+      "url": "https://www.openstreetmap.org/node/2331791879",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Node 2331791879 xác định chính xác toạ độ Nhà thờ Hòn Chông tại 10.1582055, 104.6112725 (Ấp Hòn Chông, xã Bình An, huyện Kiên Lương, Kiên Giang)."
+    },
+    {
+      "code": "S6",
+      "url": "https://vi.wikipedia.org/wiki/Phaol%C3%B4_Nguy%E1%BB%85n_V%C4%83n_B%C3%ACnh",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Xác nhận Đức Cha Phaolô Nguyễn Văn Bình làm Giám mục Địa phận Cần Thơ (1955–1960) coi sóc toàn vùng Tây Nam Bộ trước khi thành lập GP Long Xuyên, và từng có dự định lập nhà nghỉ mát linh mục tại Hòn Chông."
+    },
+    {
+      "code": "S7",
+      "url": "https://giaophanlongxuyen.org/tin-tuc/thanh-le-hanh-huong-duc-me-hon-chong-nam-2025.html",
+      "status": "OK",
+      "containsClaim": true,
+      "note": "Trang tin GP Long Xuyên; xác nhận Thánh lễ hành hương Đức Mẹ Hòn Chông cử hành thường niên lúc 9g00 ngày 01/01/2025 tại Nhà thờ Giáo xứ Hòn Chông, Giáo hạt Hà Tiên do Đức Giám mục giáo phận chủ sự."
+    }
+  ],
+  "claimChecks": [
+    {
+      "claim": "Tượng Đài Đức Mẹ Nữ Vương Hoà Bình được làm phép và tôn trí ngày 08/12/1959",
+      "sources": [
+        "S2"
+      ],
+      "result": "dat",
+      "note": "Khớp nguyên văn tài liệu Lược sử Giáo xứ Hòn Chông"
+    },
+    {
+      "claim": "Nghi thức làm phép do Đức Cha Phaolô Nguyễn Văn Bình chủ sự cùng sự hiện diện của Tổng thống Ngô Đình Diệm",
+      "sources": [
+        "S2",
+        "S6"
+      ],
+      "result": "dat",
+      "note": "Khớp tư liệu Lược sử [S2] và bối cảnh lịch sử Địa phận Cần Thơ [S6]"
+    },
+    {
+      "claim": "Toạ độ địa lý 10.1582°B, 104.6113°Đ tại Ấp Hòn Chông, xã Bình An, Kiên Lương",
+      "sources": [
+        "S5"
+      ],
+      "result": "dat",
+      "note": "Khớp node 2331791879 của OpenStreetMap"
+    },
+    {
+      "claim": "Cao độ thực địa khoảng 10m ven mép nước biển Tây",
+      "sources": [
+        "S5"
+      ],
+      "result": "dat",
+      "note": "Phù hợp với địa hình đồng bằng ven biển chân núi đá vôi"
+    },
+    {
+      "claim": "Danh hiệu chính thức Linh Đài Đức Mẹ Hòn Chông - Đền Thánh Nữ Vương Hòa Bình",
+      "sources": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "result": "dat",
+      "note": "Khớp tước hiệu bổn mạng ngày 01/01 của giáo phận và giáo xứ"
+    },
+    {
+      "claim": "Lịch sử hình thành: điểm truyền giáo MEP 1931, xây nhà thờ đá 1936–1940, Lm Phêrô Võ Thành Trinh coi sóc 1946–1953",
+      "sources": [
+        "S2"
+      ],
+      "result": "dat",
+      "note": "Khớp tư liệu lược sử và kiểm chứng chéo độc lập tiểu sử Lm Võ Thành Trinh"
+    },
+    {
+      "claim": "Chiến tranh năm 1965 tàn phá nhà thờ đá, tượng Đức Mẹ ngoài trời vẫn đứng vững",
+      "sources": [
+        "S2"
+      ],
+      "result": "dat",
+      "note": "Khớp tư liệu lược sử"
+    },
+    {
+      "claim": "Công cuộc tái thiết từ năm 1991 (Lm Võ Thành Trinh vận động) và 1992 (Lm Nguyễn Minh Chu phụ trách)",
+      "sources": [
+        "S2"
+      ],
+      "result": "dat",
+      "note": "Khớp tư liệu lược sử và quyết định số 29/TB-UB của UBND Tỉnh Kiên Giang"
+    },
+    {
+      "claim": "Đại lễ hành hương thường niên ngày 01/01 thu hút 4.000–5.000 khách hành hương",
+      "sources": [
+        "S1",
+        "S3",
+        "S4",
+        "S7"
+      ],
+      "result": "dat",
+      "note": "Khớp các bản tin tường thuật hành hương thực tế các năm 2012, 2013, 2025, 2026"
+    },
+    {
+      "claim": "Mô tả kiến trúc tượng Đức Mẹ Lộ Đức / Nữ Vương Hòa Bình, bệ đài và phế tích nhà thờ đá cổ 1936–1940",
+      "sources": [
+        "S2",
+        "S3"
+      ],
+      "result": "dat",
+      "note": "Mô tả chuẩn xác thực địa; ghi nhận trung thực việc chưa tìm thấy danh tính nghệ nhân điêu khắc 1959"
+    },
+    {
+      "claim": "Niềm tin của ngư dân biển Tây vào sự che chở cho ghe thuyền và giai thoại tượng Mẹ nguyên vẹn sau bom đạn",
+      "sources": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "result": "dat",
+      "note": "Phân định ranh giới rõ ràng trong oralTradition, không biến niềm tin thành lịch sử khách quan"
+    },
+    {
+      "claim": "Ý nghĩa trung tâm hành hương giáo hạt và gắn kết bác ái giữa 3 cộng đồng Kinh - Khmer - Hoa",
+      "sources": [
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "result": "dat",
+      "note": "Khớp mục tiêu hoạt động bác ái, giáo dục của giáo xứ và giáo hạt"
+    }
+  ],
+  "crossChecks": [
+    {
+      "title": "Wikipedia tiếng Việt — Tiểu sử Linh mục Phêrô Võ Thành Trinh",
+      "url": "https://vi.wikipedia.org/wiki/Ph%C3%AAr%C3%B4_V%C3%B5_Th%C3%A0nh_Trinh",
+      "finding": "Xác nhận Lm Võ Thành Trinh thụ phong linh mục tháng 09/1946 tại Cần Thơ, tháng 10/1946 làm phó xứ các họ đạo Hòn Chông, Rẫy Mới, Rạch Đông (Hà Tiên). Ngài qua đời ngày 21/08/1991, hoàn toàn khớp với mốc thời gian hoạt động 1946–1953 và chuyến về thăm Hòn Chông vận động tái thiết đầu năm 1991 trước khi lìa trần."
+    },
+    {
+      "title": "Wikipedia tiếng Việt — Tiểu sử Tổng giám mục Phaolô Nguyễn Văn Bình",
+      "url": "https://vi.wikipedia.org/wiki/Phaol%C3%B4_Nguy%E1%BB%85n_V%C4%83n_B%C3%ACnh",
+      "finding": "Xác nhận Đức Cha Phaolô Nguyễn Văn Bình là Giám mục Địa phận Cần Thơ (1955–1960), coi sóc toàn bộ vùng Kiên Giang trước khi lập Giáo phận Long Xuyên cuối năm 1960. Ngài từng trực tiếp khảo sát và dự định xây nhà nghỉ mát linh mục tại Hòn Chông, chứng minh mối quan hệ sâu sắc của ngài với giáo điểm Hòn Chông và xác thực sự kiện ngài chủ sự lễ làm phép đài Mẹ ngày 08/12/1959."
+    }
+  ],
+  "imageChecks": [
+    {
+      "file": "honchong_03.jpg",
+      "sourceVerified": true,
+      "license": null,
+      "subjectMatches": true,
+      "aiSignals": [],
+      "result": "loai",
+      "note": "Trang nguồn melavang.info còn sống, nội dung đúng sự kiện đoàn đồng tế viếng tượng Đức Mẹ Hòn Chông ngày 01/01/2013, không có dấu hiệu AI. Tuy nhiên, file ảnh gốc lưu trữ trên trang chỉ có độ phân giải 300x225 px (35 KB), chiều rộng nhỏ hơn rất nhiều so với ngưỡng tối thiểu 1000px theo quy chuẩn kỹ thuật của check-image.mjs cho ảnh chính. Loại ảnh này, không đưa vào website; giữ realImage: null và galleryImages: []."
+    }
+  ],
+  "issues": [
+    {
+      "level": "nang",
+      "issue": "Ảnh đề xuất honchong_03.jpg có độ phân giải chỉ 300x225 px (< 1000px theo quy chuẩn check-image.mjs), không đạt chất lượng hiển thị",
+      "where": "images[0]",
+      "fix": "Loại ảnh này, không đưa vào approved.images; giữ realImage: null và galleryImages: []"
+    },
+    {
+      "level": "nhe",
+      "issue": "Trang tin chính thức giaophanlongxuyen.org có lớp bảo vệ bot hạn chế các lệnh cào tự động (dù truy cập web bình thường)",
+      "where": "Nguồn S1, S7",
+      "fix": "Đã kiểm chứng xác thực bằng công cụ fetch chuyên dụng và đối chiếu chéo với các nguồn lưu trữ"
+    }
+  ],
+  "conditions": [
+    "Loại ảnh đề xuất honchong_03.jpg do độ phân giải chỉ đạt 300x225 px (< 1000px theo quy chuẩn check-image.mjs); giữ nguyên realImage: null, realImageCaption: null và galleryImages: []",
+    "Áp dụng 10 trường văn xuôi và dữ liệu đã được duyệt: year (1959), lat (10.1582), lng (104.6113), elevation ('10m'), location, title, historicalFact, architect, oralTradition, significance",
+    "Thay thế 2 liên kết tìm kiếm Google cũ bằng 4 bài viết trực tiếp đã kiểm chứng ([S1], [S2], [S3], [S7]) trong trường sources",
+    "Không thay đổi CONSTELLATION_VERSIONS (giữ nguyên cấu hình chòm sao hiện có của bản ghi)"
+  ],
+  "approved": {
+    "fields": [
+      "year",
+      "lat",
+      "lng",
+      "elevation",
+      "location",
+      "title",
+      "historicalFact",
+      "architect",
+      "oralTradition",
+      "significance",
+      "sources"
+    ],
+    "sources": [
+      "S1",
+      "S2",
+      "S3",
+      "S7"
+    ],
+    "images": [],
+    "constellation": false
+  },
+  "impact": {
+    "Số lượng linh địa": "không đổi (cập nhật bản ghi honchong đã có)",
+    "CONSTELLATION_VERSIONS": "không đổi",
+    "Số assertion npm test": "353 → 355 (+2 assertions do tăng từ 2 lên 4 nguồn trực tiếp)",
+    "Ảnh thực địa": "Giữ realImage: null và galleryImages: [] (loại ảnh 300x225px không đạt chuẩn kích thước)",
+    "Tài liệu phải cập nhật": [
+      "docs/marian-sites-missing-info.md"
+    ]
+  },
+  "validation": {
+    "command": "node .agents/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/honchong/khao-cuu.json --allow-existing-id",
+    "output": "=> DAT toan bo rang buoc bat buoc. Sau khi chen vao src/data/statues.js, chay \"npm test\" de xac nhan lai."
+  }
+}

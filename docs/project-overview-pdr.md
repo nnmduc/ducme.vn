@@ -64,4 +64,4 @@ Bãi Dâu có ảnh nhưng chỉ 124 từ.
 bịa thêm sử liệu. Việc cần làm là khảo cứu bổ sung, ưu tiên theo thứ tự tăng dần số từ ở trên, tập
 trung vào các trường `historicalFact`, `architect` và `significance` trong `src/data/statues.js`.
 
-Hai trang mỏng nhất, Fatima Vĩnh Long và Hòn Chông, cũng chỉ có đúng hai nguồn dẫn, mức tối thiểu.
+Fatima Vĩnh Long, một trong hai trang mỏng nhất, cũng chỉ có đúng hai nguồn dẫn, mức tối thiểu. Hòn Chông đã được khảo cứu bổ sung (6 nguồn trực tiếp, xem `docs/khao-cuu/honchong/`).
