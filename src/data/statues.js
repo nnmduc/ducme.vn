@@ -273,12 +273,12 @@ export const MARIAN_STATUES_DATA = [
   {
     "id": "trinhphong",
     "name": "Đức Mẹ Trinh Phong",
-    "title": "Đức Mẹ Trinh Phong (Linh Đài Eo Gió Đèo Ngoạn Mục)",
+    "title": "Tượng đài Đức Mẹ Trinh Phong (Đèo Ngoạn Mục)",
     "year": 1961,
     "lat": 11.8322,
     "lng": 108.6258,
-    "elevation": "980m (Đỉnh Eo Gió - Đèo Sông Pha)",
-    "location": "Eo Gió, Đèo Ngoạn Mục (QL27), xã Lâm Sơn, huyện Ninh Sơn, Ninh Thuận (giáp Lâm Đồng)",
+    "elevation": "Chưa rõ độ cao bệ tượng; đỉnh đèo Ngoạn Mục (Eo Gió) cao khoảng 980m",
+    "location": "Gần Eo Gió, đỉnh đèo Ngoạn Mục (QL27), xã Lâm Sơn, tỉnh Khánh Hòa (trước năm 2025: xã Lâm Sơn, huyện Ninh Sơn, tỉnh Ninh Thuận), giáp tỉnh Lâm Đồng",
     "region": "Duyên hải Nam Trung Bộ",
     "diocese": "Giáo phận Nha Trang",
     "diemStatue5": true,
@@ -304,25 +304,33 @@ export const MARIAN_STATUES_DATA = [
         "code": "NAT-06"
       }
     },
-    "historicalFact": "Được xây dựng năm 1961 theo lệnh Tổng thống Ngô Đình Diệm để dâng kính Đức Mẹ Maria, đặt tại Eo Gió - điểm cao nhất đầy gió lộng của đèo Ngoạn Mục (Sông Pha), nơi hiểm trở nhất trên con đường nối Phan Rang lên Đà Lạt. Tượng đài xi măng trắng 3m đứng hiên ngang giữa sương mù và gió hú ngút ngàn. Sau 1975 tượng bị lãng quên trong rừng rậm; đến ngày 15/04/2007, sau 31 năm gián đoạn, thánh lễ đồng tế đầu tiên đã được cử hành lại tại đây.",
-    "oralTradition": "Ngôi sao Phecda canh giữ cửa ngõ núi cao đổ xuống duyên hải Phan Rang nắng gió, tượng trưng cho Mẹ đứng giữa phong ba bão táp ('Trinh Phong').",
-    "architect": "Quy chuẩn tượng 3m thời TT Diệm, đặt trên bệ đá hoa cương kiên cố vươn lên giữa ngàn mây.",
-    "significance": "Nơi người lữ hành dừng chân cầu xin bình an trước khi vượt cung đèo dốc hiểm trở bậc nhất Đông Dương.",
-    "realImage": null,
-    "realImageCaption": null,
+    "historicalFact": "Tượng đài Đức Mẹ Trinh Phong là một trong năm tượng đài Đức Mẹ mà Tổng thống Việt Nam Cộng hòa Ngô Đình Diệm chỉ đạo xây dựng ở miền Nam: nhân dịp Đại hội Thánh Mẫu mừng 100 năm Đức Mẹ hiện ra tại Lộ Đức, ông chỉ thị cho Phủ Tổng ủy Dinh điền dựng năm tượng đài trong các năm 1959, 1960 và 1961 tại Giang Sơn, Thác Mơ, Phượng Hoàng, Trinh Phong và Tà Pao. Lễ khánh thành tượng Đức Mẹ Vô Nhiễm Nguyên Tội diễn ra ngày 8/12/1961, có Linh mục Bề trên địa phận Nha Trang, Trung tá Tỉnh trưởng Ninh Thuận và hơn 3.000 giáo dân địa phương tham dự; nhân dịp này một thánh lễ được cử hành tại kỳ đài dựng trên đồi để cầu nguyện cho quốc thái dân an (theo báo Thẳng Tiến số Giáng Sinh 1961, được Wikipedia tiếng Việt dẫn lại). Tượng nằm cách giao điểm Eo Gió, đỉnh đèo Ngoạn Mục trên quốc lộ 27, chừng 3 km theo một con đường nhỏ, hướng tầm nhìn về thung lũng Sông Pha, và thuộc quyền quản nhiệm của cha sở giáo xứ Sông Pha. Sau năm 1975, tượng đài trở nên hoang vắng; thỉnh thoảng các linh mục quản xứ Sông Pha, các giáo xứ lân cận hoặc giáo dân có nương rẫy gần đó lặng lẽ đến kính viếng. Sáng Chúa Nhật II Phục Sinh, ngày 15/4/2007, Linh mục quản xứ Sông Pha Anrê Lê Văn Hải cùng khoảng 500 giáo dân và cả những người không Công giáo ở các vùng Sông Pha, Lạc Lâm, Lạc Viên, Lạc Nghiệp, Kađô đã dâng thánh lễ đầu tiên dưới chân tượng sau 31 năm. Hiện nay tượng đài là một địa điểm hành hương của người Công giáo.",
+    "oralTradition": "Theo cách hiểu lưu truyền trong giới hành hương, tên Mẹ Trinh Phong gắn với ngọn gió Eo Gió. Khép lại bài tường thuật thánh lễ năm 2007, chính cha quản xứ Sông Pha viết mấy câu thơ dâng Mẹ: 'Eo Gió có Mẹ Trinh Phong, / Đèo cao gió lộng đứng trông con mình' — hình ảnh người Mẹ đứng giữa đèo cao lộng gió, trông về đoàn con dưới thung lũng. Dù vậy, chưa tìm được tư liệu nào giải thích chính thức vì sao tượng mang tên 'Trinh Phong'; cách hiểu 'Trinh' là đồng trinh, 'Phong' là gió chỉ là cách đọc theo mặt chữ đang lưu hành. Theo lời kể lưu truyền trong giới hành hương, suốt hơn ba mươi năm vắng bóng thánh lễ, tượng Mẹ vẫn đứng lặng giữa rừng thông, chỉ vài người có nương rẫy gần đó hay các cha xứ lân cận thầm lặng tìm vào viếng. Một số bài viết trên diễn đàn Công giáo còn kể rằng năm tượng đài dựng những năm 1959–1961, cùng với La Vang và Trà Kiệu, hợp thành một 'Chòm Sao Bắc Đẩu' trên bản đồ miền Nam, như những vì sao dẫn đường cho người tín hữu — một cách hình dung mang tính biểu tượng mà chưa thấy tư liệu gốc nào ghi là chủ ý khi xây dựng.",
+    "architect": "Theo báo Thẳng Tiến (1961) được Wikipedia tiếng Việt dẫn lại, tượng Đức Mẹ Vô Nhiễm Nguyên Tội tại đây cao 6 thước. Ảnh chụp đang lưu hành trên mạng (đăng lại trên Wikimedia Commons năm 2025) cho thấy hiện trạng: tượng đứng chắp tay, áo choàng xanh phủ đầu, áo dài trắng, tràng hạt vắt trên cánh tay, đặt trên một bệ cao ốp kín những bảng đá tạ ơn khắc chữ như 'Tạ ơn Mẹ Trinh Phong', xung quanh là rừng thông. Chưa tìm được tư liệu về người thiết kế, người tạc tượng, vật liệu gốc hay niên đại các đợt tu bổ; một trang tư liệu Công giáo chỉ ghi chung rằng tượng đã được trùng tu sau khi xuống cấp theo thời gian.",
+    "significance": "Là một trong năm tượng đài Đức Mẹ dựng dưới thời Đệ nhất Cộng hòa trong dịp mừng kính Đức Mẹ những năm 1959–1961, Đức Mẹ Trinh Phong là một dấu mốc đức tin trên cung đèo nối đồng bằng Phan Rang với cao nguyên Lâm Viên. Thánh lễ ngày 15/4/2007 đánh dấu việc cộng đoàn giáo xứ Sông Pha trở lại kính viếng công khai sau 31 năm, có cả người không Công giáo trong vùng cùng tham dự; hiện nay tượng đài là một điểm hành hương, gắn với đời sống đức tin của giáo xứ Sông Pha dưới chân đèo.",
+    "realImage": "assets/real_photos/trinhphong.jpg",
+    "realImageCaption": "Tượng Đức Mẹ Trinh Phong trên đèo Ngoạn Mục, bệ tượng ốp các bảng tạ ơn (Nguồn: Wikimedia Commons, File:DucMetrinhphong.jpg, người tải lên Baojcn01 ghi 'ảnh sưu tầm', không rõ tác giả gốc)",
     "galleryImages": [],
     "sources": [
           {
-                "title": "Đức Mẹ Trinh Phong - Wikipedia",
-                "url": "https://vi.wikipedia.org/wiki/Đức_Mẹ_Trinh_Phong"
+                "title": "Đức Mẹ Trinh Phong – Wikipedia tiếng Việt",
+                "url": "https://vi.wikipedia.org/wiki/%C4%90%E1%BB%A9c_M%E1%BA%B9_Trinh_Phong",
+                "tier": "B"
           },
           {
-                "title": "Thánh lễ phục hồi Đức Mẹ Trinh Phong 2007 - GP Nha Trang",
-                "url": "https://www.google.com/search?q=site:giaophannhatrang.org+\"Trinh+Phong\""
+                "title": "Tượng đài Đức Mẹ Trinh Phong có Thánh lễ đầu tiên sau 31 năm – LM Lê Văn Hải, VietCatholic (16/4/2007)",
+                "url": "https://www.vietcatholic.net/News/Html/43090.htm",
+                "tier": "B"
           },
           {
-                "title": "Di tích 5 pho tượng Đức Mẹ thời Ngô Đình Diệm - Báo CGvDT",
-                "url": "https://www.google.com/search?q=site:cgvdt.vn+\"Trinh+Phong\""
+                "title": "Lược sử Giáo xứ Sông Pha – Giáo phận Nha Trang",
+                "url": "https://giaophannhatrang.org/vi/lich-su-giao-xu/lich-su-giao-xu/luoc-su-giao-xu-song-pha-50.html",
+                "tier": "B"
+          },
+          {
+                "title": "Những địa điểm hành hương kính Đức Mẹ tại Việt Nam – Đinh Văn Tiến Hùng (Vietnamese Missionaries in Asia)",
+                "url": "https://vntaiwan.catholic.org.tw/maria/hanhhuong.htm",
+                "tier": "C"
           }
     ]
   },

@@ -19,14 +19,13 @@ Dung) và quy chuẩn đóng góp tại [`CONTRIBUTING.md`](../CONTRIBUTING.md) 
   CONTRIBUTING.md) nhưng chỉ là kết quả tìm kiếm, không phải một bài viết/trang cụ thể. Nên thay bằng
   liên kết trực tiếp khi tìm được nguồn thật.
 
-## 1. Chưa có ảnh thực địa (2/17 linh địa)
+## 1. Chưa có ảnh thực địa (1/17 linh địa)
 
 Ưu tiên cao nhất theo `CONTRIBUTING.md` mục 2.A. Cần ảnh chụp thật (chính diện tượng + toàn cảnh linh
 đài), giấy phép CC-BY-SA/CC-BY/Public Domain hoặc do người chụp tự nguyện phát hành.
 
 | id | Tên linh địa | Giáo phận | Ghi chú thực địa |
 |---|---|---|---|
-| `trinhphong` | Đức Mẹ Trinh Phong | GP Nha Trang | Đèo Ngoạn Mục, đã có hành hương trở lại từ 2007 |
 | `phuonghoang` | Đức Mẹ Phượng Hoàng | GP Kon Tum | Vị trí hẻo lánh trên núi biên giới — khó khảo sát nhất trong danh sách |
 
 ## 2. Nguồn tham khảo yếu — chỉ có link tìm kiếm Google, chưa có bài viết trực tiếp
@@ -37,7 +36,7 @@ thể. Cần thay bằng nguồn trực tiếp (trang giáo phận, báo, kỷ y
 Hiện không có linh địa nào thuộc diện này (0/2 nguồn trực tiếp).
 
 Các linh địa sau chỉ có **một** nguồn trực tiếp, nguồn còn lại là link tìm kiếm — nên bổ sung thêm ít
-nhất một nguồn trực tiếp nữa: `trakieu`, `trinhphong`, `giangson`,
+nhất một nguồn trực tiếp nữa: `trakieu`, `giangson`,
 `ducbasaigon`, `phuonghoang`, `tapao`.
 
 ## 3. Nội dung mỏng nhất (dưới 150 từ) — cần khảo cứu bổ sung trước
@@ -50,7 +49,7 @@ trong `project-overview-pdr.md` mục 3.
 | 1 | `baidau` | Đức Mẹ Bãi Dâu | 105 |
 | 2 | `trakieu` | Đức Mẹ Trà Kiệu | 143 |
 
-Các linh địa còn lại (166–206 từ): `trinhphong`, `giangson`, `ducbasaigon`, `phuonghoang`, `thacmo`,
+Các linh địa còn lại (166–206 từ): `giangson`, `ducbasaigon`, `phuonghoang`, `thacmo`,
 `lavang`, `tapao` — vẫn dưới mốc cạnh tranh ~300 từ nhưng độ ưu tiên thấp hơn.
 
 ## 4. Ưu tiên tổng hợp — thiếu cả ảnh, nguồn và nội dung
@@ -63,7 +62,7 @@ Hiện không có linh địa nào thuộc diện này (`saobiendanang` đã đ�
 ## 5. Đã tương đối đầy đủ (không cần ưu tiên)
 
 Có ảnh thực địa và ≥2 nguồn, kể cả khi vẫn còn mỏng: `lavang`, `mangden`, `giangson`, `thacmo`,
-`tapao`, `ducbasaigon`, `fatimavinhlong`, `binhtrieu`, `lama`, `nuicui`, `phunhai` (ảnh chính + 2 ảnh phụ Wikimedia Commons, 4 nguồn trực tiếp, khoảng 750 từ), `saobiendanang` (ảnh chính + 3 ảnh phụ, 7 nguồn trực tiếp gồm 2 cấp B và 5 cấp C, khoảng 1.045 từ — hồ sơ tại `docs/khao-cuu/saobiendanang/`), `honchong` (ảnh chính chụp tượng năm 2012 + 3 ảnh phụ Flickr, 6 nguồn trực tiếp có cấp nguồn, khoảng 1.280 từ; ảnh chính chỉ 800x600, dùng theo ngoại lệ 800px tạm thời của chủ dự án — nên thay bằng ảnh tượng ≥1000px khi tìm được). Vẫn hoan nghênh bổ sung nếu có tư liệu mới, nhưng không phải
+`tapao`, `ducbasaigon`, `fatimavinhlong`, `binhtrieu`, `lama`, `nuicui`, `phunhai` (ảnh chính + 2 ảnh phụ Wikimedia Commons, 4 nguồn trực tiếp, khoảng 750 từ), `saobiendanang` (ảnh chính + 3 ảnh phụ, 7 nguồn trực tiếp gồm 2 cấp B và 5 cấp C, khoảng 1.045 từ — hồ sơ tại `docs/khao-cuu/saobiendanang/`), `honchong` (ảnh chính chụp tượng năm 2012 + 3 ảnh phụ Flickr, 6 nguồn trực tiếp có cấp nguồn, khoảng 1.280 từ; ảnh chính chỉ 800x600, dùng theo ngoại lệ 800px tạm thời của chủ dự án — nên thay bằng ảnh tượng ≥1000px khi tìm được), `trinhphong` (ảnh chính từ Wikimedia Commons do người tải lên ghi 'ảnh sưu tầm', chưa rõ tác giả gốc — nên thay bằng ảnh có nguồn rõ khi tìm được; 4 nguồn trực tiếp có cấp nguồn gồm 3 cấp B và 1 cấp C, khoảng 760 từ; toạ độ vẫn cần khảo cứu lại — hồ sơ tại `docs/khao-cuu/trinhphong/`). Vẫn hoan nghênh bổ sung nếu có tư liệu mới, nhưng không phải
 việc cấp thiết.
 
 ---
