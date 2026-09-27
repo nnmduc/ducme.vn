@@ -1,0 +1,840 @@
+{
+  "schema": "ducme.khao-cuu/v1",
+  "id": "trinhphong",
+  "name": "Đức Mẹ Trinh Phong",
+  "kind": "capnhat",
+  "researcher": "marian-research (phiên tự động, lượt 2 sau quyết định của người dùng)",
+  "date": "2026-09-27",
+  "scope": "Cập nhật bản ghi đã có: thay 2 link tìm kiếm Google bằng nguồn trực tiếp (bài tường thuật 2007 của cha quản xứ Sông Pha trên VietCatholic, lược sử giáo xứ Sông Pha của GP Nha Trang), viết lại historicalFact/architect/oralTradition/significance theo đúng nguồn, đối chiếu chiều cao tượng, toạ độ, địa danh hành chính sau sáp nhập 2025, gom ảnh ứng viên. Theo quyết định của người dùng, một bài đăng lại năm 2014 (và mọi bản sao của nó) đã bị loại hẳn khỏi hồ sơ, không dùng bất kỳ chi tiết nào lấy riêng từ bài đó.",
+  "baseline": {
+    "hasPhoto": false,
+    "directSources": 1,
+    "searchSources": 2,
+    "totalWords": 166,
+    "missing": [
+      "ảnh thực địa",
+      "nguồn trực tiếp thứ hai",
+      "nội dung mỏng (166/300 từ)"
+    ]
+  },
+  "fields": [
+    {
+      "field": "title",
+      "action": "sua",
+      "value": "Tượng đài Đức Mẹ Trinh Phong (Đèo Ngoạn Mục)",
+      "note": "Tên cũ 'Linh Đài Eo Gió Đèo Ngoạn Mục' không thấy nguồn nào dùng. Nguồn trực tiếp [S2] và Wikipedia [S1] đều gọi là 'tượng đài Đức Mẹ Trinh Phong'.",
+      "claims": [
+        {
+          "text": "Tên gọi 'Tượng đài Đức Mẹ Trinh Phong' được dùng trong bài tường thuật năm 2007 của cha quản xứ Sông Pha và trong Wikipedia tiếng Việt",
+          "sources": [
+            "S1",
+            "S2"
+          ],
+          "confidence": "cao"
+        }
+      ]
+    },
+    {
+      "field": "year",
+      "action": "giunguyen",
+      "note": "Giữ 1961 (năm khánh thành 8/12/1961 theo báo Thẳng Tiến 1961 qua [S1]). [S2] ghi 'xây dựng vào khoảng năm 1960' — xem conflicts[].",
+      "claims": [
+        {
+          "text": "Lễ khánh thành tượng Đức Mẹ Vô Nhiễm Nguyên Tội diễn ra ngày 8/12/1961",
+          "sources": [
+            "S1"
+          ],
+          "confidence": "trungbinh"
+        },
+        {
+          "text": "Năm tượng đài được xây trong các năm 1959, 1960 và 1961",
+          "sources": [
+            "S17",
+            "S4"
+          ],
+          "confidence": "trungbinh"
+        }
+      ]
+    },
+    {
+      "field": "lat",
+      "action": "giunguyen",
+      "note": "CHƯA ĐỐI CHIẾU ĐƯỢC. Không tìm được toạ độ đo tại bệ tượng (Wikimapia 6510388 chặn truy cập tự động; OpenStreetMap không có điểm tượng). Giữ 11.8322 tạm thời, độ tin cậy thấp. Toạ độ này nằm gần như đúng trên đường ranh giới tỉnh trong OSM, cách giao điểm Eo Gió trên QL27 (11.8346, 108.6450 — tính từ giao cắt QL27 với ranh giới tỉnh trong OSM) khoảng 2,1 km về phía tây-tây nam, trong khi [S2] tả tượng ở cuối con đường nhỏ 'rẽ về hướng đông chừng 3 km' từ Eo Gió. Xem conflicts[].",
+      "claims": [
+        {
+          "text": "Tượng cách giao điểm Eo Gió (đỉnh đèo, ranh giới hai tỉnh) chừng 3 km đường bộ theo một con đường nhỏ rẽ về hướng đông, hướng tầm nhìn về thung lũng Sông Pha",
+          "sources": [
+            "S2"
+          ],
+          "confidence": "trungbinh"
+        },
+        {
+          "text": "Giao điểm Eo Gió (QL27 cắt ranh giới tỉnh) nằm quanh 11.8346, 108.6450; đỉnh đèo Ngoạn Mục ghi 11.834–11.837, 108.645",
+          "sources": [
+            "S8",
+            "S9",
+            "S15"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Toạ độ bản ghi hiện có 11.8322 chưa được nguồn nào xác nhận là vị trí bệ tượng",
+          "sources": [
+            "S8"
+          ],
+          "confidence": "thap"
+        }
+      ]
+    },
+    {
+      "field": "lng",
+      "action": "giunguyen",
+      "note": "Như lat: giữ 108.6258 tạm thời, độ tin cậy thấp, chờ đo lại trên ảnh vệ tinh/Google Maps hoặc Wikimapia bằng tay.",
+      "claims": [
+        {
+          "text": "Tượng cách Eo Gió chừng 3 km về hướng đông theo đường nhỏ",
+          "sources": [
+            "S2"
+          ],
+          "confidence": "trungbinh"
+        },
+        {
+          "text": "Kinh độ bản ghi 108.6258 nằm phía tây giao điểm Eo Gió (108.6450), mâu thuẫn hướng mô tả của [S2]",
+          "sources": [
+            "S8"
+          ],
+          "confidence": "thap"
+        }
+      ]
+    },
+    {
+      "field": "elevation",
+      "action": "sua",
+      "value": "Chưa rõ độ cao bệ tượng; đỉnh đèo Ngoạn Mục (Eo Gió) cao khoảng 980m",
+      "note": "Bản ghi cũ gán 980m cho chính tượng. 980m là độ cao đỉnh đèo; tượng nằm cách đỉnh đèo khoảng 3 km nên độ cao có thể khác.",
+      "claims": [
+        {
+          "text": "Đỉnh đèo Ngoạn Mục cao khoảng 980m",
+          "sources": [
+            "S9",
+            "S15"
+          ],
+          "confidence": "cao"
+        }
+      ]
+    },
+    {
+      "field": "location",
+      "action": "sua",
+      "value": "Gần Eo Gió, đỉnh đèo Ngoạn Mục (QL27), xã Lâm Sơn, tỉnh Khánh Hòa (trước năm 2025: xã Lâm Sơn, huyện Ninh Sơn, tỉnh Ninh Thuận), giáp tỉnh Lâm Đồng",
+      "note": "Cập nhật theo địa danh sau sáp nhập 2025 như Wikipedia [S1] đang ghi; giữ tên cũ trong ngoặc vì toàn bộ tư liệu lịch sử dùng tên Ninh Thuận.",
+      "claims": [
+        {
+          "text": "Vị trí tượng hiện nay ở xã Lâm Sơn, tỉnh Khánh Hòa; Eo Gió là ranh giới Khánh Hòa – Lâm Đồng",
+          "sources": [
+            "S1"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Sông Pha thuộc xã Lâm Sơn, huyện Ninh Sơn, tỉnh Ninh Thuận (địa danh trước sáp nhập), giáp huyện Đơn Dương (Lâm Đồng) qua đèo Ngoạn Mục",
+          "sources": [
+            "S3"
+          ],
+          "confidence": "cao"
+        }
+      ]
+    },
+    {
+      "field": "historicalFact",
+      "action": "sua",
+      "value": "Tượng đài Đức Mẹ Trinh Phong là một trong năm tượng đài Đức Mẹ mà Tổng thống Việt Nam Cộng hòa Ngô Đình Diệm chỉ đạo xây dựng ở miền Nam: nhân dịp Đại hội Thánh Mẫu mừng 100 năm Đức Mẹ hiện ra tại Lộ Đức, ông chỉ thị cho Phủ Tổng ủy Dinh điền dựng năm tượng đài trong các năm 1959, 1960 và 1961 tại Giang Sơn, Thác Mơ, Phượng Hoàng, Trinh Phong và Tà Pao. Lễ khánh thành tượng Đức Mẹ Vô Nhiễm Nguyên Tội diễn ra ngày 8/12/1961, có Linh mục Bề trên địa phận Nha Trang, Trung tá Tỉnh trưởng Ninh Thuận và hơn 3.000 giáo dân địa phương tham dự; nhân dịp này một thánh lễ được cử hành tại kỳ đài dựng trên đồi để cầu nguyện cho quốc thái dân an (theo báo Thẳng Tiến số Giáng Sinh 1961, được Wikipedia tiếng Việt dẫn lại). Tượng nằm cách giao điểm Eo Gió, đỉnh đèo Ngoạn Mục trên quốc lộ 27, chừng 3 km theo một con đường nhỏ, hướng tầm nhìn về thung lũng Sông Pha, và thuộc quyền quản nhiệm của cha sở giáo xứ Sông Pha. Sau năm 1975, tượng đài trở nên hoang vắng; thỉnh thoảng các linh mục quản xứ Sông Pha, các giáo xứ lân cận hoặc giáo dân có nương rẫy gần đó lặng lẽ đến kính viếng. Sáng Chúa Nhật II Phục Sinh, ngày 15/4/2007, Linh mục quản xứ Sông Pha Anrê Lê Văn Hải cùng khoảng 500 giáo dân và cả những người không Công giáo ở các vùng Sông Pha, Lạc Lâm, Lạc Viên, Lạc Nghiệp, Kađô đã dâng thánh lễ đầu tiên dưới chân tượng sau 31 năm. Hiện nay tượng đài là một địa điểm hành hương của người Công giáo.",
+      "note": "Bỏ cụm 'theo lệnh Tổng thống' — [S1] viết 'chỉ đạo xây dựng', [S17] và [S4] viết 'chỉ thị cho Phủ Tổng ủy Dinh điền'. Bỏ 'tượng xi măng trắng 3m' (không nguồn, mâu thuẫn '6 thước' của [S1]) và các câu văn tả cảnh 'gió hú ngút ngàn' không có nguồn. Không dùng bất kỳ chi tiết nào từ bài 2014 đã bị loại.",
+      "claims": [
+        {
+          "text": "Là một trong 5 tượng đài Đức Mẹ mà Tổng thống VNCH Ngô Đình Diệm chỉ đạo xây dựng ở miền Nam",
+          "sources": [
+            "S1",
+            "S4"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Nhân dịp Đại hội Thánh Mẫu (100 năm Lộ Đức), TT Diệm chỉ thị cho Phủ Tổng ủy Dinh điền xây 5 tượng đài trong các năm 1959, 1960, 1961 gồm Giang Sơn, Thác Mơ, Phượng Hoàng, Trinh Phong, Tà Pao",
+          "sources": [
+            "S17",
+            "S4"
+          ],
+          "confidence": "trungbinh"
+        },
+        {
+          "text": "Khánh thành ngày 8/12/1961, có LM Bề trên địa phận Nha Trang, Trung tá Tỉnh trưởng Ninh Thuận và hơn 3.000 giáo dân; thánh lễ tại kỳ đài trên đồi cầu cho quốc thái dân an",
+          "sources": [
+            "S1"
+          ],
+          "confidence": "trungbinh"
+        },
+        {
+          "text": "Tượng cách Eo Gió chừng 3 km theo đường nhỏ, hướng về thung lũng Sông Pha, thuộc quyền quản nhiệm của cha sở Sông Pha",
+          "sources": [
+            "S2",
+            "S1"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Sau 1975 tượng đài hoang vắng, chỉ thỉnh thoảng có linh mục hoặc giáo dân lặng lẽ đến viếng",
+          "sources": [
+            "S2",
+            "S1"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Ngày 15/4/2007 (Chúa Nhật II Phục Sinh), LM Anrê Lê Văn Hải cùng khoảng 500 giáo dân và lương dân các vùng lân cận dâng thánh lễ đầu tiên sau 31 năm",
+          "sources": [
+            "S2",
+            "S1"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "LM Anrê Lê Văn Hải quản xứ Sông Pha từ 20/02/2002 đến 03/2014 — khớp với mốc 2007",
+          "sources": [
+            "S3"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Hiện nay là một địa điểm hành hương của người Công giáo",
+          "sources": [
+            "S1"
+          ],
+          "confidence": "trungbinh"
+        }
+      ]
+    },
+    {
+      "field": "architect",
+      "action": "sua",
+      "value": "Theo báo Thẳng Tiến (1961) được Wikipedia tiếng Việt dẫn lại, tượng Đức Mẹ Vô Nhiễm Nguyên Tội tại đây cao 6 thước. Ảnh chụp đang lưu hành trên mạng (đăng lại trên Wikimedia Commons năm 2025) cho thấy hiện trạng: tượng đứng chắp tay, áo choàng xanh phủ đầu, áo dài trắng, tràng hạt vắt trên cánh tay, đặt trên một bệ cao ốp kín những bảng đá tạ ơn khắc chữ như 'Tạ ơn Mẹ Trinh Phong', xung quanh là rừng thông. Chưa tìm được tư liệu về người thiết kế, người tạc tượng, vật liệu gốc hay niên đại các đợt tu bổ; một trang tư liệu Công giáo chỉ ghi chung rằng tượng đã được trùng tu sau khi xuống cấp theo thời gian.",
+      "note": "Bỏ 'quy chuẩn tượng 3m thời TT Diệm' và 'bệ đá hoa cương' — không nguồn. 'Thước' trong nguồn 1961 để nguyên, không tự quy đổi. Phần mô tả hiện trạng dựa trên ảnh [S7] (cùng ảnh xuất hiện ở [S5] từ 2024); chưa xác định được tượng trong ảnh có phải pho tượng gốc 1961 hay tượng thay thế.",
+      "claims": [
+        {
+          "text": "Tượng Đức Mẹ cao 6 thước",
+          "sources": [
+            "S1"
+          ],
+          "confidence": "trungbinh"
+        },
+        {
+          "text": "Hiện trạng: tượng sơn màu (áo choàng xanh, áo trắng), bệ ốp bảng tạ ơn ghi 'Tạ ơn Mẹ Trinh Phong', giữa rừng thông",
+          "sources": [
+            "S7",
+            "S5"
+          ],
+          "confidence": "trungbinh"
+        },
+        {
+          "text": "Tượng đã được trùng tu sau khi xuống cấp bởi thời gian (không ghi năm)",
+          "sources": [
+            "S5"
+          ],
+          "confidence": "thap"
+        }
+      ]
+    },
+    {
+      "field": "oralTradition",
+      "action": "sua",
+      "value": "Người Công giáo quanh Sông Pha vẫn gắn tên Mẹ Trinh Phong với ngọn gió Eo Gió. Khép lại bài tường thuật thánh lễ năm 2007, chính cha quản xứ Sông Pha viết mấy câu thơ dâng Mẹ: 'Eo Gió có Mẹ Trinh Phong, / Đèo cao gió lộng đứng trông con mình' — hình ảnh người Mẹ đứng giữa đèo cao lộng gió, trông về đoàn con dưới thung lũng. Dù vậy, chưa tìm được tư liệu nào giải thích chính thức vì sao tượng mang tên 'Trinh Phong'; cách hiểu 'Trinh' là đồng trinh, 'Phong' là gió chỉ là cách đọc theo mặt chữ đang lưu hành. Theo lời kể lưu truyền trong giới hành hương, suốt hơn ba mươi năm vắng bóng thánh lễ, tượng Mẹ vẫn đứng lặng giữa rừng thông, chỉ vài người có nương rẫy gần đó hay các cha xứ lân cận thầm lặng tìm vào viếng; đến nay nhiều video hành hương vẫn giới thiệu nơi này như pho tượng Mẹ ẩn mình giữa rừng trên đỉnh đèo. Một số bài viết trên diễn đàn Công giáo còn kể rằng năm tượng đài dựng những năm 1959–1961, cùng với La Vang và Trà Kiệu, hợp thành một 'Chòm Sao Bắc Đẩu' trên bản đồ miền Nam, như những vì sao dẫn đường cho người tín hữu — một cách hình dung mang tính biểu tượng mà chưa thấy tư liệu gốc nào ghi là chủ ý khi xây dựng.",
+      "note": "Thay câu cũ về 'ngôi sao Phecda' và giải nghĩa 'Mẹ đứng giữa phong ba bão táp' — cả hai không có nguồn bên ngoài (Phecda là cách sắp xếp riêng của ducme.vn, đã có ở constellationRole). Mỗi ý giữ nhãn truyền tụng riêng.",
+      "claims": [
+        {
+          "text": "Bài thơ 'Eo Gió có Mẹ Trinh Phong, Đèo cao gió lộng đứng trông con mình' của LM Anrê Lê Văn Hải trong bài tường thuật 2007",
+          "sources": [
+            "S2"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Không nguồn nào tìm được giải thích nghĩa tên 'Trinh Phong'",
+          "sources": [
+            "S1",
+            "S2",
+            "S4"
+          ],
+          "confidence": "trungbinh"
+        },
+        {
+          "text": "Video hành hương giới thiệu tượng 'nằm ẩn giữa rừng'",
+          "sources": [
+            "S12",
+            "S13",
+            "S14"
+          ],
+          "confidence": "thap"
+        },
+        {
+          "text": "Chuyện năm tượng đài cùng La Vang, Trà Kiệu hợp thành 'Chòm Sao Bắc Đẩu'",
+          "sources": [
+            "S6"
+          ],
+          "confidence": "trungbinh"
+        }
+      ]
+    },
+    {
+      "field": "significance",
+      "action": "sua",
+      "value": "Là một trong năm tượng đài Đức Mẹ dựng dưới thời Đệ nhất Cộng hòa trong dịp mừng kính Đức Mẹ những năm 1959–1961, Đức Mẹ Trinh Phong là một dấu mốc đức tin trên cung đèo nối đồng bằng Phan Rang với cao nguyên Lâm Viên. Thánh lễ ngày 15/4/2007 đánh dấu việc cộng đoàn giáo xứ Sông Pha trở lại kính viếng công khai sau 31 năm, có cả người không Công giáo trong vùng cùng tham dự; từ đó tượng đài trở thành một điểm hành hương, gắn với đời sống đức tin của giáo xứ Sông Pha dưới chân đèo.",
+      "note": "Bỏ câu cũ 'nơi người lữ hành dừng chân cầu xin bình an trước khi vượt đèo' — không nguồn, và dễ lẫn với Đức Mẹ Suối Phong Ba (tượng khác, ven suối gần chân đèo, được giới thiệu như trạm dừng chân của lữ khách [S10]). Tượng Trinh Phong nằm cách QL27 khoảng 3 km đường nhỏ [S2].",
+      "claims": [
+        {
+          "text": "Năm tượng đài được xây nhân dịp Đại hội Thánh Mẫu / kỷ niệm 100 năm Đức Mẹ hiện ra tại Lộ Đức, trong các năm 1959–1961",
+          "sources": [
+            "S17",
+            "S4",
+            "S6"
+          ],
+          "confidence": "trungbinh"
+        },
+        {
+          "text": "Thánh lễ 2007 có cả lương dân các vùng lân cận tham dự",
+          "sources": [
+            "S2"
+          ],
+          "confidence": "cao"
+        },
+        {
+          "text": "Hiện là địa điểm hành hương của người Công giáo",
+          "sources": [
+            "S1"
+          ],
+          "confidence": "trungbinh"
+        }
+      ]
+    },
+    {
+      "field": "constellationRole",
+      "action": "giunguyen",
+      "note": "Giữ nguyên cả v1–v4 (diemStatue5 = true là một trong 5 id đã chốt). Không đổi vì test chốt số node.",
+      "claims": [
+        {
+          "text": "Trinh Phong là một trong 5 tượng đài 1959–1961 (cơ sở cho v3)",
+          "sources": [
+            "S17",
+            "S1",
+            "S4"
+          ],
+          "confidence": "cao"
+        }
+      ]
+    },
+    {
+      "field": "sources",
+      "action": "sua",
+      "value": [
+        {
+          "title": "Đức Mẹ Trinh Phong – Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/%C4%90%E1%BB%A9c_M%E1%BA%B9_Trinh_Phong",
+          "tier": "B"
+        },
+        {
+          "title": "Tượng đài Đức Mẹ Trinh Phong có Thánh lễ đầu tiên sau 31 năm – LM Lê Văn Hải, VietCatholic (16/4/2007)",
+          "url": "https://www.vietcatholic.net/News/Html/43090.htm",
+          "tier": "B"
+        },
+        {
+          "title": "Lược sử Giáo xứ Sông Pha – Giáo phận Nha Trang",
+          "url": "https://giaophannhatrang.org/vi/lich-su-giao-xu/lich-su-giao-xu/luoc-su-giao-xu-song-pha-50.html",
+          "tier": "B"
+        },
+        {
+          "title": "Những địa điểm hành hương kính Đức Mẹ tại Việt Nam – Đinh Văn Tiến Hùng (Vietnamese Missionaries in Asia)",
+          "url": "https://vntaiwan.catholic.org.tw/maria/hanhhuong.htm",
+          "tier": "C"
+        }
+      ],
+      "note": "Thay 2 link tìm kiếm Google (site:giaophannhatrang.org, site:cgvdt.vn) bằng bài viết trực tiếp. Dùng host vietcatholic.net vì vietcatholic.org lỗi chứng chỉ TLS; cùng bài số 43090.",
+      "claims": [
+        {
+          "text": "Hai nguồn trực tiếp mới thay cho link tìm kiếm: bài tường thuật 2007 của cha quản xứ và lược sử giáo xứ trên trang GP Nha Trang",
+          "sources": [
+            "S2",
+            "S3"
+          ],
+          "confidence": "cao"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "code": "S1",
+      "title": "Đức Mẹ Trinh Phong – Wikipedia tiếng Việt (chú thích dẫn báo Thẳng Tiến, số Giáng Sinh 1961, số kép 123-124, tr. 31)",
+      "url": "https://vi.wikipedia.org/wiki/%C4%90%E1%BB%A9c_M%E1%BA%B9_Trinh_Phong",
+      "tier": "B",
+      "accessed": "2026-09-27",
+      "supports": "Khánh thành 8/12/1961, danh hiệu Vô Nhiễm Nguyên Tội, cao 6 thước, thành phần dự lễ (LM Bề trên địa phận Nha Trang, Trung tá Tỉnh trưởng Ninh Thuận, >3.000 giáo dân), 'chỉ đạo xây dựng', thánh lễ 15/4/2007, địa danh mới xã Lâm Sơn tỉnh Khánh Hòa. Phần 'Xem thêm' nêu báo Đức Mẹ Hằng Cứu Giúp số 152 (1/1962) và Kỷ yếu GP Nha Trang 1957-2007 tr. 312-313 (chưa tiếp cận).",
+      "inRecord": true
+    },
+    {
+      "code": "S2",
+      "title": "Tượng đài Đức Mẹ Trinh Phong có Thánh lễ đầu tiên sau 31 năm – LM Anrê Lê Văn Hải, quản xứ Sông Pha, VietCatholic News 16/4/2007",
+      "url": "https://www.vietcatholic.net/News/Html/43090.htm",
+      "tier": "B",
+      "accessed": "2026-09-27",
+      "supports": "Lời tường thuật trực tiếp của người chủ sự: vị trí (từ Eo Gió rẽ đường nhỏ về hướng đông chừng 3 km, nhìn về thung lũng Sông Pha), 'xây dựng vào khoảng năm 1960', thuộc quyền quản nhiệm cha sở Sông Pha, hoang vắng sau 1975, thánh lễ 15/4/2007 với khoảng 500 giáo dân và lương dân các vùng Sông Pha, Lạc Lâm, Lạc Viên, Lạc Nghiệp, Kađô; bài thơ 'Eo Gió có Mẹ Trinh Phong'. Bản vietcatholic.org lỗi chứng chỉ; bản vietcatholic.net mở được. Bài có số điện thoại/email cá nhân của tác giả — không chép vào hồ sơ.",
+      "inRecord": true
+    },
+    {
+      "code": "S3",
+      "title": "Lược sử Giáo xứ Sông Pha – Ban Truyền thông Giáo phận Nha Trang (đăng 28/08/2021)",
+      "url": "https://giaophannhatrang.org/vi/lich-su-giao-xu/lich-su-giao-xu/luoc-su-giao-xu-song-pha-50.html",
+      "tier": "B",
+      "accessed": "2026-09-27",
+      "supports": "Giáo xứ Sông Pha ở xã Lâm Sơn, huyện Ninh Sơn, Ninh Thuận, giáp Đơn Dương qua đèo Ngoạn Mục; manh nha từ dinh điền Tín Mục 1957; thành lập 1963; danh sách cha xứ (LM Anrê Lê Văn Hải 2002–2014). Trang KHÔNG nhắc tới tượng Trinh Phong.",
+      "inRecord": true
+    },
+    {
+      "code": "S4",
+      "title": "Những địa điểm hành hương kính Đức Mẹ tại Việt Nam – Đinh Văn Tiến Hùng, trang Vietnamese Missionaries in Asia",
+      "url": "https://vntaiwan.catholic.org.tw/maria/hanhhuong.htm",
+      "tier": "C",
+      "accessed": "2026-09-27",
+      "supports": "Nhân dịp Đại hội Thánh Mẫu/100 năm Lộ Đức, TT Ngô Đình Diệm 'chỉ thị cho Phủ Tổng Ủy Dinh Điền xây 5 tượng đài kính Đức Mẹ vào những năm 1959, 1960 và 1961' tại Giang Sơn, Thác Mơ, Phượng Hoàng, Trinh Phong (Ninh Thuận), Tà Pao. Không có chi tiết riêng về Trinh Phong.",
+      "inRecord": true
+    },
+    {
+      "code": "S5",
+      "title": "Đức Mẹ Trinh Phong – trang tư liệu chuathuongxot.org (tạo 17/08/2024)",
+      "url": "https://chuathuongxot.org/DucMe/DucMeTrinhPhongA.htm",
+      "tier": "C",
+      "accessed": "2026-09-27",
+      "supports": "Chép lại gần nguyên văn bài Wikipedia [S1] (không phải nguồn độc lập); thêm chú thích ảnh 'Tượng Đức Mẹ Trinh Phong đã được trùng tu sau khi bị xuống cấp bởi thời gian'. Ảnh đi kèm trùng với ảnh Commons [S7] — bằng chứng ảnh đã lưu hành từ 2024. Bản song song: DucMeTrinhPhong.htm.",
+      "inRecord": false
+    },
+    {
+      "code": "S6",
+      "title": "10 trung tâm hành hương Đức Mẹ tại Việt Nam – diễn đàn Phải Làm Gì (mục Đức Mẹ Giang Sơn)",
+      "url": "https://phailamgi.com/threads/10-trung-tam-hanh-huong-duc-me-tai-viet-nam-nguoi-cong-giao-nen-den-it-nhat-mot-lan-trong-doi.2581/",
+      "tier": "C",
+      "accessed": "2026-09-27",
+      "supports": "Chuyện năm tượng đài 1959–1961 (có Trinh Phong 'Ninh Thuận và Lâm Đồng') cùng La Vang và Trà Kiệu tạo thành 'Chòm Sao Bắc Đẩu'. Lưu ý: biệt danh 'Đức Mẹ cụt tay' trên cùng trang là của Măng Đen, KHÔNG phải Trinh Phong.",
+      "inRecord": false
+    },
+    {
+      "code": "S7",
+      "title": "File:DucMetrinhphong.jpg – Wikimedia Commons (tải lên 18/07/2025 bởi Baojcn01, mô tả 'ảnh sưu tầm')",
+      "url": "https://commons.wikimedia.org/wiki/File:DucMetrinhphong.jpg",
+      "tier": "C",
+      "accessed": "2026-09-27",
+      "supports": "Ảnh hiện trạng tượng và bệ ốp bảng tạ ơn 'Tạ ơn Mẹ Trinh Phong'. Trang khai 'Own work' + CC BY-SA 4.0 nhưng mô tả lại ghi 'ảnh sưu tầm', và cùng ảnh đã có trên [S5] từ 08/2024 — nguồn gốc đáng ngờ. 669×1103 px, EXIF chỉ còn orientation.",
+      "inRecord": false
+    },
+    {
+      "code": "S8",
+      "title": "OpenStreetMap – QL27 'Đèo Ngoạn Mục' (way 774895340) và ranh giới tỉnh (way 1145016675), truy vấn Overpass",
+      "url": "https://www.openstreetmap.org/way/774895340",
+      "tier": "C",
+      "accessed": "2026-09-27",
+      "supports": "Tính được giao điểm QL27 với ranh giới tỉnh (Eo Gió) ≈ 11.8346, 108.6450; toạ độ bản ghi 11.8322, 108.6258 nằm sát đường ranh giới, cách Eo Gió ~2,1 km về phía tây-tây nam. OSM không có điểm nào cho tượng Trinh Phong.",
+      "inRecord": false
+    },
+    {
+      "code": "S9",
+      "title": "Ngoạn Mục Pass – Wikipedia tiếng Anh (dẫn Lonely Planet Vietnam 2007: độ cao 980m)",
+      "url": "https://en.wikipedia.org/wiki/Ngo%E1%BA%A1n_M%E1%BB%A5c_Pass",
+      "tier": "B",
+      "accessed": "2026-09-27",
+      "supports": "Toạ độ đèo 11.8340, 108.6450 (toạ độ đèo, không phải toạ độ tượng); độ cao 980m.",
+      "inRecord": false
+    },
+    {
+      "code": "S10",
+      "title": "Khám phá Đức Mẹ Phong Ba và ông chú 'gác đền' tại Đà Lạt – CGvST (11/02/2026)",
+      "url": "https://cgvst.com/ong-chu-trong-coi-tuong-dai-duc-me/",
+      "tier": "C",
+      "accessed": "2026-09-27",
+      "supports": "BẪY TRÙNG TÊN: Đức Mẹ (Suối) Phong Ba là tượng KHÁC, bên dòng suối cách chân đèo Sông Pha chừng 3 km, được giới thiệu như trạm dừng chân của lữ khách. Ghi lại để không gán ảnh/chuyện kể của nó cho Trinh Phong.",
+      "inRecord": false
+    },
+    {
+      "code": "S11",
+      "title": "Trang Facebook 'Tượng Đài Đức Mẹ Trinh Phong' (Song Pha)",
+      "url": "https://www.facebook.com/p/T%C6%B0%E1%BB%A3ng-%C4%90%C3%A0i-%C4%90%E1%BB%A9c-M%E1%BA%B9-Trinh-Phong-100064601746043/",
+      "tier": "D",
+      "accessed": "2026-09-27",
+      "supports": "Trang cộng đồng về tượng; có bài 'Xin thông báo tới mọi người muốn đi vào thăm viếng tượng Đức Mẹ...' (thông báo về đường vào). Không đọc được nội dung vì Facebook đòi đăng nhập.",
+      "inRecord": false
+    },
+    {
+      "code": "S12",
+      "title": "Video YouTube 'Sông Pha. Giáo xứ có Đài Đức Mẹ Trinh Phong ở đỉnh núi Eo Gió trên đèo Ngoạn Mục giáp với Lâm Đồng' – kênh Vanquang Nguyen",
+      "url": "https://www.youtube.com/watch?v=kI_mP_kiGS8",
+      "tier": "D",
+      "accessed": "2026-09-27",
+      "supports": "Video hành hương (chỉ đọc được tiêu đề qua oEmbed; mô tả và bình luận không truy cập được).",
+      "inRecord": false
+    },
+    {
+      "code": "S13",
+      "title": "Video YouTube 'Tượng đài Đức Mẹ Trinh Phong tại Eo Gió, trên đỉnh đèo Ngoạn Mục' – kênh Thu Hường 79",
+      "url": "https://www.youtube.com/watch?v=9bdZjEfAuF8",
+      "tier": "D",
+      "accessed": "2026-09-27",
+      "supports": "Video hành hương (chỉ đọc được tiêu đề qua oEmbed).",
+      "inRecord": false
+    },
+    {
+      "code": "S14",
+      "title": "Video 'Ngỡ ngàng tượng Đức Mẹ Trinh Phong nằm ẩn giữa rừng...' – Thôn Quê Sài Gòn TV (Facebook; bản YouTube E7pTmxci7Ls đã không còn)",
+      "url": "https://www.facebook.com/thonquesaigontv/videos/2610825109168391/",
+      "tier": "D",
+      "accessed": "2026-09-27",
+      "supports": "Tiêu đề cho thấy cách giới thiệu 'tượng Mẹ ẩn giữa rừng' đang lưu hành. Chỉ thấy tiêu đề qua kết quả tìm kiếm.",
+      "inRecord": false
+    },
+    {
+      "code": "S15",
+      "title": "Đèo Ngoạn Mục – Wikipedia tiếng Việt",
+      "url": "https://vi.wikipedia.org/wiki/%C4%90%C3%A8o_Ngo%E1%BA%A1n_M%E1%BB%A5c",
+      "tier": "B",
+      "accessed": "2026-09-27",
+      "supports": "Đỉnh đèo 980m, toạ độ đèo 11.837294, 108.645625; Eo Gió là khúc cua khuỷu tay nơi khí hậu chuyển từ nắng Ninh Sơn sang gió cao nguyên.",
+      "inRecord": false
+    },
+    {
+      "code": "S16",
+      "title": "Video YouTube 'ĐỨC MẸ TRINH PHONG ĐÈO NGOẠN MỤC – NINH THUẬN' – kênh Hải Âu Family",
+      "url": "https://www.youtube.com/watch?v=Q2OC2WMUvo8",
+      "tier": "D",
+      "accessed": "2026-09-27",
+      "supports": "Video hành hương (chỉ đọc được tiêu đề qua oEmbed). Ứng viên ảnh/khung hình để lần ra người quay.",
+      "inRecord": false
+    },
+    {
+      "code": "S17",
+      "title": "Đức Mẹ Tà Pao – Wikipedia tiếng Việt (chú thích dẫn tập san Việt Tiến, số kép 34-35, tháng 01-02/1960, tr. 16)",
+      "url": "https://vi.wikipedia.org/wiki/%C4%90%E1%BB%A9c_M%E1%BA%B9_T%C3%A0_Pao",
+      "tier": "B",
+      "accessed": "2026-09-27",
+      "supports": "Bối cảnh chung của 5 tượng đài: Đại hội Thánh Mẫu 1959 mừng 100 năm Lộ Đức; TT Ngô Đình Diệm 'chỉ thị cho Phủ Tổng uy dinh điền' xây 5 tượng đài trong các năm 1959, 1960, 1961, có Đức Mẹ Trinh Phong (Ninh Thuận cũ). Không có chi tiết riêng về Trinh Phong.",
+      "inRecord": false
+    }
+  ],
+  "images": [
+    {
+      "file": "File:DucMetrinhphong.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:DucMetrinhphong.jpg",
+      "author": "Không rõ tác giả (người tải lên Commons: Baojcn01, tự ghi 'ảnh sưu tầm')",
+      "license": "Trang Commons khai CC BY-SA 4.0 'Own work' — nguồn gốc đáng ngờ, xem ghi chú",
+      "year": 2025,
+      "content": "Tượng Đức Mẹ đứng chắp tay, áo choàng xanh, áo trắng, tràng hạt, trên bệ ốp nhiều bảng đá tạ ơn (đọc được 'Tạ ơn Mẹ Trinh Phong'), nền rừng thông, hoa dâng dưới chân. Bản tải về để kiểm: docs/khao-cuu/trinhphong/anh/commons-DucMetrinhphong.jpg",
+      "caption": "Tượng Đức Mẹ Trinh Phong trên đèo Ngoạn Mục, bệ tượng ốp các bảng tạ ơn (Nguồn: Wikimedia Commons, File:DucMetrinhphong.jpg, người tải lên Baojcn01 ghi 'ảnh sưu tầm', không rõ tác giả gốc)",
+      "notAi": true,
+      "role": "chinh"
+    }
+  ],
+  "imageCandidates": [
+    {
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:DucMetrinhphong.jpg",
+      "source": "Wikimedia Commons",
+      "note": "Ảnh duy nhất trên Commons; đúng chủ thể (bảng tạ ơn ghi 'Tạ ơn Mẹ Trinh Phong'); không có dấu hiệu AI (chữ trên bảng đá mạch lạc, chi tiết tự nhiên).",
+      "status": "chon",
+      "why": "Đạt quy chuẩn dự án (trang công khai, giữ URL gốc, caption ghi nguồn). RỦI RO: mô tả 'ảnh sưu tầm' trái với khai 'Own work'; cùng ảnh đã có trên chuathuongxot.org từ 08/2024, trước ngày tải lên Commons 07/2025; EXIF bị xoá, kích thước nhỏ 669×1103 — nhiều khả năng ảnh lấy lại từ mạng xã hội. Người kiểm chứng quyết có dùng hay không."
+    },
+    {
+      "pageUrl": "https://chuathuongxot.org/DucMe/DucMeTrinhPhongA.htm",
+      "source": "chuathuongxot.org",
+      "note": "Cùng ảnh với Commons, bản thu nhỏ 193×278, chú thích 'đã được trùng tu sau khi bị xuống cấp bởi thời gian'. Bản tải về: docs/khao-cuu/trinhphong/anh/chuathuongxot-image002.jpg",
+      "status": "loai",
+      "why": "Trùng ảnh với ứng viên đã chọn, độ phân giải quá thấp; giữ làm bằng chứng niên đại lưu hành của ảnh."
+    },
+    {
+      "pageUrl": "https://www.facebook.com/p/T%C6%B0%E1%BB%A3ng-%C4%90%C3%A0i-%C4%90%E1%BB%A9c-M%E1%BA%B9-Trinh-Phong-100064601746043/",
+      "source": "Facebook – Tượng Đài Đức Mẹ Trinh Phong",
+      "note": "Trang cộng đồng, có album ảnh (fbid 2170866643135811, album a.2170866659802476). Có thể là nơi ảnh Commons xuất phát.",
+      "status": "ungvien",
+      "why": "Không mở được (đòi đăng nhập). Cần người mở bằng tay, lần ảnh gốc và người chụp."
+    },
+    {
+      "pageUrl": "https://www.youtube.com/watch?v=kI_mP_kiGS8",
+      "source": "YouTube – Vanquang Nguyen",
+      "note": "Video giáo xứ Sông Pha và đài Đức Mẹ Trinh Phong; khung hình có thể cho thấy đường vào và toàn cảnh.",
+      "status": "ungvien",
+      "why": "Cấp D; chỉ dùng để đối chiếu hiện trạng/lần người quay."
+    },
+    {
+      "pageUrl": "https://www.youtube.com/watch?v=9bdZjEfAuF8",
+      "source": "YouTube – Thu Hường 79",
+      "note": "Video tượng đài tại Eo Gió.",
+      "status": "ungvien",
+      "why": "Cấp D; chưa xem được nội dung."
+    },
+    {
+      "pageUrl": "https://www.youtube.com/watch?v=Q2OC2WMUvo8",
+      "source": "YouTube – Hải Âu Family",
+      "note": "Video 'Đức Mẹ Trinh Phong đèo Ngoạn Mục – Ninh Thuận'.",
+      "status": "ungvien",
+      "why": "Cấp D; chưa xem được nội dung."
+    },
+    {
+      "pageUrl": "http://wikimapia.org/6510388/vi/%C4%90%E1%BB%A9c-M%E1%BA%B9-Trinh-Phong",
+      "source": "Wikimapia",
+      "note": "Điểm 'Đức Mẹ Trinh Phong' trên Wikimapia — có thể có ảnh người dùng và toạ độ.",
+      "status": "ungvien",
+      "why": "Trang chặn truy cập tự động (trang kiểm tra cookie). Cần mở bằng tay; hữu ích cho cả toạ độ."
+    },
+    {
+      "pageUrl": "https://www.facebook.com/NguyenVanHung1995Vlogs/posts/1389135439444205/",
+      "source": "Facebook – vlog cá nhân",
+      "note": "Ảnh 'Đức Mẹ Phong Ba (Đèo Ngoạn Mục) đứng hiên ngang giữa dòng nước lớn'.",
+      "status": "loai",
+      "why": "KHÔNG đúng linh địa: đây là Đức Mẹ Suối Phong Ba (bẫy trùng tên), không phải Trinh Phong."
+    },
+    {
+      "pageUrl": "https://www.youtube.com/watch?v=XxOqA5HvS9Y",
+      "source": "YouTube – DUCCA COLORFUL",
+      "note": "Video 'Sự tích Đức Mẹ Phong Ba – Đèo Ngoạn Mục'.",
+      "status": "loai",
+      "why": "KHÔNG đúng linh địa (Phong Ba)."
+    },
+    {
+      "pageUrl": "https://ngoiloivn.net/pin_post/khanh-thanh-tuong-dai-duc-me-tu-vien-ngoi-loi-song-pha/",
+      "source": "Tỉnh Dòng Ngôi Lời Việt Nam",
+      "note": "Ảnh khánh thành tượng đài Đức Mẹ tại tu viện Ngôi Lời Sông Pha.",
+      "status": "loai",
+      "why": "KHÔNG đúng linh địa: tượng của tu viện Ngôi Lời ở Sông Pha, khác tượng Trinh Phong. Ghi lại vì dễ nhầm do cùng địa danh Sông Pha."
+    }
+  ],
+  "imageSearchNote": "Đã quét: Wikimedia Commons (chỉ có 1 file, category 'Statues of Virgin Mary in Vietnam'), Wikipedia vi/en, trang GP Nha Trang (tìm 'Trinh Phong', 'Eo Gió' — không có bài hay ảnh nào về tượng), VietCatholic (bài 2007 không còn ảnh trên bản hiện hành; bản lưu web.archive.org 2007 có tồn tại nhưng web.archive.org bị đứt kết nối qua proxy), chuathuongxot.org, Flickr (tìm từ khoá, không thấy), YouTube (4 video, chỉ đọc được tiêu đề), Facebook (bị chặn đăng nhập), Wikimapia (bị chặn tự động). Chưa thử được Google Maps/Google Images. Đã loại 3 ứng viên vì là tượng khác (Phong Ba, Ngôi Lời Sông Pha).",
+  "folklore": [
+    {
+      "title": "'Eo Gió có Mẹ Trinh Phong' — tên Mẹ gắn với ngọn gió đỉnh đèo",
+      "story": "Khép lại bài tường thuật thánh lễ 15/4/2007, cha quản xứ Sông Pha viết mấy câu thơ: 'Eo Gió có Mẹ Trinh Phong, / Đèo cao gió lộng đứng trông con mình, / Tinh Tuyền, Vô Nhiễm, Uy Linh, / Rộng tay nâng đỡ, giàu tình mẫu thân'. Từ đó, cách hiểu phổ biến đọc tên 'Trinh Phong' theo mặt chữ: 'Trinh' là đồng trinh, 'Phong' là gió — người Mẹ đồng trinh đứng giữa đèo gió.",
+      "motif": "Tên gọi dân gian / giải nghĩa tên theo mặt chữ",
+      "spread": "Bài thơ in trong bài VietCatholic 2007; cách giải nghĩa theo mặt chữ lưu hành rời rạc, không nguồn nào nói rõ",
+      "veracity": "chuakiemchung",
+      "sources": [
+        "S2"
+      ],
+      "note": "Bài thơ có thật trong [S2]; nhưng không nguồn nào nói đây là lý do đặt tên. Không viết giải nghĩa tên như sự thật. Giải nghĩa cũ trong bản ghi ('Mẹ đứng giữa phong ba bão táp') không tìm được nguồn — đã bỏ."
+    },
+    {
+      "title": "Tượng Mẹ lặng lẽ giữa rừng thông suốt 31 năm",
+      "story": "Sau năm 1975, tượng đài trở nên hoang vắng; chỉ thỉnh thoảng các cha quản xứ Sông Pha, các giáo xứ lân cận, hay một đôi giáo dân có nương rẫy gần đó thầm lặng tìm vào viếng Mẹ. Mãi đến Chúa Nhật II Phục Sinh 2007, cộng đoàn mới trở lại dâng thánh lễ. Các video hành hương gần đây giới thiệu nơi này như pho tượng Mẹ 'nằm ẩn giữa rừng' trên đỉnh đèo.",
+      "motif": "Mốc thời chiến – gìn giữ tượng; tượng ẩn giữa rừng được tìm lại",
+      "spread": "Bài tường thuật của cha xứ (B), Wikipedia chép lại; tiêu đề video YouTube/Facebook",
+      "veracity": "codoichieu",
+      "sources": [
+        "S2",
+        "S1",
+        "S14"
+      ],
+      "note": "Phần nền (hoang vắng sau 1975, thánh lễ 2007) có nguồn B [S2] và đã viết vào historicalFact. Phần 'ẩn giữa rừng' là cách kể của video, giữ ở oralTradition."
+    },
+    {
+      "title": "Năm tượng đài hợp thành 'Chòm Sao Bắc Đẩu'",
+      "story": "Một bài viết trên diễn đàn Công giáo kể rằng năm tượng đài Đức Mẹ dựng những năm 1959–1961 — Phượng Hoàng, Trinh Phong, Tà Pao, Thác Mơ, Giang Sơn — cùng với Đức Mẹ La Vang và Đức Mẹ Trà Kiệu tạo thành 'Chòm Sao Bắc Đẩu', với ngôi sao sáng nhất là La Vang; như chòm Bắc Đẩu dẫn đường cho tàu trên biển, các tượng đài này là dấu chỉ soi đường cho người tín hữu, mỗi tượng đặt ở một điểm cao chiến lược: đồi, đèo.",
+      "motif": "Biểu tượng thiên văn / bố cục linh địa theo chòm sao",
+      "spread": "Diễn đàn phailamgi.com, chép chuyền trên các trang hành hương",
+      "veracity": "chuakiemchung",
+      "sources": [
+        "S6"
+      ],
+      "note": "Chưa thấy nguồn A/B nào nói việc chọn địa điểm là chủ ý theo chòm Bắc Đẩu. Ghi rõ là cách hình dung biểu tượng. ducme.vn đã dùng ý tưởng này ở constellationRole — cẩn thận đừng biến nó thành sự thật lịch sử."
+    }
+  ],
+  "folkloreSearchNote": "Tìm với các cụm 'sự tích', 'tương truyền', 'ơn lạ', 'linh thiêng', 'tên gọi', 'nghĩa là', 'Eo Gió', 'Sông Pha' ghép với 'Trinh Phong'. Không tìm được chuyện ơn lạ hay sự tích riêng nào có văn bản mở được. Chuyện kể nhiều khả năng nằm trong video YouTube/Facebook (không đọc được lời thoại, mô tả, bình luận) và trang Facebook cộng đồng (bị chặn). Đã loại hẳn theo quyết định người dùng một bài đăng lại năm 2014 và các bản sao của nó. Đã tránh gán chuyện của Đức Mẹ Suối Phong Ba và biệt danh 'Đức Mẹ cụt tay' (thuộc Măng Đen) cho Trinh Phong.",
+  "leads": [
+    {
+      "lead": "Báo Thẳng Tiến, số đặc biệt Giáng Sinh 1961 (số kép 123-124), tr. 31",
+      "where": "Chú thích của Wikipedia [S1]",
+      "why": "Nguồn cấp A cho ngày khánh thành, chiều cao '6 thước', thành phần dự lễ. Chưa tìm được bản số hoá."
+    },
+    {
+      "lead": "Báo Đức Mẹ Hằng Cứu Giúp, số 152, tháng Giêng 1962, tr. 30",
+      "where": "Mục 'Xem thêm' của [S1]",
+      "why": "Có thể có tường thuật/ảnh lễ khánh thành 1961."
+    },
+    {
+      "lead": "Kỷ yếu Giáo phận Nha Trang 1957–2007, NXB Tôn Giáo, Hà Nội 2007, tr. 312-313",
+      "where": "Mục 'Xem thêm' của [S1]",
+      "why": "Nguồn A của giáo phận; có thể giải quyết mâu thuẫn năm 1960/1961 và việc quản nhiệm trước khi giáo xứ Sông Pha thành lập (1963)."
+    },
+    {
+      "lead": "Bản lưu web.archive.org 10/10/2007 của bài VietCatholic 43090",
+      "where": "http://web.archive.org/web/20071010081408/http://www.vietcatholic.net:80/News/Html/43090.htm",
+      "why": "Bản 2007 có thể còn ảnh thánh lễ 2007 mà bản hiện hành đã mất. Proxy đứt kết nối tới web.archive.org nên chưa mở được."
+    },
+    {
+      "lead": "Toạ độ Wikimapia điểm 6510388 và ảnh vệ tinh",
+      "where": "http://wikimapia.org/6510388/",
+      "why": "Đối chiếu toạ độ bệ tượng — hiện chỉ có mô tả 'từ Eo Gió rẽ đường nhỏ về hướng đông chừng 3 km'."
+    },
+    {
+      "lead": "Bài 'Xin thông báo tới mọi người muốn đi vào thăm viếng tượng Đức Mẹ...' trên trang Facebook Tượng Đài Đức Mẹ Trinh Phong",
+      "where": "https://www.facebook.com/photo.php?fbid=2170866643135811&id=1725851550970658&set=a.2170866659802476",
+      "why": "Có thể nói về đường vào/quy định thăm viếng hiện nay; album có thể chứa ảnh gốc của file Commons."
+    },
+    {
+      "lead": "Bài 'Có thể bạn chưa biết: TƯỢNG ĐỨC MẸ TRINH PHONG' của trang Thánh Đường Việt Nam",
+      "where": "https://www.facebook.com/thanhduongvietnam/photos/a.1481999192025235/3897151700509960/",
+      "why": "Bài giới thiệu có ảnh; chưa đọc được (Facebook đòi đăng nhập)."
+    },
+    {
+      "lead": "Liên hệ giáo xứ Sông Pha (GP Nha Trang, giáo hạt Ninh Sơn) qua kênh chính thức của giáo phận",
+      "where": "Trang lược sử [S3]",
+      "why": "Hỏi chiều cao thực tế, niên đại tu bổ, tượng hiện nay có phải tượng gốc 1961, toạ độ, ngày hành hương hằng năm."
+    }
+  ],
+  "conflicts": [
+    {
+      "issue": "Chiều cao tượng",
+      "a": {
+        "claim": "Tượng cao 6 thước (theo báo Thẳng Tiến 1961)",
+        "source": "S1"
+      },
+      "b": {
+        "claim": "Tượng xi măng trắng 3m (bản ghi hiện tại trên ducme.vn, không ghi nguồn)",
+        "source": "src/data/statues.js (bản ghi hiện tại, không có nguồn)"
+      },
+      "resolution": "Bản ghi cũ không có nguồn cho 3m; đề xuất ghi '6 thước' theo nguồn sớm nhất tìm được, giữ nguyên chữ 'thước', không tự quy đổi. Ảnh hiện trạng [S7] không đủ để ước lượng chiều cao; tượng hiện nay có thể không phải tượng gốc."
+    },
+    {
+      "issue": "Năm xây dựng",
+      "a": {
+        "claim": "Khánh thành 8/12/1961",
+        "source": "S1"
+      },
+      "b": {
+        "claim": "Được xây dựng vào khoảng năm 1960",
+        "source": "S2"
+      },
+      "resolution": "Không mâu thuẫn cốt lõi: [S2] viết 'khoảng', [S1] dẫn báo 1961 cụ thể. Giữ year = 1961 (năm khánh thành); có thể thêm 'khởi công khoảng 1960' nếu kỷ yếu giáo phận xác nhận."
+    },
+    {
+      "issue": "Toạ độ bệ tượng",
+      "a": {
+        "claim": "Tượng cách Eo Gió chừng 3 km theo đường nhỏ rẽ về hướng đông",
+        "source": "S2"
+      },
+      "b": {
+        "claim": "Toạ độ bản ghi 11.8322, 108.6258 nằm cách Eo Gió (11.8346, 108.6450) ~2,1 km về phía tây-tây nam, sát ranh giới tỉnh",
+        "source": "S8"
+      },
+      "resolution": "Chưa phân xử được. Giữ toạ độ cũ tạm thời với độ tin cậy thấp và đánh dấu cần đo lại trên ảnh vệ tinh/Wikimapia. Lưu ý 'hướng đông' trong [S2] có thể là cách nói tương đối."
+    },
+    {
+      "issue": "Giáo xứ Sông Pha quản nhiệm tượng năm 1961",
+      "a": {
+        "claim": "Tượng (khánh thành 1961) thuộc quyền quản nhiệm của cha sở giáo xứ Sông Pha",
+        "source": "S1"
+      },
+      "b": {
+        "claim": "Giáo xứ Sông Pha thành lập năm 1963; nhà thờ Sông Pha xây năm 1973",
+        "source": "S3"
+      },
+      "resolution": "Có thể câu 'thuộc quyền quản nhiệm' mô tả tình trạng về sau (như cách [S2] năm 2007 viết), không phải năm 1961. Đề xuất historicalFact chỉ ghi 'thuộc quyền quản nhiệm của cha sở giáo xứ Sông Pha' không gắn năm."
+    },
+    {
+      "issue": "Cách diễn đạt vai trò của TT Ngô Đình Diệm",
+      "a": {
+        "claim": "'chỉ đạo xây dựng'",
+        "source": "S1"
+      },
+      "b": {
+        "claim": "'chỉ thị cho Phủ Tổng Ủy Dinh Điền xây 5 tượng đài'",
+        "source": "S17, S4"
+      },
+      "resolution": "Hai cách nói tương thích. Bỏ cụm 'theo lệnh Tổng thống' của bản ghi cũ; dùng 'chỉ đạo xây dựng' như [S1], nêu Phủ Tổng ủy Dinh điền dưới dạng 'một số tài liệu ghi'."
+    }
+  ],
+  "unknowns": [
+    "Toạ độ chính xác của bệ tượng — không nguồn mở được nào ghi; toạ độ bản ghi hiện có chưa được xác nhận",
+    "Độ cao của bệ tượng (980m là độ cao đỉnh đèo, không phải của tượng)",
+    "Người thiết kế, người tạc, vật liệu gốc của tượng",
+    "Tượng hiện nay (sơn màu xanh–trắng trong ảnh) có phải pho tượng gốc 1961 hay tượng thay thế; niên đại các đợt trùng tu",
+    "Ý nghĩa và người đặt tên 'Trinh Phong'",
+    "Có ngày hành hương hằng năm hay không (lễ quan thầy 8/12 theo infobox Wikipedia, nhưng chưa thấy tường thuật hành hương năm nào sau 2007)",
+    "Tác giả gốc của ảnh duy nhất trên Commons",
+    "Nội dung bài báo Thẳng Tiến 1961, Đức Mẹ Hằng Cứu Giúp 1962 và Kỷ yếu GP Nha Trang 2007 — chưa tiếp cận, chỉ biết qua chú thích Wikipedia",
+    "Bản lưu web.archive.org của bài VietCatholic 2007 (proxy đứt kết nối tới web.archive.org)",
+    "Nội dung trang Facebook cộng đồng và mô tả/bình luận các video YouTube (bị chặn đăng nhập/giới hạn truy cập)"
+  ],
+  "selfAssessment": {
+    "confidence": "trungbinh",
+    "biggestRisk": "Toạ độ bản ghi chưa được xác nhận và có dấu hiệu lệch khỏi vị trí tả trong nguồn trực tiếp. Phần lớn mốc 1961 chỉ đến qua Wikipedia (dẫn báo Thẳng Tiến) — chưa tiếp cận được nguồn A. Ảnh chính đề xuất có nguồn gốc đáng ngờ (Commons khai 'Own work' nhưng tự ghi 'ảnh sưu tầm', ảnh đã lưu hành trước đó). Nguồn đưa vào dữ liệu gồm 3 nguồn B và 1 nguồn C; validate-record và format-report --check đều sạch, không cảnh báo.",
+    "reviewFocus": "(1) Mở S2 đối chiếu mô tả vị trí và các chi tiết thánh lễ 2007; (2) quyết toạ độ; (3) quyết có dùng ảnh Commons không; (4) kiểm con số '6 thước' so với 3m cũ; (5) kiểm oralTradition giữ đủ nhãn truyền tụng."
+  },
+  "validation": {
+    "command": "node .claude/skills/marian-publish/scripts/validate-record.mjs docs/khao-cuu/trinhphong/khao-cuu.json --allow-existing-id",
+    "output": "KIEM TRA: trinhphong (docs/khao-cuu/trinhphong/khao-cuu.json)\n\n=> DAT toan bo rang buoc bat buoc. Sau khi chen vao src/data/statues.js, chay \"npm test\" de xac nhan lai."
+  },
+  "record": {
+    "id": "trinhphong",
+    "name": "Đức Mẹ Trinh Phong",
+    "title": "Tượng đài Đức Mẹ Trinh Phong (Đèo Ngoạn Mục)",
+    "year": 1961,
+    "lat": 11.8322,
+    "lng": 108.6258,
+    "elevation": "Chưa rõ độ cao bệ tượng; đỉnh đèo Ngoạn Mục (Eo Gió) cao khoảng 980m",
+    "location": "Gần Eo Gió, đỉnh đèo Ngoạn Mục (QL27), xã Lâm Sơn, tỉnh Khánh Hòa (trước năm 2025: xã Lâm Sơn, huyện Ninh Sơn, tỉnh Ninh Thuận), giáp tỉnh Lâm Đồng",
+    "region": "Duyên hải Nam Trung Bộ",
+    "diocese": "Giáo phận Nha Trang",
+    "diemStatue5": true,
+    "constellationRole": {
+      "v1": {
+        "star": "Phecda (Thiên Cơ)",
+        "role": "Góc đông nam của đáy bầu gáo",
+        "code": "γ UMa"
+      },
+      "v2": {
+        "star": "Phecda (Thiên Cơ)",
+        "role": "Góc đông nam của đáy bầu gáo",
+        "code": "γ UMa"
+      },
+      "v3": {
+        "star": "Cửa ngõ Đèo Cao Biển Sông",
+        "role": "Ngũ Giác Đài 1959 - Điểm 3",
+        "code": "VNCH-03"
+      },
+      "v4": {
+        "star": "Linh đài Gió Ngàn Cổ Đèo",
+        "role": "Chốt hiểm giao thương Núi Biển",
+        "code": "NAT-06"
+      }
+    },
+    "historicalFact": "Tượng đài Đức Mẹ Trinh Phong là một trong năm tượng đài Đức Mẹ mà Tổng thống Việt Nam Cộng hòa Ngô Đình Diệm chỉ đạo xây dựng ở miền Nam: nhân dịp Đại hội Thánh Mẫu mừng 100 năm Đức Mẹ hiện ra tại Lộ Đức, ông chỉ thị cho Phủ Tổng ủy Dinh điền dựng năm tượng đài trong các năm 1959, 1960 và 1961 tại Giang Sơn, Thác Mơ, Phượng Hoàng, Trinh Phong và Tà Pao. Lễ khánh thành tượng Đức Mẹ Vô Nhiễm Nguyên Tội diễn ra ngày 8/12/1961, có Linh mục Bề trên địa phận Nha Trang, Trung tá Tỉnh trưởng Ninh Thuận và hơn 3.000 giáo dân địa phương tham dự; nhân dịp này một thánh lễ được cử hành tại kỳ đài dựng trên đồi để cầu nguyện cho quốc thái dân an (theo báo Thẳng Tiến số Giáng Sinh 1961, được Wikipedia tiếng Việt dẫn lại). Tượng nằm cách giao điểm Eo Gió, đỉnh đèo Ngoạn Mục trên quốc lộ 27, chừng 3 km theo một con đường nhỏ, hướng tầm nhìn về thung lũng Sông Pha, và thuộc quyền quản nhiệm của cha sở giáo xứ Sông Pha. Sau năm 1975, tượng đài trở nên hoang vắng; thỉnh thoảng các linh mục quản xứ Sông Pha, các giáo xứ lân cận hoặc giáo dân có nương rẫy gần đó lặng lẽ đến kính viếng. Sáng Chúa Nhật II Phục Sinh, ngày 15/4/2007, Linh mục quản xứ Sông Pha Anrê Lê Văn Hải cùng khoảng 500 giáo dân và cả những người không Công giáo ở các vùng Sông Pha, Lạc Lâm, Lạc Viên, Lạc Nghiệp, Kađô đã dâng thánh lễ đầu tiên dưới chân tượng sau 31 năm. Hiện nay tượng đài là một địa điểm hành hương của người Công giáo.",
+    "oralTradition": "Người Công giáo quanh Sông Pha vẫn gắn tên Mẹ Trinh Phong với ngọn gió Eo Gió. Khép lại bài tường thuật thánh lễ năm 2007, chính cha quản xứ Sông Pha viết mấy câu thơ dâng Mẹ: 'Eo Gió có Mẹ Trinh Phong, / Đèo cao gió lộng đứng trông con mình' — hình ảnh người Mẹ đứng giữa đèo cao lộng gió, trông về đoàn con dưới thung lũng. Dù vậy, chưa tìm được tư liệu nào giải thích chính thức vì sao tượng mang tên 'Trinh Phong'; cách hiểu 'Trinh' là đồng trinh, 'Phong' là gió chỉ là cách đọc theo mặt chữ đang lưu hành. Theo lời kể lưu truyền trong giới hành hương, suốt hơn ba mươi năm vắng bóng thánh lễ, tượng Mẹ vẫn đứng lặng giữa rừng thông, chỉ vài người có nương rẫy gần đó hay các cha xứ lân cận thầm lặng tìm vào viếng; đến nay nhiều video hành hương vẫn giới thiệu nơi này như pho tượng Mẹ ẩn mình giữa rừng trên đỉnh đèo. Một số bài viết trên diễn đàn Công giáo còn kể rằng năm tượng đài dựng những năm 1959–1961, cùng với La Vang và Trà Kiệu, hợp thành một 'Chòm Sao Bắc Đẩu' trên bản đồ miền Nam, như những vì sao dẫn đường cho người tín hữu — một cách hình dung mang tính biểu tượng mà chưa thấy tư liệu gốc nào ghi là chủ ý khi xây dựng.",
+    "architect": "Theo báo Thẳng Tiến (1961) được Wikipedia tiếng Việt dẫn lại, tượng Đức Mẹ Vô Nhiễm Nguyên Tội tại đây cao 6 thước. Ảnh chụp đang lưu hành trên mạng (đăng lại trên Wikimedia Commons năm 2025) cho thấy hiện trạng: tượng đứng chắp tay, áo choàng xanh phủ đầu, áo dài trắng, tràng hạt vắt trên cánh tay, đặt trên một bệ cao ốp kín những bảng đá tạ ơn khắc chữ như 'Tạ ơn Mẹ Trinh Phong', xung quanh là rừng thông. Chưa tìm được tư liệu về người thiết kế, người tạc tượng, vật liệu gốc hay niên đại các đợt tu bổ; một trang tư liệu Công giáo chỉ ghi chung rằng tượng đã được trùng tu sau khi xuống cấp theo thời gian.",
+    "significance": "Là một trong năm tượng đài Đức Mẹ dựng dưới thời Đệ nhất Cộng hòa trong dịp mừng kính Đức Mẹ những năm 1959–1961, Đức Mẹ Trinh Phong là một dấu mốc đức tin trên cung đèo nối đồng bằng Phan Rang với cao nguyên Lâm Viên. Thánh lễ ngày 15/4/2007 đánh dấu việc cộng đoàn giáo xứ Sông Pha trở lại kính viếng công khai sau 31 năm, có cả người không Công giáo trong vùng cùng tham dự; từ đó tượng đài trở thành một điểm hành hương, gắn với đời sống đức tin của giáo xứ Sông Pha dưới chân đèo.",
+    "realImage": null,
+    "realImageCaption": null,
+    "galleryImages": [],
+    "sources": [
+      {
+        "title": "Đức Mẹ Trinh Phong – Wikipedia tiếng Việt",
+        "url": "https://vi.wikipedia.org/wiki/%C4%90%E1%BB%A9c_M%E1%BA%B9_Trinh_Phong",
+        "tier": "B"
+      },
+      {
+        "title": "Tượng đài Đức Mẹ Trinh Phong có Thánh lễ đầu tiên sau 31 năm – LM Lê Văn Hải, VietCatholic (16/4/2007)",
+        "url": "https://www.vietcatholic.net/News/Html/43090.htm",
+        "tier": "B"
+      },
+      {
+        "title": "Lược sử Giáo xứ Sông Pha – Giáo phận Nha Trang",
+        "url": "https://giaophannhatrang.org/vi/lich-su-giao-xu/lich-su-giao-xu/luoc-su-giao-xu-song-pha-50.html",
+        "tier": "B"
+      },
+      {
+        "title": "Những địa điểm hành hương kính Đức Mẹ tại Việt Nam – Đinh Văn Tiến Hùng (Vietnamese Missionaries in Asia)",
+        "url": "https://vntaiwan.catholic.org.tw/maria/hanhhuong.htm",
+        "tier": "C"
+      }
+    ]
+  }
+}

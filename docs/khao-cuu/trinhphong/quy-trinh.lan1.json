@@ -1,0 +1,42 @@
+{
+  "schema": "ducme.quy-trinh/v1",
+  "id": "trinhphong",
+  "started": "2026-09-27T02:46:08.085Z",
+  "updated": "2026-09-27T02:50:00.733Z",
+  "status": "cannguoiquyet",
+  "rounds": 1,
+  "maxRounds": 2,
+  "fixes": 0,
+  "maxFixes": 2,
+  "options": {
+    "pr": true
+  },
+  "steps": [
+    {
+      "at": "2026-09-27T02:50:00.677Z",
+      "step": "khaocuu",
+      "mode": "moi",
+      "round": 1,
+      "result": "loi",
+      "agent": null,
+      "note": "BLOCKED: nguon VRNs 2014 dung van de chinh tri va cao buoc mot nguoi con song co neu ten; can nguoi dung quyet cach xu ly"
+    }
+  ],
+  "decisions": [
+    {
+      "at": "2026-09-27T02:46:08.154Z",
+      "step": "khaocuu",
+      "mode": "moi",
+      "why": "Chưa có docs/khao-cuu/<id>/khao-cuu.json — khảo cứu từ đầu",
+      "verdict": null
+    }
+  ],
+  "final": {
+    "status": "cannguoiquyet",
+    "note": "Tinh huong 3 cua marian-research: chuyen ke nhay cam (chinh tri, cao buoc ca nhan). Cho nguoi dung chon (a) loai, (b) chi giu phan trung tinh, (c) dua vao leads[]",
+    "branch": "claude/duc-me-trinh-phong-pipeline-jc9bjd",
+    "pr": null
+  },
+  "pending": null,
+  "ended": "2026-09-27T02:50:00.733Z"
+}
