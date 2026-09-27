@@ -2,8 +2,8 @@
   "schema": "ducme.quy-trinh/v1",
   "id": "trinhphong",
   "started": "2026-09-27T02:52:29.908Z",
-  "updated": "2026-09-27T03:25:06.619Z",
-  "status": "dangchay",
+  "updated": "2026-09-27T03:31:26.856Z",
+  "status": "hoanthanh",
   "rounds": 1,
   "maxRounds": 2,
   "fixes": 0,
@@ -29,6 +29,15 @@
       "result": "xong",
       "agent": null,
       "note": "AP_DUNG_CO_DIEU_KIEN 33/40; 5 dieu kien; toa do chua doi chieu duoc, khong duyet lat/lng"
+    },
+    {
+      "at": "2026-09-27T03:31:26.748Z",
+      "step": "trienkhai",
+      "mode": null,
+      "round": 1,
+      "result": "xong",
+      "agent": null,
+      "note": "Cap nhat 10 truong, them anh thuc dia; npm test 502 PASS; build OK; PR #21"
     }
   ],
   "decisions": [
@@ -45,14 +54,28 @@
       "mode": "moi",
       "why": "Đã có hồ sơ khảo cứu hợp lệ, chưa có hồ sơ kiểm chứng",
       "verdict": null
+    },
+    {
+      "at": "2026-09-27T03:25:06.619Z",
+      "step": "trienkhai",
+      "mode": null,
+      "why": "Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN",
+      "verdict": "AP_DUNG_CO_DIEU_KIEN"
+    },
+    {
+      "at": "2026-09-27T03:31:26.799Z",
+      "step": "ketthuc",
+      "mode": null,
+      "why": "Đã triển khai xong",
+      "verdict": "AP_DUNG_CO_DIEU_KIEN"
     }
   ],
-  "final": {},
-  "pending": {
-    "at": "2026-09-27T03:25:06.619Z",
-    "step": "trienkhai",
-    "mode": null,
-    "why": "Kết luận kiểm chứng: ÁP DỤNG CÓ ĐIỀU KIỆN",
-    "verdict": "AP_DUNG_CO_DIEU_KIEN"
-  }
+  "final": {
+    "status": "hoanthanh",
+    "note": "Da mo PR #21, cho nguoi review; toa do can khao cuu rieng",
+    "branch": "claude/duc-me-trinh-phong-pipeline-jc9bjd",
+    "pr": "https://github.com/nnmduc/ducme.vn/pull/21"
+  },
+  "pending": null,
+  "ended": "2026-09-27T03:31:26.856Z"
 }
